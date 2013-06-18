@@ -5,34 +5,77 @@
 >         Pmty_with
 12d10
 <          modConsType1 
-15c13,15
+15c13,23
 <              "extendedModulePath1"([],"H")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].key
 ---
 >             Pwith_type
 >               type
 >                 params =
-17a18,23
+>                   (
+>                   )
 >                 cstrs =
 >                   (
 >                   )
 >                 kind =
 >                        H.key
 >                       (
-784c790
-<       "extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].key
----
+576d583
+<      (
+577a585
+>                     (
+588a597,598
+>                   )
+>                 (
+592a603,604
+>                       (
+>                       )
+621d632
+<      (
+622a634
+>                     (
+633a646,647
+>                   )
+>                 (
+637a652,653
+>                       (
+>                       )
+666d681
+<      (
+669a685,686
+>                         (
+>                         )
+670a688
+>                         (
+682a701,702
+>                   )
+>                 (
+686a707,708
+>                       (
+>                       )
+715d736
+<      (
+718a740
+>                         (
+730a753,754
+>                   )
+>                 (
+734a759,760
+>                       (
+>                       )
+763a790
 >                        M.key
-800c806,812
-<       <["typexprConstr2"("typeConstr"([],"key")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Hashtbl")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
----
+765d791
+<       "extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].key
+779a806,808
 >                        Hashtbl.t
 >                       (
 >                            key
->                           (
+781c810,811
+<       <["typexprConstr2"("typeConstr"([],"key")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"(["extendedModulePath1"([],"Hashtbl")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+---
 >                           )
 >                           a
->                       )
-881a894,910
+863a894,910
 >         Pmty_with
 >           Hashtbl.S
 >         (
@@ -50,3 +93,23 @@
 >                       (
 >                       )
 >         )
+901d947
+<      (
+902a949
+>                     (
+913a961,962
+>                   )
+>                 (
+917a967,968
+>                       (
+>                       )
+951d1001
+<      (
+952a1003
+>                     (
+963a1015,1016
+>                   )
+>                 (
+967a1021,1022
+>                       (
+>                       )

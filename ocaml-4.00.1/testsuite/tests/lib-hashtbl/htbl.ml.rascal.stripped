@@ -13,8 +13,6 @@
          (
              key
              "extendedModulePath1"([],"H")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].key
-             (
-             )
          )
      )
      struct
@@ -575,9 +573,9 @@
       (
       )
       kind =
+     (
       string
-      (
-      )
+     )
    )
    let
    (
@@ -587,15 +585,11 @@
          (
       		 x
       		 t
-      		 (
-      		 )
       		(
       		 case
       		     (
       		 	  y
       		 	  t
-      		 	  (
-      		 	  )
       		      Pervasives.compare
       		      (
       		          x
@@ -624,9 +618,9 @@
       (
       )
       kind =
+     (
       int
-      (
-      )
+     )
    )
    let
    (
@@ -636,15 +630,11 @@
          (
       		 x
       		 t
-      		 (
-      		 )
       		(
       		 case
       		     (
       		 	  y
       		 	  t
-      		 	  (
-      		 	  )
       		      Pervasives.compare
       		      (
       		          x
@@ -673,15 +663,13 @@
       (
       )
       kind =
+     (
       tuple
       (
        string
-       (
-       )
         string
-        (
-        )
       )
+     )
    )
    let
    (
@@ -691,15 +679,11 @@
          (
       		 x
       		 t
-      		 (
-      		 )
       		(
       		 case
       		     (
       		 	  y
       		 	  t
-      		 	  (
-      		 	  )
       		      Pervasives.compare
       		      (
       		          x
@@ -728,12 +712,12 @@
       (
       )
       kind =
+     (
        list
        (
          string
-         (
-         )
        )
+     )
    )
    let
    (
@@ -743,15 +727,11 @@
          (
       		 x
       		 t
-      		 (
-      		 )
       		(
       		 case
       		     (
       		 	  y
       		 	  t
-      		 	  (
-      		 	  )
       		      Pervasives.compare
       		      (
       		          x
@@ -781,9 +761,9 @@
       (
       )
       kind =
+     (
       "extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].key
-      (
-      )
+     )
    )
    type
    (  						
@@ -797,7 +777,9 @@
       (
       )
       kind =
-      <["typexprConstr2"("typeConstr"([],"key")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Hashtbl")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     (
+      <["typexprConstr2"("typeConstr"([],"key")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"(["extendedModulePath1"([],"Hashtbl")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     )
    )
    let
    (
@@ -916,9 +898,9 @@
       (
       )
       kind =
+     (
       string
-      (
-      )
+     )
    )
    let
    (
@@ -928,15 +910,11 @@
          (
       		 x
       		 t
-      		 (
-      		 )
       		(
       		 case
       		     (
       		 	  y
       		 	  t
-      		 	  (
-      		 	  )
       		      =
       		      (
       		          x
@@ -970,9 +948,9 @@
       (
       )
       kind =
+     (
       int
-      (
-      )
+     )
    )
    let
    (
@@ -982,15 +960,11 @@
          (
       		 x
       		 t
-      		 (
-      		 )
       		(
       		 case
       		     (
       		 	  y
       		 	  t
-      		 	  (
-      		 	  )
       		      =
       		      (
       		          x

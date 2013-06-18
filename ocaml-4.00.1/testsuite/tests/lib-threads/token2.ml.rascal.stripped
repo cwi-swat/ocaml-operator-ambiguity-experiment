@@ -45,126 +45,121 @@
             ) 
           )
          in
-           whileloop 
-           (
-               true
-               sequence
-               (
-                 Unix.read
+            while
+            true
+            sequence
+            (
+              Unix.read
+              (
+                  Array.get
+                  (
+                   ins
+                   n
+                  )
+                  buf
+                  0
+                  1
+              )
+            ;
+              sequence
+              (
+                ifthenelse
+                (
+                 if
                  (
-                     Array.get
-                     (
-                      ins
+                  =
+                  (
                       n
-                     )
-                     buf
-                     0
-                     1
+                      0
+                  )
                  )
-               ;
-                 sequence
+                 then
                  (
+                  sequence
+                  (
+                    decr
+                    (
+                        niter
+                    )
+                  ;
+                    ifthenelse
+                    (
+                     if
+                     (
+                      <=
+                      (
+                           !
+                           (
+                           niter
+                           )
+                          0
+                      )
+                     )
+                     then
+                     (
+                      exit
+                      (
+                          0
+                      )
+                     )
+                     else
+                     (
+                     )
+                    )
+                  )
+                 )
+                 else
+                 (
+                 )
+                )
+              ;
+                let
+                (
+                 (
+                   next
                    ifthenelse
                    (
                     if
                     (
-                     =
+                     >=
                      (
-                         n
-                         0
+                         +
+                         (
+                             n
+                             1
+                         )
+                         nprocs
                      )
                     )
                     then
                     (
-                     beginEnd 
-                     (
-                         sequence
-                         (
-                           decr
-                           (
-                               niter
-                           )
-                         ;
-                           ifthenelse
-                           (
-                            if
-                            (
-                             <=
-                             (
-                                  !
-                                  (
-                                  niter
-                                  )
-                                 0
-                             )
-                            )
-                            then
-                            (
-                             exit
-                             (
-                                 0
-                             )
-                            )
-                            else
-                            (
-                            )
-                           )
-                         )
-                     )
+                     0
                     )
                     else
                     (
-                    )
-                   )
-                 ;
-                   let
-                   (
-                    (
-                      next
-                      ifthenelse
-                      (
-                       if
-                       (
-                        >=
-                        (
-                            +
-                            (
-                                n
-                                1
-                            )
-                            nprocs
-                        )
-                       )
-                       then
-                       (
-                        0
-                       )
-                       else
-                       (
-                        +
-                        (
-                            n
-                            1
-                        )
-                       ) 
-                      )
-                    )
-                   in
-                     Unix.write
+                     +
                      (
-                         Array.get
-                         (
-                          outs
-                          next
-                         )
-                         buf
-                         0
+                         n
                          1
                      )
+                    ) 
                    )
                  )
-               )
-           )
+                in
+                  Unix.write
+                  (
+                      Array.get
+                      (
+                       outs
+                       next
+                      )
+                      buf
+                      0
+                      1
+                  )
+                )
+              )
+            )
          )
         )
    )
@@ -244,47 +239,43 @@
                in
                  sequence
                  (
-                   forloop 
-                   (
-                       n
-                       0
-                       <>
-                       -
+                    for n
+                    0
+                    -
+                    (
+                        nprocs
+                        1
+                    )
+                    let
+                    (
+                     (
                        (
-                           nprocs
-                           1
+                        i
+                       	o
                        )
-                       let
+                       Unix.pipe
                        (
+                           ()
+                       ) 
+                     )
+                    in
+                      sequence
+                      (
+                        Array.set
                         (
-                          (
-                           i
-                          	o
-                          )
-                          Unix.pipe
-                          (
-                              ()
-                          ) 
+                         ins
+                         n
+                         i
                         )
-                       in
-                         sequence
-                         (
-                           Array.set
-                           (
-                            ins
-                            n
-                            i
-                           )
-                         ;
-                           Array.set
-                           (
-                            outs
-                            n
-                            o
-                           )
-                         )
-                       )
-                   )
+                      ;
+                        Array.set
+                        (
+                         outs
+                         n
+                         o
+                        )
+                      )
+                    )
                  ;
                    sequence
                    (
@@ -296,27 +287,23 @@
                    ;
                      sequence
                      (
-                       forloop 
-                       (
-                           i
-                           0
-                           <>
-                           -
-                           (
-                               nprocs
-                               1
-                           )
-                           Thread.create
-                           (
-                               process
-                               (
-                                   					 i
-                               	ins
-                               	outs
-                               	nprocs
-                               )
-                           )
-                       )
+                        for i
+                        0
+                        -
+                        (
+                            nprocs
+                            1
+                        )
+                        Thread.create
+                        (
+                            process
+                            (
+                                					 i
+                            	ins
+                            	outs
+                            	nprocs
+                            )
+                        )
                      ;
                        sequence
                        (

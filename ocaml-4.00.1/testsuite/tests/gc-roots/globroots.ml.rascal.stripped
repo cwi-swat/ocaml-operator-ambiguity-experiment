@@ -13,53 +13,37 @@
        (
        )
        kind =
+      (
+      )
     )
     sig_value register
     value_description
     arrow
     string
-    (
-    )
     t
-    (
-    )
     (
     )
     sig_value get
     value_description
     arrow
     t
-    (
-    )
     string
-    (
-    )
     (
     )
     sig_value set
     value_description
     arrow
     t
-    (
-    )
     arrow
     string
-    (
-    )
     unit
-    (
-    )
     (
     )
     sig_value remove
     value_description
     arrow
     t
-    (
-    )
     unit
-    (
-    )
     (
     )
    )    								
@@ -77,17 +61,15 @@
       (
       )
       kind =
+     (
+     )
    )
    external register
    (
     value_description
     arrow
     string
-    (
-    )
     t
-    (
-    )
    (
       "gb_classic_register"
    )
@@ -97,11 +79,7 @@
     value_description
     arrow
     t
-    (
-    )
     string
-    (
-    )
    (
       "gb_get"
    )
@@ -111,15 +89,9 @@
     value_description
     arrow
     t
-    (
-    )
     arrow
     string
-    (
-    )
     unit
-    (
-    )
    (
       "gb_classic_set"
    )
@@ -129,11 +101,7 @@
     value_description
     arrow
     t
-    (
-    )
     unit
-    (
-    )
    (
       "gb_classic_remove"
    )
@@ -153,17 +121,15 @@
       (
       )
       kind =
+     (
+     )
    )
    external register
    (
     value_description
     arrow
     string
-    (
-    )
     t
-    (
-    )
    (
       "gb_generational_register"
    )
@@ -173,11 +139,7 @@
     value_description
     arrow
     t
-    (
-    )
     string
-    (
-    )
    (
       "gb_get"
    )
@@ -187,15 +149,9 @@
     value_description
     arrow
     t
-    (
-    )
     arrow
     string
-    (
-    )
     unit
-    (
-    )
    (
       "gb_generational_set"
    )
@@ -205,11 +161,7 @@
     value_description
     arrow
     t
-    (
-    )
     unit
-    (
-    )
    (
       "gb_generational_remove"
    )

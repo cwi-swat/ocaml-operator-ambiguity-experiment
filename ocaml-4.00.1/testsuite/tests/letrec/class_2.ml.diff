@@ -4,33 +4,17 @@
 >           let Rec
 48a49
 >           )
-51,52c52
-<                        method2 
-<                        (
----
->                 method f
-54,55c54,56
-<                            a.
-<                            b.arrow
----
+52a54,58
 >                       poly
 >                        'a 'b
 >                         arrow
-58,61c59
-<                            f
-<                        )
-<                        method2 
-<                        (
----
->                 method g
-63,64c61,63
-<                            a.
-<                            b.arrow
----
->                       poly
->                        'a 'b
->                         arrow
-67,69d65
-<                            g
-<                        )
+>                           a
+>                           b
+55c61,65
 <                     )
+---
+>                       poly
+>                        'a 'b
+>                         arrow
+>                           a
+>                           b

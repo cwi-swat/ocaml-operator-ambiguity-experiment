@@ -61,41 +61,39 @@
     case
         (
     	  n
-         whileloop 
-         (
-             true
-             sequence
-             (
-               Mutex.lock
-               (
-                   output_lock
-               )
-             ;
-               sequence
-               (
-                 print_int
-                 (
-                     fib
-                     (
-                         n
-                     )
-                 )
-               ;
-                 sequence
-                 (
-                   print_newline
-                   (
-                       ()
-                   )
-                 ;
-                   Mutex.unlock
-                   (
-                       output_lock
-                   )
-                 )
-               )
-             )
-         )
+          while
+          true
+          sequence
+          (
+            Mutex.lock
+            (
+                output_lock
+            )
+          ;
+            sequence
+            (
+              print_int
+              (
+                  fib
+                  (
+                      n
+                  )
+              )
+            ;
+              sequence
+              (
+                print_newline
+                (
+                    ()
+                )
+              ;
+                Mutex.unlock
+                (
+                    output_lock
+                )
+              )
+            )
+          )
         )
    )
   )
@@ -114,57 +112,55 @@
            1.0
        )
      ;
-       whileloop 
-       (
-           true
-           let
+        while
+        true
+        let
+        (
+         (
+           l
+           read_line
            (
+               ()
+           ) 
+         )
+        in
+          sequence
+          (
+            Mutex.lock
             (
-              l
-              read_line
-              (
-                  ()
-              ) 
+                output_lock
             )
-           in
-             sequence
-             (
-               Mutex.lock
-               (
-                   output_lock
-               )
-             ;
-               sequence
-               (
-                 print_string
-                 (
-                     ">> "
-                 )
-               ;
-                 sequence
-                 (
-                   print_string
-                   (
-                       l
-                   )
-                 ;
-                   sequence
-                   (
-                     print_newline
-                     (
-                         ()
-                     )
-                   ;
-                     Mutex.unlock
-                     (
-                         output_lock
-                     )
-                   )
-                 )
-               )
-             )
-           )
-       )
+          ;
+            sequence
+            (
+              print_string
+              (
+                  ">> "
+              )
+            ;
+              sequence
+              (
+                print_string
+                (
+                    l
+                )
+              ;
+                sequence
+                (
+                  print_newline
+                  (
+                      ()
+                  )
+                ;
+                  Mutex.unlock
+                  (
+                      output_lock
+                  )
+                )
+              )
+            )
+          )
+        )
      )
    )
 )

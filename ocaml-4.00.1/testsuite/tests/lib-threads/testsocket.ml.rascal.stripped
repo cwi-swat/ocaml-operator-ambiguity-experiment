@@ -90,65 +90,60 @@
      		  		                        )
      		  		                      ;
      		  		                        try
-     		  		                        semicolon 
-     		  		                        (
-     		  		                            whileloop 
+     		  		                         while
+     		  		                         true
+     		  		                         let
+     		  		                         (
+     		  		                          (
+     		  		                            s
+     		  		                            input_line
      		  		                            (
-     		  		                                true
-     		  		                                let
-     		  		                                (
-     		  		                                 (
-     		  		                                   s
-     		  		                                   input_line
-     		  		                                   (
-     		  		                                       ic
-     		  		                                   ) 
-     		  		                                 )
-     		  		                                in
-     		  		                                  ifthenelse
-     		  		                                  (
-     		  		                                   if
-     		  		                                   (
-     		  		                                    verbose
-     		  		                                   )
-     		  		                                   then
-     		  		                                   (
-     		  		                                    sequence
-     		  		                                    (
-     		  		                                      print_int
-     		  		                                      (
-     		  		                                          number
-     		  		                                      )
-     		  		                                    ;
-     		  		                                      sequence
-     		  		                                      (
-     		  		                                        print_string
-     		  		                                        (
-     		  		                                            ">"
-     		  		                                        )
-     		  		                                      ;
-     		  		                                        sequence
-     		  		                                        (
-     		  		                                          print_string
-     		  		                                          (
-     		  		                                              s
-     		  		                                          )
-     		  		                                        ;
-     		  		                                          print_newline
-     		  		                                          (
-     		  		                                              ()
-     		  		                                          )
-     		  		                                        )
-     		  		                                      )
-     		  		                                    )
-     		  		                                   )
-     		  		                                   else
-     		  		                                   (
-     		  		                                   )
-     		  		                                  )
-     		  		                                )
+     		  		                                ic
+     		  		                            ) 
+     		  		                          )
+     		  		                         in
+     		  		                           ifthenelse
+     		  		                           (
+     		  		                            if
+     		  		                            (
+     		  		                             verbose
      		  		                            )
-     		  		                        )
+     		  		                            then
+     		  		                            (
+     		  		                             sequence
+     		  		                             (
+     		  		                               print_int
+     		  		                               (
+     		  		                                   number
+     		  		                               )
+     		  		                             ;
+     		  		                               sequence
+     		  		                               (
+     		  		                                 print_string
+     		  		                                 (
+     		  		                                     ">"
+     		  		                                 )
+     		  		                               ;
+     		  		                                 sequence
+     		  		                                 (
+     		  		                                   print_string
+     		  		                                   (
+     		  		                                       s
+     		  		                                   )
+     		  		                                 ;
+     		  		                                   print_newline
+     		  		                                   (
+     		  		                                       ()
+     		  		                                   )
+     		  		                                 )
+     		  		                               )
+     		  		                             )
+     		  		                            )
+     		  		                            else
+     		  		                            (
+     		  		                            )
+     		  		                           )
+     		  		                         )
      		  		                        (
      		  		                        case
      		  		                        (
@@ -220,7 +215,6 @@
             (
               array
               (
-                _
               )
               (
                   					 false
@@ -266,45 +260,41 @@
            in
              sequence
              (
-               forloop 
-               (
-                   i
-                   1
-                   <>
-                   -
-                   (
-                       Array.length
-                       (
-                           argv
-                       )
-                       1
-                   )
-                   Array.set
-                   (
-                    addresses
-                    -
+                for i
+                1
+                -
+                (
+                    Array.length
                     (
-                        i
-                        1
+                        argv
                     )
-                    Array.get
-                    (
-                     field
-                     (
-                     gethostbyname
-                     (
-                         Array.get
-                         (
-                          argv
-                          i
-                         )
-                     )
-                     h_addr_list
-                     )
-                     0
-                    )
-                   )
-               )
+                    1
+                )
+                Array.set
+                (
+                 addresses
+                 -
+                 (
+                     i
+                     1
+                 )
+                 Array.get
+                 (
+                  field
+                  (
+                  gethostbyname
+                  (
+                      Array.get
+                      (
+                       argv
+                       i
+                      )
+                  )
+                  h_addr_list
+                  )
+                  0
+                 )
+                )
              ;
                let
                (
@@ -325,61 +315,53 @@
                in
                  sequence
                  (
-                   forloop 
-                   (
-                       i
-                       0
-                       <>
-                       -
-                       (
-                           Array.length
-                           (
-                               addresses
-                           )
-                           1
-                       )
-                       Array.set
-                       (
-                        processes
-                        i
-                        Thread.create
+                    for i
+                    0
+                    -
+                    (
+                        Array.length
                         (
-                            engine
-                            (
-                                verbose
-                                i
-                            )
-                            Array.get
-                            (
-                             addresses
-                             i
-                            )
+                            addresses
                         )
-                       )
-                   )
+                        1
+                    )
+                    Array.set
+                    (
+                     processes
+                     i
+                     Thread.create
+                     (
+                         engine
+                         (
+                             verbose
+                             i
+                         )
+                         Array.get
+                         (
+                          addresses
+                          i
+                         )
+                     )
+                    )
                  ;
-                   forloop 
-                   (
-                       i
-                       0
-                       <>
-                       -
-                       (
-                           Array.length
-                           (
-                               processes
-                           )
-                           1
-                       )
-                       Thread.join
-                       (
-                           Array.get
-                           (
+                    for i
+                    0
+                    -
+                    (
+                        Array.length
+                        (
                             processes
-                            i
-                           )
-                       )
-                   )
+                        )
+                        1
+                    )
+                    Thread.join
+                    (
+                        Array.get
+                        (
+                         processes
+                         i
+                        )
+                    )
                  )
                )
              )

@@ -2,7 +2,7 @@ files = Array.new
 home = ""
 
 
-File.foreach('toplevels.txt') do |line|
+File.foreach('successful_parse_disambiguate.txt') do |line|
   f = line.chomp
   files << f
 end

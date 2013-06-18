@@ -11,49 +11,29 @@
      (
      )
      kind =
+    (
       buffer
-      polytype1 
-      (
-           array
-           (
-             a
-           )
-      )
+      poly
+       array
+       (
+         a
+       )
       lock
-      polytype1 
-      (
-          "extendedModulePath1"([],"Mutex")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-          (
-          )
-      )
+      poly
+      "extendedModulePath1"([],"Mutex")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
       readpos
-      polytype1 
-      (
-          int
-          (
-          )
-      )
+      poly
+      int
       writepos
-      polytype1 
-      (
-          int
-          (
-          )
-      )
+      poly
+      int
       notempty
-      polytype1 
-      (
-          "extendedModulePath1"([],"Condition")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-          (
-          )
-      )
+      poly
+      "extendedModulePath1"([],"Condition")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
       notfull
-      polytype1 
-      (
-          "extendedModulePath1"([],"Condition")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-          (
-          )
-      )
+      poly
+      "extendedModulePath1"([],"Condition")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+    )
   )
   let
   (
@@ -131,50 +111,48 @@
      		      ;
      		        sequence
      		        (
-     		          whileloop 
-     		          (
-     		              =
-     		              (
-     		                  mod
-     		                  (
-     		                      +
-     		                      (
-     		                          field
-     		                          (
-     		                          p
-     		                          writepos
-     		                          )
-     		                          1
-     		                      )
-     		                      Array.length
-     		                      (
-     		                          field
-     		                          (
-     		                          p
-     		                          buffer
-     		                          )
-     		                      )
-     		                  )
-     		                  field
-     		                  (
-     		                  p
-     		                  readpos
-     		                  )
-     		              )
-     		              Condition.wait
-     		              (
-     		                  field
-     		                  (
-     		                  p
-     		                  notfull
-     		                  )
-     		                  field
-     		                  (
-     		                  p
-     		                  lock
-     		                  )
-     		              )
-     		          )
+     		           while
+     		           =
+     		           (
+     		               mod
+     		               (
+     		                   +
+     		                   (
+     		                       field
+     		                       (
+     		                       p
+     		                       writepos
+     		                       )
+     		                       1
+     		                   )
+     		                   Array.length
+     		                   (
+     		                       field
+     		                       (
+     		                       p
+     		                       buffer
+     		                       )
+     		                   )
+     		               )
+     		               field
+     		               (
+     		               p
+     		               readpos
+     		               )
+     		           )
+     		           Condition.wait
+     		           (
+     		               field
+     		               (
+     		               p
+     		               notfull
+     		               )
+     		               field
+     		               (
+     		               p
+     		               lock
+     		               )
+     		           )	 
      		        ;
      		          sequence
      		          (
@@ -270,35 +248,33 @@
          ;
            sequence
            (
-             whileloop 
-             (
-                 =
-                 (
-                     field
-                     (
-                     p
-                     writepos
-                     )
-                     field
-                     (
-                     p
-                     readpos
-                     )
-                 )
-                 Condition.wait
-                 (
-                     field
-                     (
-                     p
-                     notempty
-                     )
-                     field
-                     (
-                     p
-                     lock
-                     )
-                 )
-             )
+              while
+              =
+              (
+                  field
+                  (
+                  p
+                  writepos
+                  )
+                  field
+                  (
+                  p
+                  readpos
+                  )
+              )
+              Condition.wait
+              (
+                  field
+                  (
+                  p
+                  notempty
+                  )
+                  field
+                  (
+                  p
+                  lock
+                  )
+              )	 
            ;
              let
              (
