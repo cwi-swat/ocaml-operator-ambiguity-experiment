@@ -51,34 +51,34 @@
      		 case
      		     (
      		 	  c
-     		      
-     		       while
-     		       true
-     		       
-     		       sequence
-     		       (
-     		         print_char
-     		         (
-     		             c
-     		         )
-     		       ;
-     		         
-     		         sequence
-     		         (
-     		           flush
-     		           (
-     		               stdout
-     		           )
-     		         ;
-     		           Thread.delay
-     		           (
-     		               delay
-     		           )
-     		         )
-     		             							
-     		       )
-     		           								 
-     		          									 
+     		      whileloop 
+     		      (
+     		          true
+     		          
+     		          sequence
+     		          (
+     		            print_char
+     		            (
+     		                c
+     		            )
+     		          ;
+     		            
+     		            sequence
+     		            (
+     		              flush
+     		              (
+     		                  stdout
+     		              )
+     		            ;
+     		              Thread.delay
+     		              (
+     		                  delay
+     		              )
+     		            )
+     		                							
+     		          )
+     		              							
+     		      )
      		     )
      		)
      		    		   

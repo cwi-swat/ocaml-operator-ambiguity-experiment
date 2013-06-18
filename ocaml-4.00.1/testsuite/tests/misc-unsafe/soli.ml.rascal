@@ -336,38 +336,44 @@
     case
         (
     	  board
-          for i
-          0
-          8
-          
-          sequence
-          (
-             for j
+         forloop 
+         (
+             i
              0
+             <>
              8
-             print_peg
+             
+             sequence
              (
-                 Array.get
-                 (
-                  Array.get
-                  (
-                   board
-                   i
-                  )
-                      													
-                  j
-                 )
-                     													
+               forloop 
+               (
+                   j
+                   0
+                   <>
+                   8
+                   print_peg
+                   (
+                       Array.get
+                       (
+                        Array.get
+                        (
+                         board
+                         i
+                        )
+                            													
+                        j
+                       )
+                           													
+                   )
+               )
+             ;
+               print_newline
+               (
+                   ()
+               )
              )
-                														  
-          ;
-            print_newline
-            (
-                ()
-            )
-          )
-              							
-             														  
+                 							
+         )
         )
    )
        		    
@@ -629,39 +635,42 @@
             )
             then
             (
-             match
-             Array.get
+             beginEnd 
              (
-              Array.get
-              (
-               board
-               4
-              )
-                  													
-              4
+                 match
+                 Array.get
+                 (
+                  Array.get
+                  (
+                   board
+                   4
+                  )
+                      													
+                  4
+                 )
+                     													
+                 (
+                 
+                 case
+                 (
+                   Peg
+                   
+                   true
+                 ) 
+                 	        											 
+                   
+                   case
+                   (
+                    _
+                    
+                    false
+                   )
+                   													    
+                 	        											 
+                 	        											 
+                 )
+                 			   
              )
-                 													
-             (
-             
-             case
-             (
-               Peg
-               
-               true
-             ) 
-             	        											 
-               
-               case
-               (
-                _
-                
-                false
-               )
-               													    
-             	        											 
-             	        											 
-             )
-             			   
             )
             else
             (
@@ -691,25 +700,28 @@
                 )
                 then
                 (
-                 
-                 sequence
+                 beginEnd 
                  (
-                   print_int
-                   (
-                       
-                        !
-                        (
-                        counter
-                        )
-                           							 
-                   )
-                 ;
-                   print_newline
-                   (
-                       ()
-                   )
+                     
+                     sequence
+                     (
+                       print_int
+                       (
+                           
+                            !
+                            (
+                            counter
+                            )
+                               							 
+                       )
+                     ;
+                       print_newline
+                       (
+                           ()
+                       )
+                     )
+                         							
                  )
-                     							
                 )
                 else
                 (
@@ -720,400 +732,415 @@
                
                sequence
                (
-                  for i
-                  1
-                  7
-                   for j
-                   1
-                   7
-                   match
-                   Array.get
-                   (
-                    Array.get
-                    (
-                     board
+                 forloop 
+                 (
                      i
-                    )
-                        													
-                    j
-                   )
-                       													
-                   (
-                   
-                   case
-                   (
-                     Peg
-                     
-                      for k
-                      0
-                      3
-                      
-                      let
-                      (
-                       (
-                          									  
-                        
-                         d1
-                         field
-                         (
+                     1
+                     <>
+                     7
+                     forloop 
+                     (
+                         j
+                         1
+                         <>
+                         7
+                         match
                          Array.get
                          (
-                          dir
-                          k
+                          Array.get
+                          (
+                           board
+                           i
+                          )
+                              													
+                          j
                          )
                              													
-                         dx
-                         )
-                             									  
-                        							    		   
-                          									  
-                       )
-                      in
-                        
-                        let
-                        (
                          (
-                            									  
-                          
-                           d2
-                           field
+                         
+                         case
+                         (
+                           Peg
+                           
+                           forloop 
                            (
-                           Array.get
-                           (
-                            dir
-                            k
-                           )
-                               													
-                           dy
-                           )
-                               									  
-                          							    		   
-                            									  
-                         )
-                        in
-                          
-                          let
-                          (
-                           (
-                              									  
-                            
-                             i1
-                             +
-                             (
-                                 i
-                                 d1
-                             ) 
-                            							    		   
-                              									  
-                           )
-                          in
-                            
-                            let
-                            (
-                             (
-                                									  
-                              
-                               i2
-                               +
+                               k
+                               0
+                               <>
+                               3
+                               
+                               let
                                (
-                                   i1
-                                   d1
-                               ) 
-                              							    		   
-                                									  
-                             )
-                            in
-                              
-                              let
-                              (
-                               (
-                                  									  
-                                
-                                 j1
-                                 +
-                                 (
-                                     j
-                                     d2
-                                 ) 
-                                							    		   
-                                  									  
-                               )
-                              in
-                                
-                                let
                                 (
-                                 (
-                                    									  
-                                  
-                                   j2
-                                   +
-                                   (
-                                       j1
-                                       d2
-                                   ) 
-                                  							    		   
-                                    									  
-                                 )
-                                in
-                                  match
+                                   									  
+                                 
+                                  d1
+                                  field
+                                  (
                                   Array.get
                                   (
-                                   Array.get
-                                   (
-                                    board
-                                    i1
-                                   )
-                                       													
-                                   j1
+                                   dir
+                                   k
                                   )
                                       													
+                                  dx
+                                  )
+                                      									  
+                                 							    		   
+                                   									  
+                                )
+                               in
+                                 
+                                 let
+                                 (
                                   (
-                                  
-                                  case
-                                  (
-                                    Peg
-                                    
-                                    match
+                                     									  
+                                   
+                                    d2
+                                    field
+                                    (
                                     Array.get
                                     (
-                                     Array.get
-                                     (
-                                      board
-                                      i2
-                                     )
-                                         													
-                                     j2
+                                     dir
+                                     k
                                     )
                                         													
+                                    dy
+                                    )
+                                        									  
+                                   							    		   
+                                     									  
+                                  )
+                                 in
+                                   
+                                   let
+                                   (
                                     (
-                                    
-                                    case
-                                    (
-                                      Empty
-                                      
-                                      
-                                      sequence
+                                       									  
+                                     
+                                      i1
+                                      +
                                       (
-                                        Array.set
-                                        (
-                                         Array.get
-                                         (
-                                          board
                                           i
-                                         )
-                                             													
-                                         j
-                                         Empty
-                                        )
-                                            									
-                                      ;
-                                        
-                                        sequence
+                                          d1
+                                      ) 
+                                     							    		   
+                                       									  
+                                    )
+                                   in
+                                     
+                                     let
+                                     (
+                                      (
+                                         									  
+                                       
+                                        i2
+                                        +
                                         (
-                                          Array.set
+                                            i1
+                                            d1
+                                        ) 
+                                       							    		   
+                                         									  
+                                      )
+                                     in
+                                       
+                                       let
+                                       (
+                                        (
+                                           									  
+                                         
+                                          j1
+                                          +
                                           (
+                                              j
+                                              d2
+                                          ) 
+                                         							    		   
+                                           									  
+                                        )
+                                       in
+                                         
+                                         let
+                                         (
+                                          (
+                                             									  
+                                           
+                                            j2
+                                            +
+                                            (
+                                                j1
+                                                d2
+                                            ) 
+                                           							    		   
+                                             									  
+                                          )
+                                         in
+                                           match
                                            Array.get
                                            (
-                                            board
-                                            i1
+                                            Array.get
+                                            (
+                                             board
+                                             i1
+                                            )
+                                                													
+                                            j1
                                            )
                                                													
-                                           j1
-                                           Empty
-                                          )
-                                              									
-                                        ;
-                                          
-                                          sequence
-                                          (
-                                            Array.set
-                                            (
-                                             Array.get
-                                             (
-                                              board
-                                              i2
-                                             )
-                                                 													
-                                             j2
+                                           (
+                                           
+                                           case
+                                           (
                                              Peg
-                                            )
-                                                									
-                                          ;
-                                            
-                                            sequence
-                                            (
-                                              ifthenelse
-                                              (
-                                               if
-                                               (
-                                                solve
-                                                (
-                                                    +
-                                                    (
-                                                        m
-                                                        1
-                                                    )
-                                                )
-                                               )
-                                               then
-                                               (
-                                                
-                                                sequence
-                                                (
-                                                  Array.set
-                                                  (
-                                                   moves
-                                                   m
-                                                   record
-                                                   (
-                                                    x1
-                                                    i
-                                                   										   	     
-                                                     
-                                                      y1
-                                                      j
-                                                     										   
-                                                   											   	 
-                                                     
-                                                      x2
-                                                      i2
-                                                     										   
-                                                   											   	 
-                                                     
-                                                      y2
-                                                      j2
-                                                     										   
-                                                   											   	 
-                                                   )
-                                                  )
-                                                      									
-                                                ;
-                                                  raise
-                                                  (
-                                                      Found
-                                                  )
-                                                )
-                                                    							
-                                               )
-                                               else
-                                               (
-                                               )
-                                              )
-                                                  									   
-                                            ;
-                                              
-                                              sequence
-                                              (
-                                                Array.set
-                                                (
+                                             
+                                             beginEnd 
+                                             (
+                                                 match
                                                  Array.get
                                                  (
-                                                  board
-                                                  i
+                                                  Array.get
+                                                  (
+                                                   board
+                                                   i2
+                                                  )
+                                                      													
+                                                  j2
                                                  )
                                                      													
-                                                 j
-                                                 Peg
-                                                )
-                                                    									
-                                              ;
-                                                
-                                                sequence
-                                                (
-                                                  Array.set
-                                                  (
-                                                   Array.get
-                                                   (
-                                                    board
-                                                    i1
-                                                   )
-                                                       													
-                                                   j1
-                                                   Peg
-                                                  )
-                                                      									
-                                                ;
-                                                  Array.set
-                                                  (
-                                                   Array.get
-                                                   (
-                                                    board
-                                                    i2
-                                                   )
-                                                       													
-                                                   j2
+                                                 (
+                                                 
+                                                 case
+                                                 (
                                                    Empty
-                                                  )
-                                                      									
-                                                )
-                                                    							
-                                              )
-                                                  							
-                                            )
-                                                							
-                                          )
-                                              							
-                                        )
-                                            							
-                                      )
-                                          							
-                                    ) 
-                                    	        											 
-                                      
-                                      case
-                                      (
-                                       _
-                                       
-                                       ()
-                                      )
-                                      													    
-                                    	        											 
-                                    	        											 
-                                    )
-                                    			   
-                                  ) 
-                                  	        											 
-                                    
-                                    case
-                                    (
-                                     _
-                                     
-                                     ()
-                                    )
-                                    													    
-                                  	        											 
-                                  	        											 
-                                  )
-                                  			   
-                                )
-                                    									
-                              )
-                                  									
-                            )
-                                									
-                          )
-                              									
-                        )
-                            									
-                      )
-                          									
-                         														  
-                   ) 
-                   	        											 
-                     
-                     case
-                     (
-                      _
-                      
-                      ()
+                                                   
+                                                   
+                                                   sequence
+                                                   (
+                                                     Array.set
+                                                     (
+                                                      Array.get
+                                                      (
+                                                       board
+                                                       i
+                                                      )
+                                                          													
+                                                      j
+                                                      Empty
+                                                     )
+                                                         									
+                                                   ;
+                                                     
+                                                     sequence
+                                                     (
+                                                       Array.set
+                                                       (
+                                                        Array.get
+                                                        (
+                                                         board
+                                                         i1
+                                                        )
+                                                            													
+                                                        j1
+                                                        Empty
+                                                       )
+                                                           									
+                                                     ;
+                                                       
+                                                       sequence
+                                                       (
+                                                         Array.set
+                                                         (
+                                                          Array.get
+                                                          (
+                                                           board
+                                                           i2
+                                                          )
+                                                              													
+                                                          j2
+                                                          Peg
+                                                         )
+                                                             									
+                                                       ;
+                                                         
+                                                         sequence
+                                                         (
+                                                           ifthenelse
+                                                           (
+                                                            if
+                                                            (
+                                                             solve
+                                                             (
+                                                                 +
+                                                                 (
+                                                                     m
+                                                                     1
+                                                                 )
+                                                             )
+                                                            )
+                                                            then
+                                                            (
+                                                             beginEnd 
+                                                             (
+                                                                 
+                                                                 sequence
+                                                                 (
+                                                                   Array.set
+                                                                   (
+                                                                    moves
+                                                                    m
+                                                                    record
+                                                                    (
+                                                                     x1
+                                                                     i
+                                                                    										   	     
+                                                                      
+                                                                       y1
+                                                                       j
+                                                                      										   
+                                                                    											   	 
+                                                                      
+                                                                       x2
+                                                                       i2
+                                                                      										   
+                                                                    											   	 
+                                                                      
+                                                                       y2
+                                                                       j2
+                                                                      										   
+                                                                    											   	 
+                                                                    )
+                                                                   )
+                                                                       									
+                                                                 ;
+                                                                   raise
+                                                                   (
+                                                                       Found
+                                                                   )
+                                                                 )
+                                                                     							
+                                                             )
+                                                            )
+                                                            else
+                                                            (
+                                                            )
+                                                           )
+                                                               									   
+                                                         ;
+                                                           
+                                                           sequence
+                                                           (
+                                                             Array.set
+                                                             (
+                                                              Array.get
+                                                              (
+                                                               board
+                                                               i
+                                                              )
+                                                                  													
+                                                              j
+                                                              Peg
+                                                             )
+                                                                 									
+                                                           ;
+                                                             
+                                                             sequence
+                                                             (
+                                                               Array.set
+                                                               (
+                                                                Array.get
+                                                                (
+                                                                 board
+                                                                 i1
+                                                                )
+                                                                    													
+                                                                j1
+                                                                Peg
+                                                               )
+                                                                   									
+                                                             ;
+                                                               Array.set
+                                                               (
+                                                                Array.get
+                                                                (
+                                                                 board
+                                                                 i2
+                                                                )
+                                                                    													
+                                                                j2
+                                                                Empty
+                                                               )
+                                                                   									
+                                                             )
+                                                                 							
+                                                           )
+                                                               							
+                                                         )
+                                                             							
+                                                       )
+                                                           							
+                                                     )
+                                                         							
+                                                   )
+                                                       							
+                                                 ) 
+                                                 	        											 
+                                                   
+                                                   case
+                                                   (
+                                                    _
+                                                    
+                                                    ()
+                                                   )
+                                                   													    
+                                                 	        											 
+                                                 	        											 
+                                                 )
+                                                 			   
+                                             )
+                                           ) 
+                                           	        											 
+                                             
+                                             case
+                                             (
+                                              _
+                                              
+                                              ()
+                                             )
+                                             													    
+                                           	        											 
+                                           	        											 
+                                           )
+                                           			   
+                                         )
+                                             									
+                                       )
+                                           									
+                                     )
+                                         									
+                                   )
+                                       									
+                                 )
+                                     									
+                               )
+                                   									
+                           )
+                         ) 
+                         	        											 
+                           
+                           case
+                           (
+                            _
+                            
+                            ()
+                           )
+                           													    
+                         	        											 
+                         	        											 
+                         )
+                         			   
                      )
-                     													    
-                   	        											 
-                   	        											 
-                   )
-                   			   
-                      														  
-                     														  
+                 )
                ;
                  false
                )
@@ -1134,7 +1161,7 @@
                  							   
             ) 
            )
-           		    											 
+           	    											 
          )
              							
         )

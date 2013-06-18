@@ -138,39 +138,42 @@
                   									  
                )
               in
-                
-                try
-                ::
+                beginEnd 
                 (
                     
+                    try
+                    ::
                     (
-                        					 []
-                        					 
-                    	unify
-                    	(
-                    	    m
-                    	    n
-                    	)
-                        					 
+                        
+                        (
+                            					 []
+                            					 
+                        	unify
+                        	(
+                        	    m
+                        	    n
+                        	)
+                            					 
+                        )
+                            					 
+                        insides
                     )
-                        					 
-                    insides
+                    (
+                    
+                    case
+                    (
+                      
+                      Failure
+                      _
+                      									  
+                      
+                      insides
+                    ) 
+                    	        											 
+                    	        											 
+                    )
+                        							   
                 )
-                (
-                
-                case
-                (
-                  
-                  Failure
-                  _
-                  									  
-                  
-                  insides
-                ) 
-                	        											 
-                	        											 
-                )
-                    							   
               )
                   									
             )
@@ -852,7 +855,7 @@
                      					 
                 ) 
                )
-               		    											 
+               	    											 
              )
                  									
             )
@@ -924,7 +927,7 @@
                )
               ) 
              )
-             		    											 
+             	    											 
             )
             													    
           	        											 
@@ -1057,69 +1060,72 @@
              		          		  		           )
              		          		  		           else
              		          		  		           (
-             		          		  		            match
-             		          		  		            failures
+             		          		  		            beginEnd 
              		          		  		            (
-             		          		  		            
-             		          		  		            case
-             		          		  		            (
-             		          		  		              []
-             		          		  		              
-             		          		  		              rules
-             		          		  		            ) 
-             		          		  		            	        											 
-             		          		  		              
-             		          		  		              case
-             		          		  		              (
-             		          		  		               _
-             		          		  		               
-             		          		  		               
-             		          		  		               sequence
-             		          		  		               (
-             		          		  		                 print_string
-             		          		  		                 (
-             		          		  		                     "Non-orientable equations :"
-             		          		  		                 )
-             		          		  		               ;
-             		          		  		                 
-             		          		  		                 sequence
-             		          		  		                 (
-             		          		  		                   print_newline
-             		          		  		                   (
-             		          		  		                       ()
-             		          		  		                   )
-             		          		  		                 ;
+             		          		  		                match
+             		          		  		                failures
+             		          		  		                (
+             		          		  		                
+             		          		  		                case
+             		          		  		                (
+             		          		  		                  []
+             		          		  		                  
+             		          		  		                  rules
+             		          		  		                ) 
+             		          		  		                	        											 
+             		          		  		                  
+             		          		  		                  case
+             		          		  		                  (
+             		          		  		                   _
+             		          		  		                   
              		          		  		                   
              		          		  		                   sequence
              		          		  		                   (
-             		          		  		                     List.iter
+             		          		  		                     print_string
              		          		  		                     (
-             		          		  		                         non_orientable
-             		          		  		                         failures
+             		          		  		                         "Non-orientable equations :"
              		          		  		                     )
              		          		  		                   ;
-             		          		  		                     failwith
+             		          		  		                     
+             		          		  		                     sequence
              		          		  		                     (
-             		          		  		                         "kb_completion"
+             		          		  		                       print_newline
+             		          		  		                       (
+             		          		  		                           ()
+             		          		  		                       )
+             		          		  		                     ;
+             		          		  		                       
+             		          		  		                       sequence
+             		          		  		                       (
+             		          		  		                         List.iter
+             		          		  		                         (
+             		          		  		                             non_orientable
+             		          		  		                             failures
+             		          		  		                         )
+             		          		  		                       ;
+             		          		  		                         failwith
+             		          		  		                         (
+             		          		  		                             "kb_completion"
+             		          		  		                         )
+             		          		  		                       )
+             		          		  		                           							
              		          		  		                     )
+             		          		  		                         							
              		          		  		                   )
              		          		  		                       							
-             		          		  		                 )
-             		          		  		                     							
-             		          		  		               )
-             		          		  		                   							
-             		          		  		              )
-             		          		  		              													    
-             		          		  		            	        											 
-             		          		  		            	        											 
+             		          		  		                  )
+             		          		  		                  													    
+             		          		  		                	        											 
+             		          		  		                	        											 
+             		          		  		                )
+             		          		  		                			   
              		          		  		            )
-             		          		  		            			   
              		          		  		           ) 
              		          		  		          )
-             		          		  		          		    											 
+             		          		  		          	    											 
              		          		  		         ) 
              		          		  		        )
-             		          		  		        		    											 
+             		          		  		        	    											 
              		          		  		      ) 
              		          		  		      	        											 
              		          		  		        
@@ -1536,13 +1542,13 @@
              		          		  		                 )
              		          		  		                ) 
              		          		  		               )
-             		          		  		               		    											 
+             		          		  		               	    											 
              		          		  		              ) 
              		          		  		             )
-             		          		  		             		    											 
+             		          		  		             	    											 
              		          		  		            ) 
              		          		  		           )
-             		          		  		           		    											 
+             		          		  		           	    											 
              		          		  		         )
              		          		  		             									
              		          		  		        )
@@ -1772,7 +1778,7 @@
              		          		                							   
              		          		           ) 
              		          		          )
-             		          		          		    											 
+             		          		          	    											 
              		          		        )
              		          		            									
              		          		      )

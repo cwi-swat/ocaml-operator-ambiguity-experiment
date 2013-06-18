@@ -1,40 +1,41 @@
-toplevels 
+
 (
+    								 
+  let
+  (
+   
+    ()
     
-    let
+    sequence
     (
-     
-      ()
+      print_endline
+      (
+          "B is running"
+      )
+    ;
       
       sequence
       (
-        print_endline
+        incr
         (
-            "B is running"
+            A.x
         )
       ;
-        
-        sequence
+        Printf.printf
         (
-          incr
-          (
-              A.x
-          )
-        ;
-          Printf.printf
-          (
-              "A.x = %i\n"
-              
-               !
-               (
-               A.x
-               )
-                  							 
-          )
+            "A.x = %i\n"
+            
+             !
+             (
+             A.x
+             )
+                							 
         )
-            							
       )
-          							 
-     							    		    
+          							
     )
+        							 
+   							    		    
+  )
+                                     
 )

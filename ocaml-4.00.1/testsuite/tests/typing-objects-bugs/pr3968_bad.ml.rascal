@@ -1,0 +1,148 @@
+
+(
+    								 
+  type
+  (  						
+      							    	 
+     expr
+     type
+     params=
+     (
+     
+     )
+     cstrs =
+     (
+     )
+     kind =
+     <[],[<"Abs",["star"("typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["typexprConstr2"("typeConstr"([],"expr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"App",["star"("typexprConstr2"("typeConstr"([],"expr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["typexprConstr2"("typeConstr"([],"expr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>]>
+     
+     														  
+     														 
+    											   
+  								        
+  )
+                                     
+  classTypeDef 
+  (
+      classTypeDefinition 
+      (
+          classTypeDef 
+          (
+              
+              
+              exp
+              <[],[<[],[],"eval","polytype1"("arrow1"(<["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"exp")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"(["extendedModulePath1"([],"Hashtbl")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"typexprConstr2"("typeConstr"([],"expr")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>]>
+          )
+          
+      )
+  )
+                                     
+  class
+  (
+      								   
+    params = 
+    (
+        	
+    e1
+        	
+    e2
+        	
+    )
+    class name = app
+    class expr = 
+                class_structure
+                (
+                    								
+                   classValue 
+                   (
+                       <>
+                       
+                       l
+                       
+                       e1
+                   )
+                    								
+                   classValue 
+                   (
+                       <>
+                       
+                       r
+                       
+                       e2
+                   )
+                    								
+                   method1 
+                   (
+                       <>
+                       
+                       eval
+                       env
+                       
+                       match
+                       l
+                       (
+                       
+                       case
+                       (
+                         tagNamePattern 
+                         (
+                             Abs
+                             
+                             (
+                              var
+                                  						 
+                             	body
+                             
+                             )
+                         )
+                         
+                         
+                         sequence
+                         (
+                           Hashtbl.add
+                           (
+                               env
+                               var
+                               r
+                           )
+                         ;
+                           body
+                         )
+                             							
+                       ) 
+                       	        											 
+                         
+                         case
+                         (
+                          _
+                          
+                          semicolon 
+                          (
+                              App
+                              (
+                                  
+                                  (
+                                      					 l
+                                      					 
+                                  	r
+                                      					 
+                                  )
+                                      					 
+                              )
+                          )
+                         )
+                         													    
+                       	        											 
+                       	        											 
+                       )
+                       			   
+                   )
+                    								
+                )
+                    								
+        	
+      								   
+  )
+      								   
+                                     
+)

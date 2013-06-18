@@ -1,135 +1,134 @@
 
 (
-    							  
-  
-      									 
-   let
-   (
-    
-     yield
-     ref
-     (
-         false
-     ) 
-    							    		    
-   )
-      									 
-   let
-   (
-    
-     print_message
+    								 
+  let
+  (
+   
+    yield
+    ref
     (
-     case
+        false
+    ) 
+   							    		    
+  )
+                                     
+  let
+  (
+   
+    print_message
+   (
+    case
+        (
+    	  c
+         forloop 
          (
-     	  c
-           for i
-           1
-           10000
-           
-           sequence
-           (
-             print_char
-             (
-                 c
-             )
-           ;
+             i
+             1
+             <>
+             10000
              
              sequence
              (
-               flush
+               print_char
                (
-                   stdout
+                   c
                )
              ;
-               ifthenelse
+               
+               sequence
                (
-                if
-                (
-                 
-                  !
-                  (
-                  yield
-                  )
-                     							 
-                )
-                then
-                (
-                 Thread.yield
+                 flush
                  (
-                     ()
+                     stdout
                  )
-                )
-                else
-                (
-                )
+               ;
+                 ifthenelse
+                 (
+                  if
+                  (
+                   
+                    !
+                    (
+                    yield
+                    )
+                       							 
+                  )
+                  then
+                  (
+                   Thread.yield
+                   (
+                       ()
+                   )
+                  )
+                  else
+                  (
+                  )
+                 )
+                     									   
                )
-                   									   
+                   							
              )
                  							
-           )
-               							
-              														  
          )
-    )
-        		    
-   )
-      									 
-   
-    
-    :=
-    (
-        yield
-        >
-        (
-            Array.length
-            (
-                Sys.argv
-            )
-            1
         )
-    ) 
-   							    		    
-      									 
-   let
-   (
-    
-     t1
-     Thread.create
-     (
-         print_message
-         61
-     ) 
-    							    		    
    )
-      									 
-   let
+       		    
+  )
+                                     
+  
+   
+   :=
    (
-    
-     t2
-     Thread.create
-     (
-         print_message
-         62
-     ) 
-    							    		    
-   )
-      									 
+       yield
+       >
+       (
+           Array.length
+           (
+               Sys.argv
+           )
+           1
+       )
+   ) 
+  							    		    
+                                     
+  let
+  (
    
-    
-    Thread.join
+    t1
+    Thread.create
     (
-        t1
+        print_message
+        61
     ) 
    							    		    
-      									 
+  )
+                                     
+  let
+  (
    
-    
-    Thread.join
+    t2
+    Thread.create
     (
-        t2
+        print_message
+        62
     ) 
    							    		    
-      									 
-      									 
-                                 
+  )
+                                     
+  
+   
+   Thread.join
+   (
+       t1
+   ) 
+  							    		    
+                                     
+  
+   
+   Thread.join
+   (
+       t2
+   ) 
+  							    		    
+                                     
 )

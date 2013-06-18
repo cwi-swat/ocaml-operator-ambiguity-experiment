@@ -1,0 +1,2465 @@
+
+(
+    								 
+  open Printf
+                                     
+  module  Test
+  functor H
+  (
+   Hashtbl.S
+   functor M
+   (
+     modTypeWith 
+     (
+         Map.S
+         modConsType1 
+         (
+             
+             key
+             
+             "extendedModulePath1"([],"H")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].key
+             (
+             )
+             								  
+         )
+         
+     )
+     struct
+     (
+     							  
+     let
+     (
+      
+       incl_mh
+      (
+       case
+           (
+        		
+        		 m
+        		(
+        		 case
+        		     (
+        		 	  h
+        		      
+        		      try
+        		      
+        		      sequence
+        		      (
+        		        M.iter
+        		        (
+        		            (
+        		             
+        		             case
+        		             (
+        		               k
+        		               (
+        		               
+        		               case
+        		               (
+        		               d
+        		               
+        		               
+        		               let
+        		               (
+        		                (
+        		                   									  
+        		                 
+        		                  d'
+        		                  H.find
+        		                  (
+        		                      h
+        		                      k
+        		                  ) 
+        		                 							    		   
+        		                   									  
+        		                )
+        		               in
+        		                 ifthenelse
+        		                 (
+        		                  if
+        		                  (
+        		                   <>
+        		                   (
+        		                       d
+        		                       d'
+        		                   )
+        		                  )
+        		                  then
+        		                  (
+        		                   raise
+        		                   (
+        		                       Exit
+        		                   )
+        		                  )
+        		                  else
+        		                  (
+        		                  )
+        		                 )
+        		                     									   
+        		               )
+        		                   									
+        		               )
+        		               													 
+        		               )
+        		             )													
+        		             													
+        		            )
+        		               						  
+        		            m
+        		        )
+        		      ;
+        		        true
+        		      )
+        		          							
+        		      (
+        		      
+        		      case
+        		      (
+        		        
+        		        pat_or
+        		        (
+        		         Exit
+        		         Not_found
+        		        )
+        		        									  
+        		        
+        		        false
+        		      ) 
+        		      	        											 
+        		      	        											 
+        		      )
+        		          							   
+        		     )
+        		)
+        		    		   
+           )
+      )
+          		    
+     )
+     							  
+     let
+     (
+      
+       domain_hm
+      (
+       case
+           (
+        		
+        		 h
+        		(
+        		 case
+        		     (
+        		 	  m
+        		      
+        		      try
+        		      
+        		      sequence
+        		      (
+        		        H.iter
+        		        (
+        		            (
+        		             
+        		             case
+        		             (
+        		               k
+        		               (
+        		               
+        		               case
+        		               (
+        		               d
+        		               
+        		               ifthenelse
+        		               (
+        		                if
+        		                (
+        		                 not
+        		                 (
+        		                     M.mem
+        		                     (
+        		                         k
+        		                         m
+        		                     )
+        		                 )
+        		                )
+        		                then
+        		                (
+        		                 raise
+        		                 (
+        		                     Exit
+        		                 )
+        		                )
+        		                else
+        		                (
+        		                )
+        		               )
+        		                   									   
+        		               )
+        		               													 
+        		               )
+        		             )													
+        		             													
+        		            )
+        		               						  
+        		            h
+        		        )
+        		      ;
+        		        true
+        		      )
+        		          							
+        		      (
+        		      
+        		      case
+        		      (
+        		        Exit
+        		        
+        		        false
+        		      ) 
+        		      	        											 
+        		      	        											 
+        		      )
+        		          							   
+        		     )
+        		)
+        		    		   
+           )
+      )
+          		    
+     )
+     							  
+     let
+     (
+      
+       incl_hm
+      (
+       case
+           (
+        		
+        		 h
+        		(
+        		 case
+        		     (
+        		 	  m
+        		      
+        		      try
+        		      
+        		      sequence
+        		      (
+        		        H.iter
+        		        (
+        		            (
+        		             
+        		             case
+        		             (
+        		               k
+        		               (
+        		               
+        		               case
+        		               (
+        		               d
+        		               
+        		               
+        		               let
+        		               (
+        		                (
+        		                   									  
+        		                 
+        		                  d'
+        		                  M.find
+        		                  (
+        		                      k
+        		                      m
+        		                  ) 
+        		                 							    		   
+        		                   									  
+        		                )
+        		               in
+        		                 ifthenelse
+        		                 (
+        		                  if
+        		                  (
+        		                   <>
+        		                   (
+        		                       d
+        		                       d'
+        		                   )
+        		                  )
+        		                  then
+        		                  (
+        		                   raise
+        		                   (
+        		                       Exit
+        		                   )
+        		                  )
+        		                  else
+        		                  (
+        		                  )
+        		                 )
+        		                     									   
+        		               )
+        		                   									
+        		               )
+        		               													 
+        		               )
+        		             )													
+        		             													
+        		            )
+        		               						  
+        		            h
+        		        )
+        		      ;
+        		        true
+        		      )
+        		          							
+        		      (
+        		      
+        		      case
+        		      (
+        		        
+        		        pat_or
+        		        (
+        		         Exit
+        		         Not_found
+        		        )
+        		        									  
+        		        
+        		        false
+        		      ) 
+        		      	        											 
+        		      	        											 
+        		      )
+        		          							   
+        		     )
+        		)
+        		    		   
+           )
+      )
+          		    
+     )
+     							  
+     let
+     (
+      
+       test
+      (
+       case
+           (
+       	  data
+            
+            let
+            (
+             (
+                									  
+              
+               n
+               Array.length
+               (
+                   data
+               ) 
+              							    		   
+                									  
+             )
+            in
+              
+              let
+              (
+               (
+                  									  
+                
+                 h
+                 H.create
+                 (
+                     51
+                 ) 
+                							    		   
+                  									  
+                
+                 m
+                 ref
+                 (
+                     M.empty
+                 ) 
+                							    		   
+                  									  
+               )
+              in
+                
+                sequence
+                (
+                  Array.iter
+                  (
+                      (
+                       
+                       case
+                       (
+                       
+                       (
+                        k
+                            						 
+                       	d
+                       
+                       )
+                       
+                       
+                       sequence
+                       (
+                         H.add
+                         (
+                             h
+                             k
+                             d
+                         )
+                       ;
+                         :=
+                         (
+                             m
+                             M.add
+                             (
+                                 k
+                                 d
+                                 
+                                  !
+                                  (
+                                  m
+                                  )
+                                     							 
+                             )
+                         )
+                       )
+                           							
+                       )
+                       													 
+                      )
+                         						  
+                      data
+                  )
+                ;
+                  
+                  sequence
+                  (
+                    printf
+                    (
+                        "Insertion: %s\n"
+                        ifthenelse
+                        (
+                         if
+                         (
+                          &&
+                          (
+                              incl_mh
+                              (
+                                  
+                                   !
+                                   (
+                                   m
+                                   )
+                                      							 
+                                  h
+                              )
+                              domain_hm
+                              (
+                                  h
+                                  
+                                   !
+                                   (
+                                   m
+                                   )
+                                      							 
+                              )
+                          )
+                         )
+                         then
+                         (
+                          "passed"
+                         )
+                         else
+                         (
+                          "FAILED"
+                         ) 
+                        )
+                        	    											 
+                    )
+                  ;
+                    
+                    sequence
+                    (
+                      H.clear
+                      (
+                          h
+                      )
+                    ;
+                      
+                      sequence
+                      (
+                        :=
+                        (
+                            m
+                            M.empty
+                        )
+                      ;
+                        
+                        sequence
+                        (
+                          Array.iter
+                          (
+                              (
+                               
+                               case
+                               (
+                               
+                               (
+                                k
+                                    						 
+                               	d
+                               
+                               )
+                               
+                               
+                               sequence
+                               (
+                                 H.replace
+                                 (
+                                     h
+                                     k
+                                     d
+                                 )
+                               ;
+                                 :=
+                                 (
+                                     m
+                                     M.add
+                                     (
+                                         k
+                                         d
+                                         
+                                          !
+                                          (
+                                          m
+                                          )
+                                             							 
+                                     )
+                                 )
+                               )
+                                   							
+                               )
+                               													 
+                              )
+                                 						  
+                              data
+                          )
+                        ;
+                          
+                          sequence
+                          (
+                            printf
+                            (
+                                "Insertion: %s\n"
+                                ifthenelse
+                                (
+                                 if
+                                 (
+                                  &&
+                                  (
+                                      incl_mh
+                                      (
+                                          
+                                           !
+                                           (
+                                           m
+                                           )
+                                              							 
+                                          h
+                                      )
+                                      incl_hm
+                                      (
+                                          h
+                                          
+                                           !
+                                           (
+                                           m
+                                           )
+                                              							 
+                                      )
+                                  )
+                                 )
+                                 then
+                                 (
+                                  "passed"
+                                 )
+                                 else
+                                 (
+                                  "FAILED"
+                                 ) 
+                                )
+                                	    											 
+                            )
+                          ;
+                            
+                            sequence
+                            (
+                              forloop 
+                              (
+                                  i
+                                  0
+                                  <>
+                                  -
+                                  (
+                                      /
+                                      (
+                                          n
+                                          3
+                                      )
+                                      1
+                                  )
+                                  
+                                  let
+                                  (
+                                   (
+                                      									  
+                                    
+                                     
+                                     (
+                                      k
+                                          						 
+                                     	_
+                                     
+                                     )
+                                     Array.get
+                                     (
+                                      data
+                                      i
+                                     )
+                                         													 
+                                    							    		   
+                                      									  
+                                   )
+                                  in
+                                    
+                                    sequence
+                                    (
+                                      H.remove
+                                      (
+                                          h
+                                          k
+                                      )
+                                    ;
+                                      :=
+                                      (
+                                          m
+                                          M.remove
+                                          (
+                                              k
+                                              
+                                               !
+                                               (
+                                               m
+                                               )
+                                                  							 
+                                          )
+                                      )
+                                    )
+                                        							
+                                  )
+                                      									
+                              )
+                            ;
+                              printf
+                              (
+                                  "Removal: %s\n"
+                                  ifthenelse
+                                  (
+                                   if
+                                   (
+                                    &&
+                                    (
+                                        incl_mh
+                                        (
+                                            
+                                             !
+                                             (
+                                             m
+                                             )
+                                                							 
+                                            h
+                                        )
+                                        incl_hm
+                                        (
+                                            h
+                                            
+                                             !
+                                             (
+                                             m
+                                             )
+                                                							 
+                                        )
+                                    )
+                                   )
+                                   then
+                                   (
+                                    "passed"
+                                   )
+                                   else
+                                   (
+                                    "FAILED"
+                                   ) 
+                                  )
+                                  	    											 
+                              )
+                            )
+                                							
+                          )
+                              							
+                        )
+                            							
+                      )
+                          							
+                    )
+                        							
+                  )
+                      							
+                )
+                    							
+              )
+                  									
+            )
+                									
+           )
+      )
+          		    
+     )
+     							  
+     )
+     							  
+   )
+       													
+  )
+      										    
+                                     
+  module  MS
+   
+       								  
+    Map.Make
+       							     
+   (
+   struct
+   (
+   							  
+   type
+   (  						
+       							    	 
+      t
+      type
+      params=
+      (
+      
+      )
+      cstrs =
+      (
+      )
+      kind =
+      
+      string
+      (
+      )
+      								  
+      
+      														  
+      														 
+     											   
+   								        
+   )
+   							  
+   let
+   (
+    
+     compare
+    (
+     case
+         (
+      		
+      		 
+      		 x
+      		 
+      		 t
+      		 (
+      		 )
+      		 								  
+      		     										   
+      		(
+      		 case
+      		     (
+      		 	  
+      		 	  y
+      		 	  
+      		 	  t
+      		 	  (
+      		 	  )
+      		 	  								  
+      		 	      										   
+      		      Pervasives.compare
+      		      (
+      		          x
+      		          y
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   )
+   							  
+   )
+   								   
+  										    
+                                     
+  module  MI
+   
+       								  
+    Map.Make
+       							     
+   (
+   struct
+   (
+   							  
+   type
+   (  						
+       							    	 
+      t
+      type
+      params=
+      (
+      
+      )
+      cstrs =
+      (
+      )
+      kind =
+      
+      int
+      (
+      )
+      								  
+      
+      														  
+      														 
+     											   
+   								        
+   )
+   							  
+   let
+   (
+    
+     compare
+    (
+     case
+         (
+      		
+      		 
+      		 x
+      		 
+      		 t
+      		 (
+      		 )
+      		 								  
+      		     										   
+      		(
+      		 case
+      		     (
+      		 	  
+      		 	  y
+      		 	  
+      		 	  t
+      		 	  (
+      		 	  )
+      		 	  								  
+      		 	      										   
+      		      Pervasives.compare
+      		      (
+      		          x
+      		          y
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   )
+   							  
+   )
+   								   
+  										    
+                                     
+  module  MSP
+   
+       								  
+    Map.Make
+       							     
+   (
+   struct
+   (
+   							  
+   type
+   (  						
+       							    	 
+      t
+      type
+      params=
+      (
+      
+      )
+      cstrs =
+      (
+      )
+      kind =
+      tuple
+      (
+       
+       string
+       (
+       )
+       								  
+         									
+        
+        string
+        (
+        )
+        								  
+      									
+      )
+         								    
+      
+      														  
+      														 
+     											   
+   								        
+   )
+   							  
+   let
+   (
+    
+     compare
+    (
+     case
+         (
+      		
+      		 
+      		 x
+      		 
+      		 t
+      		 (
+      		 )
+      		 								  
+      		     										   
+      		(
+      		 case
+      		     (
+      		 	  
+      		 	  y
+      		 	  
+      		 	  t
+      		 	  (
+      		 	  )
+      		 	  								  
+      		 	      										   
+      		      Pervasives.compare
+      		      (
+      		          x
+      		          y
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   )
+   							  
+   )
+   								   
+  										    
+                                     
+  module  MSL
+   
+       								  
+    Map.Make
+       							     
+   (
+   struct
+   (
+   							  
+   type
+   (  						
+       							    	 
+      t
+      type
+      params=
+      (
+      
+      )
+      cstrs =
+      (
+      )
+      kind =
+      
+       list
+       (
+         
+         string
+         (
+         )
+         								  
+       )
+       
+          									
+      
+      														  
+      														 
+     											   
+   								        
+   )
+   							  
+   let
+   (
+    
+     compare
+    (
+     case
+         (
+      		
+      		 
+      		 x
+      		 
+      		 t
+      		 (
+      		 )
+      		 								  
+      		     										   
+      		(
+      		 case
+      		     (
+      		 	  
+      		 	  y
+      		 	  
+      		 	  t
+      		 	  (
+      		 	  )
+      		 	  								  
+      		 	      										   
+      		      Pervasives.compare
+      		      (
+      		          x
+      		          y
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   )
+   							  
+   )
+   								   
+  										    
+                                     
+  module  HofM
+  functor M
+  (
+   Map.S
+   functor []
+   (
+     modTypeWith 
+     (
+         Hashtbl.S
+         modConsType1 
+         (
+             
+             key
+             
+             "extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].key
+             (
+             )
+             								  
+         )
+         
+     )
+     struct
+     (
+     							  
+     type
+     (  						
+         							    	 
+        key
+        type
+        params=
+        (
+        
+        )
+        cstrs =
+        (
+        )
+        kind =
+        
+        "extendedModulePath1"([],"M")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].key
+        (
+        )
+        								  
+        
+        														  
+        														 
+       											   
+     								        
+     )
+     							  
+     type
+     (  						
+         							    	 
+        t
+        type
+        params=
+        (
+        
+         
+         a
+        										 
+        )
+        cstrs =
+        (
+        )
+        kind =
+        <["typexprConstr2"("typeConstr"([],"key")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Hashtbl")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+        
+        														  
+        														 
+       											   
+     								        
+     )
+     							  
+     let
+     (
+      
+       create
+      (
+       case
+           (
+       	  s
+            Hashtbl.create
+            (
+                s
+            )
+           )
+      )
+          		    
+     )
+     							  
+     let
+     (
+      
+       clear
+       Hashtbl.clear 
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       reset
+       Hashtbl.reset 
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       copy
+       Hashtbl.copy 
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       add
+       Hashtbl.add 
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       remove
+       Hashtbl.remove 
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       find
+       Hashtbl.find 
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       find_all
+       Hashtbl.find_all 
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       replace
+       Hashtbl.replace 
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       mem
+       Hashtbl.mem 
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       iter
+       Hashtbl.iter 
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       fold
+       Hashtbl.fold 
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       length
+       Hashtbl.length 
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       stats
+       Hashtbl.stats 
+      							    		    
+     )
+     							  
+     )
+     							  
+   )
+   												
+  )
+      										    
+                                     
+  module  HS1
+   HofM
+   (
+   MS
+   )
+   								   
+  										    
+                                     
+  module  HI1
+   HofM
+   (
+   MI
+   )
+   								   
+  										    
+                                     
+  module  HSP
+   HofM
+   (
+   MSP
+   )
+   								   
+  										    
+                                     
+  module  HSL
+   HofM
+   (
+   MSL
+   )
+   								   
+  										    
+                                     
+  module  HS2
+   
+       								  
+    Hashtbl.Make
+       							     
+   (
+   struct
+   (
+   							  
+   type
+   (  						
+       							    	 
+      t
+      type
+      params=
+      (
+      
+      )
+      cstrs =
+      (
+      )
+      kind =
+      
+      string
+      (
+      )
+      								  
+      
+      														  
+      														 
+     											   
+   								        
+   )
+   							  
+   let
+   (
+    
+     equal
+    (
+     case
+         (
+      		
+      		 
+      		 x
+      		 
+      		 t
+      		 (
+      		 )
+      		 								  
+      		     										   
+      		(
+      		 case
+      		     (
+      		 	  
+      		 	  y
+      		 	  
+      		 	  t
+      		 	  (
+      		 	  )
+      		 	  								  
+      		 	      										   
+      		      =
+      		      (
+      		          x
+      		          y
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     hash
+     Hashtbl.hash 
+    							    		    
+   )
+   							  
+   )
+   							  
+   )
+   								   
+  										    
+                                     
+  module  HI2
+   
+       								  
+    Hashtbl.Make
+       							     
+   (
+   struct
+   (
+   							  
+   type
+   (  						
+       							    	 
+      t
+      type
+      params=
+      (
+      
+      )
+      cstrs =
+      (
+      )
+      kind =
+      
+      int
+      (
+      )
+      								  
+      
+      														  
+      														 
+     											   
+   								        
+   )
+   							  
+   let
+   (
+    
+     equal
+    (
+     case
+         (
+      		
+      		 
+      		 x
+      		 
+      		 t
+      		 (
+      		 )
+      		 								  
+      		     										   
+      		(
+      		 case
+      		     (
+      		 	  
+      		 	  y
+      		 	  
+      		 	  t
+      		 	  (
+      		 	  )
+      		 	  								  
+      		 	      										   
+      		      =
+      		      (
+      		          x
+      		          y
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     hash
+     Hashtbl.hash 
+    							    		    
+   )
+   							  
+   )
+   							  
+   )
+   								   
+  										    
+                                     
+  module  TS1
+   Test
+   (
+   HS1
+   )
+   								   
+   (
+   MS
+   )
+   								   
+  										    
+                                     
+  module  TS2
+   Test
+   (
+   HS2
+   )
+   								   
+   (
+   MS
+   )
+   								   
+  										    
+                                     
+  module  TI1
+   Test
+   (
+   HI1
+   )
+   								   
+   (
+   MI
+   )
+   								   
+  										    
+                                     
+  module  TI2
+   Test
+   (
+   HI2
+   )
+   								   
+   (
+   MI
+   )
+   								   
+  										    
+                                     
+  module  TSP
+   Test
+   (
+   HSP
+   )
+   								   
+   (
+   MSP
+   )
+   								   
+  										    
+                                     
+  module  TSL
+   Test
+   (
+   HSL
+   )
+   								   
+   (
+   MSL
+   )
+   								   
+  										    
+                                     
+  let
+  (
+   
+    file_data
+   (
+    case
+        (
+    	  filename
+         
+         let
+         (
+          (
+             									  
+           
+            ic
+            open_in
+            (
+                filename
+            ) 
+           							    		   
+             									  
+          )
+         in
+           
+           let
+           (
+            (
+               									  
+             
+              lineno
+              ref
+              (
+                  0
+              ) 
+             							    		   
+               									  
+            )
+           in
+             
+             let
+             (
+              (
+                 									  
+               
+                data
+                ref
+                (
+                    []
+                ) 
+               							    		   
+                 									  
+              )
+             in
+               
+               sequence
+               (
+                 beginEnd 
+                 (
+                     
+                     try
+                     whileloop 
+                     (
+                         true
+                         
+                         let
+                         (
+                          (
+                             									  
+                           
+                            l
+                            input_line
+                            (
+                                ic
+                            ) 
+                           							    		   
+                             									  
+                          )
+                         in
+                           
+                           sequence
+                           (
+                             incr
+                             (
+                                 lineno
+                             )
+                           ;
+                             :=
+                             (
+                                 data
+                                 ::
+                                 (
+                                     
+                                     (
+                                         					 l
+                                         					 
+                                     	
+                                     	 !
+                                     	 (
+                                     	 lineno
+                                     	 )
+                                     	    							 
+                                         					 
+                                     )
+                                         					 
+                                     
+                                      !
+                                      (
+                                      data
+                                      )
+                                         							 
+                                 )
+                             )
+                           )
+                               							
+                         )
+                             									
+                     )
+                     (
+                     
+                     case
+                     (
+                       End_of_file
+                       
+                       ()
+                     ) 
+                     	        											 
+                     	        											 
+                     )
+                         							   
+                 )
+               ;
+                 
+                 sequence
+                 (
+                   close_in
+                   (
+                       ic
+                   )
+                 ;
+                   Array.of_list
+                   (
+                       
+                        !
+                        (
+                        data
+                        )
+                           							 
+                   )
+                 )
+                     							
+               )
+                   							
+             )
+                 									
+           )
+               									
+         )
+             									
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    string_data
+    
+    array
+    (
+       							  
+     
+     (
+         					 "Si"
+         					 
+     	0
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "non"
+         					 
+     	1
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "e"
+         					 
+     	2
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "vero"
+         					 
+     	3
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "e"
+         					 
+     	4
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "ben"
+         					 
+     	5
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "trovato"
+         					 
+     	6
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "An"
+         					 
+     	10
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "apple"
+         					 
+     	11
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "a"
+         					 
+     	12
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "day"
+         					 
+     	13
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "keeps"
+         					 
+     	14
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "the"
+         					 
+     	15
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "doctor"
+         					 
+     	16
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "away"
+         					 
+     	17
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "Pierre"
+         					 
+     	20
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "qui"
+         					 
+     	21
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "roule"
+         					 
+     	22
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "n'amasse"
+         					 
+     	23
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "pas"
+         					 
+     	24
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "mousse"
+         					 
+     	25
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "Asinus"
+         					 
+     	30
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "asinum"
+         					 
+     	31
+         					 
+     )
+         					 
+       							  
+     
+     (
+         					 "fricat"
+         					 
+     	32
+         					 
+     )
+         					 
+       							  
+    )
+       							   
+   							    		    
+  )
+                                     
+  let
+  (
+   
+    random_integers
+   (
+    case
+        (
+     		
+     		 num
+     		(
+     		 case
+     		     (
+     		 	  range
+     		      
+     		      let
+     		      (
+     		       (
+     		          									  
+     		        
+     		         data
+     		         Array.make
+     		         (
+     		             num
+     		             
+     		             (
+     		                 					 0
+     		                 					 
+     		             	0
+     		                 					 
+     		             )
+     		                 					 
+     		         ) 
+     		        							    		   
+     		          									  
+     		       )
+     		      in
+     		        
+     		        sequence
+     		        (
+     		          forloop 
+     		          (
+     		              i
+     		              0
+     		              <>
+     		              -
+     		              (
+     		                  num
+     		                  1
+     		              )
+     		              Array.set
+     		              (
+     		               data
+     		               i
+     		               
+     		               (
+     		                   					 Random.int
+     		                     					 (
+     		                     					     range
+     		                     					 )
+     		                   					 
+     		               	i
+     		                   					 
+     		               )
+     		                   					 
+     		              )
+     		                  									
+     		          )
+     		        ;
+     		          data
+     		        )
+     		            							
+     		      )
+     		          									
+     		     )
+     		)
+     		    		   
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    pair_data
+   (
+    case
+        (
+    	  data
+         Array.map
+         (
+             (
+              
+              case
+              (
+              
+              (
+               k
+                   						 
+              	d
+              
+              )
+              
+              
+              (
+                  					 
+                    					 (
+                    					     					 k
+                    					     					 
+                    					 	k
+                    					     					 
+                    					 )
+                    					     					 
+                  					 
+              	d
+                  					 
+              )
+                  					 
+              )
+              													 
+             )
+                						  
+             data
+         )
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    list_data
+   (
+    case
+        (
+    	  data
+         
+         let
+         (
+          (
+             									  
+           
+            d
+            Array.make
+            (
+                /
+                (
+                    Array.length
+                    (
+                        data
+                    )
+                    10
+                )
+                
+                (
+                    					 []
+                    					 
+                	0
+                    					 
+                )
+                    					 
+            ) 
+           							    		   
+             									  
+          )
+         in
+           
+           let
+           (
+            (
+               									  
+             
+              j
+              ref
+              (
+                  0
+              ) 
+             							    		   
+               									  
+            )
+           in
+             
+             let
+             (
+              (
+                 									  
+               
+                mklist
+               (
+                case
+                    (
+                	  n
+                     ifthenelse
+                     (
+                      if
+                      (
+                       ||
+                       (
+                           <=
+                           (
+                               n
+                               0
+                           )
+                           >=
+                           (
+                               
+                                !
+                                (
+                                j
+                                )
+                                   							 
+                               Array.length
+                               (
+                                   data
+                               )
+                           )
+                       )
+                      )
+                      then
+                      (
+                       []
+                      )
+                      else
+                      (
+                       beginEnd 
+                       (
+                           
+                           let
+                           (
+                            (
+                               									  
+                             
+                              hd
+                              fst
+                              (
+                                  Array.get
+                                  (
+                                   data
+                                   
+                                    !
+                                    (
+                                    j
+                                    )
+                                       							 
+                                  )
+                                      													
+                              ) 
+                             							    		   
+                               									  
+                            )
+                           in
+                             
+                             sequence
+                             (
+                               incr
+                               (
+                                   j
+                               )
+                             ;
+                               
+                               let
+                               (
+                                (
+                                   									  
+                                 
+                                  tl
+                                  mklist
+                                  (
+                                      -
+                                      (
+                                          n
+                                          1
+                                      )
+                                  ) 
+                                 							    		   
+                                   									  
+                                )
+                               in
+                                 ::
+                                 (
+                                     hd
+                                     tl
+                                 )
+                               )
+                                   									
+                             )
+                                 							
+                           )
+                               									
+                       )
+                      ) 
+                     )
+                     	    											 
+                    )
+               )
+                   		   
+                 									  
+              )
+             in
+               
+               sequence
+               (
+                 forloop 
+                 (
+                     i
+                     0
+                     <>
+                     -
+                     (
+                         Array.length
+                         (
+                             d
+                         )
+                         1
+                     )
+                     Array.set
+                     (
+                      d
+                      i
+                      
+                      (
+                          					 mklist
+                            					 (
+                            					     Random.int
+                            					     (
+                            					         16
+                            					     )
+                            					 )
+                          					 
+                      	i
+                          					 
+                      )
+                          					 
+                     )
+                         									
+                 )
+               ;
+                 d
+               )
+                   							
+             )
+                 									
+           )
+               									
+         )
+             									
+        )
+   )
+       		    
+  )
+                                     
+  
+   
+   
+   sequence
+   (
+     printf
+     (
+         "-- Random integers, large range\n%!"
+     )
+   ;
+     
+     sequence
+     (
+       TI1.test
+       (
+           random_integers
+           (
+               100000
+               1000000
+           )
+       )
+     ;
+       
+       sequence
+       (
+         printf
+         (
+             "-- Random integers, narrow range\n%!"
+         )
+       ;
+         
+         sequence
+         (
+           TI2.test
+           (
+               random_integers
+               (
+                   100000
+                   1000
+               )
+           )
+         ;
+           
+           let
+           (
+            (
+               									  
+             
+              d
+              
+              try
+              file_data
+              (
+                  "/usr/share/dict/words"
+              )
+              (
+              
+              case
+              (
+                
+                Sys_error
+                _
+                									  
+                
+                string_data
+              ) 
+              	        											 
+              	        											 
+              )
+                  							    
+             							    		   
+               									  
+            )
+           in
+             
+             sequence
+             (
+               printf
+               (
+                   "-- Strings, generic interface\n%!"
+               )
+             ;
+               
+               sequence
+               (
+                 TS1.test
+                 (
+                     d
+                 )
+               ;
+                 
+                 sequence
+                 (
+                   printf
+                   (
+                       "-- Strings, functorial interface\n%!"
+                   )
+                 ;
+                   
+                   sequence
+                   (
+                     TS2.test
+                     (
+                         d
+                     )
+                   ;
+                     
+                     sequence
+                     (
+                       printf
+                       (
+                           "-- Pairs of strings\n%!"
+                       )
+                     ;
+                       
+                       sequence
+                       (
+                         TSP.test
+                         (
+                             pair_data
+                             (
+                                 d
+                             )
+                         )
+                       ;
+                         
+                         sequence
+                         (
+                           printf
+                           (
+                               "-- Lists of strings\n%!"
+                           )
+                         ;
+                           TSL.test
+                           (
+                               list_data
+                               (
+                                   d
+                               )
+                           )
+                         )
+                             							
+                       )
+                           							
+                     )
+                         							
+                   )
+                       							
+                 )
+                     							
+               )
+                   							
+             )
+                 							
+           )
+               									
+         )
+             							
+       )
+           							
+     )
+         							
+   )
+       							 
+  							    		    
+                                     
+)

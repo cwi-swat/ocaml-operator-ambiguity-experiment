@@ -1,28 +1,29 @@
-toplevels 
+
 (
+    								 
+  let
+  (
+   
+    ()
     
-    let
+    sequence
     (
-     
-      ()
-      
-      sequence
+      Printf.printf
       (
-        Printf.printf
-        (
-            "time = %f\n"
-            Unix.time
-            (
-                ()
-            )
-        )
-      ;
-        Api.reg_mod
-        (
-            "Plugin"
-        )
+          "time = %f\n"
+          Unix.time
+          (
+              ()
+          )
       )
-          							 
-     							    		    
+    ;
+      Api.reg_mod
+      (
+          "Plugin"
+      )
     )
+        							 
+   							    		    
+  )
+                                     
 )

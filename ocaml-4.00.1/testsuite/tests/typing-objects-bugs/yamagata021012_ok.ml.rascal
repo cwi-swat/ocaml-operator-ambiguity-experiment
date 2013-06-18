@@ -1,0 +1,2170 @@
+
+(
+    								 
+  exception Out_of_range
+                                     
+  classTypeDef 
+  (
+      classTypeDefinition 
+      (
+          classTypeDef 
+          (
+              
+              <"a",[]>
+              cursor
+              <[],[<[],[],"get","polytype1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"incr","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"unit")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"unit")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<[],[],"is_last","polytype1"("typexprConstr2"("typeConstr"([],"bool")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
+          )
+          
+      )
+  )
+                                     
+  classTypeDef 
+  (
+      classTypeDefinition 
+      (
+          classTypeDef 
+          (
+              
+              <"a",[]>
+              storage
+              <["tagg"("self")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[<[],[],"first","polytype1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"cursor")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"len","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"nth","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"cursor")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<[],[],"copy","polytype1"("tagg"("self")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<[],[],"sub","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"arrow1"("typexprConstr2"("typeConstr"([],"int")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"concat","polytype1"("arrow1"("typexprConstr1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"storage")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"fold","polytype2"(["b"],"arrow1"("arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arrow1"("typexprConstr2"("typeConstr"([],"int")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"arrow1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"arrow1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"iter","polytype1"("arrow1"("arrow1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"unit")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"unit")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
+          )
+          
+      )
+  )
+                                     
+  class
+  (
+      								   
+    params = 
+    (
+        	
+    )
+    class name = storage_base
+    class expr = 
+                class_structure
+                (
+                    								
+                   classConstraint 
+                   (
+                       cursor
+                       <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"cursor")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+                   )
+                    								
+                   method3 
+                   (
+                       
+                       first
+                       polytype1 
+                       (
+                           cursor
+                       )
+                   )
+                    								
+                   method3 
+                   (
+                       
+                       len
+                       polytype1 
+                       (
+                           
+                           int
+                           (
+                           )
+                           								  
+                       )
+                   )
+                    								
+                   method3 
+                   (
+                       
+                       copy
+                       polytype1 
+                       (
+                           self
+                       )
+                   )
+                    								
+                   method3 
+                   (
+                       
+                       sub
+                       polytype1 
+                       (
+                           arrow
+                           
+                           int
+                           (
+                           )
+                           								  
+                           arrow
+                           
+                           int
+                           (
+                           )
+                           								  
+                           self
+                              								   
+                              								   
+                       )
+                   )
+                    								
+                   method3 
+                   (
+                       
+                       concat
+                       polytype1 
+                       (
+                           arrow
+                           
+                            storage
+                            (
+                              a
+                            )
+                            
+                               									
+                           self
+                              								   
+                       )
+                   )
+                    								
+                   method2 
+                   (
+                       
+                       fold
+                       poly
+                       ' b
+                          									
+                       arrow
+                       arrow
+                       a
+                       arrow
+                       
+                       int
+                       (
+                       )
+                       								  
+                       arrow
+                       b
+                       b
+                          								   
+                          								   
+                          								   
+                       arrow
+                       b
+                       b
+                          								   
+                          								   
+                          									
+                       (
+                        
+                        case
+                        (
+                          f
+                          (
+                          
+                          case
+                          (
+                          a0
+                          
+                          
+                          let
+                          (
+                           (
+                              									  
+                            
+                             cur
+                             send first
+                             (
+                              self
+                             )
+                                 						   
+                            							    		   
+                              									  
+                           )
+                          in
+                            
+                            let
+                            (
+                             (
+                                									  
+                              
+                               loop
+                              (
+                               case
+                                   (
+                                		
+                                		 count
+                                		(
+                                		 case
+                                		     (
+                                		 	  a
+                                		      ifthenelse
+                                		      (
+                                		       if
+                                		       (
+                                		        >=
+                                		        (
+                                		            count
+                                		            send len
+                                		            (
+                                		             self
+                                		            )
+                                		                						  
+                                		        )
+                                		       )
+                                		       then
+                                		       (
+                                		        a
+                                		       )
+                                		       else
+                                		       (
+                                		        
+                                		        let
+                                		        (
+                                		         (
+                                		            									  
+                                		          
+                                		           a'
+                                		           f
+                                		           (
+                                		               send get
+                                		               (
+                                		                cur
+                                		               )
+                                		                   						  
+                                		               count
+                                		               a
+                                		           ) 
+                                		          							    		   
+                                		            									  
+                                		         )
+                                		        in
+                                		          
+                                		          sequence
+                                		          (
+                                		            send incr
+                                		            (
+                                		             cur
+                                		            )
+                                		                						  
+                                		            (
+                                		                ()
+                                		            )
+                                		          ;
+                                		            loop
+                                		            (
+                                		                +
+                                		                (
+                                		                    count
+                                		                    1
+                                		                )
+                                		                a'
+                                		            )
+                                		          )
+                                		              							
+                                		        )
+                                		            									
+                                		       ) 
+                                		      )
+                                		      	    											 
+                                		     )
+                                		)
+                                		    		   
+                                   )
+                              )
+                                  		   
+                                									  
+                             )
+                            in
+                              loop
+                              (
+                                  0
+                                  a0
+                              )
+                            )
+                                									
+                          )
+                              									
+                          )
+                          													 
+                          )
+                        )													
+                        													
+                       )
+                          						  
+                   )
+                    								
+                   method1 
+                   (
+                       <>
+                       
+                       iter
+                       proc
+                       
+                       
+                       let
+                       (
+                        (
+                           									  
+                         
+                          p
+                          send first
+                          (
+                           self
+                          )
+                              						   
+                         							    		   
+                           									  
+                        )
+                       in
+                         
+                         sequence
+                         (
+                           forloop 
+                           (
+                               i
+                               0
+                               <>
+                               -
+                               (
+                                   send len
+                                   (
+                                    self
+                                   )
+                                       						  
+                                   2
+                               )
+                               
+                               sequence
+                               (
+                                 proc
+                                 (
+                                     send get
+                                     (
+                                      p
+                                     )
+                                         						  
+                                 )
+                               ;
+                                 send incr
+                                 (
+                                  p
+                                 )
+                                     						  
+                                 (
+                                     ()
+                                 )
+                               )
+                                   							
+                           )
+                         ;
+                           ifthenelse
+                           (
+                            if
+                            (
+                             >
+                             (
+                                 send len
+                                 (
+                                  self
+                                 )
+                                     						  
+                                 0
+                             )
+                            )
+                            then
+                            (
+                             proc
+                             (
+                                 send get
+                                 (
+                                  p
+                                 )
+                                     						  
+                             )
+                            )
+                            else
+                            (
+                             ()
+                            ) 
+                           )
+                           	    											 
+                         )
+                             							
+                       )
+                           									
+                   )
+                    								
+                )
+                    								
+        	
+      								   
+  )
+      								   
+                                     
+  classTypeDef 
+  (
+      classTypeDefinition 
+      (
+          classTypeDef 
+          (
+              
+              <"a",[]>
+              obj_input_channel
+              <[],[<[],[],"get","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"unit")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"close","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"unit")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"unit")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
+          )
+          
+      )
+  )
+                                     
+  classTypeDef 
+  (
+      classTypeDefinition 
+      (
+          classTypeDef 
+          (
+              
+              <"a",[]>
+              obj_output_channel
+              <[],[<[],[],"put","polytype1"("arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"unit")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<[],[],"flush","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"unit")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"unit")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"close","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"unit")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"unit")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>]>
+          )
+          
+      )
+  )
+                                     
+  module  UChar
+   struct
+   (
+   							  
+   type
+   (  						
+       							    	 
+      t
+      type
+      params=
+      (
+      
+      )
+      cstrs =
+      (
+      )
+      kind =
+      
+      int
+      (
+      )
+      								  
+      
+      														  
+      														 
+     											   
+   								        
+   )
+   							  
+   let
+   (
+    
+     highest_bit
+     lsl
+     (
+         1
+         30
+     ) 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     lower_bits
+     -
+     (
+         highest_bit
+         1
+     ) 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     char_of
+    (
+     case
+         (
+     	  c
+          
+          try
+          Char.chr
+          (
+              c
+          )
+          (
+          
+          case
+          (
+            
+            Invalid_argument
+            _
+            									  
+            
+            raise
+            (
+                Out_of_range
+            )
+          ) 
+          	        											 
+          	        											 
+          )
+              							   
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     of_char
+     Char.code 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     code
+    (
+     case
+         (
+     	  c
+          ifthenelse
+          (
+           if
+           (
+            =
+            (
+                lsr
+                (
+                    c
+                    30
+                )
+                0
+            )
+           )
+           then
+           (
+            c
+           )
+           else
+           (
+            raise
+            (
+                Out_of_range
+            )
+           ) 
+          )
+          	    											 
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     chr
+    (
+     case
+         (
+     	  n
+          ifthenelse
+          (
+           if
+           (
+            &&
+            (
+                >=
+                (
+                    n
+                    0
+                )
+                =
+                (
+                    lsr
+                    (
+                        n
+                        31
+                    )
+                    0
+                )
+            )
+           )
+           then
+           (
+            n
+           )
+           else
+           (
+            raise
+            (
+                Out_of_range
+            )
+           ) 
+          )
+          	    											 
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     uint_code
+    (
+     case
+         (
+     	  c
+          c
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     chr_of_uint
+    (
+     case
+         (
+     	  n
+          n
+         )
+    )
+        		    
+   )
+   							  
+   )
+   							  
+  										    
+                                     
+  type
+  (  						
+      							    	 
+     uchar
+     type
+     params=
+     (
+     
+     )
+     cstrs =
+     (
+     )
+     kind =
+     
+     "extendedModulePath1"([],"UChar")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+     (
+     )
+     								  
+     
+     														  
+     														 
+    											   
+  								        
+  )
+                                     
+  let
+  (
+   
+    int_of_uchar
+   (
+    case
+        (
+    	  u
+         UChar.uint_code
+         (
+             u
+         )
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    uchar_of_int
+   (
+    case
+        (
+    	  n
+         UChar.chr_of_uint
+         (
+             n
+         )
+        )
+   )
+       		    
+  )
+                                     
+  classTypeDef 
+  (
+      classTypeDefinition 
+      (
+          classTypeDef 
+          (
+              
+              
+              ucursor
+              <[<"typexprConstr2"("typeConstr"([],"uchar")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>],"classPath"([],"cursor")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+          )
+          
+      )
+  )
+                                     
+  classTypeDef 
+  (
+      classTypeDefinition 
+      (
+          classTypeDef 
+          (
+              
+              
+              ustorage
+              <[<"typexprConstr2"("typeConstr"([],"uchar")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>],"classPath"([],"storage")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+          )
+          
+      )
+  )
+                                     
+  class
+  (
+      								   
+    params = 
+    (
+        	
+    )
+    class name = ustorage_base
+    class expr = 
+                <"typexprConstr2"("typeConstr"([],"uchar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["tagg"("ucursor")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"storage_base")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+        	
+      								   
+  )
+      								   
+                                     
+  module  UText
+   struct
+   (
+   							  
+   let
+   (
+    
+     get_buf
+    (
+     case
+         (
+      		
+      		 s
+      		(
+      		 case
+      		     (
+      		 	  i
+      		      
+      		      let
+      		      (
+      		       (
+      		          									  
+      		        
+      		         n
+      		         Char.code
+      		         (
+      		             Array.get
+      		             (
+      		              s
+      		              i
+      		             )
+      		                 													
+      		         ) 
+      		        							    		   
+      		          									  
+      		       )
+      		      in
+      		        
+      		        let
+      		        (
+      		         (
+      		            									  
+      		          
+      		           n
+      		           lor
+      		           (
+      		               lsl
+      		               (
+      		                   n
+      		                   8
+      		               )
+      		               Char.code
+      		               (
+      		                   Array.get
+      		                   (
+      		                    s
+      		                    +
+      		                    (
+      		                        i
+      		                        1
+      		                    )
+      		                   )
+      		                       													
+      		               )
+      		           ) 
+      		          							    		   
+      		            									  
+      		         )
+      		        in
+      		          
+      		          let
+      		          (
+      		           (
+      		              									  
+      		            
+      		             n
+      		             lor
+      		             (
+      		                 lsl
+      		                 (
+      		                     n
+      		                     8
+      		                 )
+      		                 Char.code
+      		                 (
+      		                     Array.get
+      		                     (
+      		                      s
+      		                      +
+      		                      (
+      		                          i
+      		                          2
+      		                      )
+      		                     )
+      		                         													
+      		                 )
+      		             ) 
+      		            							    		   
+      		              									  
+      		           )
+      		          in
+      		            
+      		            let
+      		            (
+      		             (
+      		                									  
+      		              
+      		               n
+      		               lor
+      		               (
+      		                   lsl
+      		                   (
+      		                       n
+      		                       8
+      		                   )
+      		                   Char.code
+      		                   (
+      		                       Array.get
+      		                       (
+      		                        s
+      		                        +
+      		                        (
+      		                            i
+      		                            3
+      		                        )
+      		                       )
+      		                           													
+      		                   )
+      		               ) 
+      		              							    		   
+      		                									  
+      		             )
+      		            in
+      		              UChar.chr_of_uint
+      		              (
+      		                  n
+      		              )
+      		            )
+      		                									
+      		          )
+      		              									
+      		        )
+      		            									
+      		      )
+      		          									
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     set_buf
+    (
+     case
+         (
+      		
+      		 s
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 i
+      		  		(
+      		  		 case
+      		  		     (
+      		  		 	  u
+      		  		      
+      		  		      let
+      		  		      (
+      		  		       (
+      		  		          									  
+      		  		        
+      		  		         n
+      		  		         UChar.uint_code
+      		  		         (
+      		  		             u
+      		  		         ) 
+      		  		        							    		   
+      		  		          									  
+      		  		       )
+      		  		      in
+      		  		        beginEnd 
+      		  		        (
+      		  		            
+      		  		            sequence
+      		  		            (
+      		  		              Array.set
+      		  		              (
+      		  		               s
+      		  		               i
+      		  		               Char.chr
+      		  		               (
+      		  		                   lsr
+      		  		                   (
+      		  		                       n
+      		  		                       24
+      		  		                   )
+      		  		               )
+      		  		              )
+      		  		                  									
+      		  		            ;
+      		  		              
+      		  		              sequence
+      		  		              (
+      		  		                Array.set
+      		  		                (
+      		  		                 s
+      		  		                 +
+      		  		                 (
+      		  		                     i
+      		  		                     1
+      		  		                 )
+      		  		                 Char.chr
+      		  		                 (
+      		  		                     lor
+      		  		                     (
+      		  		                         lsr
+      		  		                         (
+      		  		                             n
+      		  		                             16
+      		  		                         )
+      		  		                         255
+      		  		                     )
+      		  		                 )
+      		  		                )
+      		  		                    									
+      		  		              ;
+      		  		                
+      		  		                sequence
+      		  		                (
+      		  		                  Array.set
+      		  		                  (
+      		  		                   s
+      		  		                   +
+      		  		                   (
+      		  		                       i
+      		  		                       2
+      		  		                   )
+      		  		                   Char.chr
+      		  		                   (
+      		  		                       lor
+      		  		                       (
+      		  		                           lsr
+      		  		                           (
+      		  		                               n
+      		  		                               8
+      		  		                           )
+      		  		                           255
+      		  		                       )
+      		  		                   )
+      		  		                  )
+      		  		                      									
+      		  		                ;
+      		  		                  semicolon 
+      		  		                  (
+      		  		                      Array.set
+      		  		                      (
+      		  		                       s
+      		  		                       +
+      		  		                       (
+      		  		                           i
+      		  		                           3
+      		  		                       )
+      		  		                       Char.chr
+      		  		                       (
+      		  		                           lor
+      		  		                           (
+      		  		                               n
+      		  		                               255
+      		  		                           )
+      		  		                       )
+      		  		                      )
+      		  		                          									
+      		  		                  )
+      		  		                )
+      		  		                    							
+      		  		              )
+      		  		                  							
+      		  		            )
+      		  		                							
+      		  		        )
+      		  		      )
+      		  		          									
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     init_buf
+    (
+     case
+         (
+      		
+      		 buf
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 pos
+      		  		(
+      		  		 case
+      		  		     (
+      		  		 	  init
+      		  		      ifthenelse
+      		  		      (
+      		  		       if
+      		  		       (
+      		  		        =
+      		  		        (
+      		  		            send len
+      		  		            (
+      		  		             init
+      		  		            )
+      		  		                						  
+      		  		            0
+      		  		        )
+      		  		       )
+      		  		       then
+      		  		       (
+      		  		        ()
+      		  		       )
+      		  		       else
+      		  		       (
+      		  		        
+      		  		        let
+      		  		        (
+      		  		         (
+      		  		            									  
+      		  		          
+      		  		           cur
+      		  		           send first
+      		  		           (
+      		  		            init
+      		  		           )
+      		  		               						   
+      		  		          							    		   
+      		  		            									  
+      		  		         )
+      		  		        in
+      		  		          
+      		  		          sequence
+      		  		          (
+      		  		            forloop 
+      		  		            (
+      		  		                i
+      		  		                0
+      		  		                <>
+      		  		                -
+      		  		                (
+      		  		                    send len
+      		  		                    (
+      		  		                     init
+      		  		                    )
+      		  		                        						  
+      		  		                    2
+      		  		                )
+      		  		                
+      		  		                sequence
+      		  		                (
+      		  		                  set_buf
+      		  		                  (
+      		  		                      buf
+      		  		                      +
+      		  		                      (
+      		  		                          pos
+      		  		                          lsl
+      		  		                          (
+      		  		                              i
+      		  		                              2
+      		  		                          )
+      		  		                      )
+      		  		                      send get
+      		  		                      (
+      		  		                       cur
+      		  		                      )
+      		  		                          						  
+      		  		                  )
+      		  		                ;
+      		  		                  send incr
+      		  		                  (
+      		  		                   cur
+      		  		                  )
+      		  		                      						  
+      		  		                  (
+      		  		                      ()
+      		  		                  )
+      		  		                )
+      		  		                    							
+      		  		            )
+      		  		          ;
+      		  		            set_buf
+      		  		            (
+      		  		                buf
+      		  		                +
+      		  		                (
+      		  		                    pos
+      		  		                    lsl
+      		  		                    (
+      		  		                        -
+      		  		                        (
+      		  		                            send len
+      		  		                            (
+      		  		                             init
+      		  		                            )
+      		  		                                						  
+      		  		                            1
+      		  		                        )
+      		  		                        2
+      		  		                    )
+      		  		                )
+      		  		                send get
+      		  		                (
+      		  		                 cur
+      		  		                )
+      		  		                    						  
+      		  		            )
+      		  		          )
+      		  		              							
+      		  		        )
+      		  		            									
+      		  		       ) 
+      		  		      )
+      		  		      	    											 
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     make_buf
+    (
+     case
+         (
+     	  init
+          
+          let
+          (
+           (
+              									  
+            
+             s
+             String.create
+             (
+                 lsl
+                 (
+                     send len
+                     (
+                      init
+                     )
+                         						  
+                     2
+                 )
+             ) 
+            							    		   
+              									  
+           )
+          in
+            
+            sequence
+            (
+              init_buf
+              (
+                  s
+                  0
+                  init
+              )
+            ;
+              s
+            )
+                							
+          )
+              									
+         )
+    )
+        		    
+   )
+   							  
+   class
+   (
+       								   
+     params = 
+     (
+         	
+     buf
+         	
+     )
+     class name = text_raw
+     class expr = 
+                 class_structure
+                 (
+                     								
+                    inheritance 
+                    (
+                        <>
+                        <"typexprConstr2"("typeConstr"([],"cursor")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[],"classPath"([],"ustorage_base")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                        
+                    )
+                     								
+                    classValue 
+                    (
+                        <>
+                        
+                        contents
+                        
+                        buf
+                    )
+                     								
+                    method1 
+                    (
+                        <>
+                        
+                        first
+                        
+                        
+                        new cursor
+                        (
+                            brackets2 
+                            (
+                                self
+                                
+                                text_raw
+                                (
+                                )
+                                								  
+                            )
+                            0
+                        )
+                    )
+                     								
+                    method1 
+                    (
+                        <>
+                        
+                        len
+                        
+                        
+                        /
+                        (
+                            String.length
+                            (
+                                contents
+                            )
+                            4
+                        )
+                    )
+                     								
+                    method1 
+                    (
+                        <>
+                        
+                        get
+                        i
+                        
+                        get_buf
+                        (
+                            contents
+                            *
+                            (
+                                4
+                                i
+                            )
+                        )
+                    )
+                     								
+                    method1 
+                    (
+                        <>
+                        
+                        nth
+                        i
+                        
+                        new cursor
+                        (
+                            brackets2 
+                            (
+                                self
+                                
+                                text_raw
+                                (
+                                )
+                                								  
+                            )
+                            i
+                        )
+                    )
+                     								
+                    method1 
+                    (
+                        <>
+                        
+                        copy
+                        
+                        
+                        brackets4 
+                        (
+                            contents
+                            String.copy
+                            (
+                                contents
+                            )
+                            
+                            
+                        )
+                    )
+                     								
+                    method1 
+                    (
+                        <>
+                        
+                        sub
+                        pos
+                        len
+                        
+                        brackets4 
+                        (
+                            contents
+                            String.sub
+                            (
+                                contents
+                                *
+                                (
+                                    pos
+                                    4
+                                )
+                                *
+                                (
+                                    len
+                                    4
+                                )
+                            )
+                            
+                            
+                        )
+                    )
+                     								
+                    method1 
+                    (
+                        <>
+                        
+                        concat
+                        
+                        text
+                        
+                        ustorage
+                        (
+                        )
+                        								  
+                            										   
+                        
+                        
+                        let
+                        (
+                         (
+                            									  
+                          
+                           buf
+                           String.create
+                           (
+                               +
+                               (
+                                   String.length
+                                   (
+                                       contents
+                                   )
+                                   *
+                                   (
+                                       4
+                                       send len
+                                       (
+                                        text
+                                       )
+                                           						  
+                                   )
+                               )
+                           ) 
+                          							    		   
+                            									  
+                         )
+                        in
+                          
+                          sequence
+                          (
+                            String.blit
+                            (
+                                contents
+                                0
+                                buf
+                                0
+                                String.length
+                                (
+                                    contents
+                                )
+                            )
+                          ;
+                            
+                            sequence
+                            (
+                              init_buf
+                              (
+                                  buf
+                                  String.length
+                                  (
+                                      contents
+                                  )
+                                  text
+                              )
+                            ;
+                              brackets4 
+                              (
+                                  contents
+                                  buf
+                                  
+                                  
+                              )
+                            )
+                                							
+                          )
+                              							
+                        )
+                            									
+                    )
+                     								
+                 )
+                     								
+         	
+       								   
+     params = 
+     (
+         	
+     text
+         	
+     i
+         	
+     )
+     class name = cursor
+     class expr = 
+                 class_structure
+                 (
+                     								
+                    classValue 
+                    (
+                        <>
+                        
+                        contents
+                        
+                        text
+                    )
+                     								
+                    classValue 
+                    (
+                        <>
+                        
+                        pos
+                        
+                        i
+                    )
+                     								
+                    method1 
+                    (
+                        <>
+                        
+                        get
+                        
+                        
+                        send get
+                        (
+                         contents
+                        )
+                            						  
+                        (
+                            pos
+                        )
+                    )
+                     								
+                    method1 
+                    (
+                        <>
+                        
+                        incr
+                        ()
+                        
+                        Array.set
+                        (
+                         pos
+                         +
+                         (
+                             pos
+                             1
+                         )
+                        )
+                        								   
+                    )
+                     								
+                    method1 
+                    (
+                        <>
+                        
+                        is_last
+                        
+                        
+                        >=
+                        (
+                            +
+                            (
+                                pos
+                                1
+                            )
+                            send len
+                            (
+                             contents
+                            )
+                                						  
+                        )
+                    )
+                     								
+                 )
+                     								
+         	
+       								   
+   )
+       								   
+   							  
+   class
+   (
+       								   
+     params = 
+     (
+         	
+     buf
+         	
+     )
+     class name = string_raw
+     class expr = 
+                 class_structure
+                 (
+                     								
+                    inheritance 
+                    (
+                        <>
+                        classArgs 
+                        (
+                            classPath 
+                            (
+                                text_raw
+                            )
+                            buf
+                        )
+                        
+                    )
+                     								
+                    method1 
+                    (
+                        <>
+                        
+                        set
+                        i
+                        u
+                        
+                        set_buf
+                        (
+                            contents
+                            *
+                            (
+                                4
+                                i
+                            )
+                            u
+                        )
+                    )
+                     								
+                 )
+                     								
+         	
+       								   
+   )
+       								   
+   							  
+   class
+   (
+       								   
+     params = 
+     (
+         	
+     init
+         	
+     )
+     class name = text
+     class expr = 
+                 classArgs 
+                 (
+                     classPath 
+                     (
+                         text_raw
+                     )
+                     make_buf
+                     (
+                         init
+                     )
+                 )
+         	
+       								   
+   )
+       								   
+   							  
+   class
+   (
+       								   
+     params = 
+     (
+         	
+     init
+         	
+     )
+     class name = string
+     class expr = 
+                 classArgs 
+                 (
+                     classPath 
+                     (
+                         string_raw
+                     )
+                     make_buf
+                     (
+                         init
+                     )
+                 )
+         	
+       								   
+   )
+       								   
+   							  
+   let
+   (
+    
+     of_string
+    (
+     case
+         (
+     	  s
+          
+          let
+          (
+           (
+              									  
+            
+             buf
+             String.make
+             (
+                 *
+                 (
+                     4
+                     String.length
+                     (
+                         s
+                     )
+                 )
+                 00
+             ) 
+            							    		   
+              									  
+           )
+          in
+            
+            sequence
+            (
+              forloop 
+              (
+                  i
+                  0
+                  <>
+                  -
+                  (
+                      String.length
+                      (
+                          s
+                      )
+                      1
+                  )
+                  Array.set
+                  (
+                   buf
+                   *
+                   (
+                       4
+                       i
+                   )
+                   Array.get
+                   (
+                    s
+                    i
+                   )
+                       													
+                  )
+                      									
+              )
+            ;
+              new text_raw
+              (
+                  buf
+              )
+            )
+                							
+          )
+              									
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     make
+    (
+     case
+         (
+      		
+      		 len
+      		(
+      		 case
+      		     (
+      		 	  u
+      		      
+      		      let
+      		      (
+      		       (
+      		          									  
+      		        
+      		         s
+      		         String.create
+      		         (
+      		             *
+      		             (
+      		                 4
+      		                 len
+      		             )
+      		         ) 
+      		        							    		   
+      		          									  
+      		       )
+      		      in
+      		        
+      		        sequence
+      		        (
+      		          forloop 
+      		          (
+      		              i
+      		              0
+      		              <>
+      		              -
+      		              (
+      		                  len
+      		                  1
+      		              )
+      		              set_buf
+      		              (
+      		                  s
+      		                  *
+      		                  (
+      		                      4
+      		                      i
+      		                  )
+      		                  u
+      		              )
+      		          )
+      		        ;
+      		          new string_raw
+      		          (
+      		              s
+      		          )
+      		        )
+      		            							
+      		      )
+      		          									
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     create
+    (
+     case
+         (
+     	  len
+          make
+          (
+              len
+              UChar.chr
+              (
+                  0
+              )
+          )
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     copy
+    (
+     case
+         (
+     	  s
+          send copy
+          (
+           s
+          )
+              						  
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     sub
+    (
+     case
+         (
+      		
+      		 s
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 start
+      		  		(
+      		  		 case
+      		  		     (
+      		  		 	  len
+      		  		      send sub
+      		  		      (
+      		  		       s
+      		  		      )
+      		  		          						  
+      		  		      (
+      		  		          start
+      		  		          len
+      		  		      )
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     fill
+    (
+     case
+         (
+      		
+      		 s
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 start
+      		  		(
+      		  		 case
+      		  		     (
+      		  		  		
+      		  		  		 len
+      		  		  		(
+      		  		  		 case
+      		  		  		     (
+      		  		  		 	  u
+      		  		  		      forloop 
+      		  		  		      (
+      		  		  		          i
+      		  		  		          start
+      		  		  		          <>
+      		  		  		          -
+      		  		  		          (
+      		  		  		              +
+      		  		  		              (
+      		  		  		                  start
+      		  		  		                  len
+      		  		  		              )
+      		  		  		              1
+      		  		  		          )
+      		  		  		          send set
+      		  		  		          (
+      		  		  		           s
+      		  		  		          )
+      		  		  		              						  
+      		  		  		          (
+      		  		  		              i
+      		  		  		              u
+      		  		  		          )
+      		  		  		      )
+      		  		  		     )
+      		  		  		)
+      		  		  		    		   
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     blit
+    (
+     case
+         (
+      		
+      		 src
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 srcoff
+      		  		(
+      		  		 case
+      		  		     (
+      		  		  		
+      		  		  		 dst
+      		  		  		(
+      		  		  		 case
+      		  		  		     (
+      		  		  		  		
+      		  		  		  		 dstoff
+      		  		  		  		(
+      		  		  		  		 case
+      		  		  		  		     (
+      		  		  		  		 	  len
+      		  		  		  		      forloop 
+      		  		  		  		      (
+      		  		  		  		          i
+      		  		  		  		          0
+      		  		  		  		          <>
+      		  		  		  		          -
+      		  		  		  		          (
+      		  		  		  		              len
+      		  		  		  		              1
+      		  		  		  		          )
+      		  		  		  		          
+      		  		  		  		          let
+      		  		  		  		          (
+      		  		  		  		           (
+      		  		  		  		              									  
+      		  		  		  		            
+      		  		  		  		             u
+      		  		  		  		             send get
+      		  		  		  		             (
+      		  		  		  		              src
+      		  		  		  		             )
+      		  		  		  		                 						  
+      		  		  		  		             (
+      		  		  		  		                 +
+      		  		  		  		                 (
+      		  		  		  		                     srcoff
+      		  		  		  		                     i
+      		  		  		  		                 )
+      		  		  		  		             ) 
+      		  		  		  		            							    		   
+      		  		  		  		              									  
+      		  		  		  		           )
+      		  		  		  		          in
+      		  		  		  		            send set
+      		  		  		  		            (
+      		  		  		  		             dst
+      		  		  		  		            )
+      		  		  		  		                						  
+      		  		  		  		            (
+      		  		  		  		                +
+      		  		  		  		                (
+      		  		  		  		                    dstoff
+      		  		  		  		                    i
+      		  		  		  		                )
+      		  		  		  		                u
+      		  		  		  		            )
+      		  		  		  		          )
+      		  		  		  		              									
+      		  		  		  		      )
+      		  		  		  		     )
+      		  		  		  		)
+      		  		  		  		    		   
+      		  		  		     )
+      		  		  		)
+      		  		  		    		   
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     concat
+    (
+     case
+         (
+      		
+      		 s1
+      		(
+      		 case
+      		     (
+      		 	  s2
+      		      send concat
+      		      (
+      		       s1
+      		      )
+      		          						  
+      		      (
+      		          brackets2 
+      		          (
+      		              s2
+      		              
+      		               storage
+      		               (
+      		                 
+      		                 uchar
+      		                 (
+      		                 )
+      		                 								  
+      		               )
+      		               
+      		                  									
+      		          )
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     iter
+    (
+     case
+         (
+      		
+      		 proc
+      		(
+      		 case
+      		     (
+      		 	  s
+      		      send iter
+      		      (
+      		       s
+      		      )
+      		          						  
+      		      (
+      		          proc
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+   							  
+   )
+   							  
+  										    
+                                     
+)

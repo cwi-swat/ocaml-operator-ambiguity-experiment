@@ -127,7 +127,7 @@
      		           )
      		          ) 
      		         )
-     		         		    											 
+     		         	    											 
      		        )
      		        													    
      		      	        											 
@@ -499,7 +499,7 @@
     		  		  		          )
     		  		  		         ) 
     		  		  		        )
-    		  		  		        		    											 
+    		  		  		        	    											 
     		  		  		      ) 
     		  		  		      	        											 
     		  		  		        
@@ -627,7 +627,7 @@
      		          		  		            )
      		          		  		           ) 
      		          		  		          )
-     		          		  		          		    											 
+     		          		  		          	    											 
      		          		  		         )
      		          		  		         else
      		          		  		         (
@@ -645,7 +645,7 @@
      		          		  		          )
      		          		  		         ) 
      		          		  		        )
-     		          		  		        		    											 
+     		          		  		        	    											 
      		          		  		      ) 
      		          		  		      	        											 
      		          		  		        
@@ -705,7 +705,7 @@
      		          		  		           )
      		          		  		          ) 
      		          		  		         )
-     		          		  		         		    											 
+     		          		  		         	    											 
      		          		  		        )
      		          		  		        													    
      		          		  		      	        											 
@@ -953,10 +953,10 @@
      		                						  
      		           ) 
      		          )
-     		          		    											 
+     		          	    											 
      		         ) 
      		        )
-     		        		    											 
+     		        	    											 
      		      ) 
      		      	        											 
      		        
@@ -1007,7 +1007,7 @@
      		               						  
      		          ) 
      		         )
-     		         		    											 
+     		         	    											 
      		        )
      		        													    
      		      	        											 
@@ -1110,7 +1110,7 @@
      		           )
      		          ) 
      		         )
-     		         		    											 
+     		         	    											 
      		        )
      		        													    
      		      	        											 
@@ -1198,27 +1198,68 @@
          )
          then
          (
-          match
-          sons
+          beginEnd 
           (
-          
-          case
-          (
-            patternTuple 
-            (
-                s1
-                s2
-                
-            )
-            
-            
-            sequence
-            (
-              pretty_close
+              match
+              sons
               (
-                  s1
+              
+              case
+              (
+                patternTuple 
+                (
+                    s1
+                    s2
+                    
+                )
+                
+                
+                sequence
+                (
+                  pretty_close
+                  (
+                      s1
+                  )
+                ;
+                  
+                  sequence
+                  (
+                    print_string
+                    (
+                        oper
+                    )
+                  ;
+                    pretty_close
+                    (
+                        s2
+                    )
+                  )
+                      							
+                )
+                    							
+              ) 
+              	        											 
+                
+                case
+                (
+                 _
+                 
+                 failwith
+                 (
+                     "pretty_term : infix arity <> 2"
+                 )
+                )
+                													    
+              	        											 
+              	        											 
               )
-            ;
+              			   
+          )
+         )
+         else
+         (
+          beginEnd 
+          (
               
               sequence
               (
@@ -1227,132 +1268,97 @@
                     oper
                 )
               ;
-                pretty_close
+                match
+                sons
                 (
-                    s2
-                )
-              )
-                  							
-            )
-                							
-          ) 
-          	        											 
-            
-            case
-            (
-             _
-             
-             failwith
-             (
-                 "pretty_term : infix arity <> 2"
-             )
-            )
-            													    
-          	        											 
-          	        											 
-          )
-          			   
-         )
-         else
-         (
-          
-          sequence
-          (
-            print_string
-            (
-                oper
-            )
-          ;
-            match
-            sons
-            (
-            
-            case
-            (
-              []
-              
-              ()
-            ) 
-            	        											 
-              
-              case
-              (
-               
-               ::
-               (
-                   t
-                   lt
-               )
-               
-               
-               sequence
-               (
-                 print_string
-                 (
-                     "("
-                 )
-               ;
-                 
-                 sequence
-                 (
-                   pretty_term
+                
+                case
+                (
+                  []
+                  
+                  ()
+                ) 
+                	        											 
+                  
+                  case
+                  (
+                   
+                   ::
                    (
                        t
+                       lt
                    )
-                 ;
+                   
                    
                    sequence
                    (
-                     List.iter
-                     (
-                         (
-                          
-                          case
-                          (
-                          t
-                          
-                          
-                          sequence
-                          (
-                            print_string
-                            (
-                                ","
-                            )
-                          ;
-                            pretty_term
-                            (
-                                t
-                            )
-                          )
-                              							
-                          )
-                          													 
-                         )
-                            						  
-                         lt
-                     )
-                   ;
                      print_string
                      (
-                         ")"
+                         "("
                      )
+                   ;
+                     
+                     sequence
+                     (
+                       pretty_term
+                       (
+                           t
+                       )
+                     ;
+                       
+                       sequence
+                       (
+                         List.iter
+                         (
+                             (
+                              
+                              case
+                              (
+                              t
+                              
+                              
+                              sequence
+                              (
+                                print_string
+                                (
+                                    ","
+                                )
+                              ;
+                                pretty_term
+                                (
+                                    t
+                                )
+                              )
+                                  							
+                              )
+                              													 
+                             )
+                                						  
+                             lt
+                         )
+                       ;
+                         print_string
+                         (
+                             ")"
+                         )
+                       )
+                           							
+                     )
+                         							
                    )
                        							
-                 )
-                     							
-               )
-                   							
+                  )
+                  													    
+                	        											 
+                	        											 
+                )
+                			   
               )
-              													    
-            	        											 
-            	        											 
-            )
-            			   
+                  							
           )
-              							
          ) 
         )
-        		    											 
+        	    											 
        )
        													    
      	        											 
@@ -1392,30 +1398,33 @@
        )
        then
        (
-        
-        sequence
+        beginEnd 
         (
-          print_string
-          (
-              "("
-          )
-        ;
-          
-          sequence
-          (
-            pretty_term
+            
+            sequence
             (
-                m
+              print_string
+              (
+                  "("
+              )
+            ;
+              
+              sequence
+              (
+                pretty_term
+                (
+                    m
+                )
+              ;
+                print_string
+                (
+                    ")"
+                )
+              )
+                  							
             )
-          ;
-            print_string
-            (
-                ")"
-            )
-          )
-              							
+                							
         )
-            							
        )
        else
        (
@@ -1425,7 +1434,7 @@
         )
        ) 
       )
-      		    											 
+      	    											 
     ) 
     	        											 
       

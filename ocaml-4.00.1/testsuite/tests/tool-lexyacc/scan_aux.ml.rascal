@@ -107,72 +107,20 @@
          
          sequence
          (
-           ifthenelse
+           beginEnd 
            (
-            if
-            (
-             >=
-             (
-                 
-                  !
-                  (
-                  string_index
-                  )
-                     							 
-                 String.length
-                 (
-                     
-                      !
-                      (
-                      string_buff
-                      )
-                         							 
-                 )
-             )
-            )
-            then
-            (
-             
-             let
-             (
-              (
-                 									  
-               
-                new_buff
-                String.create
-                (
-                    *
-                    (
-                        String.length
-                        (
-                            
-                             !
-                             (
-                             string_buff
-                             )
-                                							 
-                        )
-                        2
-                    )
-                ) 
-               							    		   
-                 									  
-              )
-             in
-               
-               sequence
+               ifthenelse
                (
-                 String.blit
+                if
+                (
+                 >=
                  (
-                     new_buff
-                     0
                      
                       !
                       (
-                      string_buff
+                      string_index
                       )
                          							 
-                     0
                      String.length
                      (
                          
@@ -183,22 +131,80 @@
                              							 
                      )
                  )
-               ;
-                 :=
+                )
+                then
+                (
+                 beginEnd 
                  (
-                     string_buff
-                     new_buff
+                     
+                     let
+                     (
+                      (
+                         									  
+                       
+                        new_buff
+                        String.create
+                        (
+                            *
+                            (
+                                String.length
+                                (
+                                    
+                                     !
+                                     (
+                                     string_buff
+                                     )
+                                        							 
+                                )
+                                2
+                            )
+                        ) 
+                       							    		   
+                         									  
+                      )
+                     in
+                       
+                       sequence
+                       (
+                         String.blit
+                         (
+                             new_buff
+                             0
+                             
+                              !
+                              (
+                              string_buff
+                              )
+                                 							 
+                             0
+                             String.length
+                             (
+                                 
+                                  !
+                                  (
+                                  string_buff
+                                  )
+                                     							 
+                             )
+                         )
+                       ;
+                         :=
+                         (
+                             string_buff
+                             new_buff
+                         )
+                       )
+                           							
+                     )
+                         									
                  )
+                )
+                else
+                (
+                )
                )
-                   							
-             )
-                 									
-            )
-            else
-            (
-            )
+                   									   
            )
-               									   
          ;
            
            sequence

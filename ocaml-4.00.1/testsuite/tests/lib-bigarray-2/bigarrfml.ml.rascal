@@ -121,45 +121,51 @@
      		  		           )
      		  		           then
      		  		           (
-     		  		            
-     		  		            sequence
+     		  		            beginEnd 
      		  		            (
-     		  		              eprintf
-     		  		              (
-     		  		                  "*** Bad result (%s, test %d)\n"
+     		  		                
+     		  		                sequence
+     		  		                (
+     		  		                  eprintf
+     		  		                  (
+     		  		                      "*** Bad result (%s, test %d)\n"
+     		  		                      
+     		  		                       !
+     		  		                       (
+     		  		                       function_tested
+     		  		                       )
+     		  		                          							 
+     		  		                      test_number
+     		  		                  )
+     		  		                ;
      		  		                  
-     		  		                   !
-     		  		                   (
-     		  		                   function_tested
-     		  		                   )
-     		  		                      							 
-     		  		                  test_number
-     		  		              )
-     		  		            ;
-     		  		              
-     		  		              sequence
-     		  		              (
-     		  		                flush
-     		  		                (
-     		  		                    stderr
+     		  		                  sequence
+     		  		                  (
+     		  		                    flush
+     		  		                    (
+     		  		                        stderr
+     		  		                    )
+     		  		                  ;
+     		  		                    :=
+     		  		                    (
+     		  		                        error_occurred
+     		  		                        true
+     		  		                    )
+     		  		                  )
+     		  		                      							
      		  		                )
-     		  		              ;
-     		  		                :=
-     		  		                (
-     		  		                    error_occurred
-     		  		                    true
-     		  		                )
-     		  		              )
-     		  		                  							
+     		  		                    							
      		  		            )
-     		  		                							
      		  		           )
      		  		           else
      		  		           (
-     		  		            printf
+     		  		            beginEnd 
      		  		            (
-     		  		                " %d..."
-     		  		                test_number
+     		  		                printf
+     		  		                (
+     		  		                    " %d..."
+     		  		                    test_number
+     		  		                )
      		  		            )
      		  		           ) 
      		  		          )
@@ -188,7 +194,7 @@
    (
    )
    								  
-   <["typexprConstr2"("typeConstr"([],"float")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"float64_elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"c_layout")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+   <["typexprConstr2"("typeConstr"([],"float")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"float64_elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"c_layout")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
       								   
   (
    
@@ -204,7 +210,7 @@
   (
    value_description
    arrow
-   <["typexprConstr2"("typeConstr"([],"float")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"float64_elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"c_layout")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+   <["typexprConstr2"("typeConstr"([],"float")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"float64_elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"c_layout")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
    
    unit
    (
@@ -230,7 +236,7 @@
    (
    )
    								  
-   <["typexprConstr2"("typeConstr"([],"float")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"float32_elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"fortran_layout")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array2")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+   <["typexprConstr2"("typeConstr"([],"float")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"float32_elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"fortran_layout")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"(["extendedModulePath1"([],"Array2")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
       								   
   (
    
@@ -246,7 +252,7 @@
   (
    value_description
    arrow
-   <["typexprConstr2"("typeConstr"([],"float")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"float32_elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"fortran_layout")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array2")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+   <["typexprConstr2"("typeConstr"([],"float")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"float32_elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"fortran_layout")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array2")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
    
    unit
    (
@@ -322,55 +328,61 @@
        		  		  		  		  		        
        		  		  		  		  		        sequence
        		  		  		  		  		        (
-       		  		  		  		  		           for i
-       		  		  		  		  		           ind0
-       		  		  		  		  		           +
-       		  		  		  		  		           (
-       		  		  		  		  		               -
-       		  		  		  		  		               (
-       		  		  		  		  		                   dim1
-       		  		  		  		  		                   1
-       		  		  		  		  		               )
-       		  		  		  		  		               ind0
-       		  		  		  		  		           )
-       		  		  		  		  		            for j
-       		  		  		  		  		            ind0
-       		  		  		  		  		            +
-       		  		  		  		  		            (
-       		  		  		  		  		                -
-       		  		  		  		  		                (
-       		  		  		  		  		                    dim2
-       		  		  		  		  		                    1
-       		  		  		  		  		                )
-       		  		  		  		  		                ind0
-       		  		  		  		  		            )
-       		  		  		  		  		            Array.set
-       		  		  		  		  		            (
-       		  		  		  		  		             a
-       		  		  		  		  		             
-       		  		  		  		  		             (
-       		  		  		  		  		                 					 i
-       		  		  		  		  		                 					 
-       		  		  		  		  		             	j
-       		  		  		  		  		                 					 
-       		  		  		  		  		             )
-       		  		  		  		  		                 					 
-       		  		  		  		  		             fromint
-       		  		  		  		  		             (
-       		  		  		  		  		                 +
-       		  		  		  		  		                 (
-       		  		  		  		  		                     *
-       		  		  		  		  		                     (
-       		  		  		  		  		                         i
-       		  		  		  		  		                         1000
-       		  		  		  		  		                     )
-       		  		  		  		  		                     j
-       		  		  		  		  		                 )
-       		  		  		  		  		             )
-       		  		  		  		  		            )
-       		  		  		  		  		                									
-       		  		  		  		  		               														  
-       		  		  		  		  		              														  
+       		  		  		  		  		          forloop 
+       		  		  		  		  		          (
+       		  		  		  		  		              i
+       		  		  		  		  		              ind0
+       		  		  		  		  		              <>
+       		  		  		  		  		              +
+       		  		  		  		  		              (
+       		  		  		  		  		                  -
+       		  		  		  		  		                  (
+       		  		  		  		  		                      dim1
+       		  		  		  		  		                      1
+       		  		  		  		  		                  )
+       		  		  		  		  		                  ind0
+       		  		  		  		  		              )
+       		  		  		  		  		              forloop 
+       		  		  		  		  		              (
+       		  		  		  		  		                  j
+       		  		  		  		  		                  ind0
+       		  		  		  		  		                  <>
+       		  		  		  		  		                  +
+       		  		  		  		  		                  (
+       		  		  		  		  		                      -
+       		  		  		  		  		                      (
+       		  		  		  		  		                          dim2
+       		  		  		  		  		                          1
+       		  		  		  		  		                      )
+       		  		  		  		  		                      ind0
+       		  		  		  		  		                  )
+       		  		  		  		  		                  Array.set
+       		  		  		  		  		                  (
+       		  		  		  		  		                   a
+       		  		  		  		  		                   
+       		  		  		  		  		                   (
+       		  		  		  		  		                       					 i
+       		  		  		  		  		                       					 
+       		  		  		  		  		                   	j
+       		  		  		  		  		                       					 
+       		  		  		  		  		                   )
+       		  		  		  		  		                       					 
+       		  		  		  		  		                   fromint
+       		  		  		  		  		                   (
+       		  		  		  		  		                       +
+       		  		  		  		  		                       (
+       		  		  		  		  		                           *
+       		  		  		  		  		                           (
+       		  		  		  		  		                               i
+       		  		  		  		  		                               1000
+       		  		  		  		  		                           )
+       		  		  		  		  		                           j
+       		  		  		  		  		                       )
+       		  		  		  		  		                   )
+       		  		  		  		  		                  )
+       		  		  		  		  		                      									
+       		  		  		  		  		              )
+       		  		  		  		  		          )
        		  		  		  		  		        ;
        		  		  		  		  		          a
        		  		  		  		  		        )
@@ -596,14 +608,56 @@
                                    									  
                                 )
                                in
-                                 semicolon 
+                                 
+                                 sequence
                                  (
+                                   test
+                                   (
+                                       1
+                                       Array.get
+                                       (
+                                        a
+                                        
+                                        (
+                                            					 1
+                                            					 
+                                        	1
+                                            					 
+                                        )
+                                            					 
+                                       )
+                                           													
+                                       101.0
+                                   )
+                                 ;
+                                   
+                                   sequence
+                                   (
+                                     test
+                                     (
+                                         2
+                                         Array.get
+                                         (
+                                          a
+                                          
+                                          (
+                                              					 2
+                                              					 
+                                          	1
+                                              					 
+                                          )
+                                              					 
+                                         )
+                                             													
+                                         201.0
+                                     )
+                                   ;
                                      
                                      sequence
                                      (
                                        test
                                        (
-                                           1
+                                           3
                                            Array.get
                                            (
                                             a
@@ -611,59 +665,17 @@
                                             (
                                                 					 1
                                                 					 
-                                            	1
+                                            	2
                                                 					 
                                             )
                                                 					 
                                            )
                                                													
-                                           101.0
+                                           102.0
                                        )
                                      ;
-                                       
-                                       sequence
+                                       semicolon 
                                        (
-                                         test
-                                         (
-                                             2
-                                             Array.get
-                                             (
-                                              a
-                                              
-                                              (
-                                                  					 2
-                                                  					 
-                                              	1
-                                                  					 
-                                              )
-                                                  					 
-                                             )
-                                                 													
-                                             201.0
-                                         )
-                                       ;
-                                         
-                                         sequence
-                                         (
-                                           test
-                                           (
-                                               3
-                                               Array.get
-                                               (
-                                                a
-                                                
-                                                (
-                                                    					 1
-                                                    					 
-                                                	2
-                                                    					 
-                                                )
-                                                    					 
-                                               )
-                                                   													
-                                               102.0
-                                           )
-                                         ;
                                            test
                                            (
                                                4
@@ -682,13 +694,13 @@
                                                    													
                                                504.0
                                            )
-                                         )
-                                             							
                                        )
-                                           							
                                      )
                                          							
+                                   )
+                                       							
                                  )
+                                     							
                                )
                                    									
                              )

@@ -856,10 +856,10 @@
      		            NotGE
      		           ) 
      		          )
-     		          		    											 
+     		          	    											 
      		         ) 
      		        )
-     		        		    											 
+     		        	    											 
      		      )
      		          									
      		     )
@@ -923,16 +923,19 @@
                                      
   
    
-    for i
-    1
-    20
-    kb_complete
-    (
-        greater
-        []
-        geom_rules
-    )
-       														   
+   forloop 
+   (
+       i
+       1
+       <>
+       20
+       kb_complete
+       (
+           greater
+           []
+           geom_rules
+       )
+   ) 
   							    		    
                                      
 )

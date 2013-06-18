@@ -1,97 +1,272 @@
-toplevels 
+
 (
-    
-        									 
-     module  PR_4450_1
-      struct
-      (
-      							  
-      module type MyT
-       signature
-       (
-       		    				
+    								 
+  module  PR_4450_1
+   struct
+   (
+   							  
+   module type MyT
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
         type
-        (  						
-            							    	 
-           t
-           type
-           params=
-           (
-           
-            
-            a
-           										 
-           )
-           cstrs =
-           (
-           )
-           kind =
-           
-           
-           (
-           								  
-           Succ
-           (
-           									
-            
-             t
-             (
-               a
-             )
-             
-                									
-           								     
-           )
-           								    
-           								  
-           )
-           								  
-           														  
-           														 
-          											   
-        								        
-        )
-       		    				
-       )    								
-          							   
-      							  
-      module  MyMap
-      functor X
-      (
-       MyT
-       functor []
-       (
+        params=
+        (
+        
          
-         X
-       )
-       												
-      )
-          										    
-      							  
-      modRec1 
-      (
-          MyList
-          MyT
-          MyMap
+         a
+        										 
+        )
+        cstrs =
+        (
+        )
+        kind =
+        
+        
+        (
+        								  
+        Succ
+        (
+        									
+         
+          t
           (
-          MyList
+            a
           )
-          								   
           
+             									
+        								     
+        )
+        								    
+        								  
+        )
+        								  
+        														  
+        														 
+       											   
+     								        
+     )
+    		    				
+    )    								
+       							   
+   							  
+   module  MyMap
+   functor X
+   (
+    MyT
+    functor []
+    (
+      
+      X
+    )
+    												
+   )
+       										    
+   							  
+   modRec1 
+   (
+       MyList
+       MyT
+       MyMap
+       (
+       MyList
+       )
+       								   
+       
+   )
+   							  
+   )
+   							  
+  										    
+                                     
+  module  PR_4450_2
+   struct
+   (
+   							  
+   module type MyT
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        wrap
+        type
+        params=
+        (
+        
+         
+         a
+        										 
+        )
+        cstrs =
+        (
+        )
+        kind =
+        
+        
+        (
+        								  
+        My
+        (
+        									
+         
+          t
+          (
+            a
+          )
+          
+             									
+        								     
+        )
+        								    
+        								  
+        )
+        								  
+        														  
+        														 
+       											   
+     								         
+        t
+        type
+        params=
+        (
+        
+         
+         a
+        										 
+        )
+        cstrs =
+        (
+        )
+        kind =
+        <[<"map","polytype2"(["b"],"arrow1"("arrow1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"wrap")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>
+        
+        														  
+        														 
+       											   
+     								        
+     )
+    		    				
+     sig_value create
+     value_description
+     arrow
+     
+      list
+      (
+        a
       )
-      							  
+      
+         									
+     
+      t
+      (
+        a
       )
-      							  
-     										    
-        									 
-        									 
-    
-        									 
-     module  PR_4450_2
+      
+         									
+        								   
+     (
+     )
+         								
+    		    				
+    )    								
+       							   
+   							  
+   module  MyMap
+   functor X
+   (
+    MyT
+    functor []
+    (
+      
       struct
       (
       							  
-      module type MyT
+      include
+      (
+        X
+      )
+      							  
+      class
+      (
+          								   
+        params = 
+        (
+            	
+        l
+            	
+        )
+        class name = c
+        class expr = 
+                    class_structure
+                    (
+                        								
+                       method2 
+                       (
+                           
+                           map
+                           poly
+                           ' b
+                              									
+                           arrow
+                           arrow
+                           a
+                           b
+                              								   
+                           
+                            wrap
+                            (
+                              b
+                            )
+                            
+                               									
+                              								   
+                              									
+                           (
+                            
+                            case
+                            (
+                            f
+                            
+                            
+                             My
+                             create
+                             (
+                                 List.map
+                                 (
+                                     f
+                                     l
+                                 )
+                             )
+                                								 
+                            )
+                            													 
+                           )
+                              						  
+                       )
+                        								
+                    )
+                        								
+            	
+          								   
+      )
+          								   
+      							  
+      )
+      							  
+    )
+    												
+   )
+       										    
+   							  
+   modRec1 
+   (
+       MyList
        signature
        (
        		    				
@@ -148,7 +323,7 @@ toplevels
            (
            )
            kind =
-           <[<"map","polytype2"(["b"],"arrow1"("arrow1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"wrap")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>
+           <[<"map","polytype2"(["b"],"arrow1"("arrow1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"wrap")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>],[]>
            
            														  
            														 
@@ -178,224 +353,43 @@ toplevels
         )
             								
        		    				
-       )    								
-          							   
-      							  
-      module  MyMap
-      functor X
-      (
-       MyT
-       functor []
-       (
-         
-         struct
-         (
-         							  
-         include
-         (
-           X
-         )
-         							  
-         class
-         (
-             								   
-           params = 
-           (
-               	
-           l
-               	
-           )
-           class name = c
-           class expr = 
-                       class_structure
-                       (
-                           								
-                          method2 
-                          (
-                              
-                              map
-                              poly
-                              ' b
-                                 									
-                              arrow
-                              arrow
-                              a
-                              b
-                                 								   
-                              
-                               wrap
-                               (
-                                 b
-                               )
-                               
-                                  									
-                                 								   
-                                 									
-                              (
-                               
-                               case
-                               (
-                               f
-                               
-                               
-                                My
-                                create
-                                (
-                                    List.map
-                                    (
-                                        f
-                                        l
-                                    )
-                                )
-                                   								 
-                               )
-                               													 
-                              )
-                                 						  
-                          )
-                           								
-                       )
-                           								
-               	
-             								   
-         )
-             								   
-         							  
-         )
-         							  
        )
-       												
-      )
-          										    
-      							  
-      modRec1 
-      (
-          MyList
-          signature
-          (
-          		    				
-           type
-           (  						
-               							    	 
-              wrap
-              type
-              params=
+       struct
+       (
+       							  
+       include
+       (
+         MyMap
+         (
+         MyList
+         )
+         								   
+       )
+       							  
+       let
+       (
+        
+         create
+        (
+         case
+             (
+         	  l
+              new c
               (
-              
-               
-               a
-              										 
+                  l
               )
-              cstrs =
-              (
-              )
-              kind =
-              
-              
-              (
-              								  
-              My
-              (
-              									
-               
-                t
-                (
-                  a
-                )
-                
-                   									
-              								     
-              )
-              								    
-              								  
-              )
-              								  
-              														  
-              														 
-             											   
-           								         
-              t
-              type
-              params=
-              (
-              
-               
-               a
-              										 
-              )
-              cstrs =
-              (
-              )
-              kind =
-              <[<"map","polytype2"(["b"],"arrow1"("arrow1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"wrap")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>],[]>
-              
-              														  
-              														 
-             											   
-           								        
-           )
-          		    				
-           sig_value create
-           value_description
-           arrow
-           
-            list
-            (
-              a
-            )
-            
-               									
-           
-            t
-            (
-              a
-            )
-            
-               									
-              								   
-           (
-           )
-               								
-          		    				
-          )
-          struct
-          (
-          							  
-          include
-          (
-            MyMap
-            (
-            MyList
-            )
-            								   
-          )
-          							  
-          let
-          (
-           
-            create
-           (
-            case
-                (
-            	  l
-                 new c
-                 (
-                     l
-                 )
-                )
-           )
-               		    
-          )
-          							  
-          )
-          							  
-          
-      )
-      							  
-      )
-      							  
-     										    
-        									 
-        									 
-    
+             )
+        )
+            		    
+       )
+       							  
+       )
+       							  
+       
+   )
+   							  
+   )
+   							  
+  										    
+                                     
 )

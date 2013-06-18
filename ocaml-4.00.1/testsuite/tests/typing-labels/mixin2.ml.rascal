@@ -133,7 +133,7 @@
                      )
                      :
                      
-                      "extendedModulePath1"([],"Lazy")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+                      "extendedModulePath1"([],"Lazy")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
                       (
                         <>
                       )
@@ -177,7 +177,7 @@
               
               <"a",["b"]>
               ops
-              <[],[<[],[],"free","arrow1"("tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Names")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<[],[],"subst","arrow2"([],"sub","typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"Subst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arrow1"("tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<[],[],"eval","arrow1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>]>
+              <[],[<[],[],"free","polytype1"("arrow1"("tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Names")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<[],[],"subst","polytype1"("arrow2"([],"sub","typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arrow1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"eval","polytype1"("arrow1"("tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
           )
           
       )
@@ -226,38 +226,73 @@
                        								  
                    )
                     								
-                   method subst
-                         
-                         try
-                         Subst.find
-                         (
-                             s
-                             sub
-                         )
-                         (
-                         
-                         case
-                         (
-                           Not_found
-                           
+                   method1 
+                   (
+                       <>
+                       
+                       subst
+                       sub
+                       patternAs 
+                       (
+                           tagNamePattern 
+                           (
+                               Var
+                               s
+                           )
                            x
-                         ) 
-                         	        											 
-                         	        											 
-                         )
-                             							   
-                       												 
+                       )
+                       
+                       
+                       try
+                       Subst.find
+                       (
+                           s
+                           sub
+                       )
+                       (
+                       
+                       case
+                       (
+                         Not_found
+                         
+                         x
+                       ) 
+                       	        											 
+                       	        											 
+                       )
+                           							   
+                   )
                     								
-                   method free
-                         Names.singleton
-                         (
-                             s
-                         )
-                       												 
+                   method1 
+                   (
+                       <>
+                       
+                       free
+                       tagNamePattern 
+                       (
+                           Var
+                           s
+                       )
+                       
+                       Names.singleton
+                       (
+                           s
+                       )
+                   )
                     								
-                   method eval
-                         v
-                       												 
+                   method1 
+                   (
+                       <>
+                       
+                       eval
+                       patternAs 
+                       (
+                           var
+                           v
+                       )
+                       
+                       v
+                   )
                     								
                 )
                     								
@@ -282,7 +317,7 @@
      (
      )
      kind =
-     <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Abs",["star"("typexprConstr2"("typeConstr"([],"string")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"App",["star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>]>
+     <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Abs",["star"("typexprConstr2"("typeConstr"([],"string")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"App",["star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
      
      														  
      														 
@@ -351,7 +386,7 @@
     
      "extendedModulePath1"([],"Lazy")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
      (
-       <["tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+       <["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"classPath"([],"ops")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
      )
      
         									
@@ -430,531 +465,555 @@
                                									
                        )
                         								
-                       method free
-                             (
+                       method1 
+                       (
+                           <>
+                           
+                           free
+                           
+                           
+                           (
+                            
+                            case
+                            (
+                              patternAs 
+                              (
+                                  var
+                                  x
+                              )
+                              
+                              send free
+                              (
+                               var
+                              )
+                                  						  
+                              (
+                                  x
+                              )
+                            ) 
+                            	        											 
                               
                               case
                               (
-                                patternAs 
-                                (
-                                    var
-                                    x
-                                )
-                                
-                                send free
-                                (
-                                 var
-                                )
-                                    						  
-                                (
-                                    x
-                                )
-                              ) 
-                              	        											 
-                                
-                                case
-                                (
-                                 tagNamePattern 
-                                 (
-                                     Abs
-                                     
-                                     (
-                                      s
-                                          						 
-                                     	t
-                                     
-                                     )
-                                 )
-                                 
-                                 Names.remove
-                                 (
-                                     s
-                                     
-                                      !!
-                                      (
-                                      free
-                                      )
-                                         							 
-                                     (
-                                         t
-                                     )
-                                 )
-                                )
-                                													    
-                              	        											 
-                                
-                                case
-                                (
-                                 tagNamePattern 
-                                 (
-                                     App
-                                     
-                                     (
-                                      t1
-                                          						 
-                                     	t2
-                                     
-                                     )
-                                 )
-                                 
-                                 Names.union
-                                 (
-                                     
-                                      !!
-                                      (
-                                      free
-                                      )
-                                         							 
-                                     (
-                                         t1
-                                     )
-                                     
-                                      !!
-                                      (
-                                      free
-                                      )
-                                         							 
-                                     (
-                                         t2
-                                     )
-                                 )
-                                )
-                                													    
-                              	        											 
-                              	        											 
-                             )
-                                							   
-                           												 
-                        								
-                       method map
-                             (
+                               tagNamePattern 
+                               (
+                                   Abs
+                                   
+                                   (
+                                    s
+                                        						 
+                                   	t
+                                   
+                                   )
+                               )
+                               
+                               Names.remove
+                               (
+                                   s
+                                   
+                                    !!
+                                    (
+                                    free
+                                    )
+                                       							 
+                                   (
+                                       t
+                                   )
+                               )
+                              )
+                              													    
+                            	        											 
                               
                               case
                               (
-                                patternAs 
-                                (
-                                    var
-                                    x
-                                )
-                                
-                                x
-                              ) 
-                              	        											 
-                                
-                                case
-                                (
-                                 patternAs 
-                                 (
-                                     tagNamePattern 
-                                     (
-                                         Abs
-                                         
-                                         (
-                                          s
-                                              						 
-                                         	t
-                                         
-                                         )
-                                     )
-                                     l
-                                 )
-                                 
-                                 
-                                 let
-                                 (
-                                  (
-                                     									  
-                                   
-                                    t'
-                                    f
-                                    (
-                                        t
-                                    ) 
-                                   							    		   
-                                     									  
-                                  )
-                                 in
-                                   ifthenelse
-                                   (
-                                    if
-                                    (
-                                     ==
-                                     (
-                                         t
-                                         t'
-                                     )
-                                    )
-                                    then
-                                    (
-                                     l
-                                    )
-                                    else
-                                    (
-                                     Abs
-                                     (
-                                         
-                                         (
-                                             					 s
-                                             					 
-                                         	t'
-                                             					 
-                                         )
-                                             					 
-                                     )
-                                    ) 
-                                   )
-                                   		    											 
-                                 )
-                                     									
-                                )
-                                													    
-                              	        											 
-                                
-                                case
-                                (
-                                 patternAs 
-                                 (
-                                     tagNamePattern 
-                                     (
-                                         App
-                                         
-                                         (
-                                          t1
-                                              						 
-                                         	t2
-                                         
-                                         )
-                                     )
-                                     l
-                                 )
-                                 
-                                 
-                                 let
-                                 (
-                                  (
-                                     									  
-                                   
-                                    t'1
-                                    f
-                                    (
-                                        t1
-                                    ) 
-                                   							    		   
-                                     									  
-                                   
-                                    t'2
-                                    f
-                                    (
-                                        t2
-                                    ) 
-                                   							    		   
-                                     									  
-                                  )
-                                 in
-                                   ifthenelse
-                                   (
-                                    if
-                                    (
-                                     &&
-                                     (
-                                         ==
-                                         (
-                                             t'1
-                                             t1
-                                         )
-                                         ==
-                                         (
-                                             t'2
-                                             t2
-                                         )
-                                     )
-                                    )
-                                    then
-                                    (
-                                     l
-                                    )
-                                    else
-                                    (
-                                     App
-                                     (
-                                         
-                                         (
-                                             					 t'1
-                                             					 
-                                         	t'2
-                                             					 
-                                         )
-                                             					 
-                                     )
-                                    ) 
-                                   )
-                                   		    											 
-                                 )
-                                     									
-                                )
-                                													    
-                              	        											 
-                              	        											 
-                             )
-                                							   
-                           												 
-                        								
-                       method subst
-                             (
-                              
-                              case
-                              (
-                                patternAs 
-                                (
-                                    var
-                                    x
-                                )
-                                
-                                send subst
-                                (
-                                 var
-                                )
-                                    						  
-                                (
-                                    sub
-                                    x
-                                )
-                              ) 
-                              	        											 
-                                
-                                case
-                                (
-                                 patternAs 
-                                 (
-                                     tagNamePattern 
-                                     (
-                                         Abs
-                                         
-                                         (
-                                          s
-                                              						 
-                                         	t
-                                         
-                                         )
-                                     )
-                                     l
-                                 )
-                                 
-                                 
-                                 let
-                                 (
-                                  (
-                                     									  
-                                   
-                                    used
-                                    
-                                     !!
-                                     (
-                                     free
-                                     )
-                                        							 
-                                    (
-                                        t
-                                    ) 
-                                   							    		   
-                                     									  
-                                  )
-                                 in
-                                   
-                                   let
-                                   (
-                                    (
-                                       									  
-                                     
-                                      used_expr
-                                      Subst.fold
-                                      (
-                                          sub
-                                          <"~init:","constant"("emptyBrackets"()[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-                                          <"~f:","brackets"("fun"("multipleMatching"(["key","data","patternValueName"("acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"ifThenElse"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Names")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"mem")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"valuePath"("valuePath"([],"used")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"coloncolon"("valuePath"("valuePath"([],"data")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"valuePath"("valuePath"([],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                                      ) 
-                                     							    		   
-                                       									  
-                                    )
-                                   in
-                                     ifthenelse
-                                     (
-                                      if
-                                      (
-                                       List.exists
-                                       (
-                                           used_expr
-                                           <"~f:","brackets"("fun"("multipleMatching"(["patternValueName"("t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],"functionApplication"("valuePath"("valuePath"(["modulePath"([],"Names")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"mem")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"free")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["valuePath"("valuePath"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                                       )
-                                      )
-                                      then
-                                      (
-                                       
-                                       let
-                                       (
-                                        (
-                                           									  
-                                         
-                                          name
-                                          ^
-                                          (
-                                              s
-                                              string_of_int
-                                              (
-                                                  next_id
-                                                  (
-                                                      ()
-                                                  )
-                                              )
-                                          ) 
-                                         							    		   
-                                           									  
-                                        )
-                                       in
-                                         Abs
-                                         (
-                                             
-                                             (
-                                                 					 name
-                                                 					 
-                                             	
-                                             	 !!
-                                             	 (
-                                             	 subst
-                                             	 )
-                                             	    							 
-                                             	(
-                                             	    <"~sub:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"add")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~key:","valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<"~data:","brackets"("functionApplication"("constant"("Var")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"name")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"valuePath"("valuePath"([],"sub")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                                             	    t
-                                             	)
-                                                 					 
-                                             )
-                                                 					 
-                                         )
-                                       )
-                                           									
-                                      )
-                                      else
-                                      (
-                                       send map
-                                       (
-                                        self
-                                       )
-                                           						  
-                                       (
-                                           <"~f:","brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"subst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~sub:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"remove")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"sub")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                                           l
-                                       )
-                                      ) 
-                                     )
-                                     		    											 
-                                   )
-                                       									
-                                 )
-                                     									
-                                )
-                                													    
-                              	        											 
-                                
-                                case
-                                (
-                                 patternAs 
-                                 (
-                                     tagNamePattern 
-                                     (
-                                         App
-                                         _
-                                     )
-                                     l
-                                 )
-                                 
-                                 send map
-                                 (
-                                  self
-                                 )
-                                     						  
-                                 (
-                                     <"~f:","brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["sub"])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                                     l
-                                 )
-                                )
-                                													    
-                              	        											 
-                              	        											 
-                             )
-                                							   
-                           												 
-                        								
-                       method eval
-                             match
-                             send map
-                             (
-                              self
-                             )
-                                 						  
-                             (
-                                 <"~f:","prefix"("!!","valuePath"("valuePath"([],"eval")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                                 l
-                             )
-                             (
-                             
-                             case
-                             (
                                tagNamePattern 
                                (
                                    App
                                    
                                    (
-                                    tagNamePattern 
-                                    (
-                                        Abs
-                                        
-                                        (
-                                         s
-                                             						 
-                                        	t1
-                                        
-                                        )
-                                    )
+                                    t1
                                         						 
                                    	t2
                                    
                                    )
                                )
                                
-                               
-                                !!
-                                (
-                                eval
-                                )
-                                   							 
+                               Names.union
                                (
                                    
                                     !!
                                     (
-                                    subst
+                                    free
                                     )
                                        							 
                                    (
-                                       <"~sub:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"add")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[<"~key:","valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"~data:","valuePath"("valuePath"([],"t2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,"valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"empty")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
                                        t1
                                    )
+                                   
+                                    !!
+                                    (
+                                    free
+                                    )
+                                       							 
+                                   (
+                                       t2
+                                   )
                                )
-                             ) 
-                             	        											 
-                               
-                               case
+                              )
+                              													    
+                            	        											 
+                            	        											 
+                           )
+                              							   
+                       )
+                        								
+                       method1 
+                       (
+                           <>
+                           
+                           map
+                           f
+                           
+                           (
+                            
+                            case
+                            (
+                              patternAs 
+                              (
+                                  var
+                                  x
+                              )
+                              
+                              x
+                            ) 
+                            	        											 
+                              
+                              case
+                              (
+                               patternAs 
                                (
-                                t
-                                
-                                t
+                                   tagNamePattern 
+                                   (
+                                       Abs
+                                       
+                                       (
+                                        s
+                                            						 
+                                       	t
+                                       
+                                       )
+                                   )
+                                   l
                                )
-                               													    
-                             	        											 
-                             	        											 
+                               
+                               
+                               let
+                               (
+                                (
+                                   									  
+                                 
+                                  t'
+                                  f
+                                  (
+                                      t
+                                  ) 
+                                 							    		   
+                                   									  
+                                )
+                               in
+                                 ifthenelse
+                                 (
+                                  if
+                                  (
+                                   ==
+                                   (
+                                       t
+                                       t'
+                                   )
+                                  )
+                                  then
+                                  (
+                                   l
+                                  )
+                                  else
+                                  (
+                                   Abs
+                                   (
+                                       
+                                       (
+                                           					 s
+                                           					 
+                                       	t'
+                                           					 
+                                       )
+                                           					 
+                                   )
+                                  ) 
+                                 )
+                                 	    											 
+                               )
+                                   									
+                              )
+                              													    
+                            	        											 
+                              
+                              case
+                              (
+                               patternAs 
+                               (
+                                   tagNamePattern 
+                                   (
+                                       App
+                                       
+                                       (
+                                        t1
+                                            						 
+                                       	t2
+                                       
+                                       )
+                                   )
+                                   l
+                               )
+                               
+                               
+                               let
+                               (
+                                (
+                                   									  
+                                 
+                                  t'1
+                                  f
+                                  (
+                                      t1
+                                  ) 
+                                 							    		   
+                                   									  
+                                 
+                                  t'2
+                                  f
+                                  (
+                                      t2
+                                  ) 
+                                 							    		   
+                                   									  
+                                )
+                               in
+                                 ifthenelse
+                                 (
+                                  if
+                                  (
+                                   &&
+                                   (
+                                       ==
+                                       (
+                                           t'1
+                                           t1
+                                       )
+                                       ==
+                                       (
+                                           t'2
+                                           t2
+                                       )
+                                   )
+                                  )
+                                  then
+                                  (
+                                   l
+                                  )
+                                  else
+                                  (
+                                   App
+                                   (
+                                       
+                                       (
+                                           					 t'1
+                                           					 
+                                       	t'2
+                                           					 
+                                       )
+                                           					 
+                                   )
+                                  ) 
+                                 )
+                                 	    											 
+                               )
+                                   									
+                              )
+                              													    
+                            	        											 
+                            	        											 
+                           )
+                              							   
+                       )
+                        								
+                       method1 
+                       (
+                           <>
+                           
+                           subst
+                           sub
+                           
+                           (
+                            
+                            case
+                            (
+                              patternAs 
+                              (
+                                  var
+                                  x
+                              )
+                              
+                              send subst
+                              (
+                               var
+                              )
+                                  						  
+                              (
+                                  sub
+                                  x
+                              )
+                            ) 
+                            	        											 
+                              
+                              case
+                              (
+                               patternAs 
+                               (
+                                   tagNamePattern 
+                                   (
+                                       Abs
+                                       
+                                       (
+                                        s
+                                            						 
+                                       	t
+                                       
+                                       )
+                                   )
+                                   l
+                               )
+                               
+                               
+                               let
+                               (
+                                (
+                                   									  
+                                 
+                                  used
+                                  
+                                   !!
+                                   (
+                                   free
+                                   )
+                                      							 
+                                  (
+                                      t
+                                  ) 
+                                 							    		   
+                                   									  
+                                )
+                               in
+                                 
+                                 let
+                                 (
+                                  (
+                                     									  
+                                   
+                                    used_expr
+                                    Subst.fold
+                                    (
+                                        sub
+                                        <"~init:","constant"("emptyBrackets"()[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+                                        <"~f:","brackets"("fun"("multipleMatching"(["key","data","patternValueName"("acc")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],"ifThenElse"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Names")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"mem")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"used")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"coloncolon"("valuePath"("valuePath"([],"data")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"acc")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                                    ) 
+                                   							    		   
+                                     									  
+                                  )
+                                 in
+                                   ifthenelse
+                                   (
+                                    if
+                                    (
+                                     List.exists
+                                     (
+                                         used_expr
+                                         <"~f:","brackets"("fun"("multipleMatching"(["patternValueName"("t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],"functionApplication"("valuePath"("valuePath"(["modulePath"([],"Names")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"mem")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"free")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                                     )
+                                    )
+                                    then
+                                    (
+                                     
+                                     let
+                                     (
+                                      (
+                                         									  
+                                       
+                                        name
+                                        ^
+                                        (
+                                            s
+                                            string_of_int
+                                            (
+                                                next_id
+                                                (
+                                                    ()
+                                                )
+                                            )
+                                        ) 
+                                       							    		   
+                                         									  
+                                      )
+                                     in
+                                       Abs
+                                       (
+                                           
+                                           (
+                                               					 name
+                                               					 
+                                           	
+                                           	 !!
+                                           	 (
+                                           	 subst
+                                           	 )
+                                           	    							 
+                                           	(
+                                           	    <"~sub:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"add")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~key:","valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<"~data:","brackets"("functionApplication"("constant"("Var")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"name")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"valuePath"("valuePath"([],"sub")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                                           	    t
+                                           	)
+                                               					 
+                                           )
+                                               					 
+                                       )
+                                     )
+                                         									
+                                    )
+                                    else
+                                    (
+                                     send map
+                                     (
+                                      self
+                                     )
+                                         						  
+                                     (
+                                         <"~f:","brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"subst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~sub:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"remove")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"sub")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                                         l
+                                     )
+                                    ) 
+                                   )
+                                   	    											 
+                                 )
+                                     									
+                               )
+                                   									
+                              )
+                              													    
+                            	        											 
+                              
+                              case
+                              (
+                               patternAs 
+                               (
+                                   tagNamePattern 
+                                   (
+                                       App
+                                       _
+                                   )
+                                   l
+                               )
+                               
+                               send map
+                               (
+                                self
+                               )
+                                   						  
+                               (
+                                   <"~f:","brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"subst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["sub"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+                                   l
+                               )
+                              )
+                              													    
+                            	        											 
+                            	        											 
+                           )
+                              							   
+                       )
+                        								
+                       method1 
+                       (
+                           <>
+                           
+                           eval
+                           l
+                           
+                           match
+                           send map
+                           (
+                            self
+                           )
+                               						  
+                           (
+                               <"~f:","prefix"("!!","valuePath"("valuePath"([],"eval")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+                               l
+                           )
+                           (
+                           
+                           case
+                           (
+                             tagNamePattern 
+                             (
+                                 App
+                                 
+                                 (
+                                  tagNamePattern 
+                                  (
+                                      Abs
+                                      
+                                      (
+                                       s
+                                           						 
+                                      	t1
+                                      
+                                      )
+                                  )
+                                      						 
+                                 	t2
+                                 
+                                 )
                              )
-                             			   
-                           												 
+                             
+                             
+                              !!
+                              (
+                              eval
+                              )
+                                 							 
+                             (
+                                 
+                                  !!
+                                  (
+                                  subst
+                                  )
+                                     							 
+                                 (
+                                     <"~sub:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"add")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~key:","valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<"~data:","valuePath"("valuePath"([],"t2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"empty")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                                     t1
+                                 )
+                             )
+                           ) 
+                           	        											 
+                             
+                             case
+                             (
+                              t
+                              
+                              t
+                             )
+                             													    
+                           	        											 
+                           	        											 
+                           )
+                           			   
+                       )
                         								
                     )
                         								
@@ -991,7 +1050,7 @@
      (
      )
      kind =
-     <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Num",["typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Add",["star"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Neg",["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Mult",["star"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>]>
+     <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Num",["typexprConstr2"("typeConstr"([],"int")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Add",["star"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Neg",["tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Mult",["star"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
      
      														  
      														 
@@ -1008,9 +1067,9 @@
     
     ops
     
-     "extendedModulePath1"([],"Lazy")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+     "extendedModulePath1"([],"Lazy")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
      (
-       <["tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+       <["tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"classPath"([],"ops")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
      )
      
         									
@@ -1089,566 +1148,594 @@
                                									
                        )
                         								
-                       method free
-                             (
+                       method1 
+                       (
+                           <>
+                           
+                           free
+                           
+                           
+                           (
+                            
+                            case
+                            (
+                              patternAs 
+                              (
+                                  var
+                                  x
+                              )
+                              
+                              send free
+                              (
+                               var
+                              )
+                                  						  
+                              (
+                                  x
+                              )
+                            ) 
+                            	        											 
                               
                               case
                               (
-                                patternAs 
-                                (
-                                    var
-                                    x
-                                )
-                                
-                                send free
-                                (
-                                 var
-                                )
-                                    						  
-                                (
-                                    x
-                                )
-                              ) 
-                              	        											 
-                                
-                                case
-                                (
-                                 tagNamePattern 
-                                 (
-                                     Num
-                                     _
-                                 )
-                                 
-                                 Names.empty
-                                )
-                                													    
-                              	        											 
-                                
-                                case
-                                (
-                                 tagNamePattern 
-                                 (
-                                     Add
-                                     
-                                     (
-                                      x
-                                          						 
-                                     	y
-                                     
-                                     )
-                                 )
-                                 
-                                 Names.union
-                                 (
-                                     
-                                      !!
-                                      (
-                                      free
-                                      )
-                                         							 
-                                     (
-                                         x
-                                     )
-                                     
-                                      !!
-                                      (
-                                      free
-                                      )
-                                         							 
-                                     (
-                                         y
-                                     )
-                                 )
-                                )
-                                													    
-                              	        											 
-                                
-                                case
-                                (
-                                 tagNamePattern 
-                                 (
-                                     Neg
-                                     x
-                                 )
-                                 
-                                 
-                                  !!
-                                  (
-                                  free
-                                  )
-                                     							 
-                                 (
-                                     x
-                                 )
-                                )
-                                													    
-                              	        											 
-                                
-                                case
-                                (
-                                 tagNamePattern 
-                                 (
-                                     Mult
-                                     
-                                     (
-                                      x
-                                          						 
-                                     	y
-                                     
-                                     )
-                                 )
-                                 
-                                 Names.union
-                                 (
-                                     
-                                      !!
-                                      (
-                                      free
-                                      )
-                                         							 
-                                     (
-                                         x
-                                     )
-                                     
-                                      !!
-                                      (
-                                      free
-                                      )
-                                         							 
-                                     (
-                                         y
-                                     )
-                                 )
-                                )
-                                													    
-                              	        											 
-                              	        											 
-                             )
-                                							   
-                           												 
-                        								
-                       method map
-                             (
+                               tagNamePattern 
+                               (
+                                   Num
+                                   _
+                               )
+                               
+                               Names.empty
+                              )
+                              													    
+                            	        											 
                               
                               case
                               (
-                                patternAs 
-                                (
-                                    var
-                                    x
-                                )
-                                
-                                x
-                              ) 
-                              	        											 
-                                
-                                case
-                                (
-                                 patternAs 
-                                 (
-                                     tagNamePattern 
-                                     (
-                                         Num
-                                         _
-                                     )
-                                     x
-                                 )
-                                 
-                                 x
-                                )
-                                													    
-                              	        											 
-                                
-                                case
-                                (
-                                 patternAs 
-                                 (
-                                     tagNamePattern 
-                                     (
-                                         Add
-                                         
-                                         (
-                                          x
-                                              						 
-                                         	y
-                                         
-                                         )
-                                     )
-                                     e
-                                 )
-                                 
-                                 
-                                 let
-                                 (
-                                  (
-                                     									  
-                                   
-                                    x'
-                                    f
-                                    (
-                                        x
-                                    ) 
-                                   							    		   
-                                     									  
-                                   
-                                    y'
-                                    f
-                                    (
-                                        y
-                                    ) 
-                                   							    		   
-                                     									  
-                                  )
-                                 in
-                                   ifthenelse
-                                   (
-                                    if
-                                    (
-                                     &&
-                                     (
-                                         ==
-                                         (
-                                             x
-                                             x'
-                                         )
-                                         ==
-                                         (
-                                             y
-                                             y'
-                                         )
-                                     )
-                                    )
-                                    then
-                                    (
-                                     e
-                                    )
-                                    else
-                                    (
-                                     Add
-                                     (
-                                         
-                                         (
-                                             					 x'
-                                             					 
-                                         	y'
-                                             					 
-                                         )
-                                             					 
-                                     )
-                                    ) 
-                                   )
-                                   		    											 
-                                 )
-                                     									
-                                )
-                                													    
-                              	        											 
-                                
-                                case
-                                (
-                                 patternAs 
-                                 (
-                                     tagNamePattern 
-                                     (
-                                         Neg
-                                         x
-                                     )
-                                     e
-                                 )
-                                 
-                                 
-                                 let
-                                 (
-                                  (
-                                     									  
-                                   
-                                    x'
-                                    f
-                                    (
-                                        x
-                                    ) 
-                                   							    		   
-                                     									  
-                                  )
-                                 in
-                                   ifthenelse
-                                   (
-                                    if
-                                    (
-                                     ==
-                                     (
-                                         x
-                                         x'
-                                     )
-                                    )
-                                    then
-                                    (
-                                     e
-                                    )
-                                    else
-                                    (
-                                     Neg
-                                     (
-                                         x'
-                                     )
-                                    ) 
-                                   )
-                                   		    											 
-                                 )
-                                     									
-                                )
-                                													    
-                              	        											 
-                                
-                                case
-                                (
-                                 patternAs 
-                                 (
-                                     tagNamePattern 
-                                     (
-                                         Mult
-                                         
-                                         (
-                                          x
-                                              						 
-                                         	y
-                                         
-                                         )
-                                     )
-                                     e
-                                 )
-                                 
-                                 
-                                 let
-                                 (
-                                  (
-                                     									  
-                                   
-                                    x'
-                                    f
-                                    (
-                                        x
-                                    ) 
-                                   							    		   
-                                     									  
-                                   
-                                    y'
-                                    f
-                                    (
-                                        y
-                                    ) 
-                                   							    		   
-                                     									  
-                                  )
-                                 in
-                                   ifthenelse
-                                   (
-                                    if
-                                    (
-                                     &&
-                                     (
-                                         ==
-                                         (
-                                             x
-                                             x'
-                                         )
-                                         ==
-                                         (
-                                             y
-                                             y'
-                                         )
-                                     )
-                                    )
-                                    then
-                                    (
-                                     e
-                                    )
-                                    else
-                                    (
-                                     Mult
-                                     (
-                                         
-                                         (
-                                             					 x'
-                                             					 
-                                         	y'
-                                             					 
-                                         )
-                                             					 
-                                     )
-                                    ) 
-                                   )
-                                   		    											 
-                                 )
-                                     									
-                                )
-                                													    
-                              	        											 
-                              	        											 
-                             )
-                                							   
-                           												 
-                        								
-                       method subst
-                             (
-                              
-                              case
-                              (
-                                patternAs 
-                                (
-                                    var
-                                    x
-                                )
-                                
-                                send subst
-                                (
-                                 var
-                                )
-                                    						  
-                                (
-                                    sub
-                                    x
-                                )
-                              ) 
-                              	        											 
-                                
-                                case
-                                (
-                                 patternAs 
-                                 (
-                                     expr
-                                     e
-                                 )
-                                 
-                                 send map
-                                 (
-                                  self
-                                 )
-                                     						  
-                                 (
-                                     <"~f:","brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["sub"])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-                                     e
-                                 )
-                                )
-                                													    
-                              	        											 
-                              	        											 
-                             )
-                                							   
-                           												 
-                        								
-                       method eval
-                             match
-                             send map
-                             (
-                              self
-                             )
-                                 						  
-                             (
-                                 <"~f:","prefix"("!!","valuePath"("valuePath"([],"eval")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                                 e
-                             )
-                             (
-                             
-                             case
-                             (
                                tagNamePattern 
                                (
                                    Add
                                    
                                    (
-                                    tagNamePattern 
-                                    (
-                                        Num
-                                        m
-                                    )
+                                    x
                                         						 
-                                   	tagNamePattern 
-                                   	(
-                                   	    Num
-                                   	    n
-                                   	)
+                                   	y
                                    
                                    )
                                )
                                
-                               Num
+                               Names.union
                                (
-                                   +
+                                   
+                                    !!
+                                    (
+                                    free
+                                    )
+                                       							 
                                    (
-                                       m
-                                       n
+                                       x
+                                   )
+                                   
+                                    !!
+                                    (
+                                    free
+                                    )
+                                       							 
+                                   (
+                                       y
                                    )
                                )
-                             ) 
-                             	        											 
-                               
-                               case
+                              )
+                              													    
+                            	        											 
+                              
+                              case
+                              (
+                               tagNamePattern 
                                (
-                                tagNamePattern 
-                                (
-                                    Neg
-                                    tagNamePattern 
-                                    (
-                                        Num
-                                        n
-                                    )
-                                )
-                                
-                                Num
-                                (
-                                    -n
-                                )
+                                   Neg
+                                   x
                                )
-                               													    
-                             	        											 
                                
-                               case
-                               (
-                                tagNamePattern 
-                                (
-                                    Mult
-                                    
-                                    (
-                                     tagNamePattern 
-                                     (
-                                         Num
-                                         m
-                                     )
-                                         						 
-                                    	tagNamePattern 
-                                    	(
-                                    	    Num
-                                    	    n
-                                    	)
-                                    
-                                    )
-                                )
-                                
-                                Num
-                                (
-                                    *
-                                    (
-                                        m
-                                        n
-                                    )
-                                )
-                               )
-                               													    
-                             	        											 
                                
-                               case
+                                !!
+                                (
+                                free
+                                )
+                                   							 
                                (
-                                e
-                                
-                                e
+                                   x
                                )
-                               													    
-                             	        											 
-                             	        											 
+                              )
+                              													    
+                            	        											 
+                              
+                              case
+                              (
+                               tagNamePattern 
+                               (
+                                   Mult
+                                   
+                                   (
+                                    x
+                                        						 
+                                   	y
+                                   
+                                   )
+                               )
+                               
+                               Names.union
+                               (
+                                   
+                                    !!
+                                    (
+                                    free
+                                    )
+                                       							 
+                                   (
+                                       x
+                                   )
+                                   
+                                    !!
+                                    (
+                                    free
+                                    )
+                                       							 
+                                   (
+                                       y
+                                   )
+                               )
+                              )
+                              													    
+                            	        											 
+                            	        											 
+                           )
+                              							   
+                       )
+                        								
+                       method1 
+                       (
+                           <>
+                           
+                           map
+                           f
+                           
+                           (
+                            
+                            case
+                            (
+                              patternAs 
+                              (
+                                  var
+                                  x
+                              )
+                              
+                              x
+                            ) 
+                            	        											 
+                              
+                              case
+                              (
+                               patternAs 
+                               (
+                                   tagNamePattern 
+                                   (
+                                       Num
+                                       _
+                                   )
+                                   x
+                               )
+                               
+                               x
+                              )
+                              													    
+                            	        											 
+                              
+                              case
+                              (
+                               patternAs 
+                               (
+                                   tagNamePattern 
+                                   (
+                                       Add
+                                       
+                                       (
+                                        x
+                                            						 
+                                       	y
+                                       
+                                       )
+                                   )
+                                   e
+                               )
+                               
+                               
+                               let
+                               (
+                                (
+                                   									  
+                                 
+                                  x'
+                                  f
+                                  (
+                                      x
+                                  ) 
+                                 							    		   
+                                   									  
+                                 
+                                  y'
+                                  f
+                                  (
+                                      y
+                                  ) 
+                                 							    		   
+                                   									  
+                                )
+                               in
+                                 ifthenelse
+                                 (
+                                  if
+                                  (
+                                   &&
+                                   (
+                                       ==
+                                       (
+                                           x
+                                           x'
+                                       )
+                                       ==
+                                       (
+                                           y
+                                           y'
+                                       )
+                                   )
+                                  )
+                                  then
+                                  (
+                                   e
+                                  )
+                                  else
+                                  (
+                                   Add
+                                   (
+                                       
+                                       (
+                                           					 x'
+                                           					 
+                                       	y'
+                                           					 
+                                       )
+                                           					 
+                                   )
+                                  ) 
+                                 )
+                                 	    											 
+                               )
+                                   									
+                              )
+                              													    
+                            	        											 
+                              
+                              case
+                              (
+                               patternAs 
+                               (
+                                   tagNamePattern 
+                                   (
+                                       Neg
+                                       x
+                                   )
+                                   e
+                               )
+                               
+                               
+                               let
+                               (
+                                (
+                                   									  
+                                 
+                                  x'
+                                  f
+                                  (
+                                      x
+                                  ) 
+                                 							    		   
+                                   									  
+                                )
+                               in
+                                 ifthenelse
+                                 (
+                                  if
+                                  (
+                                   ==
+                                   (
+                                       x
+                                       x'
+                                   )
+                                  )
+                                  then
+                                  (
+                                   e
+                                  )
+                                  else
+                                  (
+                                   Neg
+                                   (
+                                       x'
+                                   )
+                                  ) 
+                                 )
+                                 	    											 
+                               )
+                                   									
+                              )
+                              													    
+                            	        											 
+                              
+                              case
+                              (
+                               patternAs 
+                               (
+                                   tagNamePattern 
+                                   (
+                                       Mult
+                                       
+                                       (
+                                        x
+                                            						 
+                                       	y
+                                       
+                                       )
+                                   )
+                                   e
+                               )
+                               
+                               
+                               let
+                               (
+                                (
+                                   									  
+                                 
+                                  x'
+                                  f
+                                  (
+                                      x
+                                  ) 
+                                 							    		   
+                                   									  
+                                 
+                                  y'
+                                  f
+                                  (
+                                      y
+                                  ) 
+                                 							    		   
+                                   									  
+                                )
+                               in
+                                 ifthenelse
+                                 (
+                                  if
+                                  (
+                                   &&
+                                   (
+                                       ==
+                                       (
+                                           x
+                                           x'
+                                       )
+                                       ==
+                                       (
+                                           y
+                                           y'
+                                       )
+                                   )
+                                  )
+                                  then
+                                  (
+                                   e
+                                  )
+                                  else
+                                  (
+                                   Mult
+                                   (
+                                       
+                                       (
+                                           					 x'
+                                           					 
+                                       	y'
+                                           					 
+                                       )
+                                           					 
+                                   )
+                                  ) 
+                                 )
+                                 	    											 
+                               )
+                                   									
+                              )
+                              													    
+                            	        											 
+                            	        											 
+                           )
+                              							   
+                       )
+                        								
+                       method1 
+                       (
+                           <>
+                           
+                           subst
+                           sub
+                           
+                           (
+                            
+                            case
+                            (
+                              patternAs 
+                              (
+                                  var
+                                  x
+                              )
+                              
+                              send subst
+                              (
+                               var
+                              )
+                                  						  
+                              (
+                                  sub
+                                  x
+                              )
+                            ) 
+                            	        											 
+                              
+                              case
+                              (
+                               patternAs 
+                               (
+                                   expr
+                                   e
+                               )
+                               
+                               send map
+                               (
+                                self
+                               )
+                                   						  
+                               (
+                                   <"~f:","brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"subst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["sub"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                                   e
+                               )
+                              )
+                              													    
+                            	        											 
+                            	        											 
+                           )
+                              							   
+                       )
+                        								
+                       method1 
+                       (
+                           <>
+                           
+                           eval
+                           patternAs 
+                           (
+                               expr
+                               e
+                           )
+                           
+                           match
+                           send map
+                           (
+                            self
+                           )
+                               						  
+                           (
+                               <"~f:","prefix"("!!","valuePath"("valuePath"([],"eval")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+                               e
+                           )
+                           (
+                           
+                           case
+                           (
+                             tagNamePattern 
+                             (
+                                 Add
+                                 
+                                 (
+                                  tagNamePattern 
+                                  (
+                                      Num
+                                      m
+                                  )
+                                      						 
+                                 	tagNamePattern 
+                                 	(
+                                 	    Num
+                                 	    n
+                                 	)
+                                 
+                                 )
                              )
-                             			   
-                           												 
+                             
+                             Num
+                             (
+                                 +
+                                 (
+                                     m
+                                     n
+                                 )
+                             )
+                           ) 
+                           	        											 
+                             
+                             case
+                             (
+                              tagNamePattern 
+                              (
+                                  Neg
+                                  tagNamePattern 
+                                  (
+                                      Num
+                                      n
+                                  )
+                              )
+                              
+                              Num
+                              (
+                                  -n
+                              )
+                             )
+                             													    
+                           	        											 
+                             
+                             case
+                             (
+                              tagNamePattern 
+                              (
+                                  Mult
+                                  
+                                  (
+                                   tagNamePattern 
+                                   (
+                                       Num
+                                       m
+                                   )
+                                       						 
+                                  	tagNamePattern 
+                                  	(
+                                  	    Num
+                                  	    n
+                                  	)
+                                  
+                                  )
+                              )
+                              
+                              Num
+                              (
+                                  *
+                                  (
+                                      m
+                                      n
+                                  )
+                              )
+                             )
+                             													    
+                           	        											 
+                             
+                             case
+                             (
+                              e
+                              
+                              e
+                             )
+                             													    
+                           	        											 
+                           	        											 
+                           )
+                           			   
+                       )
                         								
                     )
                         								
@@ -1685,7 +1772,7 @@
      (
      )
      kind =
-     <[],["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"lambda")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"expr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+     <[],["typexprConstr1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"lambda")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"expr")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>
      
      														  
      														 
@@ -1704,7 +1791,7 @@
     
      "extendedModulePath1"([],"Lazy")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
      (
-       <["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+       <["tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
      )
      
         									
@@ -1750,145 +1837,163 @@
                                    									
                            )
                             								
-                           method free
-                                 (
+                           method1 
+                           (
+                               <>
+                               
+                               free
+                               
+                               
+                               (
+                                
+                                case
+                                (
+                                  patternAs 
+                                  (
+                                      lambda
+                                      x
+                                  )
+                                  
+                                  send free
+                                  (
+                                   lambda
+                                  )
+                                      						  
+                                  (
+                                      x
+                                  )
+                                ) 
+                                	        											 
                                   
                                   case
                                   (
-                                    patternAs 
-                                    (
-                                        lambda
-                                        x
-                                    )
-                                    
-                                    send free
-                                    (
-                                     lambda
-                                    )
-                                        						  
-                                    (
-                                        x
-                                    )
-                                  ) 
-                                  	        											 
-                                    
-                                    case
-                                    (
-                                     patternAs 
-                                     (
-                                         expr
-                                         x
-                                     )
-                                     
-                                     send free
-                                     (
-                                      expr
-                                     )
-                                         						  
-                                     (
-                                         x
-                                     )
-                                    )
-                                    													    
-                                  	        											 
-                                  	        											 
-                                 )
-                                    							   
-                               												 
+                                   patternAs 
+                                   (
+                                       expr
+                                       x
+                                   )
+                                   
+                                   send free
+                                   (
+                                    expr
+                                   )
+                                       						  
+                                   (
+                                       x
+                                   )
+                                  )
+                                  													    
+                                	        											 
+                                	        											 
+                               )
+                                  							   
+                           )
                             								
-                           method subst
-                                 (
+                           method1 
+                           (
+                               <>
+                               
+                               subst
+                               sub
+                               
+                               (
+                                
+                                case
+                                (
+                                  patternAs 
+                                  (
+                                      lambda
+                                      x
+                                  )
+                                  
+                                  send subst
+                                  (
+                                   lambda
+                                  )
+                                      						  
+                                  (
+                                      sub
+                                      x
+                                  )
+                                ) 
+                                	        											 
                                   
                                   case
                                   (
-                                    patternAs 
-                                    (
-                                        lambda
-                                        x
-                                    )
-                                    
-                                    send subst
-                                    (
-                                     lambda
-                                    )
-                                        						  
-                                    (
-                                        sub
-                                        x
-                                    )
-                                  ) 
-                                  	        											 
-                                    
-                                    case
-                                    (
-                                     patternAs 
-                                     (
-                                         expr
-                                         x
-                                     )
-                                     
-                                     send subst
-                                     (
-                                      expr
-                                     )
-                                         						  
-                                     (
-                                         sub
-                                         x
-                                     )
-                                    )
-                                    													    
-                                  	        											 
-                                  	        											 
-                                 )
-                                    							   
-                               												 
+                                   patternAs 
+                                   (
+                                       expr
+                                       x
+                                   )
+                                   
+                                   send subst
+                                   (
+                                    expr
+                                   )
+                                       						  
+                                   (
+                                       sub
+                                       x
+                                   )
+                                  )
+                                  													    
+                                	        											 
+                                	        											 
+                               )
+                                  							   
+                           )
                             								
-                           method eval
-                                 (
+                           method1 
+                           (
+                               <>
+                               
+                               eval
+                               
+                               
+                               (
+                                
+                                case
+                                (
+                                  patternAs 
+                                  (
+                                      lambda
+                                      x
+                                  )
+                                  
+                                  send eval
+                                  (
+                                   lambda
+                                  )
+                                      						  
+                                  (
+                                      x
+                                  )
+                                ) 
+                                	        											 
                                   
                                   case
                                   (
-                                    patternAs 
-                                    (
-                                        lambda
-                                        x
-                                    )
-                                    
-                                    send eval
-                                    (
-                                     lambda
-                                    )
-                                        						  
-                                    (
-                                        x
-                                    )
-                                  ) 
-                                  	        											 
-                                    
-                                    case
-                                    (
-                                     patternAs 
-                                     (
-                                         expr
-                                         x
-                                     )
-                                     
-                                     send eval
-                                     (
-                                      expr
-                                     )
-                                         						  
-                                     (
-                                         x
-                                     )
-                                    )
-                                    													    
-                                  	        											 
-                                  	        											 
-                                 )
-                                    							   
-                               												 
+                                   patternAs 
+                                   (
+                                       expr
+                                       x
+                                   )
+                                   
+                                   send eval
+                                   (
+                                    expr
+                                   )
+                                       						  
+                                   (
+                                       x
+                                   )
+                                  )
+                                  													    
+                                	        											 
+                                	        											 
+                               )
+                                  							   
+                           )
                             								
                         )
                             								
