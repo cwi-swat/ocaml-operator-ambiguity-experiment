@@ -1,0 +1,47 @@
+(
+  open Lib
+  let
+  (
+    (
+      x
+        "foo"
+    )
+  in
+    sequence
+    (
+      String.set
+      (
+          x
+          2
+          78
+      )
+    ;
+      ifthenelse
+      (
+        if
+        (
+          <>
+          (
+              String.get
+              (
+                  x
+                  2
+              )
+              78
+          )
+        )
+        then
+        (
+          raise
+          (
+              Not_found
+                        )
+        )
+        else
+        (
+                  )
+      )
+    )
+  )
+)
+

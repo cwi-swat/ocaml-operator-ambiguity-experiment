@@ -1,0 +1,29 @@
+(
+  open Lib
+  ifthenelse
+  (
+    if
+    (
+      <>
+      (
+          String.get
+          (
+              "foo"
+              2
+          )
+          6f
+      )
+    )
+    then
+    (
+      raise
+      (
+          Not_found
+                )
+    )
+    else
+    (
+          )
+  )
+)
+

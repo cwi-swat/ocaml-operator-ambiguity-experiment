@@ -1,0 +1,31 @@
+asttypes.cmi : location.cmi
+lexer.cmi : parser.cmi location.cmi
+location.cmi :
+longident.cmi :
+parse.cmi : parsetree.cmi
+parser.cmi : parsetree.cmi longident.cmi location.cmi
+parsetree.cmi : longident.cmi location.cmi asttypes.cmi
+printast.cmi : parsetree.cmi
+syntaxerr.cmi : location.cmi
+lexer.cmo : parser.cmi location.cmi lexer.cmi
+lexer.cmx : parser.cmx location.cmx lexer.cmi
+location.cmo : location.cmi
+location.cmx : location.cmi
+longident.cmo : longident.cmi
+longident.cmx : longident.cmi
+main.cmo : printbrackets.cmo parser.cmi lexer.cmi
+main.cmx : printbrackets.cmx parser.cmx lexer.cmx
+parse.cmo : syntaxerr.cmi parser.cmi location.cmi lexer.cmi parse.cmi
+parse.cmx : syntaxerr.cmx parser.cmx location.cmx lexer.cmx parse.cmi
+parser.cmo : syntaxerr.cmi parsetree.cmi longident.cmi location.cmi \
+    asttypes.cmi parser.cmi
+parser.cmx : syntaxerr.cmx parsetree.cmi longident.cmx location.cmx \
+    asttypes.cmi parser.cmi
+printast.cmo : parsetree.cmi longident.cmi location.cmi asttypes.cmi \
+    printast.cmi
+printast.cmx : parsetree.cmi longident.cmx location.cmx asttypes.cmi \
+    printast.cmi
+printbrackets.cmo : parsetree.cmi longident.cmi location.cmi asttypes.cmi
+printbrackets.cmx : parsetree.cmi longident.cmx location.cmx asttypes.cmi
+syntaxerr.cmo : location.cmi syntaxerr.cmi
+syntaxerr.cmx : location.cmx syntaxerr.cmi

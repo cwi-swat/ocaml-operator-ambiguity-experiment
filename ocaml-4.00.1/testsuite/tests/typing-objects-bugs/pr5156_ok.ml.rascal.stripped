@@ -1,0 +1,83 @@
+(
+  classTypeDef 
+  (
+      classTypeDefinition 
+      (
+          classTypeDef 
+          (
+              t
+              <[],[]>
+          )
+      )
+  )
+  class
+  (
+    params = 
+    (
+    )
+    class name = o1
+    class expr = 
+                class_structure
+                (
+                )
+  )
+  type
+  (  						
+     obj
+     type
+     params=
+     (
+      a
+     )
+     cstrs =
+     (
+     )
+     kind =
+    (
+     <[],"a">
+    )
+  )
+  classTypeDef 
+  (
+      classTypeDefinition 
+      (
+          classTypeDef 
+          (
+              <"a",[]>
+              o2
+              <["typexprConstr1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"obj")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[]>
+          )
+      )
+  )
+  class
+  (
+    params = 
+    (
+    )
+    class name = o3
+    class expr = 
+                class_structure
+                (
+                )
+  )
+  class
+  (
+    params = 
+    (
+    )
+    class name = o4
+    class expr = 
+                class_structure
+                (
+                   method m
+                         (
+                         self
+                         :
+                          obj
+                          (
+                            a
+                          )
+                         )
+                )
+  )
+)

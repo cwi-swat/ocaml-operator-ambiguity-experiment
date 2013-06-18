@@ -1,0 +1,32 @@
+(
+  open Lib
+  ifthenelse
+  (
+    if
+    (
+      <>
+      (
+          Array.length
+          (
+              array
+              (
+                1
+                2
+              )
+          )
+          2
+      )
+    )
+    then
+    (
+      raise
+      (
+          Not_found
+                )
+    )
+    else
+    (
+          )
+  )
+)
+

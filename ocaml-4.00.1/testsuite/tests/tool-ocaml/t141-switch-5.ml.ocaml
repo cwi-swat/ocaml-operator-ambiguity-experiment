@@ -1,0 +1,64 @@
+(
+  open Lib
+  type
+  (
+    t
+      type
+        params =
+          (
+          )
+        cstrs =
+          (
+          )
+        kind =
+            (
+              A
+                (
+                     int
+                    (
+                    )
+                )
+                              B
+                (
+                     int
+                    (
+                    )
+                )
+                              C
+                (
+                     int
+                    (
+                    )
+                )
+                            )
+            )
+  match
+  A
+    0
+  (
+    case
+    (
+      A
+        _
+      ()
+          )
+    case
+    (
+      B
+        _
+      raise
+      (
+          Not_found
+                )
+    )
+    case
+    (
+      _
+      raise
+      (
+          Not_found
+                )
+    )
+  )
+)
+

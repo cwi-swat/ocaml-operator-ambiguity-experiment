@@ -21,11 +21,11 @@ generate(#start[Program]);
 import Tests;
 */
 public void run() {	 
-	files = readFileLines(|file:///ufs/hills/project/rascal/ocaml-operator-ambiguity-experiment/toplevels.txt|);
+	files = readFileLines(|file:///Users/ali/workspace/ocaml-operator-ambiguity-experiment/new.txt|);
 	for (f <- files) {
 		print(f + "...");
 		try {
-			tree = jparse(#start[TopLevel], readFile(|file:///ufs/hills/project/rascal/ocaml-operator-ambiguity-experiment/| + f));
+			tree = jparse(#start[Implementation], readFile(|file:///Users/ali/workspace/ocaml-operator-ambiguity-experiment| + f));
 			
 			if (/amb(_) := tree) {
 				tree = filterOCaml(tree);
@@ -36,7 +36,7 @@ public void run() {
 			} 
 		
 			s = printAST(tree);
-   			writeFile(|file:///ufs/hills/project/rascal/ocaml-operator-ambiguity-experiment| + (f + ".rascal"), s);
+   			writeFile(|file:///Users/ali/workspace/ocaml-operator-ambiguity-experiment| + (f + ".rascal"), s);
 			println("OK");
 		}
 		catch ParseError(el) : {
@@ -74,21 +74,22 @@ public void do(type[&T <: Tree] nont, str input) {
 	  }	  
 	  	  
 	  //"|"? Pattern ("when" Expr)? "-\>" Expr InnerPatternMatching*
-	  if({x, y} := alts) {
-	    list[InnerPatternMatching] ipmForX = [ ];
-	    if (InnerPatternMatching* ipm := x) 
-	  		ipmForX = [ xi | xi <- ipm ];
-
-	    list[InnerPatternMatching] ipmForY = [ ];
-	    if (InnerPatternMatching* ipm := y) 
-	  		ipmForY = [ yi | yi <- ipm ];
-
-	   if(size(ipmForX) == 1) {
-		   insert amb({x});
-	   } else if(size(ipmForY) == 1) {
-	   	   insert amb({y});
-	   }
+	  if({InnerPatternMatching+ x, InnerPatternMatching+ y} := alts, size(x.args) < size(y.args)) {
+	    insert amb({x});
 	  }
+//	    list[InnerPatternMatching] ipmForX = [ ];
+//	    if (InnerPatternMatching* ipm := x) 
+//	  		ipmForX = [ xi | xi <- ipm ];
+//
+//	    list[InnerPatternMatching] ipmForY = [ ];
+//	    if (InnerPatternMatching* ipm := y) 
+//	  		ipmForY = [ yi | yi <- ipm ];
+//
+//	   if(size(ipmForX) == 1) {
+//		   insert amb({x});
+//	   } else if(size(ipmForY) == 1) {
+	   	   //insert amb({y});
+	   //}
 	  fail;
   }
   
@@ -123,6 +124,22 @@ str printAST(value v) {
     							  <for (e <- l) {>
                                  '  <printAST(e)>
                                  <}>
+                                 ')";
+                                 
+   case "toplevels1"(l, exp) : return "
+    							 '(
+    							  <for (e <- l) {>
+                                 '  <printAST(e)>
+                                 <}>
+                                 '  <printAST(exp)>
+                                 ')";
+
+   case "toplevels1"(l, def) : return "
+    							 '(
+    							  <for (e <- l) {>
+                                 '  <printAST(e)>
+                                 <}>
+                                 '  <printAST(def)>
                                  ')";
                                  
     case "definitions"(l) :   return "
@@ -164,7 +181,9 @@ str printAST(value v) {
     									 '<printAST(e)>
     									 '<printAST(fieldName)>
     									 ')
-    									 ";     
+    									 ";  
+    									 
+    case "semicolon"(e): return printAST(e);									    
     
     case "field_name"(n) : return "<n>";             
         
@@ -228,15 +247,16 @@ str printAST(value v) {
     							'  <printAST(e2)>
     							')
     							";	
-    							
-    case "forloop"(ident, s, _, end, e, _) : return " for <ident>
-    														  ' <printAST(s)>
-    														  ' <printAST(end)>
-    														  ' <printAST(e)>
+    				
+    // "for" Ident "=" Expr ( "to" | "downto" ) Expr "do" Expr "done"							
+    case "forloop"(ident, e1, _, e2, e3) : return " for <ident>
+    														  ' <printAST(e1)>
+    														  ' <printAST(e2)>
+    														  ' <printAST(e3)>
     														  ";			
     														  
     														  
-    case "whileloop"(e1, e2, _) : return "
+    case "whileloop"(e1, e2) : return "
     									 ' while
     									 ' <printAST(e1)>
     									 ' <printAST(e2)>	 
@@ -260,7 +280,7 @@ str printAST(value v) {
     								')
     								";
     
-    case "beginEnd"(e, _) : return printAST(e);			
+    case "beginEnd"(e) : return printAST(e);			
     
     case "new"(e) : return "new <printAST(e)>";
     							   		
@@ -323,6 +343,13 @@ str printAST(value v) {
 	    					 '	<printAST(el)>
 	    					 '<}>
     						')";
+    						
+    						
+    case "patternAs"(p, valueName): return "alias <valueName>
+    									   '(
+    									   '  <printAST(p)>
+    									   ')
+    									   ";					
 
 	case "constrPattern"(constr, p) : return 
 									  "
@@ -369,9 +396,8 @@ str printAST(value v) {
 	
 	case "patternValueName"(x) : return printAST(x);	
 	
-	case "patternArray"(p, l, _): return "array
+	case "patternArray"(p, l): return "array
 										 '(
-										 '  <printAST(p)>
 										 <for(x <- l) {>
 										 '  <printAST(x)>
 										 <}>
@@ -385,13 +411,28 @@ str printAST(value v) {
                                        ')"; 
                                 else fail;
                                 
-    case str name(e1, e2) : if(/dotBracket.*/ := name) return "Array.get
-    													'(
-    													' <printAST(e1)>
-    													' <printAST(e2)>
-    													')
-    													";
-    						else fail;                          
+    case "dotBracket1"(e1, e2) : return "Array.get
+												'(
+												' <printAST(e1)>
+												' <printAST(e2)>
+												')
+												";
+
+
+    case "dotBracket2"(e1, e2) : return "String.get
+												'(
+												' <printAST(e1)>
+												' <printAST(e2)>
+												')
+												";
+
+    case "dotBracket3"(e1, e2) : return "Bigarray.Array1.get
+												'(
+												' <printAST(e1)>
+												' <printAST(e2)>
+												')
+												";
+
                                 
     									
     case "letbinding"(_, l, e) : return "
@@ -414,8 +455,9 @@ str printAST(value v) {
 									  '<printAST(e2)>
 									  ')
 									  ";
-    
-    case str name(e1, e2, e3) : if (/assign(2|3|4)/ := name) {
+									  
+									  
+    case "assign2"(e1, e2, e3) : 
     								return "Array.set
     									'(
     									' <printAST(e1)>
@@ -423,8 +465,25 @@ str printAST(value v) {
     									' <printAST(e3)>
     									')
     									";
-    							}
-    							else fail;
+    									
+       case "assign3"(e1, e2, e3) : 
+    								return "String.set
+    									'(
+    									' <printAST(e1)>
+    									' <printAST(e2)>
+    									' <printAST(e3)>
+    									')
+    									";
+   
+       case "assign4"(e1, e2, e3) : 
+    								return "Bigarray.Array1.set
+    									'(
+    									' <printAST(e1)>
+    									' <printAST(e2)>
+    									' <printAST(e3)>
+    									')
+    									";
+    									
 	
 	case "assign5"(i, e3) : return "Array.set
 									'(
@@ -591,7 +650,9 @@ str printAST(value v) {
 											   ' (
 											   ' )
 											   ' kind =
+											   '(
 											   ' <printAST(info)>
+											   ')
 											   ";
 											   
 											   
@@ -605,6 +666,14 @@ str printAST(value v) {
 
 	case "typeEquation"(typexpr) : return printAST(typexpr);
 
+
+    case "polytype1"(typexpr) : return "poly
+                                       '<printAST(typexpr)>
+                                       ";
+    
+    case "polytype2"(l, t) : return "<for (id <- l) {>
+    								'<id>.<}><printAST(t)>
+                                    ";
 	
 	case "fieldDecls"(_, l, _) : return "
 							     <for(fieldDecl <- l) {>
@@ -618,7 +687,12 @@ str printAST(value v) {
 								 '<printAST(constrDecl)>
 								  <}>
 								 ')
-								  ";                          
+								  ";         
+								  
+	case "typexprConstr2"(t) : return printAST(t);							                   
+	
+	case "path_field_name"(path, name) : return "<printAST(path)>.<name>";
+	
 	
 	// ConstrName ("of" { Typexpr !star "*"}+)?                           
 	case "constDecl1"(constrName, l): return
@@ -792,7 +866,24 @@ str printAST(value v) {
 		    								' <printAST(e)>
 										    ";
 										    
+    										   
+    										   
+   //patternTuple: "[" Pattern (";" Pattern)* ";"? "]"
+   case "patternTuple"([first, *rest]) : return "::
+   												   '(
+   												   '  <printAST(first)>
+   												   '  <printAST("patternTuple"(rest))>
+   												   ')
+   												   ";
+   
+   case "patternTuple"([]): return "[]";
+   
+   case "tagNamePattern"(t, p): return "<printAST(t)>
+    								   '<printAST(p)>
+    								   ";
+	    										    
     										    
+    case "functor"([], t, e): return printAST(e);								    
     										    
     case "functor"([<modeName, modType>], t, e): return "functor <modeName>
     													'(
@@ -860,6 +951,7 @@ str printAST(value v) {
     
     case "modTypePath"(path): return printAST(path);
     
+    case "floatUnaryMinus"(e): return "-<printAST(e)>";
     
     
     // Specifications
@@ -926,10 +1018,20 @@ str printAST(value v) {
     	"; 								   
     
     // ("method" | "method!") "private"? MethodName Parameter* (":" Typexpr)? "=" Expr
-    case "method"(_, _, name, params, _, e) : return "method <name>
+    case "method1"(_, _, name, params, _, e) : return "method <name>
+    												 '      <printAST(e)>
+    												 ";
+    												 
+    	
+    //  method2: "method" "private"? MethodName ":"  PolyTypExpr "=" Expr											 
+    case "method2"(_, name, _, e) : return "method <name>
     												 '      <printAST(e)>
     												 ";
     						
+    // method3: "method" "private"? "virtual" MethodName ":" PolyTypExpr
+    case "method3"(_, name, e) : return "method <name>
+    												 '   <printAST(e)>
+    												 ";
     						
     						
     						

@@ -1,0 +1,22 @@
+(
+  open Lib
+  ifthenelse
+  (
+    if
+    (
+      true
+          )
+    then
+    (
+      0
+    )
+    else
+    (
+        raise
+        (
+            Not_found
+                    )
+    )
+  )
+)
+

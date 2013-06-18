@@ -8,10 +8,10 @@ extend Extensions;
 
 syntax Expr 
 	 = prefix: PrefixSymbol Expr
-	 > field: Expr "." Field
+	 > field: Expr "." Field  
 	 | dotBracket1: Expr ".(" Expr ")"
-	 | dotBracket1: Expr ".[" Expr "]"
-	 | dotBracket1: Expr ".{" Expr "}"
+	 | dotBracket2: Expr ".[" Expr "]"
+	 | dotBracket3: Expr ".{" Expr "}"
 	 > hash: Expr "#" MethodName
      > non-assoc (functionApplication: Expr !semicolon Arg+
      | constrExp: Constr Expr
@@ -54,7 +54,7 @@ syntax Expr
      | record1: "{" Field ("=" Expr !semicolon !sep)? (";" Field ("=" Expr !semicolon !sep)?)* ";"? "}"
      | record2: "{" Expr "with" Field ("=" Expr !semicolon !sep )? (";" Field ("=" Expr !semicolon !sep)?)* ";"? "}"
      | whileloop: "while" Expr "do" Expr "done"
-     | forloop: "for" Ident "=" Expr ( "to" | "downto" ) Expr "do" Expr "done"
+     | forloop: "for" Ident "=" Expr ("to" | "downto") Expr "do" Expr "done"
      | new: "new" ClassPath
      | object: "object" ClassBody "end"  
      | "(" "module" ModuleExpr  (":" PackageType)? ")"  
@@ -71,7 +71,7 @@ syntax Arg
      ;
            
 syntax PatternMatching 
-     = patternMatching: "|"? Pattern ("when" Expr)? "-\>" Expr InnerPatternMatching*
+     = patternMatching: "|"? Pattern ("when" Expr)? "-\>" Expr InnerPatternMatching* 
      ;
      
 syntax InnerPatternMatching

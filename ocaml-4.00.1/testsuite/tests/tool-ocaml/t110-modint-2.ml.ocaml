@@ -1,0 +1,28 @@
+(
+  open Lib
+  try
+  sequence
+  (
+    ignore
+    (
+        mod
+        (
+            2
+            0
+        )
+    )
+  ;
+    raise
+    (
+        Not_found
+            )
+  )
+  (
+    case
+    (
+      Division_by_zero
+            ()
+          )
+  )
+)
+

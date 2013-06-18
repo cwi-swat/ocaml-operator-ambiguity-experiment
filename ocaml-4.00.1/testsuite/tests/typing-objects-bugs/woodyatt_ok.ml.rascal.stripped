@@ -1,0 +1,81 @@
+(
+  class
+  (
+    params = 
+    (
+    )
+    class name = alfa
+    class expr = 
+                class_structure
+                (
+                   method x
+                         Printf.printf
+                )
+  )
+  class
+  (
+    params = 
+    (
+    a
+    )
+    class name = bravo
+    class expr = 
+                class_structure
+                (
+                   classValue 
+                   (
+                       <>
+                       y
+                       brackets2 
+                       (
+                           a
+                           alfa
+                       )
+                   )
+                   classInitializer 
+                   (
+                       send x
+                       (
+                        y
+                       )
+                       (
+                           "bravo initialized"
+                       )
+                   )
+                )
+  )
+  class
+  (
+    params = 
+    (
+    a
+    )
+    class name = charlie
+    class expr = 
+                class_structure
+                (
+                   inheritance 
+                   (
+                       <>
+                       classArgs 
+                       (
+                           classPath 
+                           (
+                               bravo
+                           )
+                           a
+                       )
+                   )
+                   classInitializer 
+                   (
+                       send x
+                       (
+                        y
+                       )
+                       (
+                           "charlie initialized"
+                       )
+                   )
+                )
+  )
+)

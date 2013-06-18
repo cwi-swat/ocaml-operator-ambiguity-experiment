@@ -19,8 +19,8 @@ syntax Pattern
      | patternTypxprBrackets: "(" Pattern ":" Typexpr ")"
      | "#" TypeconstrName
      | patternRec: "{" Field ("=" Pattern)? (";" Field "=" Pattern)* ";"? "}"
-     | patternTuple: "[" Pattern (";" Pattern)* ";"? "]"
-     | patternArray: "[|" Pattern (";" Pattern)* ";"? "|]"
+     | patternTuple: "["  {Pattern ";"}+ ";"? "]"
+     | patternArray: "[|" {Pattern ";"}+ ";"? "|]"
      | lazyPattern: "lazy" Pattern
      | "(" "module" ModuleName  (":" PackageType)? ")"  
      ;       

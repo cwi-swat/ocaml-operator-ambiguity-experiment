@@ -1,0 +1,29 @@
+(
+  open Lib
+  match
+  0
+  (
+    case
+    (
+      0
+      ()
+          )
+    case
+    (
+      1
+      raise
+      (
+          Not_found
+                )
+    )
+    case
+    (
+      _
+      raise
+      (
+          Not_found
+                )
+    )
+  )
+)
+
