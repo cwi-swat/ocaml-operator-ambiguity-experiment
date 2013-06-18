@@ -1,67 +1,66 @@
-toplevels 
 (
-     open Testing
-     open Format
-     let
-     (
-       test0
-      (
-       case
+   open Testing
+   open Format
+   let
+   (
+     test0
+    (
+     case
+         (
+     	  ()
+          let
+          (
            (
-       	  ()
+             b
+             Buffer.create
+             (
+                 10
+             ) 
+           )
+          in
             let
             (
              (
-               b
-               Buffer.create
-               (
-                   10
-               ) 
+               msg
+               "Hello world!" 
              )
             in
-              let
+              sequence
               (
-               (
-                 msg
-                 "Hello world!" 
-               )
-              in
-                sequence
+                Format.bprintf
                 (
-                  Format.bprintf
-                  (
-                      b
-                      "%s"
-                      msg
-                  )
-                ;
-                  let
-                  (
+                    b
+                    "%s"
+                    msg
+                )
+              ;
+                let
+                (
+                 (
+                   s
+                   Buffer.contents
                    (
-                     s
-                     Buffer.contents
-                     (
-                         b
-                     ) 
-                   )
-                  in
-                    =
-                    (
-                        s
-                        msg
-                    )
+                       b
+                   ) 
+                 )
+                in
+                  =
+                  (
+                      s
+                      msg
                   )
                 )
               )
             )
-           )
-      )
-     )
-    test
-    (
-        test0
-        (
-            ()
-        )
+          )
+         )
     )
+   )
+  test
+  (
+      test0
+      (
+          ()
+      )
+  )
 )

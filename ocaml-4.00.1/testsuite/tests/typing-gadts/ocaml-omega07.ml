@@ -3522,9 +3522,11 @@
           Node
             (
               bal
-              Ppat_alias "l"
-              Node
-                _
+              alias l
+              (
+                Node
+                  _
+              )
               x
               r
             )
@@ -7155,9 +7157,11 @@
                   (
                     case
                     (
-                      Ppat_alias "e"
-                      Inl
-                        _
+                      alias e
+                      (
+                        Inl
+                          _
+                      )
                       e
                     )
                     case
@@ -7173,17 +7177,21 @@
                       (
                         case
                         (
-                          Ppat_alias "e"
-                          Inl
-                            _
+                          alias e
+                          (
+                            Inl
+                              _
+                          )
                           e
                         )
                         case
                         (
-                          Ppat_alias "e"
-                          Inr
-                            Eq
-                                                      e
+                          alias e
+                          (
+                            Inr
+                              Eq
+                                                        )
+                          e
                         )
                       )
                     )
@@ -7587,9 +7595,11 @@
                       (
                         case
                         (
-                          Ppat_alias "e"
-                          Cerror
-                            _
+                          alias e
+                          (
+                            Cerror
+                              _
+                          )
                           e
                         )
                         case
@@ -7609,9 +7619,11 @@
                           (
                             case
                             (
-                              Ppat_alias "e"
-                              Cerror
-                                _
+                              alias e
+                              (
+                                Cerror
+                                  _
+                              )
                               e
                             )
                             case
@@ -7698,9 +7710,11 @@
                       (
                         case
                         (
-                          Ppat_alias "e"
-                          Cerror
-                            _
+                          alias e
+                          (
+                            Cerror
+                              _
+                          )
                           e
                         )
                         case

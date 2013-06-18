@@ -1,57 +1,56 @@
-toplevels 
 (
-     let
+   let
+   (
+     l
+     Length.make
      (
-       l
-       Length.make
-       (
-           0
-       ) 
-     )
-    try
-    sequence
+         0
+     ) 
+   )
+  try
+  sequence
+  (
+    ignore
     (
-      ignore
-      (
-          Length.make
-          (
-              -1
-          )
-      )
-    ;
-      assert false
+        Length.make
+        (
+            -1
+        )
     )
-    (
-    case
-    (
-      Failure
-      _
-      ()
-    ) 
-    )
-    let
-    (
+  ;
+    assert false
+  )
+  (
+  case
+  (
+    Failure
+    _
+    ()
+  ) 
+  )
+  let
+  (
+   (
+     l3
+     Length.make
      (
-       l3
-       Length.make
-       (
-           3
-       ) 
-     )
-    in
-      Length.make
-      (
-          +
-          (
-              Length.from
-              (
-                  l3
-              )
-              Length.from
-              (
-                  l3
-              )
-          )
-      )
+         3
+     ) 
+   )
+  in
+    Length.make
+    (
+        +
+        (
+            Length.from
+            (
+                l3
+            )
+            Length.from
+            (
+                l3
+            )
+        )
     )
+  )
 )

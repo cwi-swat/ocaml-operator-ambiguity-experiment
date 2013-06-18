@@ -1,133 +1,147 @@
-toplevels 
+
 (
+    							  
+  
+      									 
+   open Graphics
+      									 
+      									 
+                                 
+  auto_synchronize
+  (
+      false
+  )
+                                 
+  display_mode
+  (
+      false
+  )
+                                 
+  remember_mode
+  (
+      true
+  )
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     open Graphics
-        									 
-        									 
-    auto_synchronize
-    (
-        false
-    )
-    display_mode
-    (
-        false
-    )
-    remember_mode
-    (
-        true
-    )
-    
-        									 
-     let
-     (
-      
-       sz
-       450 
-      							    		    
-     )
-        									 
-        									 
-    open_graph
-    (
-        Printf.sprintf
-        (
-            " %ix%i"
-            sz
-            sz
-        )
-    )
-    set_color
-    (
-        foreground
-    )
-    
-        									 
-     let
-     (
-      
-       dashes
+     sz
+     450 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  open_graph
+  (
+      Printf.sprintf
       (
-       case
-           (
-       	  y
-            forloop 
-            (
-                i
-                1
-                <>
-                100
-                
-                sequence
-                (
-                  plot
-                  (
-                      y
-                      *
-                      (
-                          2
-                          i
-                      )
-                  )
-                ;
-                  
-                  sequence
-                  (
-                    plot
-                    (
-                        y
-                        *
-                        (
-                            3
-                            i
-                        )
-                    )
-                  ;
-                    semicolon 
-                    (
-                        plot
-                        (
-                            y
-                            *
-                            (
-                                4
-                                i
-                            )
-                        )
-                    )
-                  )
-                      							
-                )
-                    							
-            )
-           )
+          " %ix%i"
+          sz
+          sz
       )
-          		    
-     )
-        									 
-        									 
-    dashes
+  )
+                                 
+  set_color
+  (
+      foreground
+  )
+                                 
+  
+      									 
+   let
+   (
+    
+     dashes
     (
-        3
+     case
+         (
+     	  y
+           for i
+           1
+           100
+           
+           sequence
+           (
+             plot
+             (
+                 y
+                 *
+                 (
+                     2
+                     i
+                 )
+             )
+           ;
+             
+             sequence
+             (
+               plot
+               (
+                   y
+                   *
+                   (
+                       3
+                       i
+                   )
+               )
+             ;
+               plot
+               (
+                   y
+                   *
+                   (
+                       4
+                       i
+                   )
+               )
+             )
+                 							
+           )
+               							
+              														  
+         )
     )
-    set_line_width
+        		    
+   )
+      									 
+      									 
+                                 
+  dashes
+  (
+      3
+  )
+                                 
+  set_line_width
+  (
+      20
+  )
+                                 
+  dashes
+  (
+      -
+      (
+          sz
+          20
+      )
+  )
+                                 
+  
+  sequence
+  (
+    draw_char
     (
-        20
+        43
     )
-    dashes
-    (
-        -
-        (
-            sz
-            20
-        )
-    )
+  ;
     
     sequence
     (
       draw_char
       (
-          43
+          61
       )
     ;
       
@@ -135,53 +149,57 @@ toplevels
       (
         draw_char
         (
-            61
+            6d
         )
       ;
-        
-        sequence
+        draw_char
         (
-          draw_char
-          (
-              6d
-          )
-        ;
-          draw_char
-          (
-              6c
-          )
+            6c
         )
-            							
       )
           							
     )
         							
-    moveto
-    (
-        10
-        10
-    )
-    set_line_width
-    (
-        5
-    )
+  )
+      							
+                                 
+  moveto
+  (
+      10
+      10
+  )
+                                 
+  set_line_width
+  (
+      5
+  )
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       carre
-      (
-       case
-           (
-       	  c
+     carre
+    (
+     case
+         (
+     	  c
+          
+          sequence
+          (
+            rlineto
+            (
+                0
+                c
+            )
+          ;
             
             sequence
             (
               rlineto
               (
-                  0
                   c
+                  0
               )
             ;
               
@@ -189,572 +207,602 @@ toplevels
               (
                 rlineto
                 (
-                    c
                     0
+                    -c
                 )
               ;
-                
-                sequence
+                rlineto
                 (
-                  rlineto
-                  (
-                      0
-                      -c
-                  )
-                ;
-                  rlineto
-                  (
-                      -c
-                      0
-                  )
+                    -c
+                    0
                 )
-                    							
               )
                   							
             )
                 							
-           )
-      )
-          		    
+          )
+              							
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+   for i
+   1
+   10
+   
+   sequence
+   (
+     moveto
+     (
+         *
+         (
+             10
+             i
+         )
+         *
+         (
+             10
+             i
+         )
      )
-        									 
-        									 
-    forloop 
+   ;
+     
+     sequence
+     (
+       set_color
+       (
+           rgb
+           (
+               +
+               (
+                   155
+                   *
+                   (
+                       10
+                       i
+                   )
+               )
+               0
+               0
+           )
+       )
+     ;
+       carre
+       (
+           *
+           (
+               10
+               i
+           )
+       )
+     )
+         							
+   )
+       							
+      														  
+                                 
+  moveto
+  (
+      10
+      210
+  )
+                                 
+  set_color
+  (
+      blue
+  )
+                                 
+  set_line_width
+  (
+      1
+  )
+                                 
+   for i
+   1
+   10
+   carre
+   (
+       *
+       (
+           10
+           i
+       )
+   )
+      														  
+                                 
+  rmoveto
+  (
+      0
+      120
+  )
+                                 
+  fill_circle
+  (
+      20
+      190
+      10
+  )
+                                 
+  set_color
+  (
+      green
+  )
+                                 
+  rlineto
+  (
+      0
+      10
+  )
+                                 
+  rmoveto
+  (
+      50
+      10
+  )
+                                 
+  
+  let
+  (
+   (
+      									  
+    
+     
+     (
+      x
+          						 
+     	y
+     
+     )
+     current_point
+     (
+         ()
+     ) 
+    							    		   
+      									  
+   )
+  in
+    draw_circle
     (
-        i
-        1
-        <>
-        10
-        
-        sequence
-        (
+        x
+        y
+        20
+    )
+  )
+      									
+                                 
+  set_color
+  (
+      black
+  )
+                                 
+  rlineto
+  (
+      0
+      20
+  )
+                                 
+  set_color
+  (
+      cyan
+  )
+                                 
+  
+      									 
+   let
+   (
+    
+     lw
+     15 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  set_line_width
+  (
+      lw
+  )
+                                 
+  
+      									 
+   let
+   (
+    
+     go_caption
+    (
+     case
+         (
+     	  l
           moveto
+          (
+              210
+              +
+              (
+                  -
+                  (
+                      130
+                      lw
+                  )
+                  l
+              )
+          )
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     go_legend
+    (
+     case
+         (
+     	  ()
+          go_caption
           (
               *
               (
-                  10
-                  i
-              )
-              *
-              (
-                  10
-                  i
+                  -3
+                  lw
               )
           )
-        ;
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  go_caption
+  (
+      0
+  )
+                                 
+  fill_rect
+  (
+      210
+      130
+      5
+      10
+  )
+                                 
+  fill_rect
+  (
+      220
+      130
+      10
+      20
+  )
+                                 
+  fill_rect
+  (
+      235
+      130
+      15
+      40
+  )
+                                 
+  fill_rect
+  (
+      255
+      130
+      20
+      80
+  )
+                                 
+  fill_rect
+  (
+      280
+      130
+      25
+      160
+  )
+                                 
+  set_color
+  (
+      green
+  )
+                                 
+  rlineto
+  (
+      50
+      0
+  )
+                                 
+  set_color
+  (
+      black
+  )
+                                 
+  set_line_width
+  (
+      /
+      (
+          lw
+          4
+      )
+  )
+                                 
+  draw_rect
+  (
+      210
+      130
+      5
+      10
+  )
+                                 
+  draw_rect
+  (
+      220
+      130
+      10
+      20
+  )
+                                 
+  draw_rect
+  (
+      235
+      130
+      15
+      40
+  )
+                                 
+  draw_rect
+  (
+      255
+      130
+      20
+      80
+  )
+                                 
+  draw_rect
+  (
+      280
+      130
+      25
+      160
+  )
+                                 
+  set_line_width
+  (
+      lw
+  )
+                                 
+  rlineto
+  (
+      50
+      0
+  )
+                                 
+  go_legend
+  (
+      ()
+  )
+                                 
+  set_text_size
+  (
+      10
+  )
+                                 
+  set_color
+  (
+      rgb
+      (
+          150
+          100
+          250
+      )
+  )
+                                 
+  
+  let
+  (
+   (
+      									  
+    
+     
+     (
+      x
+          						 
+     	y
+     
+     )
+     current_point
+     (
+         ()
+     ) 
+    							    		   
+      									  
+   )
+  in
+    fill_rect
+    (
+        x
+        -
+        (
+            y
+            5
+        )
+        *
+        (
+            8
+            20
+        )
+        25
+    )
+  )
+      									
+                                 
+  set_color
+  (
+      yellow
+  )
+                                 
+  go_legend
+  (
+      ()
+  )
+                                 
+  draw_string
+  (
+      "Graphics (OCaml)"
+  )
+                                 
+  
+      									 
+   let
+   (
+    
+     draw_green_string
+    (
+     case
+         (
+     	  s
           
           sequence
           (
             set_color
             (
-                rgb
-                (
-                    +
-                    (
-                        155
-                        *
-                        (
-                            10
-                            i
-                        )
-                    )
-                    0
-                    0
-                )
+                green
             )
           ;
-            carre
+            draw_string
             (
-                *
-                (
-                    10
-                    i
-                )
+                s
             )
           )
               							
-        )
-            							
+         )
     )
-    moveto
-    (
-        10
-        210
-    )
-    set_color
-    (
-        blue
-    )
-    set_line_width
-    (
-        1
-    )
-    forloop 
-    (
-        i
-        1
-        <>
-        10
-        carre
-        (
-            *
-            (
-                10
-                i
-            )
-        )
-    )
-    rmoveto
-    (
-        0
-        120
-    )
-    fill_circle
-    (
-        20
-        190
-        10
-    )
-    set_color
-    (
-        green
-    )
-    rlineto
-    (
-        0
-        10
-    )
-    rmoveto
-    (
-        50
-        10
-    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-    let
+     draw_red_string
     (
-     (
-        									  
-      
-       
-       (
-        x
-            						 
-       	y
-       
-       )
-       current_point
-       (
-           ()
-       ) 
-      							    		   
-        									  
-     )
-    in
-      draw_circle
-      (
-          x
-          y
-          20
-      )
-    )
-        									
-    set_color
-    (
-        black
-    )
-    rlineto
-    (
-        0
-        20
-    )
-    set_color
-    (
-        cyan
-    )
-    
-        									 
-     let
-     (
-      
-       lw
-       15 
-      							    		    
-     )
-        									 
-        									 
-    set_line_width
-    (
-        lw
-    )
-    
-        									 
-     let
-     (
-      
-       go_caption
-      (
-       case
-           (
-       	  l
-            moveto
-            (
-                210
-                +
-                (
-                    -
-                    (
-                        130
-                        lw
-                    )
-                    l
-                )
-            )
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       go_legend
-      (
-       case
-           (
-       	  ()
-            go_caption
-            (
-                *
-                (
-                    -3
-                    lw
-                )
-            )
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    go_caption
-    (
-        0
-    )
-    fill_rect
-    (
-        210
-        130
-        5
-        10
-    )
-    fill_rect
-    (
-        220
-        130
-        10
-        20
-    )
-    fill_rect
-    (
-        235
-        130
-        15
-        40
-    )
-    fill_rect
-    (
-        255
-        130
-        20
-        80
-    )
-    fill_rect
-    (
-        280
-        130
-        25
-        160
-    )
-    set_color
-    (
-        green
-    )
-    rlineto
-    (
-        50
-        0
-    )
-    set_color
-    (
-        black
-    )
-    set_line_width
-    (
-        /
-        (
-            lw
-            4
-        )
-    )
-    draw_rect
-    (
-        210
-        130
-        5
-        10
-    )
-    draw_rect
-    (
-        220
-        130
-        10
-        20
-    )
-    draw_rect
-    (
-        235
-        130
-        15
-        40
-    )
-    draw_rect
-    (
-        255
-        130
-        20
-        80
-    )
-    draw_rect
-    (
-        280
-        130
-        25
-        160
-    )
-    set_line_width
-    (
-        lw
-    )
-    rlineto
-    (
-        50
-        0
-    )
-    go_legend
-    (
-        ()
-    )
-    set_text_size
-    (
-        10
-    )
-    set_color
-    (
-        rgb
-        (
-            150
-            100
-            250
-        )
-    )
-    
-    let
-    (
-     (
-        									  
-      
-       
-       (
-        x
-            						 
-       	y
-       
-       )
-       current_point
-       (
-           ()
-       ) 
-      							    		   
-        									  
-     )
-    in
-      fill_rect
-      (
-          x
-          -
+     case
+         (
+     	  s
+          
+          sequence
           (
-              y
-              5
-          )
-          *
-          (
-              8
-              20
-          )
-          25
-      )
-    )
-        									
-    set_color
-    (
-        yellow
-    )
-    go_legend
-    (
-        ()
-    )
-    draw_string
-    (
-        "Graphics (OCaml)"
-    )
-    
-        									 
-     let
-     (
-      
-       draw_green_string
-      (
-       case
-           (
-       	  s
-            
-            sequence
+            set_color
             (
-              set_color
-              (
-                  green
-              )
-            ;
-              draw_string
-              (
-                  s
-              )
+                red
             )
-                							
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       draw_red_string
-      (
-       case
-           (
-       	  s
-            
-            sequence
+          ;
+            draw_string
             (
-              set_color
-              (
-                  red
-              )
-            ;
-              draw_string
-              (
-                  s
-              )
+                s
             )
-                							
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    moveto
-    (
-        120
-        210
+          )
+              							
+         )
     )
-    set_color
+        		    
+   )
+      									 
+      									 
+                                 
+  moveto
+  (
+      120
+      210
+  )
+                                 
+  set_color
+  (
+      red
+  )
+                                 
+  
+  sequence
+  (
+    fill_arc
     (
-        red
+        150
+        260
+        25
+        25
+        60
+        300
     )
+  ;
     
     sequence
     (
-      fill_arc
+      draw_green_string
       (
-          150
-          260
-          25
-          25
-          60
-          300
+          "A "
       )
     ;
       
       sequence
       (
-        draw_green_string
+        draw_red_string
         (
-            "A "
+            "red"
         )
       ;
         
         sequence
         (
-          draw_red_string
+          draw_green_string
           (
-              "red"
+              " pie."
           )
         ;
           
           sequence
           (
-            draw_green_string
+            set_text_size
             (
-                " pie."
+                5
             )
           ;
             
             sequence
             (
-              set_text_size
+              moveto
               (
-                  5
+                  180
+                  240
               )
             ;
               
               sequence
               (
-                moveto
+                draw_red_string
                 (
-                    180
-                    240
+                    "A "
                 )
               ;
                 
                 sequence
                 (
-                  draw_red_string
+                  draw_green_string
                   (
-                      "A "
+                      "green"
                   )
                 ;
-                  
-                  sequence
+                  draw_red_string
                   (
-                    draw_green_string
-                    (
-                        "green"
-                    )
-                  ;
-                    draw_red_string
-                    (
-                        " slice."
-                    )
+                      " slice."
                   )
-                      							
                 )
                     							
               )
@@ -769,1242 +817,1263 @@ toplevels
           							
     )
         							
+  )
+      							
+                                 
+  
+  sequence
+  (
+    set_color
+    (
+        green
+    )
+  ;
     
     sequence
     (
-      set_color
+      fill_arc
       (
-          green
+          200
+          260
+          25
+          25
+          0
+          60
       )
     ;
       
       sequence
       (
-        fill_arc
+        set_color
         (
-            200
-            260
-            25
-            25
-            0
-            60
+            black
         )
       ;
         
         sequence
         (
-          set_color
+          set_line_width
           (
-              black
+              2
           )
         ;
-          
-          sequence
+          draw_arc
           (
-            set_line_width
-            (
-                2
-            )
-          ;
-            draw_arc
-            (
-                200
-                260
-                27
-                27
-                0
-                60
-            )
+              200
+              260
+              27
+              27
+              0
+              60
           )
-              							
         )
             							
       )
           							
     )
         							
-    set_color
-    (
-        red
-    )
-    fill_poly
-    (
-        
-        array
-        (
-           							  
-         
-         (
-             					 40
-             					 
-         	10
-             					 
-         )
-             					 
-           							  
-         
-         (
-             					 150
-             					 
-         	70
-             					 
-         )
-             					 
-           							  
-         
-         (
-             					 150
-             					 
-         	10
-             					 
-         )
-             					 
-           							  
-         
-         (
-             					 40
-             					 
-         	10
-             					 
-         )
-             					 
-           							  
-        )
-           							  
-    )
-    set_color
-    (
-        blue
-    )
-    
-        									 
-     let
-     (
+  )
+      							
+                                 
+  set_color
+  (
+      red
+  )
+                                 
+  fill_poly
+  (
       
-       draw_poly
+      array
       (
-       case
-           (
-       	  v
-            
-            let
-            (
-             (
-                									  
-              
-               l
-               Array.length
-               (
-                   v
-               ) 
-              							    		   
-                									  
-             )
-            in
-              ifthenelse
-              (
-               if
-               (
-                >
-                (
-                    l
-                    0
-                )
-               )
-               then
-               (
-                beginEnd 
-                (
-                    
-                    let
-                    (
-                     (
-                        									  
-                      
-                       
-                       (
-                        x0
-                            						 
-                       	y0
-                       
-                       )
-                       current_point
-                       (
-                           ()
-                       ) 
-                      							    		   
-                        									  
-                     )
-                    in
-                      
-                      let
-                      (
-                       (
-                          									  
-                        
-                         p0
-                         Array.get
-                         (
-                          v
-                          0
-                         )
-                             													 
-                        							    		   
-                          									  
-                       )
-                      in
-                        
-                        let
-                        (
-                         (
-                            									  
-                          
-                           
-                           (
-                            x
-                                						 
-                           	y
-                           
-                           )
-                           p0 
-                          							    		   
-                            									  
-                         )
-                        in
-                          
-                          sequence
-                          (
-                            moveto
-                            (
-                                x
-                                y
-                            )
-                          ;
-                            
-                            sequence
-                            (
-                              forloop 
-                              (
-                                  i
-                                  1
-                                  <>
-                                  -
-                                  (
-                                      l
-                                      1
-                                  )
-                                  
-                                  let
-                                  (
-                                   (
-                                      									  
-                                    
-                                     
-                                     (
-                                      x
-                                          						 
-                                     	y
-                                     
-                                     )
-                                     Array.get
-                                     (
-                                      v
-                                      i
-                                     )
-                                         													 
-                                    							    		   
-                                      									  
-                                   )
-                                  in
-                                    lineto
-                                    (
-                                        x
-                                        y
-                                    )
-                                  )
-                                      									
-                              )
-                            ;
-                              
-                              sequence
-                              (
-                                lineto
-                                (
-                                    x
-                                    y
-                                )
-                              ;
-                                moveto
-                                (
-                                    x0
-                                    y0
-                                )
-                              )
-                                  							
-                            )
-                                							
-                          )
-                              							
-                        )
-                            									
-                      )
-                          									
-                    )
-                        									
-                )
-               )
-               else
-               (
-               )
-              )
-                  									   
-            )
-                									
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    draw_poly
-    (
-        
-        array
-        (
-           							  
-         
-         (
-             					 150
-             					 
-         	10
-             					 
-         )
-             					 
-           							  
-         
-         (
-             					 150
-             					 
-         	70
-             					 
-         )
-             					 
-           							  
-         
-         (
-             					 260
-             					 
-         	10
-             					 
-         )
-             					 
-           							  
-         
-         (
-             					 150
-             					 
-         	10
-             					 
-         )
-             					 
-           							  
-        )
-           							  
-    )
-    
-        									 
-     let
-     (
-      
-       equi
-      (
-       case
-           (
-        		
-        		 x
-        		(
-        		 case
-        		     (
-        		  		
-        		  		 y
-        		  		(
-        		  		 case
-        		  		     (
-        		  		 	  l
-        		  		      
-        		  		      array
-        		  		      (
-        		  		         							  
-        		  		       
-        		  		       (
-        		  		           					 -
-        		  		             					 (
-        		  		             					     x
-        		  		             					     /
-        		  		             					     (
-        		  		             					         l
-        		  		             					         2
-        		  		             					     )
-        		  		             					 )
-        		  		           					 
-        		  		       	y
-        		  		           					 
-        		  		       )
-        		  		           					 
-        		  		         							  
-        		  		       
-        		  		       (
-        		  		           					 x
-        		  		           					 
-        		  		       	+
-        		  		       	(
-        		  		       	    y
-        		  		       	    int_of_float
-        		  		       	    (
-        		  		       	        *.
-        		  		       	        (
-        		  		       	            float_of_int
-        		  		       	            (
-        		  		       	                l
-        		  		       	            )
-        		  		       	            /.
-        		  		       	            (
-        		  		       	                sqrt
-        		  		       	                (
-        		  		       	                    3.0
-        		  		       	                )
-        		  		       	                2.0
-        		  		       	            )
-        		  		       	        )
-        		  		       	    )
-        		  		       	)
-        		  		           					 
-        		  		       )
-        		  		           					 
-        		  		         							  
-        		  		       
-        		  		       (
-        		  		           					 +
-        		  		             					 (
-        		  		             					     x
-        		  		             					     /
-        		  		             					     (
-        		  		             					         l
-        		  		             					         2
-        		  		             					     )
-        		  		             					 )
-        		  		           					 
-        		  		       	y
-        		  		           					 
-        		  		       )
-        		  		           					 
-        		  		         							  
-        		  		      )
-        		  		         							  
-        		  		     )
-        		  		)
-        		  		    		   
-        		     )
-        		)
-        		    		   
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    set_color
-    (
-        black
-    )
-    fill_poly
-    (
-        Array.append
-        (
-            equi
-            (
-                300
-                20
-                40
-            )
-            equi
-            (
-                300
-                44
-                -40
-            )
-        )
-    )
-    set_line_width
-    (
-        1
-    )
-    set_color
-    (
-        cyan
-    )
-    draw_poly
-    (
-        equi
-        (
-            300
-            20
-            40
-        )
-    )
-    set_color
-    (
-        red
-    )
-    draw_poly
-    (
-        equi
-        (
-            300
-            44
-            -40
-        )
-    )
-    
-    let
-    (
-     (
-        									  
-      
+         							  
        
        (
-        x
-            						 
-       	y
-       
+           					 40
+           					 
+       	10
+           					 
        )
-       current_point
+           					 
+         							  
+       
        (
-           ()
-       ) 
-      							    		   
-        									  
+           					 150
+           					 
+       	70
+           					 
+       )
+           					 
+         							  
+       
+       (
+           					 150
+           					 
+       	10
+           					 
+       )
+           					 
+         							  
+       
+       (
+           					 40
+           					 
+       	10
+           					 
+       )
+           					 
+         							  
+      )
+         							  
+  )
+                                 
+  set_color
+  (
+      blue
+  )
+                                 
+  
+      									 
+   let
+   (
+    
+     draw_poly
+    (
+     case
+         (
+     	  v
+          
+          let
+          (
+           (
+              									  
+            
+             l
+             Array.length
+             (
+                 v
+             ) 
+            							    		   
+              									  
+           )
+          in
+            ifthenelse
+            (
+             if
+             (
+              >
+              (
+                  l
+                  0
+              )
+             )
+             then
+             (
+              
+              let
+              (
+               (
+                  									  
+                
+                 
+                 (
+                  x0
+                      						 
+                 	y0
+                 
+                 )
+                 current_point
+                 (
+                     ()
+                 ) 
+                							    		   
+                  									  
+               )
+              in
+                
+                let
+                (
+                 (
+                    									  
+                  
+                   p0
+                   Array.get
+                   (
+                    v
+                    0
+                   )
+                   												 
+                  							    		   
+                    									  
+                 )
+                in
+                  
+                  let
+                  (
+                   (
+                      									  
+                    
+                     
+                     (
+                      x
+                          						 
+                     	y
+                     
+                     )
+                     p0 
+                    							    		   
+                      									  
+                   )
+                  in
+                    
+                    sequence
+                    (
+                      moveto
+                      (
+                          x
+                          y
+                      )
+                    ;
+                      
+                      sequence
+                      (
+                         for i
+                         1
+                         -
+                         (
+                             l
+                             1
+                         )
+                         
+                         let
+                         (
+                          (
+                             									  
+                           
+                            
+                            (
+                             x
+                                 						 
+                            	y
+                            
+                            )
+                            Array.get
+                            (
+                             v
+                             i
+                            )
+                            												 
+                           							    		   
+                             									  
+                          )
+                         in
+                           lineto
+                           (
+                               x
+                               y
+                           )
+                         )
+                             									
+                            														  
+                      ;
+                        
+                        sequence
+                        (
+                          lineto
+                          (
+                              x
+                              y
+                          )
+                        ;
+                          moveto
+                          (
+                              x0
+                              y0
+                          )
+                        )
+                            							
+                      )
+                          							
+                    )
+                        							
+                  )
+                      									
+                )
+                    									
+              )
+                  									
+             )
+             else
+             (
+             )
+            )
+                									   
+          )
+              									
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  draw_poly
+  (
+      
+      array
+      (
+         							  
+       
+       (
+           					 150
+           					 
+       	10
+           					 
+       )
+           					 
+         							  
+       
+       (
+           					 150
+           					 
+       	70
+           					 
+       )
+           					 
+         							  
+       
+       (
+           					 260
+           					 
+       	10
+           					 
+       )
+           					 
+         							  
+       
+       (
+           					 150
+           					 
+       	10
+           					 
+       )
+           					 
+         							  
+      )
+         							  
+  )
+                                 
+  
+      									 
+   let
+   (
+    
+     equi
+    (
+     case
+         (
+      		
+      		 x
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 y
+      		  		(
+      		  		 case
+      		  		     (
+      		  		 	  l
+      		  		      
+      		  		      array
+      		  		      (
+      		  		         							  
+      		  		       
+      		  		       (
+      		  		           					 -
+      		  		             					 (
+      		  		             					     x
+      		  		             					     /
+      		  		             					     (
+      		  		             					         l
+      		  		             					         2
+      		  		             					     )
+      		  		             					 )
+      		  		           					 
+      		  		       	y
+      		  		           					 
+      		  		       )
+      		  		           					 
+      		  		         							  
+      		  		       
+      		  		       (
+      		  		           					 x
+      		  		           					 
+      		  		       	+
+      		  		       	(
+      		  		       	    y
+      		  		       	    int_of_float
+      		  		       	    (
+      		  		       	        *.
+      		  		       	        (
+      		  		       	            float_of_int
+      		  		       	            (
+      		  		       	                l
+      		  		       	            )
+      		  		       	            /.
+      		  		       	            (
+      		  		       	                sqrt
+      		  		       	                (
+      		  		       	                    3.0
+      		  		       	                )
+      		  		       	                2.0
+      		  		       	            )
+      		  		       	        )
+      		  		       	    )
+      		  		       	)
+      		  		           					 
+      		  		       )
+      		  		           					 
+      		  		         							  
+      		  		       
+      		  		       (
+      		  		           					 +
+      		  		             					 (
+      		  		             					     x
+      		  		             					     /
+      		  		             					     (
+      		  		             					         l
+      		  		             					         2
+      		  		             					     )
+      		  		             					 )
+      		  		           					 
+      		  		       	y
+      		  		           					 
+      		  		       )
+      		  		           					 
+      		  		         							  
+      		  		      )
+      		  		         							  
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  set_color
+  (
+      black
+  )
+                                 
+  fill_poly
+  (
+      Array.append
+      (
+          equi
+          (
+              300
+              20
+              40
+          )
+          equi
+          (
+              300
+              44
+              -40
+          )
+      )
+  )
+                                 
+  set_line_width
+  (
+      1
+  )
+                                 
+  set_color
+  (
+      cyan
+  )
+                                 
+  draw_poly
+  (
+      equi
+      (
+          300
+          20
+          40
+      )
+  )
+                                 
+  set_color
+  (
+      red
+  )
+                                 
+  draw_poly
+  (
+      equi
+      (
+          300
+          44
+          -40
+      )
+  )
+                                 
+  
+  let
+  (
+   (
+      									  
+    
+     
+     (
+      x
+          						 
+     	y
+     
      )
-    in
+     current_point
+     (
+         ()
+     ) 
+    							    		   
+      									  
+   )
+  in
+    
+    sequence
+    (
+      rlineto
+      (
+          10
+          10
+      )
+    ;
       
       sequence
       (
-        rlineto
+        moveto
         (
-            10
-            10
+            x
+            y
         )
       ;
-        
-        sequence
+        moveto
         (
-          moveto
-          (
-              x
-              y
-          )
-        ;
-          moveto
-          (
-              395
-              100
-          )
+            395
+            100
         )
-            							
       )
           							
     )
-        									
+        							
+  )
+      									
+                                 
+  
+  let
+  (
+   (
+      									  
     
-    let
-    (
+     
      (
-        									  
-      
-       
-       (
+      x
+          						 
+     	y
+     
+     )
+     current_point
+     (
+         ()
+     ) 
+    							    		   
+      									  
+   )
+  in
+    fill_ellipse
+    (
         x
-            						 
-       	y
-       
-       )
-       current_point
-       (
-           ()
-       ) 
-      							    		   
-        									  
-     )
-    in
-      fill_ellipse
-      (
-          x
-          y
-          25
-          15
-      )
-    )
-        									
-    set_color
-    (
-        rgb
-        (
-            255
-            0
-            255
-        )
-    )
-    rmoveto
-    (
-        0
-        -50
-    )
-    
-    let
-    (
-     (
-        									  
-      
-       
-       (
-        x
-            						 
-       	y
-       
-       )
-       current_point
-       (
-           ()
-       ) 
-      							    		   
-        									  
-     )
-    in
-      fill_ellipse
-      (
-          x
-          y
-          15
-          30
-      )
-    )
-        									
-    rmoveto
-    (
-        -45
-        0
-    )
-    
-    let
-    (
-     (
-        									  
-      
-       
-       (
-        x
-            						 
-       	y
-       
-       )
-       current_point
-       (
-           ()
-       ) 
-      							    		   
-        									  
-     )
-    in
-      draw_ellipse
-      (
-          x
-          y
-          25
-          10
-      )
-    )
-        									
-    
-        									 
-     let
-     (
-      
-       draw_arc_ellipse
-      (
-       case
-           (
-        		
-        		 x
-        		(
-        		 case
-        		     (
-        		  		
-        		  		 y
-        		  		(
-        		  		 case
-        		  		     (
-        		  		  		
-        		  		  		 r1
-        		  		  		(
-        		  		  		 case
-        		  		  		     (
-        		  		  		 	  r2
-        		  		  		      
-        		  		  		      sequence
-        		  		  		      (
-        		  		  		        set_color
-        		  		  		        (
-        		  		  		            green
-        		  		  		        )
-        		  		  		      ;
-        		  		  		        
-        		  		  		        sequence
-        		  		  		        (
-        		  		  		          draw_arc
-        		  		  		          (
-        		  		  		              x
-        		  		  		              y
-        		  		  		              r1
-        		  		  		              r2
-        		  		  		              60
-        		  		  		              120
-        		  		  		          )
-        		  		  		        ;
-        		  		  		          
-        		  		  		          sequence
-        		  		  		          (
-        		  		  		            set_color
-        		  		  		            (
-        		  		  		                black
-        		  		  		            )
-        		  		  		          ;
-        		  		  		            draw_arc
-        		  		  		            (
-        		  		  		                x
-        		  		  		                y
-        		  		  		                r1
-        		  		  		                r2
-        		  		  		                120
-        		  		  		                420
-        		  		  		            )
-        		  		  		          )
-        		  		  		              							
-        		  		  		        )
-        		  		  		            							
-        		  		  		      )
-        		  		  		          							
-        		  		  		     )
-        		  		  		)
-        		  		  		    		   
-        		  		     )
-        		  		)
-        		  		    		   
-        		     )
-        		)
-        		    		   
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    set_line_width
-    (
-        3
-    )
-    
-        									 
-     let
-     (
-      
-       draw_arc_ellipses
-      (
-       case
-           (
-        		
-        		 x
-        		(
-        		 case
-        		     (
-        		  		
-        		  		 y
-        		  		(
-        		  		 case
-        		  		     (
-        		  		  		
-        		  		  		 r1
-        		  		  		(
-        		  		  		 case
-        		  		  		     (
-        		  		  		 	  r2
-        		  		  		      
-        		  		  		      let
-        		  		  		      (
-        		  		  		       (
-        		  		  		          									  
-        		  		  		        
-        		  		  		         step
-        		  		  		         5 
-        		  		  		        							    		   
-        		  		  		          									  
-        		  		  		       )
-        		  		  		      in
-        		  		  		        forloop 
-        		  		  		        (
-        		  		  		            i
-        		  		  		            0
-        		  		  		            <>
-        		  		  		            /
-        		  		  		            (
-        		  		  		                -
-        		  		  		                (
-        		  		  		                    r1
-        		  		  		                    step
-        		  		  		                )
-        		  		  		                *
-        		  		  		                (
-        		  		  		                    2
-        		  		  		                    step
-        		  		  		                )
-        		  		  		            )
-        		  		  		            forloop 
-        		  		  		            (
-        		  		  		                j
-        		  		  		                0
-        		  		  		                <>
-        		  		  		                /
-        		  		  		                (
-        		  		  		                    -
-        		  		  		                    (
-        		  		  		                        r2
-        		  		  		                        step
-        		  		  		                    )
-        		  		  		                    *
-        		  		  		                    (
-        		  		  		                        2
-        		  		  		                        step
-        		  		  		                    )
-        		  		  		                )
-        		  		  		                draw_arc_ellipse
-        		  		  		                (
-        		  		  		                    x
-        		  		  		                    y
-        		  		  		                    *
-        		  		  		                    (
-        		  		  		                        *
-        		  		  		                        (
-        		  		  		                            3
-        		  		  		                            i
-        		  		  		                        )
-        		  		  		                        step
-        		  		  		                    )
-        		  		  		                    *
-        		  		  		                    (
-        		  		  		                        *
-        		  		  		                        (
-        		  		  		                            3
-        		  		  		                            j
-        		  		  		                        )
-        		  		  		                        step
-        		  		  		                    )
-        		  		  		                )
-        		  		  		            )
-        		  		  		        )
-        		  		  		      )
-        		  		  		          									
-        		  		  		     )
-        		  		  		)
-        		  		  		    		   
-        		  		     )
-        		  		)
-        		  		    		   
-        		     )
-        		)
-        		    		   
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    draw_arc_ellipses
-    (
-        20
-        128
+        y
+        25
         15
-        50
     )
-    
-        									 
-     let
-     (
-      
-       fill_arc_ellipse
+  )
+      									
+                                 
+  set_color
+  (
+      rgb
       (
-       case
-           (
-        		
-        		 x
-        		(
-        		 case
-        		     (
-        		  		
-        		  		 y
-        		  		(
-        		  		 case
-        		  		     (
-        		  		  		
-        		  		  		 r1
-        		  		  		(
-        		  		  		 case
-        		  		  		     (
-        		  		  		  		
-        		  		  		  		 r2
-        		  		  		  		(
-        		  		  		  		 case
-        		  		  		  		     (
-        		  		  		  		  		
-        		  		  		  		  		 c1
-        		  		  		  		  		(
-        		  		  		  		  		 case
-        		  		  		  		  		     (
-        		  		  		  		  		 	  c2
-        		  		  		  		  		      
-        		  		  		  		  		      sequence
-        		  		  		  		  		      (
-        		  		  		  		  		        set_color
-        		  		  		  		  		        (
-        		  		  		  		  		            c1
-        		  		  		  		  		        )
-        		  		  		  		  		      ;
-        		  		  		  		  		        
-        		  		  		  		  		        sequence
-        		  		  		  		  		        (
-        		  		  		  		  		          fill_arc
-        		  		  		  		  		          (
-        		  		  		  		  		              x
-        		  		  		  		  		              y
-        		  		  		  		  		              r1
-        		  		  		  		  		              r2
-        		  		  		  		  		              60
-        		  		  		  		  		              120
-        		  		  		  		  		          )
-        		  		  		  		  		        ;
-        		  		  		  		  		          
-        		  		  		  		  		          sequence
-        		  		  		  		  		          (
-        		  		  		  		  		            set_color
-        		  		  		  		  		            (
-        		  		  		  		  		                c2
-        		  		  		  		  		            )
-        		  		  		  		  		          ;
-        		  		  		  		  		            fill_arc
-        		  		  		  		  		            (
-        		  		  		  		  		                x
-        		  		  		  		  		                y
-        		  		  		  		  		                r1
-        		  		  		  		  		                r2
-        		  		  		  		  		                120
-        		  		  		  		  		                420
-        		  		  		  		  		            )
-        		  		  		  		  		          )
-        		  		  		  		  		              							
-        		  		  		  		  		        )
-        		  		  		  		  		            							
-        		  		  		  		  		      )
-        		  		  		  		  		          							
-        		  		  		  		  		     )
-        		  		  		  		  		)
-        		  		  		  		  		    		   
-        		  		  		  		     )
-        		  		  		  		)
-        		  		  		  		    		   
-        		  		  		     )
-        		  		  		)
-        		  		  		    		   
-        		  		     )
-        		  		)
-        		  		    		   
-        		     )
-        		)
-        		    		   
-           )
+          255
+          0
+          255
       )
-          		    
-     )
-        									 
-        									 
+  )
+                                 
+  rmoveto
+  (
+      0
+      -50
+  )
+                                 
+  
+  let
+  (
+   (
+      									  
     
-        									 
-     let
+     
      (
-      
-       fill_arc_ellipses
-      (
-       case
-           (
-        		
-        		 x
-        		(
-        		 case
-        		     (
-        		  		
-        		  		 y
-        		  		(
-        		  		 case
-        		  		     (
-        		  		  		
-        		  		  		 r1
-        		  		  		(
-        		  		  		 case
-        		  		  		     (
-        		  		  		 	  r2
-        		  		  		      
-        		  		  		      let
-        		  		  		      (
-        		  		  		       (
-        		  		  		          									  
-        		  		  		        
-        		  		  		         step
-        		  		  		         3 
-        		  		  		        							    		   
-        		  		  		          									  
-        		  		  		       )
-        		  		  		      in
-        		  		  		        
-        		  		  		        let
-        		  		  		        (
-        		  		  		         (
-        		  		  		            									  
-        		  		  		          
-        		  		  		           c1
-        		  		  		           ref
-        		  		  		           (
-        		  		  		               black
-        		  		  		           ) 
-        		  		  		          							    		   
-        		  		  		            									  
-        		  		  		          
-        		  		  		           c2
-        		  		  		           ref
-        		  		  		           (
-        		  		  		               yellow
-        		  		  		           ) 
-        		  		  		          							    		   
-        		  		  		            									  
-        		  		  		         )
-        		  		  		        in
-        		  		  		          
-        		  		  		          let
-        		  		  		          (
-        		  		  		           (
-        		  		  		              									  
-        		  		  		            
-        		  		  		             exchange
-        		  		  		            (
-        		  		  		             case
-        		  		  		                 (
-        		  		  		              		
-        		  		  		              		 r1
-        		  		  		              		(
-        		  		  		              		 case
-        		  		  		              		     (
-        		  		  		              		 	  r2
-        		  		  		              		      
-        		  		  		              		      let
-        		  		  		              		      (
-        		  		  		              		       (
-        		  		  		              		          									  
-        		  		  		              		        
-        		  		  		              		         tmp
-        		  		  		              		         
-        		  		  		              		          !
-        		  		  		              		          (
-        		  		  		              		          r1
-        		  		  		              		          )
-        		  		  		              		             							  
-        		  		  		              		        							    		   
-        		  		  		              		          									  
-        		  		  		              		       )
-        		  		  		              		      in
-        		  		  		              		        
-        		  		  		              		        sequence
-        		  		  		              		        (
-        		  		  		              		          :=
-        		  		  		              		          (
-        		  		  		              		              r1
-        		  		  		              		              
-        		  		  		              		               !
-        		  		  		              		               (
-        		  		  		              		               r2
-        		  		  		              		               )
-        		  		  		              		                  							 
-        		  		  		              		          )
-        		  		  		              		        ;
-        		  		  		              		          :=
-        		  		  		              		          (
-        		  		  		              		              r2
-        		  		  		              		              tmp
-        		  		  		              		          )
-        		  		  		              		        )
-        		  		  		              		            							
-        		  		  		              		      )
-        		  		  		              		          									
-        		  		  		              		     )
-        		  		  		              		)
-        		  		  		              		    		   
-        		  		  		                 )
-        		  		  		            )
-        		  		  		                		   
-        		  		  		              									  
-        		  		  		           )
-        		  		  		          in
-        		  		  		            forloop 
-        		  		  		            (
-        		  		  		                i
-        		  		  		                /
-        		  		  		                (
-        		  		  		                    r1
-        		  		  		                    *
-        		  		  		                    (
-        		  		  		                        2
-        		  		  		                        step
-        		  		  		                    )
-        		  		  		                )
-        		  		  		                <>
-        		  		  		                10
-        		  		  		                forloop 
-        		  		  		                (
-        		  		  		                    j
-        		  		  		                    /
-        		  		  		                    (
-        		  		  		                        r2
-        		  		  		                        *
-        		  		  		                        (
-        		  		  		                            2
-        		  		  		                            step
-        		  		  		                        )
-        		  		  		                    )
-        		  		  		                    <>
-        		  		  		                    30
-        		  		  		                    
-        		  		  		                    sequence
-        		  		  		                    (
-        		  		  		                      exchange
-        		  		  		                      (
-        		  		  		                          c1
-        		  		  		                          c2
-        		  		  		                      )
-        		  		  		                    ;
-        		  		  		                      fill_arc_ellipse
-        		  		  		                      (
-        		  		  		                          x
-        		  		  		                          y
-        		  		  		                          *
-        		  		  		                          (
-        		  		  		                              3
-        		  		  		                              i
-        		  		  		                          )
-        		  		  		                          *
-        		  		  		                          (
-        		  		  		                              3
-        		  		  		                              j
-        		  		  		                          )
-        		  		  		                          
-        		  		  		                           !
-        		  		  		                           (
-        		  		  		                           c1
-        		  		  		                           )
-        		  		  		                              							 
-        		  		  		                          
-        		  		  		                           !
-        		  		  		                           (
-        		  		  		                           c2
-        		  		  		                           )
-        		  		  		                              							 
-        		  		  		                      )
-        		  		  		                    )
-        		  		  		                        							
-        		  		  		                )
-        		  		  		            )
-        		  		  		          )
-        		  		  		              									
-        		  		  		        )
-        		  		  		            									
-        		  		  		      )
-        		  		  		          									
-        		  		  		     )
-        		  		  		)
-        		  		  		    		   
-        		  		     )
-        		  		)
-        		  		    		   
-        		     )
-        		)
-        		    		   
-           )
-      )
-          		    
+      x
+          						 
+     	y
+     
      )
-        									 
-        									 
-    fill_arc_ellipses
+     current_point
+     (
+         ()
+     ) 
+    							    		   
+      									  
+   )
+  in
+    fill_ellipse
     (
-        400
-        240
-        150
-        200
-    )
-    synchronize
-    (
-        ()
-    )
-    set_color
-    (
-        transp
-    )
-    draw_circle
-    (
-        400
-        240
-        50
-    )
-    draw_circle
-    (
-        400
-        240
-        40
-    )
-    draw_circle
-    (
-        400
-        240
+        x
+        y
+        15
         30
     )
-    set_color
+  )
+      									
+                                 
+  rmoveto
+  (
+      -45
+      0
+  )
+                                 
+  
+  let
+  (
+   (
+      									  
+    
+     
+     (
+      x
+          						 
+     	y
+     
+     )
+     current_point
+     (
+         ()
+     ) 
+    							    		   
+      									  
+   )
+  in
+    draw_ellipse
     (
-        red
+        x
+        y
+        25
+        10
     )
-    draw_circle
+  )
+      									
+                                 
+  
+      									 
+   let
+   (
+    
+     draw_arc_ellipse
     (
-        400
-        240
-        20
+     case
+         (
+      		
+      		 x
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 y
+      		  		(
+      		  		 case
+      		  		     (
+      		  		  		
+      		  		  		 r1
+      		  		  		(
+      		  		  		 case
+      		  		  		     (
+      		  		  		 	  r2
+      		  		  		      
+      		  		  		      sequence
+      		  		  		      (
+      		  		  		        set_color
+      		  		  		        (
+      		  		  		            green
+      		  		  		        )
+      		  		  		      ;
+      		  		  		        
+      		  		  		        sequence
+      		  		  		        (
+      		  		  		          draw_arc
+      		  		  		          (
+      		  		  		              x
+      		  		  		              y
+      		  		  		              r1
+      		  		  		              r2
+      		  		  		              60
+      		  		  		              120
+      		  		  		          )
+      		  		  		        ;
+      		  		  		          
+      		  		  		          sequence
+      		  		  		          (
+      		  		  		            set_color
+      		  		  		            (
+      		  		  		                black
+      		  		  		            )
+      		  		  		          ;
+      		  		  		            draw_arc
+      		  		  		            (
+      		  		  		                x
+      		  		  		                y
+      		  		  		                r1
+      		  		  		                r2
+      		  		  		                120
+      		  		  		                420
+      		  		  		            )
+      		  		  		          )
+      		  		  		              							
+      		  		  		        )
+      		  		  		            							
+      		  		  		      )
+      		  		  		          							
+      		  		  		     )
+      		  		  		)
+      		  		  		    		   
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
     )
-    synchronize
+        		    
+   )
+      									 
+      									 
+                                 
+  set_line_width
+  (
+      3
+  )
+                                 
+  
+      									 
+   let
+   (
+    
+     draw_arc_ellipses
     (
-        ()
+     case
+         (
+      		
+      		 x
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 y
+      		  		(
+      		  		 case
+      		  		     (
+      		  		  		
+      		  		  		 r1
+      		  		  		(
+      		  		  		 case
+      		  		  		     (
+      		  		  		 	  r2
+      		  		  		      
+      		  		  		      let
+      		  		  		      (
+      		  		  		       (
+      		  		  		          									  
+      		  		  		        
+      		  		  		         step
+      		  		  		         5 
+      		  		  		        							    		   
+      		  		  		          									  
+      		  		  		       )
+      		  		  		      in
+      		  		  		         for i
+      		  		  		         0
+      		  		  		         /
+      		  		  		         (
+      		  		  		             -
+      		  		  		             (
+      		  		  		                 r1
+      		  		  		                 step
+      		  		  		             )
+      		  		  		             *
+      		  		  		             (
+      		  		  		                 2
+      		  		  		                 step
+      		  		  		             )
+      		  		  		         )
+      		  		  		          for j
+      		  		  		          0
+      		  		  		          /
+      		  		  		          (
+      		  		  		              -
+      		  		  		              (
+      		  		  		                  r2
+      		  		  		                  step
+      		  		  		              )
+      		  		  		              *
+      		  		  		              (
+      		  		  		                  2
+      		  		  		                  step
+      		  		  		              )
+      		  		  		          )
+      		  		  		          draw_arc_ellipse
+      		  		  		          (
+      		  		  		              x
+      		  		  		              y
+      		  		  		              *
+      		  		  		              (
+      		  		  		                  *
+      		  		  		                  (
+      		  		  		                      3
+      		  		  		                      i
+      		  		  		                  )
+      		  		  		                  step
+      		  		  		              )
+      		  		  		              *
+      		  		  		              (
+      		  		  		                  *
+      		  		  		                  (
+      		  		  		                      3
+      		  		  		                      j
+      		  		  		                  )
+      		  		  		                  step
+      		  		  		              )
+      		  		  		          )
+      		  		  		             														  
+      		  		  		            														  
+      		  		  		      )
+      		  		  		          									
+      		  		  		     )
+      		  		  		)
+      		  		  		    		   
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
     )
-    ignore
+        		    
+   )
+      									 
+      									 
+                                 
+  draw_arc_ellipses
+  (
+      20
+      128
+      15
+      50
+  )
+                                 
+  
+      									 
+   let
+   (
+    
+     fill_arc_ellipse
     (
-        wait_next_event
-        (
-            ::
-             (
-             Key_pressed
-             []
-             ) 
-                						  
-        )
+     case
+         (
+      		
+      		 x
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 y
+      		  		(
+      		  		 case
+      		  		     (
+      		  		  		
+      		  		  		 r1
+      		  		  		(
+      		  		  		 case
+      		  		  		     (
+      		  		  		  		
+      		  		  		  		 r2
+      		  		  		  		(
+      		  		  		  		 case
+      		  		  		  		     (
+      		  		  		  		  		
+      		  		  		  		  		 c1
+      		  		  		  		  		(
+      		  		  		  		  		 case
+      		  		  		  		  		     (
+      		  		  		  		  		 	  c2
+      		  		  		  		  		      
+      		  		  		  		  		      sequence
+      		  		  		  		  		      (
+      		  		  		  		  		        set_color
+      		  		  		  		  		        (
+      		  		  		  		  		            c1
+      		  		  		  		  		        )
+      		  		  		  		  		      ;
+      		  		  		  		  		        
+      		  		  		  		  		        sequence
+      		  		  		  		  		        (
+      		  		  		  		  		          fill_arc
+      		  		  		  		  		          (
+      		  		  		  		  		              x
+      		  		  		  		  		              y
+      		  		  		  		  		              r1
+      		  		  		  		  		              r2
+      		  		  		  		  		              60
+      		  		  		  		  		              120
+      		  		  		  		  		          )
+      		  		  		  		  		        ;
+      		  		  		  		  		          
+      		  		  		  		  		          sequence
+      		  		  		  		  		          (
+      		  		  		  		  		            set_color
+      		  		  		  		  		            (
+      		  		  		  		  		                c2
+      		  		  		  		  		            )
+      		  		  		  		  		          ;
+      		  		  		  		  		            fill_arc
+      		  		  		  		  		            (
+      		  		  		  		  		                x
+      		  		  		  		  		                y
+      		  		  		  		  		                r1
+      		  		  		  		  		                r2
+      		  		  		  		  		                120
+      		  		  		  		  		                420
+      		  		  		  		  		            )
+      		  		  		  		  		          )
+      		  		  		  		  		              							
+      		  		  		  		  		        )
+      		  		  		  		  		            							
+      		  		  		  		  		      )
+      		  		  		  		  		          							
+      		  		  		  		  		     )
+      		  		  		  		  		)
+      		  		  		  		  		    		   
+      		  		  		  		     )
+      		  		  		  		)
+      		  		  		  		    		   
+      		  		  		     )
+      		  		  		)
+      		  		  		    		   
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
     )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     fill_arc_ellipses
+    (
+     case
+         (
+      		
+      		 x
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 y
+      		  		(
+      		  		 case
+      		  		     (
+      		  		  		
+      		  		  		 r1
+      		  		  		(
+      		  		  		 case
+      		  		  		     (
+      		  		  		 	  r2
+      		  		  		      
+      		  		  		      let
+      		  		  		      (
+      		  		  		       (
+      		  		  		          									  
+      		  		  		        
+      		  		  		         step
+      		  		  		         3 
+      		  		  		        							    		   
+      		  		  		          									  
+      		  		  		       )
+      		  		  		      in
+      		  		  		        
+      		  		  		        let
+      		  		  		        (
+      		  		  		         (
+      		  		  		            									  
+      		  		  		          
+      		  		  		           c1
+      		  		  		           ref
+      		  		  		           (
+      		  		  		               black
+      		  		  		           ) 
+      		  		  		          							    		   
+      		  		  		            									  
+      		  		  		          
+      		  		  		           c2
+      		  		  		           ref
+      		  		  		           (
+      		  		  		               yellow
+      		  		  		           ) 
+      		  		  		          							    		   
+      		  		  		            									  
+      		  		  		         )
+      		  		  		        in
+      		  		  		          
+      		  		  		          let
+      		  		  		          (
+      		  		  		           (
+      		  		  		              									  
+      		  		  		            
+      		  		  		             exchange
+      		  		  		            (
+      		  		  		             case
+      		  		  		                 (
+      		  		  		              		
+      		  		  		              		 r1
+      		  		  		              		(
+      		  		  		              		 case
+      		  		  		              		     (
+      		  		  		              		 	  r2
+      		  		  		              		      
+      		  		  		              		      let
+      		  		  		              		      (
+      		  		  		              		       (
+      		  		  		              		          									  
+      		  		  		              		        
+      		  		  		              		         tmp
+      		  		  		              		         
+      		  		  		              		          !
+      		  		  		              		          (
+      		  		  		              		          r1
+      		  		  		              		          )
+      		  		  		              		             							  
+      		  		  		              		        							    		   
+      		  		  		              		          									  
+      		  		  		              		       )
+      		  		  		              		      in
+      		  		  		              		        
+      		  		  		              		        sequence
+      		  		  		              		        (
+      		  		  		              		          :=
+      		  		  		              		          (
+      		  		  		              		              r1
+      		  		  		              		              
+      		  		  		              		               !
+      		  		  		              		               (
+      		  		  		              		               r2
+      		  		  		              		               )
+      		  		  		              		                  							 
+      		  		  		              		          )
+      		  		  		              		        ;
+      		  		  		              		          :=
+      		  		  		              		          (
+      		  		  		              		              r2
+      		  		  		              		              tmp
+      		  		  		              		          )
+      		  		  		              		        )
+      		  		  		              		            							
+      		  		  		              		      )
+      		  		  		              		          									
+      		  		  		              		     )
+      		  		  		              		)
+      		  		  		              		    		   
+      		  		  		                 )
+      		  		  		            )
+      		  		  		                		   
+      		  		  		              									  
+      		  		  		           )
+      		  		  		          in
+      		  		  		             for i
+      		  		  		             /
+      		  		  		             (
+      		  		  		                 r1
+      		  		  		                 *
+      		  		  		                 (
+      		  		  		                     2
+      		  		  		                     step
+      		  		  		                 )
+      		  		  		             )
+      		  		  		             10
+      		  		  		              for j
+      		  		  		              /
+      		  		  		              (
+      		  		  		                  r2
+      		  		  		                  *
+      		  		  		                  (
+      		  		  		                      2
+      		  		  		                      step
+      		  		  		                  )
+      		  		  		              )
+      		  		  		              30
+      		  		  		              
+      		  		  		              sequence
+      		  		  		              (
+      		  		  		                exchange
+      		  		  		                (
+      		  		  		                    c1
+      		  		  		                    c2
+      		  		  		                )
+      		  		  		              ;
+      		  		  		                fill_arc_ellipse
+      		  		  		                (
+      		  		  		                    x
+      		  		  		                    y
+      		  		  		                    *
+      		  		  		                    (
+      		  		  		                        3
+      		  		  		                        i
+      		  		  		                    )
+      		  		  		                    *
+      		  		  		                    (
+      		  		  		                        3
+      		  		  		                        j
+      		  		  		                    )
+      		  		  		                    
+      		  		  		                     !
+      		  		  		                     (
+      		  		  		                     c1
+      		  		  		                     )
+      		  		  		                        							 
+      		  		  		                    
+      		  		  		                     !
+      		  		  		                     (
+      		  		  		                     c2
+      		  		  		                     )
+      		  		  		                        							 
+      		  		  		                )
+      		  		  		              )
+      		  		  		                  							
+      		  		  		                 														  
+      		  		  		                														  
+      		  		  		          )
+      		  		  		              									
+      		  		  		        )
+      		  		  		            									
+      		  		  		      )
+      		  		  		          									
+      		  		  		     )
+      		  		  		)
+      		  		  		    		   
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  fill_arc_ellipses
+  (
+      400
+      240
+      150
+      200
+  )
+                                 
+  synchronize
+  (
+      ()
+  )
+                                 
+  set_color
+  (
+      transp
+  )
+                                 
+  draw_circle
+  (
+      400
+      240
+      50
+  )
+                                 
+  draw_circle
+  (
+      400
+      240
+      40
+  )
+                                 
+  draw_circle
+  (
+      400
+      240
+      30
+  )
+                                 
+  set_color
+  (
+      red
+  )
+                                 
+  draw_circle
+  (
+      400
+      240
+      20
+  )
+                                 
+  synchronize
+  (
+      ()
+  )
+                                 
+  ignore
+  (
+      wait_next_event
+      (
+          ::
+           (
+           Key_pressed
+           []
+           ) 
+              						  
+      )
+  )
 )

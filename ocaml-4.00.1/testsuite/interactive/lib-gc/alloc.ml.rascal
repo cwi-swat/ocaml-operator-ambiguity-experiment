@@ -1,219 +1,219 @@
-toplevels 
+
 (
+    							  
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       l
-       32768 
-      							    		    
-     )
-        									 
-        									 
+     l
+     32768 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       m
-       1000 
-      							    		    
-     )
-        									 
-        									 
+     m
+     1000 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
+     ar
+     Array.create
      (
-      
-       ar
-       Array.create
-       (
-           l
-           ""
-       ) 
-      							    		    
-     )
-        									 
-        									 
-    Random.init
+         l
+         ""
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  Random.init
+  (
+      1234
+  )
+                                 
+  
+      									 
+   let
+   (
+    
+     compact_flag
+     ref
+     (
+         false
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     main
     (
-        1234
-    )
-    
-        									 
-     let
-     (
-      
-       compact_flag
-       ref
-       (
-           false
-       ) 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       main
-      (
-       case
-           (
-       	  ()
-            whileloop 
-            (
-                true
-                
-                sequence
-                (
-                  forloop 
-                  (
-                      i
-                      1
-                      <>
-                      100000
-                      semicolon 
-                      (
-                          Array.set
-                          (
-                           ar
-                           Random.int
-                           (
-                               l
-                           )
-                           String.create
-                           (
-                               Random.int
-                               (
-                                   m
-                               )
-                           )
-                          )
-                              									
-                      )
-                  )
-                ;
-                  
-                  sequence
-                  (
-                    ifthenelse
-                    (
-                     if
-                     (
-                      
-                       !
-                       (
-                       compact_flag
-                       )
-                          							 
-                     )
-                     then
-                     (
-                      Gc.compact
-                      (
-                          ()
-                      )
-                     )
-                     else
-                     (
-                      Gc.full_major
-                      (
-                          ()
-                      )
-                     ) 
-                    )
-                    	    											 
-                  ;
-                    
-                    sequence
-                    (
-                      print_newline
-                      (
-                          ()
-                      )
-                    ;
-                      
-                      sequence
-                      (
-                        Gc.print_stat
-                        (
-                            stdout
-                        )
-                      ;
-                        semicolon 
-                        (
-                            flush
-                            (
-                                stdout
-                            )
-                        )
-                      )
-                          							
-                    )
-                        							
-                  )
-                      							
-                )
-                    							
-            )
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       argspecs
-       ::
-        (
-        
-        (
-            					 "-c"
-            					 
-        	
-        	 Arg.Set
-        	 compact_flag
-        	    								 
-            					 
-        	"do heap compactions"
-            					 
-        )
-            					 
-        []
-        ) 
-           						   
-      							    		    
-     )
-        									 
-        									 
-    Arg.parse
-    (
-        argspecs
-        (
-         
-         case
+     case
          (
-         _
-         
-         ()
+     	  ()
+          
+           while
+           true
+           
+           sequence
+           (
+              for i
+              1
+              100000
+              Array.set
+              (
+               ar
+               Random.int
+               (
+                   l
+               )
+               String.create
+               (
+                   Random.int
+                   (
+                       m
+                   )
+               )
+              )
+                  									
+                 														  
+           ;
+             
+             sequence
+             (
+               ifthenelse
+               (
+                if
+                (
+                 
+                  !
+                  (
+                  compact_flag
+                  )
+                     							 
+                )
+                then
+                (
+                 Gc.compact
+                 (
+                     ()
+                 )
+                )
+                else
+                (
+                 Gc.full_major
+                 (
+                     ()
+                 )
+                ) 
+               )
+               	    											 
+             ;
+               
+               sequence
+               (
+                 print_newline
+                 (
+                     ()
+                 )
+               ;
+                 
+                 sequence
+                 (
+                   Gc.print_stat
+                   (
+                       stdout
+                   )
+                 ;
+                   flush
+                   (
+                       stdout
+                   )
+                 )
+                     							
+               )
+                   							
+             )
+                 							
+           )
+               								 
+              									 
          )
-         													 
-        )
-           						  
-        "Usage: alloc [-c]"
     )
-    main
-    (
-        ()
-    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
+     argspecs
+     ::
+      (
+      
+      (
+          					 "-c"
+          					 
+      	
+      	 Arg.Set
+      	 compact_flag
+      	    								 
+          					 
+      	"do heap compactions"
+          					 
+      )
+          					 
+      []
+      ) 
+         						   
+    							    		    
+   )
+      									 
+      									 
+                                 
+  Arg.parse
+  (
+      argspecs
+      (
+       
+       case
+       (
+       _
+       
+       ()
+       )
+       													 
+      )
+         						  
+      "Usage: alloc [-c]"
+  )
+                                 
+  main
+  (
+      ()
+  )
+                                 
 )

@@ -1,115 +1,199 @@
-toplevels 
+
 (
+    							  
+  
+      									 
+   open Scanf
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     open Scanf
-        									 
-        									 
-    
-        									 
-     let
+     all_tests_ok
+     ref
      (
-      
-       all_tests_ok
-       ref
-       (
-           true
-       ) 
-      							    		    
-     )
-        									 
-        									 
+         true
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       finish
-      (
-       case
+     finish
+    (
+     case
+         (
+     	  ()
+          match
+          
+           !
            (
-       	  ()
-            match
+           all_tests_ok
+           )
+              							 
+          (
+          
+          case
+          (
+            true
             
-             !
-             (
-             all_tests_ok
-             )
-                							 
+            print_endline
             (
+                "\nAll tests succeeded."
+            )
+          ) 
+          	        											 
             
             case
             (
-              true
-              
-              print_endline
-              (
-                  "\nAll tests succeeded."
-              )
-            ) 
-            	        											 
-              
-              case
-              (
-               _
-               
-               print_endline
-               (
-                   "\n\n********* Test suite failed. ***********\n"
-               )
-              )
-              													    
-            	        											 
-            	        											 
+             _
+             
+             print_endline
+             (
+                 "\n\n********* Test suite failed. ***********\n"
+             )
             )
-            			   
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    at_exit
-    (
-        finish
+            													    
+          	        											 
+          	        											 
+          )
+          			   
+         )
     )
+        		    
+   )
+      									 
+      									 
+                                 
+  at_exit
+  (
+      finish
+  )
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
+     test_num
+     ref
      (
-      
-       test_num
-       ref
-       (
-           -1
-       ) 
-      							    		    
-     )
-        									 
-        									 
+         -1
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       print_test_number
-      (
-       case
-           (
-       	  ()
+     print_test_number
+    (
+     case
+         (
+     	  ()
+          
+          sequence
+          (
+            print_string
+            (
+                " "
+            )
+          ;
             
             sequence
             (
-              print_string
+              print_int
               (
-                  " "
+                  
+                   !
+                   (
+                   test_num
+                   )
+                      							 
               )
             ;
-              
-              sequence
+              flush
               (
-                print_int
+                  stdout
+              )
+            )
+                							
+          )
+              							
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     next_test
+    (
+     case
+         (
+     	  ()
+          
+          sequence
+          (
+            incr
+            (
+                test_num
+            )
+          ;
+            print_test_number
+            (
+                ()
+            )
+          )
+              							
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     print_test_fail
+    (
+     case
+         (
+     	  ()
+          
+          sequence
+          (
+            :=
+            (
+                all_tests_ok
+                false
+            )
+          ;
+            print_string
+            (
+                Printf.sprintf
                 (
+                    "\n********* Test number %i failed ***********\n"
                     
                      !
                      (
@@ -117,589 +201,524 @@ toplevels
                      )
                         							 
                 )
-              ;
-                flush
-                (
-                    stdout
-                )
-              )
-                  							
             )
-                							
-           )
-      )
-          		    
-     )
-        									 
-        									 
+          )
+              							
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       next_test
-      (
-       case
-           (
-       	  ()
-            
-            sequence
+     print_failure_test_fail
+    (
+     case
+         (
+     	  ()
+          
+          sequence
+          (
+            :=
             (
-              incr
+                all_tests_ok
+                false
+            )
+          ;
+            print_string
+            (
+                Printf.sprintf
+                (
+                    "\n********* Failure Test number %i incorrectly failed ***********\n"
+                    
+                     !
+                     (
+                     test_num
+                     )
+                        							 
+                )
+            )
+          )
+              							
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     print_failure_test_succeed
+    (
+     case
+         (
+     	  ()
+          
+          sequence
+          (
+            :=
+            (
+                all_tests_ok
+                false
+            )
+          ;
+            print_string
+            (
+                Printf.sprintf
+                (
+                    "\n********* Failure Test number %i failed to fail ***********\n"
+                    
+                     !
+                     (
+                     test_num
+                     )
+                        							 
+                )
+            )
+          )
+              							
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     test
+    (
+     case
+         (
+     	  b
+          
+          sequence
+          (
+            next_test
+            (
+                ()
+            )
+          ;
+            ifthenelse
+            (
+             if
+             (
+              not
               (
-                  test_num
+                  b
               )
-            ;
-              print_test_number
+             )
+             then
+             (
+              print_test_fail
               (
                   ()
               )
+             )
+             else
+             (
+             )
             )
-                							
-           )
-      )
-          		    
-     )
-        									 
-        									 
+                									   
+          )
+              							
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       print_test_fail
-      (
-       case
-           (
-       	  ()
-            
-            sequence
-            (
-              :=
-              (
-                  all_tests_ok
-                  false
-              )
-            ;
-              print_string
-              (
-                  Printf.sprintf
-                  (
-                      "\n********* Test number %i failed ***********\n"
-                      
-                       !
-                       (
-                       test_num
-                       )
-                          							 
-                  )
-              )
-            )
-                							
-           )
-      )
-          		    
-     )
-        									 
-        									 
+     test_raises_exc_p
+    (
+     case
+         (
+      		
+      		 pred
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 f
+      		  		(
+      		  		 case
+      		  		     (
+      		  		 	  x
+      		  		      
+      		  		      sequence
+      		  		      (
+      		  		        next_test
+      		  		        (
+      		  		            ()
+      		  		        )
+      		  		      ;
+      		  		        
+      		  		        try
+      		  		        
+      		  		        sequence
+      		  		        (
+      		  		          ignore
+      		  		          (
+      		  		              f
+      		  		              (
+      		  		                  x
+      		  		              )
+      		  		          )
+      		  		        ;
+      		  		          
+      		  		          sequence
+      		  		          (
+      		  		            print_failure_test_succeed
+      		  		            (
+      		  		                ()
+      		  		            )
+      		  		          ;
+      		  		            false
+      		  		          )
+      		  		              							
+      		  		        )
+      		  		            							
+      		  		        (
+      		  		        
+      		  		        case
+      		  		        (
+      		  		          x
+      		  		          
+      		  		          ||
+      		  		          (
+      		  		              pred
+      		  		              (
+      		  		                  x
+      		  		              )
+      		  		              
+      		  		              sequence
+      		  		              (
+      		  		                print_failure_test_fail
+      		  		                (
+      		  		                    ()
+      		  		                )
+      		  		              ;
+      		  		                false
+      		  		              )
+      		  		                  							
+      		  		          )
+      		  		        ) 
+      		  		        	        											 
+      		  		        	        											 
+      		  		        )
+      		  		            							   
+      		  		      )
+      		  		          							
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       print_failure_test_fail
-      (
-       case
-           (
-       	  ()
-            
-            sequence
-            (
-              :=
+     test_raises_some_exc
+    (
+     case
+         (
+     	  f
+          test_raises_exc_p
+          (
               (
-                  all_tests_ok
-                  false
-              )
-            ;
-              print_string
-              (
-                  Printf.sprintf
-                  (
-                      "\n********* Failure Test number %i incorrectly failed ***********\n"
-                      
-                       !
-                       (
-                       test_num
-                       )
-                          							 
-                  )
-              )
-            )
-                							
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       print_failure_test_succeed
-      (
-       case
-           (
-       	  ()
-            
-            sequence
-            (
-              :=
-              (
-                  all_tests_ok
-                  false
-              )
-            ;
-              print_string
-              (
-                  Printf.sprintf
-                  (
-                      "\n********* Failure Test number %i failed to fail ***********\n"
-                      
-                       !
-                       (
-                       test_num
-                       )
-                          							 
-                  )
-              )
-            )
-                							
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       test
-      (
-       case
-           (
-       	  b
-            
-            sequence
-            (
-              next_test
-              (
-                  ()
-              )
-            ;
-              ifthenelse
-              (
-               if
+               
+               case
                (
-                not
-                (
-                    b
-                )
+               _
+               
+               true
                )
-               then
-               (
-                print_test_fail
-                (
-                    ()
-                )
-               )
-               else
-               (
-               )
+               													 
               )
-                  									   
-            )
-                							
-           )
-      )
-          		    
-     )
-        									 
-        									 
+                 						  
+              f
+          )
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       test_raises_exc_p
-      (
-       case
-           (
-        		
-        		 pred
-        		(
-        		 case
-        		     (
-        		  		
-        		  		 f
-        		  		(
-        		  		 case
-        		  		     (
-        		  		 	  x
-        		  		      
-        		  		      sequence
-        		  		      (
-        		  		        next_test
-        		  		        (
-        		  		            ()
-        		  		        )
-        		  		      ;
-        		  		        
-        		  		        try
-        		  		        
-        		  		        sequence
-        		  		        (
-        		  		          ignore
-        		  		          (
-        		  		              f
-        		  		              (
-        		  		                  x
-        		  		              )
-        		  		          )
-        		  		        ;
-        		  		          
-        		  		          sequence
-        		  		          (
-        		  		            print_failure_test_succeed
-        		  		            (
-        		  		                ()
-        		  		            )
-        		  		          ;
-        		  		            false
-        		  		          )
-        		  		              							
-        		  		        )
-        		  		            							
-        		  		        (
-        		  		        
-        		  		        case
-        		  		        (
-        		  		          x
-        		  		          
-        		  		          ||
-        		  		          (
-        		  		              pred
-        		  		              (
-        		  		                  x
-        		  		              )
-        		  		              
-        		  		              sequence
-        		  		              (
-        		  		                print_failure_test_fail
-        		  		                (
-        		  		                    ()
-        		  		                )
-        		  		              ;
-        		  		                false
-        		  		              )
-        		  		                  							
-        		  		          )
-        		  		        ) 
-        		  		        	        											 
-        		  		        	        											 
-        		  		        )
-        		  		            							   
-        		  		      )
-        		  		          							
-        		  		     )
-        		  		)
-        		  		    		   
-        		     )
-        		)
-        		    		   
-           )
-      )
-          		    
-     )
-        									 
-        									 
+     test_raises_this_exc
+    (
+     case
+         (
+     	  exc
+          test_raises_exc_p
+          (
+              (
+               
+               case
+               (
+               x
+               
+               =
+               (
+                   x
+                   exc
+               )
+               )
+               													 
+              )
+                 						  
+          )
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       test_raises_some_exc
-      (
-       case
-           (
-       	  f
-            test_raises_exc_p
-            (
-                (
-                 
-                 case
-                 (
-                 _
-                 
-                 true
-                 )
-                 													 
-                )
-                   						  
-                f
-            )
-           )
-      )
-          		    
-     )
-        									 
-        									 
+     test_raises_this_failure
+    (
+     case
+         (
+      		
+      		 s
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 f
+      		  		(
+      		  		 case
+      		  		     (
+      		  		 	  x
+      		  		      test_raises_exc_p
+      		  		      (
+      		  		          (
+      		  		           
+      		  		           case
+      		  		           (
+      		  		           x
+      		  		           
+      		  		           =
+      		  		           (
+      		  		               x
+      		  		               
+      		  		                Failure
+      		  		                s
+      		  		                   								 
+      		  		           )
+      		  		           )
+      		  		           													 
+      		  		          )
+      		  		             						  
+      		  		          f
+      		  		          x
+      		  		      )
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       test_raises_this_exc
-      (
-       case
-           (
-       	  exc
-            test_raises_exc_p
-            (
-                (
-                 
-                 case
-                 (
-                 x
-                 
-                 =
-                 (
-                     x
-                     exc
-                 )
-                 )
-                 													 
-                )
-                   						  
-            )
-           )
-      )
-          		    
-     )
-        									 
-        									 
+     test_raises_some_failure
+    (
+     case
+         (
+      		
+      		 f
+      		(
+      		 case
+      		     (
+      		 	  x
+      		      test_raises_exc_p
+      		      (
+      		          (
+      		           
+      		           case
+      		           (
+      		             
+      		             Failure
+      		             _
+      		             									  
+      		             
+      		             true
+      		           ) 
+      		           	        											 
+      		             
+      		             case
+      		             (
+      		              _
+      		              
+      		              false
+      		             )
+      		             													    
+      		           	        											 
+      		           	        											 
+      		          )
+      		             							   
+      		          f
+      		          x
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       test_raises_this_failure
-      (
-       case
-           (
-        		
-        		 s
-        		(
-        		 case
-        		     (
-        		  		
-        		  		 f
-        		  		(
-        		  		 case
-        		  		     (
-        		  		 	  x
-        		  		      test_raises_exc_p
-        		  		      (
-        		  		          (
-        		  		           
-        		  		           case
-        		  		           (
-        		  		           x
-        		  		           
-        		  		           =
-        		  		           (
-        		  		               x
-        		  		               
-        		  		                Failure
-        		  		                s
-        		  		                   								 
-        		  		           )
-        		  		           )
-        		  		           													 
-        		  		          )
-        		  		             						  
-        		  		          f
-        		  		          x
-        		  		      )
-        		  		     )
-        		  		)
-        		  		    		   
-        		     )
-        		)
-        		    		   
-           )
-      )
-          		    
-     )
-        									 
-        									 
+     failure_test
+    (
+     case
+         (
+      		
+      		 f
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 x
+      		  		(
+      		  		 case
+      		  		     (
+      		  		 	  s
+      		  		      test_raises_this_failure
+      		  		      (
+      		  		          s
+      		  		          f
+      		  		          x
+      		  		      )
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       test_raises_some_failure
-      (
-       case
-           (
-        		
-        		 f
-        		(
-        		 case
-        		     (
-        		 	  x
-        		      test_raises_exc_p
-        		      (
-        		          (
-        		           
-        		           case
-        		           (
-        		             
-        		             Failure
-        		             _
-        		             									  
-        		             
-        		             true
-        		           ) 
-        		           	        											 
-        		             
-        		             case
-        		             (
-        		              _
-        		              
-        		              false
-        		             )
-        		             													    
-        		           	        											 
-        		           	        											 
-        		          )
-        		             							   
-        		          f
-        		          x
-        		      )
-        		     )
-        		)
-        		    		   
-           )
-      )
-          		    
-     )
-        									 
-        									 
+     any_failure_test
+     test_raises_some_failure 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       failure_test
-      (
-       case
-           (
-        		
-        		 f
-        		(
-        		 case
-        		     (
-        		  		
-        		  		 x
-        		  		(
-        		  		 case
-        		  		     (
-        		  		 	  s
-        		  		      test_raises_this_failure
-        		  		      (
-        		  		          s
-        		  		          f
-        		  		          x
-        		  		      )
-        		  		     )
-        		  		)
-        		  		    		   
-        		     )
-        		)
-        		    		   
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       any_failure_test
-       test_raises_some_failure 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       scan_failure_test
-      (
-       case
-           (
-        		
-        		 f
-        		(
-        		 case
-        		     (
-        		 	  x
-        		      test_raises_exc_p
-        		      (
-        		          (
-        		           
-        		           case
-        		           (
-        		             
-        		             Scan_failure
-        		             _
-        		             									  
-        		             
-        		             true
-        		           ) 
-        		           	        											 
-        		             
-        		             case
-        		             (
-        		              _
-        		              
-        		              false
-        		             )
-        		             													    
-        		           	        											 
-        		           	        											 
-        		          )
-        		             							   
-        		          f
-        		          x
-        		      )
-        		     )
-        		)
-        		    		   
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    
+     scan_failure_test
+    (
+     case
+         (
+      		
+      		 f
+      		(
+      		 case
+      		     (
+      		 	  x
+      		      test_raises_exc_p
+      		      (
+      		          (
+      		           
+      		           case
+      		           (
+      		             
+      		             Scan_failure
+      		             _
+      		             									  
+      		             
+      		             true
+      		           ) 
+      		           	        											 
+      		             
+      		             case
+      		             (
+      		              _
+      		              
+      		              false
+      		             )
+      		             													    
+      		           	        											 
+      		           	        											 
+      		          )
+      		             							   
+      		          f
+      		          x
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
 )

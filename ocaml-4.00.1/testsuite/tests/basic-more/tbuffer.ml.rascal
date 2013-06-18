@@ -1,73 +1,144 @@
-toplevels 
+
 (
+    							  
+  
+      									 
+   open Testing
+      									 
+      									 
+                                 
+  
+      									 
+   open Buffer
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     open Testing
-        									 
-        									 
+     identity
+    (
+     case
+         (
+     	  s
+          s
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     open Buffer
-        									 
-        									 
-    
-        									 
-     let
+     b
+     Buffer.create
      (
-      
-       identity
-      (
-       case
-           (
-       	  s
-            s
-           )
-      )
-          		    
-     )
-        									 
-        									 
+         100
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+  let
+  (
+   (
+      									  
     
-        									 
-     let
-     (
-      
-       b
-       Buffer.create
-       (
-           100
-       ) 
-      							    		    
-     )
-        									 
-        									 
+     pat0
+     "\\\\a" 
+    							    		   
+      									  
+   )
+  in
     
     let
     (
      (
         									  
       
-       pat0
-       "\\\\a" 
+       n0
+       String.length
+       (
+           pat0
+       ) 
       							    		   
         									  
      )
     in
       
-      let
+      sequence
       (
+        Buffer.add_substitute
+        (
+            b
+            identity
+            pat0
+        )
+      ;
+        test
+        (
+            =
+            (
+                String.length
+                (
+                    Buffer.contents
+                    (
+                        b
+                    )
+                )
+                n0
+            )
+        )
+      )
+          							
+    )
+        									
+  )
+      									
+                                 
+  
+  let
+  (
+   (
+      									  
+    
+     pat1
+     "b\\" 
+    							    		   
+      									  
+   )
+  in
+    
+    let
+    (
+     (
+        									  
+      
+       n1
+       String.length
        (
-          									  
-        
-         n0
-         String.length
-         (
-             pat0
-         ) 
-        							    		   
-          									  
-       )
-      in
+           pat1
+       ) 
+      							    		   
+        									  
+     )
+    in
+      
+      sequence
+      (
+        Buffer.clear
+        (
+            b
+        )
+      ;
         
         sequence
         (
@@ -75,7 +146,7 @@ toplevels
           (
               b
               identity
-              pat0
+              pat1
           )
         ;
           test
@@ -89,81 +160,16 @@ toplevels
                           b
                       )
                   )
-                  n0
+                  n1
               )
           )
         )
             							
       )
-          									
+          							
     )
         									
-    
-    let
-    (
-     (
-        									  
-      
-       pat1
-       "b\\" 
-      							    		   
-        									  
-     )
-    in
-      
-      let
-      (
-       (
-          									  
-        
-         n1
-         String.length
-         (
-             pat1
-         ) 
-        							    		   
-          									  
-       )
-      in
-        
-        sequence
-        (
-          Buffer.clear
-          (
-              b
-          )
-        ;
-          
-          sequence
-          (
-            Buffer.add_substitute
-            (
-                b
-                identity
-                pat1
-            )
-          ;
-            test
-            (
-                =
-                (
-                    String.length
-                    (
-                        Buffer.contents
-                        (
-                            b
-                        )
-                    )
-                    n1
-                )
-            )
-          )
-              							
-        )
-            							
-      )
-          									
-    )
-        									
-    
+  )
+      									
+                                 
 )

@@ -1259,12 +1259,14 @@
                               )
                               case
                               (
-                                Ppat_alias "l'"
-                                ::
-                                  (
-                                    a
-                                    l
-                                  )
+                                alias l'
+                                (
+                                  ::
+                                    (
+                                      a
+                                      l
+                                    )
+                                )
                                 ifthenelse
                                 (
                                   if

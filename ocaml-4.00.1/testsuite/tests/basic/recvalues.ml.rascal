@@ -1,468 +1,466 @@
-toplevels 
+
 (
+    							  
+  
+      									 
+   
     
-        									 
-     
+    
+    let
+    (
+     (
+        									  
       
-      
-      let
-      (
+       x
+       ::
        (
-          									  
-        
-         x
-         ::
-         (
-             1
-             x
-         ) 
-        							    		   
-          									  
-       )
-      in
-        
-        sequence
+           1
+           x
+       ) 
+      							    		   
+        									  
+     )
+    in
+      
+      sequence
+      (
+        ifthenelse
         (
-          ifthenelse
+         if
+         (
+          match
+          x
           (
-           if
-           (
-            match
-            x
+          
+          case
+          (
+            
+            ::
             (
+                1
+                x'
+            )
+            
+            ==
+            (
+                x
+                x'
+            )
+          ) 
+          	        											 
             
             case
             (
-              
-              ::
-              (
-                  1
-                  x'
-              )
-              
-              ==
-              (
-                  x
-                  x'
-              )
-            ) 
-            	        											 
-              
-              case
-              (
-               _
-               
-               false
-              )
-              													    
-            	        											 
-            	        											 
+             _
+             
+             false
             )
-            			   
-           )
-           then
-           (
-            print_string
-            (
-                "Test 1: passed\n"
-            )
-           )
-           else
-           (
-            print_string
-            (
-                "Test 1: FAILED\n"
-            )
-           ) 
+            													    
+          	        											 
+          	        											 
           )
-          	    											 
-        ;
+          			   
+         )
+         then
+         (
+          print_string
+          (
+              "Test 1: passed\n"
+          )
+         )
+         else
+         (
+          print_string
+          (
+              "Test 1: FAILED\n"
+          )
+         ) 
+        )
+        	    											 
+      ;
+        
+        let
+        (
+         (
+            									  
+          
+           one
+           1 
+          							    		   
+            									  
+         )
+        in
           
           let
           (
            (
               									  
             
-             one
-             1 
+             y
+             ::
+             (
+                 
+                 (
+                     					 one
+                     					 
+                 	+
+                 	(
+                 	    one
+                 	    1
+                 	)
+                     					 
+                 )
+                     					 
+                 y
+             ) 
             							    		   
               									  
            )
           in
             
-            let
+            sequence
             (
-             (
-                									  
-              
-               y
-               ::
-               (
-                   
-                   (
-                       					 one
-                       					 
-                   	+
-                   	(
-                   	    one
-                   	    1
-                   	)
-                       					 
-                   )
-                       					 
-                   y
-               ) 
-              							    		   
-                									  
-             )
-            in
-              
-              sequence
+              ifthenelse
               (
-                ifthenelse
+               if
+               (
+                match
+                y
                 (
-                 if
-                 (
-                  match
-                  y
+                
+                case
+                (
+                  
+                  ::
                   (
+                      
+                      (
+                       1
+                           						 
+                      	2
+                      
+                      )
+                      y'
+                  )
+                  
+                  ==
+                  (
+                      y
+                      y'
+                  )
+                ) 
+                	        											 
                   
                   case
                   (
-                    
-                    ::
+                   _
+                   
+                   false
+                  )
+                  													    
+                	        											 
+                	        											 
+                )
+                			   
+               )
+               then
+               (
+                print_string
+                (
+                    "Test 2: passed\n"
+                )
+               )
+               else
+               (
+                print_string
+                (
+                    "Test 2: FAILED\n"
+                )
+               ) 
+              )
+              	    											 
+            ;
+              
+              let
+              (
+               (
+                  									  
+                
+                 z
+                 ::
+                 (
+                     
+                     sequence
+                     (
+                       Gc.minor
+                       (
+                           ()
+                       )
+                     ;
+                       
+                       (
+                           					 one
+                           					 
+                       	+
+                       	(
+                       	    one
+                       	    1
+                       	)
+                           					 
+                       )
+                           					 
+                     )
+                         							
+                     z
+                 ) 
+                							    		   
+                  									  
+               )
+              in
+                
+                sequence
+                (
+                   for i
+                   0
+                   50000
+                   ignore
+                   (
+                       ref
+                       (
+                           0
+                       )
+                   )
+                      														  
+                ;
+                  ifthenelse
+                  (
+                   if
+                   (
+                    match
+                    z
                     (
-                        
-                        (
-                         1
-                             						 
-                        	2
-                        
-                        )
-                        y'
-                    )
-                    
-                    ==
-                    (
-                        y
-                        y'
-                    )
-                  ) 
-                  	        											 
                     
                     case
                     (
-                     _
-                     
-                     false
-                    )
-                    													    
-                  	        											 
-                  	        											 
-                  )
-                  			   
-                 )
-                 then
-                 (
-                  print_string
-                  (
-                      "Test 2: passed\n"
-                  )
-                 )
-                 else
-                 (
-                  print_string
-                  (
-                      "Test 2: FAILED\n"
-                  )
-                 ) 
-                )
-                	    											 
-              ;
-                
-                let
-                (
-                 (
-                    									  
-                  
-                   z
-                   ::
-                   (
-                       
-                       sequence
-                       (
-                         Gc.minor
-                         (
-                             ()
-                         )
-                       ;
-                         
-                         (
-                             					 one
-                             					 
-                         	+
-                         	(
-                         	    one
-                         	    1
-                         	)
-                             					 
-                         )
-                             					 
-                       )
-                           							
-                       z
-                   ) 
-                  							    		   
-                    									  
-                 )
-                in
-                  
-                  sequence
-                  (
-                    forloop 
-                    (
-                        i
-                        0
-                        <>
-                        50000
-                        ignore
-                        (
-                            ref
-                            (
-                                0
-                            )
-                        )
-                    )
-                  ;
-                    semicolon 
-                    (
-                        ifthenelse
-                        (
-                         if
-                         (
-                          match
-                          z
-                          (
+                      
+                      ::
+                      (
                           
-                          case
                           (
-                            
-                            ::
-                            (
-                                
-                                (
-                                 1
-                                     						 
-                                	2
-                                
-                                )
-                                z'
-                            )
-                            
-                            ==
-                            (
-                                z
-                                z'
-                            )
-                          ) 
-                          	        											 
-                            
-                            case
-                            (
-                             _
-                             
-                             false
-                            )
-                            													    
-                          	        											 
-                          	        											 
+                           1
+                               						 
+                          	2
+                          
                           )
-                          			   
-                         )
-                         then
-                         (
-                          print_string
-                          (
-                              "Test 3: passed\n"
-                          )
-                         )
-                         else
-                         (
-                          print_string
-                          (
-                              "Test 3: FAILED\n"
-                          )
-                         ) 
-                        )
-                        	    											 
+                          z'
+                      )
+                      
+                      ==
+                      (
+                          z
+                          z'
+                      )
+                    ) 
+                    	        											 
+                      
+                      case
+                      (
+                       _
+                       
+                       false
+                      )
+                      													    
+                    	        											 
+                    	        											 
                     )
+                    			   
+                   )
+                   then
+                   (
+                    print_string
+                    (
+                        "Test 3: passed\n"
+                    )
+                   )
+                   else
+                   (
+                    print_string
+                    (
+                        "Test 3: FAILED\n"
+                    )
+                   ) 
                   )
-                      							
+                  	    											 
                 )
-                    									
+                    							
               )
-                  							
+                  									
             )
-                									
+                							
           )
               									
         )
-            							
+            									
       )
-          									 
-     							    		    
+          							
+    )
         									 
-        									 
+   							    		    
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
+     s
+     "bar" 
+    							    		     
+    idx
+    1 
+   							    		     
+    x1
+    
+    let
+    (
      (
+        									  
       
-       s
-       "bar" 
-      							    		     
-      idx
-      1 
-     							    		     
-      x1
-      
-      let
+       f
       (
-       (
-          									  
-        
-         f
+       case
+           (
+       	  x
+            Printf.printf
+            (
+                "%s\n"
+                x
+            )
+           )
+      )
+          		   
+        									  
+     )
+    in
+      
+      sequence
+      (
+        f
         (
+            "foo"
+        )
+      ;
+        
+        (
+            					 s
+            					 
+        	x4
+            					 
+        )
+            					 
+      )
+          							
+    )
+        									 
+   							    		     
+    x2
+    
+    array
+    (
+       							  
+     x1
+       							  
+     x1
+       							  
+    )
+       							   
+   							    		     
+    x3
+    ::
+    (
+        (
+         
          case
+         (
+         ()
+         
+         fst
+         (
+             Array.get
              (
-         	  x
-              Printf.printf
-              (
-                  "%s\n"
-                  x
-              )
+              x2
+              idx
              )
+             												
+         )
+         )
+         													 
         )
-            		   
-          									  
-       )
-      in
-        
-        sequence
+           						  
+        x3
+    ) 
+   							    		     
+    x4
+    record
+    (
+     contents
+     x3
+    										   	     
+    ) 
+   							    		    
+   )
+      									 
+      									 
+                                 
+  Gc.minor
+  (
+      ()
+  )
+                                 
+  ifthenelse
+  (
+   if
+   (
+    ==
+    (
+        List.hd
         (
-          f
-          (
-              "foo"
-          )
-        ;
-          
-          (
-              					 s
-              					 
-          	x4
-              					 
-          )
-              					 
+            
+             !
+             (
+             snd
+             (
+                 Array.get
+                 (
+                  x2
+                  0
+                 )
+                 												
+             )
+             )
+                							 
         )
-            							
-      )
-          									 
-     							    		     
-      x2
-      
-      array
-      (
-         							  
-       x1
-         							  
-       x1
-         							  
-      )
-         							   
-     							    		     
-      x3
-      ::
-      (
-          (
-           
-           case
-           (
-           ()
-           
-           fst
-           (
-               Array.get
-               (
-                x2
-                idx
-               )
-                   													
-           )
-           )
-           													 
-          )
-             						  
-          x3
-      ) 
-     							    		     
-      x4
-      record
-      (
-       contents
-       x3
-      										   	     
-      ) 
-     							    		    
-     )
-        									 
-        									 
-    Gc.minor
-    (
-        ()
+        (
+            ()
+        )
+        s
     )
-    ifthenelse
+   )
+   then
+   (
+    print_string
     (
-     if
-     (
-      ==
-      (
-          List.hd
-          (
-              
-               !
-               (
-               snd
-               (
-                   Array.get
-                   (
-                    x2
-                    0
-                   )
-                       													
-               )
-               )
-                  							 
-          )
-          (
-              ()
-          )
-          s
-      )
-     )
-     then
-     (
-      print_string
-      (
-          "Test 4: passed\n"
-      )
-     )
-     else
-     (
-      print_string
-      (
-          "Test 4: FAILED\n"
-      )
-     ) 
+        "Test 4: passed\n"
     )
-    	    											 
+   )
+   else
+   (
+    print_string
+    (
+        "Test 4: FAILED\n"
+    )
+   ) 
+  )
+  	    											 
 )
