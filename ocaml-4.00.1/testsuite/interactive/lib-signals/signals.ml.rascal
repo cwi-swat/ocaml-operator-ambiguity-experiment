@@ -96,7 +96,7 @@
            z
           ) 
          )
-         		    											 
+         	    											 
         )
    )
        		    
@@ -283,171 +283,180 @@
        
        sequence
        (
-         
-         try
-         
-         sequence
+         beginEnd 
          (
-           print_string
-           (
-               "Computing like crazy..."
-           )
-         ;
-           
-           sequence
-           (
-             print_newline
-             (
-                 ()
-             )
-           ;
+             
+             try
              
              sequence
              (
-                for i
-                1
-                1000
-                ignore
-                (
-                    tak
-                    (
-                        
-                        (
-                            					 18
-                            					 
-                        	12
-                            					 
-                        	6
-                            					 
-                        )
-                            					 
-                    )
-                )
-                   														  
+               print_string
+               (
+                   "Computing like crazy..."
+               )
              ;
                
                sequence
                (
-                 print_string
+                 print_newline
                  (
-                     "Reading on input..."
+                     ()
                  )
                ;
                  
                  sequence
                  (
-                   print_newline
+                   forloop 
                    (
-                       ()
+                       i
+                       1
+                       <>
+                       1000
+                       ignore
+                       (
+                           tak
+                           (
+                               
+                               (
+                                   					 18
+                                   					 
+                               	12
+                                   					 
+                               	6
+                                   					 
+                               )
+                                   					 
+                           )
+                       )
                    )
                  ;
-                    for i
-                    1
-                    5
-                    
-                    try
-                    
-                    let
-                    (
+                   
+                   sequence
+                   (
+                     print_string
                      (
-                        									  
-                      
-                       s
-                       read_line
+                         "Reading on input..."
+                     )
+                   ;
+                     
+                     sequence
+                     (
+                       print_newline
                        (
                            ()
-                       ) 
-                      							    		   
-                        									  
-                     )
-                    in
-                      
-                      sequence
-                      (
-                        print_string
-                        (
-                            ">> "
-                        )
-                      ;
-                        
-                        sequence
-                        (
-                          print_string
-                          (
+                       )
+                     ;
+                       forloop 
+                       (
+                           i
+                           1
+                           <>
+                           5
+                           
+                           try
+                           
+                           let
+                           (
+                            (
+                               									  
+                             
                               s
-                          )
-                        ;
-                          print_newline
-                          (
-                              ()
-                          )
-                        )
-                            							
-                      )
-                          							
-                    )
-                        									
-                    (
-                    
-                    case
-                    (
-                      Exit
-                      
-                      
-                      sequence
-                      (
-                        print_string
-                        (
-                            "Got Exit, continuing."
-                        )
-                      ;
-                        print_newline
-                        (
-                            ()
-                        )
-                      )
-                          							
-                    ) 
-                    	        											 
-                    	        											 
-                    )
-                        							   
-                       														  
+                              read_line
+                              (
+                                  ()
+                              ) 
+                             							    		   
+                               									  
+                            )
+                           in
+                             
+                             sequence
+                             (
+                               print_string
+                               (
+                                   ">> "
+                               )
+                             ;
+                               
+                               sequence
+                               (
+                                 print_string
+                                 (
+                                     s
+                                 )
+                               ;
+                                 print_newline
+                                 (
+                                     ()
+                                 )
+                               )
+                                   							
+                             )
+                                 							
+                           )
+                               									
+                           (
+                           
+                           case
+                           (
+                             Exit
+                             
+                             
+                             sequence
+                             (
+                               print_string
+                               (
+                                   "Got Exit, continuing."
+                               )
+                             ;
+                               print_newline
+                               (
+                                   ()
+                               )
+                             )
+                                 							
+                           ) 
+                           	        											 
+                           	        											 
+                           )
+                               							   
+                       )
+                     )
+                         							
+                   )
+                       							
                  )
                      							
                )
                    							
              )
                  							
-           )
-               							
-         )
-             							
-         (
-         
-         case
-         (
-           Exit
-           
-           
-           sequence
-           (
-             print_string
              (
-                 "Got Exit, exiting."
-             )
-           ;
-             print_newline
+             
+             case
              (
-                 ()
+               Exit
+               
+               
+               sequence
+               (
+                 print_string
+                 (
+                     "Got Exit, exiting."
+                 )
+               ;
+                 print_newline
+                 (
+                     ()
+                 )
+               )
+                   							
+             ) 
+             	        											 
+             	        											 
              )
-           )
-               							
-         ) 
-         	        											 
-         	        											 
+                 							   
          )
-             							   
        ;
          exit
          (

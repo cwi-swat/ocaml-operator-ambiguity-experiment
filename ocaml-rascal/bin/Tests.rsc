@@ -25,7 +25,7 @@ public void run() {
 	for (f <- files) {
 		print(f + "...");
 		try {
-			tree = jparse(#start[TopLevel], readFile(|file:///ufs/hills/project/rascal/ocaml-operator-ambiguity-experiment/| + f));
+			tree = jparse(#start[Implementation], readFile(|file:///ufs/hills/project/rascal/ocaml-operator-ambiguity-experiment/| + f));
 			
 			if (/amb(_) := tree) {
 				tree = filterOCaml(tree);

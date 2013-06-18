@@ -1851,48 +1851,51 @@
                  ()
              )
            ;
-              for i
-              0
-              -
-              (
-                  Array.length
+             forloop 
+             (
+                 i
+                 0
+                 <>
+                 -
+                 (
+                     Array.length
+                     (
+                         a
+                     )
+                     1
+                 )
+                 ifthenelse
+                 (
+                  if
                   (
-                      a
-                  )
-                  1
-              )
-              ifthenelse
-              (
-               if
-               (
-                <>
-                (
-                    Array.get
-                    (
-                     a
-                     i
-                    )
-                        													
-                    +
-                    (
-                        12345
+                   <>
+                   (
+                       Array.get
+                       (
+                        a
                         i
-                    )
-                )
-               )
-               then
-               (
-                print_string
-                (
-                    "Test1: error\n"
-                )
-               )
-               else
-               (
-               )
-              )
-                  									   
-                 														  
+                       )
+                           													
+                       +
+                       (
+                           12345
+                           i
+                       )
+                   )
+                  )
+                  then
+                  (
+                   print_string
+                   (
+                       "Test1: error\n"
+                   )
+                  )
+                  else
+                  (
+                  )
+                 )
+                     									   
+             )
            )
                							
          )
