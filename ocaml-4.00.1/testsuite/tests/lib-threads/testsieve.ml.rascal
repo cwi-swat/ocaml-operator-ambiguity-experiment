@@ -150,68 +150,68 @@
                                    output
                                )
                              ;
-                               whileloop 
-                               (
-                                   true
-                                   
-                                   let
+                               
+                                while
+                                true
+                                
+                                let
+                                (
+                                 (
+                                    									  
+                                  
+                                   m
+                                   Event.sync
                                    (
+                                       Event.receive
+                                       (
+                                           inpout
+                                       )
+                                   ) 
+                                  							    		   
+                                    									  
+                                 )
+                                in
+                                  ifthenelse
+                                  (
+                                   if
+                                   (
+                                    =
                                     (
-                                       									  
-                                     
-                                      m
+                                        mod
+                                        (
+                                            m
+                                            n
+                                        )
+                                        0
+                                    )
+                                   )
+                                   then
+                                   (
+                                    ()
+                                   )
+                                   else
+                                   (
+                                    
+                                    sequence
+                                    (
                                       Event.sync
                                       (
-                                          Event.receive
+                                          Event.send
                                           (
-                                              inpout
+                                              output
+                                              m
                                           )
-                                      ) 
-                                     							    		   
-                                       									  
+                                      )
+                                    ;
+                                      ()
                                     )
-                                   in
-                                     ifthenelse
-                                     (
-                                      if
-                                      (
-                                       =
-                                       (
-                                           mod
-                                           (
-                                               m
-                                               n
-                                           )
-                                           0
-                                       )
-                                      )
-                                      then
-                                      (
-                                       ()
-                                      )
-                                      else
-                                      (
-                                       
-                                       sequence
-                                       (
-                                         Event.sync
-                                         (
-                                             Event.send
-                                             (
-                                                 output
-                                                 m
-                                             )
-                                         )
-                                       ;
-                                         ()
-                                       )
-                                           							
-                                      ) 
-                                     )
-                                     	    											 
-                                   )
-                                       									
-                               )
+                                        							
+                                   ) 
+                                  )
+                                  	    											 
+                                )
+                                    										 
+                                   									 
                              )
                                  							
                            )
@@ -283,61 +283,58 @@
                premiers
            )
          ;
-           whileloop 
-           (
-               true
+           
+            while
+            true
+            
+            sequence
+            (
+               for i
+               1
+               100
                
-               sequence
+               let
                (
-                 forloop 
-                 (
-                     i
-                     1
-                     <>
-                     100
-                     
-                     let
-                     (
+                (
+                   									  
+                 
+                  n
+                  Event.sync
+                  (
+                      Event.receive
                       (
-                         									  
-                       
-                        n
-                        Event.sync
-                        (
-                            Event.receive
-                            (
-                                premiers
-                            )
-                        ) 
-                       							    		   
-                         									  
+                          premiers
                       )
-                     in
-                       
-                       sequence
-                       (
-                         print_int
-                         (
-                             n
-                         )
-                       ;
-                         print_newline
-                         (
-                             ()
-                         )
-                       )
-                           							
-                     )
-                         									
-                 )
-               ;
-                 exit
+                  ) 
+                 							    		   
+                   									  
+                )
+               in
+                 
+                 sequence
                  (
-                     0
+                   print_int
+                   (
+                       n
+                   )
+                 ;
+                   print_newline
+                   (
+                       ()
+                   )
                  )
+                     							
                )
-                   							
-           )
+                   									
+                  														  
+            ;
+              exit
+              (
+                  0
+              )
+            )
+                								 
+               									 
          )
              							
         )

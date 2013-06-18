@@ -33,7 +33,7 @@
      		
      		 
      		 px
-     		 <["typexprConstr2"("typeConstr"([],"float")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"float64_elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"c_layout")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"(["extendedModulePath1"([],"Array1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+     		 <["typexprConstr2"("typeConstr"([],"float")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"float64_elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"c_layout")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
      		     										   
      		(
      		 case
@@ -41,7 +41,7 @@
      		  		
      		  		 
      		  		 py
-     		  		 <["typexprConstr2"("typeConstr"([],"float")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"float64_elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"c_layout")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array1")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     		  		 <["typexprConstr2"("typeConstr"([],"float")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"float64_elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"c_layout")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"(["extendedModulePath1"([],"Array1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
      		  		     										   
      		  		(
      		  		 case
@@ -892,10 +892,7 @@
      		  		                                                                                       (
      		  		                                                                                           *.
      		  		                                                                                           (
-     		  		                                                                                               floatUnaryMinus 
-     		  		                                                                                               (
-     		  		                                                                                                   s2
-     		  		                                                                                               )
+     		  		                                                                                               -s2
      		  		                                                                                               cc1
      		  		                                                                                           )
      		  		                                                                                           *.
@@ -2012,10 +2009,7 @@
                                                      j
                                                      1
                                                  )
-                                                 floatUnaryMinus 
-                                                 (
-                                                     y
-                                                 )
+                                                 -y
                                                 )
                                                     									
                                               )

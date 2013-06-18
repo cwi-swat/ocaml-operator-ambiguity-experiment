@@ -14,6 +14,7 @@
      (
      )
      kind =
+    (
      
      
      (
@@ -24,11 +25,7 @@
       
        list
        (
-         
          tree
-         (
-         )
-         								  
        )
        
           									
@@ -40,6 +37,7 @@
      								  
      														  
      														 
+    )
     											   
   								        
   )
@@ -143,15 +141,12 @@
         (
          
          Tree
-         ::
+         patternTuple 
          (
-           y1
-           patternTuple 
-           (
-               z1
-           )
+             y1
+             z1
+             
          )
-            												   
          									  
              						 
         	
@@ -161,15 +156,11 @@
         
         	
         	Tree
-        	::
+        	patternTuple 
         	(
-        	  x1
-        	  patternTuple 
-        	  (
-        	      
-        	  )
+        	    x1
+        	    
         	)
-        	   												   
         										  
         
         )

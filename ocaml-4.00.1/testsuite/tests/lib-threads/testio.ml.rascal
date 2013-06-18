@@ -360,26 +360,23 @@
      		                   )
      		                   else
      		                   (
-     		                    beginEnd 
+     		                    
+     		                    sequence
      		                    (
-     		                        
-     		                        sequence
-     		                        (
-     		                          output
-     		                          (
-     		                              oc
-     		                              buffer
-     		                              0
-     		                              n
-     		                          )
-     		                        ;
-     		                          copy
-     		                          (
-     		                              ()
-     		                          )
-     		                        )
-     		                            							
+     		                      output
+     		                      (
+     		                          oc
+     		                          buffer
+     		                          0
+     		                          n
+     		                      )
+     		                    ;
+     		                      copy
+     		                      (
+     		                          ()
+     		                      )
      		                    )
+     		                        							
      		                   ) 
      		                  )
      		                  	    											 
@@ -525,26 +522,23 @@
      		                     )
      		                     else
      		                     (
-     		                      beginEnd 
+     		                      
+     		                      sequence
      		                      (
-     		                          
-     		                          sequence
-     		                          (
-     		                            output
-     		                            (
-     		                                oc
-     		                                buffer
-     		                                0
-     		                                n
-     		                            )
-     		                          ;
-     		                            copy
-     		                            (
-     		                                ()
-     		                            )
-     		                          )
-     		                              							
+     		                        output
+     		                        (
+     		                            oc
+     		                            buffer
+     		                            0
+     		                            n
+     		                        )
+     		                      ;
+     		                        copy
+     		                        (
+     		                            ()
+     		                        )
      		                      )
+     		                          							
      		                     ) 
      		                    )
      		                    	    											 
@@ -610,29 +604,29 @@
     	  )
          
          try
-         whileloop 
-         (
-             true
-             
-             sequence
-             (
-               output_string
-               (
-                   oc
-                   input_line
-                   (
-                       ic
-                   )
-               )
-             ;
-               output_char
-               (
-                   oc
-                   0a
-               )
-             )
-                 							
-         )
+         
+          while
+          true
+          
+          sequence
+          (
+            output_string
+            (
+                oc
+                input_line
+                (
+                    ic
+                )
+            )
+          ;
+            output_char
+            (
+                oc
+                0a
+            )
+          )
+              								 
+             									 
          (
          
          case
@@ -689,37 +683,34 @@
            
            sequence
            (
-             forloop 
-             (
-                 i
-                 1
-                 <>
-                 256
-                 
-                 sequence
-                 (
-                   output_string
-                   (
-                       oc
-                       String.make
-                       (
-                           *
-                           (
-                               i
-                               16
-                           )
-                           2e
-                       )
-                   )
-                 ;
-                   output_char
-                   (
-                       oc
-                       0a
-                   )
-                 )
-                     							
-             )
+              for i
+              1
+              256
+              
+              sequence
+              (
+                output_string
+                (
+                    oc
+                    String.make
+                    (
+                        *
+                        (
+                            i
+                            16
+                        )
+                        2e
+                    )
+                )
+              ;
+                output_char
+                (
+                    oc
+                    0a
+                )
+              )
+                  							
+                 														  
            ;
              close_out
              (
@@ -934,7 +925,7 @@
              Sys.argv
              1
             )
-                													
+            												
             (
             
             case

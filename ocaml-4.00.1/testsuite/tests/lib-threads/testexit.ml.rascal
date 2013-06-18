@@ -32,142 +32,139 @@
              									  
           )
          in
-           whileloop 
-           (
-               true
-               
-               sequence
-               (
-                 incr
+           
+            while
+            true
+            
+            sequence
+            (
+              incr
+              (
+                  counter
+              )
+            ;
+              
+              sequence
+              (
+                ifthenelse
+                (
+                 if
                  (
-                     counter
+                  >=
+                  (
+                      
+                       !
+                       (
+                       counter
+                       )
+                          							 
+                      limit
+                  )
                  )
-               ;
-                 
-                 sequence
+                 then
                  (
-                   ifthenelse
-                   (
-                    if
+                  
+                  sequence
+                  (
+                    print_string
                     (
-                     >=
-                     (
-                         
-                          !
+                        ^
+                        (
+                            name
+                            " exiting\n"
+                        )
+                    )
+                  ;
+                    
+                    sequence
+                    (
+                      flush
+                      (
+                          stdout
+                      )
+                    ;
+                      ifthenelse
+                      (
+                       if
+                       (
+                        last
+                       )
+                       then
+                       (
+                        exit
+                        (
+                            0
+                        )
+                       )
+                       else
+                       (
+                        Thread.exit
+                        (
+                            ()
+                        )
+                       ) 
+                      )
+                      	    											 
+                    )
+                        							
+                  )
+                      							
+                 )
+                 else
+                 (
+                 )
+                )
+                    									   
+              ;
+                
+                sequence
+                (
+                  print_string
+                  (
+                      ^
+                      (
+                          name
+                          ^
                           (
-                          counter
+                              ": "
+                              ^
+                              (
+                                  string_of_int
+                                  (
+                                      
+                                       !
+                                       (
+                                       counter
+                                       )
+                                          							 
+                                  )
+                                  "\n"
+                              )
                           )
-                             							 
-                         limit
-                     )
-                    )
-                    then
+                      )
+                  )
+                ;
+                  
+                  sequence
+                  (
+                    flush
                     (
-                     beginEnd 
-                     (
-                         
-                         sequence
-                         (
-                           print_string
-                           (
-                               ^
-                               (
-                                   name
-                                   " exiting\n"
-                               )
-                           )
-                         ;
-                           
-                           sequence
-                           (
-                             flush
-                             (
-                                 stdout
-                             )
-                           ;
-                             ifthenelse
-                             (
-                              if
-                              (
-                               last
-                              )
-                              then
-                              (
-                               exit
-                               (
-                                   0
-                               )
-                              )
-                              else
-                              (
-                               Thread.exit
-                               (
-                                   ()
-                               )
-                              ) 
-                             )
-                             	    											 
-                           )
-                               							
-                         )
-                             							
-                     )
+                        stdout
                     )
-                    else
+                  ;
+                    Thread.delay
                     (
+                        0.5
                     )
-                   )
-                       									   
-                 ;
-                   
-                   sequence
-                   (
-                     print_string
-                     (
-                         ^
-                         (
-                             name
-                             ^
-                             (
-                                 ": "
-                                 ^
-                                 (
-                                     string_of_int
-                                     (
-                                         
-                                          !
-                                          (
-                                          counter
-                                          )
-                                             							 
-                                     )
-                                     "\n"
-                                 )
-                             )
-                         )
-                     )
-                   ;
-                     
-                     sequence
-                     (
-                       flush
-                       (
-                           stdout
-                       )
-                     ;
-                       Thread.delay
-                       (
-                           0.5
-                       )
-                     )
-                         							
-                   )
-                       							
-                 )
-                     							
-               )
-                   							
-           )
+                  )
+                      							
+                )
+                    							
+              )
+                  							
+            )
+                								 
+               									 
          )
              									
         )

@@ -9,24 +9,24 @@
     case
         (
     	  ()
-         whileloop 
-         (
-             true
-             
-             sequence
-             (
-               Gc.minor
-               (
-                   ()
-               )
-             ;
-               Thread.yield
-               (
-                   ()
-               )
-             )
-                 							
-         )
+         
+          while
+          true
+          
+          sequence
+          (
+            Gc.minor
+            (
+                ()
+            )
+          ;
+            Thread.yield
+            (
+                ()
+            )
+          )
+              								 
+             									 
         )
    )
        		    
@@ -40,71 +40,71 @@
     case
         (
     	  ()
-         whileloop 
-         (
-             true
-             
-             sequence
-             (
-               print_string
+         
+          while
+          true
+          
+          sequence
+          (
+            print_string
+            (
+                ">"
+            )
+          ;
+            
+            sequence
+            (
+              flush
+              (
+                  stdout
+              )
+            ;
+              
+              let
+              (
                (
-                   ">"
+                  									  
+                
+                 s
+                 read_line
+                 (
+                     ()
+                 ) 
+                							    		   
+                  									  
                )
-             ;
-               
-               sequence
-               (
-                 flush
-                 (
-                     stdout
-                 )
-               ;
-                 
-                 let
-                 (
+              in
+                
+                sequence
+                (
+                  print_string
                   (
-                     									  
-                   
-                    s
-                    read_line
+                      " >>> "
+                  )
+                ;
+                  
+                  sequence
+                  (
+                    print_string
+                    (
+                        s
+                    )
+                  ;
+                    print_newline
                     (
                         ()
-                    ) 
-                   							    		   
-                     									  
+                    )
                   )
-                 in
-                   
-                   sequence
-                   (
-                     print_string
-                     (
-                         " >>> "
-                     )
-                   ;
-                     
-                     sequence
-                     (
-                       print_string
-                       (
-                           s
-                       )
-                     ;
-                       print_newline
-                       (
-                           ()
-                       )
-                     )
-                         							
-                   )
-                       							
-                 )
-                     									
-               )
-                   							
-             )
-                 							
-         )
+                      							
+                )
+                    							
+              )
+                  									
+            )
+                							
+          )
+              								 
+             									 
         )
    )
        		    
@@ -124,35 +124,35 @@
     	  	size
     	  
     	  )
-         whileloop 
-         (
-             true
-             
-             let
+         
+          while
+          true
+          
+          let
+          (
+           (
+              									  
+            
+             buff
+             String.make
              (
-              (
-                 									  
-               
+                 size
+                 61
+             ) 
+            							    		   
+              									  
+           )
+          in
+            Unix.write
+            (
+                oc
                 buff
-                String.make
-                (
-                    size
-                    61
-                ) 
-               							    		   
-                 									  
-              )
-             in
-               Unix.write
-               (
-                   oc
-                   buff
-                   0
-                   size
-               )
-             )
-                 									
-         )
+                0
+                size
+            )
+          )
+              										 
+             									 
         )
    )
        		    
@@ -172,85 +172,82 @@
     	  	size
     	  
     	  )
-         whileloop 
-         (
-             true
-             
-             let
+         
+          while
+          true
+          
+          let
+          (
+           (
+              									  
+            
+             buff
+             String.create
              (
-              (
-                 									  
-               
-                buff
-                String.create
-                (
-                    size
-                ) 
-               							    		   
-                 									  
-              )
-             in
-               
-               let
+                 size
+             ) 
+            							    		   
+              									  
+           )
+          in
+            
+            let
+            (
+             (
+                									  
+              
+               n
+               Unix.read
                (
-                (
-                   									  
-                 
-                  n
-                  Unix.read
-                  (
-                      ic
-                      buff
-                      0
-                      size
-                  ) 
-                 							    		   
-                   									  
-                )
-               in
-                 forloop 
-                 (
-                     i
-                     0
-                     <>
-                     -
-                     (
-                         n
-                         1
-                     )
-                     ifthenelse
-                     (
-                      if
-                      (
-                       <>
-                       (
-                           Array.get
-                           (
-                            buff
-                            i
-                           )
-                               													
-                           61
-                       )
-                      )
-                      then
-                      (
-                       prerr_endline
-                       (
-                           "error in reader_thread"
-                       )
-                      )
-                      else
-                      (
-                      )
-                     )
-                         									   
-                 )
-               )
-                   									
+                   ic
+                   buff
+                   0
+                   size
+               ) 
+              							    		   
+                									  
              )
-                 									
-         )
+            in
+               for i
+               0
+               -
+               (
+                   n
+                   1
+               )
+               ifthenelse
+               (
+                if
+                (
+                 <>
+                 (
+                     String.get
+                     (
+                      buff
+                      i
+                     )
+                     												
+                     61
+                 )
+                )
+                then
+                (
+                 prerr_endline
+                 (
+                     "error in reader_thread"
+                 )
+                )
+                else
+                (
+                )
+               )
+                   									   
+                  														  
+            )
+                									
+          )
+              										 
+             									 
         )
    )
        		    

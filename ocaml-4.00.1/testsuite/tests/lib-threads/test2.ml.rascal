@@ -20,56 +20,53 @@
     case
         (
     	  c
-         forloop 
-         (
-             i
-             1
-             <>
-             10000
-             
-             sequence
-             (
-               print_char
+          for i
+          1
+          10000
+          
+          sequence
+          (
+            print_char
+            (
+                c
+            )
+          ;
+            
+            sequence
+            (
+              flush
+              (
+                  stdout
+              )
+            ;
+              ifthenelse
+              (
+               if
                (
-                   c
+                
+                 !
+                 (
+                 yield
+                 )
+                    							 
                )
-             ;
-               
-               sequence
+               then
                (
-                 flush
-                 (
-                     stdout
-                 )
-               ;
-                 ifthenelse
-                 (
-                  if
-                  (
-                   
-                    !
-                    (
-                    yield
-                    )
-                       							 
-                  )
-                  then
-                  (
-                   Thread.yield
-                   (
-                       ()
-                   )
-                  )
-                  else
-                  (
-                  )
-                 )
-                     									   
+                Thread.yield
+                (
+                    ()
+                )
                )
-                   							
-             )
-                 							
-         )
+               else
+               (
+               )
+              )
+                  									   
+            )
+                							
+          )
+              							
+             														  
         )
    )
        		    
