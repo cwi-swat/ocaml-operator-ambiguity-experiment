@@ -1,104 +1,115 @@
-
+toplevels 
 (
-    								 
-  let
-  (
-   
-    ()
     
-    sequence
+    let
     (
-      Api.reg_mod
-      (
-          "Plugin_thread"
-      )
-    ;
+     
+      ()
       
-      let
+      sequence
       (
-       (
-          									  
+        Api.reg_mod
+        (
+            "Plugin_thread"
+        )
+      ;
         
-         _t
-         Thread.create
+        let
+        (
          (
-             (
-              
-              case
-              (
-              ()
-              
-               for i
-               1
-               5
-               
-               sequence
+            									  
+          
+           _t
+           Thread.create
+           (
                (
-                 print_endline
-                 (
-                     "Thread"
-                 )
-               ;
-                 
-                 sequence
-                 (
-                   flush
-                   (
-                       stdout
-                   )
-                 ;
-                   Thread.delay
-                   (
-                       1.
-                   )
-                 )
-                     							
+                
+                case
+                (
+                ()
+                
+                forloop 
+                (
+                    i
+                    1
+                    <>
+                    5
+                    
+                    sequence
+                    (
+                      print_endline
+                      (
+                          "Thread"
+                      )
+                    ;
+                      
+                      sequence
+                      (
+                        flush
+                        (
+                            stdout
+                        )
+                      ;
+                        semicolon 
+                        (
+                            Thread.delay
+                            (
+                                1.
+                            )
+                        )
+                      )
+                          							
+                    )
+                        							
+                )
+                )
+                													 
                )
-                   							
-                  														  
-              )
-              													 
-             )
-                						  
-             ()
-         ) 
-        							    		   
-          									  
-       )
-      in
-         for i
-         1
-         10
-         
-         sequence
-         (
-           print_endline
-           (
-               "Thread"
-           )
-         ;
-           
-           sequence
-           (
-             flush
-             (
-                 stdout
-             )
-           ;
-             Thread.delay
-             (
-                 0.50
-             )
-           )
-               							
+                  						  
+               ()
+           ) 
+          							    		   
+            									  
          )
-             							
-            														  
+        in
+          forloop 
+          (
+              i
+              1
+              <>
+              10
+              
+              sequence
+              (
+                print_endline
+                (
+                    "Thread"
+                )
+              ;
+                
+                sequence
+                (
+                  flush
+                  (
+                      stdout
+                  )
+                ;
+                  semicolon 
+                  (
+                      Thread.delay
+                      (
+                          0.50
+                      )
+                  )
+                )
+                    							
+              )
+                  							
+          )
+        )
+            									
       )
-          									
+          							 
+     							    		    
     )
-        							 
-   							    		    
-  )
-                                     
 )

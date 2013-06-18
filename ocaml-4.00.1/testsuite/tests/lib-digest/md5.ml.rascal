@@ -1,0 +1,224 @@
+toplevels 
+(
+    
+    
+     
+     
+     sequence
+     (
+       ifthenelse
+       (
+        if
+        (
+         &&
+         (
+             test
+             (
+                 ""
+             )
+             &&
+             (
+                 test
+                 (
+                     "a"
+                 )
+                 &&
+                 (
+                     test
+                     (
+                         "abc"
+                     )
+                     &&
+                     (
+                         test
+                         (
+                             "message digest"
+                         )
+                         test
+                         (
+                             "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                         )
+                     )
+                 )
+             )
+         )
+        )
+        then
+        (
+         printf
+         (
+             "Test vectors passed.\n"
+         )
+        )
+        else
+        (
+        )
+       )
+           									   
+     ;
+       
+       sequence
+       (
+         flush
+         (
+             stdout
+         )
+       ;
+         ifthenelse
+         (
+          if
+          (
+           &&
+           (
+               >
+               (
+                   Array.length
+                   (
+                       Sys.argv
+                   )
+                   1
+               )
+               =
+               (
+                   Array.get
+                   (
+                    Sys.argv
+                    1
+                   )
+                       													
+                   "-benchmark"
+               )
+           )
+          )
+          then
+          (
+           beginEnd 
+           (
+               
+               let
+               (
+                (
+                   									  
+                 
+                  s
+                  String.make
+                  (
+                      50000
+                      61
+                  ) 
+                 							    		   
+                   									  
+                )
+               in
+                 
+                 let
+                 (
+                  (
+                     									  
+                   
+                    num_iter
+                    1000 
+                   							    		   
+                     									  
+                  )
+                 in
+                   
+                   sequence
+                   (
+                     time
+                     (
+                         "OCaml implementation"
+                         num_iter
+                         (
+                          
+                          case
+                          (
+                          ()
+                          
+                          
+                          let
+                          (
+                           (
+                              									  
+                            
+                             ctx
+                             init
+                             (
+                                 ()
+                             ) 
+                            							    		   
+                              									  
+                           )
+                          in
+                            
+                            sequence
+                            (
+                              update
+                              (
+                                  ctx
+                                  s
+                                  0
+                                  String.length
+                                  (
+                                      s
+                                  )
+                              )
+                            ;
+                              ignore
+                              (
+                                  finish
+                                  (
+                                      ctx
+                                  )
+                              )
+                            )
+                                							
+                          )
+                              									
+                          )
+                          													 
+                         )
+                            						  
+                     )
+                   ;
+                     time
+                     (
+                         "C implementation"
+                         num_iter
+                         (
+                          
+                          case
+                          (
+                          ()
+                          
+                          ignore
+                          (
+                              Digest.string
+                              (
+                                  s
+                              )
+                          )
+                          )
+                          													 
+                         )
+                            						  
+                     )
+                   )
+                       							
+                 )
+                     									
+               )
+                   									
+           )
+          )
+          else
+          (
+          )
+         )
+             									   
+       )
+           							
+     )
+         							 
+    							    		    
+)

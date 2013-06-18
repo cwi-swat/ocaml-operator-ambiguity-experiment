@@ -1,73 +1,72 @@
-
+toplevels 
 (
-    								 
-  let
-  (
-   
-    ()
     
-    sequence
+    let
     (
-      Api.reg_mod
-      (
-          "Plugin2"
-      )
-    ;
+     
+      ()
       
       sequence
       (
-        Api.add_cb
+        Api.reg_mod
         (
-            (
-             
-             case
-             (
-             ()
-             
-             print_endline
-             (
-                 "Callback from plugin2"
-             )
-             )
-             													 
-            )
-               						  
+            "Plugin2"
         )
       ;
         
         sequence
         (
-          List.iter
+          Api.add_cb
           (
               (
                
                case
                (
-               i
+               ()
                
-               Printf.printf
+               print_endline
                (
-                   "%i\n"
-                   i
+                   "Callback from plugin2"
                )
                )
                													 
               )
                  						  
-              Plugin.facts
           )
         ;
-          Printf.printf
+          
+          sequence
           (
-              "XXX\n"
+            List.iter
+            (
+                (
+                 
+                 case
+                 (
+                 i
+                 
+                 Printf.printf
+                 (
+                     "%i\n"
+                     i
+                 )
+                 )
+                 													 
+                )
+                   						  
+                Plugin.facts
+            )
+          ;
+            Printf.printf
+            (
+                "XXX\n"
+            )
           )
+              							
         )
             							
       )
-          							
+          							 
+     							    		    
     )
-        							 
-   							    		    
-  )
-                                     
 )

@@ -1,71 +1,70 @@
-
+toplevels 
 (
-    								 
-  let
-  (
-   
-    test
     
     let
     (
-     (
-        									  
+     
+      test
       
-       x
-       
-       array
-       (
-          							  
-        y
-          							  
-        y
-          							  
-       )
-          							   
-      							    		   
-        									  
-      
-       y
-       1. 
-      							    		   
-        									  
-     )
-    in
-      
-      sequence
+      let
       (
-        assert =
-        (
-            x
-            
-            array
-            (
-               							  
-             1.
-               							  
-             1.
-               							  
-            )
-               							  
-        )
-      ;
+       (
+          									  
+        
+         x
+         
+         array
+         (
+            							  
+          y
+            							  
+          y
+            							  
+         )
+            							   
+        							    		   
+          									  
+        
+         y
+         1. 
+        							    		   
+          									  
+       )
+      in
         
         sequence
         (
           assert =
           (
-              y
-              1.
+              x
+              
+              array
+              (
+                 							  
+               1.
+                 							  
+               1.
+                 							  
+              )
+                 							  
           )
         ;
-          ()
+          
+          sequence
+          (
+            assert =
+            (
+                y
+                1.
+            )
+          ;
+            ()
+          )
+              							
         )
             							
       )
-          							
+          									 
+     							    		    
     )
-        									 
-   							    		    
-  )
-                                     
 )

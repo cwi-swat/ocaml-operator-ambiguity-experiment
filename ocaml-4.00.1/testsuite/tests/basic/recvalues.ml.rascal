@@ -219,77 +219,83 @@ toplevels
                   
                   sequence
                   (
-                     for i
-                     0
-                     50000
-                     ignore
-                     (
-                         ref
-                         (
-                             0
-                         )
-                     )
-                        														  
-                  ;
-                    ifthenelse
+                    forloop 
                     (
-                     if
-                     (
-                      match
-                      z
-                      (
-                      
-                      case
-                      (
-                        
-                        ::
+                        i
+                        0
+                        <>
+                        50000
+                        ignore
                         (
-                            
+                            ref
                             (
-                             1
-                                 						 
-                            	2
-                            
+                                0
                             )
-                            z'
                         )
-                        
-                        ==
-                        (
-                            z
-                            z'
-                        )
-                      ) 
-                      	        											 
-                        
-                        case
-                        (
-                         _
-                         
-                         false
-                        )
-                        													    
-                      	        											 
-                      	        											 
-                      )
-                      			   
-                     )
-                     then
-                     (
-                      print_string
-                      (
-                          "Test 3: passed\n"
-                      )
-                     )
-                     else
-                     (
-                      print_string
-                      (
-                          "Test 3: FAILED\n"
-                      )
-                     ) 
                     )
-                        											 
+                  ;
+                    semicolon 
+                    (
+                        ifthenelse
+                        (
+                         if
+                         (
+                          match
+                          z
+                          (
+                          
+                          case
+                          (
+                            
+                            ::
+                            (
+                                
+                                (
+                                 1
+                                     						 
+                                	2
+                                
+                                )
+                                z'
+                            )
+                            
+                            ==
+                            (
+                                z
+                                z'
+                            )
+                          ) 
+                          	        											 
+                            
+                            case
+                            (
+                             _
+                             
+                             false
+                            )
+                            													    
+                          	        											 
+                          	        											 
+                          )
+                          			   
+                         )
+                         then
+                         (
+                          print_string
+                          (
+                              "Test 3: passed\n"
+                          )
+                         )
+                         else
+                         (
+                          print_string
+                          (
+                              "Test 3: FAILED\n"
+                          )
+                         ) 
+                        )
+                        	    											 
+                    )
                   )
                       							
                 )

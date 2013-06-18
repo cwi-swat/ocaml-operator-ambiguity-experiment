@@ -21,11 +21,11 @@ generate(#start[Program]);
 import Tests;
 */
 public void run() {	 
-	files = readFileLines(|file:///Users/ali/sle2013/toplevels.txt|);
+	files = readFileLines(|file:///ufs/hills/project/rascal/ocaml-operator-ambiguity-experiment/all_files.txt|);
 	for (f <- files) {
 		print(f + "...");
 		try {
-			tree = jparse(#start[TopLevel], readFile(|file:///Users/ali/sle2013| + f));
+			tree = jparse(#start[TopLevel], readFile(|file:///ufs/hills/project/rascal/ocaml-operator-ambiguity-experiment/| + f));
 			
 			if (/amb(_) := tree) {
 				tree = filterOCaml(tree);
@@ -36,7 +36,7 @@ public void run() {
 			} 
 		
 			s = printAST(tree);
-   			writeFile(|file:///Users/ali/sle2013/| + (f + ".rascal"), s);
+   			writeFile(|file:///ufs/hills/project/rascal/ocaml-operator-ambiguity-experiment| + (f + ".rascal"), s);
 			println("OK");
 		}
 		catch ParseError(el) : {

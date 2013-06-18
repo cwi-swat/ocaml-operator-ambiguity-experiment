@@ -1,144 +1,73 @@
-
+toplevels 
 (
-    							  
-  
-      									 
-   open Testing
-      									 
-      									 
-                                 
-  
-      									 
-   open Buffer
-      									 
-      									 
-                                 
-  
-      									 
-   let
-   (
     
-     identity
-    (
-     case
-         (
-     	  s
-          s
-         )
-    )
-        		    
-   )
-      									 
-      									 
-                                 
-  
-      									 
-   let
-   (
+        									 
+     open Testing
+        									 
+        									 
     
-     b
-     Buffer.create
+        									 
+     open Buffer
+        									 
+        									 
+    
+        									 
+     let
      (
-         100
-     ) 
-    							    		    
-   )
-      									 
-      									 
-                                 
-  
-  let
-  (
-   (
-      									  
-    
-     pat0
-     "\\\\a" 
-    							    		   
-      									  
-   )
-  in
-    
-    let
-    (
-     (
-        									  
       
-       n0
-       String.length
-       (
-           pat0
-       ) 
-      							    		   
-        									  
-     )
-    in
-      
-      sequence
+       identity
       (
-        Buffer.add_substitute
-        (
-            b
-            identity
-            pat0
-        )
-      ;
-        test
-        (
-            =
-            (
-                String.length
-                (
-                    Buffer.contents
-                    (
-                        b
-                    )
-                )
-                n0
-            )
-        )
+       case
+           (
+       	  s
+            s
+           )
       )
-          							
-    )
-        									
-  )
-      									
-                                 
-  
-  let
-  (
-   (
-      									  
+          		    
+     )
+        									 
+        									 
     
-     pat1
-     "b\\" 
-    							    		   
-      									  
-   )
-  in
+        									 
+     let
+     (
+      
+       b
+       Buffer.create
+       (
+           100
+       ) 
+      							    		    
+     )
+        									 
+        									 
     
     let
     (
      (
         									  
       
-       n1
-       String.length
-       (
-           pat1
-       ) 
+       pat0
+       "\\\\a" 
       							    		   
         									  
      )
     in
       
-      sequence
+      let
       (
-        Buffer.clear
-        (
-            b
-        )
-      ;
+       (
+          									  
+        
+         n0
+         String.length
+         (
+             pat0
+         ) 
+        							    		   
+          									  
+       )
+      in
         
         sequence
         (
@@ -146,7 +75,7 @@
           (
               b
               identity
-              pat1
+              pat0
           )
         ;
           test
@@ -160,16 +89,81 @@
                           b
                       )
                   )
-                  n1
+                  n0
               )
           )
         )
             							
       )
-          							
+          									
     )
         									
-  )
-      									
-                                 
+    
+    let
+    (
+     (
+        									  
+      
+       pat1
+       "b\\" 
+      							    		   
+        									  
+     )
+    in
+      
+      let
+      (
+       (
+          									  
+        
+         n1
+         String.length
+         (
+             pat1
+         ) 
+        							    		   
+          									  
+       )
+      in
+        
+        sequence
+        (
+          Buffer.clear
+          (
+              b
+          )
+        ;
+          
+          sequence
+          (
+            Buffer.add_substitute
+            (
+                b
+                identity
+                pat1
+            )
+          ;
+            test
+            (
+                =
+                (
+                    String.length
+                    (
+                        Buffer.contents
+                        (
+                            b
+                        )
+                    )
+                    n1
+                )
+            )
+          )
+              							
+        )
+            							
+      )
+          									
+    )
+        									
+    
 )

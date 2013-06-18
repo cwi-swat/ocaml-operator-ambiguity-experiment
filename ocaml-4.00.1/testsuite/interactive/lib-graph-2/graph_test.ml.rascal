@@ -51,49 +51,55 @@ toplevels
        case
            (
        	  y
-             for i
-             1
-             100
-             
-             sequence
-             (
-               plot
-               (
-                   y
-                   *
-                   (
-                       2
-                       i
-                   )
-               )
-             ;
-               
-               sequence
-               (
-                 plot
-                 (
-                     y
-                     *
-                     (
-                         3
-                         i
-                     )
-                 )
-               ;
-                 plot
-                 (
-                     y
-                     *
-                     (
-                         4
-                         i
-                     )
-                 )
-               )
-                   							
-             )
-                 							
-                														  
+            forloop 
+            (
+                i
+                1
+                <>
+                100
+                
+                sequence
+                (
+                  plot
+                  (
+                      y
+                      *
+                      (
+                          2
+                          i
+                      )
+                  )
+                ;
+                  
+                  sequence
+                  (
+                    plot
+                    (
+                        y
+                        *
+                        (
+                            3
+                            i
+                        )
+                    )
+                  ;
+                    semicolon 
+                    (
+                        plot
+                        (
+                            y
+                            *
+                            (
+                                4
+                                i
+                            )
+                        )
+                    )
+                  )
+                      							
+                )
+                    							
+            )
            )
       )
           		    
@@ -213,60 +219,63 @@ toplevels
      )
         									 
         									 
-     for i
-     1
-     10
-     
-     sequence
-     (
-       moveto
-       (
-           *
-           (
-               10
-               i
-           )
-           *
-           (
-               10
-               i
-           )
-       )
-     ;
-       
-       sequence
-       (
-         set_color
-         (
-             rgb
-             (
-                 +
-                 (
-                     155
-                     *
-                     (
-                         10
-                         i
-                     )
-                 )
-                 0
-                 0
-             )
-         )
-       ;
-         carre
-         (
-             *
-             (
-                 10
-                 i
-             )
-         )
-       )
-           							
-     )
-         							
-        														  
+    forloop 
+    (
+        i
+        1
+        <>
+        10
+        
+        sequence
+        (
+          moveto
+          (
+              *
+              (
+                  10
+                  i
+              )
+              *
+              (
+                  10
+                  i
+              )
+          )
+        ;
+          
+          sequence
+          (
+            set_color
+            (
+                rgb
+                (
+                    +
+                    (
+                        155
+                        *
+                        (
+                            10
+                            i
+                        )
+                    )
+                    0
+                    0
+                )
+            )
+          ;
+            carre
+            (
+                *
+                (
+                    10
+                    i
+                )
+            )
+          )
+              							
+        )
+            							
+    )
     moveto
     (
         10
@@ -280,18 +289,21 @@ toplevels
     (
         1
     )
-     for i
-     1
-     10
-     carre
-     (
-         *
-         (
-             10
-             i
-         )
-     )
-        														  
+    forloop 
+    (
+        i
+        1
+        <>
+        10
+        carre
+        (
+            *
+            (
+                10
+                i
+            )
+        )
+    )
     rmoveto
     (
         0
@@ -901,44 +913,8 @@ toplevels
                )
                then
                (
-                
-                let
+                beginEnd 
                 (
-                 (
-                    									  
-                  
-                   
-                   (
-                    x0
-                        						 
-                   	y0
-                   
-                   )
-                   current_point
-                   (
-                       ()
-                   ) 
-                  							    		   
-                    									  
-                 )
-                in
-                  
-                  let
-                  (
-                   (
-                      									  
-                    
-                     p0
-                     Array.get
-                     (
-                      v
-                      0
-                     )
-                         													 
-                    							    		   
-                      									  
-                   )
-                  in
                     
                     let
                     (
@@ -947,93 +923,135 @@ toplevels
                       
                        
                        (
-                        x
+                        x0
                             						 
-                       	y
+                       	y0
                        
                        )
-                       p0 
+                       current_point
+                       (
+                           ()
+                       ) 
                       							    		   
                         									  
                      )
                     in
                       
-                      sequence
+                      let
                       (
-                        moveto
-                        (
-                            x
-                            y
-                        )
-                      ;
+                       (
+                          									  
                         
-                        sequence
+                         p0
+                         Array.get
+                         (
+                          v
+                          0
+                         )
+                             													 
+                        							    		   
+                          									  
+                       )
+                      in
+                        
+                        let
                         (
-                           for i
-                           1
-                           -
-                           (
-                               l
-                               1
-                           )
+                         (
+                            									  
+                          
                            
-                           let
                            (
-                            (
-                               									  
-                             
-                              
-                              (
-                               x
-                                   						 
-                              	y
-                              
-                              )
-                              Array.get
-                              (
-                               v
-                               i
-                              )
-                                  													 
-                             							    		   
-                               									  
-                            )
-                           in
-                             lineto
-                             (
-                                 x
-                                 y
-                             )
+                            x
+                                						 
+                           	y
+                           
                            )
-                               									
-                              														  
-                        ;
+                           p0 
+                          							    		   
+                            									  
+                         )
+                        in
                           
                           sequence
                           (
-                            lineto
+                            moveto
                             (
                                 x
                                 y
                             )
                           ;
-                            moveto
+                            
+                            sequence
                             (
-                                x0
-                                y0
+                              forloop 
+                              (
+                                  i
+                                  1
+                                  <>
+                                  -
+                                  (
+                                      l
+                                      1
+                                  )
+                                  
+                                  let
+                                  (
+                                   (
+                                      									  
+                                    
+                                     
+                                     (
+                                      x
+                                          						 
+                                     	y
+                                     
+                                     )
+                                     Array.get
+                                     (
+                                      v
+                                      i
+                                     )
+                                         													 
+                                    							    		   
+                                      									  
+                                   )
+                                  in
+                                    lineto
+                                    (
+                                        x
+                                        y
+                                    )
+                                  )
+                                      									
+                              )
+                            ;
+                              
+                              sequence
+                              (
+                                lineto
+                                (
+                                    x
+                                    y
+                                )
+                              ;
+                                moveto
+                                (
+                                    x0
+                                    y0
+                                )
+                              )
+                                  							
                             )
+                                							
                           )
                               							
                         )
-                            							
+                            									
                       )
-                          							
+                          									
                     )
                         									
-                  )
-                      									
                 )
-                    									
                )
                else
                (
@@ -1531,61 +1549,67 @@ toplevels
         		  		  		          									  
         		  		  		       )
         		  		  		      in
-        		  		  		         for i
-        		  		  		         0
-        		  		  		         /
-        		  		  		         (
-        		  		  		             -
-        		  		  		             (
-        		  		  		                 r1
-        		  		  		                 step
-        		  		  		             )
-        		  		  		             *
-        		  		  		             (
-        		  		  		                 2
-        		  		  		                 step
-        		  		  		             )
-        		  		  		         )
-        		  		  		          for j
-        		  		  		          0
-        		  		  		          /
-        		  		  		          (
-        		  		  		              -
-        		  		  		              (
-        		  		  		                  r2
-        		  		  		                  step
-        		  		  		              )
-        		  		  		              *
-        		  		  		              (
-        		  		  		                  2
-        		  		  		                  step
-        		  		  		              )
-        		  		  		          )
-        		  		  		          draw_arc_ellipse
-        		  		  		          (
-        		  		  		              x
-        		  		  		              y
-        		  		  		              *
-        		  		  		              (
-        		  		  		                  *
-        		  		  		                  (
-        		  		  		                      3
-        		  		  		                      i
-        		  		  		                  )
-        		  		  		                  step
-        		  		  		              )
-        		  		  		              *
-        		  		  		              (
-        		  		  		                  *
-        		  		  		                  (
-        		  		  		                      3
-        		  		  		                      j
-        		  		  		                  )
-        		  		  		                  step
-        		  		  		              )
-        		  		  		          )
-        		  		  		             														  
-        		  		  		            														  
+        		  		  		        forloop 
+        		  		  		        (
+        		  		  		            i
+        		  		  		            0
+        		  		  		            <>
+        		  		  		            /
+        		  		  		            (
+        		  		  		                -
+        		  		  		                (
+        		  		  		                    r1
+        		  		  		                    step
+        		  		  		                )
+        		  		  		                *
+        		  		  		                (
+        		  		  		                    2
+        		  		  		                    step
+        		  		  		                )
+        		  		  		            )
+        		  		  		            forloop 
+        		  		  		            (
+        		  		  		                j
+        		  		  		                0
+        		  		  		                <>
+        		  		  		                /
+        		  		  		                (
+        		  		  		                    -
+        		  		  		                    (
+        		  		  		                        r2
+        		  		  		                        step
+        		  		  		                    )
+        		  		  		                    *
+        		  		  		                    (
+        		  		  		                        2
+        		  		  		                        step
+        		  		  		                    )
+        		  		  		                )
+        		  		  		                draw_arc_ellipse
+        		  		  		                (
+        		  		  		                    x
+        		  		  		                    y
+        		  		  		                    *
+        		  		  		                    (
+        		  		  		                        *
+        		  		  		                        (
+        		  		  		                            3
+        		  		  		                            i
+        		  		  		                        )
+        		  		  		                        step
+        		  		  		                    )
+        		  		  		                    *
+        		  		  		                    (
+        		  		  		                        *
+        		  		  		                        (
+        		  		  		                            3
+        		  		  		                            j
+        		  		  		                        )
+        		  		  		                        step
+        		  		  		                    )
+        		  		  		                )
+        		  		  		            )
+        		  		  		        )
         		  		  		      )
         		  		  		          									
         		  		  		     )
@@ -1835,68 +1859,74 @@ toplevels
         		  		  		              									  
         		  		  		           )
         		  		  		          in
-        		  		  		             for i
-        		  		  		             /
-        		  		  		             (
-        		  		  		                 r1
-        		  		  		                 *
-        		  		  		                 (
-        		  		  		                     2
-        		  		  		                     step
-        		  		  		                 )
-        		  		  		             )
-        		  		  		             10
-        		  		  		              for j
-        		  		  		              /
-        		  		  		              (
-        		  		  		                  r2
-        		  		  		                  *
-        		  		  		                  (
-        		  		  		                      2
-        		  		  		                      step
-        		  		  		                  )
-        		  		  		              )
-        		  		  		              30
-        		  		  		              
-        		  		  		              sequence
-        		  		  		              (
-        		  		  		                exchange
+        		  		  		            forloop 
+        		  		  		            (
+        		  		  		                i
+        		  		  		                /
         		  		  		                (
-        		  		  		                    c1
-        		  		  		                    c2
-        		  		  		                )
-        		  		  		              ;
-        		  		  		                fill_arc_ellipse
-        		  		  		                (
-        		  		  		                    x
-        		  		  		                    y
+        		  		  		                    r1
         		  		  		                    *
         		  		  		                    (
-        		  		  		                        3
-        		  		  		                        i
+        		  		  		                        2
+        		  		  		                        step
         		  		  		                    )
-        		  		  		                    *
-        		  		  		                    (
-        		  		  		                        3
-        		  		  		                        j
-        		  		  		                    )
-        		  		  		                    
-        		  		  		                     !
-        		  		  		                     (
-        		  		  		                     c1
-        		  		  		                     )
-        		  		  		                        							 
-        		  		  		                    
-        		  		  		                     !
-        		  		  		                     (
-        		  		  		                     c2
-        		  		  		                     )
-        		  		  		                        							 
         		  		  		                )
-        		  		  		              )
-        		  		  		                  							
-        		  		  		                 														  
-        		  		  		                														  
+        		  		  		                <>
+        		  		  		                10
+        		  		  		                forloop 
+        		  		  		                (
+        		  		  		                    j
+        		  		  		                    /
+        		  		  		                    (
+        		  		  		                        r2
+        		  		  		                        *
+        		  		  		                        (
+        		  		  		                            2
+        		  		  		                            step
+        		  		  		                        )
+        		  		  		                    )
+        		  		  		                    <>
+        		  		  		                    30
+        		  		  		                    
+        		  		  		                    sequence
+        		  		  		                    (
+        		  		  		                      exchange
+        		  		  		                      (
+        		  		  		                          c1
+        		  		  		                          c2
+        		  		  		                      )
+        		  		  		                    ;
+        		  		  		                      fill_arc_ellipse
+        		  		  		                      (
+        		  		  		                          x
+        		  		  		                          y
+        		  		  		                          *
+        		  		  		                          (
+        		  		  		                              3
+        		  		  		                              i
+        		  		  		                          )
+        		  		  		                          *
+        		  		  		                          (
+        		  		  		                              3
+        		  		  		                              j
+        		  		  		                          )
+        		  		  		                          
+        		  		  		                           !
+        		  		  		                           (
+        		  		  		                           c1
+        		  		  		                           )
+        		  		  		                              							 
+        		  		  		                          
+        		  		  		                           !
+        		  		  		                           (
+        		  		  		                           c2
+        		  		  		                           )
+        		  		  		                              							 
+        		  		  		                      )
+        		  		  		                    )
+        		  		  		                        							
+        		  		  		                )
+        		  		  		            )
         		  		  		          )
         		  		  		              									
         		  		  		        )

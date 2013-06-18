@@ -1,45 +1,44 @@
-
+toplevels 
 (
-    								 
-  let
-  (
-   
-    ()
     
-    try
-    raise
+    let
     (
-        
-         Invalid_argument
-         "X"
-            								 
-    )
-    (
-    
-    case
-    (
+     
+      ()
       
-      Invalid_argument
-      s
-      									  
-      
+      try
       raise
       (
           
            Invalid_argument
-           ^
-           (
-               s
-               s
-           )
+           "X"
               								 
       )
-    ) 
-    	        											 
-    	        											 
+      (
+      
+      case
+      (
+        
+        Invalid_argument
+        s
+        									  
+        
+        raise
+        (
+            
+             Invalid_argument
+             ^
+             (
+                 s
+                 s
+             )
+                								 
+        )
+      ) 
+      	        											 
+      	        											 
+      )
+          							    
+     							    		    
     )
-        							    
-   							    		    
-  )
-                                     
 )

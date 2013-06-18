@@ -1,113 +1,112 @@
-
+toplevels 
 (
-    								 
-  class
-  (
-      								   
-    params = 
+    
+    class
     (
-        	
+        								   
+      params = 
+      (
+          	
+      )
+      class name = test
+      class expr = 
+                  letClass 
+                  (
+                      
+                      
+                       f
+                       
+                       sequence
+                       (
+                         print_endline
+                         (
+                             "f"
+                         )
+                       ;
+                         (
+                          
+                          case
+                          (
+                          x
+                          
+                          g
+                          (
+                              x
+                          )
+                          )
+                          													 
+                         )
+                            						  
+                       )
+                           							 
+                      							    		   
+                      
+                       g
+                       
+                       sequence
+                       (
+                         print_endline
+                         (
+                             "g"
+                         )
+                       ;
+                         (
+                          
+                          case
+                          (
+                          x
+                          
+                          f
+                          (
+                              x
+                          )
+                          )
+                          													 
+                         )
+                            						  
+                       )
+                           							 
+                      							    		   
+                      class_structure
+                      (
+                          								
+                         method2 
+                         (
+                             
+                             f
+                             poly
+                             ' a
+                                									' b
+                                									
+                             arrow
+                             a
+                             b
+                                								   
+                                									
+                             f
+                         )
+                          								
+                         method2 
+                         (
+                             
+                             g
+                             poly
+                             ' a
+                                									' b
+                                									
+                             arrow
+                             a
+                             b
+                                								   
+                                									
+                             g
+                         )
+                          								
+                      )
+                          								
+                  )
+          	
+        								   
     )
-    class name = test
-    class expr = 
-                letClass 
-                (
-                    
-                    
-                     f
-                     
-                     sequence
-                     (
-                       print_endline
-                       (
-                           "f"
-                       )
-                     ;
-                       (
-                        
-                        case
-                        (
-                        x
-                        
-                        g
-                        (
-                            x
-                        )
-                        )
-                        													 
-                       )
-                          						  
-                     )
-                         							 
-                    							    		   
-                    
-                     g
-                     
-                     sequence
-                     (
-                       print_endline
-                       (
-                           "g"
-                       )
-                     ;
-                       (
-                        
-                        case
-                        (
-                        x
-                        
-                        f
-                        (
-                            x
-                        )
-                        )
-                        													 
-                       )
-                          						  
-                     )
-                         							 
-                    							    		   
-                    class_structure
-                    (
-                        								
-                       method2 
-                       (
-                           
-                           f
-                           poly
-                           ' a
-                              									' b
-                              									
-                           arrow
-                           a
-                           b
-                              								   
-                              									
-                           f
-                       )
-                        								
-                       method2 
-                       (
-                           
-                           g
-                           poly
-                           ' a
-                              									' b
-                              									
-                           arrow
-                           a
-                           b
-                              								   
-                              									
-                           g
-                       )
-                        								
-                    )
-                        								
-                )
-        	
-      								   
-  )
-      								   
-                                     
+        								   
 )

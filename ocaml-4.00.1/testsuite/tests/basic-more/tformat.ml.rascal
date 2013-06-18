@@ -1,106 +1,102 @@
-
+toplevels 
 (
-    							  
-  
-      									 
-   open Testing
-      									 
-      									 
-                                 
-  
-      									 
-   open Format
-      									 
-      									 
-                                 
-  
-      									 
-   let
-   (
     
-     test0
-    (
-     case
-         (
-     	  ()
-          
-          let
-          (
+        									 
+     open Testing
+        									 
+        									 
+    
+        									 
+     open Format
+        									 
+        									 
+    
+        									 
+     let
+     (
+      
+       test0
+      (
+       case
            (
-              									  
-            
-             b
-             Buffer.create
-             (
-                 10
-             ) 
-            							    		   
-              									  
-           )
-          in
+       	  ()
             
             let
             (
              (
                 									  
               
-               msg
-               "Hello world!" 
+               b
+               Buffer.create
+               (
+                   10
+               ) 
               							    		   
                 									  
              )
             in
               
-              sequence
+              let
               (
-                Format.bprintf
-                (
-                    b
-                    "%s"
-                    msg
-                )
-              ;
+               (
+                  									  
                 
-                let
+                 msg
+                 "Hello world!" 
+                							    		   
+                  									  
+               )
+              in
+                
+                sequence
                 (
-                 (
-                    									  
-                  
-                   s
-                   Buffer.contents
-                   (
-                       b
-                   ) 
-                  							    		   
-                    									  
-                 )
-                in
-                  =
+                  Format.bprintf
                   (
-                      s
+                      b
+                      "%s"
                       msg
                   )
+                ;
+                  
+                  let
+                  (
+                   (
+                      									  
+                    
+                     s
+                     Buffer.contents
+                     (
+                         b
+                     ) 
+                    							    		   
+                      									  
+                   )
+                  in
+                    =
+                    (
+                        s
+                        msg
+                    )
+                  )
+                      									
                 )
-                    									
+                    							
               )
-                  							
+                  									
             )
                 									
-          )
-              									
-         )
-    )
-        		    
-   )
-      									 
-      									 
-                                 
-  test
-  (
-      test0
-      (
-          ()
+           )
       )
-  )
-                                 
+          		    
+     )
+        									 
+        									 
+    test
+    (
+        test0
+        (
+            ()
+        )
+    )
+    
 )

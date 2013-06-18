@@ -1,81 +1,80 @@
-
+toplevels 
 (
-    								 
-  let
-  (
-   
-    test
     
     let
     (
-     (
-        									  
+     
+      test
       
-       x
-       A
+      let
+      (
        (
-           f
-       ) 
-      							    		   
-        									  
-      
-       f
-       (
+          									  
         
-        case
-        (
-          0
-          
-          2
-        ) 
-        	        											 
+         x
+         A
+         (
+             f
+         ) 
+        							    		   
+          									  
+        
+         f
+         (
           
           case
           (
-           n
-           
-           match
-           x
-           (
-           
-           case
-           (
-             tagNamePattern 
-             (
-                 A
-                 g
-             )
+            0
+            
+            2
+          ) 
+          	        											 
+            
+            case
+            (
+             n
              
-             g
+             match
+             x
              (
-                 0
+             
+             case
+             (
+               tagNamePattern 
+               (
+                   A
+                   g
+               )
+               
+               g
+               (
+                   0
+               )
+             ) 
+             	        											 
+             	        											 
              )
-           ) 
-           	        											 
-           	        											 
-           )
-           			   
-          )
-          													    
-        	        											 
-        	        											 
+             			   
+            )
+            													    
+          	        											 
+          	        											 
+         )
+            							    
+        							    		   
+          									  
        )
-          							    
-      							    		   
-        									  
-     )
-    in
-      assert =
-      (
-          f
-          (
-              1
-          )
-          2
+      in
+        assert =
+        (
+            f
+            (
+                1
+            )
+            2
+        )
       )
+          									 
+     							    		    
     )
-        									 
-   							    		    
-  )
-                                     
 )
