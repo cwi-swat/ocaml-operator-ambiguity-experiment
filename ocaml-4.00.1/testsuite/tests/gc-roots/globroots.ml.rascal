@@ -446,100 +446,106 @@
        case
            (
        	  ()
-             for i
-             0
-             -
-             (
-                 size
-                 1
-             )
-             ifthenelse
-             (
-              if
-              (
-               <>
-               (
-                   G.get
-                   (
-                       Array.get
-                       (
-                        a
-                        i
-                       )
-                           													
-                   )
-                   Array.get
-                   (
-                    vals
-                    i
-                   )
-                       													
-               )
-              )
-              then
-              (
-               
-               sequence
-               (
-                 print_string
+            forloop 
+            (
+                i
+                0
+                <>
+                -
+                (
+                    size
+                    1
+                )
+                ifthenelse
+                (
+                 if
                  (
-                     "Error on "
-                 )
-               ;
-                 
-                 sequence
-                 (
-                   print_int
-                   (
+                  <>
+                  (
+                      G.get
+                      (
+                          Array.get
+                          (
+                           a
+                           i
+                          )
+                              													
+                      )
+                      Array.get
+                      (
+                       vals
                        i
-                   )
-                 ;
-                   
-                   sequence
-                   (
-                     print_string
-                     (
-                         ": "
-                     )
-                   ;
-                     
-                     sequence
-                     (
-                       print_string
-                       (
-                           String.escaped
-                           (
-                               G.get
-                               (
-                                   Array.get
-                                   (
-                                    a
-                                    i
-                                   )
-                                       													
-                               )
-                           )
-                       )
-                     ;
-                       print_newline
-                       (
-                           ()
-                       )
-                     )
-                         							
-                   )
-                       							
+                      )
+                          													
+                  )
                  )
-                     							
-               )
-                   							
-              )
-              else
-              (
-              )
-             )
-                 									   
-                														  
+                 then
+                 (
+                  beginEnd 
+                  (
+                      
+                      sequence
+                      (
+                        print_string
+                        (
+                            "Error on "
+                        )
+                      ;
+                        
+                        sequence
+                        (
+                          print_int
+                          (
+                              i
+                          )
+                        ;
+                          
+                          sequence
+                          (
+                            print_string
+                            (
+                                ": "
+                            )
+                          ;
+                            
+                            sequence
+                            (
+                              print_string
+                              (
+                                  String.escaped
+                                  (
+                                      G.get
+                                      (
+                                          Array.get
+                                          (
+                                           a
+                                           i
+                                          )
+                                              													
+                                      )
+                                  )
+                              )
+                            ;
+                              print_newline
+                              (
+                                  ()
+                              )
+                            )
+                                							
+                          )
+                              							
+                        )
+                            							
+                      )
+                          							
+                  )
+                 )
+                 else
+                 (
+                 )
+                )
+                    									   
+            )
            )
       )
           		    
@@ -928,34 +934,37 @@
        case
            (
        	  n
-             for i
-             1
-             n
-             
-             sequence
-             (
-               change
-               (
-                   ()
-               )
-             ;
-               
-               sequence
-               (
-                 print_string
-                 (
-                     "."
-                 )
-               ;
-                 flush
-                 (
-                     stdout
-                 )
-               )
-                   							
-             )
-                 							
-                														  
+            forloop 
+            (
+                i
+                1
+                <>
+                n
+                
+                sequence
+                (
+                  change
+                  (
+                      ()
+                  )
+                ;
+                  
+                  sequence
+                  (
+                    print_string
+                    (
+                        "."
+                    )
+                  ;
+                    flush
+                    (
+                        stdout
+                    )
+                  )
+                      							
+                )
+                    							
+            )
            )
       )
           		    
@@ -1023,7 +1032,7 @@
         )
        ) 
       )
-      		    											  
+      	    											  
      							    		   
        									  
     )

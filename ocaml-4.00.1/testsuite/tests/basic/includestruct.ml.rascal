@@ -832,9 +832,15 @@
                  class_structure
                  (
                      								
-                    method m
-                          1
-                        												 
+                    method1 
+                    (
+                        <>
+                        
+                        m
+                        
+                        
+                        1
+                    )
                      								
                  )
                      								
@@ -861,33 +867,36 @@
     
     sequence
     (
-      
-      try
-      raise
+      beginEnd 
       (
           
-           Exn
-           "foo"
-              								 
-      )
-      (
-      
-      case
-      (
-        
-        Exn
-        s
-        									  
-        
-        print_string
-        (
+          try
+          raise
+          (
+              
+               Exn
+               "foo"
+                  								 
+          )
+          (
+          
+          case
+          (
+            
+            Exn
             s
-        )
-      ) 
-      	        											 
-      	        											 
+            									  
+            
+            print_string
+            (
+                s
+            )
+          ) 
+          	        											 
+          	        											 
+          )
+              							   
       )
-          							   
     ;
       
       sequence
@@ -920,33 +929,36 @@
    
    sequence
    (
-     
-     try
-     raise
+     beginEnd 
      (
          
-          G.Exn
-          "foo"
-             								 
-     )
-     (
-     
-     case
-     (
-       
-       G.Exn
-       s
-       									  
-       
-       print_string
-       (
+         try
+         raise
+         (
+             
+              G.Exn
+              "foo"
+                 								 
+         )
+         (
+         
+         case
+         (
+           
+           G.Exn
            s
-       )
-     ) 
-     	        											 
-     	        											 
+           									  
+           
+           print_string
+           (
+               s
+           )
+         ) 
+         	        											 
+         	        											 
+         )
+             							   
      )
-         							   
    ;
      
      sequence

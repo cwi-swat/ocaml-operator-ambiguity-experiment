@@ -1,34 +1,35 @@
-toplevels 
+
 (
-    
-    
-     
+    								 
+  
+   
+   
+   sequence
+   (
+     print_int
+     (
+         Multdef.f
+         (
+             1
+         )
+     )
+   ;
      
      sequence
      (
-       print_int
+       print_newline
        (
-           Multdef.f
-           (
-               1
-           )
+           ()
        )
      ;
-       
-       sequence
+       exit
        (
-         print_newline
-         (
-             ()
-         )
-       ;
-         exit
-         (
-             0
-         )
+           0
        )
-           							
      )
-         							 
-    							    		    
+         							
+   )
+       							 
+  							    		    
+                                     
 )

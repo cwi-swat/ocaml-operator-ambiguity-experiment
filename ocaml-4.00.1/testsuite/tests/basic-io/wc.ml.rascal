@@ -165,17 +165,20 @@
                            )
                            then
                            (
-                            
-                            sequence
+                            beginEnd 
                             (
-                              incr
-                              (
-                                  words
-                              )
-                            ;
-                              ()
+                                
+                                sequence
+                                (
+                                  incr
+                                  (
+                                      words
+                                  )
+                                ;
+                                  ()
+                                )
+                                    							
                             )
-                                							
                            )
                            else
                            (
@@ -422,29 +425,32 @@
       )
       else
       (
-        for i
-        1
-        -
-        (
-            Array.length
-            (
+       forloop 
+       (
+           i
+           1
+           <>
+           -
+           (
+               Array.length
+               (
+                   Sys.argv
+               )
+               1
+           )
+           count_file
+           (
+               Array.get
+               (
                 Sys.argv
-            )
-            1
-        )
-        count_file
-        (
-            Array.get
-            (
-             Sys.argv
-             i
-            )
-                													
-        )
-           														  
+                i
+               )
+                   													
+           )
+       )
       ) 
      )
-     		    											 
+     	    											 
    ;
      print_result
      (

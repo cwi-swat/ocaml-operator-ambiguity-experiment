@@ -1381,123 +1381,82 @@
          )
          then
          (
-          
-          let
+          beginEnd 
           (
-           (
-              									  
-            
-             s
-             string_create
-             (
-                 1
-             ) 
-            							    		   
-              									  
-           )
-          in
-            
-            sequence
-            (
-              string_unsafe_set
-              (
-                  s
-                  0
-                  c
-              )
-            ;
-              s
-            )
-                							
-          )
-              									
-         )
-         else
-         (
-          
-          let
-          (
-           (
-              									  
-            
-             n
-             Char.code
-             (
-                 c
-             ) 
-            							    		   
-              									  
-           )
-          in
-            
-            let
-            (
-             (
-                									  
               
-               s
-               string_create
+              let
+              (
                (
-                   4
-               ) 
-              							    		   
-                									  
-             )
-            in
-              
-              sequence
-              (
-                string_unsafe_set
-                (
-                    s
-                    0
-                    5c
-                )
-              ;
+                  									  
+                
+                 s
+                 string_create
+                 (
+                     1
+                 ) 
+                							    		   
+                  									  
+               )
+              in
                 
                 sequence
                 (
                   string_unsafe_set
                   (
                       s
-                      1
-                      unsafe_chr
-                      (
-                          +
-                          (
-                              48
-                              /
-                              (
-                                  n
-                                  100
-                              )
-                          )
-                      )
+                      0
+                      c
                   )
                 ;
+                  s
+                )
+                    							
+              )
+                  									
+          )
+         )
+         else
+         (
+          beginEnd 
+          (
+              
+              let
+              (
+               (
+                  									  
+                
+                 n
+                 Char.code
+                 (
+                     c
+                 ) 
+                							    		   
+                  									  
+               )
+              in
+                
+                let
+                (
+                 (
+                    									  
+                  
+                   s
+                   string_create
+                   (
+                       4
+                   ) 
+                  							    		   
+                    									  
+                 )
+                in
                   
                   sequence
                   (
                     string_unsafe_set
                     (
                         s
-                        2
-                        unsafe_chr
-                        (
-                            +
-                            (
-                                48
-                                mod
-                                (
-                                    /
-                                    (
-                                        n
-                                        10
-                                    )
-                                    10
-                                )
-                            )
-                        )
+                        0
+                        5c
                     )
                   ;
                     
@@ -1506,37 +1465,84 @@
                       string_unsafe_set
                       (
                           s
-                          3
+                          1
                           unsafe_chr
                           (
                               +
                               (
                                   48
-                                  mod
+                                  /
                                   (
                                       n
-                                      10
+                                      100
                                   )
                               )
                           )
                       )
                     ;
-                      s
+                      
+                      sequence
+                      (
+                        string_unsafe_set
+                        (
+                            s
+                            2
+                            unsafe_chr
+                            (
+                                +
+                                (
+                                    48
+                                    mod
+                                    (
+                                        /
+                                        (
+                                            n
+                                            10
+                                        )
+                                        10
+                                    )
+                                )
+                            )
+                        )
+                      ;
+                        
+                        sequence
+                        (
+                          string_unsafe_set
+                          (
+                              s
+                              3
+                              unsafe_chr
+                              (
+                                  +
+                                  (
+                                      48
+                                      mod
+                                      (
+                                          n
+                                          10
+                                      )
+                                  )
+                              )
+                          )
+                        ;
+                          s
+                        )
+                            							
+                      )
+                          							
                     )
                         							
                   )
                       							
                 )
-                    							
+                    									
               )
-                  							
-            )
-                									
+                  									
           )
-              									
          ) 
         )
-        		    											 
+        	    											 
        )
        													    
      	        											 
@@ -1551,19 +1557,22 @@
    
    sequence
    (
-      for i
-      -5
-      10
-      printf
-      (
-          "f(%d) = %d\n"
-          i
-          f
-          (
-              i
-          )
-      )
-         														  
+     forloop 
+     (
+         i
+         -5
+         <>
+         10
+         printf
+         (
+             "f(%d) = %d\n"
+             i
+             f
+             (
+                 i
+             )
+         )
+     )
    ;
      
      sequence
@@ -1635,90 +1644,99 @@
        
        sequence
        (
-          for i
-          -2
-          2
-          printf
-          (
-              "iszero(%d) = %B\n"
-              i
-              iszero
-              (
-                  i
-              )
-          )
-             														  
+         forloop 
+         (
+             i
+             -2
+             <>
+             2
+             printf
+             (
+                 "iszero(%d) = %B\n"
+                 i
+                 iszero
+                 (
+                     i
+                 )
+             )
+         )
        ;
          
          sequence
          (
-            for i
-            97
-            126
-            
-            let
-            (
-             (
-                									  
-              
-               c
-               Char.chr
+           forloop 
+           (
+               i
+               97
+               <>
+               126
+               
+               let
                (
-                   i
-               ) 
-              							    		   
-                									  
-             )
-            in
-              printf
-              (
-                  "h(%c) = %s\n"
+                (
+                   									  
+                 
                   c
-                  h
+                  Char.chr
                   (
-                      c
-                  )
-              )
-            )
-                									
-               														  
+                      i
+                  ) 
+                 							    		   
+                   									  
+                )
+               in
+                 printf
+                 (
+                     "h(%c) = %s\n"
+                     c
+                     h
+                     (
+                         c
+                     )
+                 )
+               )
+                   									
+           )
          ;
            
            sequence
            (
-              for i
-              0
-              255
-              
-              let
-              (
-               (
-                  									  
-                
-                 c
-                 Char.chr
+             forloop 
+             (
+                 i
+                 0
+                 <>
+                 255
+                 
+                 let
                  (
-                     i
-                 ) 
-                							    		   
-                  									  
-               )
-              in
-                printf
-                (
-                    "\tk(%s) = %s"
-                    escaped
+                  (
+                     									  
+                   
+                    c
+                    Char.chr
                     (
-                        c
-                    )
-                    k
-                    (
-                        c
-                    )
-                )
-              )
-                  									
-                 														  
+                        i
+                    ) 
+                   							    		   
+                     									  
+                  )
+                 in
+                   printf
+                   (
+                       "\tk(%s) = %s"
+                       escaped
+                       (
+                           c
+                       )
+                       k
+                       (
+                           c
+                       )
+                   )
+                 )
+                     									
+             )
            ;
              
              sequence

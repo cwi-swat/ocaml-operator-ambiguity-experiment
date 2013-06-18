@@ -119,49 +119,55 @@
      		  		           )
      		  		           then
      		  		           (
-     		  		            
-     		  		            sequence
+     		  		            beginEnd 
      		  		            (
-     		  		              eprintf
-     		  		              (
-     		  		                  "*** Bad result (%s, test %d)\n"
+     		  		                
+     		  		                sequence
+     		  		                (
+     		  		                  eprintf
+     		  		                  (
+     		  		                      "*** Bad result (%s, test %d)\n"
+     		  		                      
+     		  		                       !
+     		  		                       (
+     		  		                       function_tested
+     		  		                       )
+     		  		                          							 
+     		  		                      test_number
+     		  		                  )
+     		  		                ;
      		  		                  
-     		  		                   !
-     		  		                   (
-     		  		                   function_tested
-     		  		                   )
-     		  		                      							 
-     		  		                  test_number
-     		  		              )
-     		  		            ;
-     		  		              
-     		  		              sequence
-     		  		              (
-     		  		                flush
-     		  		                (
-     		  		                    stderr
+     		  		                  sequence
+     		  		                  (
+     		  		                    flush
+     		  		                    (
+     		  		                        stderr
+     		  		                    )
+     		  		                  ;
+     		  		                    :=
+     		  		                    (
+     		  		                        error_occurred
+     		  		                        true
+     		  		                    )
+     		  		                  )
+     		  		                      							
      		  		                )
-     		  		              ;
-     		  		                :=
-     		  		                (
-     		  		                    error_occurred
-     		  		                    true
-     		  		                )
-     		  		              )
-     		  		                  							
+     		  		                    							
      		  		            )
-     		  		                							
      		  		           )
      		  		           else
      		  		           (
-     		  		            printf
+     		  		            beginEnd 
      		  		            (
-     		  		                " %d..."
-     		  		                test_number
+     		  		                printf
+     		  		                (
+     		  		                    " %d..."
+     		  		                    test_number
+     		  		                )
      		  		            )
      		  		           ) 
      		  		          )
-     		  		          		    											 
+     		  		          	    											 
      		  		        )
      		  		            							
      		  		      )
@@ -3671,44 +3677,14 @@
                                                                                                                                                                                                  )
                                                                                                                                                                                                  then
                                                                                                                                                                                                  (
-                                                                                                                                                                                                  
-                                                                                                                                                                                                  sequence
+                                                                                                                                                                                                  beginEnd 
                                                                                                                                                                                                   (
-                                                                                                                                                                                                    testing_function
-                                                                                                                                                                                                    (
-                                                                                                                                                                                                        "of_float"
-                                                                                                                                                                                                    )
-                                                                                                                                                                                                  ;
-                                                                                                                                                                                                    
-                                                                                                                                                                                                    sequence
-                                                                                                                                                                                                    (
-                                                                                                                                                                                                      test
-                                                                                                                                                                                                      (
-                                                                                                                                                                                                          1
-                                                                                                                                                                                                          of_float
-                                                                                                                                                                                                          (
-                                                                                                                                                                                                              0.0
-                                                                                                                                                                                                          )
-                                                                                                                                                                                                          of_int
-                                                                                                                                                                                                          (
-                                                                                                                                                                                                              0
-                                                                                                                                                                                                          )
-                                                                                                                                                                                                      )
-                                                                                                                                                                                                    ;
                                                                                                                                                                                                       
                                                                                                                                                                                                       sequence
                                                                                                                                                                                                       (
-                                                                                                                                                                                                        test
+                                                                                                                                                                                                        testing_function
                                                                                                                                                                                                         (
-                                                                                                                                                                                                            2
-                                                                                                                                                                                                            of_float
-                                                                                                                                                                                                            (
-                                                                                                                                                                                                                123.0
-                                                                                                                                                                                                            )
-                                                                                                                                                                                                            of_int
-                                                                                                                                                                                                            (
-                                                                                                                                                                                                                123
-                                                                                                                                                                                                            )
+                                                                                                                                                                                                            "of_float"
                                                                                                                                                                                                         )
                                                                                                                                                                                                       ;
                                                                                                                                                                                                         
@@ -3716,14 +3692,14 @@
                                                                                                                                                                                                         (
                                                                                                                                                                                                           test
                                                                                                                                                                                                           (
-                                                                                                                                                                                                              3
+                                                                                                                                                                                                              1
                                                                                                                                                                                                               of_float
                                                                                                                                                                                                               (
-                                                                                                                                                                                                                  123.456
+                                                                                                                                                                                                                  0.0
                                                                                                                                                                                                               )
                                                                                                                                                                                                               of_int
                                                                                                                                                                                                               (
-                                                                                                                                                                                                                  123
+                                                                                                                                                                                                                  0
                                                                                                                                                                                                               )
                                                                                                                                                                                                           )
                                                                                                                                                                                                         ;
@@ -3732,10 +3708,10 @@
                                                                                                                                                                                                           (
                                                                                                                                                                                                             test
                                                                                                                                                                                                             (
-                                                                                                                                                                                                                4
+                                                                                                                                                                                                                2
                                                                                                                                                                                                                 of_float
                                                                                                                                                                                                                 (
-                                                                                                                                                                                                                    123.999
+                                                                                                                                                                                                                    123.0
                                                                                                                                                                                                                 )
                                                                                                                                                                                                                 of_int
                                                                                                                                                                                                                 (
@@ -3748,14 +3724,14 @@
                                                                                                                                                                                                             (
                                                                                                                                                                                                               test
                                                                                                                                                                                                               (
-                                                                                                                                                                                                                  5
+                                                                                                                                                                                                                  3
                                                                                                                                                                                                                   of_float
                                                                                                                                                                                                                   (
-                                                                                                                                                                                                                      -456.0
+                                                                                                                                                                                                                      123.456
                                                                                                                                                                                                                   )
                                                                                                                                                                                                                   of_int
                                                                                                                                                                                                                   (
-                                                                                                                                                                                                                      -456
+                                                                                                                                                                                                                      123
                                                                                                                                                                                                                   )
                                                                                                                                                                                                               )
                                                                                                                                                                                                             ;
@@ -3764,14 +3740,14 @@
                                                                                                                                                                                                               (
                                                                                                                                                                                                                 test
                                                                                                                                                                                                                 (
-                                                                                                                                                                                                                    6
+                                                                                                                                                                                                                    4
                                                                                                                                                                                                                     of_float
                                                                                                                                                                                                                     (
-                                                                                                                                                                                                                        -456.123
+                                                                                                                                                                                                                        123.999
                                                                                                                                                                                                                     )
                                                                                                                                                                                                                     of_int
                                                                                                                                                                                                                     (
-                                                                                                                                                                                                                        -456
+                                                                                                                                                                                                                        123
                                                                                                                                                                                                                     )
                                                                                                                                                                                                                 )
                                                                                                                                                                                                               ;
@@ -3780,10 +3756,10 @@
                                                                                                                                                                                                                 (
                                                                                                                                                                                                                   test
                                                                                                                                                                                                                   (
-                                                                                                                                                                                                                      7
+                                                                                                                                                                                                                      5
                                                                                                                                                                                                                       of_float
                                                                                                                                                                                                                       (
-                                                                                                                                                                                                                          -456.789
+                                                                                                                                                                                                                          -456.0
                                                                                                                                                                                                                       )
                                                                                                                                                                                                                       of_int
                                                                                                                                                                                                                       (
@@ -3794,9 +3770,17 @@
                                                                                                                                                                                                                   
                                                                                                                                                                                                                   sequence
                                                                                                                                                                                                                   (
-                                                                                                                                                                                                                    testing_function
+                                                                                                                                                                                                                    test
                                                                                                                                                                                                                     (
-                                                                                                                                                                                                                        "to_float"
+                                                                                                                                                                                                                        6
+                                                                                                                                                                                                                        of_float
+                                                                                                                                                                                                                        (
+                                                                                                                                                                                                                            -456.123
+                                                                                                                                                                                                                        )
+                                                                                                                                                                                                                        of_int
+                                                                                                                                                                                                                        (
+                                                                                                                                                                                                                            -456
+                                                                                                                                                                                                                        )
                                                                                                                                                                                                                     )
                                                                                                                                                                                                                   ;
                                                                                                                                                                                                                     
@@ -3804,31 +3788,23 @@
                                                                                                                                                                                                                     (
                                                                                                                                                                                                                       test
                                                                                                                                                                                                                       (
-                                                                                                                                                                                                                          1
-                                                                                                                                                                                                                          to_float
+                                                                                                                                                                                                                          7
+                                                                                                                                                                                                                          of_float
                                                                                                                                                                                                                           (
-                                                                                                                                                                                                                              of_int
-                                                                                                                                                                                                                              (
-                                                                                                                                                                                                                                  0
-                                                                                                                                                                                                                              )
+                                                                                                                                                                                                                              -456.789
                                                                                                                                                                                                                           )
-                                                                                                                                                                                                                          0.0
+                                                                                                                                                                                                                          of_int
+                                                                                                                                                                                                                          (
+                                                                                                                                                                                                                              -456
+                                                                                                                                                                                                                          )
                                                                                                                                                                                                                       )
                                                                                                                                                                                                                     ;
                                                                                                                                                                                                                       
                                                                                                                                                                                                                       sequence
                                                                                                                                                                                                                       (
-                                                                                                                                                                                                                        test
+                                                                                                                                                                                                                        testing_function
                                                                                                                                                                                                                         (
-                                                                                                                                                                                                                            2
-                                                                                                                                                                                                                            to_float
-                                                                                                                                                                                                                            (
-                                                                                                                                                                                                                                of_int
-                                                                                                                                                                                                                                (
-                                                                                                                                                                                                                                    123
-                                                                                                                                                                                                                                )
-                                                                                                                                                                                                                            )
-                                                                                                                                                                                                                            123.0
+                                                                                                                                                                                                                            "to_float"
                                                                                                                                                                                                                         )
                                                                                                                                                                                                                       ;
                                                                                                                                                                                                                         
@@ -3836,15 +3812,15 @@
                                                                                                                                                                                                                         (
                                                                                                                                                                                                                           test
                                                                                                                                                                                                                           (
-                                                                                                                                                                                                                              3
+                                                                                                                                                                                                                              1
                                                                                                                                                                                                                               to_float
                                                                                                                                                                                                                               (
                                                                                                                                                                                                                                   of_int
                                                                                                                                                                                                                                   (
-                                                                                                                                                                                                                                      -456
+                                                                                                                                                                                                                                      0
                                                                                                                                                                                                                                   )
                                                                                                                                                                                                                               )
-                                                                                                                                                                                                                              -456.0
+                                                                                                                                                                                                                              0.0
                                                                                                                                                                                                                           )
                                                                                                                                                                                                                         ;
                                                                                                                                                                                                                           
@@ -3852,29 +3828,65 @@
                                                                                                                                                                                                                           (
                                                                                                                                                                                                                             test
                                                                                                                                                                                                                             (
-                                                                                                                                                                                                                                4
+                                                                                                                                                                                                                                2
                                                                                                                                                                                                                                 to_float
                                                                                                                                                                                                                                 (
                                                                                                                                                                                                                                     of_int
                                                                                                                                                                                                                                     (
-                                                                                                                                                                                                                                        1073741823
+                                                                                                                                                                                                                                        123
                                                                                                                                                                                                                                     )
                                                                                                                                                                                                                                 )
-                                                                                                                                                                                                                                1073741823.0
+                                                                                                                                                                                                                                123.0
                                                                                                                                                                                                                             )
                                                                                                                                                                                                                           ;
-                                                                                                                                                                                                                            test
+                                                                                                                                                                                                                            
+                                                                                                                                                                                                                            sequence
                                                                                                                                                                                                                             (
-                                                                                                                                                                                                                                5
-                                                                                                                                                                                                                                to_float
+                                                                                                                                                                                                                              test
+                                                                                                                                                                                                                              (
+                                                                                                                                                                                                                                  3
+                                                                                                                                                                                                                                  to_float
+                                                                                                                                                                                                                                  (
+                                                                                                                                                                                                                                      of_int
+                                                                                                                                                                                                                                      (
+                                                                                                                                                                                                                                          -456
+                                                                                                                                                                                                                                      )
+                                                                                                                                                                                                                                  )
+                                                                                                                                                                                                                                  -456.0
+                                                                                                                                                                                                                              )
+                                                                                                                                                                                                                            ;
+                                                                                                                                                                                                                              
+                                                                                                                                                                                                                              sequence
+                                                                                                                                                                                                                              (
+                                                                                                                                                                                                                                test
                                                                                                                                                                                                                                 (
-                                                                                                                                                                                                                                    of_int
+                                                                                                                                                                                                                                    4
+                                                                                                                                                                                                                                    to_float
                                                                                                                                                                                                                                     (
-                                                                                                                                                                                                                                        -1073741824
+                                                                                                                                                                                                                                        of_int
+                                                                                                                                                                                                                                        (
+                                                                                                                                                                                                                                            1073741823
+                                                                                                                                                                                                                                        )
                                                                                                                                                                                                                                     )
+                                                                                                                                                                                                                                    1073741823.0
                                                                                                                                                                                                                                 )
-                                                                                                                                                                                                                                -1073741824.0
+                                                                                                                                                                                                                              ;
+                                                                                                                                                                                                                                test
+                                                                                                                                                                                                                                (
+                                                                                                                                                                                                                                    5
+                                                                                                                                                                                                                                    to_float
+                                                                                                                                                                                                                                    (
+                                                                                                                                                                                                                                        of_int
+                                                                                                                                                                                                                                        (
+                                                                                                                                                                                                                                            -1073741824
+                                                                                                                                                                                                                                        )
+                                                                                                                                                                                                                                    )
+                                                                                                                                                                                                                                    -1073741824.0
+                                                                                                                                                                                                                                )
+                                                                                                                                                                                                                              )
+                                                                                                                                                                                                                                  							
                                                                                                                                                                                                                             )
+                                                                                                                                                                                                                                							
                                                                                                                                                                                                                           )
                                                                                                                                                                                                                               							
                                                                                                                                                                                                                         )
@@ -3897,10 +3909,7 @@
                                                                                                                                                                                                             							
                                                                                                                                                                                                       )
                                                                                                                                                                                                           							
-                                                                                                                                                                                                    )
-                                                                                                                                                                                                        							
                                                                                                                                                                                                   )
-                                                                                                                                                                                                      							
                                                                                                                                                                                                  )
                                                                                                                                                                                                  else
                                                                                                                                                                                                  (
@@ -8148,160 +8157,163 @@
                        
                        sequence
                        (
-                         match
-                         Sys.word_size
+                         beginEnd 
                          (
-                         
-                         case
-                         (
-                           32
-                           
-                           let module C
+                             match
+                             Sys.word_size
                              (
-                           		Test32
-                           		(
-                           		struct
-                           		(
-                           									  
-                           		type
-                           		(  						
-                           		    							    	 
-                           		   t
-                           		   type
-                           		   params=
-                           		   (
-                           		   
-                           		   )
-                           		   cstrs =
-                           		   (
-                           		   )
-                           		   kind =
-                           		   
-                           		   nativeint
-                           		   (
-                           		   )
-                           		   								  
-                           		   
-                           		   														  
-                           		   														 
-                           		  											   
-                           										        
-                           		)
-                           									  
-                           		module  Ops
-                           		 Nativeint
-                           												    
-                           									  
-                           		let
-                           		(
-                           		 
-                           		  testcomp
-                           		  testcomp_nativeint 
-                           		 							    		    
-                           		)
-                           									  
-                           		let
-                           		(
-                           		 
-                           		  skip_float_tests
-                           		  true 
-                           		 							    		    
-                           		)
-                           									  
-                           		)
-                           									  
-                           		)
-                           										   
-                             )
-                             in
+                             
+                             case
                              (
-                                ()
+                               32
+                               
+                               let module C
+                                 (
+                               		Test32
+                               		(
+                               		struct
+                               		(
+                               									  
+                               		type
+                               		(  						
+                               		    							    	 
+                               		   t
+                               		   type
+                               		   params=
+                               		   (
+                               		   
+                               		   )
+                               		   cstrs =
+                               		   (
+                               		   )
+                               		   kind =
+                               		   
+                               		   nativeint
+                               		   (
+                               		   )
+                               		   								  
+                               		   
+                               		   														  
+                               		   														 
+                               		  											   
+                               										        
+                               		)
+                               									  
+                               		module  Ops
+                               		 Nativeint
+                               												    
+                               									  
+                               		let
+                               		(
+                               		 
+                               		  testcomp
+                               		  testcomp_nativeint 
+                               		 							    		    
+                               		)
+                               									  
+                               		let
+                               		(
+                               		 
+                               		  skip_float_tests
+                               		  true 
+                               		 							    		    
+                               		)
+                               									  
+                               		)
+                               									  
+                               		)
+                               										   
+                                 )
+                                 in
+                                 (
+                                    ()
+                                 )
+                                   											  
+                             ) 
+                             	        											 
+                               
+                               case
+                               (
+                                64
+                                
+                                let module C
+                                  (
+                                		Test64
+                                		(
+                                		struct
+                                		(
+                                									  
+                                		type
+                                		(  						
+                                		    							    	 
+                                		   t
+                                		   type
+                                		   params=
+                                		   (
+                                		   
+                                		   )
+                                		   cstrs =
+                                		   (
+                                		   )
+                                		   kind =
+                                		   
+                                		   nativeint
+                                		   (
+                                		   )
+                                		   								  
+                                		   
+                                		   														  
+                                		   														 
+                                		  											   
+                                										        
+                                		)
+                                									  
+                                		module  Ops
+                                		 Nativeint
+                                												    
+                                									  
+                                		let
+                                		(
+                                		 
+                                		  testcomp
+                                		  testcomp_nativeint 
+                                		 							    		    
+                                		)
+                                									  
+                                		let
+                                		(
+                                		 
+                                		  skip_float_tests
+                                		  true 
+                                		 							    		    
+                                		)
+                                									  
+                                		)
+                                									  
+                                		)
+                                										   
+                                  )
+                                  in
+                                  (
+                                     ()
+                                  )
+                                    											  
+                               )
+                               													    
+                             	        											 
+                               
+                               case
+                               (
+                                _
+                                
+                                assert false
+                               )
+                               													    
+                             	        											 
+                             	        											 
                              )
-                               											  
-                         ) 
-                         	        											 
-                           
-                           case
-                           (
-                            64
-                            
-                            let module C
-                              (
-                            		Test64
-                            		(
-                            		struct
-                            		(
-                            									  
-                            		type
-                            		(  						
-                            		    							    	 
-                            		   t
-                            		   type
-                            		   params=
-                            		   (
-                            		   
-                            		   )
-                            		   cstrs =
-                            		   (
-                            		   )
-                            		   kind =
-                            		   
-                            		   nativeint
-                            		   (
-                            		   )
-                            		   								  
-                            		   
-                            		   														  
-                            		   														 
-                            		  											   
-                            										        
-                            		)
-                            									  
-                            		module  Ops
-                            		 Nativeint
-                            												    
-                            									  
-                            		let
-                            		(
-                            		 
-                            		  testcomp
-                            		  testcomp_nativeint 
-                            		 							    		    
-                            		)
-                            									  
-                            		let
-                            		(
-                            		 
-                            		  skip_float_tests
-                            		  true 
-                            		 							    		    
-                            		)
-                            									  
-                            		)
-                            									  
-                            		)
-                            										   
-                              )
-                              in
-                              (
-                                 ()
-                              )
-                                											  
-                           )
-                           													    
-                         	        											 
-                           
-                           case
-                           (
-                            _
-                            
-                            assert false
-                           )
-                           													    
-                         	        											 
-                         	        											 
+                             			   
                          )
-                         			   
                        ;
                          
                          sequence
@@ -8406,7 +8418,7 @@
                                        )
                                       ) 
                                      )
-                                     		    											 
+                                     	    											 
                                    ;
                                      
                                      sequence
@@ -8554,7 +8566,7 @@
                                                          )
                                                         ) 
                                                        )
-                                                       		    											 
+                                                       	    											 
                                                    )
                                                  )
                                                      							
@@ -8623,20 +8635,23 @@
       )
       then
       (
-       
-       sequence
+       beginEnd 
        (
-         prerr_endline
-         (
-             "************* TEST FAILED ****************"
-         )
-       ;
-         exit
-         (
-             2
-         )
+           
+           sequence
+           (
+             prerr_endline
+             (
+                 "************* TEST FAILED ****************"
+             )
+           ;
+             exit
+             (
+                 2
+             )
+           )
+               							
        )
-           							
       )
       else
       (
@@ -8646,7 +8661,7 @@
        )
       ) 
      )
-     		    											 
+     	    											 
    )
        							 
   							    		    
