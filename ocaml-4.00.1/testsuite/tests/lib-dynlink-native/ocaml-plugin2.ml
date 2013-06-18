@@ -1,0 +1,55 @@
+(
+  let
+  (
+    ()
+          sequence
+      (
+        Api.reg_mod
+        (
+            "Plugin2"
+        )
+      ;
+        sequence
+        (
+          Api.add_cb
+          (
+              (
+                case
+                (
+                  ()
+                                    print_endline
+                  (
+                      "Callback from plugin2"
+                  )
+                )
+              )
+          )
+        ;
+          sequence
+          (
+            List.iter
+            (
+                (
+                  case
+                  (
+                    i
+                    Printf.printf
+                    (
+                        "%i\n"
+                        i
+                    )
+                  )
+                )
+                Plugin.facts
+            )
+          ;
+            Printf.printf
+            (
+                "XXX\n"
+            )
+          )
+        )
+      )
+  )
+)
+

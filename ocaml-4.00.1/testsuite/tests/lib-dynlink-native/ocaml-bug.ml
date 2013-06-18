@@ -1,0 +1,29 @@
+(
+  let
+  (
+    ()
+          try
+      raise
+      (
+          Invalid_argument
+            "X"
+      )
+      (
+        case
+        (
+          Invalid_argument
+            s
+          raise
+          (
+              Invalid_argument
+                ^
+                (
+                    s
+                    s
+                )
+          )
+        )
+      )
+  )
+)
+

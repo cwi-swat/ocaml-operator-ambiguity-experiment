@@ -1,0 +1,315 @@
+toplevels 
+(
+     module  Foobar
+      struct
+      (
+      type
+      (  						
+         t
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+         int
+         (
+         )
+      )
+      )
+     module  F0
+      Foobar
+     let
+     (
+       f
+      (
+       case
+           (
+       	  x
+       	  "extendedModulePath1"([],"F0")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+       	  (
+       	  )
+            (
+            x
+            :
+            "extendedModulePath1"([],"Foobar")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+            (
+            )
+            )
+           )
+      )
+     )
+     module  F
+      Foobar
+     let
+     (
+       f
+      (
+       case
+           (
+       	  x
+       	  "extendedModulePath1"([],"F")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+       	  (
+       	  )
+            (
+            x
+            :
+            "extendedModulePath1"([],"Foobar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+            (
+            )
+            )
+           )
+      )
+     )
+     module  M
+      struct
+      (
+      type
+      (  						
+         t
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+         <[<"m","polytype1"("typexprConstr2"("typeConstr"([],"int")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+      )
+      )
+     module  M1
+      M
+     module  M2
+      M1
+    (
+     case
+     (
+     x
+     "extendedModulePath1"([],"M1")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+     (
+     )
+     (
+     x
+     :
+     "extendedModulePath1"([],"M2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+     (
+     )
+     )
+     )
+    )
+     module  M3
+      M1
+    (
+     case
+     (
+     x
+     brackets3 
+     (
+         x
+         "extendedModulePath1"([],"M3")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+         (
+         )
+         "extendedModulePath1"([],"M1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+         (
+         )
+     )
+     )
+    )
+    (
+     case
+     (
+     x
+     brackets3 
+     (
+         x
+         "extendedModulePath1"([],"M3")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+         (
+         )
+         "extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+         (
+         )
+     )
+     )
+    )
+     module  M4
+      M2
+     module  M4
+      M
+     module  M4
+      M1
+     module  M5
+      M3
+     module  M6
+      M1
+     module  Bar
+      struct
+      (
+      type
+      (  						
+         t
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+         int
+         (
+         )
+      )
+      let
+      (
+        f
+       (
+        case
+            (
+        	  x
+        	  int
+        	  (
+        	  )
+             (
+             x
+             :
+             t
+             (
+             )
+             )
+            )
+       )
+      )
+      )
+     module  M
+      struct
+      (
+      type
+      (  						
+         t
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+         (
+         T
+         (
+          int
+          (
+          )
+         )
+         )
+      )
+      let
+      (
+        mk
+       (
+        case
+            (
+        	  x
+              T
+              x
+            )
+       )
+      )
+      )
+     module  M1
+      struct
+      (
+      type
+      (  						
+         t
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+         "extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+         (
+         )
+      )
+      let
+      (
+        mk
+        M.mk 
+      )
+      )
+     module  M2
+      struct
+      (
+      include
+      (
+        M
+      )
+      )
+     module  M3
+      M
+     module  M4
+      M
+     module  M5
+      M
+     module  M6
+      M
+     module  M'
+      struct
+      (
+      type
+      (  						
+         t_priv
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+         (
+         T
+         (
+          int
+          (
+          )
+         )
+         )
+      )
+      type
+      (  						
+         t
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+         t_priv
+         (
+         )
+      )
+      let
+      (
+        mk
+       (
+        case
+            (
+        	  x
+              T
+              x
+            )
+       )
+      )
+      )
+     module  M3'
+      M'
+)

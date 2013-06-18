@@ -1,0 +1,39 @@
+(
+  class
+  (
+    params = 
+    (
+    )
+    class name = c
+    class expr = 
+                class_structure
+                (
+                   method3 
+                   (
+                       m
+                       polytype1 
+                       (
+                           b
+                       )
+                   )
+                )
+  )
+  let
+  (
+    o
+    class_structure
+    (
+       inheritance 
+       (
+           <>
+           <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"c")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+       )
+       method1 
+       (
+           <>
+           m
+           42
+       )
+    )
+  )
+)

@@ -1,0 +1,26 @@
+(
+  sequence
+  (
+    print_int
+    (
+        Multdef.f
+        (
+            1
+        )
+    )
+  ;
+    sequence
+    (
+      print_newline
+      (
+          ()
+                )
+    ;
+      exit
+      (
+          0
+      )
+    )
+  )
+)
+

@@ -1,24 +1,12 @@
-0a1,23
-> (
->   Random.init
->   (
->       3
->   )
+1d0
+< toplevels 
+7,9c6
+<     forloop 
+<     (
+<         i
+---
 >   for i
->   0
->   100000
->   ignore
->   (
->       String.create
->       (
->           Random.int
->           (
->               1000000
->           )
->       )
->   )
->   Printf.printf
->   (
->       "hello world\n"
->   )
-> )
+11d7
+<         <>
+23d18
+<     )

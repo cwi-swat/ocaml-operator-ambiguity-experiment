@@ -1,0 +1,42 @@
+(
+  let
+  (
+    marshal_int
+      (
+        case
+        (
+          f
+          match
+          []
+                    (
+            case
+            (
+              ::
+                (
+                  _
+                  ::
+                    (
+                      Ppat_variant "INT"
+                        n
+                      _
+                    )
+                )
+              f
+              (
+                  n
+              )
+            )
+            case
+            (
+              _
+              failwith
+              (
+                  "marshal_int"
+              )
+            )
+          )
+        )
+      )
+  )
+)
+

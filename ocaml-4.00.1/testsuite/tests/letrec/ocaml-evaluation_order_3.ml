@@ -1,0 +1,165 @@
+(
+  type
+  (
+    t
+      type
+        params =
+          (
+          )
+        cstrs =
+          (
+          )
+        kind =
+            (
+              x
+                  poly
+                  
+                     t
+                    (
+                    )
+              y
+                  poly
+                  
+                     t
+                    (
+                    )
+            )
+            )
+  let
+  (
+    p
+      print_endline
+  )
+  let
+  (
+    test
+      let
+      (
+        (
+          x
+            sequence
+            (
+              p
+              (
+                  "x"
+              )
+            ;
+              record
+              (
+                x
+                  sequence
+                  (
+                    p
+                    (
+                        "x_x"
+                    )
+                  ;
+                    x
+                  )
+                y
+                  sequence
+                  (
+                    p
+                    (
+                        "x_y"
+                    )
+                  ;
+                    y
+                  )
+              )
+                          )
+          y
+            sequence
+            (
+              p
+              (
+                  "y"
+              )
+            ;
+              record
+              (
+                x
+                  sequence
+                  (
+                    p
+                    (
+                        "y_x"
+                    )
+                  ;
+                    x
+                  )
+                y
+                  sequence
+                  (
+                    p
+                    (
+                        "y_y"
+                    )
+                  ;
+                    y
+                  )
+              )
+                          )
+        )
+      in
+        sequence
+        (
+          assert          ==
+          (
+              field
+              (
+              x
+              x
+              )
+              x
+          )
+          
+        ;
+          sequence
+          (
+            assert            ==
+            (
+                field
+                (
+                x
+                y
+                )
+                y
+            )
+            
+          ;
+            sequence
+            (
+              assert              ==
+              (
+                  field
+                  (
+                  y
+                  x
+                  )
+                  x
+              )
+              
+            ;
+              sequence
+              (
+                assert                ==
+                (
+                    field
+                    (
+                    y
+                    y
+                    )
+                    y
+                )
+                
+              ;
+                ()
+                              )
+            )
+          )
+        )
+      )
+  )
+)
+

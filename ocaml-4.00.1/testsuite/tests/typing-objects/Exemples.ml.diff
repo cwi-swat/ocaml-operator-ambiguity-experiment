@@ -1,2106 +1,1319 @@
-0a1,2399
-> (
->   class
->   (
->       params =
->           (
->           )
->       class name = point
->       class expr =
+1d0
+< toplevels 
+7d5
+<        x_init
+10a9,11
 >           fun
 >           label=""
 >                     x_init
->             class_structure
->               (
+13,16c14
+<                       classValue 
+<                       (
+<                           <>
+<                           x
+---
 >                 Pcf_val "x" Mutable Fresh ([3,29+2]..[3,29+24])
->                   x_init
+18,22c16
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           get_x
+---
 >                 method get_x
->                   x
+24,25c18
+<                       )
+<                       method1 
+---
 >                                   method move
->                   (
+27,30c20
+<                           <>
+<                           move
+<                           d
+<                           Array.set
+---
 >                     case
->                     (
+32c22,23
+<                            x
+---
 >                       d
 >                       Pexp_setinstvar "x"
->                       +
->                       (
->                           x
->                           d
->                       )
->                     )
->                   )
->                                 )
->   )
->   let
->   (
->     p
->       new point
->       (
->           7
->       )
->   )
->   send get_x
->   (
->     p
->   )
->   send move
->   (
->     p
->   )
->   (
->       3
->   )
->   send get_x
->   (
->     p
->   )
->   let
->   (
->     q
->       Oo.copy
->       (
->           p
->       )
->   )
->   sequence
->   (
->     send move
->     (
->       q
->     )
->     (
->         7
->     )
->   ;
->     (
->       send get_x
->       (
->         p
->       )
->       send get_x
->       (
->         q
->       )
->     )
->   )
->   class
->   (
->       params =
->           (
+97a89,93
 >           )
 >       class name = color_point
 >       class expr =
 >           fun
 >           label=""
->                     x
+98a95,96
 >             fun
 >             label=""
->                         c
->                string
->               (
->               )
->               class_structure
->                 (
+103,105d100
+<        )
+<        class name = color_point
+<        class expr = 
+108,113c103,105
+<                       inheritance 
+<                       (
+<                           <>
+<                           classArgs 
+<                           (
+<                               classPath 
+---
 >                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr point
->                         (
->                         )
+115d106
+<                                   point
+116a108
 >                       (
->                           x
->                       )
+119,122c111
+<                       )
+<                       classValue 
+<                       (
+<                           <>
+---
 >                                       Pcf_val "c" Immutable Fresh ([20,275+2]..[20,275+11])
->                     c
+123a113
 >                   method color
->                     c
->                                     )
->   )
->   let
->   (
->     p'
->       new color_point
->       (
->           5
->           "red"
->       )
->   )
->   (
->     send get_x
->     (
->       p'
->     )
->     send color
->     (
->       p'
->     )
->   )
->   let
->   (
->     l
->       ::
->         (
->           p
->           ::
->             (
->               (
->               p'
+126,132d115
+<                       method1 
+<                       (
+<                           <>
+<                           color
+<                           c
+<                       )
+<                    )
+161d143
+<         brackets2 
+163a146
 >               :
->                                  point
->                   (
->                   )
->               )
->               []
->                           )
->         )
->   )
->   let
->   (
->     get_x
->       (
->         case
->         (
->           p
->           send get_x
->           (
->             p
->           )
->         )
->       )
->   )
->   let
->   (
->     set_x
->       (
->         case
->         (
->           p
->           send set_x
->           (
->             p
->           )
->         )
->       )
->   )
->   List.map
->   (
->       get_x
->       l
->   )
->   class
->   (
->       params =
->           (
->           )
->       class name = ref
->       class expr =
+209d191
+<        x_init
+212a195,197
 >           fun
 >           label=""
 >                     x_init
->             class_structure
->               (
+215,218c200
+<                       classValue 
+<                       (
+<                           <>
+<                           x
+---
 >                 Pcf_val "x" Mutable Fresh ([35,495+2]..[35,495+24])
->                   x_init
+220,224c202
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           get
+---
 >                 method get
->                   x
+226,227c204
+<                       )
+<                       method1 
+---
 >                                   method set
->                   (
+229,232c206
+<                           <>
+<                           set
+<                           y
+<                           Array.set
+---
 >                     case
->                     (
+234c208,209
+<                            x
+---
 >                       y
 >                       Pexp_setinstvar "x"
->                       y
->                     )
->                   )
->                                 )
->   )
->   class
->   (
->       params =
->           (
+243a219,223
 >           )
 >       class name = ref
 >       class expr =
 >           fun
 >           label=""
->                     x_init
->              int
->             (
->             )
->             class_structure
->               (
+248,250d227
+<        )
+<        class name = ref
+<        class expr = 
+253,256c230
+<                       classValue 
+<                       (
+<                           <>
+<                           x
+---
 >                 Pcf_val "x" Mutable Fresh ([41,600+2]..[41,600+24])
->                   x_init
+258,262c232
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           get
+---
 >                 method get
->                   x
+264,265c234
+<                       )
+<                       method1 
+---
 >                                   method set
->                   (
+267,270c236
+<                           <>
+<                           set
+<                           y
+<                           Array.set
+---
 >                     case
->                     (
+272c238,239
+<                            x
+---
 >                       y
 >                       Pexp_setinstvar "x"
->                       y
->                     )
->                   )
->                                 )
->   )
->   class
->   (
->       params =
->           (
+282c249
+<        x_init
+---
 >             "a"
->           )
->       class name = ref
->       class expr =
+285a253,255
 >           fun
 >           label=""
 >                     x_init
->             class_structure
->               (
+288,291c258
+<                       classValue 
+<                       (
+<                           <>
+<                           x
+---
 >                 Pcf_val "x" Mutable Fresh ([47,704+2]..[47,704+31])
->                   (
->                   x_init
->                   :
->                       a
->                                     )
+297,301c264
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           get
+---
 >                 method get
->                   x
+303,304c266
+<                       )
+<                       method1 
+---
 >                                   method set
->                   (
+306,309c268
+<                           <>
+<                           set
+<                           y
+<                           Array.set
+---
 >                     case
->                     (
+311c270,271
+<                            x
+---
 >                       y
 >                       Pexp_setinstvar "x"
->                       y
->                     )
->                   )
->                                 )
->   )
->   let
->   (
->     (
->       r
->         new ref
->         (
->             1
->         )
->     )
->   in
->     sequence
->     (
->       send set
->       (
->         r
->       )
->       (
->           2
->       )
->     ;
->       send get
->       (
->         r
->       )
->     )
->   )
->   class
->   (
->       params =
->           (
+347,348c307
+<        c
+<        a
+---
 >             "a"
->           )
->       class name = circle
->       class expr =
+351a311,314
 >           fun
 >           label=""
 >                     c
 >             a
->             class_structure
->               (
+354,357c317
+<                       classValue 
+<                       (
+<                           <>
+<                           center
+---
 >                 Pcf_val "center" Mutable Fresh ([55,861+2]..[55,861+24])
->                   c
+359,363c319
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           center
+---
 >                 method center
->                   center
+365,366c321
+<                       )
+<                       method1 
+---
 >                                   method set_center
->                   (
+368,371c323
+<                           <>
+<                           set_center
+<                           c
+<                           Array.set
+---
 >                     case
->                     (
+373c325,326
+<                            center
+---
 >                       c
 >                       Pexp_setinstvar "center"
->                       c
->                     )
->                   )
+377,380c330
+<                       method1 
+<                       (
+<                           <>
+<                           move
+---
 >                                   method move
->                   (
->                   send move
->                   (
->                     center
->                   )
->                   :
->                       arrow
->                          int
->                         (
->                         )
->                          unit
->                         (
->                         )
->                                     )
->                                 )
->   )
->   class
->   (
->       params =
->           (
+397d346
+<      )
+402,403c351
+<        c
+<        a
+---
 >             "a"
->           )
->       class name = circle
->       class expr =
+406a355,358
 >           fun
 >           label=""
 >                     c
 >             a
->             class_structure
->               (
+409,410c361
+<                       classConstraint 
+<                       (
+---
 >                 Pcf_constr ([62,1034+2]..[62,1034+24])
->                     a
+412,414c363
+<                           point
+<                       )
+<                       classValue 
+---
 >                     Ptyp_class point
->                     (
->                     )
->                     (
->                     )
+416,418d364
+<                           <>
+<                           center
+<                           c
+420d365
+<                       method1 
+422,424d366
+<                           <>
+<                           center
+<                           center
+426,429c368
+<                       method1 
+<                       (
+<                           <>
+<                           set_center
+---
 >                 Pcf_val "center" Mutable Fresh ([63,1059+2]..[63,1059+24])
->                   c
+431,432c370
+<                           Array.set
+<                           (
+---
 >                 method center
->                   center
+433a372,377
 >                                   method set_center
 >                   (
 >                     case
 >                     (
 >                       c
 >                       Pexp_setinstvar "center"
->                       c
->                     )
->                   )
+437,440c381
+<                       method1 
+<                       (
+<                           <>
+<                           move
+---
 >                                   method move
->                   send move
->                   (
->                     center
->                   )
->                                 )
->   )
->   let
->   (
->     (
->       c
->       c'
->     )
->       (
->         new circle
->         (
->             p
->         )
->         new circle
->         (
->             p'
->         )
->       )
->   )
->   class
->   (
->       params =
->           (
+447d387
+<      )
+469c409
+<        c
+---
 >             "a"
->           )
->       class name = color_circle
->       class expr =
+472a413,415
 >           fun
 >           label=""
 >                     c
->             class_structure
->               (
+475,476c418
+<                       classConstraint 
+<                       (
+---
 >                 Pcf_constr ([72,1262+2]..[72,1262+30])
->                     a
+478,480c420
+<                           color_point
+<                       )
+<                       inheritance 
+---
 >                     Ptyp_class color_point
->                     (
+482,483c422
+<                           <>
+<                           classArgs 
+---
 >                     )
->                     (
->                     )
+485,486d423
+<                               <"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[],"classPath"([],"circle")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+<                               c
+487a425,429
 >                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr circle
 >                       (
 >                           a
->                       )
->                     (
+489d430
+<                       method1 
+491,492c432,434
+<                           <>
+<                           color
+---
 >                         c
 >                     )
 >                                   method color
->                   send color
->                   (
->                     center
->                   )
->                                 )
->   )
->   let
->   (
->     c''
->       new color_circle
->       (
->           p
->       )
->   )
->   let
->   (
->     c''
->       new color_circle
->       (
->           p'
->       )
->   )
->   (
->   c''
+499d440
+<      )
+516d456
+<     brackets2 
+518a459
 >   :
->          circle
->       (
->            color_point
->           (
->           )
->       )
->   )
->   (
->   c''
+526d466
+<     brackets2 
+528a469
 >   :
->          circle
->       (
->            point
->           (
->           )
->       )
->   )
->   (
->     case
->     (
->       x
->       (
->       x
+540d480
+<      brackets3 
+542a483
 >       :
->            color_circle
->           (
->                color_point
->               (
->               )
->           )
->            circle
->           (
->                point
->               (
->               )
->           )
->       )
->     )
->   )
->   class
->   (
->       params =
->           (
->           )
->       class name = printable_point
->       class expr =
+562d502
+<        y
+565a506,508
 >           fun
 >           label=""
 >                     y
->             class_structure
->               (
+568c511,513
+<                       inheritance 
+---
 >                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr point
->                       (
->                       )
+570,575d514
+<                           <>
+<                           classArgs 
+<                           (
+<                               classPath 
+<                               (
+<                                   point
+576a516
 >                     (
->                         y
->                     )
+579,583c519
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           print
+---
 >                                   method print
->                   print_int
->                   (
->                       send get_x
->                       (
->                         s
->                       )
->                   )
->                                 )
->   )
->   let
->   (
->     p
->       new printable_point
->       (
->           7
->       )
->   )
->   send print
->   (
->     p
->   )
->   class
->   (
->       params =
->           (
->           )
->       class name = printable_color_point
->       class expr =
+593d528
+<      )
+610,611d544
+<        y
+<        c
+614a548,553
 >           fun
 >           label=""
 >                     y
 >             fun
 >             label=""
 >                         c
->               class_structure
->                 (
+617c556,558
+<                       inheritance 
+---
 >                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr color_point
->                         (
->                         )
+619,624d559
+<                           <>
+<                           classArgs 
+<                           (
+<                               classPath 
+<                               (
+<                                   color_point
+625a561
 >                       (
->                           y
->                           c
->                       )
+629,633c565,567
+<                       )
+<                       inheritance 
+<                       (
+<                           <>
+<                           classArgs 
+---
 >                                       Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr printable_point
->                         (
->                         )
+635,637d568
+<                               classPath 
+<                               (
+<                                   printable_point
+638a570
 >                       (
->                           y
->                       )
+641,646c573,574
+<                           super
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           print
+---
 >                       "super"
 >                   method print
->                     sequence
->                     (
->                       print_string
->                       (
->                           "("
->                       )
->                     ;
->                       sequence
->                       (
->                         send print
->                         (
->                           super
->                         )
->                       ;
->                         sequence
->                         (
->                           print_string
->                           (
->                               ", "
->                           )
->                         ;
->                           sequence
->                           (
->                             print_string
->                             (
->                                 send color
->                                 (
->                                   self
->                                 )
->                             )
->                           ;
->                             print_string
->                             (
->                                 ")"
->                             )
->                           )
->                         )
->                       )
->                     )
->                                     )
->   )
->   let
->   (
->     p'
->       new printable_color_point
->       (
->           7
->           "red"
->       )
->   )
->   send print
->   (
->     p'
->   )
->   class
->   (
->       params =
->           (
->           )
->       class name = functional_point
->       class expr =
+688d615
+<      )
+706d632
+<        y
+709a636,638
 >           fun
 >           label=""
 >                     y
->             class_structure
->               (
+712,715c641
+<                       classValue 
+<                       (
+<                           <>
+<                           x
+---
 >                 Pcf_val "x" Immutable Fresh ([107,2039+2]..[107,2039+11])
->                   y
+717,721c643
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           get_x
+---
 >                 method get_x
->                   x
+723,724c645,647
+<                       )
+<                       method1 
+---
 >                                   method move
 >                   (
 >                     case
->                     (
->                       d
+726,727d648
+<                           <>
+<                           move
+729c650
+<                           brackets4 
+---
 >                       Pexp_override
->                       (
+731c652
+<                               x
+---
 >                         <override> "x"
->                           +
->                           (
->                               x
->                               d
->                           )
->                       )
->                     )
->                   )
->                                 )
+740a662
 >   )
->   let
->   (
->     p
->       new functional_point
->       (
->           7
->       )
->   )
->   send get_x
->   (
->     p
->   )
->   send get_x
->   (
->     send move
->     (
->       p
->     )
->     (
->         3
->     )
->   )
->   send get_x
->   (
->     p
->   )
->   (
->     case
->     (
->       x
->       (
->       x
+771d692
+<      brackets2 
+773a695
 >       :
->                  functional_point
->           (
->           )
->       )
->     )
->   )
->   class
->   (
->       params =
->           (
+784c706
+<        ()
+---
 >             "a"
->           )
->       class name = lst
->       class expr =
+787a710,712
 >           fun
 >           label=""
 >                     ()
->                       class_structure
->               (
+790,794c715,716
+<                       method3 
+<                       (
+<                           null
+<                           polytype1 
+<                           (
+---
 >                 Pcf_virt "null" Public ([123,2334+2]..[123,2334+28])
 >                     poly
->                        bool
->                       (
->                       )
+798,804c720,721
+<                           )
+<                       )
+<                       method3 
+<                       (
+<                           hd
+<                           polytype1 
+<                           (
+---
 >                 Pcf_virt "hd" Public ([124,2363+2]..[124,2363+24])
 >                     poly
->                       a
+806,812c723,724
+<                           )
+<                       )
+<                       method3 
+<                       (
+<                           tl
+<                           polytype1 
+<                           (
+---
 >                 Pcf_virt "tl" Public ([125,2388+2]..[125,2388+28])
 >                     poly
->                        lst
->                       (
->                           a
->                       )
+817,819c729,731
+<                           )
+<                       )
+<                       method1 
+---
 >                 method map
 >                   (
 >                     case
->                     (
->                       f
->                       (
->                       ifthenelse
->                       (
->                         if
->                         (
->                           send null
->                           (
->                             self
->                           )
->                         )
->                         then
->                         (
->                           new nil
->                           (
->                               ()
->                                                         )
->                         )
->                         else
->                         (
->                             new cons
->                             (
->                                 f
->                                 (
->                                     send hd
->                                     (
->                                       self
->                                     )
->                                 )
->                                 send map
->                                 (
->                                   send tl
->                                   (
->                                     self
->                                   )
->                                 )
->                                 (
->                                     f
->                                 )
->                             )
->                         )
->                       )
->                       :
->                            lst
->                           (
->                               a
->                           )
->                                             )
->                     )
+821,822d732
+<                           <>
+<                           map
+872c782,785
+<                       method1 
+---
 >                   )
 >                                   method iter
 >                   (
 >                     case
->                     (
->                       f
->                         arrow
->                           a
->                            unit
->                           (
->                           )
->                       ifthenelse
->                       (
->                         if
->                         (
->                           send null
->                           (
->                             self
->                           )
->                         )
->                         then
->                         (
->                           ()
->                                                   )
->                         else
->                         (
->                             sequence
->                             (
->                               f
->                               (
->                                   send hd
->                                   (
->                                     self
->                                   )
->                               )
->                             ;
->                               send iter
->                               (
->                                 send tl
->                                 (
->                                   self
->                                 )
->                               )
->                               (
->                                   f
->                               )
->                             )
->                         )
->                       )
->                     )
->                   )
+874,875d786
+<                           <>
+<                           iter
+897,898d807
+<                             beginEnd 
+<                             (
+924c833,835
+<                       method1 
+---
 >                                   method print
 >                   (
 >                     case
->                     (
->                       f
->                         arrow
->                           a
->                            unit
->                           (
->                           )
->                       sequence
->                       (
->                         print_string
->                         (
->                             "("
->                         )
->                       ;
->                         sequence
->                         (
->                           send iter
->                           (
->                             self
->                           )
->                           (
->                               (
->                                 case
->                                 (
->                                   x
->                                   sequence
->                                   (
->                                     f
->                                     (
->                                         x
->                                     )
->                                   ;
->                                     print_string
->                                     (
->                                         "::"
->                                     )
->                                   )
+926,927d836
+<                           <>
+<                           print
+983a893
 >                                 )
->                               )
->                           )
->                         ;
->                           sequence
->                           (
->                             print_string
->                             (
->                                 "[]"
->                             )
->                           ;
->                             print_string
->                             (
->                                 ")"
->                             )
->                           )
->                         )
->                       )
->                     )
->                   )
->                                 )
->       params =
->           (
+986c896
+<        ()
+---
 >             "a"
->           )
->       class name = nil
->       class expr =
+989a900,902
 >           fun
 >           label=""
 >                     ()
->                       class_structure
->               (
+992c905,907
+<                       inheritance 
+---
 >                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr lst
->                       (
+994,995c909,910
+<                           <>
+<                           classArgs 
+---
 >                           a
 >                       )
->                     (
->                         ()
->                                             )
+997d911
+<                               <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+1000,1004c914
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           null
+---
 >                                   method null
->                   true
+1006,1010c916
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           hd
+---
 >                                                     method hd
->                   failwith
->                   (
->                       "hd"
->                   )
+1015,1019c921
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           tl
+---
 >                                   method tl
->                   failwith
->                   (
->                       "tl"
->                   )
->                                 )
->       params =
->           (
+1025d926
+<                    )
+1028,1029c929
+<        h
+<        t
+---
 >             "a"
->           )
->       class name = cons
->       class expr =
+1032a933,938
 >           fun
 >           label=""
 >                     h
 >             fun
 >             label=""
 >                         t
->               class_structure
->                 (
+1035c941,943
+<                       inheritance 
+---
 >                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr lst
->                         (
+1037,1038c945,946
+<                           <>
+<                           classArgs 
+---
 >                             a
 >                         )
->                       (
->                           ()
->                                                 )
+1040d947
+<                               <"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[],"classPath"([],"lst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+1043,1047c950
+<                       )
+<                       classValue 
+<                       (
+<                           <>
+<                           h
+---
 >                                       Pcf_val "h" Immutable Fresh ([150,2997+2]..[150,2997+11])
->                     h
+1049,1052c952
+<                       )
+<                       classValue 
+<                       (
+<                           <>
+---
 >                   Pcf_val "t" Immutable Fresh ([150,2997+12]..[150,2997+21])
->                     t
+1054,1059c954
+<                           t
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           null
+---
 >                   method null
->                     false
+1061,1065c956
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           hd
+---
 >                                                           method hd
->                     h
+1067,1071c958
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           tl
+---
 >                                       method tl
->                     t
->                                     )
->   )
->   let
->   (
->     l1
->       new cons
->       (
->           3
->           new cons
->           (
->               10
->               new nil
->               (
->                   ()
->                                 )
->           )
->       )
->   )
->   send print
->   (
->     l1
->   )
->   (
->       print_int
->   )
->   let
->   (
->     l2
->       send map
->       (
->         l1
->       )
->       (
->           (
->             case
->             (
->               x
->               +
->               (
->                   x
->                   1
->               )
->             )
->           )
->       )
->   )
->   send print
->   (
->     l2
->   )
->   (
->       print_int
->   )
->   let
->   (
->     map_list
->       (
->         case
->         (
->           f
->           (
->             case
->             (
->               x
->                  lst
->                 (
->                     a
->                 )
->               ifthenelse
->               (
->                 if
->                 (
->                   send null
->                   (
->                     x
->                   )
->                 )
->                 then
->                 (
->                   new nil
->                   (
->                       ()
->                                         )
->                 )
->                 else
->                 (
->                     new cons
->                     (
->                         f
->                         (
->                             send hd
->                             (
->                               x
->                             )
->                         )
->                         map_list
->                         (
->                             f
->                             send tl
->                             (
->                               x
->                             )
->                         )
->                     )
->                 )
->               )
->             )
->           )
->         )
->       )
->   )
->   let
->   (
->     p1
->       map_list
->       (
->           (
->             case
->             (
->               x
->               new printable_color_point
->               (
->                   x
->                   "red"
->               )
->             )
->           )
->           l1
->       )
->   )
->   send print
->   (
->     p1
->   )
->   (
->       (
->         case
->         (
->           x
->           send print
->           (
->             x
->           )
->         )
->       )
->   )
->   class
->   (
->       params =
->           (
->           )
->       class name = comparable
->       class expr =
+1075d961
+<      )
+1224d1109
+<        ()
+1227a1113,1115
 >           fun
 >           label=""
 >                     ()
->                       class_structure
->               (
+1230,1234c1118,1119
+<                       method3 
+<                       (
+<                           leq
+<                           polytype1 
+<                           (
+---
 >                 Pcf_virt "leq" Public ([173,3539+2]..[173,3539+33])
 >                     poly
->                       arrow
->                         a
->                          bool
->                         (
->                         )
->               )
->   )
->   class
->   (
->       params =
->           (
+1242,1243d1126
+<                    )
+<      )
+1247a1131,1135
 >           )
 >       class name = int_comparable
 >       class expr =
 >           fun
 >           label=""
->                     x
->              int
->             (
->             )
->             class_structure
->               (
+1252,1254d1139
+<        )
+<        class name = int_comparable
+<        class expr = 
+1257,1260c1142,1144
+<                       inheritance 
+<                       (
+<                           <>
+<                           classArgs 
+---
 >                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr comparable
->                       (
->                       )
+1262,1264d1145
+<                               classPath 
+<                               (
+<                                   comparable
+1265a1147
 >                     (
->                         ()
->                                             )
+1268,1271c1150
+<                       )
+<                       classValue 
+<                       (
+<                           <>
+---
 >                                   Pcf_val "x" Immutable Fresh ([178,3646+2]..[178,3646+11])
->                   x
+1272a1152
 >                 method x
->                   x
+1274,1275c1154
+<                       )
+<                       method1 
+---
 >                                   method leq
->                   (
+1277,1281c1156
+<                           <>
+<                           x
+<                           x
+<                       )
+<                       method1 
+---
 >                     case
->                     (
->                       p
->                       <=
->                       (
->                           x
->                           send x
->                           (
->                             p
->                           )
->                       )
->                     )
->                   )
->                                 )
+1283,1284d1157
+<                           <>
+<                           leq
+1296a1170
 >   )
->   class
->   (
->       params =
->           (
->           )
->       class name = int_comparable2
->       class expr =
+1301d1174
+<        xi
+1304a1178,1180
 >           fun
 >           label=""
 >                     xi
->             class_structure
->               (
+1307,1312c1183,1185
+<                       inheritance 
+<                       (
+<                           <>
+<                           classArgs 
+<                           (
+<                               classPath 
+---
 >                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr int_comparable
->                       (
->                       )
->                     (
->                         xi
->                     )
+1314,1317d1186
+<                                   int_comparable
+<                               )
+<                               xi
+<                           )
+1319d1187
+<                       classValue 
+1321,1322d1188
+<                           <>
+<                           x'
+1325c1191,1193
+<                       method1 
+---
 >                                   Pcf_val "x'" Mutable Fresh ([185,3768+2]..[185,3768+21])
 >                   xi
 >                 method set_x
->                   (
+1327,1330c1195
+<                           <>
+<                           set_x
+<                           y
+<                           Array.set
+---
 >                     case
->                     (
+1332c1197,1198
+<                            x'
+---
 >                       y
 >                       Pexp_setinstvar "x'"
->                       y
->                     )
->                   )
->                                 )
->   )
->   class
->   (
->       params =
->           (
+1342c1208
+<        ()
+---
 >             "a"
->           )
->       class name = sorted_list
->       class expr =
+1345a1212,1214
 >           fun
 >           label=""
 >                     ()
->                       class_structure
->               (
+1348,1349c1217
+<                       classConstraint 
+<                       (
+---
 >                 Pcf_constr ([190,3859+2]..[190,3859+29])
->                     a
+1351c1219,1220
+<                           comparable
+---
 >                     Ptyp_class comparable
 >                     (
->                     )
->                     (
+1353d1221
+<                       classValue 
+1355,1356c1223,1224
+<                           <>
+<                           l
+---
 >                     )
 >                 Pcf_val "l" Mutable Fresh ([191,3889+2]..[191,3889+32])
->                   (
->                   []
->                                     :
->                        list
->                       (
->                           a
->                       )
->                                     )
+1365,1366c1233,1235
+<                       )
+<                       method1 
+---
 >                 method add
 >                   (
 >                     case
->                     (
->                       x
->                       let
->                       (
->                         (
->                           insert
->                             (
->                               case
->                               (
->                                 []
->                                                                 ::
->                                   (
->                                     x
->                                     []
->                                                                       )
->                               )
->                               case
->                               (
+1368,1369d1236
+<                           <>
+<                           add
+1387,1388c1254
+<                                  patternAs 
+<                                  (
+---
 >                                 Ppat_alias "l'"
->                                 ::
->                                   (
->                                     a
->                                     l
->                                   )
->                                 ifthenelse
->                                 (
->                                   if
->                                   (
->                                     send leq
->                                     (
->                                       a
->                                     )
->                                     (
->                                         x
->                                     )
->                                   )
->                                   then
->                                   (
->                                     ::
->                                       (
->                                         a
->                                         insert
->                                         (
->                                             l
->                                         )
->                                       )
->                                   )
->                                   else
->                                   (
->                                       ::
->                                         (
->                                           x
->                                           l'
->                                         )
->                                   )
->                                 )
->                               )
->                             )
->                         )
->                       in
+1394,1395d1259
+<                                      l'
+<                                  )
+1432,1434c1296
+<                             Array.set
+<                             (
+<                              l
+---
 >                         Pexp_setinstvar "l"
->                         insert
->                         (
->                             l
->                         )
->                       )
->                     )
->                   )
+1442,1445c1304
+<                       method1 
+<                       (
+<                           <>
+<                           hd
+---
 >                                   method hd
->                   List.hd
->                   (
->                       l
->                   )
->                                 )
->   )
->   let
->   (
->     l
->       new sorted_list
->       (
->           ()
->                 )
->   )
->   let
->   (
->     c
->       new int_comparable
->       (
->           10
->       )
->   )
->   send add
->   (
->     l
->   )
->   (
->       c
->   )
->   let
->   (
->     c2
->       new int_comparable2
->       (
->           15
->       )
->   )
->   send add
->   (
->     l
->   )
->   (
->       (
->       c2
+1452d1310
+<      )
+1489d1346
+<         brackets2 
+1491a1349
 >       :
->                  int_comparable
->           (
->           )
->       )
->   )
->   send add
->   (
->     new sorted_list
->     (
->         ()
->             )
->   )
->   (
->       c2
->   )
->   class
->   (
->       params =
->           (
+1510a1369,1373
 >           )
 >       class name = int_comparable3
 >       class expr =
 >           fun
 >           label=""
->                     x
->              int
->             (
->             )
->             class_structure
->               (
+1515,1517d1377
+<        )
+<        class name = int_comparable3
+<        class expr = 
+1520,1522c1380
+<                       classValue 
+<                       (
+<                           <>
+---
 >                 Pcf_val "x" Mutable Fresh ([211,4379+2]..[211,4379+19])
->                   x
+1524,1526c1382,1384
+<                           x
+<                       )
+<                       method1 
+---
 >                 method leq
 >                   (
 >                     case
->                     (
->                       y
->                          int_comparable
->                         (
->                         )
->                       <
->                       (
->                           x
->                           send x
->                           (
->                             y
->                           )
->                       )
->                     )
->                   )
+1528,1529d1385
+<                           <>
+<                           leq
+1543,1547d1398
+<                       method1 
+<                       (
+<                           <>
+<                           x
+<                           x
+1549c1400,1402
+<                       method1 
+---
 >                                   method x
 >                   x
 >                                   method setx
->                   (
+1551,1554c1404
+<                           <>
+<                           setx
+<                           y
+<                           Array.set
+---
 >                     case
->                     (
+1556c1406,1407
+<                            x
+---
 >                       y
 >                       Pexp_setinstvar "x"
->                       y
->                     )
->                   )
->                                 )
->   )
->   let
->   (
->     c3
->       new int_comparable3
->       (
->           15
->       )
->   )
->   send add
->   (
->     l
->   )
->   (
->       (
->       c3
+1575d1425
+<         brackets2 
+1577a1428
 >       :
->                  int_comparable
->           (
->           )
->       )
->   )
->   send add
->   (
->     new sorted_list
->     (
->         ()
->             )
->   )
->   (
->       c3
->   )
->   let
->   (
->     sort
->       (
->         case
->         (
->           l
->              list
->             (
+1602c1453,1457
+<        	     comparable
+---
 >                 Ptyp_class comparable
 >                 (
 >                 )
 >                 (
 >                 )
->             )
->           Sort.list
->           (
->               (
->                 case
->                 (
->                   x
->                   send leq
->                   (
->                     x
->                   )
->                 )
->               )
->               l
->           )
->         )
->       )
->   )
->   let
->   (
->     pr
->       (
->         case
->         (
->           l
->           sequence
->           (
->             List.map
->             (
->                 (
->                   case
->                   (
->                     c
->                     sequence
->                     (
->                       print_int
->                       (
->                           send x
->                           (
->                             c
->                           )
->                       )
->                     ;
->                       print_string
->                       (
->                           " "
->                       )
->                     )
->                   )
->                 )
->                 l
->             )
->           ;
->             print_newline
->             (
->                 ()
->                             )
->           )
->         )
->       )
->   )
->   let
->   (
->     l
->       ::
->         (
->           new int_comparable
->           (
->               5
->           )
->           ::
->             (
->               (
->               new int_comparable3
->               (
->                   2
->               )
+1675d1529
+<         brackets2 
+1680a1535
 >               :
->                                  int_comparable
->                   (
->                   )
->               )
->               ::
->                 (
->                   new int_comparable
->                   (
->                       4
->                   )
->                   []
->                                   )
->             )
->         )
->   )
->   pr
->   (
->       l
->   )
->   pr
->   (
->       sort
->       (
->           l
->       )
->   )
->   let
->   (
->     l
->       ::
->         (
->           new int_comparable2
->           (
->               2
->           )
->           ::
->             (
->               new int_comparable2
->               (
->                   0
->               )
->               []
->                           )
->         )
->   )
->   pr
->   (
->       l
->   )
->   pr
->   (
->       sort
->       (
->           l
->       )
->   )
->   let
->   (
->     min
->       (
->         case
->         (
->           x
+1744c1599,1603
+<         		 comparable
+---
 >             Ptyp_class comparable
 >             (
 >             )
 >             (
 >             )
->           (
->             case
->             (
->               y
->               ifthenelse
->               (
->                 if
->                 (
->                   send leq
->                   (
->                     x
->                   )
->                   (
->                       y
->                   )
->                 )
->                 then
->                 (
->                   x
->                 )
->                 else
->                 (
->                     y
->                 )
->               )
->             )
->           )
->         )
->       )
->   )
->   send x
->   (
->     min
->     (
->         new int_comparable
->         (
->             7
->         )
->         new int_comparable
->         (
->             11
->         )
->     )
->   )
->   send x
->   (
->     min
->     (
->         new int_comparable2
->         (
->             5
->         )
->         new int_comparable2
->         (
->             3
->         )
->     )
->   )
->   class
->   (
->       params =
->           (
+1807,1808c1666
+<        x
+<        a
+---
 >             "a"
->           )
->       class name = link
->       class expr =
+1811a1670,1673
 >           fun
 >           label=""
 >                     x
 >             a
->             class_structure
->               (
+1814,1816c1676
+<                       classValue 
+<                       (
+<                           <>
+---
 >                 Pcf_val "x" Mutable Fresh ([242,5288+2]..[242,5288+19])
->                   x
+1818,1823c1678
+<                           x
+<                       )
+<                       classValue 
+<                       (
+<                           <>
+<                           next
+---
 >                 Pcf_val "next" Mutable Fresh ([243,5308+2]..[243,5308+39])
->                   (
->                   None
->                                     :
->                        option
->                       (
->                           b
->                       )
->                                     )
+1832,1835c1687
+<                       )
+<                       method1 
+<                       (
+<                           <>
+---
 >                 method x
->                   x
+1837,1842c1689
+<                           x
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           next
+---
 >                                   method next
->                   next
+1844,1845c1691
+<                       )
+<                       method1 
+---
 >                                   method set_x
->                   (
+1847,1850c1693
+<                           <>
+<                           set_x
+<                           y
+<                           Array.set
+---
 >                     case
->                     (
+1852c1695,1696
+<                            x
+---
 >                       y
 >                       Pexp_setinstvar "x"
->                       y
->                     )
->                   )
+1856c1700
+<                       method1 
+---
 >                                   method set_next
->                   (
+1858,1861c1702
+<                           <>
+<                           set_next
+<                           l
+<                           Array.set
+---
 >                     case
->                     (
+1863c1704,1705
+<                            next
+---
 >                       l
 >                       Pexp_setinstvar "next"
->                       l
->                     )
->                   )
+1867c1709,1711
+<                       method1 
+---
 >                                   method append
 >                   (
 >                     case
->                     (
->                       l
->                       match
->                       next
->                       (
->                         case
->                         (
->                           None
->                                                     send set_next
->                           (
->                             self
->                           )
->                           (
->                               l
->                           )
->                         )
->                         case
->                         (
->                           Some
->                             l'
->                           send append
->                           (
->                             l'
->                           )
->                           (
->                               l
->                           )
->                         )
->                       )
->                     )
->                   )
->                                 )
+1869,1870d1712
+<                           <>
+<                           append
+1901a1744
 >   )
->   class
->   (
->       params =
->           (
+1906c1749
+<        x
+---
 >             "a"
->           )
->       class name = double_link
->       class expr =
+1909a1753,1755
 >           fun
 >           label=""
 >                     x
->             class_structure
->               (
+1912c1758,1760
+<                       inheritance 
+---
 >                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr link
->                       (
+1914,1915c1762,1763
+<                           <>
+<                           classArgs 
+---
 >                           a
 >                       )
->                     (
->                         x
->                     )
+1917d1764
+<                               <"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[],"classPath"([],"link")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+1920,1924c1767
+<                       )
+<                       classValue 
+<                       (
+<                           <>
+<                           prev
+---
 >                                   Pcf_val "prev" Mutable Fresh ([258,5631+2]..[258,5631+25])
->                   None
+1926,1930c1769
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           prev
+---
 >                                   method prev
->                   prev
+1932,1933c1771,1773
+<                       )
+<                       method1 
+---
 >                                   method set_next
 >                   (
 >                     case
->                     (
->                       l
->                       sequence
->                       (
+1935,1936d1774
+<                           <>
+<                           set_next
+1940,1942c1778
+<                             Array.set
+<                             (
+<                              next
+---
 >                         Pexp_setinstvar "next"
->                         l
->                       ;
->                         match
->                         l
->                         (
->                           case
->                           (
->                             Some
->                               l
->                             send set_prev
->                             (
->                               l
->                             )
->                             (
->                                 Some
->                                   self
->                             )
->                           )
->                           case
->                           (
->                             None
->                                                         ()
->                                                       )
->                         )
->                       )
->                     )
+1944d1779
+<                             )
+1970c1805,1806
+<                       method1 
+---
 >                   )
 >                                   method set_prev
->                   (
+1972,1975c1808
+<                           <>
+<                           set_prev
+<                           l
+<                           Array.set
+---
 >                     case
->                     (
+1977c1810,1811
+<                            prev
+---
 >                       l
 >                       Pexp_setinstvar "prev"
->                       l
->                     )
->                   )
->                                 )
->   )
->   let
->   (
->     fold_right
->       (
->         case
->         (
->           f
->           (
->             case
->             (
->               l
->                  option
->                 (
+1996c1830,1835
+<         		  		    <"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"classPath"([],"link")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+---
 >                     Ptyp_class link
 >                     (
 >                         a
 >                     )
 >                     (
 >                     )
->                 )
->               (
->                 case
->                 (
->                   accu
->                   match
->                   l
->                   (
->                     case
->                     (
->                       None
->                                             accu
->                     )
->                     case
->                     (
->                       Some
->                         l
->                       f
->                       (
->                           send x
->                           (
->                             l
->                           )
->                           fold_right
->                           (
->                               f
->                               send next
->                               (
->                                 l
->                               )
->                               accu
->                           )
->                       )
->                     )
->                   )
->                 )
->               )
->             )
->           )
->         )
->       )
->   )
->   class
->   (
->       params =
->           (
->           )
->       class name = calculator
->       class expr =
+2043d1881
+<        ()
+2046a1885,1887
 >           fun
 >           label=""
 >                     ()
->                       class_structure
->               (
+2049,2052c1890
+<                       classValue 
+<                       (
+<                           <>
+<                           arg
+---
 >                 Pcf_val "arg" Mutable Fresh ([275,6074+2]..[275,6074+22])
->                   0.
+2054,2058c1892
+<                       )
+<                       classValue 
+<                       (
+<                           <>
+<                           acc
+---
 >                 Pcf_val "acc" Mutable Fresh ([276,6097+2]..[276,6097+22])
->                   0.
+2060,2064c1894
+<                       )
+<                       classValue 
+<                       (
+<                           <>
+<                           equals
+---
 >                 Pcf_val "equals" Mutable Fresh ([277,6120+2]..[277,6120+42])
->                   (
->                     case
->                     (
->                       s
->                       send arg
->                       (
->                         s
->                       )
->                     )
->                   )
+2075,2079c1905
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           arg
+---
 >                 method arg
->                   arg
+2081,2084c1907
+<                       )
+<                       method1 
+<                       (
+<                           <>
+---
 >                                   method acc
->                   acc
+2086,2088c1909,1911
+<                           acc
+<                       )
+<                       method1 
+---
 >                                   method enter
 >                   (
 >                     case
->                     (
->                       n
->                       sequence
->                       (
+2090,2091d1912
+<                           <>
+<                           enter
+2095,2097c1916
+<                             Array.set
+<                             (
+<                              arg
+---
 >                         Pexp_setinstvar "arg"
->                         n
->                       ;
->                         self
->                       )
->                     )
+2099d1917
+<                             )
+2104,2107c1922,1923
+<                       method1 
+<                       (
+<                           <>
+<                           add
+---
 >                   )
 >                                   method add
->                   sequence
->                   (
+2110,2112c1926
+<                             Array.set
+<                             (
+<                              acc
+---
 >                     Pexp_setinstvar "acc"
->                     equals
->                     (
->                         self
->                     )
->                   ;
->                     sequence
->                     (
+2117d1930
+<                             )
+2121,2123c1934
+<                               Array.set
+<                               (
+<                                equals
+---
 >                       Pexp_setinstvar "equals"
->                       (
->                         case
->                         (
->                           s
->                           +.
->                           (
->                               send acc
->                               (
->                                 s
->                               )
->                               send arg
->                               (
->                                 s
->                               )
->                           )
->                         )
->                       )
->                     ;
->                       self
->                     )
->                   )
+2141d1951
+<                               )
+2146,2150c1956
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           sub
+---
 >                                   method sub
->                   sequence
->                   (
+2153,2155c1959
+<                             Array.set
+<                             (
+<                              acc
+---
 >                     Pexp_setinstvar "acc"
->                     equals
->                     (
->                         self
->                     )
->                   ;
->                     sequence
->                     (
+2160d1963
+<                             )
+2164,2166c1967
+<                               Array.set
+<                               (
+<                                equals
+---
 >                       Pexp_setinstvar "equals"
->                       (
->                         case
->                         (
->                           s
->                           -.
->                           (
->                               send acc
->                               (
->                                 s
->                               )
->                               send arg
->                               (
->                                 s
->                               )
->                           )
->                         )
->                       )
->                     ;
->                       self
->                     )
->                   )
+2184d1984
+<                               )
+2189,2193c1989
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           equals
+---
 >                                   method equals
->                   equals
->                   (
->                       self
->                   )
->                                 )
->   )
->   send equals
->   (
->     send enter
->     (
->       new calculator
->       (
->           ()
->                 )
->     )
->     (
->         5.
->     )
->   )
->   send equals
->   (
->     send enter
->     (
->       send sub
->       (
->         send enter
->         (
->           new calculator
->           (
->               ()
->                         )
->         )
->         (
->             5.
->         )
->       )
->     )
->     (
->         3.5
->     )
->   )
->   send equals
->   (
->     send add
->     (
->       send add
->       (
->         send enter
->         (
->           new calculator
->           (
->               ()
->                         )
->         )
->         (
->             5.
->         )
->       )
->     )
->   )
->   class
->   (
->       params =
->           (
->           )
->       class name = calculator
->       class expr =
+2200d1995
+<      )
+2259d2053
+<        ()
+2262a2057,2059
 >           fun
 >           label=""
 >                     ()
->                       class_structure
->               (
+2265,2268c2062
+<                       classValue 
+<                       (
+<                           <>
+<                           arg
+---
 >                 Pcf_val "arg" Mutable Fresh ([297,6641+2]..[297,6641+22])
->                   0.
+2270,2274c2064
+<                       )
+<                       classValue 
+<                       (
+<                           <>
+<                           acc
+---
 >                 Pcf_val "acc" Mutable Fresh ([298,6664+2]..[298,6664+22])
->                   0.
+2276,2280c2066
+<                       )
+<                       classValue 
+<                       (
+<                           <>
+<                           equals
+---
 >                 Pcf_val "equals" Mutable Fresh ([299,6687+2]..[299,6687+42])
->                   (
->                     case
->                     (
->                       s
->                       send arg
->                       (
->                         s
->                       )
->                     )
->                   )
+2291,2294c2077
+<                       )
+<                       method1 
+<                       (
+<                           <>
+---
 >                 method arg
->                   arg
+2296,2301c2079
+<                           arg
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           acc
+---
 >                                   method acc
->                   acc
+2303,2304c2081,2083
+<                       )
+<                       method1 
+---
 >                                   method enter
 >                   (
 >                     case
->                     (
->                       n
->                       sequence
->                       (
+2306,2307d2084
+<                           <>
+<                           enter
+2311,2313c2088
+<                             Array.set
+<                             (
+<                              arg
+---
 >                         Pexp_setinstvar "arg"
->                         n
->                       ;
->                         self
->                       )
->                     )
+2315d2089
+<                             )
+2320,2324c2094,2096
+<                       method1 
+<                       (
+<                           <>
+<                           add
+<                           brackets4 
+---
 >                   )
 >                                   method add
 >                   Pexp_override
->                   (
+2326c2098
+<                               acc
+---
 >                     <override> "acc"
->                       equals
->                       (
->                           self
->                       )
+2331,2332c2103,2112
+<                               <"equals","function"("patternMatching"([],"patternValueName"("s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"+.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+<                           )
+---
 >                     <override> "equals"
 >                       (
 >                         case
@@ -2111,9 +1324,15 @@
 >                               send acc
 >                               (
 >                                 s
->                               )
+2334c2114
+<                       method1 
+---
 >                               send arg
->                               (
+2336,2338c2116,2123
+<                           <>
+<                           sub
+<                           brackets4 
+---
 >                                 s
 >                               )
 >                           )
@@ -2122,12 +1341,14 @@
 >                   )
 >                                   method sub
 >                   Pexp_override
->                   (
+2340c2125
+<                               acc
+---
 >                     <override> "acc"
->                       equals
->                       (
->                           self
->                       )
+2345,2346c2130,2139
+<                               <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"-.","hash"("valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+<                           )
+---
 >                     <override> "equals"
 >                       (
 >                         case
@@ -2138,9 +1359,14 @@
 >                               send acc
 >                               (
 >                                 s
->                               )
+2348c2141
+<                       method1 
+---
 >                               send arg
->                               (
+2350,2351c2143,2149
+<                           <>
+<                           equals
+---
 >                                 s
 >                               )
 >                           )
@@ -2148,253 +1374,156 @@
 >                       )
 >                   )
 >                                   method equals
->                   equals
->                   (
->                       self
->                   )
->                                 )
->   )
->   send equals
->   (
->     send enter
->     (
->       new calculator
->       (
->           ()
->                 )
->     )
->     (
->         5.
->     )
->   )
->   send equals
->   (
->     send enter
->     (
->       send sub
->       (
->         send enter
->         (
->           new calculator
->           (
->               ()
->                         )
->         )
->         (
->             5.
->         )
->       )
->     )
->     (
->         3.5
->     )
->   )
->   send equals
->   (
->     send add
->     (
->       send add
->       (
->         send enter
->         (
->           new calculator
->           (
->               ()
->                         )
->         )
->         (
->             5.
->         )
->       )
->     )
->   )
->   class
->   (
->       params =
->           (
->           )
->       class name = calculator
->       class expr =
+2358d2155
+<      )
+2417,2418d2213
+<        arg
+<        acc
+2421a2217,2222
 >           fun
 >           label=""
 >                     arg
 >             fun
 >             label=""
 >                         acc
->               class_structure
->                 (
+2424,2427c2225
+<                       classValue 
+<                       (
+<                           <>
+<                           arg
+---
 >                   Pcf_val "arg" Immutable Fresh ([313,7181+2]..[313,7181+15])
->                     arg
+2429,2432c2227
+<                       )
+<                       classValue 
+<                       (
+<                           <>
+---
 >                   Pcf_val "acc" Immutable Fresh ([314,7197+2]..[314,7197+15])
->                     acc
+2434,2436c2229,2231
+<                           acc
+<                       )
+<                       method1 
+---
 >                   method enter
 >                     (
 >                       case
->                       (
->                         n
->                         new calculator
->                         (
->                             n
->                             acc
->                         )
->                       )
+2438,2439d2232
+<                           <>
+<                           enter
+2447,2450c2240,2241
+<                       method1 
+<                       (
+<                           <>
+<                           add
+---
 >                     )
 >                                       method add
->                     new calculator_add
->                     (
->                         arg
->                         send equals
->                         (
->                           self
->                         )
->                     )
+2459,2463c2250
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           sub
+---
 >                                       method sub
->                     new calculator_sub
->                     (
->                         arg
->                         send equals
->                         (
->                           self
->                         )
->                     )
+2472,2476c2259
+<                       )
+<                       method1 
+<                       (
+<                           <>
+<                           equals
+---
 >                                       method equals
->                     arg
->                                     )
->       params =
->           (
->           )
->       class name = calculator_add
->       class expr =
+2479d2261
+<                    )
+2482,2483d2263
+<        arg
+<        acc
+2486a2267,2272
 >           fun
 >           label=""
 >                     arg
 >             fun
 >             label=""
 >                         acc
->               class_structure
->                 (
+2489,2492c2275,2277
+<                       inheritance 
+<                       (
+<                           <>
+<                           classArgs 
+---
 >                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr calculator
->                         (
->                         )
+2494,2496d2278
+<                               classPath 
+<                               (
+<                                   calculator
+2497a2280
 >                       (
->                           arg
->                           acc
->                       )
+2501,2502c2284,2286
+<                       )
+<                       method1 
+---
 >                                       method enter
 >                     (
 >                       case
->                       (
->                         n
->                         new calculator_add
->                         (
->                             n
->                             acc
->                         )
->                       )
+2504,2505d2287
+<                           <>
+<                           enter
+2513,2516c2295,2296
+<                       method1 
+<                       (
+<                           <>
+<                           equals
+---
 >                     )
 >                                       method equals
->                     +.
->                     (
->                         acc
->                         arg
->                     )
->                                     )
->       params =
->           (
->           )
->       class name = calculator_sub
->       class expr =
+2523d2302
+<                    )
+2526,2527d2304
+<        arg
+<        acc
+2530a2308,2313
 >           fun
 >           label=""
 >                     arg
 >             fun
 >             label=""
 >                         acc
->               class_structure
->                 (
+2533c2316,2318
+<                       inheritance 
+---
 >                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr calculator
->                         (
->                         )
+2535,2540d2319
+<                           <>
+<                           classArgs 
+<                           (
+<                               classPath 
+<                               (
+<                                   calculator
+2541a2321
 >                       (
->                           arg
->                           acc
->                       )
+2545,2546c2325,2327
+<                       )
+<                       method1 
+---
 >                                       method enter
 >                     (
 >                       case
->                       (
->                         n
->                         new calculator_sub
->                         (
->                             n
->                             acc
->                         )
->                       )
+2548,2549d2328
+<                           <>
+<                           enter
+2557,2560c2336,2337
+<                       method1 
+<                       (
+<                           <>
+<                           equals
+---
 >                     )
 >                                       method equals
->                     -.
->                     (
->                         acc
->                         arg
->                     )
->                                     )
->   )
->   let
->   (
->     calculator
->       new calculator
->       (
->           0.
->           0.
->       )
->   )
->   send equals
->   (
->     send enter
->     (
->       calculator
->     )
->     (
->         5.
->     )
->   )
->   send equals
->   (
->     send enter
->     (
->       send sub
->       (
->         send enter
->         (
->           calculator
->         )
->         (
->             5.
->         )
->       )
->     )
->     (
->         3.5
->     )
->   )
->   send equals
->   (
->     send add
->     (
->       send add
->       (
->         send enter
->         (
->           calculator
->         )
->         (
->             5.
->         )
->       )
->     )
->   )
-> )
+2568d2344
+<      )
