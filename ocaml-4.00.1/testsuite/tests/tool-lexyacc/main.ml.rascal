@@ -37,23 +37,20 @@
             )
             then
             (
-             beginEnd 
+             
+             sequence
              (
-                 
-                 sequence
-                 (
-                   prerr_string
-                   (
-                       "Usage: camllex <input file>\n"
-                   )
-                 ;
-                   exit
-                   (
-                       2
-                   )
-                 )
-                     							
+               prerr_string
+               (
+                   "Usage: camllex <input file>\n"
+               )
+             ;
+               exit
+               (
+                   2
+               )
              )
+                 							
             )
             else
             (
@@ -73,7 +70,7 @@
                Sys.argv
                1
               )
-                  													 
+              												 
              							    		   
                									  
             )
@@ -176,20 +173,20 @@
                         (
                            									  
                          
-                          patternAs 
+                          alias def
                           (
-                              
-                              Lexdef
-                              
-                              (
-                               header
-                                   						 
-                              	_
-                              
-                              )
-                              									  
-                              def
+                            
+                            Lexdef
+                            
+                            (
+                             header
+                                 						 
+                            	_
+                            
+                            )
+                            									  
                           )
+                              									   
                           
                           try
                           Grammar.lexer_definition
@@ -323,19 +320,19 @@
                           (
                              									  
                            
-                            patternAs 
+                            alias dfa
                             (
-                                
-                                (
-                                 init
-                                     						 
-                                	states
-                                
-                                	acts
-                                
-                                )
-                                dfa
+                              
+                              (
+                               init
+                                   						 
+                              	states
+                              
+                              	acts
+                              
+                              )
                             )
+                                									   
                             make_dfa
                             (
                                 def

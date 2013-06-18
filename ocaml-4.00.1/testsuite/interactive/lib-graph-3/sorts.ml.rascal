@@ -16,106 +16,68 @@
      (
      )
      kind =
+    (
      
      
      							     
       
       array
-      polytype1 
-      (
-          
-           array
-           (
-             
-             int
-             (
-             )
-             								  
-           )
-           
-              									
-      )
+      poly
+      
+       array
+       (
+         int
+       )
+       
+          									
+                                             
      							     
       
       x0
-      polytype1 
-      (
-          
-          int
-          (
-          )
-          								  
-      )
+      poly
+      int
+                                             
      							     
       
       y0
-      polytype1 
-      (
-          
-          int
-          (
-          )
-          								  
-      )
+      poly
+      int
+                                             
      							     
       
       width
-      polytype1 
-      (
-          
-          int
-          (
-          )
-          								  
-      )
+      poly
+      int
+                                             
      							     
       
       height
-      polytype1 
-      (
-          
-          int
-          (
-          )
-          								  
-      )
+      poly
+      int
+                                             
      							     
       
       nelts
-      polytype1 
-      (
-          
-          int
-          (
-          )
-          								  
-      )
+      poly
+      int
+                                             
      							     
       
       maxval
-      polytype1 
-      (
-          
-          int
-          (
-          )
-          								  
-      )
+      poly
+      int
+                                             
      							     
       
       rad
-      polytype1 
-      (
-          
-          int
-          (
-          )
-          								  
-      )
+      poly
+      int
+                                             
      							     
      	                           
      														  
      														 
+    )
     											   
   								        
   )
@@ -282,7 +244,7 @@
      		  		                     									 
      		  		                 i
      		  		                )
-     		  		                    													
+     		  		                												
      		  		            )
      		  		          ;
      		  		            
@@ -381,7 +343,7 @@
      		  		              									 
      		  		          i
      		  		         )
-     		  		             													 
+     		  		         												 
      		  		        							    		   
      		  		          									  
      		  		       )
@@ -403,7 +365,7 @@
      		  		                   									 
      		  		               j
      		  		              )
-     		  		                  													
+     		  		              												
      		  		          )
      		  		        ;
      		  		          assign
@@ -729,31 +691,28 @@
      		  		  		  		  		  		                      
      		  		  		  		  		  		                      sequence
      		  		  		  		  		  		                      (
-     		  		  		  		  		  		                        forloop 
-     		  		  		  		  		  		                        (
-     		  		  		  		  		  		                            i
-     		  		  		  		  		  		                            0
-     		  		  		  		  		  		                            <>
-     		  		  		  		  		  		                            -
-     		  		  		  		  		  		                            (
-     		  		  		  		  		  		                                Array.length
-     		  		  		  		  		  		                                (
-     		  		  		  		  		  		                                    array
-     		  		  		  		  		  		                                )
-     		  		  		  		  		  		                                1
-     		  		  		  		  		  		                            )
-     		  		  		  		  		  		                            draw
-     		  		  		  		  		  		                            (
-     		  		  		  		  		  		                                gc
-     		  		  		  		  		  		                                i
-     		  		  		  		  		  		                                Array.get
-     		  		  		  		  		  		                                (
+     		  		  		  		  		  		                         for i
+     		  		  		  		  		  		                         0
+     		  		  		  		  		  		                         -
+     		  		  		  		  		  		                         (
+     		  		  		  		  		  		                             Array.length
+     		  		  		  		  		  		                             (
      		  		  		  		  		  		                                 array
-     		  		  		  		  		  		                                 i
-     		  		  		  		  		  		                                )
-     		  		  		  		  		  		                                    													
-     		  		  		  		  		  		                            )
-     		  		  		  		  		  		                        )
+     		  		  		  		  		  		                             )
+     		  		  		  		  		  		                             1
+     		  		  		  		  		  		                         )
+     		  		  		  		  		  		                         draw
+     		  		  		  		  		  		                         (
+     		  		  		  		  		  		                             gc
+     		  		  		  		  		  		                             i
+     		  		  		  		  		  		                             Array.get
+     		  		  		  		  		  		                             (
+     		  		  		  		  		  		                              array
+     		  		  		  		  		  		                              i
+     		  		  		  		  		  		                             )
+     		  		  		  		  		  		                             												
+     		  		  		  		  		  		                         )
+     		  		  		  		  		  		                            														  
      		  		  		  		  		  		                      ;
      		  		  		  		  		  		                        gc
      		  		  		  		  		  		                      )
@@ -834,27 +793,24 @@
      		  		        
      		  		        sequence
      		  		        (
-     		  		          forloop 
-     		  		          (
-     		  		              i
-     		  		              0
-     		  		              <>
-     		  		              -
-     		  		              (
-     		  		                  nelts
-     		  		                  1
-     		  		              )
-     		  		              Array.set
-     		  		              (
-     		  		               a
-     		  		               i
-     		  		               Random.int
-     		  		               (
-     		  		                   maxval
-     		  		               )
-     		  		              )
-     		  		                  									
-     		  		          )
+     		  		           for i
+     		  		           0
+     		  		           -
+     		  		           (
+     		  		               nelts
+     		  		               1
+     		  		           )
+     		  		           Array.set
+     		  		           (
+     		  		            a
+     		  		            i
+     		  		            Random.int
+     		  		            (
+     		  		                maxval
+     		  		            )
+     		  		           )
+     		  		               									
+     		  		              														  
      		  		        ;
      		  		          
      		  		          let
@@ -904,134 +860,131 @@
      		  		                
      		  		                sequence
      		  		                (
-     		  		                  forloop 
-     		  		                  (
-     		  		                      i
-     		  		                      0
-     		  		                      <>
-     		  		                      -
-     		  		                      (
-     		  		                          Array.length
-     		  		                          (
-     		  		                              functs
-     		  		                          )
-     		  		                          1
-     		  		                      )
-     		  		                      
-     		  		                      let
-     		  		                      (
+     		  		                   for i
+     		  		                   0
+     		  		                   -
+     		  		                   (
+     		  		                       Array.length
      		  		                       (
-     		  		                          									  
-     		  		                        
-     		  		                         
-     		  		                         (
-     		  		                          name
-     		  		                              						 
-     		  		                         	funct
-     		  		                         
-     		  		                         	x
-     		  		                         
-     		  		                         	y
-     		  		                         
-     		  		                         	w
-     		  		                         
-     		  		                         	h
-     		  		                         
-     		  		                         )
-     		  		                         Array.get
-     		  		                         (
-     		  		                          functs
-     		  		                          i
-     		  		                         )
-     		  		                             													 
-     		  		                        							    		   
-     		  		                          									  
+     		  		                           functs
      		  		                       )
-     		  		                      in
-     		  		                        
-     		  		                        let
-     		  		                        (
-     		  		                         (
-     		  		                            									  
-     		  		                          
-     		  		                           gc
-     		  		                           initialize
-     		  		                           (
-     		  		                               name
-     		  		                               a
-     		  		                               maxval
-     		  		                               x
-     		  		                               y
-     		  		                               w
-     		  		                               h
-     		  		                           ) 
-     		  		                          							    		   
-     		  		                            									  
-     		  		                         )
-     		  		                        in
-     		  		                          Thread.create
-     		  		                          (
-     		  		                              (
-     		  		                               
-     		  		                               case
-     		  		                               (
-     		  		                               ()
-     		  		                               
-     		  		                               
-     		  		                               sequence
-     		  		                               (
-     		  		                                 funct
-     		  		                                 (
-     		  		                                     gc
-     		  		                                 )
-     		  		                               ;
-     		  		                                 
-     		  		                                 sequence
-     		  		                                 (
-     		  		                                   Mutex.lock
-     		  		                                   (
-     		  		                                       lock_finished
-     		  		                                   )
-     		  		                                 ;
-     		  		                                   
-     		  		                                   sequence
-     		  		                                   (
-     		  		                                     incr
-     		  		                                     (
-     		  		                                         num_finished
-     		  		                                     )
-     		  		                                   ;
-     		  		                                     
-     		  		                                     sequence
-     		  		                                     (
-     		  		                                       Mutex.unlock
-     		  		                                       (
-     		  		                                           lock_finished
-     		  		                                       )
-     		  		                                     ;
-     		  		                                       Condition.signal
-     		  		                                       (
-     		  		                                           cond_finished
-     		  		                                       )
-     		  		                                     )
-     		  		                                         							
-     		  		                                   )
-     		  		                                       							
-     		  		                                 )
-     		  		                                     							
-     		  		                               )
-     		  		                                   							
-     		  		                               )
-     		  		                               													 
-     		  		                              )
-     		  		                                 						  
-     		  		                              ()
-     		  		                          )
-     		  		                        )
-     		  		                            									
+     		  		                       1
+     		  		                   )
+     		  		                   
+     		  		                   let
+     		  		                   (
+     		  		                    (
+     		  		                       									  
+     		  		                     
+     		  		                      
+     		  		                      (
+     		  		                       name
+     		  		                           						 
+     		  		                      	funct
+     		  		                      
+     		  		                      	x
+     		  		                      
+     		  		                      	y
+     		  		                      
+     		  		                      	w
+     		  		                      
+     		  		                      	h
+     		  		                      
      		  		                      )
-     		  		                          									
-     		  		                  )
+     		  		                      Array.get
+     		  		                      (
+     		  		                       functs
+     		  		                       i
+     		  		                      )
+     		  		                      												 
+     		  		                     							    		   
+     		  		                       									  
+     		  		                    )
+     		  		                   in
+     		  		                     
+     		  		                     let
+     		  		                     (
+     		  		                      (
+     		  		                         									  
+     		  		                       
+     		  		                        gc
+     		  		                        initialize
+     		  		                        (
+     		  		                            name
+     		  		                            a
+     		  		                            maxval
+     		  		                            x
+     		  		                            y
+     		  		                            w
+     		  		                            h
+     		  		                        ) 
+     		  		                       							    		   
+     		  		                         									  
+     		  		                      )
+     		  		                     in
+     		  		                       Thread.create
+     		  		                       (
+     		  		                           (
+     		  		                            
+     		  		                            case
+     		  		                            (
+     		  		                            ()
+     		  		                            
+     		  		                            
+     		  		                            sequence
+     		  		                            (
+     		  		                              funct
+     		  		                              (
+     		  		                                  gc
+     		  		                              )
+     		  		                            ;
+     		  		                              
+     		  		                              sequence
+     		  		                              (
+     		  		                                Mutex.lock
+     		  		                                (
+     		  		                                    lock_finished
+     		  		                                )
+     		  		                              ;
+     		  		                                
+     		  		                                sequence
+     		  		                                (
+     		  		                                  incr
+     		  		                                  (
+     		  		                                      num_finished
+     		  		                                  )
+     		  		                                ;
+     		  		                                  
+     		  		                                  sequence
+     		  		                                  (
+     		  		                                    Mutex.unlock
+     		  		                                    (
+     		  		                                        lock_finished
+     		  		                                    )
+     		  		                                  ;
+     		  		                                    Condition.signal
+     		  		                                    (
+     		  		                                        cond_finished
+     		  		                                    )
+     		  		                                  )
+     		  		                                      							
+     		  		                                )
+     		  		                                    							
+     		  		                              )
+     		  		                                  							
+     		  		                            )
+     		  		                                							
+     		  		                            )
+     		  		                            													 
+     		  		                           )
+     		  		                              						  
+     		  		                           ()
+     		  		                       )
+     		  		                     )
+     		  		                         									
+     		  		                   )
+     		  		                       									
+     		  		                      														  
      		  		                ;
      		  		                  
      		  		                  sequence
@@ -1044,27 +997,27 @@
      		  		                    
      		  		                    sequence
      		  		                    (
-     		  		                      whileloop 
-     		  		                      (
-     		  		                          <
-     		  		                          (
-     		  		                              
-     		  		                               !
-     		  		                               (
-     		  		                               num_finished
-     		  		                               )
-     		  		                                  							 
-     		  		                              Array.length
-     		  		                              (
-     		  		                                  functs
-     		  		                              )
-     		  		                          )
-     		  		                          Condition.wait
-     		  		                          (
-     		  		                              cond_finished
-     		  		                              lock_finished
-     		  		                          )
-     		  		                      )
+     		  		                      
+     		  		                       while
+     		  		                       <
+     		  		                       (
+     		  		                           
+     		  		                            !
+     		  		                            (
+     		  		                            num_finished
+     		  		                            )
+     		  		                               							 
+     		  		                           Array.length
+     		  		                           (
+     		  		                               functs
+     		  		                           )
+     		  		                       )
+     		  		                       Condition.wait
+     		  		                       (
+     		  		                           cond_finished
+     		  		                           lock_finished
+     		  		                       )	 
+     		  		                          									 
      		  		                    ;
      		  		                      
      		  		                      sequence
@@ -1130,114 +1083,108 @@
              									  
           )
          in
-           whileloop 
-           (
-               not
-               (
-                   
-                    !
-                    (
-                    ordered
-                    )
-                       							 
-               )
-               
-               sequence
-               (
-                 :=
+           
+            while
+            not
+            (
+                
+                 !
                  (
-                     ordered
-                     true
+                 ordered
                  )
-               ;
-                 forloop 
+                    							 
+            )
+            
+            sequence
+            (
+              :=
+              (
+                  ordered
+                  true
+              )
+            ;
+               for i
+               0
+               -
+               (
+                   Array.length
+                   (
+                       field
+                       (
+                       gc
+                       array
+                       )
+                           									 
+                   )
+                   2
+               )
+               ifthenelse
+               (
+                if
+                (
+                 <
                  (
-                     i
-                     0
-                     <>
-                     -
+                     Array.get
                      (
-                         Array.length
-                         (
-                             field
-                             (
-                             gc
-                             array
-                             )
-                                 									 
-                         )
-                         2
-                     )
-                     ifthenelse
-                     (
-                      if
+                      field
                       (
-                       <
-                       (
-                           Array.get
-                           (
-                            field
-                            (
-                            gc
-                            array
-                            )
-                                									 
-                            +
-                            (
-                                i
-                                1
-                            )
-                           )
-                               													
-                           Array.get
-                           (
-                            field
-                            (
-                            gc
-                            array
-                            )
-                                									 
-                            i
-                           )
-                               													
-                       )
+                      gc
+                      array
                       )
-                      then
+                          									 
+                      +
                       (
-                       beginEnd 
-                       (
-                           
-                           sequence
-                           (
-                             exchange
-                             (
-                                 gc
-                                 i
-                                 +
-                                 (
-                                     i
-                                     1
-                                 )
-                             )
-                           ;
-                             :=
-                             (
-                                 ordered
-                                 false
-                             )
-                           )
-                               							
-                       )
-                      )
-                      else
-                      (
+                          i
+                          1
                       )
                      )
-                         									   
+                     												
+                     Array.get
+                     (
+                      field
+                      (
+                      gc
+                      array
+                      )
+                          									 
+                      i
+                     )
+                     												
                  )
+                )
+                then
+                (
+                 
+                 sequence
+                 (
+                   exchange
+                   (
+                       gc
+                       i
+                       +
+                       (
+                           i
+                           1
+                       )
+                   )
+                 ;
+                   :=
+                   (
+                       ordered
+                       false
+                   )
+                 )
+                     							
+                )
+                else
+                (
+                )
                )
-                   							
-           )
+                   									   
+                  														  
+            )
+                								 
+               									 
          )
              									
         )
@@ -1253,145 +1200,103 @@
     case
         (
     	  gc
-         forloop 
-         (
-             i
-             1
-             <>
-             -
-             (
-                 Array.length
-                 (
-                     field
-                     (
-                     gc
-                     array
-                     )
-                         									 
-                 )
-                 1
-             )
-             
-             let
-             (
+          for i
+          1
+          -
+          (
+              Array.length
               (
-                 									  
-               
-                val_i
-                Array.get
-                (
-                 field
-                 (
-                 gc
-                 array
-                 )
-                     									 
-                 i
-                )
-                    													 
-               							    		   
-                 									  
-              )
-             in
-               
-               let
-               (
-                (
-                   									  
-                 
-                  j
-                  ref
+                  field
                   (
-                      -
-                      (
-                          i
-                          1
-                      )
-                  ) 
-                 							    		   
-                   									  
-                )
-               in
+                  gc
+                  array
+                  )
+                      									 
+              )
+              1
+          )
+          
+          let
+          (
+           (
+              									  
+            
+             val_i
+             Array.get
+             (
+              field
+              (
+              gc
+              array
+              )
+                  									 
+              i
+             )
+             												 
+            							    		   
+              									  
+           )
+          in
+            
+            let
+            (
+             (
+                									  
+              
+               j
+               ref
+               (
+                   -
+                   (
+                       i
+                       1
+                   )
+               ) 
+              							    		   
+                									  
+             )
+            in
+              
+              sequence
+              (
+                
+                 while
+                 &&
+                 (
+                     >=
+                     (
+                         
+                          !
+                          (
+                          j
+                          )
+                             							 
+                         0
+                     )
+                     <
+                     (
+                         val_i
+                         Array.get
+                         (
+                          field
+                          (
+                          gc
+                          array
+                          )
+                              									 
+                          
+                           !
+                           (
+                           j
+                           )
+                              							 
+                         )
+                         												
+                     )
+                 )
                  
                  sequence
                  (
-                   whileloop 
-                   (
-                       &&
-                       (
-                           >=
-                           (
-                               
-                                !
-                                (
-                                j
-                                )
-                                   							 
-                               0
-                           )
-                           <
-                           (
-                               val_i
-                               Array.get
-                               (
-                                field
-                                (
-                                gc
-                                array
-                                )
-                                    									 
-                                
-                                 !
-                                 (
-                                 j
-                                 )
-                                    							 
-                               )
-                                   													
-                           )
-                       )
-                       
-                       sequence
-                       (
-                         assign
-                         (
-                             gc
-                             +
-                             (
-                                 
-                                  !
-                                  (
-                                  j
-                                  )
-                                     							 
-                                 1
-                             )
-                             Array.get
-                             (
-                              field
-                              (
-                              gc
-                              array
-                              )
-                                  									 
-                              
-                               !
-                               (
-                               j
-                               )
-                                  							 
-                             )
-                                 													
-                         )
-                       ;
-                         decr
-                         (
-                             j
-                         )
-                       )
-                           							
-                   )
-                 ;
                    assign
                    (
                        gc
@@ -1405,15 +1310,54 @@
                                							 
                            1
                        )
-                       val_i
+                       Array.get
+                       (
+                        field
+                        (
+                        gc
+                        array
+                        )
+                            									 
+                        
+                         !
+                         (
+                         j
+                         )
+                            							 
+                       )
+                       												
+                   )
+                 ;
+                   decr
+                   (
+                       j
                    )
                  )
-                     							
-               )
-                   									
-             )
-                 									
-         )
+                     								 
+                    									 
+              ;
+                assign
+                (
+                    gc
+                    +
+                    (
+                        
+                         !
+                         (
+                         j
+                         )
+                            							 
+                        1
+                    )
+                    val_i
+                )
+              )
+                  							
+            )
+                									
+          )
+              									
+             														  
         )
    )
        		    
@@ -1427,130 +1371,124 @@
     case
         (
     	  gc
-         forloop 
-         (
-             i
-             0
-             <>
-             -
-             (
-                 Array.length
-                 (
-                     field
-                     (
-                     gc
-                     array
-                     )
-                         									 
-                 )
-                 1
-             )
-             
-             let
-             (
+          for i
+          0
+          -
+          (
+              Array.length
               (
-                 									  
-               
-                min
-                ref
-                (
-                    i
-                ) 
-               							    		   
-                 									  
+                  field
+                  (
+                  gc
+                  array
+                  )
+                      									 
               )
-             in
-               
-               sequence
+              1
+          )
+          
+          let
+          (
+           (
+              									  
+            
+             min
+             ref
+             (
+                 i
+             ) 
+            							    		   
+              									  
+           )
+          in
+            
+            sequence
+            (
+               for j
+               +
                (
-                 forloop 
-                 (
-                     j
-                     +
-                     (
-                         i
-                         1
-                     )
-                     <>
-                     -
-                     (
-                         Array.length
-                         (
-                             field
-                             (
-                             gc
-                             array
-                             )
-                                 									 
-                         )
-                         1
-                     )
-                     ifthenelse
-                     (
-                      if
-                      (
-                       <
-                       (
-                           Array.get
-                           (
-                            field
-                            (
-                            gc
-                            array
-                            )
-                                									 
-                            j
-                           )
-                               													
-                           Array.get
-                           (
-                            field
-                            (
-                            gc
-                            array
-                            )
-                                									 
-                            
-                             !
-                             (
-                             min
-                             )
-                                							 
-                           )
-                               													
-                       )
-                      )
-                      then
-                      (
-                       :=
-                       (
-                           min
-                           j
-                       )
-                      )
-                      else
-                      (
-                      )
-                     )
-                         									   
-                 )
-               ;
-                 exchange
-                 (
-                     gc
-                     i
-                     
-                      !
-                      (
-                      min
-                      )
-                         							 
-                 )
+                   i
+                   1
                )
-                   							
-             )
-                 									
-         )
+               -
+               (
+                   Array.length
+                   (
+                       field
+                       (
+                       gc
+                       array
+                       )
+                           									 
+                   )
+                   1
+               )
+               ifthenelse
+               (
+                if
+                (
+                 <
+                 (
+                     Array.get
+                     (
+                      field
+                      (
+                      gc
+                      array
+                      )
+                          									 
+                      j
+                     )
+                     												
+                     Array.get
+                     (
+                      field
+                      (
+                      gc
+                      array
+                      )
+                          									 
+                      
+                       !
+                       (
+                       min
+                       )
+                          							 
+                     )
+                     												
+                 )
+                )
+                then
+                (
+                 :=
+                 (
+                     min
+                     j
+                 )
+                )
+                else
+                (
+                )
+               )
+                   									   
+                  														  
+            ;
+              exchange
+              (
+                  gc
+                  i
+                  
+                   !
+                   (
+                   min
+                   )
+                      							 
+              )
+            )
+                							
+          )
+              									
+             														  
         )
    )
        		    
@@ -1592,64 +1530,84 @@
              		       )
              		       then
              		       (
-             		        beginEnd 
+             		        
+             		        let
              		        (
+             		         (
+             		            									  
+             		          
+             		           i
+             		           ref
+             		           (
+             		               lo
+             		           ) 
+             		          							    		   
+             		            									  
+             		         )
+             		        in
+             		          
+             		          let
+             		          (
+             		           (
+             		              									  
+             		            
+             		             j
+             		             ref
+             		             (
+             		                 hi
+             		             ) 
+             		            							    		   
+             		              									  
+             		           )
+             		          in
              		            
              		            let
              		            (
              		             (
              		                									  
              		              
-             		               i
-             		               ref
+             		               pivot
+             		               Array.get
              		               (
-             		                   lo
-             		               ) 
+             		                field
+             		                (
+             		                gc
+             		                array
+             		                )
+             		                    									 
+             		                hi
+             		               )
+             		               												 
              		              							    		   
              		                									  
              		             )
              		            in
              		              
-             		              let
+             		              sequence
              		              (
-             		               (
-             		                  									  
              		                
-             		                 j
-             		                 ref
+             		                 while
+             		                 <
              		                 (
-             		                     hi
-             		                 ) 
-             		                							    		   
-             		                  									  
-             		               )
-             		              in
-             		                
-             		                let
-             		                (
-             		                 (
-             		                    									  
-             		                  
-             		                   pivot
-             		                   Array.get
-             		                   (
-             		                    field
-             		                    (
-             		                    gc
-             		                    array
-             		                    )
-             		                        									 
-             		                    hi
-             		                   )
-             		                       													 
-             		                  							    		   
-             		                    									  
+             		                     
+             		                      !
+             		                      (
+             		                      i
+             		                      )
+             		                         							 
+             		                     
+             		                      !
+             		                      (
+             		                      j
+             		                      )
+             		                         							 
              		                 )
-             		                in
-             		                  
-             		                  sequence
-             		                  (
-             		                    whileloop 
+             		                 
+             		                 sequence
+             		                 (
+             		                   
+             		                    while
+             		                    &&
              		                    (
              		                        <
              		                        (
@@ -1659,211 +1617,188 @@
              		                             i
              		                             )
              		                                							 
+             		                            hi
+             		                        )
+             		                        <=
+             		                        (
+             		                            Array.get
+             		                            (
+             		                             field
+             		                             (
+             		                             gc
+             		                             array
+             		                             )
+             		                                 									 
+             		                             
+             		                              !
+             		                              (
+             		                              i
+             		                              )
+             		                                 							 
+             		                            )
+             		                            												
+             		                            pivot
+             		                        )
+             		                    )
+             		                    incr
+             		                    (
+             		                        i
+             		                    )	 
+             		                       									 
+             		                 ;
+             		                   
+             		                   sequence
+             		                   (
+             		                     
+             		                      while
+             		                      &&
+             		                      (
+             		                          >
+             		                          (
+             		                              
+             		                               !
+             		                               (
+             		                               j
+             		                               )
+             		                                  							 
+             		                              lo
+             		                          )
+             		                          >=
+             		                          (
+             		                              Array.get
+             		                              (
+             		                               field
+             		                               (
+             		                               gc
+             		                               array
+             		                               )
+             		                                   									 
+             		                               
+             		                                !
+             		                                (
+             		                                j
+             		                                )
+             		                                   							 
+             		                              )
+             		                              												
+             		                              pivot
+             		                          )
+             		                      )
+             		                      decr
+             		                      (
+             		                          j
+             		                      )	 
+             		                         									 
+             		                   ;
+             		                     ifthenelse
+             		                     (
+             		                      if
+             		                      (
+             		                       <
+             		                       (
+             		                           
+             		                            !
+             		                            (
+             		                            i
+             		                            )
+             		                               							 
+             		                           
+             		                            !
+             		                            (
+             		                            j
+             		                            )
+             		                               							 
+             		                       )
+             		                      )
+             		                      then
+             		                      (
+             		                       exchange
+             		                       (
+             		                           gc
+             		                           
+             		                            !
+             		                            (
+             		                            i
+             		                            )
+             		                               							 
+             		                           
+             		                            !
+             		                            (
+             		                            j
+             		                            )
+             		                               							 
+             		                       )
+             		                      )
+             		                      else
+             		                      (
+             		                      )
+             		                     )
+             		                         									   
+             		                   )
+             		                       							
+             		                 )
+             		                     								 
+             		                    									 
+             		              ;
+             		                
+             		                sequence
+             		                (
+             		                  exchange
+             		                  (
+             		                      gc
+             		                      
+             		                       !
+             		                       (
+             		                       i
+             		                       )
+             		                          							 
+             		                      hi
+             		                  )
+             		                ;
+             		                  
+             		                  sequence
+             		                  (
+             		                    quick
+             		                    (
+             		                        lo
+             		                        -
+             		                        (
              		                            
              		                             !
              		                             (
-             		                             j
+             		                             i
              		                             )
              		                                							 
+             		                            1
              		                        )
-             		                        
-             		                        sequence
-             		                        (
-             		                          whileloop 
-             		                          (
-             		                              &&
-             		                              (
-             		                                  <
-             		                                  (
-             		                                      
-             		                                       !
-             		                                       (
-             		                                       i
-             		                                       )
-             		                                          							 
-             		                                      hi
-             		                                  )
-             		                                  <=
-             		                                  (
-             		                                      Array.get
-             		                                      (
-             		                                       field
-             		                                       (
-             		                                       gc
-             		                                       array
-             		                                       )
-             		                                           									 
-             		                                       
-             		                                        !
-             		                                        (
-             		                                        i
-             		                                        )
-             		                                           							 
-             		                                      )
-             		                                          													
-             		                                      pivot
-             		                                  )
-             		                              )
-             		                              incr
-             		                              (
-             		                                  i
-             		                              )
-             		                          )
-             		                        ;
-             		                          
-             		                          sequence
-             		                          (
-             		                            whileloop 
-             		                            (
-             		                                &&
-             		                                (
-             		                                    >
-             		                                    (
-             		                                        
-             		                                         !
-             		                                         (
-             		                                         j
-             		                                         )
-             		                                            							 
-             		                                        lo
-             		                                    )
-             		                                    >=
-             		                                    (
-             		                                        Array.get
-             		                                        (
-             		                                         field
-             		                                         (
-             		                                         gc
-             		                                         array
-             		                                         )
-             		                                             									 
-             		                                         
-             		                                          !
-             		                                          (
-             		                                          j
-             		                                          )
-             		                                             							 
-             		                                        )
-             		                                            													
-             		                                        pivot
-             		                                    )
-             		                                )
-             		                                decr
-             		                                (
-             		                                    j
-             		                                )
-             		                            )
-             		                          ;
-             		                            ifthenelse
-             		                            (
-             		                             if
-             		                             (
-             		                              <
-             		                              (
-             		                                  
-             		                                   !
-             		                                   (
-             		                                   i
-             		                                   )
-             		                                      							 
-             		                                  
-             		                                   !
-             		                                   (
-             		                                   j
-             		                                   )
-             		                                      							 
-             		                              )
-             		                             )
-             		                             then
-             		                             (
-             		                              exchange
-             		                              (
-             		                                  gc
-             		                                  
-             		                                   !
-             		                                   (
-             		                                   i
-             		                                   )
-             		                                      							 
-             		                                  
-             		                                   !
-             		                                   (
-             		                                   j
-             		                                   )
-             		                                      							 
-             		                              )
-             		                             )
-             		                             else
-             		                             (
-             		                             )
-             		                            )
-             		                                									   
-             		                          )
-             		                              							
-             		                        )
-             		                            							
              		                    )
              		                  ;
-             		                    
-             		                    sequence
+             		                    quick
              		                    (
-             		                      exchange
-             		                      (
-             		                          gc
-             		                          
-             		                           !
-             		                           (
-             		                           i
-             		                           )
-             		                              							 
-             		                          hi
-             		                      )
-             		                    ;
-             		                      
-             		                      sequence
-             		                      (
-             		                        quick
+             		                        +
              		                        (
-             		                            lo
-             		                            -
-             		                            (
-             		                                
-             		                                 !
-             		                                 (
-             		                                 i
-             		                                 )
-             		                                    							 
-             		                                1
-             		                            )
+             		                            
+             		                             !
+             		                             (
+             		                             i
+             		                             )
+             		                                							 
+             		                            1
              		                        )
-             		                      ;
-             		                        quick
-             		                        (
-             		                            +
-             		                            (
-             		                                
-             		                                 !
-             		                                 (
-             		                                 i
-             		                                 )
-             		                                    							 
-             		                                1
-             		                            )
-             		                            hi
-             		                        )
-             		                      )
-             		                          							
+             		                        hi
              		                    )
-             		                        							
              		                  )
              		                      							
              		                )
-             		                    									
+             		                    							
              		              )
-             		                  									
+             		                  							
              		            )
              		                									
+             		          )
+             		              									
              		        )
+             		            									
              		       )
              		       else
              		       (
@@ -2071,59 +2006,53 @@
              		  		          )
              		  		          then
              		  		          (
-             		  		           beginEnd 
+             		  		           
+             		  		           sequence
              		  		           (
-             		  		               
-             		  		               sequence
-             		  		               (
-             		  		                 assign
+             		  		             assign
+             		  		             (
+             		  		                 gc
+             		  		                 i
+             		  		                 v1
+             		  		             )
+             		  		           ;
+             		  		             merge
+             		  		             (
+             		  		                 +
              		  		                 (
-             		  		                     gc
              		  		                     i
-             		  		                     v1
+             		  		                     1
              		  		                 )
-             		  		               ;
-             		  		                 merge
-             		  		                 (
-             		  		                     +
-             		  		                     (
-             		  		                         i
-             		  		                         1
-             		  		                     )
-             		  		                     r1
-             		  		                     l2
-             		  		                 )
-             		  		               )
-             		  		                   							
+             		  		                 r1
+             		  		                 l2
+             		  		             )
              		  		           )
+             		  		               							
              		  		          )
              		  		          else
              		  		          (
-             		  		           beginEnd 
+             		  		           
+             		  		           sequence
              		  		           (
-             		  		               
-             		  		               sequence
-             		  		               (
-             		  		                 assign
+             		  		             assign
+             		  		             (
+             		  		                 gc
+             		  		                 i
+             		  		                 v2
+             		  		             )
+             		  		           ;
+             		  		             merge
+             		  		             (
+             		  		                 +
              		  		                 (
-             		  		                     gc
              		  		                     i
-             		  		                     v2
+             		  		                     1
              		  		                 )
-             		  		               ;
-             		  		                 merge
-             		  		                 (
-             		  		                     +
-             		  		                     (
-             		  		                         i
-             		  		                         1
-             		  		                     )
-             		  		                     l1
-             		  		                     r2
-             		  		                 )
-             		  		               )
-             		  		                   							
+             		  		                 l1
+             		  		                 r2
+             		  		             )
              		  		           )
+             		  		               							
              		  		          ) 
              		  		         )
              		  		         	    											 
@@ -2177,97 +2106,94 @@
                		       )
                		       else
                		       (
-               		        beginEnd 
+               		        
+               		        let
                		        (
-               		            
-               		            let
+               		         (
+               		            									  
+               		          
+               		           m
+               		           /
+               		           (
+               		               len
+               		               2
+               		           ) 
+               		          							    		   
+               		            									  
+               		         )
+               		        in
+               		          
+               		          sequence
+               		          (
+               		            msort
                		            (
-               		             (
-               		                									  
-               		              
-               		               m
-               		               /
-               		               (
-               		                   len
-               		                   2
-               		               ) 
-               		              							    		   
-               		                									  
-               		             )
-               		            in
-               		              
-               		              sequence
+               		                start
+               		                m
+               		            )
+               		          ;
+               		            
+               		            sequence
+               		            (
+               		              msort
                		              (
-               		                msort
-               		                (
-               		                    start
-               		                    m
-               		                )
-               		              ;
-               		                
-               		                sequence
-               		                (
-               		                  msort
+               		                  +
                		                  (
-               		                      +
+               		                      start
+               		                      m
+               		                  )
+               		                  -
+               		                  (
+               		                      len
+               		                      m
+               		                  )
+               		              )
+               		            ;
+               		              merge
+               		              (
+               		                  start
+               		                  Array.to_list
+               		                  (
+               		                      Array.sub
                		                      (
+               		                          field
+               		                          (
+               		                          gc
+               		                          array
+               		                          )
+               		                              									 
                		                          start
                		                          m
                		                      )
-               		                      -
-               		                      (
-               		                          len
-               		                          m
-               		                      )
                		                  )
-               		                ;
-               		                  merge
+               		                  Array.to_list
                		                  (
-               		                      start
-               		                      Array.to_list
+               		                      Array.sub
                		                      (
-               		                          Array.sub
+               		                          field
                		                          (
-               		                              field
-               		                              (
-               		                              gc
-               		                              array
-               		                              )
-               		                                  									 
+               		                          gc
+               		                          array
+               		                          )
+               		                              									 
+               		                          +
+               		                          (
                		                              start
                		                              m
                		                          )
-               		                      )
-               		                      Array.to_list
-               		                      (
-               		                          Array.sub
+               		                          -
                		                          (
-               		                              field
-               		                              (
-               		                              gc
-               		                              array
-               		                              )
-               		                                  									 
-               		                              +
-               		                              (
-               		                                  start
-               		                                  m
-               		                              )
-               		                              -
-               		                              (
-               		                                  len
-               		                                  m
-               		                              )
+               		                              len
+               		                              m
                		                          )
                		                      )
                		                  )
-               		                )
-               		                    							
                		              )
-               		                  							
                		            )
-               		                									
+               		                							
+               		          )
+               		              							
                		        )
+               		            									
                		       ) 
                		      )
                		      	    											 
@@ -2353,20 +2279,20 @@
                  
                  sequence
                  (
-                   whileloop 
-                   (
-                       not
-                       (
-                           key_pressed
-                           (
-                               ()
-                           )
-                       )
-                       incr
-                       (
-                           seed
-                       )
-                   )
+                   
+                    while
+                    not
+                    (
+                        key_pressed
+                        (
+                            ()
+                        )
+                    )
+                    incr
+                    (
+                        seed
+                    )	 
+                       									 
                  ;
                    
                    sequence
@@ -2658,23 +2584,20 @@
     )
     else
     (
-     beginEnd 
+     
+     sequence
      (
-         
-         sequence
-         (
-           animate
-           (
-               ()
-           )
-         ;
-           exit
-           (
-               0
-           )
-         )
-             							
+       animate
+       (
+           ()
+       )
+     ;
+       exit
+       (
+           0
+       )
      )
+         							
     ) 
    )
    	    											  

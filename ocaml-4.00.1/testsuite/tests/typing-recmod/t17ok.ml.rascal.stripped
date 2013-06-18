@@ -129,7 +129,7 @@
          modConsType1 
          (
              elt
-             "extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+             "extendedModulePath1"([],"X")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
              (
              )
          )
@@ -196,7 +196,7 @@
               int
               (
               )
-              "extendedModulePath1"([],"Diet")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+              "extendedModulePath1"([],"Diet")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
               (
               )
               int
@@ -268,7 +268,7 @@
              int
              (
              )
-             "extendedModulePath1"([],"Diet")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+             "extendedModulePath1"([],"Diet")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
              (
              )
              int
@@ -309,13 +309,17 @@
                     l
                    	r
                    )
-                    for i
-                    l
-                    r
-                    f
-                    (
-                        i
-                    )
+                   forloop 
+                   (
+                       i
+                       l
+                       <>
+                       r
+                       f
+                       (
+                           i
+                       )
+                   )
                  ) 
                    case
                    (
@@ -339,7 +343,7 @@
           )
          )
          )
-         <"Diet","modTypeWith"("modTypePath"("modTypePath"([],"SET")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modConsType1"([],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"tree")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["modConsType1"([],"typeConstr"([],"elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"modApp"("modExpModPath"("modulePath"([],"MakeDiet")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modExpModPath"("modulePath"([],"Elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+         <"Diet","modTypeWith"("modTypePath"("modTypePath"([],"SET")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modConsType1"([],"typeConstr"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr1"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"tree")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["modConsType1"([],"typeConstr"([],"elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modApp"("modExpModPath"("modulePath"([],"MakeDiet")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"modExpModPath"("modulePath"([],"Elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
      )
      type
      (  						

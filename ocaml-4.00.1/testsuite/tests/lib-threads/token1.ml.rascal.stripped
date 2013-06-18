@@ -34,147 +34,154 @@
     	  	conds
     	  	nprocs
     	  )
-          while
-          true
-          sequence
-          (
-            Mutex.lock
-            (
-                mut
-            )
-          ;
-            sequence
-            (
-               while
-               <>
+         whileloop 
+         (
+             true
+             sequence
+             (
+               Mutex.lock
                (
-                    !
-                    (
-                    token
-                    )
-                   n
-               )
-               Condition.wait
-               (
-                   Array.get
-                   (
-                    conds
-                    n
-                   )
                    mut
-               )	 
-            ;
-              sequence
-              (
-                incr
-                (
-                    token
-                )
-              ;
-                sequence
-                (
-                  ifthenelse
-                  (
-                   if
-                   (
-                    >=
-                    (
-                         !
-                         (
-                         token
-                         )
-                        nprocs
-                    )
-                   )
-                   then
-                   (
-                    :=
-                    (
-                        token
-                        0
-                    )
-                   )
-                   else
-                   (
-                   )
-                  )
-                ;
-                  sequence
-                  (
-                    ifthenelse
-                    (
-                     if
+               )
+             ;
+               sequence
+               (
+                 whileloop 
+                 (
+                     <>
                      (
-                      =
-                      (
+                          !
+                          (
+                          token
+                          )
+                         n
+                     )
+                     Condition.wait
+                     (
+                         Array.get
+                         (
+                          conds
                           n
-                          0
-                      )
+                         )
+                         mut
                      )
-                     then
+                 )
+               ;
+                 sequence
+                 (
+                   incr
+                   (
+                       token
+                   )
+                 ;
+                   sequence
+                   (
+                     ifthenelse
                      (
-                      sequence
+                      if
                       (
-                        decr
-                        (
-                            niter
-                        )
-                      ;
-                        ifthenelse
-                        (
-                         if
-                         (
-                          <=
-                          (
-                               !
-                               (
-                               niter
-                               )
-                              0
-                          )
-                         )
-                         then
-                         (
-                          exit
-                          (
-                              0
-                          )
-                         )
-                         else
-                         (
-                         )
-                        )
-                      )
-                     )
-                     else
-                     (
-                     )
-                    )
-                  ;
-                    sequence
-                    (
-                      Condition.signal
-                      (
-                          Array.get
-                          (
-                           conds
+                       >=
+                       (
                             !
                             (
                             token
                             )
-                          )
+                           nprocs
+                       )
                       )
-                    ;
-                      Mutex.unlock
+                      then
                       (
-                          mut
+                       :=
+                       (
+                           token
+                           0
+                       )
                       )
-                    )
-                  )
-                )
-              )
-            )
-          )
+                      else
+                      (
+                      )
+                     )
+                   ;
+                     sequence
+                     (
+                       ifthenelse
+                       (
+                        if
+                        (
+                         =
+                         (
+                             n
+                             0
+                         )
+                        )
+                        then
+                        (
+                         beginEnd 
+                         (
+                             sequence
+                             (
+                               decr
+                               (
+                                   niter
+                               )
+                             ;
+                               ifthenelse
+                               (
+                                if
+                                (
+                                 <=
+                                 (
+                                      !
+                                      (
+                                      niter
+                                      )
+                                     0
+                                 )
+                                )
+                                then
+                                (
+                                 exit
+                                 (
+                                     0
+                                 )
+                                )
+                                else
+                                (
+                                )
+                               )
+                             )
+                         )
+                        )
+                        else
+                        (
+                        )
+                       )
+                     ;
+                       sequence
+                       (
+                         Condition.signal
+                         (
+                             Array.get
+                             (
+                              conds
+                               !
+                               (
+                               token
+                               )
+                             )
+                         )
+                       ;
+                         Mutex.unlock
+                         (
+                             mut
+                         )
+                       )
+                     )
+                   )
+                 )
+               )
+             )
+         )
         )
    )
   )
@@ -245,22 +252,26 @@
              in
                sequence
                (
-                  for i
-                  1
-                  -
-                  (
-                      nprocs
-                      1
-                  )
-                  Array.set
-                  (
-                   conds
-                   i
-                   Condition.create
-                   (
-                       ()
-                   )
-                  )
+                 forloop 
+                 (
+                     i
+                     1
+                     <>
+                     -
+                     (
+                         nprocs
+                         1
+                     )
+                     Array.set
+                     (
+                      conds
+                      i
+                      Condition.create
+                      (
+                          ()
+                      )
+                     )
+                 )
                ;
                  sequence
                  (
@@ -272,22 +283,26 @@
                  ;
                    sequence
                    (
-                      for i
-                      0
-                      -
-                      (
-                          nprocs
-                          1
-                      )
-                      Thread.create
-                      (
-                          process
-                          (
-                              					 i
-                          	conds
-                          	nprocs
-                          )
-                      )
+                     forloop 
+                     (
+                         i
+                         0
+                         <>
+                         -
+                         (
+                             nprocs
+                             1
+                         )
+                         Thread.create
+                         (
+                             process
+                             (
+                                 					 i
+                             	conds
+                             	nprocs
+                             )
+                         )
+                     )
                    ;
                      Thread.delay
                      (

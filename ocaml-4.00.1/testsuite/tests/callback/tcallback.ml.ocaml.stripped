@@ -85,11 +85,13 @@
       (
         case
         (
-          Ppat_alias "_tuple"
+          alias _tuple
           (
-            x
-            y
-            z
+            (
+              x
+              y
+              z
+            )
           )
           ifthenelse
           (

@@ -28,40 +28,34 @@
               (
               ()
               
-              forloop 
-              (
-                  i
-                  1
-                  <>
-                  5
-                  
-                  sequence
-                  (
-                    print_endline
-                    (
-                        "Thread"
-                    )
-                  ;
-                    
-                    sequence
-                    (
-                      flush
-                      (
-                          stdout
-                      )
-                    ;
-                      semicolon 
-                      (
-                          Thread.delay
-                          (
-                              1.
-                          )
-                      )
-                    )
-                        							
-                  )
-                      							
-              )
+               for i
+               1
+               5
+               
+               sequence
+               (
+                 print_endline
+                 (
+                     "Thread"
+                 )
+               ;
+                 
+                 sequence
+                 (
+                   flush
+                   (
+                       stdout
+                   )
+                 ;
+                   Thread.delay
+                   (
+                       1.
+                   )
+                 )
+                     							
+               )
+                   							
+                  														  
               )
               													 
              )
@@ -72,40 +66,34 @@
           									  
        )
       in
-        forloop 
-        (
-            i
-            1
-            <>
-            10
-            
-            sequence
-            (
-              print_endline
-              (
-                  "Thread"
-              )
-            ;
-              
-              sequence
-              (
-                flush
-                (
-                    stdout
-                )
-              ;
-                semicolon 
-                (
-                    Thread.delay
-                    (
-                        0.50
-                    )
-                )
-              )
-                  							
-            )
-                							
-        )
+         for i
+         1
+         10
+         
+         sequence
+         (
+           print_endline
+           (
+               "Thread"
+           )
+         ;
+           
+           sequence
+           (
+             flush
+             (
+                 stdout
+             )
+           ;
+             Thread.delay
+             (
+                 0.50
+             )
+           )
+               							
+         )
+             							
+            														  
       )
           									
     )

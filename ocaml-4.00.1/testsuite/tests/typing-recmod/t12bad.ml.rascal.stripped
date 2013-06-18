@@ -1,0 +1,64 @@
+(
+  modRec1 
+  (
+      M
+      signature
+      (
+       classSpec 
+       (
+           classSpecification 
+           (
+               classSpec 
+               (
+                   <"a",[]>
+                   c
+                   <[<[],"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>],<[],[<[],[],"map","polytype1"("arrow1"("arrow1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"(["extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>>
+               )
+           )
+       )
+      )
+      struct
+      (
+      class
+      (
+        params = 
+        (
+        x
+        a
+        )
+        class name = c
+        class expr = 
+                    class_structure
+                    (
+                       method2 
+                       (
+                           map
+                           poly
+                           ' b
+                           arrow
+                           arrow
+                           a
+                           b
+                            "extendedModulePath1"([],"M")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].c
+                            (
+                              b
+                            )
+                           (
+                            case
+                            (
+                            f
+                            new M.c
+                            (
+                                f
+                                (
+                                    x
+                                )
+                            )
+                            )
+                           )
+                       )
+                    )
+      )
+      )
+  )
+)

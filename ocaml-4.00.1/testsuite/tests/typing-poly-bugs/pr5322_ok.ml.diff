@@ -1,30 +1,10 @@
-0a1,89
-> (
->   type
->   (
->     t
->       type
->         params =
->           (
->             par
->           )
->         cstrs =
->           (
->           )
->         kind =
->               par
->   )
->   module M
->       struct
->       (
->         let
->         (
->           x
+14d13
+<     (
+17d15
+<   )
+23a22
 >             (
->             Obj.magic
->             (
->                 ()
->                             )
+27a27,54
 >             :
 >                 Ptyp_object
 >                 (
@@ -53,30 +33,7 @@
 >                       a
 >               )
 >             (
->             )
->       )
->   let
->   (
->     ident
->       (
->         case
->         (
->           v
->           v
->         )
->       )
->   )
->   class
->   (
->       params =
->           (
->           )
->       class name = alias
->       class expr =
->           class_structure
->             (
->               method alias
->                 ident
+51a79,86
 >                     poly
 >                      'a
 >                       arrow
@@ -85,6 +42,3 @@
 >                             a
 >                         )
 >                         a
->             )
->   )
-> )

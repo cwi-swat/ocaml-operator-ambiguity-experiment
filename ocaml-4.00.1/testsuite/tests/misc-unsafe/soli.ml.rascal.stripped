@@ -10,6 +10,7 @@
      (
      )
      kind =
+    (
      (
      Out
      (
@@ -21,6 +22,7 @@
      (
      )
      )
+    )
   )
   let
   (
@@ -214,20 +216,14 @@
      (
      )
      kind =
+    (
       dx
-      polytype1 
-      (
-          int
-          (
-          )
-      )
+      poly
+      int
       dy
-      polytype1 
-      (
-          int
-          (
-          )
-      )
+      poly
+      int
+    )
   )
   let
   (
@@ -275,34 +271,20 @@
      (
      )
      kind =
+    (
       x1
-      polytype1 
-      (
-          int
-          (
-          )
-      )
+      poly
+      int
       y1
-      polytype1 
-      (
-          int
-          (
-          )
-      )
+      poly
+      int
       x2
-      polytype1 
-      (
-          int
-          (
-          )
-      )
+      poly
+      int
       y2
-      polytype1 
-      (
-          int
-          (
-          )
-      )
+      poly
+      int
+    )
   )
   let
   (

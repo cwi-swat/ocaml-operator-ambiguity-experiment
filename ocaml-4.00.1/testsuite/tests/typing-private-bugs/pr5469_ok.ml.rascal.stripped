@@ -15,32 +15,29 @@
        (
        )
        kind =
+      (
+      )
     )
    )
-   functor []
+   struct
    (
-     struct
+   type
+   (  						
+      t
+      type
+      params=
+      (
+      )
+      cstrs =
+      (
+      )
+      kind =
      (
-     type
-     (  						
-        t
-        type
-        params=
-        (
-        )
-        cstrs =
-        (
-        )
-        kind =
-         t
-         polytype1 
-         (
-             "extendedModulePath1"([],"T")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-             (
-             )
-         )
+       t
+       poly
+       "extendedModulePath1"([],"T")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
      )
-     )
+   )
    )
   )
   module  P
@@ -60,6 +57,8 @@
        (
        )
        kind =
+      (
+      )
     )
     )
    module  R

@@ -136,12 +136,14 @@
                         let
                         (
                           (
-                            Ppat_alias "def"
-                            Lexdef
-                              (
-                                header
-                                _
-                              )
+                            alias def
+                            (
+                              Lexdef
+                                (
+                                  header
+                                  _
+                                )
+                            )
                               try
                               Grammar.lexer_definition
                               (
@@ -242,11 +244,13 @@
                           let
                           (
                             (
-                              Ppat_alias "dfa"
+                              alias dfa
                               (
-                                init
-                                states
-                                acts
+                                (
+                                  init
+                                  states
+                                  acts
+                                )
                               )
                                 make_dfa
                                 (

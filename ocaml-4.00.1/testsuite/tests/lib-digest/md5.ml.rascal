@@ -85,131 +85,128 @@
                   Sys.argv
                   1
                  )
-                     													
+                 												
                  "-benchmark"
              )
          )
         )
         then
         (
-         beginEnd 
+         
+         let
          (
+          (
+             									  
+           
+            s
+            String.make
+            (
+                50000
+                61
+            ) 
+           							    		   
+             									  
+          )
+         in
+           
+           let
+           (
+            (
+               									  
              
-             let
+              num_iter
+              1000 
+             							    		   
+               									  
+            )
+           in
+             
+             sequence
              (
-              (
-                 									  
-               
-                s
-                String.make
-                (
-                    50000
-                    61
-                ) 
-               							    		   
-                 									  
-              )
-             in
-               
-               let
+               time
                (
-                (
-                   									  
-                 
-                  num_iter
-                  1000 
-                 							    		   
-                   									  
-                )
-               in
-                 
-                 sequence
-                 (
-                   time
+                   "OCaml implementation"
+                   num_iter
                    (
-                       "OCaml implementation"
-                       num_iter
+                    
+                    case
+                    (
+                    ()
+                    
+                    
+                    let
+                    (
+                     (
+                        									  
+                      
+                       ctx
+                       init
                        (
-                        
-                        case
+                           ()
+                       ) 
+                      							    		   
+                        									  
+                     )
+                    in
+                      
+                      sequence
+                      (
+                        update
                         (
-                        ()
-                        
-                        
-                        let
-                        (
-                         (
-                            									  
-                          
-                           ctx
-                           init
-                           (
-                               ()
-                           ) 
-                          							    		   
-                            									  
-                         )
-                        in
-                          
-                          sequence
-                          (
-                            update
+                            ctx
+                            s
+                            0
+                            String.length
                             (
-                                ctx
                                 s
-                                0
-                                String.length
-                                (
-                                    s
-                                )
                             )
-                          ;
-                            ignore
-                            (
-                                finish
-                                (
-                                    ctx
-                                )
-                            )
-                          )
-                              							
                         )
-                            									
-                        )
-                        													 
-                       )
-                          						  
-                   )
-                 ;
-                   time
-                   (
-                       "C implementation"
-                       num_iter
-                       (
-                        
-                        case
-                        (
-                        ()
-                        
+                      ;
                         ignore
                         (
-                            Digest.string
+                            finish
                             (
-                                s
+                                ctx
                             )
                         )
-                        )
-                        													 
-                       )
-                          						  
+                      )
+                          							
+                    )
+                        									
+                    )
+                    													 
                    )
-                 )
-                     							
+                      						  
                )
-                   									
+             ;
+               time
+               (
+                   "C implementation"
+                   num_iter
+                   (
+                    
+                    case
+                    (
+                    ()
+                    
+                    ignore
+                    (
+                        Digest.string
+                        (
+                            s
+                        )
+                    )
+                    )
+                    													 
+                   )
+                      						  
+               )
              )
-                 									
+                 							
+           )
+               									
          )
+             									
         )
         else
         (

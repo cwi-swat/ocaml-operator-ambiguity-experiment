@@ -572,114 +572,109 @@
    (
    		    				
    )
-   functor []
+   struct
    (
-     
-     struct
-     (
-     							  
-     
-      
-      
-      sequence
+   							  
+   
+    
+    
+    sequence
+    (
+      print_string
       (
+          "F is called"
+      )
+    ;
+      print_newline
+      (
+          ()
+      )
+    )
+        							 
+   							    		    
+   							  
+   type
+   (  						
+       							    	 
+      t
+      type
+      params=
+      (
+      
+      )
+      cstrs =
+      (
+      )
+      kind =
+      
+      
+      (
+      								  
+      A
+      (
+      									
+      )
+      								    
+      								  
+      B
+      (
+      									
+       
+       int
+       (
+       )
+       								  
+      								     
+      )
+      								    
+      								  
+      )
+      								  
+      														  
+      														 
+     											   
+   								        
+   )
+   							  
+   let
+   (
+    
+     print_t
+     (
+      
+      case
+      (
+        A
+        
         print_string
         (
-            "F is called"
+            "A"
         )
-      ;
-        print_newline
-        (
-            ()
-        )
-      )
-          							 
-     							    		    
-     							  
-     type
-     (  						
-         							    	 
-        t
-        type
-        params=
-        (
-        
-        )
-        cstrs =
-        (
-        )
-        kind =
-        
-        
-        (
-        								  
-        A
-        (
-        									
-        )
-        								    
-        								  
-        B
-        (
-        									
-         
-         int
-         (
-         )
-         								  
-        								     
-        )
-        								    
-        								  
-        )
-        								  
-        														  
-        														 
-       											   
-     								        
-     )
-     							  
-     let
-     (
-      
-       print_t
-       (
+      ) 
+      	        											 
         
         case
         (
-          A
-          
-          print_string
-          (
-              "A"
-          )
-        ) 
-        	        											 
-          
-          case
-          (
-           
-           B
-           x
-           									  
-           
-           print_int
-           (
-               x
-           )
-          )
-          													    
-        	        											 
-        	        											 
-       )
-          							    
-      							    		    
+         
+         B
+         x
+         									  
+         
+         print_int
+         (
+             x
+         )
+        )
+        													    
+      	        											 
+      	        											 
      )
-     							  
-     )
-     							  
+        							    
+    							    		    
    )
-   												
+   							  
+   )
+   							  
   )
       										    
                                      
@@ -867,36 +862,33 @@
     
     sequence
     (
-      beginEnd 
+      
+      try
+      raise
       (
           
-          try
-          raise
-          (
-              
-               Exn
-               "foo"
-                  								 
-          )
-          (
-          
-          case
-          (
-            
-            Exn
-            s
-            									  
-            
-            print_string
-            (
-                s
-            )
-          ) 
-          	        											 
-          	        											 
-          )
-              							   
+           Exn
+           "foo"
+              								 
       )
+      (
+      
+      case
+      (
+        
+        Exn
+        s
+        									  
+        
+        print_string
+        (
+            s
+        )
+      ) 
+      	        											 
+      	        											 
+      )
+          							   
     ;
       
       sequence
@@ -929,36 +921,33 @@
    
    sequence
    (
-     beginEnd 
+     
+     try
+     raise
      (
          
-         try
-         raise
-         (
-             
-              G.Exn
-              "foo"
-                 								 
-         )
-         (
-         
-         case
-         (
-           
-           G.Exn
-           s
-           									  
-           
-           print_string
-           (
-               s
-           )
-         ) 
-         	        											 
-         	        											 
-         )
-             							   
+          G.Exn
+          "foo"
+             								 
      )
+     (
+     
+     case
+     (
+       
+       G.Exn
+       s
+       									  
+       
+       print_string
+       (
+           s
+       )
+     ) 
+     	        											 
+     	        											 
+     )
+         							   
    ;
      
      sequence

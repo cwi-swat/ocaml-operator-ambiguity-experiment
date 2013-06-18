@@ -136,14 +136,13 @@
                        let
                        (
                         (
-                          patternAs 
+                          alias def
                           (
-                              Lexdef
-                              (
-                               header
-                              	_
-                              )
-                              def
+                            Lexdef
+                            (
+                             header
+                            	_
+                            )
                           )
                           try
                           Grammar.lexer_definition
@@ -245,14 +244,13 @@
                          let
                          (
                           (
-                            patternAs 
+                            alias dfa
                             (
-                                (
-                                 init
-                                	states
-                                	acts
-                                )
-                                dfa
+                              (
+                               init
+                              	states
+                              	acts
+                              )
                             )
                             make_dfa
                             (

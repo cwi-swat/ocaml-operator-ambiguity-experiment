@@ -14,11 +14,13 @@
        (
        )
        kind =
+      (
        a
         typeConstraint 
         (
             a
         )
+      )
     )
    )    								
   module  Combine
@@ -43,7 +45,8 @@
         (
         )
         kind =
-         "extendedModulePath1"([],"A")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+       (
+         "extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
          (
            a
          )
@@ -55,6 +58,7 @@
                 b
               )
          )
+       )
      )
      )
    )
@@ -76,11 +80,13 @@
       (
       )
       kind =
+     (
       a
        typeConstraint 
        (
            a
        )
+     )
    )
    )
    )
@@ -99,11 +105,13 @@
       (
       )
       kind =
+     (
       a
        typeConstraint 
        (
            a
        )
+     )
    )
    )
    )

@@ -8,33 +8,27 @@
    
    sequence
    (
-     forloop 
-     (
-         i
-         0
-         <>
-         20
-         
-         sequence
-         (
-           print_char
-           (
-               20
-           )
-         ;
-           semicolon 
-           (
-               print_int
-               (
-                   int
-                   (
-                       1000
-                   )
-               )
-           )
-         )
-             							
-     )
+      for i
+      0
+      20
+      
+      sequence
+      (
+        print_char
+        (
+            20
+        )
+      ;
+        print_int
+        (
+            int
+            (
+                1000
+            )
+        )
+      )
+          							
+         														  
    ;
      
      sequence
@@ -52,33 +46,27 @@
              ()
          )
        ;
-         forloop 
-         (
-             i
-             0
-             <>
-             20
-             
-             sequence
-             (
-               print_char
-               (
-                   20
-               )
-             ;
-               semicolon 
-               (
-                   print_float
-                   (
-                       float
-                       (
-                           1000.
-                       )
-                   )
-               )
-             )
-                 							
-         )
+          for i
+          0
+          20
+          
+          sequence
+          (
+            print_char
+            (
+                20
+            )
+          ;
+            print_float
+            (
+                float
+                (
+                    1000.
+                )
+            )
+          )
+              							
+             														  
        )
            							
      )

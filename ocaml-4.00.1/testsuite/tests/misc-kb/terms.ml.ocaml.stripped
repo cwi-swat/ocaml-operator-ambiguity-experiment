@@ -180,9 +180,11 @@
             )
             case
             (
-              Ppat_alias "t"
-              Var
-                n
+              alias t
+              (
+                Var
+                  n
+              )
               try
               List.assoc
               (
@@ -973,12 +975,14 @@
       (
         case
         (
-          Ppat_alias "m"
-          Term
-            (
-              oper
-              _
-            )
+          alias m
+          (
+            Term
+              (
+                oper
+                _
+              )
+          )
           ifthenelse
           (
             if

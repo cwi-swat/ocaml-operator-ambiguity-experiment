@@ -1,69 +1,36 @@
-0a1,68
-> (
->   class
->   (
->       params =
->           (
->           )
->       class name = test
->       class expr =
+9c9
+<                 letClass 
+---
 >           let Rec
->           (
->             f
->               sequence
->               (
->                 print_endline
->                 (
->                     "f"
->                 )
->               ;
->                 (
->                   case
->                   (
->                     x
->                     g
->                     (
->                         x
->                     )
->                   )
->                 )
->               )
->             g
->               sequence
->               (
->                 print_endline
->                 (
->                     "g"
->                 )
->               ;
->                 (
->                   case
->                   (
->                     x
->                     f
->                     (
->                         x
->                     )
->                   )
->                 )
->               )
+48a49
 >           )
->             class_structure
->               (
+51,52c52
+<                        method2 
+<                        (
+---
 >                 method f
->                   f
+54,55c54,56
+<                            a.
+<                            b.arrow
+---
 >                       poly
 >                        'a 'b
 >                         arrow
->                           a
->                           b
+58,61c59
+<                            f
+<                        )
+<                        method2 
+<                        (
+---
 >                 method g
->                   g
+63,64c61,63
+<                            a.
+<                            b.arrow
+---
 >                       poly
 >                        'a 'b
 >                         arrow
->                           a
->                           b
->               )
->   )
-> )
+67,69d65
+<                            g
+<                        )
+<                     )

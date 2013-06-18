@@ -1,14 +1,33 @@
-20d19
+13,14d12
+<     (
+<     )
+22d19
 <       <>
-37d35
+29d25
+<     (
+30a27
+>               (
+39d35
 <       <>
-51d48
+46d41
+<     (
+47a43
+>               (
+53d48
 <       <>
-81c78
+60d54
+<     (
+68d61
+<     )
+78d70
+<     (
+81a74
+>                   (
+85c78
 <   classTypeDef 
 ---
 >   class_type
-83c80,91
+87c80,91
 <       classTypeDefinition 
 ---
 >     class_type_declaration ([6,153+11]..[8,205+3])
@@ -23,34 +42,34 @@
 >           Pcty_signature
 >           class_signature
 >               Ptyp_any
-85c93,94
+89c93,94
 <           classTypeDef 
 ---
 >               Pctf_val "underlying" Immutable Concrete ([7,181+2]..[7,181+23])
 >                    t
-87,89c96
+91,93c96
 <               <"a",[]>
 <               s3
-<               <[],[<[],[],"underlying","typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
+<               <[],[<[],[],"underlying","polytype1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
 ---
 >                       a
-97c104
+101c104
 <     r
 ---
 >             "a"
-100a108,111
+104a108,111
 >           fun
 >           label=""
 >                     r
 >             constraint
-103,106c114
+107,110c114
 <                    classValue 
 <                    (
 <                        <>
 <                        underlying
 ---
 >                   Pcf_val "underlying" Immutable Fresh ([10,252+2]..[10,252+20])
-108a117,120
+112a117,120
 >             class_type ([9,211+24]..[9,211+31])
 >               Pcty_constr s3
 >               (

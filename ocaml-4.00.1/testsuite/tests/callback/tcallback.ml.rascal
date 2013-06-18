@@ -136,19 +136,19 @@
    (
     case
         (
-    	  patternAs 
+    	  alias _tuple
     	  (
-    	      
-    	      (
-    	       x
-    	           						 
-    	      	y
-    	      
-    	      	z
-    	      
-    	      )
-    	      _tuple
+    	    
+    	    (
+    	     x
+    	         						 
+    	    	y
+    	    
+    	    	z
+    	    
+    	    )
     	  )
+    	      									   
          ifthenelse
          (
           if
@@ -408,28 +408,25 @@
          
          sequence
          (
-           beginEnd 
+           
+           try
+           mycallback1
            (
-               
-               try
-               mycallback1
-               (
-                   raise_exit
-                   ()
-               )
-               (
-               
-               case
-               (
-                 Exit
-                 
-                 ()
-               ) 
-               	        											 
-               	        											 
-               )
-                   							   
+               raise_exit
+               ()
            )
+           (
+           
+           case
+           (
+             Exit
+             
+             ()
+           ) 
+           	        											 
+           	        											 
+           )
+               							   
          ;
            tak
            (

@@ -86,17 +86,23 @@
       (
         (
          Tree
-         patternTuple 
+         ::
          (
-             y1
-             z1
+           y1
+           patternTuple 
+           (
+               z1
+           )
          )
         	Tree
         	[]
         	Tree
-        	patternTuple 
+        	::
         	(
-        	    x1
+        	  x1
+        	  patternTuple 
+        	  (
+        	  )
         	)
         )
         sequence

@@ -56,7 +56,7 @@
      
      sequence
      (
-       Array.get
+       Bigarray.Array1.get
        (
         f
         (
@@ -64,9 +64,9 @@
         )
         1
        )
-           													
+       												
      ;
-       Array.set
+       Bigarray.Array1.set
        (
         f
         (

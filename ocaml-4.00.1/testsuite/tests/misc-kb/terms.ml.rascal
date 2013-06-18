@@ -14,6 +14,7 @@
      (
      )
      kind =
+    (
      
      
      (
@@ -21,11 +22,7 @@
      Var
      (
      									
-      
       int
-      (
-      )
-      								  
      								     
      )
      								    
@@ -33,20 +30,12 @@
      Term
      (
      									
-      
       string
-      (
-      )
-      								  
      								     
       
        list
        (
-         
          term
-         (
-         )
-         								  
        )
        
           									
@@ -58,6 +47,7 @@
      								  
      														  
      														 
+    )
     											   
   								        
   )
@@ -274,14 +264,14 @@
             
             case
             (
-             patternAs 
+             alias t
              (
-                 
-                 Var
-                 n
-                 									  
-                 t
+               
+               Var
+               n
+               									  
              )
+                 									   
              
              
              try
@@ -1198,68 +1188,27 @@
          )
          then
          (
-          beginEnd 
+          match
+          sons
           (
-              match
-              sons
+          
+          case
+          (
+            patternTuple 
+            (
+                s1
+                s2
+                
+            )
+            
+            
+            sequence
+            (
+              pretty_close
               (
-              
-              case
-              (
-                patternTuple 
-                (
-                    s1
-                    s2
-                    
-                )
-                
-                
-                sequence
-                (
-                  pretty_close
-                  (
-                      s1
-                  )
-                ;
-                  
-                  sequence
-                  (
-                    print_string
-                    (
-                        oper
-                    )
-                  ;
-                    pretty_close
-                    (
-                        s2
-                    )
-                  )
-                      							
-                )
-                    							
-              ) 
-              	        											 
-                
-                case
-                (
-                 _
-                 
-                 failwith
-                 (
-                     "pretty_term : infix arity <> 2"
-                 )
-                )
-                													    
-              	        											 
-              	        											 
+                  s1
               )
-              			   
-          )
-         )
-         else
-         (
-          beginEnd 
-          (
+            ;
               
               sequence
               (
@@ -1268,94 +1217,129 @@
                     oper
                 )
               ;
-                match
-                sons
+                pretty_close
                 (
-                
-                case
-                (
-                  []
-                  
-                  ()
-                ) 
-                	        											 
-                  
-                  case
-                  (
-                   
-                   ::
+                    s2
+                )
+              )
+                  							
+            )
+                							
+          ) 
+          	        											 
+            
+            case
+            (
+             _
+             
+             failwith
+             (
+                 "pretty_term : infix arity <> 2"
+             )
+            )
+            													    
+          	        											 
+          	        											 
+          )
+          			   
+         )
+         else
+         (
+          
+          sequence
+          (
+            print_string
+            (
+                oper
+            )
+          ;
+            match
+            sons
+            (
+            
+            case
+            (
+              []
+              
+              ()
+            ) 
+            	        											 
+              
+              case
+              (
+               
+               ::
+               (
+                   t
+                   lt
+               )
+               
+               
+               sequence
+               (
+                 print_string
+                 (
+                     "("
+                 )
+               ;
+                 
+                 sequence
+                 (
+                   pretty_term
                    (
                        t
-                       lt
                    )
-                   
+                 ;
                    
                    sequence
                    (
-                     print_string
+                     List.iter
                      (
-                         "("
+                         (
+                          
+                          case
+                          (
+                          t
+                          
+                          
+                          sequence
+                          (
+                            print_string
+                            (
+                                ","
+                            )
+                          ;
+                            pretty_term
+                            (
+                                t
+                            )
+                          )
+                              							
+                          )
+                          													 
+                         )
+                            						  
+                         lt
                      )
                    ;
-                     
-                     sequence
+                     print_string
                      (
-                       pretty_term
-                       (
-                           t
-                       )
-                     ;
-                       
-                       sequence
-                       (
-                         List.iter
-                         (
-                             (
-                              
-                              case
-                              (
-                              t
-                              
-                              
-                              sequence
-                              (
-                                print_string
-                                (
-                                    ","
-                                )
-                              ;
-                                pretty_term
-                                (
-                                    t
-                                )
-                              )
-                                  							
-                              )
-                              													 
-                             )
-                                						  
-                             lt
-                         )
-                       ;
-                         print_string
-                         (
-                             ")"
-                         )
-                       )
-                           							
+                         ")"
                      )
-                         							
                    )
                        							
-                  )
-                  													    
-                	        											 
-                	        											 
-                )
-                			   
+                 )
+                     							
+               )
+                   							
               )
-                  							
+              													    
+            	        											 
+            	        											 
+            )
+            			   
           )
+              							
          ) 
         )
         	    											 
@@ -1371,20 +1355,20 @@
     
     case
     (
-      patternAs 
+      alias m
       (
-          
-          Term
-          
-          (
-           oper
-               						 
-          	_
-          
-          )
-          									  
-          m
+        
+        Term
+        
+        (
+         oper
+             						 
+        	_
+        
+        )
+        									  
       )
+          									   
       
       ifthenelse
       (
@@ -1398,33 +1382,30 @@
        )
        then
        (
-        beginEnd 
+        
+        sequence
         (
-            
-            sequence
+          print_string
+          (
+              "("
+          )
+        ;
+          
+          sequence
+          (
+            pretty_term
             (
-              print_string
-              (
-                  "("
-              )
-            ;
-              
-              sequence
-              (
-                pretty_term
-                (
-                    m
-                )
-              ;
-                print_string
-                (
-                    ")"
-                )
-              )
-                  							
+                m
             )
-                							
+          ;
+            print_string
+            (
+                ")"
+            )
+          )
+              							
         )
+            							
        )
        else
        (

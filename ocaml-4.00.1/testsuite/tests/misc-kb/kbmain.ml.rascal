@@ -923,19 +923,16 @@
                                      
   
    
-   forloop 
-   (
-       i
-       1
-       <>
-       20
-       kb_complete
-       (
-           greater
-           []
-           geom_rules
-       )
-   ) 
+    for i
+    1
+    20
+    kb_complete
+    (
+        greater
+        []
+        geom_rules
+    )
+       														   
   							    		    
                                      
 )

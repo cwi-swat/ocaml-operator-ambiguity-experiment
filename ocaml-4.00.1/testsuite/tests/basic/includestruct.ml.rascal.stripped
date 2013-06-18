@@ -380,69 +380,66 @@
    signature
    (
    )
-   functor []
+   struct
    (
-     struct
-     (
-      sequence
+    sequence
+    (
+      print_string
       (
+          "F is called"
+      )
+    ;
+      print_newline
+      (
+          ()
+      )
+    )
+   type
+   (  						
+      t
+      type
+      params=
+      (
+      )
+      cstrs =
+      (
+      )
+      kind =
+      (
+      A
+      (
+      )
+      B
+      (
+       int
+       (
+       )
+      )
+      )
+   )
+   let
+   (
+     print_t
+     (
+      case
+      (
+        A
         print_string
         (
-            "F is called"
+            "A"
         )
-      ;
-        print_newline
-        (
-            ()
-        )
-      )
-     type
-     (  						
-        t
-        type
-        params=
-        (
-        )
-        cstrs =
-        (
-        )
-        kind =
-        (
-        A
-        (
-        )
-        B
-        (
-         int
-         (
-         )
-        )
-        )
-     )
-     let
-     (
-       print_t
-       (
+      ) 
         case
         (
-          A
-          print_string
-          (
-              "A"
-          )
-        ) 
-          case
-          (
-           B
-           x
-           print_int
-           (
-               x
-           )
-          )
-       )
+         B
+         x
+         print_int
+         (
+             x
+         )
+        )
      )
-     )
+   )
    )
   )
   module  D
@@ -552,8 +549,12 @@
      class expr = 
                  class_structure
                  (
-                    method m
-                          1
+                    method1 
+                    (
+                        <>
+                        m
+                        1
+                    )
                  )
    )
    )

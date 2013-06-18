@@ -14,15 +14,15 @@
 ---
 >                                          X.t
 47c45
-<                "extendedModulePath2"("extendedModulePath1"(["extendedModulePath1"([],"Set")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"Make")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"extendedModulePath1"([],"X")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+<                "extendedModulePath2"("extendedModulePath1"(["extendedModulePath1"([],"Set")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"Make")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
 ---
 >                                          Set.Make(X).t
 66c64
-<                "extendedModulePath1"([],"X")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+<                "extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
 ---
 >                                          X.t
 82c80
-<                 "extendedModulePath2"("extendedModulePath1"(["extendedModulePath1"([],"Map")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"Make")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"extendedModulePath1"([],"X")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+<                 "extendedModulePath2"("extendedModulePath1"(["extendedModulePath1"([],"Map")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"Make")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
 ---
 >                                          Map.Make(X).t
 99c97
@@ -30,11 +30,11 @@
 ---
 >                                    X.t
 114c112
-<                "extendedModulePath1"([],"XMap")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+<                "extendedModulePath1"([],"XMap")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
 ---
 >                                    XMap.t
 116c114
-<                  "extendedModulePath1"([],"XSet")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+<                  "extendedModulePath1"([],"XSet")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
 ---
 >                                        XSet.t
 160c158
@@ -42,15 +42,15 @@
 ---
 >                                  X.t
 175c173
-<               "extendedModulePath1"([],"XMap")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+<               "extendedModulePath1"([],"XMap")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
 ---
 >                                  XMap.t
 177c175
-<                 "extendedModulePath1"([],"XSet")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+<                 "extendedModulePath1"([],"XSet")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
 ---
 >                                      XSet.t
 200c198,218
-<           <"ModSet","modTypeWith"("modTypePath"("modTypePath"(["extendedModulePath1"([],"Set")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"S")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"modConsType1"([],"typeConstr"([],"elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Mod")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"modApp"("modExpModPath"("modulePath"(["Set"],"Make")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"modExpModPath"("modulePath"([],"Mod")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+<           <"ModSet","modTypeWith"("modTypePath"("modTypePath"(["extendedModulePath1"([],"Set")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"S")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"modConsType1"([],"typeConstr"([],"elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Mod")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"modApp"("modExpModPath"("modulePath"(["Set"],"Make")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modExpModPath"("modulePath"([],"Mod")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
 ---
 >               "ModSet"
 >                   Pmty_with

@@ -59,19 +59,19 @@
                in
                  
                  try
-                 whileloop 
-                 (
-                     true
-                     Asmgen.compile_phrase
-                     (
-                         Format.std_formatter
-                         Parsecmm.phrase
-                         (
-                             Lexcmm.token
-                             lb
-                         )
-                     )
-                 )
+                 
+                  while
+                  true
+                  Asmgen.compile_phrase
+                  (
+                      Format.std_formatter
+                      Parsecmm.phrase
+                      (
+                          Lexcmm.token
+                          lb
+                      )
+                  )	 
+                     									 
                  (
                  
                  case

@@ -10,26 +10,22 @@
      (
      )
      kind =
+    (
      (
      Var
      (
       int
-      (
-      )
      )
      Term
      (
       string
-      (
-      )
        list
        (
          term
-         (
-         )
        )
      )
      )
+    )
   )
   let
   (
@@ -180,11 +176,10 @@
           ) 
             case
             (
-             patternAs 
+             alias t
              (
-                 Var
-                 n
-                 t
+               Var
+               n
              )
              try
              List.assoc
@@ -972,14 +967,13 @@
    (
     case
     (
-      patternAs 
+      alias m
       (
-          Term
-          (
-           oper
-          	_
-          )
-          m
+        Term
+        (
+         oper
+        	_
+        )
       )
       ifthenelse
       (

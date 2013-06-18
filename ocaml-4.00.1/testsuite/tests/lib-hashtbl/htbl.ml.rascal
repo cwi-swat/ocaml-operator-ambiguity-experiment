@@ -17,7 +17,7 @@
              
              key
              
-             "extendedModulePath1"([],"H")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].key
+             "extendedModulePath1"([],"H")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].key
              (
              )
              								  
@@ -596,71 +596,68 @@
                             
                             sequence
                             (
-                              forloop 
-                              (
-                                  i
-                                  0
-                                  <>
-                                  -
-                                  (
-                                      /
-                                      (
-                                          n
-                                          3
-                                      )
-                                      1
-                                  )
-                                  
-                                  let
-                                  (
+                               for i
+                               0
+                               -
+                               (
+                                   /
                                    (
-                                      									  
-                                    
-                                     
-                                     (
-                                      k
-                                          						 
-                                     	_
-                                     
-                                     )
-                                     Array.get
-                                     (
-                                      data
-                                      i
-                                     )
-                                         													 
-                                    							    		   
-                                      									  
+                                       n
+                                       3
                                    )
-                                  in
-                                    
-                                    sequence
-                                    (
-                                      H.remove
-                                      (
-                                          h
-                                          k
-                                      )
-                                    ;
-                                      :=
-                                      (
-                                          m
-                                          M.remove
-                                          (
-                                              k
-                                              
-                                               !
-                                               (
-                                               m
-                                               )
-                                                  							 
-                                          )
-                                      )
-                                    )
-                                        							
+                                   1
+                               )
+                               
+                               let
+                               (
+                                (
+                                   									  
+                                 
+                                  
+                                  (
+                                   k
+                                       						 
+                                  	_
+                                  
                                   )
-                                      									
-                              )
+                                  Array.get
+                                  (
+                                   data
+                                   i
+                                  )
+                                  												 
+                                 							    		   
+                                   									  
+                                )
+                               in
+                                 
+                                 sequence
+                                 (
+                                   H.remove
+                                   (
+                                       h
+                                       k
+                                   )
+                                 ;
+                                   :=
+                                   (
+                                       m
+                                       M.remove
+                                       (
+                                           k
+                                           
+                                            !
+                                            (
+                                            m
+                                            )
+                                               							 
+                                       )
+                                   )
+                                 )
+                                     							
+                               )
+                                   									
+                                  														  
                             ;
                               printf
                               (
@@ -1075,200 +1072,181 @@
   functor M
   (
    Map.S
-   functor []
+   struct
    (
-     modTypeWith 
-     (
-         Hashtbl.S
-         modConsType1 
-         (
-             
-             key
-             
-             "extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].key
-             (
-             )
-             								  
-         )
-         
-     )
-     struct
-     (
-     							  
-     type
-     (  						
-         							    	 
-        key
-        type
-        params=
-        (
-        
-        )
-        cstrs =
-        (
-        )
-        kind =
-        
-        "extendedModulePath1"([],"M")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].key
-        (
-        )
-        								  
-        
-        														  
-        														 
-       											   
-     								        
-     )
-     							  
-     type
-     (  						
-         							    	 
-        t
-        type
-        params=
-        (
-        
-         
-         a
-        										 
-        )
-        cstrs =
-        (
-        )
-        kind =
-        <["typexprConstr2"("typeConstr"([],"key")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Hashtbl")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-        
-        														  
-        														 
-       											   
-     								        
-     )
-     							  
-     let
-     (
-      
-       create
+   							  
+   type
+   (  						
+       							    	 
+      key
+      type
+      params=
       (
-       case
-           (
-       	  s
-            Hashtbl.create
-            (
-                s
-            )
-           )
+      
       )
-          		    
-     )
-     							  
-     let
-     (
+      cstrs =
+      (
+      )
+      kind =
       
-       clear
-       Hashtbl.clear 
-      							    		    
-     )
-     							  
-     let
-     (
+      "extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].key
+      (
+      )
+      								  
       
-       reset
-       Hashtbl.reset 
-      							    		    
-     )
-     							  
-     let
-     (
-      
-       copy
-       Hashtbl.copy 
-      							    		    
-     )
-     							  
-     let
-     (
-      
-       add
-       Hashtbl.add 
-      							    		    
-     )
-     							  
-     let
-     (
-      
-       remove
-       Hashtbl.remove 
-      							    		    
-     )
-     							  
-     let
-     (
-      
-       find
-       Hashtbl.find 
-      							    		    
-     )
-     							  
-     let
-     (
-      
-       find_all
-       Hashtbl.find_all 
-      							    		    
-     )
-     							  
-     let
-     (
-      
-       replace
-       Hashtbl.replace 
-      							    		    
-     )
-     							  
-     let
-     (
-      
-       mem
-       Hashtbl.mem 
-      							    		    
-     )
-     							  
-     let
-     (
-      
-       iter
-       Hashtbl.iter 
-      							    		    
-     )
-     							  
-     let
-     (
-      
-       fold
-       Hashtbl.fold 
-      							    		    
-     )
-     							  
-     let
-     (
-      
-       length
-       Hashtbl.length 
-      							    		    
-     )
-     							  
-     let
-     (
-      
-       stats
-       Hashtbl.stats 
-      							    		    
-     )
-     							  
-     )
-     							  
+      														  
+      														 
+     											   
+   								        
    )
-   												
+   							  
+   type
+   (  						
+       							    	 
+      t
+      type
+      params=
+      (
+      
+       
+       a
+      										 
+      )
+      cstrs =
+      (
+      )
+      kind =
+      <["typexprConstr2"("typeConstr"([],"key")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Hashtbl")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+      
+      														  
+      														 
+     											   
+   								        
+   )
+   							  
+   let
+   (
+    
+     create
+    (
+     case
+         (
+     	  s
+          Hashtbl.create
+          (
+              s
+          )
+         )
+    )
+        		    
+   )
+   							  
+   let
+   (
+    
+     clear
+     Hashtbl.clear 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     reset
+     Hashtbl.reset 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     copy
+     Hashtbl.copy 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     add
+     Hashtbl.add 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     remove
+     Hashtbl.remove 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     find
+     Hashtbl.find 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     find_all
+     Hashtbl.find_all 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     replace
+     Hashtbl.replace 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     mem
+     Hashtbl.mem 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     iter
+     Hashtbl.iter 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     fold
+     Hashtbl.fold 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     length
+     Hashtbl.length 
+    							    		    
+   )
+   							  
+   let
+   (
+    
+     stats
+     Hashtbl.stats 
+    							    		    
+   )
+   							  
+   )
+   							  
   )
       										    
                                      
@@ -1608,80 +1586,77 @@
                
                sequence
                (
-                 beginEnd 
-                 (
-                     
-                     try
-                     whileloop 
+                 
+                 try
+                 
+                  while
+                  true
+                  
+                  let
+                  (
+                   (
+                      									  
+                    
+                     l
+                     input_line
                      (
-                         true
-                         
-                         let
-                         (
-                          (
-                             									  
-                           
-                            l
-                            input_line
-                            (
-                                ic
-                            ) 
-                           							    		   
-                             									  
-                          )
-                         in
-                           
-                           sequence
-                           (
-                             incr
-                             (
-                                 lineno
-                             )
-                           ;
-                             :=
-                             (
-                                 data
-                                 ::
-                                 (
-                                     
-                                     (
-                                         					 l
-                                         					 
-                                     	
-                                     	 !
-                                     	 (
-                                     	 lineno
-                                     	 )
-                                     	    							 
-                                         					 
-                                     )
-                                         					 
-                                     
-                                      !
-                                      (
-                                      data
-                                      )
-                                         							 
-                                 )
-                             )
-                           )
-                               							
-                         )
-                             									
-                     )
-                     (
-                     
-                     case
-                     (
-                       End_of_file
-                       
-                       ()
+                         ic
                      ) 
-                     	        											 
-                     	        											 
-                     )
-                         							   
+                    							    		   
+                      									  
+                   )
+                  in
+                    
+                    sequence
+                    (
+                      incr
+                      (
+                          lineno
+                      )
+                    ;
+                      :=
+                      (
+                          data
+                          ::
+                          (
+                              
+                              (
+                                  					 l
+                                  					 
+                              	
+                              	 !
+                              	 (
+                              	 lineno
+                              	 )
+                              	    							 
+                                  					 
+                              )
+                                  					 
+                              
+                               !
+                               (
+                               data
+                               )
+                                  							 
+                          )
+                      )
+                    )
+                        							
+                  )
+                      										 
+                     									 
+                 (
+                 
+                 case
+                 (
+                   End_of_file
+                   
+                   ()
+                 ) 
+                 	        											 
+                 	        											 
                  )
+                     							   
                ;
                  
                  sequence
@@ -1983,34 +1958,31 @@
      		        
      		        sequence
      		        (
-     		          forloop 
-     		          (
-     		              i
-     		              0
-     		              <>
-     		              -
-     		              (
-     		                  num
-     		                  1
-     		              )
-     		              Array.set
-     		              (
-     		               data
-     		               i
-     		               
-     		               (
-     		                   					 Random.int
-     		                     					 (
-     		                     					     range
-     		                     					 )
-     		                   					 
-     		               	i
-     		                   					 
-     		               )
-     		                   					 
-     		              )
-     		                  									
-     		          )
+     		           for i
+     		           0
+     		           -
+     		           (
+     		               num
+     		               1
+     		           )
+     		           Array.set
+     		           (
+     		            data
+     		            i
+     		            
+     		            (
+     		                					 Random.int
+     		                  					 (
+     		                  					     range
+     		                  					 )
+     		                					 
+     		            	i
+     		                					 
+     		            )
+     		                					 
+     		           )
+     		               									
+     		              														  
      		        ;
      		          data
      		        )
@@ -2169,72 +2141,69 @@
                       )
                       else
                       (
-                       beginEnd 
+                       
+                       let
                        (
+                        (
+                           									  
+                         
+                          hd
+                          fst
+                          (
+                              Array.get
+                              (
+                               data
+                               
+                                !
+                                (
+                                j
+                                )
+                                   							 
+                              )
+                              												
+                          ) 
+                         							    		   
+                           									  
+                        )
+                       in
+                         
+                         sequence
+                         (
+                           incr
+                           (
+                               j
+                           )
+                         ;
                            
                            let
                            (
                             (
                                									  
                              
-                              hd
-                              fst
+                              tl
+                              mklist
                               (
-                                  Array.get
+                                  -
                                   (
-                                   data
-                                   
-                                    !
-                                    (
-                                    j
-                                    )
-                                       							 
+                                      n
+                                      1
                                   )
-                                      													
                               ) 
                              							    		   
                                									  
                             )
                            in
-                             
-                             sequence
+                             ::
                              (
-                               incr
-                               (
-                                   j
-                               )
-                             ;
-                               
-                               let
-                               (
-                                (
-                                   									  
-                                 
-                                  tl
-                                  mklist
-                                  (
-                                      -
-                                      (
-                                          n
-                                          1
-                                      )
-                                  ) 
-                                 							    		   
-                                   									  
-                                )
-                               in
-                                 ::
-                                 (
-                                     hd
-                                     tl
-                                 )
-                               )
-                                   									
+                                 hd
+                                 tl
                              )
-                                 							
                            )
                                									
+                         )
+                             							
                        )
+                           									
                       ) 
                      )
                      	    											 
@@ -2247,40 +2216,37 @@
                
                sequence
                (
-                 forloop 
-                 (
-                     i
-                     0
-                     <>
-                     -
-                     (
-                         Array.length
-                         (
-                             d
-                         )
-                         1
-                     )
-                     Array.set
-                     (
-                      d
-                      i
-                      
+                  for i
+                  0
+                  -
+                  (
+                      Array.length
                       (
-                          					 mklist
-                            					 (
-                            					     Random.int
-                            					     (
-                            					         16
-                            					     )
-                            					 )
-                          					 
-                      	i
-                          					 
+                          d
                       )
-                          					 
-                     )
-                         									
-                 )
+                      1
+                  )
+                  Array.set
+                  (
+                   d
+                   i
+                   
+                   (
+                       					 mklist
+                         					 (
+                         					     Random.int
+                         					     (
+                         					         16
+                         					     )
+                         					 )
+                       					 
+                   	i
+                       					 
+                   )
+                       					 
+                  )
+                      									
+                     														  
                ;
                  d
                )

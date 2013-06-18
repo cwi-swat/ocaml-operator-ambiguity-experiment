@@ -10,6 +10,8 @@
      (
      )
      kind =
+    (
+    )
   )
   type
   (  						
@@ -24,9 +26,9 @@
      (
      )
      kind =
+    (
      untyped
-     (
-     )
+    )
   )
   type
   (  						
@@ -41,9 +43,9 @@
      (
      )
      kind =
+    (
      sexp
-     (
-     )
+    )
      t
      type
      params=
@@ -55,6 +57,7 @@
      (
      )
      kind =
+    (
       wrapped
       (
          typed
@@ -62,6 +65,7 @@
            a
          )
       )
+    )
      sexp
      type
      params=
@@ -71,12 +75,12 @@
      (
      )
      kind =
+    (
       wrapped
       (
         untyped
-        (
-        )
       )
+    )
   )
   classTypeDef 
   (
@@ -86,7 +90,7 @@
           (
               <"a",[]>
               s3
-              <[],[<[],[],"underlying","typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
+              <[],[<[],[],"underlying","polytype1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
           )
       )
   )

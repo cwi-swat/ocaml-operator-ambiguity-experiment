@@ -11,12 +11,14 @@
           (
             case
             (
-              Ppat_alias "n"
-              Term
-                (
-                  _
-                  sons
-                )
+              alias n
+              (
+                Term
+                  (
+                    _
+                    sons
+                  )
+              )
               let
               (
                 (

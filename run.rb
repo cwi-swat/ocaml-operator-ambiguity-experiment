@@ -2,7 +2,7 @@ files = Array.new
 file_names = Array.new
 dirs = Array.new
 
-File.foreach('./toplevels.txt') do |line|
+File.foreach('./all_files.txt') do |line|
   f = line.chomp
   files << f
   dirs << f[0..f.rindex('/')]
@@ -10,7 +10,7 @@ File.foreach('./toplevels.txt') do |line|
 end
 
 for i in 0..files.size
-  result =  File.new("#{dirs[i]}ocaml-#{file_names[i]}", 'w')  
+  result =  File.new("#{dirs[i]}#{file_names[i]}.ocaml", 'w')  
   puts "cat #{files[i]} | xargs -0 /Users/ali/ocaml/src/4.00/parsing/imp > #{result.path}"
   `cat #{files[i]} | xargs -0 /Users/ali/ocaml/src/4.00/parsing/imp > #{result.path}`
 end

@@ -1,5 +1,5 @@
 50c50
-<     "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].state
+<     "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].state
 ---
 >                V.state
 58c58
@@ -22,11 +22,11 @@
 ---
 >                  V.state
 87c85
-<        "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
+<        "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
 ---
 >                        V.value
 91c89
-<     "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
+<     "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
 ---
 >                    V.value
 132c130
@@ -91,7 +91,7 @@
 254d237
 <         modConsType1 
 257c240,242
-<             "extendedModulePath1"([],"Ast")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].chunk
+<             "extendedModulePath1"([],"Ast")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].chunk
 ---
 >               Pwith_type
 >                 type
@@ -111,7 +111,7 @@
 406d395
 <         modConsType2 
 409c398,401
-<             "extendedModulePath1"([],"T")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+<             "extendedModulePath1"([],"T")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
 ---
 >               Pwith_typesubst
 >                 type
@@ -134,7 +134,7 @@
 416d413
 <         modConsType2 
 419c416,426
-<             "extendedModulePath1"([],"T")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+<             "extendedModulePath1"([],"T")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
 ---
 >               Pwith_typesubst
 >                 type
@@ -211,7 +211,7 @@
 >                            C.V.state
 >                           (
 533c546
-<        "extendedModulePath1"([],"Weapon")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+<        "extendedModulePath1"([],"Weapon")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
 ---
 >                      Weapon.t
 538,539c551

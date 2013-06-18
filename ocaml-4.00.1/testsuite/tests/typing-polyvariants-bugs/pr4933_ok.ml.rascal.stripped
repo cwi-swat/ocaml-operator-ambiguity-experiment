@@ -13,9 +13,9 @@
        (
        )
        kind =
+      (
        int
-       (
-       )
+      )
     )
    )    								
   module  Make
@@ -24,27 +24,23 @@
    signature
    (
    )
-   functor []
+   struct
    (
-     Priv
-     struct
+   type
+   (  						
+      t
+      type
+      params=
+      (
+      )
+      cstrs =
+      (
+      )
+      kind =
      (
-     type
-     (  						
-        t
-        type
-        params=
-        (
-        )
-        cstrs =
-        (
-        )
-        kind =
-        int
-        (
-        )
+      int
      )
-     )
+   )
    )
   )
   module  A
@@ -68,7 +64,9 @@
        (
        )
        kind =
+      (
        <"A",[]>
+      )
     )
    )    								
   module  Make'
@@ -77,25 +75,23 @@
    signature
    (
    )
-   functor []
+   struct
    (
-     Priv'
-     struct
+   type
+   (  						
+      t
+      type
+      params=
+      (
+      )
+      cstrs =
+      (
+      )
+      kind =
      (
-     type
-     (  						
-        t
-        type
-        params=
-        (
-        )
-        cstrs =
-        (
-        )
-        kind =
-        <[],[<"A",[]>]>
+      <[],[<"A",[]>]>
      )
-     )
+   )
    )
   )
   module  A'

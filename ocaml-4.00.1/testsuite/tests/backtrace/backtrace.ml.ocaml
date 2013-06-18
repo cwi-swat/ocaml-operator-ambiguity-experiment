@@ -94,9 +94,11 @@
             )
             case
             (
-              Ppat_alias "exn"
-              Error
-                "b"
+              alias exn
+              (
+                Error
+                  "b"
+              )
               sequence
               (
                 print_string

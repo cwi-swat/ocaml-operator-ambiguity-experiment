@@ -94,11 +94,10 @@
          ) 
            case
            (
-            patternAs 
+            alias exn
             (
-                Error
-                "b"
-                exn
+              Error
+              "b"
             )
             sequence
             (

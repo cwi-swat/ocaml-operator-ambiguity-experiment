@@ -51,10 +51,12 @@
      (
      )
      kind =
+    (
      <[],"a">
      
      														  
      														 
+    )
     											   
   								        
   )
@@ -68,7 +70,7 @@
               
               <"a",[]>
               o2
-              <["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"obj")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[]>
+              <["typexprConstr1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"obj")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[]>
           )
           
       )
@@ -105,27 +107,21 @@
                 class_structure
                 (
                     								
-                   method1 
-                   (
-                       <>
-                       
-                       m
-                       
-                       
-                       
-                       (
-                       self
-                       :
-                       
-                        obj
-                        (
-                          a
-                        )
-                        
-                           									
-                       )
-                           								
-                   )
+                   method m
+                         
+                         (
+                         self
+                         :
+                         
+                          obj
+                          (
+                            a
+                          )
+                          
+                             									
+                         )
+                             								
+                       												 
                     								
                 )
                     								

@@ -6,17 +6,29 @@
 <       A
 ---
 >     "A"
-19c19
-<           "extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+18d17
+<          (
+20c19,21
+<           "extendedModulePath1"([],"B")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
 ---
 >                            B.t
-41c41
+>                           (
+>                           )
+21a23
+>                           (
+38d39
+<         (
+40c41,43
 <          "extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
 ---
 >                          B.t
-49c49,85
-<       <"B","sig"([<"typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"struct2"(["typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
----
+>                         (
+>                         )
+41a45,82
+>                         (
+>                         )
+>           )
+>         )
 >     "B"
 >         signature
 >         (
@@ -51,6 +63,5 @@
 >                 kind =
 >                        A.t
 >                       (
->                       )
->           )
->         )
+45d85
+<       <"B","sig"([<"typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"A")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],[])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[]>])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"struct2"(["typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],[])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>

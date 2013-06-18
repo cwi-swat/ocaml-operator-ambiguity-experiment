@@ -1,155 +1,6 @@
-0a1,557
-> (
->   open Bigarray
->   open Printf
->   let
->   (
->     error_occurred
->       ref
->       (
->           false
->                 )
->   )
->   let
->   (
->     function_tested
->       ref
->       (
->           ""
->       )
->   )
->   let
->   (
->     testing_function
->       (
->         case
->         (
->           s
->           sequence
->           (
->             :=
->             (
->                 function_tested
->                 s
->             )
->           ;
->             sequence
->             (
->               print_newline
->               (
->                   ()
->                                 )
->             ;
->               sequence
->               (
->                 print_string
->                 (
->                     s
->                 )
->               ;
->                 print_newline
->                 (
->                     ()
->                                     )
->               )
->             )
->           )
->         )
->       )
->   )
->   let
->   (
->     test
->       (
->         case
->         (
->           test_number
->           (
->             case
->             (
->               answer
->               (
->                 case
->                 (
->                   correct_answer
->                   sequence
->                   (
->                     flush
->                     (
->                         stdout
->                     )
->                   ;
->                     sequence
->                     (
->                       flush
->                       (
->                           stderr
->                       )
->                     ;
->                       ifthenelse
->                       (
->                         if
->                         (
->                           <>
->                           (
->                               answer
->                               correct_answer
->                           )
->                         )
->                         then
->                         (
->                           sequence
->                           (
->                             eprintf
->                             (
->                                 "*** Bad result (%s, test %d)\n"
->                                 !
->                                 (
->                                     function_tested
->                                 )
->                                 test_number
->                             )
->                           ;
->                             sequence
->                             (
->                               flush
->                               (
->                                   stderr
->                               )
->                             ;
->                               :=
->                               (
->                                   error_occurred
->                                   true
->                                                                 )
->                             )
->                           )
->                         )
->                         else
->                         (
->                             printf
->                             (
->                                 " %d..."
->                                 test_number
->                             )
->                         )
->                       )
->                     )
->                   )
->                 )
->               )
->             )
->           )
->         )
->       )
->   )
->   external c_filltab
->   (
->   value_description
->       arrow
->          unit
->         (
->         )
+152c152,163
+<    <["typexprConstr2"("typeConstr"([],"float")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"float64_elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"c_layout")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+---
 >          Array2.t
 >         (
 >              float
@@ -162,14 +13,9 @@
 >             (
 >             )
 >         )
->     (
->       "c_filltab"
->     )
->   )
->   external c_printtab
->   (
->   value_description
->       arrow
+161c172,183
+<    <["typexprConstr2"("typeConstr"([],"float")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"float64_elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"c_layout")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"(["extendedModulePath1"([],"Array2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+---
 >          Array2.t
 >         (
 >              float
@@ -182,20 +28,9 @@
 >             (
 >             )
 >         )
->          unit
->         (
->         )
->     (
->       "c_printtab"
->     )
->   )
->   external fortran_filltab
->   (
->   value_description
->       arrow
->          unit
->         (
->         )
+176c198,209
+<    <["typexprConstr2"("typeConstr"([],"float")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"float32_elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"fortran_layout")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+---
 >          Array2.t
 >         (
 >              float
@@ -208,14 +43,9 @@
 >             (
 >             )
 >         )
->     (
->       "fortran_filltab"
->     )
->   )
->   external fortran_printtab
->   (
->   value_description
->       arrow
+185c218,229
+<    <["typexprConstr2"("typeConstr"([],"float")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"float32_elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"fortran_layout")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array2")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+---
 >          Array2.t
 >         (
 >              float
@@ -228,331 +58,75 @@
 >             (
 >             )
 >         )
->          unit
->         (
->         )
->     (
->       "fortran_printtab"
->     )
->   )
->   let
->   (
->     (
->       make_array2
->         (
->           case
->           (
->             kind
->             (
->               case
->               (
->                 layout
->                 (
->                   case
->                   (
->                     ind0
->                     (
->                       case
->                       (
->                         dim1
->                         (
->                           case
->                           (
->                             dim2
->                             (
->                               case
->                               (
->                                 fromint
->                                 let
->                                 (
->                                   (
->                                     a
->                                       Array2.create
->                                       (
->                                           kind
->                                           layout
->                                           dim1
->                                           dim2
->                                       )
->                                   )
->                                 in
->                                   sequence
->                                   (
->                                     for i
->                                     ind0
->                                     +
->                                     (
->                                         -
->                                         (
->                                             dim1
->                                             1
->                                         )
->                                         ind0
->                                     )
->                                     for j
->                                     ind0
->                                     +
->                                     (
->                                         -
->                                         (
->                                             dim2
->                                             1
->                                         )
->                                         ind0
->                                     )
+258c302
+<        		  		  		  		  		            Bigarray.Array1.set
+---
 >                                     Bigarray.Array2.set
->                                     (
->                                         a
->                                         i
->                                         j
->                                         fromint
->                                         (
->                                             +
->                                             (
->                                                 *
->                                                 (
->                                                     i
->                                                     1000
->                                                 )
->                                                 j
->                                             )
->                                         )
->                                     )
->                                   ;
->                                     a
->                                   )
->                                 )
->                               )
->                             )
->                           )
->                         )
->                       )
->                     )
->                   )
->                 )
->               )
->             )
->           )
->         )
->     )
->   in
->     sequence
->     (
->       print_newline
->       (
->           ()
->                 )
->     ;
->       sequence
->       (
->         testing_function
->         (
->             "------ Foreign function interface --------"
->         )
->       ;
->         sequence
->         (
->           testing_function
->           (
->               "Passing an array to C"
->           )
->         ;
->           sequence
->           (
->             c_printtab
->             (
->                 make_array2
->                 (
->                     float64
->                     c_layout
->                     0
->                     6
->                     8
->                     float
->                 )
->             )
->           ;
->             sequence
->             (
->               testing_function
->               (
->                   "Accessing a C array"
->               )
->             ;
->               let
->               (
->                 (
->                   a
->                     c_filltab
->                     (
->                         ()
->                                             )
->                 )
->               in
->                 sequence
->                 (
->                   test
->                   (
->                       1
+261d304
+<        		  		  		  		  		             (
+264d306
+<        		  		  		  		  		             )
+354c396
+<                        Bigarray.Array1.get
+---
 >                       Bigarray.Array2.get
->                       (
->                           a
->                           0
->                           0
->                       )
->                       0.0
->                   )
->                 ;
->                   sequence
->                   (
->                     test
->                     (
->                         2
+357d398
+<                         (
+361d401
+<                        )
+370c410
+<                          Bigarray.Array1.get
+---
 >                         Bigarray.Array2.get
->                         (
->                             a
->                             1
->                             0
->                         )
->                         100.0
->                     )
->                   ;
->                     sequence
->                     (
->                       test
->                       (
->                           3
+373d412
+<                           (
+377d415
+<                          )
+386c424
+<                            Bigarray.Array1.get
+---
 >                           Bigarray.Array2.get
->                           (
->                               a
->                               0
->                               1
->                           )
->                           1.0
->                       )
->                     ;
->                       sequence
->                       (
->                         test
->                         (
->                             4
+389d426
+<                             (
+393d429
+<                            )
+402c438
+<                              Bigarray.Array1.get
+---
 >                             Bigarray.Array2.get
->                             (
->                                 a
->                                 5
->                                 4
->                             )
->                             504.0
->                         )
->                       ;
->                         sequence
->                         (
->                           testing_function
->                           (
->                               "Passing an array to Fortran"
->                           )
->                         ;
->                           sequence
->                           (
->                             fortran_printtab
->                             (
->                                 make_array2
->                                 (
->                                     float32
->                                     fortran_layout
->                                     1
->                                     5
->                                     4
->                                     float
->                                 )
->                             )
->                           ;
->                             sequence
->                             (
->                               testing_function
->                               (
->                                   "Accessing a Fortran array"
->                               )
->                             ;
->                               let
->                               (
->                                 (
->                                   a
->                                     fortran_filltab
->                                     (
->                                         ()
->                                                                             )
->                                 )
->                               in
->                                 sequence
->                                 (
->                                   test
->                                   (
->                                       1
+405d440
+<                               (
+409d443
+<                              )
+457c491
+<                                        Bigarray.Array1.get
+---
 >                                       Bigarray.Array2.get
->                                       (
->                                           a
->                                           1
->                                           1
->                                       )
->                                       101.0
->                                   )
->                                 ;
->                                   sequence
->                                   (
->                                     test
->                                     (
->                                         2
+460d493
+<                                         (
+464d496
+<                                        )
+473c505
+<                                          Bigarray.Array1.get
+---
 >                                         Bigarray.Array2.get
->                                         (
->                                             a
->                                             2
->                                             1
->                                         )
->                                         201.0
->                                     )
->                                   ;
->                                     sequence
->                                     (
->                                       test
->                                       (
->                                           3
+476d507
+<                                           (
+480d510
+<                                          )
+489c519
+<                                            Bigarray.Array1.get
+---
 >                                           Bigarray.Array2.get
->                                           (
->                                               a
->                                               1
->                                               2
->                                           )
->                                           102.0
->                                       )
->                                     ;
->                                       test
->                                       (
->                                           4
+492d521
+<                                             (
+496d524
+<                                            )
+503c531
+<                                            Bigarray.Array1.get
+---
 >                                           Bigarray.Array2.get
->                                           (
->                                               a
->                                               5
->                                               4
->                                           )
->                                           504.0
->                                       )
->                                     )
->                                   )
->                                 )
->                               )
->                             )
->                           )
->                         )
->                       )
->                     )
->                   )
->                 )
->               )
->             )
->           )
->         )
->       )
->     )
->   )
-> )
+506d533
+<                                             (
+510d536
+<                                            )

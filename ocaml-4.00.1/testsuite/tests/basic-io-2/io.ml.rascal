@@ -228,26 +228,23 @@
      		  		                       )
      		  		                       else
      		  		                       (
-     		  		                        beginEnd 
+     		  		                        
+     		  		                        sequence
      		  		                        (
-     		  		                            
-     		  		                            sequence
-     		  		                            (
-     		  		                              output
-     		  		                              (
-     		  		                                  oc
-     		  		                                  buffer
-     		  		                                  0
-     		  		                                  n
-     		  		                              )
-     		  		                            ;
-     		  		                              copy
-     		  		                              (
-     		  		                                  ()
-     		  		                              )
-     		  		                            )
-     		  		                                							
+     		  		                          output
+     		  		                          (
+     		  		                              oc
+     		  		                              buffer
+     		  		                              0
+     		  		                              n
+     		  		                          )
+     		  		                        ;
+     		  		                          copy
+     		  		                          (
+     		  		                              ()
+     		  		                          )
      		  		                        )
+     		  		                            							
      		  		                       ) 
      		  		                      )
      		  		                      	    											 
@@ -429,26 +426,23 @@
      		  		                         )
      		  		                         else
      		  		                         (
-     		  		                          beginEnd 
+     		  		                          
+     		  		                          sequence
      		  		                          (
-     		  		                              
-     		  		                              sequence
-     		  		                              (
-     		  		                                output
-     		  		                                (
-     		  		                                    oc
-     		  		                                    buffer
-     		  		                                    0
-     		  		                                    n
-     		  		                                )
-     		  		                              ;
-     		  		                                copy
-     		  		                                (
-     		  		                                    ()
-     		  		                                )
-     		  		                              )
-     		  		                                  							
+     		  		                            output
+     		  		                            (
+     		  		                                oc
+     		  		                                buffer
+     		  		                                0
+     		  		                                n
+     		  		                            )
+     		  		                          ;
+     		  		                            copy
+     		  		                            (
+     		  		                                ()
+     		  		                            )
      		  		                          )
+     		  		                              							
      		  		                         ) 
      		  		                        )
      		  		                        	    											 
@@ -550,29 +544,29 @@
      		        in
      		          
      		          try
-     		          whileloop 
-     		          (
-     		              true
-     		              
-     		              sequence
-     		              (
-     		                output_string
-     		                (
-     		                    oc
-     		                    input_line
-     		                    (
-     		                        ic
-     		                    )
-     		                )
-     		              ;
-     		                output_char
-     		                (
-     		                    oc
-     		                    0a
-     		                )
-     		              )
-     		                  							
-     		          )
+     		          
+     		           while
+     		           true
+     		           
+     		           sequence
+     		           (
+     		             output_string
+     		             (
+     		                 oc
+     		                 input_line
+     		                 (
+     		                     ic
+     		                 )
+     		             )
+     		           ;
+     		             output_char
+     		             (
+     		                 oc
+     		                 0a
+     		             )
+     		           )
+     		               								 
+     		              									 
      		          (
      		          
      		          case
@@ -691,78 +685,75 @@
      		  		              
      		  		              sequence
      		  		              (
-     		  		                forloop 
-     		  		                (
-     		  		                    i
-     		  		                    /
-     		  		                    (
-     		  		                        -
-     		  		                        (
-     		  		                            size
-     		  		                            1
-     		  		                        )
-     		  		                        chunksize
-     		  		                    )
-     		  		                    <>
-     		  		                    0
-     		  		                    
-     		  		                    sequence
-     		  		                    (
-     		  		                      seek_in
-     		  		                      (
-     		  		                          ic
-     		  		                          *
-     		  		                          (
-     		  		                              i
-     		  		                              chunksize
-     		  		                          )
-     		  		                      )
-     		  		                    ;
-     		  		                      
-     		  		                      sequence
-     		  		                      (
-     		  		                        seek_out
-     		  		                        (
-     		  		                            oc
-     		  		                            *
-     		  		                            (
-     		  		                                i
-     		  		                                chunksize
-     		  		                            )
-     		  		                        )
-     		  		                      ;
-     		  		                        
-     		  		                        let
-     		  		                        (
+     		  		                 for i
+     		  		                 /
+     		  		                 (
+     		  		                     -
+     		  		                     (
+     		  		                         size
+     		  		                         1
+     		  		                     )
+     		  		                     chunksize
+     		  		                 )
+     		  		                 0
+     		  		                 
+     		  		                 sequence
+     		  		                 (
+     		  		                   seek_in
+     		  		                   (
+     		  		                       ic
+     		  		                       *
+     		  		                       (
+     		  		                           i
+     		  		                           chunksize
+     		  		                       )
+     		  		                   )
+     		  		                 ;
+     		  		                   
+     		  		                   sequence
+     		  		                   (
+     		  		                     seek_out
+     		  		                     (
+     		  		                         oc
+     		  		                         *
      		  		                         (
-     		  		                            									  
-     		  		                          
-     		  		                           n
-     		  		                           input
-     		  		                           (
-     		  		                               ic
-     		  		                               buffer
-     		  		                               0
-     		  		                               chunksize
-     		  		                           ) 
-     		  		                          							    		   
-     		  		                            									  
+     		  		                             i
+     		  		                             chunksize
      		  		                         )
-     		  		                        in
-     		  		                          output
-     		  		                          (
-     		  		                              oc
-     		  		                              buffer
-     		  		                              0
-     		  		                              n
-     		  		                          )
-     		  		                        )
-     		  		                            									
+     		  		                     )
+     		  		                   ;
+     		  		                     
+     		  		                     let
+     		  		                     (
+     		  		                      (
+     		  		                         									  
+     		  		                       
+     		  		                        n
+     		  		                        input
+     		  		                        (
+     		  		                            ic
+     		  		                            buffer
+     		  		                            0
+     		  		                            chunksize
+     		  		                        ) 
+     		  		                       							    		   
+     		  		                         									  
      		  		                      )
-     		  		                          							
-     		  		                    )
-     		  		                        							
-     		  		                )
+     		  		                     in
+     		  		                       output
+     		  		                       (
+     		  		                           oc
+     		  		                           buffer
+     		  		                           0
+     		  		                           n
+     		  		                       )
+     		  		                     )
+     		  		                         									
+     		  		                   )
+     		  		                       							
+     		  		                 )
+     		  		                     							
+     		  		                    														  
      		  		              ;
      		  		                
      		  		                sequence
@@ -825,37 +816,34 @@
            
            sequence
            (
-             forloop 
-             (
-                 i
-                 1
-                 <>
-                 256
-                 
-                 sequence
-                 (
-                   output_string
-                   (
-                       oc
-                       String.make
-                       (
-                           *
-                           (
-                               i
-                               64
-                           )
-                           2e
-                       )
-                   )
-                 ;
-                   output_char
-                   (
-                       oc
-                       0a
-                   )
-                 )
-                     							
-             )
+              for i
+              1
+              256
+              
+              sequence
+              (
+                output_string
+                (
+                    oc
+                    String.make
+                    (
+                        *
+                        (
+                            i
+                            64
+                        )
+                        2e
+                    )
+                )
+              ;
+                output_char
+                (
+                    oc
+                    0a
+                )
+              )
+                  							
+                 														  
            ;
              close_out
              (
@@ -884,7 +872,7 @@
        Sys.argv
        1
       )
-          													 
+      												 
      							    		   
        									  
     )

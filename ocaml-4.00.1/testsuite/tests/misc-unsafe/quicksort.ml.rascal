@@ -23,11 +23,7 @@
      		  		 	  
      		  		 	   array
      		  		 	   (
-     		  		 	     
      		  		 	     int
-     		  		 	     (
-     		  		 	     )
-     		  		 	     								  
      		  		 	   )
      		  		 	   
      		  		 	      									
@@ -44,59 +40,79 @@
      		  		       )
      		  		       then
      		  		       (
-     		  		        beginEnd 
+     		  		        
+     		  		        let
      		  		        (
+     		  		         (
+     		  		            									  
+     		  		          
+     		  		           i
+     		  		           ref
+     		  		           (
+     		  		               lo
+     		  		           ) 
+     		  		          							    		   
+     		  		            									  
+     		  		         )
+     		  		        in
+     		  		          
+     		  		          let
+     		  		          (
+     		  		           (
+     		  		              									  
+     		  		            
+     		  		             j
+     		  		             ref
+     		  		             (
+     		  		                 hi
+     		  		             ) 
+     		  		            							    		   
+     		  		              									  
+     		  		           )
+     		  		          in
      		  		            
      		  		            let
      		  		            (
      		  		             (
      		  		                									  
      		  		              
-     		  		               i
-     		  		               ref
+     		  		               pivot
+     		  		               Array.get
      		  		               (
-     		  		                   lo
-     		  		               ) 
+     		  		                a
+     		  		                hi
+     		  		               )
+     		  		               												 
      		  		              							    		   
      		  		                									  
      		  		             )
      		  		            in
      		  		              
-     		  		              let
+     		  		              sequence
      		  		              (
-     		  		               (
-     		  		                  									  
      		  		                
-     		  		                 j
-     		  		                 ref
+     		  		                 while
+     		  		                 <
      		  		                 (
-     		  		                     hi
-     		  		                 ) 
-     		  		                							    		   
-     		  		                  									  
-     		  		               )
-     		  		              in
-     		  		                
-     		  		                let
-     		  		                (
-     		  		                 (
-     		  		                    									  
-     		  		                  
-     		  		                   pivot
-     		  		                   Array.get
-     		  		                   (
-     		  		                    a
-     		  		                    hi
-     		  		                   )
-     		  		                       													 
-     		  		                  							    		   
-     		  		                    									  
+     		  		                     
+     		  		                      !
+     		  		                      (
+     		  		                      i
+     		  		                      )
+     		  		                         							 
+     		  		                     
+     		  		                      !
+     		  		                      (
+     		  		                      j
+     		  		                      )
+     		  		                         							 
      		  		                 )
-     		  		                in
-     		  		                  
-     		  		                  sequence
-     		  		                  (
-     		  		                    whileloop 
+     		  		                 
+     		  		                 sequence
+     		  		                 (
+     		  		                   
+     		  		                    while
+     		  		                    &&
      		  		                    (
      		  		                        <
      		  		                        (
@@ -106,297 +122,271 @@
      		  		                             i
      		  		                             )
      		  		                                							 
+     		  		                            hi
+     		  		                        )
+     		  		                        <=
+     		  		                        (
+     		  		                            Array.get
+     		  		                            (
+     		  		                             a
+     		  		                             
+     		  		                              !
+     		  		                              (
+     		  		                              i
+     		  		                              )
+     		  		                                 							 
+     		  		                            )
+     		  		                            												
+     		  		                            pivot
+     		  		                        )
+     		  		                    )
+     		  		                    incr
+     		  		                    (
+     		  		                        i
+     		  		                    )	 
+     		  		                       									 
+     		  		                 ;
+     		  		                   
+     		  		                   sequence
+     		  		                   (
+     		  		                     
+     		  		                      while
+     		  		                      &&
+     		  		                      (
+     		  		                          >
+     		  		                          (
+     		  		                              
+     		  		                               !
+     		  		                               (
+     		  		                               j
+     		  		                               )
+     		  		                                  							 
+     		  		                              lo
+     		  		                          )
+     		  		                          >=
+     		  		                          (
+     		  		                              Array.get
+     		  		                              (
+     		  		                               a
+     		  		                               
+     		  		                                !
+     		  		                                (
+     		  		                                j
+     		  		                                )
+     		  		                                   							 
+     		  		                              )
+     		  		                              												
+     		  		                              pivot
+     		  		                          )
+     		  		                      )
+     		  		                      decr
+     		  		                      (
+     		  		                          j
+     		  		                      )	 
+     		  		                         									 
+     		  		                   ;
+     		  		                     ifthenelse
+     		  		                     (
+     		  		                      if
+     		  		                      (
+     		  		                       <
+     		  		                       (
+     		  		                           
+     		  		                            !
+     		  		                            (
+     		  		                            i
+     		  		                            )
+     		  		                               							 
+     		  		                           
+     		  		                            !
+     		  		                            (
+     		  		                            j
+     		  		                            )
+     		  		                               							 
+     		  		                       )
+     		  		                      )
+     		  		                      then
+     		  		                      (
+     		  		                       
+     		  		                       let
+     		  		                       (
+     		  		                        (
+     		  		                           									  
+     		  		                         
+     		  		                          temp
+     		  		                          Array.get
+     		  		                          (
+     		  		                           a
+     		  		                           
+     		  		                            !
+     		  		                            (
+     		  		                            i
+     		  		                            )
+     		  		                               							 
+     		  		                          )
+     		  		                          												 
+     		  		                         							    		   
+     		  		                           									  
+     		  		                        )
+     		  		                       in
+     		  		                         
+     		  		                         sequence
+     		  		                         (
+     		  		                           Array.set
+     		  		                           (
+     		  		                            a
+     		  		                            
+     		  		                             !
+     		  		                             (
+     		  		                             i
+     		  		                             )
+     		  		                                							 
+     		  		                            Array.get
+     		  		                            (
+     		  		                             a
+     		  		                             
+     		  		                              !
+     		  		                              (
+     		  		                              j
+     		  		                              )
+     		  		                                 							 
+     		  		                            )
+     		  		                            												
+     		  		                           )
+     		  		                               									
+     		  		                         ;
+     		  		                           Array.set
+     		  		                           (
+     		  		                            a
      		  		                            
      		  		                             !
      		  		                             (
      		  		                             j
      		  		                             )
      		  		                                							 
-     		  		                        )
-     		  		                        
-     		  		                        sequence
-     		  		                        (
-     		  		                          whileloop 
-     		  		                          (
-     		  		                              &&
-     		  		                              (
-     		  		                                  <
-     		  		                                  (
-     		  		                                      
-     		  		                                       !
-     		  		                                       (
-     		  		                                       i
-     		  		                                       )
-     		  		                                          							 
-     		  		                                      hi
-     		  		                                  )
-     		  		                                  <=
-     		  		                                  (
-     		  		                                      Array.get
-     		  		                                      (
-     		  		                                       a
-     		  		                                       
-     		  		                                        !
-     		  		                                        (
-     		  		                                        i
-     		  		                                        )
-     		  		                                           							 
-     		  		                                      )
-     		  		                                          													
-     		  		                                      pivot
-     		  		                                  )
-     		  		                              )
-     		  		                              incr
-     		  		                              (
-     		  		                                  i
-     		  		                              )
-     		  		                          )
-     		  		                        ;
-     		  		                          
-     		  		                          sequence
-     		  		                          (
-     		  		                            whileloop 
-     		  		                            (
-     		  		                                &&
-     		  		                                (
-     		  		                                    >
-     		  		                                    (
-     		  		                                        
-     		  		                                         !
-     		  		                                         (
-     		  		                                         j
-     		  		                                         )
-     		  		                                            							 
-     		  		                                        lo
-     		  		                                    )
-     		  		                                    >=
-     		  		                                    (
-     		  		                                        Array.get
-     		  		                                        (
-     		  		                                         a
-     		  		                                         
-     		  		                                          !
-     		  		                                          (
-     		  		                                          j
-     		  		                                          )
-     		  		                                             							 
-     		  		                                        )
-     		  		                                            													
-     		  		                                        pivot
-     		  		                                    )
-     		  		                                )
-     		  		                                decr
-     		  		                                (
-     		  		                                    j
-     		  		                                )
-     		  		                            )
-     		  		                          ;
-     		  		                            ifthenelse
-     		  		                            (
-     		  		                             if
-     		  		                             (
-     		  		                              <
-     		  		                              (
-     		  		                                  
-     		  		                                   !
-     		  		                                   (
-     		  		                                   i
-     		  		                                   )
-     		  		                                      							 
-     		  		                                  
-     		  		                                   !
-     		  		                                   (
-     		  		                                   j
-     		  		                                   )
-     		  		                                      							 
-     		  		                              )
-     		  		                             )
-     		  		                             then
-     		  		                             (
-     		  		                              beginEnd 
-     		  		                              (
-     		  		                                  
-     		  		                                  let
-     		  		                                  (
-     		  		                                   (
-     		  		                                      									  
-     		  		                                    
-     		  		                                     temp
-     		  		                                     Array.get
-     		  		                                     (
-     		  		                                      a
-     		  		                                      
-     		  		                                       !
-     		  		                                       (
-     		  		                                       i
-     		  		                                       )
-     		  		                                          							 
-     		  		                                     )
-     		  		                                         													 
-     		  		                                    							    		   
-     		  		                                      									  
-     		  		                                   )
-     		  		                                  in
-     		  		                                    
-     		  		                                    sequence
-     		  		                                    (
-     		  		                                      Array.set
-     		  		                                      (
-     		  		                                       a
-     		  		                                       
-     		  		                                        !
-     		  		                                        (
-     		  		                                        i
-     		  		                                        )
-     		  		                                           							 
-     		  		                                       Array.get
-     		  		                                       (
-     		  		                                        a
-     		  		                                        
-     		  		                                         !
-     		  		                                         (
-     		  		                                         j
-     		  		                                         )
-     		  		                                            							 
-     		  		                                       )
-     		  		                                           													
-     		  		                                      )
-     		  		                                          									
-     		  		                                    ;
-     		  		                                      Array.set
-     		  		                                      (
-     		  		                                       a
-     		  		                                       
-     		  		                                        !
-     		  		                                        (
-     		  		                                        j
-     		  		                                        )
-     		  		                                           							 
-     		  		                                       temp
-     		  		                                      )
-     		  		                                          									
-     		  		                                    )
-     		  		                                        							
-     		  		                                  )
-     		  		                                      									
-     		  		                              )
-     		  		                             )
-     		  		                             else
-     		  		                             (
-     		  		                             )
-     		  		                            )
-     		  		                                									   
-     		  		                          )
-     		  		                              							
-     		  		                        )
-     		  		                            							
+     		  		                            temp
+     		  		                           )
+     		  		                               									
+     		  		                         )
+     		  		                             							
+     		  		                       )
+     		  		                           									
+     		  		                      )
+     		  		                      else
+     		  		                      (
+     		  		                      )
+     		  		                     )
+     		  		                         									   
+     		  		                   )
+     		  		                       							
+     		  		                 )
+     		  		                     								 
+     		  		                    									 
+     		  		              ;
+     		  		                
+     		  		                let
+     		  		                (
+     		  		                 (
+     		  		                    									  
+     		  		                  
+     		  		                   temp
+     		  		                   Array.get
+     		  		                   (
+     		  		                    a
+     		  		                    
+     		  		                     !
+     		  		                     (
+     		  		                     i
+     		  		                     )
+     		  		                        							 
+     		  		                   )
+     		  		                   												 
+     		  		                  							    		   
+     		  		                    									  
+     		  		                 )
+     		  		                in
+     		  		                  
+     		  		                  sequence
+     		  		                  (
+     		  		                    Array.set
+     		  		                    (
+     		  		                     a
+     		  		                     
+     		  		                      !
+     		  		                      (
+     		  		                      i
+     		  		                      )
+     		  		                         							 
+     		  		                     Array.get
+     		  		                     (
+     		  		                      a
+     		  		                      hi
+     		  		                     )
+     		  		                     												
      		  		                    )
+     		  		                        									
      		  		                  ;
      		  		                    
-     		  		                    let
+     		  		                    sequence
      		  		                    (
-     		  		                     (
-     		  		                        									  
-     		  		                      
+     		  		                      Array.set
+     		  		                      (
+     		  		                       a
+     		  		                       hi
      		  		                       temp
-     		  		                       Array.get
-     		  		                       (
-     		  		                        a
-     		  		                        
-     		  		                         !
-     		  		                         (
-     		  		                         i
-     		  		                         )
-     		  		                            							 
-     		  		                       )
-     		  		                           													 
-     		  		                      							    		   
-     		  		                        									  
-     		  		                     )
-     		  		                    in
+     		  		                      )
+     		  		                          									
+     		  		                    ;
      		  		                      
      		  		                      sequence
      		  		                      (
-     		  		                        Array.set
+     		  		                        qsort
      		  		                        (
-     		  		                         a
-     		  		                         
-     		  		                          !
-     		  		                          (
-     		  		                          i
-     		  		                          )
-     		  		                             							 
-     		  		                         Array.get
-     		  		                         (
-     		  		                          a
-     		  		                          hi
-     		  		                         )
-     		  		                             													
+     		  		                            lo
+     		  		                            -
+     		  		                            (
+     		  		                                
+     		  		                                 !
+     		  		                                 (
+     		  		                                 i
+     		  		                                 )
+     		  		                                    							 
+     		  		                                1
+     		  		                            )
+     		  		                            a
      		  		                        )
-     		  		                            									
      		  		                      ;
-     		  		                        
-     		  		                        sequence
+     		  		                        qsort
      		  		                        (
-     		  		                          Array.set
-     		  		                          (
-     		  		                           a
-     		  		                           hi
-     		  		                           temp
-     		  		                          )
-     		  		                              									
-     		  		                        ;
-     		  		                          
-     		  		                          sequence
-     		  		                          (
-     		  		                            qsort
+     		  		                            +
      		  		                            (
-     		  		                                lo
-     		  		                                -
-     		  		                                (
-     		  		                                    
-     		  		                                     !
-     		  		                                     (
-     		  		                                     i
-     		  		                                     )
-     		  		                                        							 
-     		  		                                    1
-     		  		                                )
-     		  		                                a
+     		  		                                
+     		  		                                 !
+     		  		                                 (
+     		  		                                 i
+     		  		                                 )
+     		  		                                    							 
+     		  		                                1
      		  		                            )
-     		  		                          ;
-     		  		                            qsort
-     		  		                            (
-     		  		                                +
-     		  		                                (
-     		  		                                    
-     		  		                                     !
-     		  		                                     (
-     		  		                                     i
-     		  		                                     )
-     		  		                                        							 
-     		  		                                    1
-     		  		                                )
-     		  		                                hi
-     		  		                                a
-     		  		                            )
-     		  		                          )
-     		  		                              							
+     		  		                            hi
+     		  		                            a
      		  		                        )
-     		  		                            							
      		  		                      )
      		  		                          							
      		  		                    )
-     		  		                        									
+     		  		                        							
      		  		                  )
      		  		                      							
      		  		                )
      		  		                    									
      		  		              )
-     		  		                  									
+     		  		                  							
      		  		            )
      		  		                									
+     		  		          )
+     		  		              									
      		  		        )
+     		  		            									
      		  		       )
      		  		       else
      		  		       (
@@ -462,11 +452,7 @@
      		  		 	  
      		  		 	   array
      		  		 	   (
-     		  		 	     
      		  		 	     int
-     		  		 	     (
-     		  		 	     )
-     		  		 	     								  
      		  		 	   )
      		  		 	   
      		  		 	      									
@@ -483,59 +469,79 @@
      		  		       )
      		  		       then
      		  		       (
-     		  		        beginEnd 
+     		  		        
+     		  		        let
      		  		        (
+     		  		         (
+     		  		            									  
+     		  		          
+     		  		           i
+     		  		           ref
+     		  		           (
+     		  		               lo
+     		  		           ) 
+     		  		          							    		   
+     		  		            									  
+     		  		         )
+     		  		        in
+     		  		          
+     		  		          let
+     		  		          (
+     		  		           (
+     		  		              									  
+     		  		            
+     		  		             j
+     		  		             ref
+     		  		             (
+     		  		                 hi
+     		  		             ) 
+     		  		            							    		   
+     		  		              									  
+     		  		           )
+     		  		          in
      		  		            
      		  		            let
      		  		            (
      		  		             (
      		  		                									  
      		  		              
-     		  		               i
-     		  		               ref
+     		  		               pivot
+     		  		               Array.get
      		  		               (
-     		  		                   lo
-     		  		               ) 
+     		  		                a
+     		  		                hi
+     		  		               )
+     		  		               												 
      		  		              							    		   
      		  		                									  
      		  		             )
      		  		            in
      		  		              
-     		  		              let
+     		  		              sequence
      		  		              (
-     		  		               (
-     		  		                  									  
      		  		                
-     		  		                 j
-     		  		                 ref
+     		  		                 while
+     		  		                 <
      		  		                 (
-     		  		                     hi
-     		  		                 ) 
-     		  		                							    		   
-     		  		                  									  
-     		  		               )
-     		  		              in
-     		  		                
-     		  		                let
-     		  		                (
-     		  		                 (
-     		  		                    									  
-     		  		                  
-     		  		                   pivot
-     		  		                   Array.get
-     		  		                   (
-     		  		                    a
-     		  		                    hi
-     		  		                   )
-     		  		                       													 
-     		  		                  							    		   
-     		  		                    									  
+     		  		                     
+     		  		                      !
+     		  		                      (
+     		  		                      i
+     		  		                      )
+     		  		                         							 
+     		  		                     
+     		  		                      !
+     		  		                      (
+     		  		                      j
+     		  		                      )
+     		  		                         							 
      		  		                 )
-     		  		                in
-     		  		                  
-     		  		                  sequence
-     		  		                  (
-     		  		                    whileloop 
+     		  		                 
+     		  		                 sequence
+     		  		                 (
+     		  		                   
+     		  		                    while
+     		  		                    &&
      		  		                    (
      		  		                        <
      		  		                        (
@@ -545,305 +551,279 @@
      		  		                             i
      		  		                             )
      		  		                                							 
+     		  		                            hi
+     		  		                        )
+     		  		                        <=
+     		  		                        (
+     		  		                            cmp
+     		  		                            (
+     		  		                                Array.get
+     		  		                                (
+     		  		                                 a
+     		  		                                 
+     		  		                                  !
+     		  		                                  (
+     		  		                                  i
+     		  		                                  )
+     		  		                                     							 
+     		  		                                )
+     		  		                                												
+     		  		                                pivot
+     		  		                            )
+     		  		                            0
+     		  		                        )
+     		  		                    )
+     		  		                    incr
+     		  		                    (
+     		  		                        i
+     		  		                    )	 
+     		  		                       									 
+     		  		                 ;
+     		  		                   
+     		  		                   sequence
+     		  		                   (
+     		  		                     
+     		  		                      while
+     		  		                      &&
+     		  		                      (
+     		  		                          >
+     		  		                          (
+     		  		                              
+     		  		                               !
+     		  		                               (
+     		  		                               j
+     		  		                               )
+     		  		                                  							 
+     		  		                              lo
+     		  		                          )
+     		  		                          >=
+     		  		                          (
+     		  		                              cmp
+     		  		                              (
+     		  		                                  Array.get
+     		  		                                  (
+     		  		                                   a
+     		  		                                   
+     		  		                                    !
+     		  		                                    (
+     		  		                                    j
+     		  		                                    )
+     		  		                                       							 
+     		  		                                  )
+     		  		                                  												
+     		  		                                  pivot
+     		  		                              )
+     		  		                              0
+     		  		                          )
+     		  		                      )
+     		  		                      decr
+     		  		                      (
+     		  		                          j
+     		  		                      )	 
+     		  		                         									 
+     		  		                   ;
+     		  		                     ifthenelse
+     		  		                     (
+     		  		                      if
+     		  		                      (
+     		  		                       <
+     		  		                       (
+     		  		                           
+     		  		                            !
+     		  		                            (
+     		  		                            i
+     		  		                            )
+     		  		                               							 
+     		  		                           
+     		  		                            !
+     		  		                            (
+     		  		                            j
+     		  		                            )
+     		  		                               							 
+     		  		                       )
+     		  		                      )
+     		  		                      then
+     		  		                      (
+     		  		                       
+     		  		                       let
+     		  		                       (
+     		  		                        (
+     		  		                           									  
+     		  		                         
+     		  		                          temp
+     		  		                          Array.get
+     		  		                          (
+     		  		                           a
+     		  		                           
+     		  		                            !
+     		  		                            (
+     		  		                            i
+     		  		                            )
+     		  		                               							 
+     		  		                          )
+     		  		                          												 
+     		  		                         							    		   
+     		  		                           									  
+     		  		                        )
+     		  		                       in
+     		  		                         
+     		  		                         sequence
+     		  		                         (
+     		  		                           Array.set
+     		  		                           (
+     		  		                            a
+     		  		                            
+     		  		                             !
+     		  		                             (
+     		  		                             i
+     		  		                             )
+     		  		                                							 
+     		  		                            Array.get
+     		  		                            (
+     		  		                             a
+     		  		                             
+     		  		                              !
+     		  		                              (
+     		  		                              j
+     		  		                              )
+     		  		                                 							 
+     		  		                            )
+     		  		                            												
+     		  		                           )
+     		  		                               									
+     		  		                         ;
+     		  		                           Array.set
+     		  		                           (
+     		  		                            a
      		  		                            
      		  		                             !
      		  		                             (
      		  		                             j
      		  		                             )
      		  		                                							 
-     		  		                        )
-     		  		                        
-     		  		                        sequence
-     		  		                        (
-     		  		                          whileloop 
-     		  		                          (
-     		  		                              &&
-     		  		                              (
-     		  		                                  <
-     		  		                                  (
-     		  		                                      
-     		  		                                       !
-     		  		                                       (
-     		  		                                       i
-     		  		                                       )
-     		  		                                          							 
-     		  		                                      hi
-     		  		                                  )
-     		  		                                  <=
-     		  		                                  (
-     		  		                                      cmp
-     		  		                                      (
-     		  		                                          Array.get
-     		  		                                          (
-     		  		                                           a
-     		  		                                           
-     		  		                                            !
-     		  		                                            (
-     		  		                                            i
-     		  		                                            )
-     		  		                                               							 
-     		  		                                          )
-     		  		                                              													
-     		  		                                          pivot
-     		  		                                      )
-     		  		                                      0
-     		  		                                  )
-     		  		                              )
-     		  		                              incr
-     		  		                              (
-     		  		                                  i
-     		  		                              )
-     		  		                          )
-     		  		                        ;
-     		  		                          
-     		  		                          sequence
-     		  		                          (
-     		  		                            whileloop 
-     		  		                            (
-     		  		                                &&
-     		  		                                (
-     		  		                                    >
-     		  		                                    (
-     		  		                                        
-     		  		                                         !
-     		  		                                         (
-     		  		                                         j
-     		  		                                         )
-     		  		                                            							 
-     		  		                                        lo
-     		  		                                    )
-     		  		                                    >=
-     		  		                                    (
-     		  		                                        cmp
-     		  		                                        (
-     		  		                                            Array.get
-     		  		                                            (
-     		  		                                             a
-     		  		                                             
-     		  		                                              !
-     		  		                                              (
-     		  		                                              j
-     		  		                                              )
-     		  		                                                 							 
-     		  		                                            )
-     		  		                                                													
-     		  		                                            pivot
-     		  		                                        )
-     		  		                                        0
-     		  		                                    )
-     		  		                                )
-     		  		                                decr
-     		  		                                (
-     		  		                                    j
-     		  		                                )
-     		  		                            )
-     		  		                          ;
-     		  		                            ifthenelse
-     		  		                            (
-     		  		                             if
-     		  		                             (
-     		  		                              <
-     		  		                              (
-     		  		                                  
-     		  		                                   !
-     		  		                                   (
-     		  		                                   i
-     		  		                                   )
-     		  		                                      							 
-     		  		                                  
-     		  		                                   !
-     		  		                                   (
-     		  		                                   j
-     		  		                                   )
-     		  		                                      							 
-     		  		                              )
-     		  		                             )
-     		  		                             then
-     		  		                             (
-     		  		                              beginEnd 
-     		  		                              (
-     		  		                                  
-     		  		                                  let
-     		  		                                  (
-     		  		                                   (
-     		  		                                      									  
-     		  		                                    
-     		  		                                     temp
-     		  		                                     Array.get
-     		  		                                     (
-     		  		                                      a
-     		  		                                      
-     		  		                                       !
-     		  		                                       (
-     		  		                                       i
-     		  		                                       )
-     		  		                                          							 
-     		  		                                     )
-     		  		                                         													 
-     		  		                                    							    		   
-     		  		                                      									  
-     		  		                                   )
-     		  		                                  in
-     		  		                                    
-     		  		                                    sequence
-     		  		                                    (
-     		  		                                      Array.set
-     		  		                                      (
-     		  		                                       a
-     		  		                                       
-     		  		                                        !
-     		  		                                        (
-     		  		                                        i
-     		  		                                        )
-     		  		                                           							 
-     		  		                                       Array.get
-     		  		                                       (
-     		  		                                        a
-     		  		                                        
-     		  		                                         !
-     		  		                                         (
-     		  		                                         j
-     		  		                                         )
-     		  		                                            							 
-     		  		                                       )
-     		  		                                           													
-     		  		                                      )
-     		  		                                          									
-     		  		                                    ;
-     		  		                                      Array.set
-     		  		                                      (
-     		  		                                       a
-     		  		                                       
-     		  		                                        !
-     		  		                                        (
-     		  		                                        j
-     		  		                                        )
-     		  		                                           							 
-     		  		                                       temp
-     		  		                                      )
-     		  		                                          									
-     		  		                                    )
-     		  		                                        							
-     		  		                                  )
-     		  		                                      									
-     		  		                              )
-     		  		                             )
-     		  		                             else
-     		  		                             (
-     		  		                             )
-     		  		                            )
-     		  		                                									   
-     		  		                          )
-     		  		                              							
-     		  		                        )
-     		  		                            							
+     		  		                            temp
+     		  		                           )
+     		  		                               									
+     		  		                         )
+     		  		                             							
+     		  		                       )
+     		  		                           									
+     		  		                      )
+     		  		                      else
+     		  		                      (
+     		  		                      )
+     		  		                     )
+     		  		                         									   
+     		  		                   )
+     		  		                       							
+     		  		                 )
+     		  		                     								 
+     		  		                    									 
+     		  		              ;
+     		  		                
+     		  		                let
+     		  		                (
+     		  		                 (
+     		  		                    									  
+     		  		                  
+     		  		                   temp
+     		  		                   Array.get
+     		  		                   (
+     		  		                    a
+     		  		                    
+     		  		                     !
+     		  		                     (
+     		  		                     i
+     		  		                     )
+     		  		                        							 
+     		  		                   )
+     		  		                   												 
+     		  		                  							    		   
+     		  		                    									  
+     		  		                 )
+     		  		                in
+     		  		                  
+     		  		                  sequence
+     		  		                  (
+     		  		                    Array.set
+     		  		                    (
+     		  		                     a
+     		  		                     
+     		  		                      !
+     		  		                      (
+     		  		                      i
+     		  		                      )
+     		  		                         							 
+     		  		                     Array.get
+     		  		                     (
+     		  		                      a
+     		  		                      hi
+     		  		                     )
+     		  		                     												
      		  		                    )
+     		  		                        									
      		  		                  ;
      		  		                    
-     		  		                    let
+     		  		                    sequence
      		  		                    (
-     		  		                     (
-     		  		                        									  
-     		  		                      
+     		  		                      Array.set
+     		  		                      (
+     		  		                       a
+     		  		                       hi
      		  		                       temp
-     		  		                       Array.get
-     		  		                       (
-     		  		                        a
-     		  		                        
-     		  		                         !
-     		  		                         (
-     		  		                         i
-     		  		                         )
-     		  		                            							 
-     		  		                       )
-     		  		                           													 
-     		  		                      							    		   
-     		  		                        									  
-     		  		                     )
-     		  		                    in
+     		  		                      )
+     		  		                          									
+     		  		                    ;
      		  		                      
      		  		                      sequence
      		  		                      (
-     		  		                        Array.set
+     		  		                        qsort2
      		  		                        (
-     		  		                         a
-     		  		                         
-     		  		                          !
-     		  		                          (
-     		  		                          i
-     		  		                          )
-     		  		                             							 
-     		  		                         Array.get
-     		  		                         (
-     		  		                          a
-     		  		                          hi
-     		  		                         )
-     		  		                             													
+     		  		                            lo
+     		  		                            -
+     		  		                            (
+     		  		                                
+     		  		                                 !
+     		  		                                 (
+     		  		                                 i
+     		  		                                 )
+     		  		                                    							 
+     		  		                                1
+     		  		                            )
+     		  		                            a
      		  		                        )
-     		  		                            									
      		  		                      ;
-     		  		                        
-     		  		                        sequence
+     		  		                        qsort2
      		  		                        (
-     		  		                          Array.set
-     		  		                          (
-     		  		                           a
-     		  		                           hi
-     		  		                           temp
-     		  		                          )
-     		  		                              									
-     		  		                        ;
-     		  		                          
-     		  		                          sequence
-     		  		                          (
-     		  		                            qsort2
+     		  		                            +
      		  		                            (
-     		  		                                lo
-     		  		                                -
-     		  		                                (
-     		  		                                    
-     		  		                                     !
-     		  		                                     (
-     		  		                                     i
-     		  		                                     )
-     		  		                                        							 
-     		  		                                    1
-     		  		                                )
-     		  		                                a
+     		  		                                
+     		  		                                 !
+     		  		                                 (
+     		  		                                 i
+     		  		                                 )
+     		  		                                    							 
+     		  		                                1
      		  		                            )
-     		  		                          ;
-     		  		                            qsort2
-     		  		                            (
-     		  		                                +
-     		  		                                (
-     		  		                                    
-     		  		                                     !
-     		  		                                     (
-     		  		                                     i
-     		  		                                     )
-     		  		                                        							 
-     		  		                                    1
-     		  		                                )
-     		  		                                hi
-     		  		                                a
-     		  		                            )
-     		  		                          )
-     		  		                              							
+     		  		                            hi
+     		  		                            a
      		  		                        )
-     		  		                            							
      		  		                      )
      		  		                          							
      		  		                    )
-     		  		                        									
+     		  		                        							
      		  		                  )
      		  		                      							
      		  		                )
      		  		                    									
      		  		              )
-     		  		                  									
+     		  		                  							
      		  		            )
      		  		                									
+     		  		          )
+     		  		              									
      		  		        )
+     		  		            									
      		  		       )
      		  		       else
      		  		       (
@@ -969,63 +949,60 @@
      		          
      		          sequence
      		          (
-     		            forloop 
-     		            (
-     		                i
-     		                0
-     		                <>
-     		                -
+     		             for i
+     		             0
+     		             -
+     		             (
+     		                 size
+     		                 1
+     		             )
+     		             
+     		             let
+     		             (
+     		              (
+     		                 									  
+     		               
+     		                n
+     		                random
      		                (
-     		                    size
-     		                    1
-     		                )
-     		                
-     		                let
-     		                (
+     		                    ()
+     		                ) 
+     		               							    		   
+     		                 									  
+     		              )
+     		             in
+     		               
+     		               sequence
+     		               (
+     		                 Array.set
      		                 (
-     		                    									  
-     		                  
-     		                   n
-     		                   random
-     		                   (
-     		                       ()
-     		                   ) 
-     		                  							    		   
-     		                    									  
+     		                  a
+     		                  i
+     		                  n
      		                 )
-     		                in
-     		                  
-     		                  sequence
+     		                     									
+     		               ;
+     		                 Array.set
+     		                 (
+     		                  check
+     		                  n
+     		                  +
      		                  (
-     		                    Array.set
-     		                    (
-     		                     a
-     		                     i
-     		                     n
-     		                    )
-     		                        									
-     		                  ;
-     		                    Array.set
-     		                    (
-     		                     check
-     		                     n
-     		                     +
-     		                     (
-     		                         Array.get
-     		                         (
-     		                          check
-     		                          n
-     		                         )
-     		                             													
-     		                         1
-     		                     )
-     		                    )
-     		                        									
+     		                      Array.get
+     		                      (
+     		                       check
+     		                       n
+     		                      )
+     		                      												
+     		                      1
      		                  )
-     		                      							
-     		                )
-     		                    									
-     		            )
+     		                 )
+     		                     									
+     		               )
+     		                   							
+     		             )
+     		                 									
+     		                														  
      		          ;
      		            
      		            sequence
@@ -1054,7 +1031,7 @@
      		                  a
      		                  0
      		                 )
-     		                     													
+     		                 												
      		                 -
      		                 (
      		                     Array.get
@@ -1065,9 +1042,9 @@
      		                       a
      		                       0
      		                      )
-     		                          													
+     		                      												
      		                     )
-     		                         													
+     		                     												
      		                     1
      		                 )
      		                )
@@ -1076,123 +1053,117 @@
      		                
      		                sequence
      		                (
-     		                  forloop 
-     		                  (
-     		                      i
-     		                      1
-     		                      <>
+     		                   for i
+     		                   1
+     		                   -
+     		                   (
+     		                       size
+     		                       1
+     		                   )
+     		                   
+     		                   sequence
+     		                   (
+     		                     ifthenelse
+     		                     (
+     		                      if
+     		                      (
+     		                       >
+     		                       (
+     		                           Array.get
+     		                           (
+     		                            a
+     		                            -
+     		                            (
+     		                                i
+     		                                1
+     		                            )
+     		                           )
+     		                           												
+     		                           Array.get
+     		                           (
+     		                            a
+     		                            i
+     		                           )
+     		                           												
+     		                       )
+     		                      )
+     		                      then
+     		                      (
+     		                       raise
+     		                       (
+     		                           Failed
+     		                       )
+     		                      )
+     		                      else
+     		                      (
+     		                      )
+     		                     )
+     		                         									   
+     		                   ;
+     		                     Array.set
+     		                     (
+     		                      check
+     		                      Array.get
+     		                      (
+     		                       a
+     		                       i
+     		                      )
+     		                      												
      		                      -
      		                      (
-     		                          size
+     		                          Array.get
+     		                          (
+     		                           check
+     		                           Array.get
+     		                           (
+     		                            a
+     		                            i
+     		                           )
+     		                           												
+     		                          )
+     		                          												
      		                          1
      		                      )
-     		                      
-     		                      sequence
-     		                      (
-     		                        ifthenelse
-     		                        (
-     		                         if
-     		                         (
-     		                          >
-     		                          (
-     		                              Array.get
-     		                              (
-     		                               a
-     		                               -
-     		                               (
-     		                                   i
-     		                                   1
-     		                               )
-     		                              )
-     		                                  													
-     		                              Array.get
-     		                              (
-     		                               a
-     		                               i
-     		                              )
-     		                                  													
-     		                          )
-     		                         )
-     		                         then
-     		                         (
-     		                          raise
-     		                          (
-     		                              Failed
-     		                          )
-     		                         )
-     		                         else
-     		                         (
-     		                         )
-     		                        )
-     		                            									   
-     		                      ;
-     		                        Array.set
-     		                        (
-     		                         check
-     		                         Array.get
-     		                         (
-     		                          a
-     		                          i
-     		                         )
-     		                             													
-     		                         -
-     		                         (
-     		                             Array.get
-     		                             (
-     		                              check
-     		                              Array.get
-     		                              (
-     		                               a
-     		                               i
-     		                              )
-     		                                  													
-     		                             )
-     		                                 													
-     		                             1
-     		                         )
-     		                        )
-     		                            									
-     		                      )
-     		                          							
-     		                  )
+     		                     )
+     		                         									
+     		                   )
+     		                       							
+     		                      														  
      		                ;
      		                  
      		                  sequence
      		                  (
-     		                    forloop 
-     		                    (
-     		                        i
-     		                        0
-     		                        <>
-     		                        4095
-     		                        ifthenelse
-     		                        (
-     		                         if
-     		                         (
-     		                          <>
-     		                          (
-     		                              Array.get
-     		                              (
-     		                               check
-     		                               i
-     		                              )
-     		                                  													
-     		                              0
-     		                          )
-     		                         )
-     		                         then
-     		                         (
-     		                          raise
-     		                          (
-     		                              Failed
-     		                          )
-     		                         )
-     		                         else
-     		                         (
-     		                         )
-     		                        )
-     		                            									   
-     		                    )
+     		                     for i
+     		                     0
+     		                     4095
+     		                     ifthenelse
+     		                     (
+     		                      if
+     		                      (
+     		                       <>
+     		                       (
+     		                           Array.get
+     		                           (
+     		                            check
+     		                            i
+     		                           )
+     		                           												
+     		                           0
+     		                       )
+     		                      )
+     		                      then
+     		                      (
+     		                       raise
+     		                       (
+     		                           Failed
+     		                       )
+     		                      )
+     		                      else
+     		                      (
+     		                      )
+     		                     )
+     		                         									   
+     		                        														  
      		                  ;
      		                    
      		                    sequence

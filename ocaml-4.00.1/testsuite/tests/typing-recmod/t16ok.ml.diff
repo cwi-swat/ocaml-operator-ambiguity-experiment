@@ -1,87 +1,18 @@
-0a1,261
-> (
->   module PR_4450_1
->     struct
->     (
->       module type MyT
->         signature
->         (
->             type
->             (
->               t
->                 type
->                   params =
->                     (
->                       a
->                     )
->                   cstrs =
->                     (
->                     )
->                   kind =
->                       (
->                         Succ
->                           (
->                                t
->                               (
->                                   a
->                               )
->                           )
->                                                 )
->                                 )
->         )
->       module MyMap
->         functor X
->         (
->           MyT
->           X
->         )
+35,36d34
+<     functor []
+<     (
+39,40c37
+<    )
+<    modRec1 
+---
 >       Pstr_recmodule
->       (
+42c39
+<        MyList
+---
 >         "MyList"
->             MyT
->               MyMap
->             (
->               MyList
->             )
->       )
->     )
->   module PR_4450_2
->     struct
->     (
->       module type MyT
->         signature
->         (
->             type
->             (
->               wrap
->                 type
->                   params =
->                     (
->                       a
->                     )
->                   cstrs =
->                     (
->                     )
->                   kind =
->                       (
->                         My
->                           (
->                                t
->                               (
->                                   a
->                               )
->                           )
->                                                 )
->                                   t
->                 type
->                   params =
->                     (
->                       a
->                     )
->                   cstrs =
->                     (
->                     )
->                   kind =
+87c84,100
+<         <[<"map","polytype2"(["b"],"arrow1"("arrow1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"wrap")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>
+---
 >                         Ptyp_object
 >                         (
 >                           core_field_type ([12,251+25]..[12,251+55])
@@ -99,60 +30,34 @@
 >                           core_field_type ([12,251+57]..[12,251+59])
 >                             Pfield_var
 >                         )
->             )
->             sig_value create
->             value_description
->                 arrow
->                    list
->                   (
->                       a
->                   )
->                    t
->                   (
->                       a
->                   )
->               (
->               )
->         )
->       module MyMap
->         functor X
->         (
->           MyT
->           struct
->           (
->             include
->             (
->               X
->             )
->             class
->             (
->                 params =
->                     (
+107,108d119
+<     functor []
+<     (
+119c130
+<         l
+---
 >                       "a"
->                     )
->                 class name = c
->                 class expr =
+122a134,136
 >                     fun
 >                     label=""
 >                                         l
->                       class_structure
->                         (
+125,137c139
+<                        method2 
+<                        (
+<                            map
+<                            poly
+<                            ' b
+<                            arrow
+<                            arrow
+<                            a
+<                            b
+<                             wrap
+<                             (
+<                               b
+<                             )
+---
 >                           method map
->                             (
->                               case
->                               (
->                                 f
->                                 My
->                                   create
->                                   (
->                                       List.map
->                                       (
->                                           f
->                                           l
->                                       )
->                                   )
->                               )
->                             )
+152a155,163
 >                                 poly
 >                                  'b
 >                                   arrow
@@ -162,47 +67,18 @@
 >                                      wrap
 >                                     (
 >                                         b
->                                     )
->                         )
->             )
->           )
->         )
+158,159c169
+<    )
+<    modRec1 
+---
 >       Pstr_recmodule
->       (
+161c171
+<        MyList
+---
 >         "MyList"
->             signature
->             (
->                 type
->                 (
->                   wrap
->                     type
->                       params =
->                         (
->                           a
->                         )
->                       cstrs =
->                         (
->                         )
->                       kind =
->                           (
->                             My
->                               (
->                                    t
->                                   (
->                                       a
->                                   )
->                               )
->                                                         )
->                                           t
->                     type
->                       params =
->                         (
->                           a
->                         )
->                       cstrs =
->                         (
->                         )
->                       kind =
+195c205,219
+<            <[<"map","polytype2"(["b"],"arrow1"("arrow1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"wrap")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>],[]>
+---
 >                             Ptyp_object
 >                             (
 >                               core_field_type ([24,595+17]..[24,595+47])
@@ -218,45 +94,3 @@
 >                                           b
 >                                       )
 >                             )
->                 )
->                 sig_value create
->                 value_description
->                     arrow
->                        list
->                       (
->                           a
->                       )
->                        t
->                       (
->                           a
->                       )
->                   (
->                   )
->             )
->             struct
->             (
->               include
->               (
->                   MyMap
->                 (
->                   MyList
->                 )
->               )
->               let
->               (
->                 create
->                   (
->                     case
->                     (
->                       l
->                       new c
->                       (
->                           l
->                       )
->                     )
->                   )
->               )
->             )
->       )
->     )
-> )

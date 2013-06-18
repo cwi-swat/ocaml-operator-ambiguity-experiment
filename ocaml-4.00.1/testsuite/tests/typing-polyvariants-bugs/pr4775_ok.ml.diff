@@ -1,26 +1,27 @@
-15,16c15
+15,17c15
 <        )
 <        kind =
+<       (
 ---
 >                   <constraint> ([2,23+28]..[2,23+37])
-18c17
+19c17
 <         typeConstraint 
 ---
 >                       Ptyp_variant closed=false
-20d18
+21d18
 <             a
-22a21,23
+23a21,22
 >               kind =
 >                     a
->         )
-44,47c45
+46,50c45
 <         )
 <         kind =
-<          "extendedModulePath1"([],"A")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+<        (
+<          "extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
 <          (
 ---
 >                     <constraint> ([6,112+38]..[6,112+49])
-49,53c47
+52,56c47
 <          )
 <          typeConstraint 
 <          (
@@ -28,39 +29,38 @@
 <               "extendedModulePath1"([],"B")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
 ---
 >                          B.t
-57a52,56
+60a52,55
 >                 kind =
 >                        A.t
 >                       (
 >                           a
->                       )
-77,78c76
+81,83c76
 <       )
 <       kind =
+<      (
 ---
 >                     <constraint> ([10,186+36]..[10,186+45])
-80c78
+85c78
 <        typeConstraint 
 ---
 >                         Ptyp_variant closed=false
-82d79
+87d79
 <            a
-84a82,84
+89a82,83
 >                 kind =
 >                       a
->           )
-100,101c100
+106,108c100
 <       )
 <       kind =
+<      (
 ---
 >                   <constraint> ([11,237+36]..[11,237+45])
-103c102
+110c102
 <        typeConstraint 
 ---
 >                       Ptyp_variant closed=false
-105d103
+112d103
 <            a
-107a106,108
+114a106,107
 >               kind =
 >                     a
->         )

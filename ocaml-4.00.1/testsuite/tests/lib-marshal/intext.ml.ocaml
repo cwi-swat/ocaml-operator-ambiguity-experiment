@@ -1218,14 +1218,18 @@
                                                             (
                                                               G
                                                                 (
-                                                                  Ppat_alias "t3"
-                                                                  G
-                                                                    (
-                                                                      Ppat_alias "t1"
-                                                                      D
-                                                                        "sharing"
-                                                                      t2
-                                                                    )
+                                                                  alias t3
+                                                                  (
+                                                                    G
+                                                                      (
+                                                                        alias t1
+                                                                        (
+                                                                          D
+                                                                            "sharing"
+                                                                        )
+                                                                        t2
+                                                                      )
+                                                                  )
                                                                   G
                                                                     (
                                                                       t4
@@ -1426,12 +1430,16 @@
                                                                     (
                                                                       G
                                                                         (
-                                                                          Ppat_alias "t1"
-                                                                          D
-                                                                            "sharing"
-                                                                          Ppat_alias "t2"
-                                                                          D
-                                                                            "sharing"
+                                                                          alias t1
+                                                                          (
+                                                                            D
+                                                                              "sharing"
+                                                                          )
+                                                                          alias t2
+                                                                          (
+                                                                            D
+                                                                              "sharing"
+                                                                          )
                                                                         )
                                                                       !=
                                                                       (
@@ -2577,14 +2585,18 @@
                                                                                                           (
                                                                                                             G
                                                                                                               (
-                                                                                                                Ppat_alias "t3"
-                                                                                                                G
-                                                                                                                  (
-                                                                                                                    Ppat_alias "t1"
-                                                                                                                    D
-                                                                                                                      "sharing"
-                                                                                                                    t2
-                                                                                                                  )
+                                                                                                                alias t3
+                                                                                                                (
+                                                                                                                  G
+                                                                                                                    (
+                                                                                                                      alias t1
+                                                                                                                      (
+                                                                                                                        D
+                                                                                                                          "sharing"
+                                                                                                                      )
+                                                                                                                      t2
+                                                                                                                    )
+                                                                                                                )
                                                                                                                 G
                                                                                                                   (
                                                                                                                     t4
@@ -3727,14 +3739,18 @@
                                                                                                           (
                                                                                                             G
                                                                                                               (
-                                                                                                                Ppat_alias "t3"
-                                                                                                                G
-                                                                                                                  (
-                                                                                                                    Ppat_alias "t1"
-                                                                                                                    D
-                                                                                                                      "sharing"
-                                                                                                                    t2
-                                                                                                                  )
+                                                                                                                alias t3
+                                                                                                                (
+                                                                                                                  G
+                                                                                                                    (
+                                                                                                                      alias t1
+                                                                                                                      (
+                                                                                                                        D
+                                                                                                                          "sharing"
+                                                                                                                      )
+                                                                                                                      t2
+                                                                                                                    )
+                                                                                                                )
                                                                                                                 G
                                                                                                                   (
                                                                                                                     t4
@@ -4836,14 +4852,18 @@
                                                                                                           (
                                                                                                             G
                                                                                                               (
-                                                                                                                Ppat_alias "t3"
-                                                                                                                G
-                                                                                                                  (
-                                                                                                                    Ppat_alias "t1"
-                                                                                                                    D
-                                                                                                                      "sharing"
-                                                                                                                    t2
-                                                                                                                  )
+                                                                                                                alias t3
+                                                                                                                (
+                                                                                                                  G
+                                                                                                                    (
+                                                                                                                      alias t1
+                                                                                                                      (
+                                                                                                                        D
+                                                                                                                          "sharing"
+                                                                                                                      )
+                                                                                                                      t2
+                                                                                                                    )
+                                                                                                                )
                                                                                                                 G
                                                                                                                   (
                                                                                                                     t4

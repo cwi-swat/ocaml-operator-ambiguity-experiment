@@ -42,97 +42,91 @@
             )
             else
             (
-             beginEnd 
+             
+             let
              (
-                 
-                 let
-                 (
-                  (
-                     									  
-                   
-                    re
-                    ref
-                    (
-                        
-                         Characters
-                         ::
-                          (
-                          String.get
-                          (
-                              s
-                              -
-                              (
-                                  l
-                                  1
-                              )
-                          )
-                          []
-                          ) 
-                             						  
-                            								 
-                    ) 
-                   							    		   
-                     									  
-                  )
-                 in
-                   
-                   sequence
-                   (
-                     forloop 
-                     (
-                         i
-                         -
-                         (
-                             l
-                             2
-                         )
-                         <>
-                         0
-                         :=
-                         (
-                             re
-                             
-                              Sequence
-                              
-                              (
-                                  					 
-                                    					  Characters
-                                    					  ::
-                                    					   (
-                                    					   String.get
-                                    					   (
-                                    					       s
-                                    					       i
-                                    					   )
-                                    					   []
-                                    					   ) 
-                                    					      						  
-                                    					     								 
-                                  					 
-                              	
-                              	 !
-                              	 (
-                              	 re
-                              	 )
-                              	    							 
-                                  					 
-                              )
-                                  					 
-                                 								 
-                         )
-                     )
-                   ;
-                     
-                      !
+              (
+                 									  
+               
+                re
+                ref
+                (
+                    
+                     Characters
+                     ::
                       (
-                      re
+                      String.get
+                      (
+                          s
+                          -
+                          (
+                              l
+                              1
+                          )
                       )
-                         							 
-                   )
-                       							
-                 )
-                     									
+                      []
+                      ) 
+                         						  
+                        								 
+                ) 
+               							    		   
+                 									  
+              )
+             in
+               
+               sequence
+               (
+                  for i
+                  -
+                  (
+                      l
+                      2
+                  )
+                  0
+                  :=
+                  (
+                      re
+                      
+                       Sequence
+                       
+                       (
+                           					 
+                             					  Characters
+                             					  ::
+                             					   (
+                             					   String.get
+                             					   (
+                             					       s
+                             					       i
+                             					   )
+                             					   []
+                             					   ) 
+                             					      						  
+                             					     								 
+                           					 
+                       	
+                       	 !
+                       	 (
+                       	 re
+                       	 )
+                       	    							 
+                           					 
+                       )
+                           					 
+                          								 
+                  )
+                     														  
+               ;
+                 
+                  !
+                  (
+                  re
+                  )
+                     							 
+               )
+                   							
              )
+                 									
             ) 
            )
            	    											 
@@ -174,36 +168,33 @@
      		        
      		        sequence
      		        (
-     		          forloop 
-     		          (
-     		              i
-     		              Char.code
-     		              (
-     		                  c2
-     		              )
-     		              <>
-     		              Char.code
-     		              (
-     		                  c1
-     		              )
-     		              :=
-     		              (
-     		                  cl
-     		                  ::
-     		                  (
-     		                      Char.chr
-     		                      (
-     		                          i
-     		                      )
-     		                      
-     		                       !
-     		                       (
-     		                       cl
-     		                       )
-     		                          							 
-     		                  )
-     		              )
-     		          )
+     		           for i
+     		           Char.code
+     		           (
+     		               c2
+     		           )
+     		           Char.code
+     		           (
+     		               c1
+     		           )
+     		           :=
+     		           (
+     		               cl
+     		               ::
+     		               (
+     		                   Char.chr
+     		                   (
+     		                       i
+     		                   )
+     		                   
+     		                    !
+     		                    (
+     		                    cl
+     		                    )
+     		                       							 
+     		               )
+     		           )
+     		              														  
      		        ;
      		          
      		           !

@@ -47,7 +47,7 @@
     sig_value setglobal
     value_description
     arrow
-    "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].state
+    "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].state
     (
     )
     arrow
@@ -84,11 +84,11 @@
     arrow
      list
      (
-       "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
+       "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
        (
        )
      )
-    "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
+    "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
     (
     )
     (
@@ -254,7 +254,7 @@
         modConsType1 
         (
             chunk
-            "extendedModulePath1"([],"Ast")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].chunk
+            "extendedModulePath1"([],"Ast")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].chunk
             (
             )
         )
@@ -406,7 +406,7 @@
         modConsType2 
         (
             combined
-            "extendedModulePath1"([],"T")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+            "extendedModulePath1"([],"T")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
         )
     )	
     module TV2
@@ -416,7 +416,7 @@
         modConsType2 
         (
             combined
-            "extendedModulePath1"([],"T")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+            "extendedModulePath1"([],"T")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
         )
     )	
    )    								
@@ -530,7 +530,7 @@
        (
        )
        kind =
-       "extendedModulePath1"([],"Weapon")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+       "extendedModulePath1"([],"Weapon")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
        (
        )
     )

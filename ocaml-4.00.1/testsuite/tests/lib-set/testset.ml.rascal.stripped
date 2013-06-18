@@ -1221,27 +1221,31 @@
          in
            sequence
            (
-              for i
-              1
-              Random.int
-              (
-                  10
-              )
-              :=
-              (
-                  s
-                  S.add
-                  (
-                      relt
-                      (
-                          ()
-                      )
-                       !
-                       (
-                       s
-                       )
-                  )
-              )
+             forloop 
+             (
+                 i
+                 1
+                 <>
+                 Random.int
+                 (
+                     10
+                 )
+                 :=
+                 (
+                     s
+                     S.add
+                     (
+                         relt
+                         (
+                             ()
+                         )
+                          !
+                          (
+                          s
+                          )
+                     )
+                 )
+             )
            ;
               !
               (
@@ -1259,23 +1263,27 @@
          42
      )
    ;
-      for i
-      1
-      25000
-      test
-      (
-          relt
-          (
-              ()
-          )
-          rset
-          (
-              ()
-          )
-          rset
-          (
-              ()
-          )
-      )
+     forloop 
+     (
+         i
+         1
+         <>
+         25000
+         test
+         (
+             relt
+             (
+                 ()
+             )
+             rset
+             (
+                 ()
+             )
+             rset
+             (
+                 ()
+             )
+         )
+     )
    )
 )

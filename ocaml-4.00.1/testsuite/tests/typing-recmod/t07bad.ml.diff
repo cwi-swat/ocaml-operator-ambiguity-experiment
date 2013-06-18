@@ -6,11 +6,11 @@
 <       A
 ---
 >     "A"
-19c19,31
-<           <[<"m","polytype1"("typexprConstr1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"list")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"A")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
----
+18a19
 >                         Ptyp_object
->                         (
+20c21,30
+<           <[<"m","polytype1"("typexprConstr1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"list")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"(["extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>],[]>
+---
 >                           core_field_type ([2,24+32]..[2,24+46])
 >                             Pfield "m"
 >                               poly
@@ -21,12 +21,11 @@
 >                                         a
 >                                     )
 >                                 )
->                         )
-36c48,60
-<          <[<"m","polytype1"("typexprConstr1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"list")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
----
+37a48
 >                       Ptyp_object
->                       (
+39c50,59
+<          <[<"m","polytype1"("typexprConstr1"("typexprConstr1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"list")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+---
 >                         core_field_type ([3,76+35]..[3,76+49])
 >                           Pfield "m"
 >                             poly
@@ -37,4 +36,3 @@
 >                                       a
 >                                   )
 >                               )
->                       )
