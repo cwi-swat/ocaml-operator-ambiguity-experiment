@@ -1,0 +1,342 @@
+
+(
+    								 
+  module  F
+  functor X
+  (
+   Set.OrderedType
+   functor []
+   (
+     
+     struct
+     (
+     							  
+     modRec1 
+     (
+         Mod
+         signature
+         (
+         		    				
+          module XSet
+              								 
+          signature
+          (
+          		    				
+           type
+           (  						
+               							    	 
+              elt
+              type
+              params=
+              (
+              
+              )
+              cstrs =
+              (
+              )
+              kind =
+              
+              "extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+              (
+              )
+              								  
+              
+              														  
+              														 
+             											   
+           								        
+           )
+          		    				
+           type
+           (  						
+               							    	 
+              t
+              type
+              params=
+              (
+              
+              )
+              cstrs =
+              (
+              )
+              kind =
+              
+              "extendedModulePath2"("extendedModulePath1"(["extendedModulePath1"([],"Set")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"Make")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+              (
+              )
+              								  
+              
+              														  
+              														 
+             											   
+           								        
+           )
+          		    				
+          )	
+              								 
+         		    				
+          module XMap
+              								 
+          signature
+          (
+          		    				
+           type
+           (  						
+               							    	 
+              key
+              type
+              params=
+              (
+              
+              )
+              cstrs =
+              (
+              )
+              kind =
+              
+              "extendedModulePath1"([],"X")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+              (
+              )
+              								  
+              
+              														  
+              														 
+             											   
+           								        
+           )
+          		    				
+           type
+           (  						
+               							    	 
+              t
+              type
+              params=
+              (
+              
+               
+               a
+              										 
+              )
+              cstrs =
+              (
+              )
+              kind =
+              
+               "extendedModulePath2"("extendedModulePath1"(["extendedModulePath1"([],"Map")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"Make")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+               (
+                 a
+               )
+               
+                  									
+              
+              														  
+              														 
+             											   
+           								        
+           )
+          		    				
+          )	
+              								 
+         		    				
+          type
+          (  						
+              							    	 
+             elt
+             type
+             params=
+             (
+             
+             )
+             cstrs =
+             (
+             )
+             kind =
+             
+             "extendedModulePath1"([],"X")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+             (
+             )
+             								  
+             
+             														  
+             														 
+            											   
+          								        
+          )
+         		    				
+          type
+          (  						
+              							    	 
+             t
+             type
+             params=
+             (
+             
+             )
+             cstrs =
+             (
+             )
+             kind =
+             
+              "extendedModulePath1"([],"XMap")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+              (
+                
+                "extendedModulePath1"([],"XSet")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+                (
+                )
+                								  
+              )
+              
+                 									
+             
+             														  
+             														 
+            											   
+          								        
+          )
+         		    				
+          sig_value compare
+          value_description
+          arrow
+          
+          t
+          (
+          )
+          								  
+          arrow
+          
+          t
+          (
+          )
+          								  
+          
+          int
+          (
+          )
+          								  
+             								   
+             								   
+          (
+          )
+              								
+         		    				
+         )
+         struct
+         (
+         							  
+         module  XSet
+          
+              								  
+           Set.Make
+              							     
+          (
+          X
+          )
+          								   
+         										    
+         							  
+         module  XMap
+          
+              								  
+           Map.Make
+              							     
+          (
+          X
+          )
+          								   
+         										    
+         							  
+         type
+         (  						
+             							    	 
+            elt
+            type
+            params=
+            (
+            
+            )
+            cstrs =
+            (
+            )
+            kind =
+            
+            "extendedModulePath1"([],"X")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+            (
+            )
+            								  
+            
+            														  
+            														 
+           											   
+         								        
+         )
+         							  
+         type
+         (  						
+             							    	 
+            t
+            type
+            params=
+            (
+            
+            )
+            cstrs =
+            (
+            )
+            kind =
+            
+             "extendedModulePath1"([],"XMap")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+             (
+               
+               "extendedModulePath1"([],"XSet")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+               (
+               )
+               								  
+             )
+             
+                									
+            
+            														  
+            														 
+           											   
+         								        
+         )
+         							  
+         let
+         (
+          
+           compare
+           (
+            
+            case
+            (
+              x
+              (
+              
+              case
+              (
+              y
+              
+              0
+              )
+              													 
+              )
+            )													
+            													
+           )
+              						   
+          							    		    
+         )
+         							  
+         )
+         							  
+         <"ModSet","modTypeWith"("modTypePath"("modTypePath"(["extendedModulePath1"([],"Set")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"S")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modConsType1"([],"typeConstr"([],"elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Mod")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modApp"("modExpModPath"("modulePath"(["Set"],"Make")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modExpModPath"("modulePath"([],"Mod")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     )
+     							  
+     )
+     							  
+   )
+   												
+  )
+      										    
+                                     
+)

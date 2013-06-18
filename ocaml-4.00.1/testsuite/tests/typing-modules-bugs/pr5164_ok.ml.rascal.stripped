@@ -1,0 +1,32 @@
+(
+  module type INCLUDING
+   signature
+   (
+    include
+    (
+      modTypeOf 
+      (
+          List
+      )
+    )
+    include
+    (
+      modTypeOf 
+      (
+          ListLabels
+      )
+    )
+   )    								
+  module  Including_typed
+   struct
+   (
+   include
+   (
+     List
+   )
+   include
+   (
+     ListLabels
+   )
+   )
+)

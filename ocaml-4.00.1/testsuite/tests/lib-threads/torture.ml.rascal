@@ -1,0 +1,410 @@
+
+(
+    								 
+  let
+  (
+   
+    gc_thread
+   (
+    case
+        (
+    	  ()
+         
+          while
+          true
+          
+          sequence
+          (
+            Gc.minor
+            (
+                ()
+            )
+          ;
+            Thread.yield
+            (
+                ()
+            )
+          )
+              								 
+             									 
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    stdin_thread
+   (
+    case
+        (
+    	  ()
+         
+          while
+          true
+          
+          sequence
+          (
+            print_string
+            (
+                ">"
+            )
+          ;
+            
+            sequence
+            (
+              flush
+              (
+                  stdout
+              )
+            ;
+              
+              let
+              (
+               (
+                  									  
+                
+                 s
+                 read_line
+                 (
+                     ()
+                 ) 
+                							    		   
+                  									  
+               )
+              in
+                
+                sequence
+                (
+                  print_string
+                  (
+                      " >>> "
+                  )
+                ;
+                  
+                  sequence
+                  (
+                    print_string
+                    (
+                        s
+                    )
+                  ;
+                    print_newline
+                    (
+                        ()
+                    )
+                  )
+                      							
+                )
+                    							
+              )
+                  									
+            )
+                							
+          )
+              								 
+             									 
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    writer_thread
+   (
+    case
+        (
+    	  
+    	  (
+    	   oc
+    	       						 
+    	  	size
+    	  
+    	  )
+         
+          while
+          true
+          
+          let
+          (
+           (
+              									  
+            
+             buff
+             String.make
+             (
+                 size
+                 61
+             ) 
+            							    		   
+              									  
+           )
+          in
+            Unix.write
+            (
+                oc
+                buff
+                0
+                size
+            )
+          )
+              										 
+             									 
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    reader_thread
+   (
+    case
+        (
+    	  
+    	  (
+    	   ic
+    	       						 
+    	  	size
+    	  
+    	  )
+         
+          while
+          true
+          
+          let
+          (
+           (
+              									  
+            
+             buff
+             String.create
+             (
+                 size
+             ) 
+            							    		   
+              									  
+           )
+          in
+            
+            let
+            (
+             (
+                									  
+              
+               n
+               Unix.read
+               (
+                   ic
+                   buff
+                   0
+                   size
+               ) 
+              							    		   
+                									  
+             )
+            in
+               for i
+               0
+               -
+               (
+                   n
+                   1
+               )
+               ifthenelse
+               (
+                if
+                (
+                 <>
+                 (
+                     Array.get
+                     (
+                      buff
+                      i
+                     )
+                         													
+                     61
+                 )
+                )
+                then
+                (
+                 prerr_endline
+                 (
+                     "error in reader_thread"
+                 )
+                )
+                else
+                (
+                )
+               )
+                   									   
+                  														  
+            )
+                									
+          )
+              										 
+             									 
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    main
+   (
+    case
+        (
+    	  ()
+         
+         sequence
+         (
+           Thread.create
+           (
+               gc_thread
+               ()
+           )
+         ;
+           
+           let
+           (
+            (
+               									  
+             
+              
+              (
+               out1
+                   						 
+              	in1
+              
+              )
+              Unix.pipe
+              (
+                  ()
+              ) 
+             							    		   
+               									  
+            )
+           in
+             
+             sequence
+             (
+               Thread.create
+               (
+                   writer_thread
+                   
+                   (
+                       					 in1
+                       					 
+                   	4096
+                       					 
+                   )
+                       					 
+               )
+             ;
+               
+               sequence
+               (
+                 Thread.create
+                 (
+                     reader_thread
+                     
+                     (
+                         					 out1
+                         					 
+                     	4096
+                         					 
+                     )
+                         					 
+                 )
+               ;
+                 
+                 let
+                 (
+                  (
+                     									  
+                   
+                    
+                    (
+                     out2
+                         						 
+                    	in2
+                    
+                    )
+                    Unix.pipe
+                    (
+                        ()
+                    ) 
+                   							    		   
+                     									  
+                  )
+                 in
+                   
+                   sequence
+                   (
+                     Thread.create
+                     (
+                         writer_thread
+                         
+                         (
+                             					 in2
+                             					 
+                         	16
+                             					 
+                         )
+                             					 
+                     )
+                   ;
+                     
+                     sequence
+                     (
+                       Thread.create
+                       (
+                           reader_thread
+                           
+                           (
+                               					 out2
+                               					 
+                           	16
+                               					 
+                           )
+                               					 
+                       )
+                     ;
+                       stdin_thread
+                       (
+                           ()
+                       )
+                     )
+                         							
+                   )
+                       							
+                 )
+                     									
+               )
+                   							
+             )
+                 							
+           )
+               									
+         )
+             							
+        )
+   )
+       		    
+  )
+                                     
+  
+   
+   main
+   (
+       ()
+   ) 
+  							    		    
+                                     
+)

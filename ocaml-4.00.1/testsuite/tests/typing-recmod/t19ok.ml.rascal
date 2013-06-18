@@ -1,0 +1,43 @@
+
+(
+    								 
+  module  PR_4758
+   struct
+   (
+   							  
+   module type S
+    signature
+    (
+    		    				
+    )    								
+       							   
+   							  
+   module type Mod
+    signature
+    (
+    		    				
+     module Other
+         								 
+     S	
+         								 
+    		    				
+    )    								
+       							   
+   							  
+   modRec1 
+   (
+       A
+       S
+       struct
+       (
+       							  
+       )
+       							  
+       <"C","sig"([<"include"("modTypeWith"("modTypePath"("modTypePath"([],"Mod")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modeConsModule1"("modulePath"([],"Other")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"extendedModulePath1"([],"A")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[]>])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"struct2"(["moduleDef1"("Other",[],[],"modExpModPath"("modulePath"([],"A")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+   )
+   							  
+   )
+   							  
+  										    
+                                     
+)

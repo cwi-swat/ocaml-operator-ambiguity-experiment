@@ -1,0 +1,56 @@
+2c2
+<   modRec1 
+---
+>   Pstr_recmodule
+4c4
+<       A
+---
+>     "A"
+19c19
+<           "extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+---
+>                            B.t
+41c41
+<          "extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+---
+>                          B.t
+49c49,85
+<       <"B","sig"([<"typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"struct2"(["typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+---
+>     "B"
+>         signature
+>         (
+>             type
+>             (
+>               t
+>                 type
+>                   params =
+>                     (
+>                     )
+>                   cstrs =
+>                     (
+>                     )
+>                   kind =
+>                          A.t
+>                         (
+>                         )
+>             )
+>         )
+>         struct
+>         (
+>           type
+>           (
+>             t
+>               type
+>                 params =
+>                   (
+>                   )
+>                 cstrs =
+>                   (
+>                   )
+>                 kind =
+>                        A.t
+>                       (
+>                       )
+>           )
+>         )

@@ -1,0 +1,64 @@
+(
+  open Random
+  sequence
+  (
+    for i
+    0
+    20
+    sequence
+    (
+      print_char
+      (
+          20
+      )
+    ;
+      print_int
+      (
+          int
+          (
+              1000
+          )
+      )
+    )
+  ;
+    sequence
+    (
+      print_newline
+      (
+          ()
+                )
+    ;
+      sequence
+      (
+        print_newline
+        (
+            ()
+                    )
+      ;
+        for i
+        0
+        20
+        sequence
+        (
+          print_char
+          (
+              20
+          )
+        ;
+          print_float
+          (
+              float
+              (
+                  1000.
+              )
+          )
+        )
+      )
+    )
+  )
+  exit
+  (
+      0
+  )
+)
+

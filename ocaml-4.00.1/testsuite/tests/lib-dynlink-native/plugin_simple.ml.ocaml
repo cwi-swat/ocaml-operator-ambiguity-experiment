@@ -1,0 +1,31 @@
+(
+  let
+  (
+    facts
+      ::
+        (
+          Random.int
+          (
+              4
+          )
+          []
+                  )
+  )
+  let
+  (
+    ()
+          sequence
+      (
+        print_endline
+        (
+            "COUCOU"
+        )
+      ;
+        print_char
+        (
+            0a
+        )
+      )
+  )
+)
+

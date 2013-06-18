@@ -1,0 +1,80 @@
+2c2
+<   modRec1 
+---
+>   Pstr_recmodule
+4c4
+<       A
+---
+>     "A"
+21c21
+<             "extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+---
+>                              B.t
+28c28
+<              "extendedModulePath1"([],"B")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+---
+>                              B.t
+54c54
+<            "extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+---
+>                            B.t
+61c61
+<             "extendedModulePath1"([],"B")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+---
+>                            B.t
+71c71,123
+<       <"B","sig"([<"typeDef"("typeDefinition"(["typeDef"(["singleTypeParam"("typeParam1"([],"a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t","typeInformation"(["typeEquation"(<[<"m","polytype1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"B")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>],[]>)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],[])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"struct2"(["typeDef"("typeDefinition"(["typeDef"(["singleTypeParam"("typeParam1"([],"a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t","typeInformation"(["typeEquation"(<[<"m","polytype1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"B")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>)[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+---
+>     "B"
+>         signature
+>         (
+>             type
+>             (
+>               t
+>                 type
+>                   params =
+>                     (
+>                       a
+>                     )
+>                   cstrs =
+>                     (
+>                     )
+>                   kind =
+>                         Ptyp_object
+>                         (
+>                           core_field_type ([4,136+32]..[4,136+41])
+>                             Pfield "m"
+>                               poly
+>                                  B.t
+>                                 (
+>                                     a
+>                                 )
+>                         )
+>             )
+>         )
+>         struct
+>         (
+>           type
+>           (
+>             t
+>               type
+>                 params =
+>                   (
+>                     a
+>                   )
+>                 cstrs =
+>                   (
+>                   )
+>                 kind =
+>                       Ptyp_object
+>                       (
+>                         core_field_type ([5,183+35]..[5,183+44])
+>                           Pfield "m"
+>                             poly
+>                                B.t
+>                               (
+>                                   a
+>                               )
+>                       )
+>           )
+>         )

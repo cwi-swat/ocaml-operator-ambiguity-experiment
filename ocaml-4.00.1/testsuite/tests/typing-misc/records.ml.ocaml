@@ -1,0 +1,93 @@
+(
+  type
+  (
+    t
+      type
+        params =
+          (
+          )
+        cstrs =
+          (
+          )
+        kind =
+            (
+              x
+                  poly
+                  
+                     int
+                    (
+                    )
+              y
+                  poly
+                  
+                     int
+                    (
+                    )
+            )
+            )
+  record
+  (
+    x
+      3
+    z
+      2
+  )
+    (
+    case
+    (
+      Ppat_record
+      (
+        x
+          3
+        z
+          2
+      )
+      ()
+          )
+  )
+  record
+  (
+    x
+      3
+    contents
+      2
+  )
+    type
+  (
+    u
+      type
+        params =
+          (
+          )
+        cstrs =
+          (
+          )
+        kind =
+            (
+              u
+                  poly
+                  
+                     int
+                    (
+                    )
+            )
+            )
+  record
+  (
+    u
+      3
+  )
+    (
+    case
+    (
+      x
+      setfield
+      (
+      x
+      u
+      3
+      )
+    )
+  )
+)
+

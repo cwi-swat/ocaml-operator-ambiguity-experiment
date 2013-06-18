@@ -1,0 +1,462 @@
+
+(
+    								 
+  let
+  (
+   
+    mut
+    Mutex.create
+    (
+        ()
+    ) 
+   							    		    
+  )
+                                     
+  let
+  (
+   
+    niter
+    ref
+    (
+        0
+    ) 
+   							    		    
+  )
+                                     
+  let
+  (
+   
+    token
+    ref
+    (
+        0
+    ) 
+   							    		    
+  )
+                                     
+  let
+  (
+   
+    process
+   (
+    case
+        (
+    	  
+    	  (
+    	   n
+    	       						 
+    	  	ins
+    	  
+    	  	outs
+    	  
+    	  	nprocs
+    	  
+    	  )
+         
+         let
+         (
+          (
+             									  
+           
+            buf
+            String.create
+            (
+                1
+            ) 
+           							    		   
+             									  
+          )
+         in
+           
+            while
+            true
+            
+            sequence
+            (
+              Unix.read
+              (
+                  Array.get
+                  (
+                   ins
+                   n
+                  )
+                      													
+                  buf
+                  0
+                  1
+              )
+            ;
+              
+              sequence
+              (
+                ifthenelse
+                (
+                 if
+                 (
+                  =
+                  (
+                      n
+                      0
+                  )
+                 )
+                 then
+                 (
+                  
+                  sequence
+                  (
+                    decr
+                    (
+                        niter
+                    )
+                  ;
+                    ifthenelse
+                    (
+                     if
+                     (
+                      <=
+                      (
+                          
+                           !
+                           (
+                           niter
+                           )
+                              							 
+                          0
+                      )
+                     )
+                     then
+                     (
+                      exit
+                      (
+                          0
+                      )
+                     )
+                     else
+                     (
+                     )
+                    )
+                        									   
+                  )
+                      							
+                 )
+                 else
+                 (
+                 )
+                )
+                    									   
+              ;
+                
+                let
+                (
+                 (
+                    									  
+                  
+                   next
+                   ifthenelse
+                   (
+                    if
+                    (
+                     >=
+                     (
+                         +
+                         (
+                             n
+                             1
+                         )
+                         nprocs
+                     )
+                    )
+                    then
+                    (
+                     0
+                    )
+                    else
+                    (
+                     +
+                     (
+                         n
+                         1
+                     )
+                    ) 
+                   )
+                   		    											  
+                  							    		   
+                    									  
+                 )
+                in
+                  Unix.write
+                  (
+                      Array.get
+                      (
+                       outs
+                       next
+                      )
+                          													
+                      buf
+                      0
+                      1
+                  )
+                )
+                    									
+              )
+                  							
+            )
+                								 
+               									 
+         )
+             									
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    main
+   (
+    case
+        (
+    	  ()
+         
+         let
+         (
+          (
+             									  
+           
+            nprocs
+            
+            try
+            int_of_string
+            (
+                Array.get
+                (
+                 Sys.argv
+                 1
+                )
+                    													
+            )
+            (
+            
+            case
+            (
+              _
+              
+              100
+            ) 
+            	        											 
+            	        											 
+            )
+                							    
+           							    		   
+             									  
+          )
+         in
+           
+           let
+           (
+            (
+               									  
+             
+              iter
+              
+              try
+              int_of_string
+              (
+                  Array.get
+                  (
+                   Sys.argv
+                   2
+                  )
+                      													
+              )
+              (
+              
+              case
+              (
+                _
+                
+                1000
+              ) 
+              	        											 
+              	        											 
+              )
+                  							    
+             							    		   
+               									  
+            )
+           in
+             
+             let
+             (
+              (
+                 									  
+               
+                ins
+                Array.create
+                (
+                    nprocs
+                    Unix.stdin
+                ) 
+               							    		   
+                 									  
+              )
+             in
+               
+               let
+               (
+                (
+                   									  
+                 
+                  outs
+                  Array.create
+                  (
+                      nprocs
+                      Unix.stdout
+                  ) 
+                 							    		   
+                   									  
+                )
+               in
+                 
+                 sequence
+                 (
+                    for n
+                    0
+                    -
+                    (
+                        nprocs
+                        1
+                    )
+                    
+                    let
+                    (
+                     (
+                        									  
+                      
+                       
+                       (
+                        i
+                            						 
+                       	o
+                       
+                       )
+                       Unix.pipe
+                       (
+                           ()
+                       ) 
+                      							    		   
+                        									  
+                     )
+                    in
+                      
+                      sequence
+                      (
+                        Array.set
+                        (
+                         ins
+                         n
+                         i
+                        )
+                            									
+                      ;
+                        Array.set
+                        (
+                         outs
+                         n
+                         o
+                        )
+                            									
+                      )
+                          							
+                    )
+                        									
+                       														  
+                 ;
+                   
+                   sequence
+                   (
+                     :=
+                     (
+                         niter
+                         iter
+                     )
+                   ;
+                     
+                     sequence
+                     (
+                        for i
+                        0
+                        -
+                        (
+                            nprocs
+                            1
+                        )
+                        Thread.create
+                        (
+                            process
+                            
+                            (
+                                					 i
+                                					 
+                            	ins
+                                					 
+                            	outs
+                                					 
+                            	nprocs
+                                					 
+                            )
+                                					 
+                        )
+                           														  
+                     ;
+                       
+                       sequence
+                       (
+                         Unix.write
+                         (
+                             Array.get
+                             (
+                              outs
+                              0
+                             )
+                                 													
+                             "X"
+                             0
+                             1
+                         )
+                       ;
+                         Thread.delay
+                         (
+                             3600.
+                         )
+                       )
+                           							
+                     )
+                         							
+                   )
+                       							
+                 )
+                     							
+               )
+                   									
+             )
+                 									
+           )
+               									
+         )
+             									
+        )
+   )
+       		    
+  )
+                                     
+  
+   
+   main
+   (
+       ()
+   ) 
+  							    		    
+                                     
+)

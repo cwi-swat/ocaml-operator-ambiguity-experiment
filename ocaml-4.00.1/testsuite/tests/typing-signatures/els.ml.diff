@@ -1,0 +1,266 @@
+50c50
+<     "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].state
+---
+>                V.state
+58c58
+<     "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
+---
+>                    V.value
+70,71c70
+<     include
+<     (
+---
+>         sig_include
+73d71
+<     )
+77c75
+<     "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
+---
+>                V.value
+81c79
+<     "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].state
+---
+>                  V.state
+87c85
+<        "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
+---
+>                        V.value
+91c89
+<     "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
+---
+>                    V.value
+132c130
+<     "extendedModulePath1"([],"Value")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
+---
+>                Value.value
+144,147c142
+<     bracketModType1 
+<     (
+<         modTypeWith 
+<         (
+---
+>           Pmty_with
+149d143
+<             modeConsModule2 
+152,154c146
+<                 Value
+<             )
+<         )
+---
+>               Pwith_modsubst Value
+167c159
+<        "extendedModulePath1"([],"Value")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].state
+---
+>                      Value.state
+182c174
+<        "extendedModulePath1"([],"Value")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
+---
+>                      Value.value
+195c187
+<     "extendedModulePath1"([],"Ast")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].program
+---
+>                Ast.program
+203,206c195,196
+<     include
+<     (
+<       modTypeWith 
+<       (
+---
+>         sig_include
+>           Pmty_with
+208d197
+<           modeConsModule2 
+211,213c200
+<               Value
+<           )
+<       )
+---
+>               Pwith_modsubst Value
+246,247c233
+<     include
+<     (
+---
+>         sig_include
+249d234
+<     )
+251,252c236
+<     modTypeWith 
+<     (
+---
+>           Pmty_with
+254d237
+<         modConsType1 
+257c240,242
+<             "extendedModulePath1"([],"Ast")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].chunk
+---
+>               Pwith_type
+>                 type
+>                   params =
+259a245,250
+>                   cstrs =
+>                     (
+>                     )
+>                   kind =
+>                          Ast.chunk
+>                         (
+403,404c394
+<     modTypeWith 
+<     (
+---
+>           Pmty_with
+406d395
+<         modConsType2 
+409c398,401
+<             "extendedModulePath1"([],"T")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+---
+>               Pwith_typesubst
+>                 type
+>                   params =
+>                     (
+410a403,404
+>                   cstrs =
+>                     (
+412,413c406,407
+<     module TV2
+<     modTypeWith 
+---
+>                   kind =
+>                          T.t
+414a409,412
+>                         )
+>           )
+>         module TV2
+>           Pmty_with
+416d413
+<         modConsType2 
+419c416,426
+<             "extendedModulePath1"([],"T")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+---
+>               Pwith_typesubst
+>                 type
+>                   params =
+>                     (
+>                     )
+>                   cstrs =
+>                     (
+>                     )
+>                   kind =
+>                          T.t
+>                         (
+428,431c435,436
+<     include
+<     (
+<       modTypeWith 
+<       (
+---
+>         sig_include
+>           Pmty_with
+433d437
+<           modeConsModule2 
+436,438c440
+<               T
+<           )
+<       )
+---
+>               Pwith_modsubst T
+472,473d473
+<    functor []
+<    (
+479,480c479
+<         modTypeWith 
+<         (
+---
+>             Pmty_with
+482d480
+<             modConsType1 
+484,485c482,485
+<                 "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].usert
+<                 "extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].combined
+---
+>               V.usert
+>                 Pwith_type
+>                   type
+>                     params =
+487a488,489
+>                     cstrs =
+>                       (
+489,490c491,492
+<         )
+<         modTypeWith 
+---
+>                     kind =
+>                            X.combined
+491a494,496
+>                           )
+>             )
+>             Pmty_with
+493d497
+<             modConsType2 
+496c500,503
+<                 "extendedModulePath1"(["extendedModulePath1"([],"C")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].state
+---
+>                 Pwith_typesubst
+>                   type
+>                     params =
+>                       (
+497a505,510
+>                     cstrs =
+>                       (
+>                       )
+>                     kind =
+>                            C.V.state
+>                           (
+533c546
+<        "extendedModulePath1"([],"Weapon")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+---
+>                      Weapon.t
+538,539c551
+<     modTypeWith 
+<     (
+---
+>           Pmty_with
+541d552
+<         modConsType1 
+544c555,557
+<             t
+---
+>               Pwith_type
+>                 type
+>                   params =
+546a560,565
+>                   cstrs =
+>                     (
+>                     )
+>                   kind =
+>                          t
+>                         (
+552,553c571
+<       modTypeWith 
+<       (
+---
+>             Pmty_with
+555d572
+<           modConsType1 
+558c575,577
+<               t
+---
+>                 Pwith_type
+>                   type
+>                     params =
+560a580,581
+>                     cstrs =
+>                       (
+562,563c583,584
+<       )
+<       extendedModulePath2 
+---
+>                     kind =
+>                            t
+565,567c586,588
+<           USERCODE
+<           TV
+<       ).F
+---
+>                           )
+>             )
+>             USERCODE(TV).F

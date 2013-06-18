@@ -1,0 +1,48 @@
+(
+  open Pr3918b
+  let
+  (
+    f
+      (
+        case
+        (
+          x
+          (
+          x
+          :
+               vlist
+              (
+                  a
+              )
+               vlist
+              (
+                  b
+              )
+          )
+        )
+      )
+  )
+  let
+  (
+    f
+      (
+        case
+        (
+          x
+             vlist
+            (
+                a
+            )
+          (
+          x
+          :
+               vlist
+              (
+                  b
+              )
+                    )
+        )
+      )
+  )
+)
+

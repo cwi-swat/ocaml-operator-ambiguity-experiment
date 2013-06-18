@@ -1,0 +1,131 @@
+116,117c116
+<      modTypeWith 
+<      (
+---
+>         Pmty_with
+119d117
+<          modConsType1 
+122,124c120,122
+<               tree
+<               (
+<                 "extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+---
+>             Pwith_type
+>               type
+>                 params =
+126a125,126
+>                 cstrs =
+>                   (
+128,129c128,129
+<          )
+<          modConsType1 
+---
+>                 kind =
+>                        tree
+131,132c131
+<              elt
+<              "extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+---
+>                            X.t
+136,140c135,138
+<      )
+<    )
+<    functor []
+<    (
+<      modTypeWith 
+---
+>           elt
+>             Pwith_type
+>               type
+>                 params =
+142,143c140,141
+<          SET
+<          modConsType1 
+---
+>                   )
+>                 cstrs =
+145,146c143,145
+<              elt
+<              int
+---
+>                   )
+>                 kind =
+>                        X.t
+168c167
+<      modRec1 
+---
+>           Pstr_recmodule
+170c169
+<          Elt
+---
+>             "Elt"
+199c198
+<               "extendedModulePath1"([],"Diet")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+---
+>                                        Diet.t
+271c270
+<              "extendedModulePath1"([],"Diet")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+---
+>                                      Diet.t
+342c341,378
+<          <"Diet","modTypeWith"("modTypePath"("modTypePath"([],"SET")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modConsType1"([],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"tree")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["modConsType1"([],"typeConstr"([],"elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"modApp"("modExpModPath"("modulePath"([],"MakeDiet")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modExpModPath"("modulePath"([],"Elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+---
+>             "Diet"
+>                 Pmty_with
+>                   SET
+>                 (
+>                   t
+>                     Pwith_type
+>                       type
+>                         params =
+>                           (
+>                           )
+>                         cstrs =
+>                           (
+>                           )
+>                         kind =
+>                                tree
+>                               (
+>                                    Elt.t
+>                                   (
+>                                   )
+>                               )
+>                   elt
+>                     Pwith_type
+>                       type
+>                         params =
+>                           (
+>                           )
+>                         cstrs =
+>                           (
+>                           )
+>                         kind =
+>                                Elt.t
+>                               (
+>                               )
+>                 )
+>                   MakeDiet
+>                 (
+>                   Elt
+>                 )
+355c391
+<         "extendedModulePath1"([],"Diet")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+---
+>                        Diet.t
+376a413,428
+>         Pmty_with
+>           SET
+>         (
+>           elt
+>             Pwith_type
+>               type
+>                 params =
+>                   (
+>                   )
+>                 cstrs =
+>                   (
+>                   )
+>                 kind =
+>                        int
+>                       (
+>                       )

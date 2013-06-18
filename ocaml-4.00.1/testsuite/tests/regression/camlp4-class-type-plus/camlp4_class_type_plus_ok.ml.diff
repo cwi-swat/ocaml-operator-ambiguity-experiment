@@ -1,0 +1,54 @@
+26c26
+<    classTypeDef 
+---
+>   class_type
+28c28,39
+<        classTypeDefinition 
+---
+>     class_type_declaration ([4,27+11]..[5,61+3])
+>       pci_virt = Concrete
+>       pci_params =
+>           (
+>             "t"
+>           )
+>       pci_name = "engine"
+>       pci_expr =
+>         class_type ([4,27+27]..[5,61+3])
+>           Pcty_signature
+>           class_signature
+>               Ptyp_any
+30,35d40
+<            classTypeDef 
+<            (
+<                <"t",[]>
+<                engine
+<                <[],[]>
+<            )
+41c46,57
+<      classSpec 
+---
+>         sig_class
+>         (
+>           class_description ([8,88+6]..[8,88+50])
+>             pci_virt = Concrete
+>             pci_params =
+>                 (
+>                 )
+>             pci_name = "unbound_async_call"
+>             pci_expr =
+>               class_type ([8,88+27]..[8,88+50])
+>                 Pcty_fun ""
+>                    t
+43c59,61
+<          classSpecification 
+---
+>                   )
+>                 class_type ([8,88+32]..[8,88+50])
+>                   Pcty_constr engine
+45c63
+<              classSpec 
+---
+>                        xdr_value
+47,48d64
+<                  unbound_async_call
+<                  <[<[],"typexprConstr2"("typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],<[<"typexprConstr2"("typeConstr"([],"xdr_value")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[]>],"classPath"([],"engine")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>>

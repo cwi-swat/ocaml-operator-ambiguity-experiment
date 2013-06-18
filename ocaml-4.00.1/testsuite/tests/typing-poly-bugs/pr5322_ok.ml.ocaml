@@ -1,0 +1,92 @@
+(
+  type
+  (
+    t
+      type
+        params =
+          (
+            par
+          )
+        cstrs =
+          (
+          )
+        kind =
+          
+              par
+  )
+  module M
+      struct
+      (
+        let
+        (
+          x
+            (
+            Obj.magic
+            (
+                ()
+                            )
+            :
+                Ptyp_object
+                (
+                  core_field_type ([3,61+18]..[3,61+30])
+                    Pfield "m"
+                      poly
+                       'a
+                         t
+                        (
+                            a
+                        )
+                )
+                        )
+        )
+      )
+      signature
+      (
+          sig_value x
+          value_description
+              Ptyp_object
+              (
+                core_field_type ([2,19+24]..[2,19+34])
+                  Pfield "m"
+                    poly
+                     'a
+                      a
+              )
+            (
+            )
+      )
+  let
+  (
+    ident
+      (
+        case
+        (
+          v
+          v
+        )
+      )
+  )
+  class
+  (
+      params =
+          (
+          )
+      class name = alias
+      class expr =
+          class_structure
+            (
+              method alias
+                ident
+                    poly
+                     'a
+                      arrow
+                      
+                         t
+                        (
+                            a
+                        )
+                        a
+            )
+  )
+)
+

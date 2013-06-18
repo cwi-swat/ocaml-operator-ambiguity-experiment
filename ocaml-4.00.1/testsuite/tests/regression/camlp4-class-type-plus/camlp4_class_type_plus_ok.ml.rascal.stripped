@@ -1,0 +1,53 @@
+(
+   type
+   (  						
+      t
+      type
+      params=
+      (
+      )
+      cstrs =
+      (
+      )
+      kind =
+   )
+   type
+   (  						
+      xdr_value
+      type
+      params=
+      (
+      )
+      cstrs =
+      (
+      )
+      kind =
+   )
+   classTypeDef 
+   (
+       classTypeDefinition 
+       (
+           classTypeDef 
+           (
+               <"t",[]>
+               engine
+               <[],[]>
+           )
+       )
+   )
+   module type T
+    signature
+    (
+     classSpec 
+     (
+         classSpecification 
+         (
+             classSpec 
+             (
+                 unbound_async_call
+                 <[<[],"typexprConstr2"("typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],<[<"typexprConstr2"("typeConstr"([],"xdr_value")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[]>],"classPath"([],"engine")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>>
+             )
+         )
+     )
+    )    								
+)

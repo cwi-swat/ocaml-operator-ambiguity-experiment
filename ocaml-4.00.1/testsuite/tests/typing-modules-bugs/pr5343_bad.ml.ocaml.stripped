@@ -1,0 +1,166 @@
+(
+  module M
+      struct
+      (
+        type
+        (
+          t
+            type
+              params =
+                (
+                  a
+                )
+              cstrs =
+                (
+                )
+              kind =
+                    a
+        )
+        type
+        (
+          u
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                     int
+                    (
+                    )
+          v
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                     bool
+                    (
+                    )
+        )
+        let
+        (
+          f
+            (
+              case
+              (
+                x
+                x
+              )
+            )
+        )
+        let
+        (
+          g
+            (
+              case
+              (
+                x
+                x
+              )
+            )
+        )
+      )
+      signature
+      (
+          type
+          (
+            t
+              type
+                params =
+                  (
+                    a
+                  )
+                cstrs =
+                  (
+                  )
+                kind =
+                            )
+          type
+          (
+            u
+              type
+                params =
+                  (
+                  )
+                cstrs =
+                  (
+                  )
+                kind =
+                       t
+                      (
+                           u
+                          (
+                          )
+                      )
+            v
+              type
+                params =
+                  (
+                  )
+                cstrs =
+                  (
+                  )
+                kind =
+                       t
+                      (
+                           v
+                          (
+                          )
+                      )
+          )
+          sig_value f
+          value_description
+              arrow
+                 int
+                (
+                )
+                 u
+                (
+                )
+            (
+            )
+          sig_value g
+          value_description
+              arrow
+                 v
+                (
+                )
+                 bool
+                (
+                )
+            (
+            )
+      )
+  let
+  (
+    h
+      (
+        case
+        (
+          x
+             int
+            (
+            )
+          (
+          M.g
+          (
+              M.f
+              (
+                  x
+              )
+          )
+          :
+               bool
+              (
+              )
+                    )
+        )
+      )
+  )
+)

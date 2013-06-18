@@ -1,0 +1,189 @@
+
+(
+    								 
+  module type Poly
+   signature
+   (
+   		    				
+    type
+    (  						
+        							    	 
+       t
+       type
+       params=
+       (
+       
+        
+        a
+       										 
+       )
+       cstrs =
+       (
+       )
+       kind =
+       a
+       
+       														  
+        typeConstraint 
+        (
+            a
+            
+        )
+       							     						  
+       														 
+      											   
+    								        
+    )
+   		    				
+   )    								
+      							   
+                                     
+  module  Combine
+  functor A
+  (
+   Poly
+   functor B
+   (
+     Poly
+     struct
+     (
+     							  
+     type
+     (  						
+         							    	 
+        t
+        type
+        params=
+        (
+        
+        									 
+         
+          
+          a
+         										 
+        									 
+         
+          
+          b
+         										 
+        									 
+        									 
+        )
+        cstrs =
+        (
+        )
+        kind =
+        
+         "extendedModulePath1"([],"A")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+         (
+           a
+         )
+         
+            									
+        
+        														  
+         typeConstraint 
+         (
+             a
+             
+              "extendedModulePath1"([],"B")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+              (
+                b
+              )
+              
+                 									
+         )
+        							     						  
+        														 
+       											   
+     								        
+     )
+     							  
+     )
+     							  
+   )
+       													
+  )
+      										    
+                                     
+  module  C
+   Combine
+   (
+   struct
+   (
+   							  
+   type
+   (  						
+       							    	 
+      t
+      type
+      params=
+      (
+      
+       
+       a
+      										 
+      )
+      cstrs =
+      (
+      )
+      kind =
+      a
+      
+      														  
+       typeConstraint 
+       (
+           a
+           
+       )
+      							     						  
+      														 
+     											   
+   								        
+   )
+   							  
+   )
+   							  
+   )
+   								   
+   (
+   struct
+   (
+   							  
+   type
+   (  						
+       							    	 
+      t
+      type
+      params=
+      (
+      
+       
+       a
+      										 
+      )
+      cstrs =
+      (
+      )
+      kind =
+      a
+      
+      														  
+       typeConstraint 
+       (
+           a
+           
+       )
+      							     						  
+      														 
+     											   
+   								        
+   )
+   							  
+   )
+   							  
+   )
+   								   
+  										    
+                                     
+)

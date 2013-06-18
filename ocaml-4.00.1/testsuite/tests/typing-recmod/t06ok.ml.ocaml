@@ -1,0 +1,98 @@
+(
+  Pstr_recmodule
+  (
+    "A"
+        signature
+        (
+            type
+            (
+              t
+                type
+                  params =
+                    (
+                    )
+                  cstrs =
+                    (
+                    )
+                  kind =
+                    
+                        Ptyp_object
+                        (
+                          core_field_type ([2,21+29]..[2,21+34])
+                            Pfield "m"
+                              poly
+                              
+                                 B.t
+                                (
+                                )
+                        )
+            )
+        )
+        struct
+        (
+          type
+          (
+            t
+              type
+                params =
+                  (
+                  )
+                cstrs =
+                  (
+                  )
+                kind =
+                  
+                      Ptyp_object
+                      (
+                        core_field_type ([2,21+59]..[2,21+64])
+                          Pfield "m"
+                            poly
+                            
+                               B.t
+                              (
+                              )
+                      )
+          )
+        )
+    "B"
+        signature
+        (
+            type
+            (
+              t
+                type
+                  params =
+                    (
+                    )
+                  cstrs =
+                    (
+                    )
+                  kind =
+                    
+                         A.t
+                        (
+                        )
+            )
+        )
+        struct
+        (
+          type
+          (
+            t
+              type
+                params =
+                  (
+                  )
+                cstrs =
+                  (
+                  )
+                kind =
+                  
+                       A.t
+                      (
+                      )
+          )
+        )
+  )
+)
+

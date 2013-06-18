@@ -1,0 +1,57 @@
+20d19
+<       <>
+37d35
+<       <>
+51d48
+<       <>
+81c78
+<   classTypeDef 
+---
+>   class_type
+83c80,91
+<       classTypeDefinition 
+---
+>     class_type_declaration ([6,153+11]..[8,205+3])
+>       pci_virt = Concrete
+>       pci_params =
+>           (
+>             "a"
+>           )
+>       pci_name = "s3"
+>       pci_expr =
+>         class_type ([6,153+21]..[8,205+3])
+>           Pcty_signature
+>           class_signature
+>               Ptyp_any
+85c93,94
+<           classTypeDef 
+---
+>               Pctf_val "underlying" Immutable Concrete ([7,181+2]..[7,181+23])
+>                    t
+87,89c96
+<               <"a",[]>
+<               s3
+<               <[],[<[],[],"underlying","typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
+---
+>                       a
+97c104
+<     r
+---
+>             "a"
+100a108,111
+>           fun
+>           label=""
+>                     r
+>             constraint
+103,106c114
+<                    classValue 
+<                    (
+<                        <>
+<                        underlying
+---
+>                   Pcf_val "underlying" Immutable Fresh ([10,252+2]..[10,252+20])
+108a117,120
+>             class_type ([9,211+24]..[9,211+31])
+>               Pcty_constr s3
+>               (
+>                   a

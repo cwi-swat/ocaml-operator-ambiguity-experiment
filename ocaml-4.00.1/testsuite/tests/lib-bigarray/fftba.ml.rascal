@@ -1,0 +1,2424 @@
+
+(
+    								 
+  open Bigarray
+                                     
+  let
+  (
+   
+    pi
+    3.14159265358979323846 
+   							    		    
+  )
+                                     
+  let
+  (
+   
+    tpi
+    *.
+    (
+        2.0
+        pi
+    ) 
+   							    		    
+  )
+                                     
+  let
+  (
+   
+    fft
+   (
+    case
+        (
+     		
+     		 
+     		 px
+     		 <["typexprConstr2"("typeConstr"([],"float")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"float64_elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"c_layout")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array1")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     		     										   
+     		(
+     		 case
+     		     (
+     		  		
+     		  		 
+     		  		 py
+     		  		 <["typexprConstr2"("typeConstr"([],"float")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"float64_elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"c_layout")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"(["extendedModulePath1"([],"Array1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+     		  		     										   
+     		  		(
+     		  		 case
+     		  		     (
+     		  		 	  np
+     		  		      
+     		  		      let
+     		  		      (
+     		  		       (
+     		  		          									  
+     		  		        
+     		  		         i
+     		  		         ref
+     		  		         (
+     		  		             2
+     		  		         ) 
+     		  		        							    		   
+     		  		          									  
+     		  		       )
+     		  		      in
+     		  		        
+     		  		        let
+     		  		        (
+     		  		         (
+     		  		            									  
+     		  		          
+     		  		           m
+     		  		           ref
+     		  		           (
+     		  		               1
+     		  		           ) 
+     		  		          							    		   
+     		  		            									  
+     		  		         )
+     		  		        in
+     		  		          
+     		  		          sequence
+     		  		          (
+     		  		            
+     		  		             while
+     		  		             <
+     		  		             (
+     		  		                 
+     		  		                  !
+     		  		                  (
+     		  		                  i
+     		  		                  )
+     		  		                     							 
+     		  		                 np
+     		  		             )
+     		  		             
+     		  		             sequence
+     		  		             (
+     		  		               :=
+     		  		               (
+     		  		                   i
+     		  		                   +
+     		  		                   (
+     		  		                       
+     		  		                        !
+     		  		                        (
+     		  		                        i
+     		  		                        )
+     		  		                           							 
+     		  		                       
+     		  		                        !
+     		  		                        (
+     		  		                        i
+     		  		                        )
+     		  		                           							 
+     		  		                   )
+     		  		               )
+     		  		             ;
+     		  		               :=
+     		  		               (
+     		  		                   m
+     		  		                   +
+     		  		                   (
+     		  		                       
+     		  		                        !
+     		  		                        (
+     		  		                        m
+     		  		                        )
+     		  		                           							 
+     		  		                       1
+     		  		                   )
+     		  		               )
+     		  		             )
+     		  		                 								 
+     		  		                									 
+     		  		          ;
+     		  		            
+     		  		            let
+     		  		            (
+     		  		             (
+     		  		                									  
+     		  		              
+     		  		               n
+     		  		               
+     		  		                !
+     		  		                (
+     		  		                i
+     		  		                )
+     		  		                   							  
+     		  		              							    		   
+     		  		                									  
+     		  		             )
+     		  		            in
+     		  		              
+     		  		              sequence
+     		  		              (
+     		  		                ifthenelse
+     		  		                (
+     		  		                 if
+     		  		                 (
+     		  		                  <>
+     		  		                  (
+     		  		                      n
+     		  		                      np
+     		  		                  )
+     		  		                 )
+     		  		                 then
+     		  		                 (
+     		  		                  
+     		  		                  sequence
+     		  		                  (
+     		  		                     for i
+     		  		                     +
+     		  		                     (
+     		  		                         np
+     		  		                         1
+     		  		                     )
+     		  		                     n
+     		  		                     
+     		  		                     sequence
+     		  		                     (
+     		  		                       Array.set
+     		  		                       (
+     		  		                        px
+     		  		                        i
+     		  		                        0.0
+     		  		                       )
+     		  		                           									
+     		  		                     ;
+     		  		                       Array.set
+     		  		                       (
+     		  		                        py
+     		  		                        i
+     		  		                        0.0
+     		  		                       )
+     		  		                           									
+     		  		                     )
+     		  		                         							
+     		  		                        														  
+     		  		                  ;
+     		  		                    
+     		  		                    sequence
+     		  		                    (
+     		  		                      print_string
+     		  		                      (
+     		  		                          "Use "
+     		  		                      )
+     		  		                    ;
+     		  		                      
+     		  		                      sequence
+     		  		                      (
+     		  		                        print_int
+     		  		                        (
+     		  		                            n
+     		  		                        )
+     		  		                      ;
+     		  		                        
+     		  		                        sequence
+     		  		                        (
+     		  		                          print_string
+     		  		                          (
+     		  		                              " point fft"
+     		  		                          )
+     		  		                        ;
+     		  		                          print_newline
+     		  		                          (
+     		  		                              ()
+     		  		                          )
+     		  		                        )
+     		  		                            							
+     		  		                      )
+     		  		                          							
+     		  		                    )
+     		  		                        							
+     		  		                  )
+     		  		                      							
+     		  		                 )
+     		  		                 else
+     		  		                 (
+     		  		                 )
+     		  		                )
+     		  		                    									   
+     		  		              ;
+     		  		                
+     		  		                let
+     		  		                (
+     		  		                 (
+     		  		                    									  
+     		  		                  
+     		  		                   n2
+     		  		                   ref
+     		  		                   (
+     		  		                       +
+     		  		                       (
+     		  		                           n
+     		  		                           n
+     		  		                       )
+     		  		                   ) 
+     		  		                  							    		   
+     		  		                    									  
+     		  		                 )
+     		  		                in
+     		  		                  
+     		  		                  sequence
+     		  		                  (
+     		  		                     for k
+     		  		                     1
+     		  		                     -
+     		  		                     (
+     		  		                         
+     		  		                          !
+     		  		                          (
+     		  		                          m
+     		  		                          )
+     		  		                             							 
+     		  		                         1
+     		  		                     )
+     		  		                     
+     		  		                     sequence
+     		  		                     (
+     		  		                       :=
+     		  		                       (
+     		  		                           n2
+     		  		                           /
+     		  		                           (
+     		  		                               
+     		  		                                !
+     		  		                                (
+     		  		                                n2
+     		  		                                )
+     		  		                                   							 
+     		  		                               2
+     		  		                           )
+     		  		                       )
+     		  		                     ;
+     		  		                       
+     		  		                       let
+     		  		                       (
+     		  		                        (
+     		  		                           									  
+     		  		                         
+     		  		                          n4
+     		  		                          /
+     		  		                          (
+     		  		                              
+     		  		                               !
+     		  		                               (
+     		  		                               n2
+     		  		                               )
+     		  		                                  							 
+     		  		                              4
+     		  		                          ) 
+     		  		                         							    		   
+     		  		                           									  
+     		  		                        )
+     		  		                       in
+     		  		                         
+     		  		                         let
+     		  		                         (
+     		  		                          (
+     		  		                             									  
+     		  		                           
+     		  		                            e
+     		  		                            /.
+     		  		                            (
+     		  		                                tpi
+     		  		                                float
+     		  		                                (
+     		  		                                    
+     		  		                                     !
+     		  		                                     (
+     		  		                                     n2
+     		  		                                     )
+     		  		                                        							 
+     		  		                                )
+     		  		                            ) 
+     		  		                           							    		   
+     		  		                             									  
+     		  		                          )
+     		  		                         in
+     		  		                            for j
+     		  		                            1
+     		  		                            n4
+     		  		                            
+     		  		                            let
+     		  		                            (
+     		  		                             (
+     		  		                                									  
+     		  		                              
+     		  		                               a
+     		  		                               *.
+     		  		                               (
+     		  		                                   e
+     		  		                                   float
+     		  		                                   (
+     		  		                                       -
+     		  		                                       (
+     		  		                                           j
+     		  		                                           1
+     		  		                                       )
+     		  		                                   )
+     		  		                               ) 
+     		  		                              							    		   
+     		  		                                									  
+     		  		                             )
+     		  		                            in
+     		  		                              
+     		  		                              let
+     		  		                              (
+     		  		                               (
+     		  		                                  									  
+     		  		                                
+     		  		                                 a3
+     		  		                                 *.
+     		  		                                 (
+     		  		                                     3.0
+     		  		                                     a
+     		  		                                 ) 
+     		  		                                							    		   
+     		  		                                  									  
+     		  		                               )
+     		  		                              in
+     		  		                                
+     		  		                                let
+     		  		                                (
+     		  		                                 (
+     		  		                                    									  
+     		  		                                  
+     		  		                                   cc1
+     		  		                                   cos
+     		  		                                   (
+     		  		                                       a
+     		  		                                   ) 
+     		  		                                  							    		   
+     		  		                                    									  
+     		  		                                 )
+     		  		                                in
+     		  		                                  
+     		  		                                  let
+     		  		                                  (
+     		  		                                   (
+     		  		                                      									  
+     		  		                                    
+     		  		                                     ss1
+     		  		                                     sin
+     		  		                                     (
+     		  		                                         a
+     		  		                                     ) 
+     		  		                                    							    		   
+     		  		                                      									  
+     		  		                                   )
+     		  		                                  in
+     		  		                                    
+     		  		                                    let
+     		  		                                    (
+     		  		                                     (
+     		  		                                        									  
+     		  		                                      
+     		  		                                       cc3
+     		  		                                       cos
+     		  		                                       (
+     		  		                                           a3
+     		  		                                       ) 
+     		  		                                      							    		   
+     		  		                                        									  
+     		  		                                     )
+     		  		                                    in
+     		  		                                      
+     		  		                                      let
+     		  		                                      (
+     		  		                                       (
+     		  		                                          									  
+     		  		                                        
+     		  		                                         ss3
+     		  		                                         sin
+     		  		                                         (
+     		  		                                             a3
+     		  		                                         ) 
+     		  		                                        							    		   
+     		  		                                          									  
+     		  		                                       )
+     		  		                                      in
+     		  		                                        
+     		  		                                        let
+     		  		                                        (
+     		  		                                         (
+     		  		                                            									  
+     		  		                                          
+     		  		                                           is
+     		  		                                           ref
+     		  		                                           (
+     		  		                                               j
+     		  		                                           ) 
+     		  		                                          							    		   
+     		  		                                            									  
+     		  		                                         )
+     		  		                                        in
+     		  		                                          
+     		  		                                          let
+     		  		                                          (
+     		  		                                           (
+     		  		                                              									  
+     		  		                                            
+     		  		                                             id
+     		  		                                             ref
+     		  		                                             (
+     		  		                                                 *
+     		  		                                                 (
+     		  		                                                     2
+     		  		                                                     
+     		  		                                                      !
+     		  		                                                      (
+     		  		                                                      n2
+     		  		                                                      )
+     		  		                                                         							 
+     		  		                                                 )
+     		  		                                             ) 
+     		  		                                            							    		   
+     		  		                                              									  
+     		  		                                           )
+     		  		                                          in
+     		  		                                            
+     		  		                                             while
+     		  		                                             <
+     		  		                                             (
+     		  		                                                 
+     		  		                                                  !
+     		  		                                                  (
+     		  		                                                  is
+     		  		                                                  )
+     		  		                                                     							 
+     		  		                                                 n
+     		  		                                             )
+     		  		                                             
+     		  		                                             let
+     		  		                                             (
+     		  		                                              (
+     		  		                                                 									  
+     		  		                                               
+     		  		                                                i0r
+     		  		                                                ref
+     		  		                                                (
+     		  		                                                    
+     		  		                                                     !
+     		  		                                                     (
+     		  		                                                     is
+     		  		                                                     )
+     		  		                                                        							 
+     		  		                                                ) 
+     		  		                                               							    		   
+     		  		                                                 									  
+     		  		                                              )
+     		  		                                             in
+     		  		                                               
+     		  		                                               sequence
+     		  		                                               (
+     		  		                                                 
+     		  		                                                  while
+     		  		                                                  <
+     		  		                                                  (
+     		  		                                                      
+     		  		                                                       !
+     		  		                                                       (
+     		  		                                                       i0r
+     		  		                                                       )
+     		  		                                                          							 
+     		  		                                                      n
+     		  		                                                  )
+     		  		                                                  
+     		  		                                                  let
+     		  		                                                  (
+     		  		                                                   (
+     		  		                                                      									  
+     		  		                                                    
+     		  		                                                     i0
+     		  		                                                     
+     		  		                                                      !
+     		  		                                                      (
+     		  		                                                      i0r
+     		  		                                                      )
+     		  		                                                         							  
+     		  		                                                    							    		   
+     		  		                                                      									  
+     		  		                                                   )
+     		  		                                                  in
+     		  		                                                    
+     		  		                                                    let
+     		  		                                                    (
+     		  		                                                     (
+     		  		                                                        									  
+     		  		                                                      
+     		  		                                                       i1
+     		  		                                                       +
+     		  		                                                       (
+     		  		                                                           i0
+     		  		                                                           n4
+     		  		                                                       ) 
+     		  		                                                      							    		   
+     		  		                                                        									  
+     		  		                                                     )
+     		  		                                                    in
+     		  		                                                      
+     		  		                                                      let
+     		  		                                                      (
+     		  		                                                       (
+     		  		                                                          									  
+     		  		                                                        
+     		  		                                                         i2
+     		  		                                                         +
+     		  		                                                         (
+     		  		                                                             i1
+     		  		                                                             n4
+     		  		                                                         ) 
+     		  		                                                        							    		   
+     		  		                                                          									  
+     		  		                                                       )
+     		  		                                                      in
+     		  		                                                        
+     		  		                                                        let
+     		  		                                                        (
+     		  		                                                         (
+     		  		                                                            									  
+     		  		                                                          
+     		  		                                                           i3
+     		  		                                                           +
+     		  		                                                           (
+     		  		                                                               i2
+     		  		                                                               n4
+     		  		                                                           ) 
+     		  		                                                          							    		   
+     		  		                                                            									  
+     		  		                                                         )
+     		  		                                                        in
+     		  		                                                          
+     		  		                                                          let
+     		  		                                                          (
+     		  		                                                           (
+     		  		                                                              									  
+     		  		                                                            
+     		  		                                                             r1
+     		  		                                                             -.
+     		  		                                                             (
+     		  		                                                                 Array.get
+     		  		                                                                 (
+     		  		                                                                  px
+     		  		                                                                  i0
+     		  		                                                                 )
+     		  		                                                                     													
+     		  		                                                                 Array.get
+     		  		                                                                 (
+     		  		                                                                  px
+     		  		                                                                  i2
+     		  		                                                                 )
+     		  		                                                                     													
+     		  		                                                             ) 
+     		  		                                                            							    		   
+     		  		                                                              									  
+     		  		                                                           )
+     		  		                                                          in
+     		  		                                                            
+     		  		                                                            sequence
+     		  		                                                            (
+     		  		                                                              Array.set
+     		  		                                                              (
+     		  		                                                               px
+     		  		                                                               i0
+     		  		                                                               +.
+     		  		                                                               (
+     		  		                                                                   Array.get
+     		  		                                                                   (
+     		  		                                                                    px
+     		  		                                                                    i0
+     		  		                                                                   )
+     		  		                                                                       													
+     		  		                                                                   Array.get
+     		  		                                                                   (
+     		  		                                                                    px
+     		  		                                                                    i2
+     		  		                                                                   )
+     		  		                                                                       													
+     		  		                                                               )
+     		  		                                                              )
+     		  		                                                                  									
+     		  		                                                            ;
+     		  		                                                              
+     		  		                                                              let
+     		  		                                                              (
+     		  		                                                               (
+     		  		                                                                  									  
+     		  		                                                                
+     		  		                                                                 r2
+     		  		                                                                 -.
+     		  		                                                                 (
+     		  		                                                                     Array.get
+     		  		                                                                     (
+     		  		                                                                      px
+     		  		                                                                      i1
+     		  		                                                                     )
+     		  		                                                                         													
+     		  		                                                                     Array.get
+     		  		                                                                     (
+     		  		                                                                      px
+     		  		                                                                      i3
+     		  		                                                                     )
+     		  		                                                                         													
+     		  		                                                                 ) 
+     		  		                                                                							    		   
+     		  		                                                                  									  
+     		  		                                                               )
+     		  		                                                              in
+     		  		                                                                
+     		  		                                                                sequence
+     		  		                                                                (
+     		  		                                                                  Array.set
+     		  		                                                                  (
+     		  		                                                                   px
+     		  		                                                                   i1
+     		  		                                                                   +.
+     		  		                                                                   (
+     		  		                                                                       Array.get
+     		  		                                                                       (
+     		  		                                                                        px
+     		  		                                                                        i1
+     		  		                                                                       )
+     		  		                                                                           													
+     		  		                                                                       Array.get
+     		  		                                                                       (
+     		  		                                                                        px
+     		  		                                                                        i3
+     		  		                                                                       )
+     		  		                                                                           													
+     		  		                                                                   )
+     		  		                                                                  )
+     		  		                                                                      									
+     		  		                                                                ;
+     		  		                                                                  
+     		  		                                                                  let
+     		  		                                                                  (
+     		  		                                                                   (
+     		  		                                                                      									  
+     		  		                                                                    
+     		  		                                                                     s1
+     		  		                                                                     -.
+     		  		                                                                     (
+     		  		                                                                         Array.get
+     		  		                                                                         (
+     		  		                                                                          py
+     		  		                                                                          i0
+     		  		                                                                         )
+     		  		                                                                             													
+     		  		                                                                         Array.get
+     		  		                                                                         (
+     		  		                                                                          py
+     		  		                                                                          i2
+     		  		                                                                         )
+     		  		                                                                             													
+     		  		                                                                     ) 
+     		  		                                                                    							    		   
+     		  		                                                                      									  
+     		  		                                                                   )
+     		  		                                                                  in
+     		  		                                                                    
+     		  		                                                                    sequence
+     		  		                                                                    (
+     		  		                                                                      Array.set
+     		  		                                                                      (
+     		  		                                                                       py
+     		  		                                                                       i0
+     		  		                                                                       +.
+     		  		                                                                       (
+     		  		                                                                           Array.get
+     		  		                                                                           (
+     		  		                                                                            py
+     		  		                                                                            i0
+     		  		                                                                           )
+     		  		                                                                               													
+     		  		                                                                           Array.get
+     		  		                                                                           (
+     		  		                                                                            py
+     		  		                                                                            i2
+     		  		                                                                           )
+     		  		                                                                               													
+     		  		                                                                       )
+     		  		                                                                      )
+     		  		                                                                          									
+     		  		                                                                    ;
+     		  		                                                                      
+     		  		                                                                      let
+     		  		                                                                      (
+     		  		                                                                       (
+     		  		                                                                          									  
+     		  		                                                                        
+     		  		                                                                         s2
+     		  		                                                                         -.
+     		  		                                                                         (
+     		  		                                                                             Array.get
+     		  		                                                                             (
+     		  		                                                                              py
+     		  		                                                                              i1
+     		  		                                                                             )
+     		  		                                                                                 													
+     		  		                                                                             Array.get
+     		  		                                                                             (
+     		  		                                                                              py
+     		  		                                                                              i3
+     		  		                                                                             )
+     		  		                                                                                 													
+     		  		                                                                         ) 
+     		  		                                                                        							    		   
+     		  		                                                                          									  
+     		  		                                                                       )
+     		  		                                                                      in
+     		  		                                                                        
+     		  		                                                                        sequence
+     		  		                                                                        (
+     		  		                                                                          Array.set
+     		  		                                                                          (
+     		  		                                                                           py
+     		  		                                                                           i1
+     		  		                                                                           +.
+     		  		                                                                           (
+     		  		                                                                               Array.get
+     		  		                                                                               (
+     		  		                                                                                py
+     		  		                                                                                i1
+     		  		                                                                               )
+     		  		                                                                                   													
+     		  		                                                                               Array.get
+     		  		                                                                               (
+     		  		                                                                                py
+     		  		                                                                                i3
+     		  		                                                                               )
+     		  		                                                                                   													
+     		  		                                                                           )
+     		  		                                                                          )
+     		  		                                                                              									
+     		  		                                                                        ;
+     		  		                                                                          
+     		  		                                                                          let
+     		  		                                                                          (
+     		  		                                                                           (
+     		  		                                                                              									  
+     		  		                                                                            
+     		  		                                                                             s3
+     		  		                                                                             -.
+     		  		                                                                             (
+     		  		                                                                                 r1
+     		  		                                                                                 s2
+     		  		                                                                             ) 
+     		  		                                                                            							    		   
+     		  		                                                                              									  
+     		  		                                                                           )
+     		  		                                                                          in
+     		  		                                                                            
+     		  		                                                                            let
+     		  		                                                                            (
+     		  		                                                                             (
+     		  		                                                                                									  
+     		  		                                                                              
+     		  		                                                                               r1
+     		  		                                                                               +.
+     		  		                                                                               (
+     		  		                                                                                   r1
+     		  		                                                                                   s2
+     		  		                                                                               ) 
+     		  		                                                                              							    		   
+     		  		                                                                                									  
+     		  		                                                                             )
+     		  		                                                                            in
+     		  		                                                                              
+     		  		                                                                              let
+     		  		                                                                              (
+     		  		                                                                               (
+     		  		                                                                                  									  
+     		  		                                                                                
+     		  		                                                                                 s2
+     		  		                                                                                 -.
+     		  		                                                                                 (
+     		  		                                                                                     r2
+     		  		                                                                                     s1
+     		  		                                                                                 ) 
+     		  		                                                                                							    		   
+     		  		                                                                                  									  
+     		  		                                                                               )
+     		  		                                                                              in
+     		  		                                                                                
+     		  		                                                                                let
+     		  		                                                                                (
+     		  		                                                                                 (
+     		  		                                                                                    									  
+     		  		                                                                                  
+     		  		                                                                                   r2
+     		  		                                                                                   +.
+     		  		                                                                                   (
+     		  		                                                                                       r2
+     		  		                                                                                       s1
+     		  		                                                                                   ) 
+     		  		                                                                                  							    		   
+     		  		                                                                                    									  
+     		  		                                                                                 )
+     		  		                                                                                in
+     		  		                                                                                  
+     		  		                                                                                  sequence
+     		  		                                                                                  (
+     		  		                                                                                    Array.set
+     		  		                                                                                    (
+     		  		                                                                                     px
+     		  		                                                                                     i2
+     		  		                                                                                     -.
+     		  		                                                                                     (
+     		  		                                                                                         *.
+     		  		                                                                                         (
+     		  		                                                                                             r1
+     		  		                                                                                             cc1
+     		  		                                                                                         )
+     		  		                                                                                         *.
+     		  		                                                                                         (
+     		  		                                                                                             s2
+     		  		                                                                                             ss1
+     		  		                                                                                         )
+     		  		                                                                                     )
+     		  		                                                                                    )
+     		  		                                                                                        									
+     		  		                                                                                  ;
+     		  		                                                                                    
+     		  		                                                                                    sequence
+     		  		                                                                                    (
+     		  		                                                                                      Array.set
+     		  		                                                                                      (
+     		  		                                                                                       py
+     		  		                                                                                       i2
+     		  		                                                                                       -.
+     		  		                                                                                       (
+     		  		                                                                                           *.
+     		  		                                                                                           (
+     		  		                                                                                               floatUnaryMinus 
+     		  		                                                                                               (
+     		  		                                                                                                   s2
+     		  		                                                                                               )
+     		  		                                                                                               cc1
+     		  		                                                                                           )
+     		  		                                                                                           *.
+     		  		                                                                                           (
+     		  		                                                                                               r1
+     		  		                                                                                               ss1
+     		  		                                                                                           )
+     		  		                                                                                       )
+     		  		                                                                                      )
+     		  		                                                                                          									
+     		  		                                                                                    ;
+     		  		                                                                                      
+     		  		                                                                                      sequence
+     		  		                                                                                      (
+     		  		                                                                                        Array.set
+     		  		                                                                                        (
+     		  		                                                                                         px
+     		  		                                                                                         i3
+     		  		                                                                                         +.
+     		  		                                                                                         (
+     		  		                                                                                             *.
+     		  		                                                                                             (
+     		  		                                                                                                 s3
+     		  		                                                                                                 cc3
+     		  		                                                                                             )
+     		  		                                                                                             *.
+     		  		                                                                                             (
+     		  		                                                                                                 r2
+     		  		                                                                                                 ss3
+     		  		                                                                                             )
+     		  		                                                                                         )
+     		  		                                                                                        )
+     		  		                                                                                            									
+     		  		                                                                                      ;
+     		  		                                                                                        
+     		  		                                                                                        sequence
+     		  		                                                                                        (
+     		  		                                                                                          Array.set
+     		  		                                                                                          (
+     		  		                                                                                           py
+     		  		                                                                                           i3
+     		  		                                                                                           -.
+     		  		                                                                                           (
+     		  		                                                                                               *.
+     		  		                                                                                               (
+     		  		                                                                                                   r2
+     		  		                                                                                                   cc3
+     		  		                                                                                               )
+     		  		                                                                                               *.
+     		  		                                                                                               (
+     		  		                                                                                                   s3
+     		  		                                                                                                   ss3
+     		  		                                                                                               )
+     		  		                                                                                           )
+     		  		                                                                                          )
+     		  		                                                                                              									
+     		  		                                                                                        ;
+     		  		                                                                                          :=
+     		  		                                                                                          (
+     		  		                                                                                              i0r
+     		  		                                                                                              +
+     		  		                                                                                              (
+     		  		                                                                                                  i0
+     		  		                                                                                                  
+     		  		                                                                                                   !
+     		  		                                                                                                   (
+     		  		                                                                                                   id
+     		  		                                                                                                   )
+     		  		                                                                                                      							 
+     		  		                                                                                              )
+     		  		                                                                                          )
+     		  		                                                                                        )
+     		  		                                                                                            							
+     		  		                                                                                      )
+     		  		                                                                                          							
+     		  		                                                                                    )
+     		  		                                                                                        							
+     		  		                                                                                  )
+     		  		                                                                                      							
+     		  		                                                                                )
+     		  		                                                                                    									
+     		  		                                                                              )
+     		  		                                                                                  									
+     		  		                                                                            )
+     		  		                                                                                									
+     		  		                                                                          )
+     		  		                                                                              									
+     		  		                                                                        )
+     		  		                                                                            							
+     		  		                                                                      )
+     		  		                                                                          									
+     		  		                                                                    )
+     		  		                                                                        							
+     		  		                                                                  )
+     		  		                                                                      									
+     		  		                                                                )
+     		  		                                                                    							
+     		  		                                                              )
+     		  		                                                                  									
+     		  		                                                            )
+     		  		                                                                							
+     		  		                                                          )
+     		  		                                                              									
+     		  		                                                        )
+     		  		                                                            									
+     		  		                                                      )
+     		  		                                                          									
+     		  		                                                    )
+     		  		                                                        									
+     		  		                                                  )
+     		  		                                                      										 
+     		  		                                                     									 
+     		  		                                               ;
+     		  		                                                 
+     		  		                                                 sequence
+     		  		                                                 (
+     		  		                                                   :=
+     		  		                                                   (
+     		  		                                                       is
+     		  		                                                       +
+     		  		                                                       (
+     		  		                                                           -
+     		  		                                                           (
+     		  		                                                               *
+     		  		                                                               (
+     		  		                                                                   2
+     		  		                                                                   
+     		  		                                                                    !
+     		  		                                                                    (
+     		  		                                                                    id
+     		  		                                                                    )
+     		  		                                                                       							 
+     		  		                                                               )
+     		  		                                                               
+     		  		                                                                !
+     		  		                                                                (
+     		  		                                                                n2
+     		  		                                                                )
+     		  		                                                                   							 
+     		  		                                                           )
+     		  		                                                           j
+     		  		                                                       )
+     		  		                                                   )
+     		  		                                                 ;
+     		  		                                                   :=
+     		  		                                                   (
+     		  		                                                       id
+     		  		                                                       *
+     		  		                                                       (
+     		  		                                                           4
+     		  		                                                           
+     		  		                                                            !
+     		  		                                                            (
+     		  		                                                            id
+     		  		                                                            )
+     		  		                                                               							 
+     		  		                                                       )
+     		  		                                                   )
+     		  		                                                 )
+     		  		                                                     							
+     		  		                                               )
+     		  		                                                   							
+     		  		                                             )
+     		  		                                                 										 
+     		  		                                                									 
+     		  		                                          )
+     		  		                                              									
+     		  		                                        )
+     		  		                                            									
+     		  		                                      )
+     		  		                                          									
+     		  		                                    )
+     		  		                                        									
+     		  		                                  )
+     		  		                                      									
+     		  		                                )
+     		  		                                    									
+     		  		                              )
+     		  		                                  									
+     		  		                            )
+     		  		                                									
+     		  		                               														  
+     		  		                         )
+     		  		                             									
+     		  		                       )
+     		  		                           									
+     		  		                     )
+     		  		                         							
+     		  		                        														  
+     		  		                  ;
+     		  		                    
+     		  		                    let
+     		  		                    (
+     		  		                     (
+     		  		                        									  
+     		  		                      
+     		  		                       is
+     		  		                       ref
+     		  		                       (
+     		  		                           1
+     		  		                       ) 
+     		  		                      							    		   
+     		  		                        									  
+     		  		                     )
+     		  		                    in
+     		  		                      
+     		  		                      let
+     		  		                      (
+     		  		                       (
+     		  		                          									  
+     		  		                        
+     		  		                         id
+     		  		                         ref
+     		  		                         (
+     		  		                             4
+     		  		                         ) 
+     		  		                        							    		   
+     		  		                          									  
+     		  		                       )
+     		  		                      in
+     		  		                        
+     		  		                        sequence
+     		  		                        (
+     		  		                          
+     		  		                           while
+     		  		                           <
+     		  		                           (
+     		  		                               
+     		  		                                !
+     		  		                                (
+     		  		                                is
+     		  		                                )
+     		  		                                   							 
+     		  		                               n
+     		  		                           )
+     		  		                           
+     		  		                           let
+     		  		                           (
+     		  		                            (
+     		  		                               									  
+     		  		                             
+     		  		                              i0r
+     		  		                              ref
+     		  		                              (
+     		  		                                  
+     		  		                                   !
+     		  		                                   (
+     		  		                                   is
+     		  		                                   )
+     		  		                                      							 
+     		  		                              ) 
+     		  		                             							    		   
+     		  		                               									  
+     		  		                            )
+     		  		                           in
+     		  		                             
+     		  		                             sequence
+     		  		                             (
+     		  		                               
+     		  		                                while
+     		  		                                <=
+     		  		                                (
+     		  		                                    
+     		  		                                     !
+     		  		                                     (
+     		  		                                     i0r
+     		  		                                     )
+     		  		                                        							 
+     		  		                                    n
+     		  		                                )
+     		  		                                
+     		  		                                let
+     		  		                                (
+     		  		                                 (
+     		  		                                    									  
+     		  		                                  
+     		  		                                   i0
+     		  		                                   
+     		  		                                    !
+     		  		                                    (
+     		  		                                    i0r
+     		  		                                    )
+     		  		                                       							  
+     		  		                                  							    		   
+     		  		                                    									  
+     		  		                                 )
+     		  		                                in
+     		  		                                  
+     		  		                                  let
+     		  		                                  (
+     		  		                                   (
+     		  		                                      									  
+     		  		                                    
+     		  		                                     i1
+     		  		                                     +
+     		  		                                     (
+     		  		                                         i0
+     		  		                                         1
+     		  		                                     ) 
+     		  		                                    							    		   
+     		  		                                      									  
+     		  		                                   )
+     		  		                                  in
+     		  		                                    
+     		  		                                    let
+     		  		                                    (
+     		  		                                     (
+     		  		                                        									  
+     		  		                                      
+     		  		                                       r1
+     		  		                                       Array.get
+     		  		                                       (
+     		  		                                        px
+     		  		                                        i0
+     		  		                                       )
+     		  		                                           													 
+     		  		                                      							    		   
+     		  		                                        									  
+     		  		                                     )
+     		  		                                    in
+     		  		                                      
+     		  		                                      sequence
+     		  		                                      (
+     		  		                                        Array.set
+     		  		                                        (
+     		  		                                         px
+     		  		                                         i0
+     		  		                                         +.
+     		  		                                         (
+     		  		                                             r1
+     		  		                                             Array.get
+     		  		                                             (
+     		  		                                              px
+     		  		                                              i1
+     		  		                                             )
+     		  		                                                 													
+     		  		                                         )
+     		  		                                        )
+     		  		                                            									
+     		  		                                      ;
+     		  		                                        
+     		  		                                        sequence
+     		  		                                        (
+     		  		                                          Array.set
+     		  		                                          (
+     		  		                                           px
+     		  		                                           i1
+     		  		                                           -.
+     		  		                                           (
+     		  		                                               r1
+     		  		                                               Array.get
+     		  		                                               (
+     		  		                                                px
+     		  		                                                i1
+     		  		                                               )
+     		  		                                                   													
+     		  		                                           )
+     		  		                                          )
+     		  		                                              									
+     		  		                                        ;
+     		  		                                          
+     		  		                                          let
+     		  		                                          (
+     		  		                                           (
+     		  		                                              									  
+     		  		                                            
+     		  		                                             r1
+     		  		                                             Array.get
+     		  		                                             (
+     		  		                                              py
+     		  		                                              i0
+     		  		                                             )
+     		  		                                                 													 
+     		  		                                            							    		   
+     		  		                                              									  
+     		  		                                           )
+     		  		                                          in
+     		  		                                            
+     		  		                                            sequence
+     		  		                                            (
+     		  		                                              Array.set
+     		  		                                              (
+     		  		                                               py
+     		  		                                               i0
+     		  		                                               +.
+     		  		                                               (
+     		  		                                                   r1
+     		  		                                                   Array.get
+     		  		                                                   (
+     		  		                                                    py
+     		  		                                                    i1
+     		  		                                                   )
+     		  		                                                       													
+     		  		                                               )
+     		  		                                              )
+     		  		                                                  									
+     		  		                                            ;
+     		  		                                              
+     		  		                                              sequence
+     		  		                                              (
+     		  		                                                Array.set
+     		  		                                                (
+     		  		                                                 py
+     		  		                                                 i1
+     		  		                                                 -.
+     		  		                                                 (
+     		  		                                                     r1
+     		  		                                                     Array.get
+     		  		                                                     (
+     		  		                                                      py
+     		  		                                                      i1
+     		  		                                                     )
+     		  		                                                         													
+     		  		                                                 )
+     		  		                                                )
+     		  		                                                    									
+     		  		                                              ;
+     		  		                                                :=
+     		  		                                                (
+     		  		                                                    i0r
+     		  		                                                    +
+     		  		                                                    (
+     		  		                                                        i0
+     		  		                                                        
+     		  		                                                         !
+     		  		                                                         (
+     		  		                                                         id
+     		  		                                                         )
+     		  		                                                            							 
+     		  		                                                    )
+     		  		                                                )
+     		  		                                              )
+     		  		                                                  							
+     		  		                                            )
+     		  		                                                							
+     		  		                                          )
+     		  		                                              									
+     		  		                                        )
+     		  		                                            							
+     		  		                                      )
+     		  		                                          							
+     		  		                                    )
+     		  		                                        									
+     		  		                                  )
+     		  		                                      									
+     		  		                                )
+     		  		                                    										 
+     		  		                                   									 
+     		  		                             ;
+     		  		                               
+     		  		                               sequence
+     		  		                               (
+     		  		                                 :=
+     		  		                                 (
+     		  		                                     is
+     		  		                                     -
+     		  		                                     (
+     		  		                                         *
+     		  		                                         (
+     		  		                                             2
+     		  		                                             
+     		  		                                              !
+     		  		                                              (
+     		  		                                              id
+     		  		                                              )
+     		  		                                                 							 
+     		  		                                         )
+     		  		                                         1
+     		  		                                     )
+     		  		                                 )
+     		  		                               ;
+     		  		                                 :=
+     		  		                                 (
+     		  		                                     id
+     		  		                                     *
+     		  		                                     (
+     		  		                                         4
+     		  		                                         
+     		  		                                          !
+     		  		                                          (
+     		  		                                          id
+     		  		                                          )
+     		  		                                             							 
+     		  		                                     )
+     		  		                                 )
+     		  		                               )
+     		  		                                   							
+     		  		                             )
+     		  		                                 							
+     		  		                           )
+     		  		                               										 
+     		  		                              									 
+     		  		                        ;
+     		  		                          
+     		  		                          let
+     		  		                          (
+     		  		                           (
+     		  		                              									  
+     		  		                            
+     		  		                             j
+     		  		                             ref
+     		  		                             (
+     		  		                                 1
+     		  		                             ) 
+     		  		                            							    		   
+     		  		                              									  
+     		  		                           )
+     		  		                          in
+     		  		                            
+     		  		                            sequence
+     		  		                            (
+     		  		                               for i
+     		  		                               1
+     		  		                               -
+     		  		                               (
+     		  		                                   n
+     		  		                                   1
+     		  		                               )
+     		  		                               
+     		  		                               sequence
+     		  		                               (
+     		  		                                 ifthenelse
+     		  		                                 (
+     		  		                                  if
+     		  		                                  (
+     		  		                                   <
+     		  		                                   (
+     		  		                                       i
+     		  		                                       
+     		  		                                        !
+     		  		                                        (
+     		  		                                        j
+     		  		                                        )
+     		  		                                           							 
+     		  		                                   )
+     		  		                                  )
+     		  		                                  then
+     		  		                                  (
+     		  		                                   
+     		  		                                   let
+     		  		                                   (
+     		  		                                    (
+     		  		                                       									  
+     		  		                                     
+     		  		                                      xt
+     		  		                                      Array.get
+     		  		                                      (
+     		  		                                       px
+     		  		                                       
+     		  		                                        !
+     		  		                                        (
+     		  		                                        j
+     		  		                                        )
+     		  		                                           							 
+     		  		                                      )
+     		  		                                          													 
+     		  		                                     							    		   
+     		  		                                       									  
+     		  		                                    )
+     		  		                                   in
+     		  		                                     
+     		  		                                     sequence
+     		  		                                     (
+     		  		                                       Array.set
+     		  		                                       (
+     		  		                                        px
+     		  		                                        
+     		  		                                         !
+     		  		                                         (
+     		  		                                         j
+     		  		                                         )
+     		  		                                            							 
+     		  		                                        Array.get
+     		  		                                        (
+     		  		                                         px
+     		  		                                         i
+     		  		                                        )
+     		  		                                            													
+     		  		                                       )
+     		  		                                           									
+     		  		                                     ;
+     		  		                                       
+     		  		                                       sequence
+     		  		                                       (
+     		  		                                         Array.set
+     		  		                                         (
+     		  		                                          px
+     		  		                                          i
+     		  		                                          xt
+     		  		                                         )
+     		  		                                             									
+     		  		                                       ;
+     		  		                                         
+     		  		                                         let
+     		  		                                         (
+     		  		                                          (
+     		  		                                             									  
+     		  		                                           
+     		  		                                            xt
+     		  		                                            Array.get
+     		  		                                            (
+     		  		                                             py
+     		  		                                             
+     		  		                                              !
+     		  		                                              (
+     		  		                                              j
+     		  		                                              )
+     		  		                                                 							 
+     		  		                                            )
+     		  		                                                													 
+     		  		                                           							    		   
+     		  		                                             									  
+     		  		                                          )
+     		  		                                         in
+     		  		                                           
+     		  		                                           sequence
+     		  		                                           (
+     		  		                                             Array.set
+     		  		                                             (
+     		  		                                              py
+     		  		                                              
+     		  		                                               !
+     		  		                                               (
+     		  		                                               j
+     		  		                                               )
+     		  		                                                  							 
+     		  		                                              Array.get
+     		  		                                              (
+     		  		                                               py
+     		  		                                               i
+     		  		                                              )
+     		  		                                                  													
+     		  		                                             )
+     		  		                                                 									
+     		  		                                           ;
+     		  		                                             Array.set
+     		  		                                             (
+     		  		                                              py
+     		  		                                              i
+     		  		                                              xt
+     		  		                                             )
+     		  		                                                 									
+     		  		                                           )
+     		  		                                               							
+     		  		                                         )
+     		  		                                             									
+     		  		                                       )
+     		  		                                           							
+     		  		                                     )
+     		  		                                         							
+     		  		                                   )
+     		  		                                       									
+     		  		                                  )
+     		  		                                  else
+     		  		                                  (
+     		  		                                  )
+     		  		                                 )
+     		  		                                     									   
+     		  		                               ;
+     		  		                                 
+     		  		                                 let
+     		  		                                 (
+     		  		                                  (
+     		  		                                     									  
+     		  		                                   
+     		  		                                    k
+     		  		                                    ref
+     		  		                                    (
+     		  		                                        /
+     		  		                                        (
+     		  		                                            n
+     		  		                                            2
+     		  		                                        )
+     		  		                                    ) 
+     		  		                                   							    		   
+     		  		                                     									  
+     		  		                                  )
+     		  		                                 in
+     		  		                                   
+     		  		                                   sequence
+     		  		                                   (
+     		  		                                     
+     		  		                                      while
+     		  		                                      <
+     		  		                                      (
+     		  		                                          
+     		  		                                           !
+     		  		                                           (
+     		  		                                           k
+     		  		                                           )
+     		  		                                              							 
+     		  		                                          
+     		  		                                           !
+     		  		                                           (
+     		  		                                           j
+     		  		                                           )
+     		  		                                              							 
+     		  		                                      )
+     		  		                                      
+     		  		                                      sequence
+     		  		                                      (
+     		  		                                        :=
+     		  		                                        (
+     		  		                                            j
+     		  		                                            -
+     		  		                                            (
+     		  		                                                
+     		  		                                                 !
+     		  		                                                 (
+     		  		                                                 j
+     		  		                                                 )
+     		  		                                                    							 
+     		  		                                                
+     		  		                                                 !
+     		  		                                                 (
+     		  		                                                 k
+     		  		                                                 )
+     		  		                                                    							 
+     		  		                                            )
+     		  		                                        )
+     		  		                                      ;
+     		  		                                        :=
+     		  		                                        (
+     		  		                                            k
+     		  		                                            /
+     		  		                                            (
+     		  		                                                
+     		  		                                                 !
+     		  		                                                 (
+     		  		                                                 k
+     		  		                                                 )
+     		  		                                                    							 
+     		  		                                                2
+     		  		                                            )
+     		  		                                        )
+     		  		                                      )
+     		  		                                          								 
+     		  		                                         									 
+     		  		                                   ;
+     		  		                                     :=
+     		  		                                     (
+     		  		                                         j
+     		  		                                         +
+     		  		                                         (
+     		  		                                             
+     		  		                                              !
+     		  		                                              (
+     		  		                                              j
+     		  		                                              )
+     		  		                                                 							 
+     		  		                                             
+     		  		                                              !
+     		  		                                              (
+     		  		                                              k
+     		  		                                              )
+     		  		                                                 							 
+     		  		                                         )
+     		  		                                     )
+     		  		                                   )
+     		  		                                       							
+     		  		                                 )
+     		  		                                     									
+     		  		                               )
+     		  		                                   							
+     		  		                                  														  
+     		  		                            ;
+     		  		                              n
+     		  		                            )
+     		  		                                							
+     		  		                          )
+     		  		                              									
+     		  		                        )
+     		  		                            							
+     		  		                      )
+     		  		                          									
+     		  		                    )
+     		  		                        									
+     		  		                  )
+     		  		                      							
+     		  		                )
+     		  		                    									
+     		  		              )
+     		  		                  							
+     		  		            )
+     		  		                									
+     		  		          )
+     		  		              							
+     		  		        )
+     		  		            									
+     		  		      )
+     		  		          									
+     		  		     )
+     		  		)
+     		  		    		   
+     		     )
+     		)
+     		    		   
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    test
+   (
+    case
+        (
+    	  np
+         
+         sequence
+         (
+           print_int
+           (
+               np
+           )
+         ;
+           
+           sequence
+           (
+             print_string
+             (
+                 "... "
+             )
+           ;
+             
+             sequence
+             (
+               flush
+               (
+                   stdout
+               )
+             ;
+               
+               let
+               (
+                (
+                   									  
+                 
+                  enp
+                  float
+                  (
+                      np
+                  ) 
+                 							    		   
+                   									  
+                )
+               in
+                 
+                 let
+                 (
+                  (
+                     									  
+                   
+                    npm
+                    -
+                    (
+                        /
+                        (
+                            np
+                            2
+                        )
+                        1
+                    ) 
+                   							    		   
+                     									  
+                  )
+                 in
+                   
+                   let
+                   (
+                    (
+                       									  
+                     
+                      pxr
+                      Array1.create
+                      (
+                          float64
+                          c_layout
+                          +
+                          (
+                              np
+                              2
+                          )
+                      ) 
+                     							    		   
+                       									  
+                     
+                      pxi
+                      Array1.create
+                      (
+                          float64
+                          c_layout
+                          +
+                          (
+                              np
+                              2
+                          )
+                      ) 
+                     							    		   
+                       									  
+                    )
+                   in
+                     
+                     let
+                     (
+                      (
+                         									  
+                       
+                        t
+                        /.
+                        (
+                            pi
+                            enp
+                        ) 
+                       							    		   
+                         									  
+                      )
+                     in
+                       
+                       sequence
+                       (
+                         Array.set
+                         (
+                          pxr
+                          1
+                          *.
+                          (
+                              -.
+                              (
+                                  enp
+                                  1.0
+                              )
+                              0.5
+                          )
+                         )
+                             									
+                       ;
+                         
+                         sequence
+                         (
+                           Array.set
+                           (
+                            pxi
+                            1
+                            0.0
+                           )
+                               									
+                         ;
+                           
+                           let
+                           (
+                            (
+                               									  
+                             
+                              n2
+                              /
+                              (
+                                  np
+                                  2
+                              ) 
+                             							    		   
+                               									  
+                            )
+                           in
+                             
+                             sequence
+                             (
+                               Array.set
+                               (
+                                pxr
+                                +
+                                (
+                                    n2
+                                    1
+                                )
+                                -0.5
+                               )
+                                   									
+                             ;
+                               
+                               sequence
+                               (
+                                 Array.set
+                                 (
+                                  pxi
+                                  +
+                                  (
+                                      n2
+                                      1
+                                  )
+                                  0.0
+                                 )
+                                     									
+                               ;
+                                 
+                                 sequence
+                                 (
+                                    for i
+                                    1
+                                    npm
+                                    
+                                    let
+                                    (
+                                     (
+                                        									  
+                                      
+                                       j
+                                       -
+                                       (
+                                           np
+                                           i
+                                       ) 
+                                      							    		   
+                                        									  
+                                     )
+                                    in
+                                      
+                                      sequence
+                                      (
+                                        Array.set
+                                        (
+                                         pxr
+                                         +
+                                         (
+                                             i
+                                             1
+                                         )
+                                         -0.5
+                                        )
+                                            									
+                                      ;
+                                        
+                                        sequence
+                                        (
+                                          Array.set
+                                          (
+                                           pxr
+                                           +
+                                           (
+                                               j
+                                               1
+                                           )
+                                           -0.5
+                                          )
+                                              									
+                                        ;
+                                          
+                                          let
+                                          (
+                                           (
+                                              									  
+                                            
+                                             z
+                                             *.
+                                             (
+                                                 t
+                                                 float
+                                                 (
+                                                     i
+                                                 )
+                                             ) 
+                                            							    		   
+                                              									  
+                                           )
+                                          in
+                                            
+                                            let
+                                            (
+                                             (
+                                                									  
+                                              
+                                               y
+                                               *.
+                                               (
+                                                   -0.5
+                                                   /.
+                                                   (
+                                                       cos
+                                                       (
+                                                           z
+                                                       )
+                                                       sin
+                                                       (
+                                                           z
+                                                       )
+                                                   )
+                                               ) 
+                                              							    		   
+                                                									  
+                                             )
+                                            in
+                                              
+                                              sequence
+                                              (
+                                                Array.set
+                                                (
+                                                 pxi
+                                                 +
+                                                 (
+                                                     i
+                                                     1
+                                                 )
+                                                 y
+                                                )
+                                                    									
+                                              ;
+                                                Array.set
+                                                (
+                                                 pxi
+                                                 +
+                                                 (
+                                                     j
+                                                     1
+                                                 )
+                                                 floatUnaryMinus 
+                                                 (
+                                                     y
+                                                 )
+                                                )
+                                                    									
+                                              )
+                                                  							
+                                            )
+                                                									
+                                          )
+                                              									
+                                        )
+                                            							
+                                      )
+                                          							
+                                    )
+                                        									
+                                       														  
+                                 ;
+                                   
+                                   let
+                                   (
+                                    (
+                                       									  
+                                     
+                                      _
+                                      fft
+                                      (
+                                          pxr
+                                          pxi
+                                          np
+                                      ) 
+                                     							    		   
+                                       									  
+                                    )
+                                   in
+                                     
+                                     let
+                                     (
+                                      (
+                                         									  
+                                       
+                                        zr
+                                        ref
+                                        (
+                                            0.0
+                                        ) 
+                                       							    		   
+                                         									  
+                                      )
+                                     in
+                                       
+                                       let
+                                       (
+                                        (
+                                           									  
+                                         
+                                          zi
+                                          ref
+                                          (
+                                              0.0
+                                          ) 
+                                         							    		   
+                                           									  
+                                        )
+                                       in
+                                         
+                                         let
+                                         (
+                                          (
+                                             									  
+                                           
+                                            kr
+                                            ref
+                                            (
+                                                0
+                                            ) 
+                                           							    		   
+                                             									  
+                                          )
+                                         in
+                                           
+                                           let
+                                           (
+                                            (
+                                               									  
+                                             
+                                              ki
+                                              ref
+                                              (
+                                                  0
+                                              ) 
+                                             							    		   
+                                               									  
+                                            )
+                                           in
+                                             
+                                             sequence
+                                             (
+                                                for i
+                                                0
+                                                -
+                                                (
+                                                    np
+                                                    1
+                                                )
+                                                
+                                                let
+                                                (
+                                                 (
+                                                    									  
+                                                  
+                                                   a
+                                                   abs_float
+                                                   (
+                                                       -.
+                                                       (
+                                                           Array.get
+                                                           (
+                                                            pxr
+                                                            +
+                                                            (
+                                                                i
+                                                                1
+                                                            )
+                                                           )
+                                                               													
+                                                           float
+                                                           (
+                                                               i
+                                                           )
+                                                       )
+                                                   ) 
+                                                  							    		   
+                                                    									  
+                                                 )
+                                                in
+                                                  
+                                                  sequence
+                                                  (
+                                                    ifthenelse
+                                                    (
+                                                     if
+                                                     (
+                                                      <
+                                                      (
+                                                          
+                                                           !
+                                                           (
+                                                           zr
+                                                           )
+                                                              							 
+                                                          a
+                                                      )
+                                                     )
+                                                     then
+                                                     (
+                                                      
+                                                      sequence
+                                                      (
+                                                        :=
+                                                        (
+                                                            zr
+                                                            a
+                                                        )
+                                                      ;
+                                                        :=
+                                                        (
+                                                            kr
+                                                            i
+                                                        )
+                                                      )
+                                                          							
+                                                     )
+                                                     else
+                                                     (
+                                                     )
+                                                    )
+                                                        									   
+                                                  ;
+                                                    
+                                                    let
+                                                    (
+                                                     (
+                                                        									  
+                                                      
+                                                       a
+                                                       abs_float
+                                                       (
+                                                           Array.get
+                                                           (
+                                                            pxi
+                                                            +
+                                                            (
+                                                                i
+                                                                1
+                                                            )
+                                                           )
+                                                               													
+                                                       ) 
+                                                      							    		   
+                                                        									  
+                                                     )
+                                                    in
+                                                      ifthenelse
+                                                      (
+                                                       if
+                                                       (
+                                                        <
+                                                        (
+                                                            
+                                                             !
+                                                             (
+                                                             zi
+                                                             )
+                                                                							 
+                                                            a
+                                                        )
+                                                       )
+                                                       then
+                                                       (
+                                                        
+                                                        sequence
+                                                        (
+                                                          :=
+                                                          (
+                                                              zi
+                                                              a
+                                                          )
+                                                        ;
+                                                          :=
+                                                          (
+                                                              ki
+                                                              i
+                                                          )
+                                                        )
+                                                            							
+                                                       )
+                                                       else
+                                                       (
+                                                       )
+                                                      )
+                                                          									   
+                                                    )
+                                                        									
+                                                  )
+                                                      							
+                                                )
+                                                    									
+                                                   														  
+                                             ;
+                                               
+                                               sequence
+                                               (
+                                                 ifthenelse
+                                                 (
+                                                  if
+                                                  (
+                                                   &&
+                                                   (
+                                                       <=
+                                                       (
+                                                           abs_float
+                                                           (
+                                                               
+                                                                !
+                                                                (
+                                                                zr
+                                                                )
+                                                                   							 
+                                                           )
+                                                           1e-9
+                                                       )
+                                                       <=
+                                                       (
+                                                           abs_float
+                                                           (
+                                                               
+                                                                !
+                                                                (
+                                                                zi
+                                                                )
+                                                                   							 
+                                                           )
+                                                           1e-9
+                                                       )
+                                                   )
+                                                  )
+                                                  then
+                                                  (
+                                                   print_string
+                                                   (
+                                                       "ok"
+                                                   )
+                                                  )
+                                                  else
+                                                  (
+                                                   print_string
+                                                   (
+                                                       "ERROR"
+                                                   )
+                                                  ) 
+                                                 )
+                                                 		    											 
+                                               ;
+                                                 print_newline
+                                                 (
+                                                     ()
+                                                 )
+                                               )
+                                                   							
+                                             )
+                                                 							
+                                           )
+                                               									
+                                         )
+                                             									
+                                       )
+                                           									
+                                     )
+                                         									
+                                   )
+                                       									
+                                 )
+                                     							
+                               )
+                                   							
+                             )
+                                 							
+                           )
+                               									
+                         )
+                             							
+                       )
+                           							
+                     )
+                         									
+                   )
+                       									
+                 )
+                     									
+               )
+                   									
+             )
+                 							
+           )
+               							
+         )
+             							
+        )
+   )
+       		    
+  )
+                                     
+  
+   
+   
+   let
+   (
+    (
+       									  
+     
+      np
+      ref
+      (
+          16
+      ) 
+     							    		   
+       									  
+    )
+   in
+      for i
+      1
+      13
+      
+      sequence
+      (
+        test
+        (
+            
+             !
+             (
+             np
+             )
+                							 
+        )
+      ;
+        :=
+        (
+            np
+            *
+            (
+                
+                 !
+                 (
+                 np
+                 )
+                    							 
+                2
+            )
+        )
+      )
+          							
+         														  
+   )
+       									 
+  							    		    
+                                     
+)

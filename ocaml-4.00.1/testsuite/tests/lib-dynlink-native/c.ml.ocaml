@@ -1,0 +1,31 @@
+(
+  let
+  (
+    ()
+          sequence
+      (
+        print_endline
+        (
+            "C is running"
+        )
+      ;
+        sequence
+        (
+          incr
+          (
+              A.x
+          )
+        ;
+          Printf.printf
+          (
+              "A.x = %i\n"
+              !
+              (
+                  A.x
+              )
+          )
+        )
+      )
+  )
+)
+

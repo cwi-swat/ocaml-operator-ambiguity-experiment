@@ -1,0 +1,33 @@
+(
+  let
+  (
+    ()
+          Api.reg_mod
+      (
+          "Packed1"
+      )
+  )
+  let
+  (
+    bla
+      ^
+      (
+          Array.get
+          (
+              Sys.argv
+              0
+          )
+          "XXX"
+      )
+  )
+  let
+  (
+    mykey
+      Array.get
+      (
+          Sys.argv
+          0
+      )
+  )
+)
+

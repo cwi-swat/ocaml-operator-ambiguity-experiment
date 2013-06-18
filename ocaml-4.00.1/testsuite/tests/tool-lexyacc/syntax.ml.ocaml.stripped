@@ -1,0 +1,188 @@
+(
+  type
+  (
+    location
+      type
+        params =
+          (
+          )
+        cstrs =
+          (
+          )
+        kind =
+            (
+              Location
+                (
+                     int
+                    (
+                    )
+                     int
+                    (
+                    )
+                )
+                            )
+            )
+  type
+  (
+    regular_expression
+      type
+        params =
+          (
+          )
+        cstrs =
+          (
+          )
+        kind =
+            (
+              Epsilon
+                (
+                )
+                              Characters
+                (
+                     list
+                    (
+                         char
+                        (
+                        )
+                    )
+                )
+                              Sequence
+                (
+                     regular_expression
+                    (
+                    )
+                     regular_expression
+                    (
+                    )
+                )
+                              Alternative
+                (
+                     regular_expression
+                    (
+                    )
+                     regular_expression
+                    (
+                    )
+                )
+                              Repetition
+                (
+                     regular_expression
+                    (
+                    )
+                )
+                            )
+            )
+  type
+  (
+    lexer_definition
+      type
+        params =
+          (
+          )
+        cstrs =
+          (
+          )
+        kind =
+            (
+              Lexdef
+                (
+                     location
+                    (
+                    )
+                     list
+                    (
+                        tuple
+                        (
+                             string
+                            (
+                            )
+                             list
+                            (
+                                tuple
+                                (
+                                     regular_expression
+                                    (
+                                    )
+                                     location
+                                    (
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+                            )
+            )
+  type
+  (
+    automata
+      type
+        params =
+          (
+          )
+        cstrs =
+          (
+          )
+        kind =
+            (
+              Perform
+                (
+                     int
+                    (
+                    )
+                )
+                              Shift
+                (
+                     automata_trans
+                    (
+                    )
+                     array
+                    (
+                         automata_move
+                        (
+                        )
+                    )
+                )
+                            )
+              automata_trans
+      type
+        params =
+          (
+          )
+        cstrs =
+          (
+          )
+        kind =
+            (
+              No_remember
+                (
+                )
+                              Remember
+                (
+                     int
+                    (
+                    )
+                )
+                            )
+              automata_move
+      type
+        params =
+          (
+          )
+        cstrs =
+          (
+          )
+        kind =
+            (
+              Backtrack
+                (
+                )
+                              Goto
+                (
+                     int
+                    (
+                    )
+                )
+                            )
+            )
+)

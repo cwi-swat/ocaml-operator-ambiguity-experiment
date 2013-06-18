@@ -1,0 +1,89 @@
+(
+  module  M
+   struct
+   (
+   type
+   (  						
+      t
+      type
+      params=
+      (
+       a
+      )
+      cstrs =
+      (
+      )
+      kind =
+      a
+   )
+   type
+   (  						
+      u
+      type
+      params=
+      (
+      )
+      cstrs =
+      (
+      )
+      kind =
+      int
+      (
+      )
+      v
+      type
+      params=
+      (
+      )
+      cstrs =
+      (
+      )
+      kind =
+      bool
+      (
+      )
+   )
+   let
+   (
+     f
+    (
+     case
+         (
+     	  x
+          x
+         )
+    )
+   )
+   let
+   (
+     g
+    (
+     case
+         (
+     	  x
+          x
+         )
+    )
+   )
+   )
+  let
+  (
+    h
+   (
+    case
+        (
+    	  x
+    	  int
+    	  (
+    	  )
+         M.g
+         (
+             M.f
+             (
+                 x
+             )
+         )
+        )
+   )
+  )
+)

@@ -1,0 +1,936 @@
+
+(
+    								 
+  external mycallback1
+  (
+   value_description
+   arrow
+   arrow
+   a
+   b
+      								   
+   arrow
+   a
+   b
+      								   
+      								   
+  (
+   
+       								
+     "mycallback1"
+       								
+       								
+  )
+  )              
+      								
+                                     
+  external mycallback2
+  (
+   value_description
+   arrow
+   arrow
+   a
+   arrow
+   b
+   c
+      								   
+      								   
+   arrow
+   a
+   arrow
+   b
+   c
+      								   
+      								   
+      								   
+  (
+   
+       								
+     "mycallback2"
+       								
+       								
+  )
+  )              
+      								
+                                     
+  external mycallback3
+  (
+   value_description
+   arrow
+   arrow
+   a
+   arrow
+   b
+   arrow
+   c
+   d
+      								   
+      								   
+      								   
+   arrow
+   a
+   arrow
+   b
+   arrow
+   c
+   d
+      								   
+      								   
+      								   
+      								   
+  (
+   
+       								
+     "mycallback3"
+       								
+       								
+  )
+  )              
+      								
+                                     
+  external mycallback4
+  (
+   value_description
+   arrow
+   arrow
+   a
+   arrow
+   b
+   arrow
+   c
+   arrow
+   d
+   e
+      								   
+      								   
+      								   
+      								   
+   arrow
+   a
+   arrow
+   b
+   arrow
+   c
+   arrow
+   d
+   e
+      								   
+      								   
+      								   
+      								   
+      								   
+  (
+   
+       								
+     "mycallback4"
+       								
+       								
+  )
+  )              
+      								
+                                     
+  let
+  (
+   
+    tak
+   (
+    case
+        (
+    	  patternAs 
+    	  (
+    	      
+    	      (
+    	       x
+    	           						 
+    	      	y
+    	      
+    	      	z
+    	      
+    	      )
+    	      _tuple
+    	  )
+         ifthenelse
+         (
+          if
+          (
+           >
+           (
+               x
+               y
+           )
+          )
+          then
+          (
+           tak
+           (
+               
+               (
+                   					 tak
+                     					 (
+                     					     
+                     					     (
+                     					         					 -
+                     					           					 (
+                     					           					     x
+                     					           					     1
+                     					           					 )
+                     					         					 
+                     					     	y
+                     					         					 
+                     					     	z
+                     					         					 
+                     					     )
+                     					         					 
+                     					 )
+                   					 
+               	tak
+               	(
+               	    
+               	    (
+               	        					 -
+               	          					 (
+               	          					     y
+               	          					     1
+               	          					 )
+               	        					 
+               	    	z
+               	        					 
+               	    	x
+               	        					 
+               	    )
+               	        					 
+               	)
+                   					 
+               	tak
+               	(
+               	    
+               	    (
+               	        					 -
+               	          					 (
+               	          					     z
+               	          					     1
+               	          					 )
+               	        					 
+               	    	x
+               	        					 
+               	    	y
+               	        					 
+               	    )
+               	        					 
+               	)
+                   					 
+               )
+                   					 
+           )
+          )
+          else
+          (
+           z
+          ) 
+         )
+         		    											 
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    tak2
+   (
+    case
+        (
+     		
+     		 x
+     		(
+     		 case
+     		     (
+     		 	  
+     		 	  (
+     		 	   y
+     		 	       						 
+     		 	  	z
+     		 	  
+     		 	  )
+     		      tak
+     		      (
+     		          
+     		          (
+     		              					 x
+     		              					 
+     		          	y
+     		              					 
+     		          	z
+     		              					 
+     		          )
+     		              					 
+     		      )
+     		     )
+     		)
+     		    		   
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    tak3
+   (
+    case
+        (
+     		
+     		 x
+     		(
+     		 case
+     		     (
+     		  		
+     		  		 y
+     		  		(
+     		  		 case
+     		  		     (
+     		  		 	  z
+     		  		      tak
+     		  		      (
+     		  		          
+     		  		          (
+     		  		              					 x
+     		  		              					 
+     		  		          	y
+     		  		              					 
+     		  		          	z
+     		  		              					 
+     		  		          )
+     		  		              					 
+     		  		      )
+     		  		     )
+     		  		)
+     		  		    		   
+     		     )
+     		)
+     		    		   
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    tak4
+   (
+    case
+        (
+     		
+     		 x
+     		(
+     		 case
+     		     (
+     		  		
+     		  		 y
+     		  		(
+     		  		 case
+     		  		     (
+     		  		  		
+     		  		  		 z
+     		  		  		(
+     		  		  		 case
+     		  		  		     (
+     		  		  		 	  u
+     		  		  		      tak
+     		  		  		      (
+     		  		  		          
+     		  		  		          (
+     		  		  		              					 x
+     		  		  		              					 
+     		  		  		          	y
+     		  		  		              					 
+     		  		  		          	+
+     		  		  		          	(
+     		  		  		          	    z
+     		  		  		          	    u
+     		  		  		          	)
+     		  		  		              					 
+     		  		  		          )
+     		  		  		              					 
+     		  		  		      )
+     		  		  		     )
+     		  		  		)
+     		  		  		    		   
+     		  		     )
+     		  		)
+     		  		    		   
+     		     )
+     		)
+     		    		   
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    raise_exit
+   (
+    case
+        (
+    	  ()
+         
+         (
+         raise
+         (
+             Exit
+         )
+         :
+         
+         unit
+         (
+         )
+         								  
+         )
+             								
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    trapexit
+   (
+    case
+        (
+    	  ()
+         
+         sequence
+         (
+           
+           try
+           mycallback1
+           (
+               raise_exit
+               ()
+           )
+           (
+           
+           case
+           (
+             Exit
+             
+             ()
+           ) 
+           	        											 
+           	        											 
+           )
+               							   
+         ;
+           tak
+           (
+               
+               (
+                   					 18
+                   					 
+               	12
+                   					 
+               	6
+                   					 
+               )
+                   					 
+           )
+         )
+             							
+        )
+   )
+       		    
+  )
+                                     
+  external mypushroot
+  (
+   value_description
+   arrow
+   a
+   arrow
+   arrow
+   b
+   c
+      								   
+   arrow
+   b
+   a
+      								   
+      								   
+      								   
+  (
+   
+       								
+     "mypushroot"
+       								
+       								
+  )
+  )              
+      								
+                                     
+  external mycamlparam
+  (
+   value_description
+   arrow
+   a
+   arrow
+   arrow
+   b
+   c
+      								   
+   arrow
+   b
+   a
+      								   
+      								   
+      								   
+  (
+   
+       								
+     "mycamlparam"
+       								
+       								
+  )
+  )              
+      								
+                                     
+  let
+  (
+   
+    tripwire
+   (
+    case
+        (
+    	  f
+         
+         let
+         (
+          (
+             									  
+           
+            s
+            String.make
+            (
+                5
+                61
+            ) 
+           							    		   
+             									  
+          )
+         in
+           f
+           (
+               s
+               trapexit
+               ()
+           )
+         )
+             									
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    sighandler
+   (
+    case
+        (
+    	  signo
+         ignore
+         (
+             tak
+             (
+                 
+                 (
+                     					 18
+                     					 
+                 	12
+                     					 
+                 	6
+                     					 
+                 )
+                     					 
+             )
+         )
+        )
+   )
+       		    
+  )
+                                     
+  external unix_getpid
+  (
+   value_description
+   arrow
+   
+   unit
+   (
+   )
+   								  
+   
+   int
+   (
+   )
+   								  
+      								   
+  (
+   
+       								
+     "unix_getpid"
+       								
+     "noalloc"
+       								
+       								
+  )
+  )              
+      								
+                                     
+  external unix_kill
+  (
+   value_description
+   arrow
+   
+   int
+   (
+   )
+   								  
+   arrow
+   
+   int
+   (
+   )
+   								  
+   
+   unit
+   (
+   )
+   								  
+      								   
+      								   
+  (
+   
+       								
+     "unix_kill"
+       								
+     "noalloc"
+       								
+       								
+  )
+  )              
+      								
+                                     
+  let
+  (
+   
+    callbacksig
+   (
+    case
+        (
+    	  ()
+         
+         let
+         (
+          (
+             									  
+           
+            pid
+            unix_getpid
+            (
+                ()
+            ) 
+           							    		   
+             									  
+          )
+         in
+           
+           let
+           (
+            (
+               									  
+             
+              s
+              String.make
+              (
+                  5
+                  62
+              ) 
+             							    		   
+               									  
+            )
+           in
+             
+             sequence
+             (
+               unix_kill
+               (
+                   pid
+                   Sys.sigusr1
+               )
+             ;
+               
+               let
+               (
+                (
+                   									  
+                 
+                  u
+                  
+                  (
+                      					 s
+                      					 
+                  	s
+                      					 
+                  )
+                      					  
+                 							    		   
+                   									  
+                )
+               in
+                 fst
+                 (
+                     u
+                 )
+               )
+                   									
+             )
+                 							
+           )
+               									
+         )
+             									
+        )
+   )
+       		    
+  )
+                                     
+  
+   
+   
+   sequence
+   (
+     print_int
+     (
+         mycallback1
+         (
+             tak
+             
+             (
+                 					 18
+                 					 
+             	12
+                 					 
+             	6
+                 					 
+             )
+                 					 
+         )
+     )
+   ;
+     
+     sequence
+     (
+       print_newline
+       (
+           ()
+       )
+     ;
+       
+       sequence
+       (
+         print_int
+         (
+             mycallback2
+             (
+                 tak2
+                 18
+                 
+                 (
+                     					 12
+                     					 
+                 	6
+                     					 
+                 )
+                     					 
+             )
+         )
+       ;
+         
+         sequence
+         (
+           print_newline
+           (
+               ()
+           )
+         ;
+           
+           sequence
+           (
+             print_int
+             (
+                 mycallback3
+                 (
+                     tak3
+                     18
+                     12
+                     6
+                 )
+             )
+           ;
+             
+             sequence
+             (
+               print_newline
+               (
+                   ()
+               )
+             ;
+               
+               sequence
+               (
+                 print_int
+                 (
+                     mycallback4
+                     (
+                         tak4
+                         18
+                         12
+                         3
+                         3
+                     )
+                 )
+               ;
+                 
+                 sequence
+                 (
+                   print_newline
+                   (
+                       ()
+                   )
+                 ;
+                   
+                   sequence
+                   (
+                     print_int
+                     (
+                         trapexit
+                         (
+                             ()
+                         )
+                     )
+                   ;
+                     
+                     sequence
+                     (
+                       print_newline
+                       (
+                           ()
+                       )
+                     ;
+                       
+                       sequence
+                       (
+                         print_string
+                         (
+                             tripwire
+                             (
+                                 mypushroot
+                             )
+                         )
+                       ;
+                         
+                         sequence
+                         (
+                           print_newline
+                           (
+                               ()
+                           )
+                         ;
+                           
+                           sequence
+                           (
+                             print_string
+                             (
+                                 tripwire
+                                 (
+                                     mycamlparam
+                                 )
+                             )
+                           ;
+                             
+                             sequence
+                             (
+                               print_newline
+                               (
+                                   ()
+                               )
+                             ;
+                               
+                               sequence
+                               (
+                                 Sys.set_signal
+                                 (
+                                     Sys.sigusr1
+                                     
+                                      Sys.Signal_handle
+                                      sighandler
+                                         								 
+                                 )
+                               ;
+                                 
+                                 sequence
+                                 (
+                                   print_string
+                                   (
+                                       callbacksig
+                                       (
+                                           ()
+                                       )
+                                   )
+                                 ;
+                                   print_newline
+                                   (
+                                       ()
+                                   )
+                                 )
+                                     							
+                               )
+                                   							
+                             )
+                                 							
+                           )
+                               							
+                         )
+                             							
+                       )
+                           							
+                     )
+                         							
+                   )
+                       							
+                 )
+                     							
+               )
+                   							
+             )
+                 							
+           )
+               							
+         )
+             							
+       )
+           							
+     )
+         							
+   )
+       							 
+  							    		    
+                                     
+)

@@ -1,0 +1,114 @@
+14c14,27
+<      <<[],[<"A",["typexprConstr1"("typexprConstr1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>]>,"a">
+---
+>               Ptyp_alias "a"
+>                 Ptyp_variant closed=true
+>                 (
+>                   Rtag "A" false
+>                     (
+>                          t
+>                         (
+>                              t
+>                             (
+>                                 a
+>                             )
+>                         )
+>                     )
+>                 )
+28c41,53
+<      <[],[<"A",["typexprConstr1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>]>
+---
+>               Ptyp_variant closed=true
+>               (
+>                 Rtag "A" false
+>                   (
+>                        t
+>                       (
+>                            t
+>                           (
+>                               a
+>                           )
+>                       )
+>                   )
+>               )
+39a65,70
+>             <constraint> ([5,90+38]..[5,90+47])
+>                 a
+>                  t
+>                 (
+>                     a
+>                 )
+42,43c73,77
+<      <[],[<"A",["typexprConstr1"("typexprConstr1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
+<       typeConstraint 
+---
+>               Ptyp_variant closed=true
+>               (
+>                 Rtag "A" false
+>                   (
+>                        t
+45d78
+<           a
+51a85,86
+>               )
+>                 )
+61a97,102
+>             <constraint> ([7,141+36]..[7,141+45])
+>                 a
+>                  t
+>                 (
+>                     a
+>                 )
+64,65c105,107
+<      <[],[<"A",["typexprConstr1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
+<       typeConstraint 
+---
+>               Ptyp_variant closed=true
+>               (
+>                 Rtag "A" false
+67d108
+<           a
+73a115
+>                 )
+86c128,135
+<      <<[],[<"A",["tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>]>,"a">
+---
+>               Ptyp_alias "a"
+>                 Ptyp_variant closed=true
+>                 (
+>                   Rtag "A" false
+>                     (
+>                         a
+>                     )
+>                 )
+97a147,151
+>             <constraint> ([11,222+35]..[11,222+41])
+>                 a
+>                  t
+>                 (
+>                 )
+100,101c154
+<      <[],[<"A",["typexprConstr1"("typexprConstr2"("typeConstr"([],"u")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"v")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
+<       typeConstraint 
+---
+>               Ptyp_variant closed=true
+103,104c156,158
+<           a
+<           t
+---
+>                 Rtag "A" false
+>                   (
+>                        v
+105a160,163
+>                            u
+>                           (
+>                           )
+>                       )
+154c212,216
+<     	  <"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+---
+>             Ptyp_alias "a"
+>                t
+>               (
+>                   a
+>               )

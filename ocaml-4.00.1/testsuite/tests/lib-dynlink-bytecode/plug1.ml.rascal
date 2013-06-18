@@ -1,0 +1,82 @@
+
+(
+    								 
+  external stub1
+  (
+   value_description
+   arrow
+   
+   unit
+   (
+   )
+   								  
+   
+   string
+   (
+   )
+   								  
+      								   
+  (
+   
+       								
+     "stub1"
+       								
+       								
+  )
+  )              
+      								
+                                     
+  let
+  (
+   
+    f
+   (
+    case
+        (
+    	  x
+         
+         sequence
+         (
+           print_string
+           (
+               "This is Plug1.f\n"
+           )
+         ;
+           +
+           (
+               x
+               1
+           )
+         )
+             							
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    ()
+    Registry.register
+    (
+        f
+    ) 
+   							    		    
+  )
+                                     
+  let
+  (
+   
+    ()
+    print_endline
+    (
+        stub1
+        (
+            ()
+        )
+    ) 
+   							    		    
+  )
+                                     
+)

@@ -1,0 +1,57 @@
+(
+  Pstr_recmodule
+  (
+    "A"
+        signature
+        (
+            type
+            (
+              t
+                type
+                  params =
+                    (
+                    )
+                  cstrs =
+                    (
+                    )
+                  kind =
+                    
+                        tuple
+                        (
+                             int
+                            (
+                            )
+                             A.t
+                            (
+                            )
+                        )
+            )
+        )
+        struct
+        (
+          type
+          (
+            t
+              type
+                params =
+                  (
+                  )
+                cstrs =
+                  (
+                  )
+                kind =
+                  
+                      tuple
+                      (
+                           int
+                          (
+                          )
+                           A.t
+                          (
+                          )
+                      )
+          )
+        )
+  )
+)
+

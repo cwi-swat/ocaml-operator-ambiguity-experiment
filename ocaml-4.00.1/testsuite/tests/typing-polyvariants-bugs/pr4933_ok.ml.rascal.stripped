@@ -1,0 +1,108 @@
+(
+  module type Priv
+   signature
+   (
+    type
+    (  						
+       t
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       int
+       (
+       )
+    )
+   )    								
+  module  Make
+  functor Unit
+  (
+   signature
+   (
+   )
+   functor []
+   (
+     Priv
+     struct
+     (
+     type
+     (  						
+        t
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        int
+        (
+        )
+     )
+     )
+   )
+  )
+  module  A
+   Make
+   (
+   struct
+   (
+   )
+   )
+  module type Priv'
+   signature
+   (
+    type
+    (  						
+       t
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       <"A",[]>
+    )
+   )    								
+  module  Make'
+  functor Unit
+  (
+   signature
+   (
+   )
+   functor []
+   (
+     Priv'
+     struct
+     (
+     type
+     (  						
+        t
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        <[],[<"A",[]>]>
+     )
+     )
+   )
+  )
+  module  A'
+   Make'
+   (
+   struct
+   (
+   )
+   )
+)

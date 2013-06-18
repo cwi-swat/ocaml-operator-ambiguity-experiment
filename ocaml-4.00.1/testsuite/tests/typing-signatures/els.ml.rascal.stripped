@@ -1,0 +1,570 @@
+(
+  module type VALUE
+   signature
+   (
+    type
+    (  						
+       value
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+    )
+    type
+    (  						
+       state
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+    )
+    type
+    (  						
+       usert
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+    )
+   )    								
+  module type CORE0
+   signature
+   (
+    module V
+    VALUE	
+    sig_value setglobal
+    value_description
+    arrow
+    "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].state
+    (
+    )
+    arrow
+    string
+    (
+    )
+    arrow
+    "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
+    (
+    )
+    unit
+    (
+    )
+    (
+    )
+   )    								
+  module type CORE
+   signature
+   (
+    include
+    (
+      CORE0
+    )
+    sig_value apply
+    value_description
+    arrow
+    "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
+    (
+    )
+    arrow
+    "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].state
+    (
+    )
+    arrow
+     list
+     (
+       "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
+       (
+       )
+     )
+    "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
+    (
+    )
+    (
+    )
+   )    								
+  module type AST
+   signature
+   (
+    module Value
+    VALUE	
+    type
+    (  						
+       chunk
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+    )
+    type
+    (  						
+       program
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+    )
+    sig_value get_value
+    value_description
+    arrow
+    chunk
+    (
+    )
+    "extendedModulePath1"([],"Value")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
+    (
+    )
+    (
+    )
+   )    								
+  module type EVALUATOR
+   signature
+   (
+    module Value
+    VALUE	
+    module Ast
+    bracketModType1 
+    (
+        modTypeWith 
+        (
+            AST
+            modeConsModule2 
+            (
+                Value
+                Value
+            )
+        )
+    )	
+    type
+    (  						
+       state
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       "extendedModulePath1"([],"Value")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].state
+       (
+       )
+    )
+    type
+    (  						
+       value
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       "extendedModulePath1"([],"Value")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
+       (
+       )
+    )
+    exception Error
+    (
+    string
+    (
+    )
+    )
+    sig_value compile
+    value_description
+    arrow
+    "extendedModulePath1"([],"Ast")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].program
+    (
+    )
+    string
+    (
+    )
+    (
+    )
+    include
+    (
+      modTypeWith 
+      (
+          CORE0
+          modeConsModule2 
+          (
+              V
+              Value
+          )
+      )
+    )
+   )    								
+  module type PARSER
+   signature
+   (
+    type
+    (  						
+       chunk
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+    )
+    sig_value parse
+    value_description
+    arrow
+    string
+    (
+    )
+    chunk
+    (
+    )
+    (
+    )
+   )    								
+  module type INTERP
+   signature
+   (
+    include
+    (
+      EVALUATOR
+    )
+    module Parser
+    modTypeWith 
+    (
+        PARSER
+        modConsType1 
+        (
+            chunk
+            "extendedModulePath1"([],"Ast")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].chunk
+            (
+            )
+        )
+    )	
+    sig_value dostring
+    value_description
+    arrow
+    state
+    (
+    )
+    arrow
+    string
+    (
+    )
+     list
+     (
+       value
+       (
+       )
+     )
+    (
+    )
+    sig_value mk
+    value_description
+    arrow
+    unit
+    (
+    )
+    state
+    (
+    )
+    (
+    )
+   )    								
+  module type USERTYPE
+   signature
+   (
+    type
+    (  						
+       t
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+    )
+    sig_value eq
+    value_description
+    arrow
+    t
+    (
+    )
+    arrow
+    t
+    (
+    )
+    bool
+    (
+    )
+    (
+    )
+    sig_value to_string
+    value_description
+    arrow
+    t
+    (
+    )
+    string
+    (
+    )
+    (
+    )
+   )    								
+  module type TYPEVIEW
+   signature
+   (
+    type
+    (  						
+       combined
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+    )
+    type
+    (  						
+       t
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+    )
+    sig_value map
+    value_description
+    tuple
+    (
+     arrow
+     combined
+     (
+     )
+     t
+     (
+     )
+      arrow
+      t
+      (
+      )
+      combined
+      (
+      )
+    )
+    (
+    )
+   )    								
+  module type COMBINED_COMMON
+   signature
+   (
+    module T
+    signature
+    (
+     type
+     (  						
+        t
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+     )
+    )	
+    module TV1
+    modTypeWith 
+    (
+        TYPEVIEW
+        modConsType2 
+        (
+            combined
+            "extendedModulePath1"([],"T")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+        )
+    )	
+    module TV2
+    modTypeWith 
+    (
+        TYPEVIEW
+        modConsType2 
+        (
+            combined
+            "extendedModulePath1"([],"T")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+        )
+    )	
+   )    								
+  module type COMBINED_TYPE
+   signature
+   (
+    module T
+    USERTYPE	
+    include
+    (
+      modTypeWith 
+      (
+          COMBINED_COMMON
+          modeConsModule2 
+          (
+              T
+              T
+          )
+      )
+    )
+   )    								
+  module type BARECODE
+   signature
+   (
+    type
+    (  						
+       state
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+    )
+    sig_value init
+    value_description
+    arrow
+    state
+    (
+    )
+    unit
+    (
+    )
+    (
+    )
+   )    								
+  module  USERCODE
+  functor X
+  (
+   TYPEVIEW
+   functor []
+   (
+     struct
+     (
+     module type F
+      functor C
+      (
+        modTypeWith 
+        (
+            CORE
+            modConsType1 
+            (
+                "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].usert
+                "extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].combined
+                (
+                )
+            )
+        )
+        modTypeWith 
+        (
+            BARECODE
+            modConsType2 
+            (
+                state
+                "extendedModulePath1"(["extendedModulePath1"([],"C")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].state
+            )
+        )
+      )
+     )
+   )
+  )
+  module  Weapon
+   struct
+   (
+   type
+   (  						
+      t
+      type
+      params=
+      (
+      )
+      cstrs =
+      (
+      )
+      kind =
+   )
+   )
+  module type WEAPON_LIB
+   signature
+   (
+    type
+    (  						
+       t
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       "extendedModulePath1"([],"Weapon")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+       (
+       )
+    )
+    module T
+    modTypeWith 
+    (
+        USERTYPE
+        modConsType1 
+        (
+            t
+            t
+            (
+            )
+        )
+    )	
+    module Make
+    functor TV
+    (
+      modTypeWith 
+      (
+          TYPEVIEW
+          modConsType1 
+          (
+              t
+              t
+              (
+              )
+          )
+      )
+      extendedModulePath2 
+      (
+          USERCODE
+          TV
+      ).F
+    )
+   )    								
+)

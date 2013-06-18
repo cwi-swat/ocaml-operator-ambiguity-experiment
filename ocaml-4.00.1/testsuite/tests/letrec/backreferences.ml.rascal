@@ -1,0 +1,274 @@
+
+(
+    								 
+  type
+  (  						
+      							    	 
+     t
+     type
+     params=
+     (
+     
+     )
+     cstrs =
+     (
+     )
+     kind =
+     
+     
+     							     
+      
+      x
+      polytype1 
+      (
+          
+          t
+          (
+          )
+          								  
+      )
+     							     
+      
+      y
+      polytype1 
+      (
+          
+          t
+          (
+          )
+          								  
+      )
+     							     
+      
+      z
+      polytype1 
+      (
+          
+          t
+          (
+          )
+          								  
+      )
+     							     
+     	                           
+     														  
+     														 
+    											   
+  								        
+  )
+                                     
+  let
+  (
+   
+    test
+    
+    let
+    (
+     (
+        									  
+      
+       x
+       record
+       (
+        x
+        
+       										   	     
+         
+          y
+          
+         										   
+       											   	 
+         
+          z
+          
+         										   
+       											   	 
+       ) 
+      							    		   
+        									  
+      
+       y
+       record
+       (
+        x
+        
+       										   	     
+         
+          y
+          
+         										   
+       											   	 
+         
+          z
+          
+         										   
+       											   	 
+       ) 
+      							    		   
+        									  
+      
+       z
+       record
+       (
+        x
+        
+       										   	     
+         
+          y
+          
+         										   
+       											   	 
+         
+          z
+          
+         										   
+       											   	 
+       ) 
+      							    		   
+        									  
+     )
+    in
+      List.iter
+      (
+          (
+           
+           case
+           (
+           
+           (
+            f
+                						 
+           	t_ref
+           
+           )
+           
+           List.iter
+           (
+               (
+                
+                case
+                (
+                t
+                
+                assert ==
+                (
+                    f
+                    (
+                        t
+                    )
+                    t_ref
+                )
+                )
+                													 
+               )
+                  						  
+               ::
+                (
+                x
+                ::
+                (
+                y
+                ::
+                (
+                z
+                []
+                ) 
+                   						  
+                ) 
+                   						  
+                ) 
+                   						  
+           )
+           )
+           													 
+          )
+             						  
+          ::
+           (
+           
+           (
+               					 (
+                 					  
+                 					  case
+                 					  (
+                 					  t
+                 					  
+                 					  field
+                 					  (
+                 					  t
+                 					  x
+                 					  )
+                 					      									 
+                 					  )
+                 					  													 
+                 					 )
+                 					    						  
+               					 
+           	x
+               					 
+           )
+               					 
+           ::
+           (
+           
+           (
+               					 (
+                 					  
+                 					  case
+                 					  (
+                 					  t
+                 					  
+                 					  field
+                 					  (
+                 					  t
+                 					  y
+                 					  )
+                 					      									 
+                 					  )
+                 					  													 
+                 					 )
+                 					    						  
+               					 
+           	y
+               					 
+           )
+               					 
+           ::
+           (
+           
+           (
+               					 (
+                 					  
+                 					  case
+                 					  (
+                 					  t
+                 					  
+                 					  field
+                 					  (
+                 					  t
+                 					  z
+                 					  )
+                 					      									 
+                 					  )
+                 					  													 
+                 					 )
+                 					    						  
+               					 
+           	z
+               					 
+           )
+               					 
+           []
+           ) 
+              						  
+           ) 
+              						  
+           ) 
+              						  
+      )
+    )
+        									 
+   							    		    
+  )
+                                     
+)

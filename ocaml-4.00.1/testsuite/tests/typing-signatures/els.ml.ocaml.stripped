@@ -1,0 +1,591 @@
+(
+  module type VALUE
+    signature
+    (
+        type
+        (
+          value
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                        )
+        type
+        (
+          state
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                        )
+        type
+        (
+          usert
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                        )
+    )
+  module type CORE0
+    signature
+    (
+        module V
+          VALUE
+        sig_value setglobal
+        value_description
+            arrow
+               V.state
+              (
+              )
+              arrow
+                 string
+                (
+                )
+                arrow
+                   V.value
+                  (
+                  )
+                   unit
+                  (
+                  )
+          (
+          )
+    )
+  module type CORE
+    signature
+    (
+        sig_include
+          CORE0
+        sig_value apply
+        value_description
+            arrow
+               V.value
+              (
+              )
+              arrow
+                 V.state
+                (
+                )
+                arrow
+                   list
+                  (
+                       V.value
+                      (
+                      )
+                  )
+                   V.value
+                  (
+                  )
+          (
+          )
+    )
+  module type AST
+    signature
+    (
+        module Value
+          VALUE
+        type
+        (
+          chunk
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                        )
+        type
+        (
+          program
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                        )
+        sig_value get_value
+        value_description
+            arrow
+               chunk
+              (
+              )
+               Value.value
+              (
+              )
+          (
+          )
+    )
+  module type EVALUATOR
+    signature
+    (
+        module Value
+          VALUE
+        module Ast
+          Pmty_with
+            AST
+          (
+            Value
+              Pwith_modsubst Value
+          )
+        type
+        (
+          state
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                     Value.state
+                    (
+                    )
+        )
+        type
+        (
+          value
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                     Value.value
+                    (
+                    )
+        )
+        exception Error
+        (
+             string
+            (
+            )
+        )
+        sig_value compile
+        value_description
+            arrow
+               Ast.program
+              (
+              )
+               string
+              (
+              )
+          (
+          )
+        sig_include
+          Pmty_with
+            CORE0
+          (
+            V
+              Pwith_modsubst Value
+          )
+    )
+  module type PARSER
+    signature
+    (
+        type
+        (
+          chunk
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                        )
+        sig_value parse
+        value_description
+            arrow
+               string
+              (
+              )
+               chunk
+              (
+              )
+          (
+          )
+    )
+  module type INTERP
+    signature
+    (
+        sig_include
+          EVALUATOR
+        module Parser
+          Pmty_with
+            PARSER
+          (
+            chunk
+              Pwith_type
+                type
+                  params =
+                    (
+                    )
+                  cstrs =
+                    (
+                    )
+                  kind =
+                         Ast.chunk
+                        (
+                        )
+          )
+        sig_value dostring
+        value_description
+            arrow
+               state
+              (
+              )
+              arrow
+                 string
+                (
+                )
+                 list
+                (
+                     value
+                    (
+                    )
+                )
+          (
+          )
+        sig_value mk
+        value_description
+            arrow
+               unit
+              (
+              )
+               state
+              (
+              )
+          (
+          )
+    )
+  module type USERTYPE
+    signature
+    (
+        type
+        (
+          t
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                        )
+        sig_value eq
+        value_description
+            arrow
+               t
+              (
+              )
+              arrow
+                 t
+                (
+                )
+                 bool
+                (
+                )
+          (
+          )
+        sig_value to_string
+        value_description
+            arrow
+               t
+              (
+              )
+               string
+              (
+              )
+          (
+          )
+    )
+  module type TYPEVIEW
+    signature
+    (
+        type
+        (
+          combined
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                        )
+        type
+        (
+          t
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                        )
+        sig_value map
+        value_description
+            tuple
+            (
+                arrow
+                   combined
+                  (
+                  )
+                   t
+                  (
+                  )
+                arrow
+                   t
+                  (
+                  )
+                   combined
+                  (
+                  )
+            )
+          (
+          )
+    )
+  module type COMBINED_COMMON
+    signature
+    (
+        module T
+          signature
+          (
+              type
+              (
+                t
+                  type
+                    params =
+                      (
+                      )
+                    cstrs =
+                      (
+                      )
+                    kind =
+                                    )
+          )
+        module TV1
+          Pmty_with
+            TYPEVIEW
+          (
+            combined
+              Pwith_typesubst
+                type
+                  params =
+                    (
+                    )
+                  cstrs =
+                    (
+                    )
+                  kind =
+                         T.t
+                        (
+                        )
+          )
+        module TV2
+          Pmty_with
+            TYPEVIEW
+          (
+            combined
+              Pwith_typesubst
+                type
+                  params =
+                    (
+                    )
+                  cstrs =
+                    (
+                    )
+                  kind =
+                         T.t
+                        (
+                        )
+          )
+    )
+  module type COMBINED_TYPE
+    signature
+    (
+        module T
+          USERTYPE
+        sig_include
+          Pmty_with
+            COMBINED_COMMON
+          (
+            T
+              Pwith_modsubst T
+          )
+    )
+  module type BARECODE
+    signature
+    (
+        type
+        (
+          state
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                        )
+        sig_value init
+        value_description
+            arrow
+               state
+              (
+              )
+               unit
+              (
+              )
+          (
+          )
+    )
+  module USERCODE
+    functor X
+    (
+      TYPEVIEW
+      struct
+      (
+        module type F
+          functor C
+          (
+            Pmty_with
+              CORE
+            (
+              V.usert
+                Pwith_type
+                  type
+                    params =
+                      (
+                      )
+                    cstrs =
+                      (
+                      )
+                    kind =
+                           X.combined
+                          (
+                          )
+            )
+            Pmty_with
+              BARECODE
+            (
+              state
+                Pwith_typesubst
+                  type
+                    params =
+                      (
+                      )
+                    cstrs =
+                      (
+                      )
+                    kind =
+                           C.V.state
+                          (
+                          )
+            )
+          )
+      )
+    )
+  module Weapon
+    struct
+    (
+      type
+      (
+        t
+          type
+            params =
+              (
+              )
+            cstrs =
+              (
+              )
+            kind =
+                    )
+    )
+  module type WEAPON_LIB
+    signature
+    (
+        type
+        (
+          t
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                     Weapon.t
+                    (
+                    )
+        )
+        module T
+          Pmty_with
+            USERTYPE
+          (
+            t
+              Pwith_type
+                type
+                  params =
+                    (
+                    )
+                  cstrs =
+                    (
+                    )
+                  kind =
+                         t
+                        (
+                        )
+          )
+        module Make
+          functor TV
+          (
+            Pmty_with
+              TYPEVIEW
+            (
+              t
+                Pwith_type
+                  type
+                    params =
+                      (
+                      )
+                    cstrs =
+                      (
+                      )
+                    kind =
+                           t
+                          (
+                          )
+            )
+            USERCODE(TV).F
+          )
+    )
+)

@@ -1,0 +1,60 @@
+
+(
+    								 
+  let
+  (
+   
+    marshal_int
+   (
+    case
+        (
+    	  f
+         match
+         []
+         (
+         
+         case
+         (
+           
+           ::
+           (
+               _
+               
+               ::
+               (
+                   tagNamePattern 
+                   (
+                       INT
+                       n
+                   )
+                   _
+               )
+           )
+           
+           f
+           (
+               n
+           )
+         ) 
+         	        											 
+           
+           case
+           (
+            _
+            
+            failwith
+            (
+                "marshal_int"
+            )
+           )
+           													    
+         	        											 
+         	        											 
+         )
+         			   
+        )
+   )
+       		    
+  )
+                                     
+)

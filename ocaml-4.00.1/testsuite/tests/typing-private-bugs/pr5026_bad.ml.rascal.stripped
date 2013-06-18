@@ -1,0 +1,111 @@
+(
+  type
+  (  						
+     untyped
+     type
+     params=
+     (
+     )
+     cstrs =
+     (
+     )
+     kind =
+  )
+  type
+  (  						
+     typed
+     type
+     params=
+     (
+      <>
+      a
+     )
+     cstrs =
+     (
+     )
+     kind =
+     untyped
+     (
+     )
+  )
+  type
+  (  						
+     wrapped
+     type
+     params=
+     (
+      <>
+      typing
+     )
+     cstrs =
+     (
+     )
+     kind =
+     sexp
+     (
+     )
+     t
+     type
+     params=
+     (
+      <>
+      a
+     )
+     cstrs =
+     (
+     )
+     kind =
+      wrapped
+      (
+         typed
+         (
+           a
+         )
+      )
+     sexp
+     type
+     params=
+     (
+     )
+     cstrs =
+     (
+     )
+     kind =
+      wrapped
+      (
+        untyped
+        (
+        )
+      )
+  )
+  classTypeDef 
+  (
+      classTypeDefinition 
+      (
+          classTypeDef 
+          (
+              <"a",[]>
+              s3
+              <[],[<[],[],"underlying","typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
+          )
+      )
+  )
+  class
+  (
+    params = 
+    (
+    r
+    )
+    class name = s3object
+    class expr = 
+                class_structure
+                (
+                   classValue 
+                   (
+                       <>
+                       underlying
+                       r
+                   )
+                )
+  )
+)

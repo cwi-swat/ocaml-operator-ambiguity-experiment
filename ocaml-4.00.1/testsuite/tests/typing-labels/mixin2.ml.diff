@@ -1,0 +1,1138 @@
+76,78c76
+<                      lazy 
+<                      (
+<                          obj
+---
+>                         Pexp_lazy                        obj
+82d79
+<                      )
+84c81
+<                       "extendedModulePath1"([],"Lazy")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+---
+>                              Lazy.t
+86c83
+<                         <>
+---
+>                                 Ptyp_any
+104,105c101
+<     !
+<     !
+---
+>     !!
+108c104
+<   classTypeDef 
+---
+>   class_type
+110,112c106,131
+<       classTypeDefinition 
+<       (
+<           classTypeDef 
+---
+>     class_type_declaration ([23,531+11]..[28,671+5])
+>       pci_virt = Concrete
+>       pci_params =
+>           (
+>             "a"
+>             "b"
+>           )
+>       pci_name = "ops"
+>       pci_expr =
+>         class_type ([24,557+2]..[28,671+5])
+>           Pcty_signature
+>           class_signature
+>               Ptyp_any
+>             (
+>               Pctf_meth "free" Public ([25,566+4]..[25,566+31])
+>                   poly
+>                     arrow
+>                       b
+>                        Names.t
+>                       (
+>                       )
+>               Pctf_meth "subst" Public ([26,598+4]..[26,598+45])
+>                   poly
+>                     arrow
+>                     sub
+>                        Subst.t
+114,116c133
+<               <"a",["b"]>
+<               ops
+<               <[],[<[],[],"free","arrow1"("tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Names")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<[],[],"subst","arrow2"([],"sub","typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"Subst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arrow1"("tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<[],[],"eval","arrow1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>]>
+---
+>                           a
+117a135,142
+>                       arrow
+>                         b
+>                         a
+>               Pctf_meth "eval" Public ([27,644+4]..[27,644+26])
+>                   poly
+>                     arrow
+>                       b
+>                       a
+131c156,164
+<      <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>]>
+---
+>               Ptyp_variant closed=true
+>               (
+>                 Rtag "Var" false
+>                   (
+>                        string
+>                       (
+>                       )
+>                   )
+>               )
+136a170
+>             "a"
+142,143c176
+<                    classConstraint 
+<                    (
+---
+>               Pcf_constr ([35,806+2]..[35,806+25])
+144a178,180
+>                   Ptyp_variant closed=false
+>                   (
+>                     Rinherit
+149a186,195
+>                 (
+>                   case
+>                   (
+>                     sub
+>                     (
+>                       case
+>                       (
+>                         Ppat_alias "x"
+>                         Ppat_variant "Var"
+>                           s
+162a209,212
+>                       )
+>                     )
+>                   )
+>                 )
+163a214,218
+>                 (
+>                   case
+>                   (
+>                     Ppat_variant "Var"
+>                       s
+167a223,224
+>                   )
+>                 )
+168a226,230
+>                 (
+>                   case
+>                   (
+>                     Ppat_alias "v"
+>                     pat_type                    var
+171a234,235
+>                             )
+>   )
+184c248,274
+<      <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Abs",["star"("typexprConstr2"("typeConstr"([],"string")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"App",["star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>]>
+---
+>               Ptyp_variant closed=true
+>               (
+>                 Rtag "Var" false
+>                   (
+>                        string
+>                       (
+>                       )
+>                   )
+>                 Rtag "Abs" false
+>                   (
+>                       tuple
+>                       (
+>                            string
+>                           (
+>                           )
+>                           a
+>                       )
+>                   )
+>                 Rtag "App" false
+>                   (
+>                       tuple
+>                       (
+>                           a
+>                           a
+>                       )
+>                   )
+>               )
+222a313,318
+>             "a"
+>           )
+>       class name = lambda_ops
+>       class expr =
+>           fun
+>           label=""
+224c320
+<      "extendedModulePath1"([],"Lazy")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+---
+>              Lazy.t
+226c322,325
+<        <["tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+---
+>                 Ptyp_class ops
+>                 (
+>                     a
+>                     a
+227a327
+>                 (
+229,231c329,330
+<     class name = lambda_ops
+<     class expr = 
+<                 letClass 
+---
+>             )
+>             let Nonrec
+233a333
+>                 (
+235,236c335,336
+<                      free
+<                      lazy 
+---
+>                 :
+>                      var_ops
+238c338,342
+<                          send free
+---
+>                         a
+>                     )
+>                                 )
+>               free
+>                 Pexp_lazy                send free
+245d348
+<                      ) 
+247,249c350
+<                      lazy 
+<                      (
+<                          send subst
+---
+>                 Pexp_lazy                send subst
+256d356
+<                      ) 
+258,260c358
+<                      lazy 
+<                      (
+<                          send eval
+---
+>                 Pexp_lazy                send eval
+270,271c368
+<                        classConstraint 
+<                        (
+---
+>                   Pcf_constr ([57,1439+4]..[57,1439+33])
+272a370,372
+>                       Ptyp_variant closed=false
+>                       (
+>                         Rinherit
+282,286c382,383
+<                                 patternAs 
+<                                 (
+<                                     var
+<                                     x
+<                                 )
+---
+>                         Ppat_alias "x"
+>                         pat_type                        var
+297,299c394
+<                                  tagNamePattern 
+<                                  (
+<                                      Abs
+---
+>                         Ppat_variant "Abs"
+304d398
+<                                  )
+319,321c413
+<                                  tagNamePattern 
+<                                  (
+<                                      App
+---
+>                         Ppat_variant "App"
+326d417
+<                                  )
+350c441
+<                                 patternAs 
+---
+>                         f
+352,354c443,446
+<                                     var
+<                                     x
+<                                 )
+---
+>                           case
+>                           (
+>                             Ppat_alias "x"
+>                             pat_type                            var
+359,363c451,452
+<                                  patternAs 
+<                                  (
+<                                      tagNamePattern 
+<                                      (
+<                                          Abs
+---
+>                             Ppat_alias "l"
+>                             Ppat_variant "Abs"
+368,370d456
+<                                      )
+<                                      l
+<                                  )
+397,398c483
+<                                      Abs
+<                                      (
+---
+>                                     Pexp_variant "Abs"
+407d491
+<                                 )
+410,414c494,495
+<                                  patternAs 
+<                                  (
+<                                      tagNamePattern 
+<                                      (
+<                                          App
+---
+>                             Ppat_alias "l"
+>                             Ppat_variant "App"
+419,421d499
+<                                      )
+<                                      l
+<                                  )
+461,462c539
+<                                      App
+<                                      (
+---
+>                                     Pexp_variant "App"
+472a550
+>                     )
+477c555
+<                                 patternAs 
+---
+>                         sub
+479,481c557,560
+<                                     var
+<                                     x
+<                                 )
+---
+>                           case
+>                           (
+>                             Ppat_alias "x"
+>                             pat_type                            var
+493,497c572,573
+<                                  patternAs 
+<                                  (
+<                                      tagNamePattern 
+<                                      (
+<                                          Abs
+---
+>                             Ppat_alias "l"
+>                             Ppat_variant "Abs"
+502,504d577
+<                                      )
+<                                      l
+<                                  )
+525,526c598,639
+<                                           <"~init:","constant"("emptyBrackets"()[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+<                                           <"~f:","brackets"("fun"("multipleMatching"(["key","data","patternValueName"("acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"ifThenElse"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Names")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"mem")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"valuePath"("valuePath"([],"used")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"coloncolon"("valuePath"("valuePath"([],"data")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"valuePath"("valuePath"([],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+---
+>                                         []
+>                                                                                 (
+>                                           case
+>                                           (
+>                                             key
+>                                             (
+>                                               case
+>                                               (
+>                                                 data
+>                                                 (
+>                                                   case
+>                                                   (
+>                                                     acc
+>                                                     ifthenelse
+>                                                     (
+>                                                       if
+>                                                       (
+>                                                         Names.mem
+>                                                         (
+>                                                             s
+>                                                             used
+>                                                         )
+>                                                       )
+>                                                       then
+>                                                       (
+>                                                         ::
+>                                                           (
+>                                                             data
+>                                                             acc
+>                                                           )
+>                                                       )
+>                                                       else
+>                                                       (
+>                                                           acc
+>                                                       )
+>                                                     )
+>                                                   )
+>                                                 )
+>                                               )
+>                                             )
+>                                           )
+>                                         )
+537c650,666
+<                                            <"~f:","brackets"("fun"("multipleMatching"(["patternValueName"("t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],"functionApplication"("valuePath"("valuePath"(["modulePath"([],"Names")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"mem")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"free")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["valuePath"("valuePath"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+---
+>                                         (
+>                                           case
+>                                           (
+>                                             t
+>                                             Names.mem
+>                                             (
+>                                                 s
+>                                                 !!
+>                                                 (
+>                                                     free
+>                                                 )
+>                                                 (
+>                                                     t
+>                                                 )
+>                                             )
+>                                           )
+>                                         )
+559,560c688
+<                                          Abs
+<                                          (
+---
+>                                       Pexp_variant "Abs"
+568,569c696,701
+<                                              	    <"~sub:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"add")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~key:","valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<"~data:","brackets"("functionApplication"("constant"("Var")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"name")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"valuePath"("valuePath"([],"sub")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+<                                              	    t
+---
+>                                               Subst.add
+>                                               (
+>                                                   s
+>                                                   Pexp_variant "Var"
+>                                                     name
+>                                                   sub
+570a703
+>                                               t
+582c715,725
+<                                            <"~f:","brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"subst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~sub:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"remove")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"sub")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+---
+>                                           !!
+>                                           (
+>                                               subst
+>                                           )
+>                                           (
+>                                               Subst.remove
+>                                               (
+>                                                   s
+>                                                   sub
+>                                               )
+>                                           )
+592,596c735,736
+<                                  patternAs 
+<                                  (
+<                                      tagNamePattern 
+<                                      (
+<                                          App
+---
+>                             Ppat_alias "l"
+>                             Ppat_variant "App"
+598,600d737
+<                                      )
+<                                      l
+<                                  )
+606c743,749
+<                                      <"~f:","brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["sub"])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+---
+>                                 !!
+>                                 (
+>                                     subst
+>                                 )
+>                                 (
+>                                     sub
+>                                 )
+610a754,755
+>                       )
+>                     )
+611a757,760
+>                     (
+>                       case
+>                       (
+>                         l
+618c767,770
+<                                  <"~f:","prefix"("!!","valuePath"("valuePath"([],"eval")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+---
+>                             !!
+>                             (
+>                                 eval
+>                             )
+624,626c776
+<                                tagNamePattern 
+<                                (
+<                                    App
+---
+>                             Ppat_variant "App"
+628,630c778
+<                                     tagNamePattern 
+<                                     (
+<                                         Abs
+---
+>                                 Ppat_variant "Abs"
+635d782
+<                                     )
+638d784
+<                                )
+649c795,800
+<                                        <"~sub:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"add")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[<"~key:","valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"~data:","valuePath"("valuePath"([],"t2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,"valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"empty")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+---
+>                                     Subst.add
+>                                     (
+>                                         s
+>                                         t2
+>                                         Subst.empty
+>                                     )
+662a814
+>   )
+683c835,869
+<      <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Num",["typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Add",["star"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Neg",["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Mult",["star"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>]>
+---
+>               Ptyp_variant closed=true
+>               (
+>                 Rtag "Var" false
+>                   (
+>                        string
+>                       (
+>                       )
+>                   )
+>                 Rtag "Num" false
+>                   (
+>                        int
+>                       (
+>                       )
+>                   )
+>                 Rtag "Add" false
+>                   (
+>                       tuple
+>                       (
+>                           a
+>                           a
+>                       )
+>                   )
+>                 Rtag "Neg" false
+>                   (
+>                       a
+>                   )
+>                 Rtag "Mult" false
+>                   (
+>                       tuple
+>                       (
+>                           a
+>                           a
+>                       )
+>                   )
+>               )
+688a875,880
+>             "a"
+>           )
+>       class name = expr_ops
+>       class expr =
+>           fun
+>           label=""
+690c882,884
+<      "extendedModulePath1"([],"Lazy")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+---
+>              Lazy.t
+>             (
+>                 Ptyp_class ops
+692c886,887
+<        <["tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+---
+>                     a
+>                     a
+693a889
+>                 (
+695,697c891,892
+<     class name = expr_ops
+<     class expr = 
+<                 letClass 
+---
+>             )
+>             let Nonrec
+699a895
+>                 (
+701,702c897,898
+<                      free
+<                      lazy 
+---
+>                 :
+>                      var_ops
+704c900,904
+<                          send free
+---
+>                         a
+>                     )
+>                                 )
+>               free
+>                 Pexp_lazy                send free
+711d910
+<                      ) 
+713,715c912
+<                      lazy 
+<                      (
+<                          send subst
+---
+>                 Pexp_lazy                send subst
+722d918
+<                      ) 
+724,726c920
+<                      lazy 
+<                      (
+<                          send eval
+---
+>                 Pexp_lazy                send eval
+736,737c930
+<                        classConstraint 
+<                        (
+---
+>                   Pcf_constr ([112,3238+4]..[112,3238+31])
+738a932,934
+>                       Ptyp_variant closed=false
+>                       (
+>                         Rinherit
+748,752c944,945
+<                                 patternAs 
+<                                 (
+<                                     var
+<                                     x
+<                                 )
+---
+>                         Ppat_alias "x"
+>                         pat_type                        var
+763,765c956
+<                                  tagNamePattern 
+<                                  (
+<                                      Num
+---
+>                         Ppat_variant "Num"
+767d957
+<                                  )
+772,774c962
+<                                  tagNamePattern 
+<                                  (
+<                                      Add
+---
+>                         Ppat_variant "Add"
+779d966
+<                                  )
+800,802c987
+<                                  tagNamePattern 
+<                                  (
+<                                      Neg
+---
+>                         Ppat_variant "Neg"
+804d988
+<                                  )
+815,817c999
+<                                  tagNamePattern 
+<                                  (
+<                                      Mult
+---
+>                         Ppat_variant "Mult"
+822d1003
+<                                  )
+846c1027
+<                                 patternAs 
+---
+>                         f
+848,850c1029,1032
+<                                     var
+<                                     x
+<                                 )
+---
+>                           case
+>                           (
+>                             Ppat_alias "x"
+>                             pat_type                            var
+855,859c1037,1038
+<                                  patternAs 
+<                                  (
+<                                      tagNamePattern 
+<                                      (
+<                                          Num
+---
+>                             Ppat_alias "x"
+>                             Ppat_variant "Num"
+861,863d1039
+<                                      )
+<                                      x
+<                                  )
+868,872c1044,1045
+<                                  patternAs 
+<                                  (
+<                                      tagNamePattern 
+<                                      (
+<                                          Add
+---
+>                             Ppat_alias "e"
+>                             Ppat_variant "Add"
+877,879d1049
+<                                      )
+<                                      e
+<                                  )
+919,920c1089
+<                                      Add
+<                                      (
+---
+>                                     Pexp_variant "Add"
+929d1097
+<                                 )
+932,936c1100,1101
+<                                  patternAs 
+<                                  (
+<                                      tagNamePattern 
+<                                      (
+<                                          Neg
+---
+>                             Ppat_alias "e"
+>                             Ppat_variant "Neg"
+938,940d1102
+<                                      )
+<                                      e
+<                                  )
+967,968c1129
+<                                      Neg
+<                                      (
+---
+>                                     Pexp_variant "Neg"
+974d1134
+<                                 )
+977,981c1137,1138
+<                                  patternAs 
+<                                  (
+<                                      tagNamePattern 
+<                                      (
+<                                          Mult
+---
+>                             Ppat_alias "e"
+>                             Ppat_variant "Mult"
+986,988d1142
+<                                      )
+<                                      e
+<                                  )
+1028,1029c1182
+<                                      Mult
+<                                      (
+---
+>                                     Pexp_variant "Mult"
+1039a1193
+>                     )
+1044c1198
+<                                 patternAs 
+---
+>                         sub
+1046,1048c1200,1203
+<                                     var
+<                                     x
+<                                 )
+---
+>                           case
+>                           (
+>                             Ppat_alias "x"
+>                             pat_type                            var
+1060,1064c1215,1216
+<                                  patternAs 
+<                                  (
+<                                      expr
+<                                      e
+<                                  )
+---
+>                             Ppat_alias "e"
+>                             pat_type                            expr
+1070c1222,1228
+<                                      <"~f:","brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["sub"])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+---
+>                                 !!
+>                                 (
+>                                     subst
+>                                 )
+>                                 (
+>                                     sub
+>                                 )
+1074a1233,1234
+>                       )
+>                     )
+1075a1236,1240
+>                     (
+>                       case
+>                       (
+>                         Ppat_alias "e"
+>                         pat_type                        expr
+1082c1247,1250
+<                                  <"~f:","prefix"("!!","valuePath"("valuePath"([],"eval")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+---
+>                             !!
+>                             (
+>                                 eval
+>                             )
+1088,1090c1256
+<                                tagNamePattern 
+<                                (
+<                                    Add
+---
+>                             Ppat_variant "Add"
+1092,1094c1258
+<                                     tagNamePattern 
+<                                     (
+<                                         Num
+---
+>                                 Ppat_variant "Num"
+1096,1099c1260
+<                                     )
+<                                    	tagNamePattern 
+<                                    	(
+<                                    	    Num
+---
+>                                 Ppat_variant "Num"
+1102,1105c1263
+<                                    )
+<                                )
+<                                Num
+<                                (
+---
+>                             Pexp_variant "Num"
+1112d1269
+<                              ) 
+1115,1120c1272,1273
+<                                 tagNamePattern 
+<                                 (
+<                                     Neg
+<                                     tagNamePattern 
+<                                     (
+<                                         Num
+---
+>                             Ppat_variant "Neg"
+>                               Ppat_variant "Num"
+1122,1124c1275,1276
+<                                     )
+<                                 )
+<                                 Num
+---
+>                             Pexp_variant "Num"
+>                               ~-
+1126c1278
+<                                     -n
+---
+>                                   n
+1131,1133c1283
+<                                 tagNamePattern 
+<                                 (
+<                                     Mult
+---
+>                             Ppat_variant "Mult"
+1135,1137c1285
+<                                      tagNamePattern 
+<                                      (
+<                                          Num
+---
+>                                 Ppat_variant "Num"
+1139,1142c1287
+<                                      )
+<                                     	tagNamePattern 
+<                                     	(
+<                                     	    Num
+---
+>                                 Ppat_variant "Num"
+1145,1148c1290
+<                                     )
+<                                 )
+<                                 Num
+<                                 (
+---
+>                             Pexp_variant "Num"
+1155d1296
+<                                )
+1164a1306
+>   )
+1185c1327,1339
+<      <[],["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"lambda")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"expr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+---
+>               Ptyp_variant closed=true
+>               (
+>                 Rinherit
+>                      lambda
+>                     (
+>                         a
+>                     )
+>                 Rinherit
+>                      expr
+>                     (
+>                         a
+>                     )
+>               )
+1190a1345,1350
+>             "a"
+>           )
+>       class name = lexpr_ops
+>       class expr =
+>           fun
+>           label=""
+1192c1352,1358
+<      "extendedModulePath1"([],"Lazy")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+---
+>              Lazy.t
+>             (
+>                 Ptyp_class ops
+>                 (
+>                     a
+>                     a
+>                 )
+1194d1359
+<        <["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+1197,1199c1362
+<     class name = lexpr_ops
+<     class expr = 
+<                 letClass 
+---
+>             let Nonrec
+1206c1369,1370
+<                     letClass 
+---
+>             )
+>               let Nonrec
+1212a1377
+>               )
+1215,1216c1380
+<                            classConstraint 
+<                            (
+---
+>                     Pcf_constr ([159,4589+4]..[159,4589+32])
+1217a1382,1384
+>                         Ptyp_variant closed=false
+>                         (
+>                           Rinherit
+1227,1231c1394,1395
+<                                     patternAs 
+<                                     (
+<                                         lambda
+<                                         x
+<                                     )
+---
+>                           Ppat_alias "x"
+>                           pat_type                          lambda
+1242,1246c1406,1407
+<                                      patternAs 
+<                                      (
+<                                          expr
+<                                          x
+<                                      )
+---
+>                           Ppat_alias "x"
+>                           pat_type                          expr
+1260c1421
+<                                     patternAs 
+---
+>                           sub
+1262,1264c1423,1426
+<                                         lambda
+<                                         x
+<                                     )
+---
+>                             case
+>                             (
+>                               Ppat_alias "x"
+>                               pat_type                              lambda
+1276,1280c1438,1439
+<                                      patternAs 
+<                                      (
+<                                          expr
+<                                          x
+<                                      )
+---
+>                               Ppat_alias "x"
+>                               pat_type                              expr
+1290a1450,1451
+>                         )
+>                       )
+1295,1299c1456,1457
+<                                     patternAs 
+<                                     (
+<                                         lambda
+<                                         x
+<                                     )
+---
+>                           Ppat_alias "x"
+>                           pat_type                          lambda
+1310,1314c1468,1469
+<                                      patternAs 
+<                                      (
+<                                          expr
+<                                          x
+<                                      )
+---
+>                           Ppat_alias "x"
+>                           pat_type                          expr
+1326,1327d1480
+<                 )
+<   )
+1342,1344c1495
+<        tagNamePattern 
+<        (
+<            Var
+---
+>           Ppat_variant "Var"
+1346d1496
+<        )
+1354,1356c1504
+<         tagNamePattern 
+<         (
+<             Abs
+---
+>           Ppat_variant "Abs"
+1361d1508
+<         )
+1368c1515
+<                   "\ "
+---
+>                     " "
+1385,1387c1532
+<         tagNamePattern 
+<         (
+<             App
+---
+>           Ppat_variant "App"
+1392d1536
+<         )
+1416,1418c1560
+<         tagNamePattern 
+<         (
+<             Num
+---
+>           Ppat_variant "Num"
+1420d1561
+<         )
+1428,1430c1569
+<         tagNamePattern 
+<         (
+<             Add
+---
+>           Ppat_variant "Add"
+1435d1573
+<         )
+1459,1461c1597
+<         tagNamePattern 
+<         (
+<             Neg
+---
+>           Ppat_variant "Neg"
+1463d1598
+<         )
+1479,1481c1614
+<         tagNamePattern 
+<         (
+<             Mult
+---
+>           Ppat_variant "Mult"
+1486d1618
+<         )
+1522,1525c1654
+<            App
+<            (
+<                (
+<                    					 Abs
+---
+>                 Pexp_variant "App"
+1526a1656
+>                     Pexp_variant "Abs"
+1529,1530c1659
+<                      					     	Var
+<                      					     	(
+---
+>                         Pexp_variant "Var"
+1533,1536c1662
+<                      					     )
+<                      					 )
+<                	Var
+<                	(
+---
+>                     Pexp_variant "Var"
+1541,1542d1666
+<        ) 
+<      )
+1553,1557c1677
+<              Add
+<              (
+<                  (
+<                      					 Mult
+<                        					 (
+---
+>                   Pexp_variant "Add"
+1559c1679
+<                        					         					 Num
+---
+>                       Pexp_variant "Mult"
+1560a1681
+>                           Pexp_variant "Num"
+1562,1566c1683,1684
+<                        					           					 )
+<                        					     	Neg
+<                        					     	(
+<                        					     	    Num
+<                        					     	    (
+---
+>                           Pexp_variant "Neg"
+>                             Pexp_variant "Num"
+1569,1573c1687
+<                        					     	)
+<                        					     )
+<                        					 )
+<                  	Var
+<                  	(
+---
+>                       Pexp_variant "Var"
+1578,1579d1691
+<          ) 
+<        )
+1590,1593c1702
+<                Add
+<                (
+<                    (
+<                        					 App
+---
+>                     Pexp_variant "Add"
+1594a1704
+>                         Pexp_variant "App"
+1596,1597c1706
+<                          					         					 Abs
+<                          					           					 (
+---
+>                             Pexp_variant "Abs"
+1600,1603c1709
+<                          					           					     	Mult
+<                          					           					     	(
+<                          					           					     	    (
+<                          					           					     	        					 Var
+---
+>                                 Pexp_variant "Mult"
+1604a1711
+>                                     Pexp_variant "Var"
+1606,1608c1713
+<                          					           					     	          					 )
+<                          					           					     	    	Var
+<                          					           					     	    	(
+---
+>                                     Pexp_variant "Var"
+1612,1616c1717
+<                          					           					     	)
+<                          					           					     )
+<                          					           					 )
+<                          					     	Num
+<                          					     	(
+---
+>                             Pexp_variant "Num"
+1619,1622c1720
+<                          					     )
+<                          					 )
+<                    	Num
+<                    	(
+---
+>                         Pexp_variant "Num"
+1627,1628d1724
+<            ) 
+<          )

@@ -1,0 +1,88 @@
+(
+  class_type
+  (
+    class_type_declaration ([2,9+11]..[2,9+63])
+      pci_virt = Concrete
+      pci_params =
+          (
+            "node"
+          )
+      pci_name = "extension"
+      pci_expr =
+        class_type ([2,9+33]..[2,9+63])
+          Pcty_signature
+          class_signature
+              Ptyp_any
+            (
+              Pctf_meth "node" Public ([2,9+40]..[2,9+59])
+                  poly
+                    node
+            )
+  )
+  class_type
+  (
+    class_type_declaration ([3,73+11]..[3,73+76])
+      pci_virt = Concrete
+      pci_params =
+          (
+            "ext"
+          )
+      pci_name = "node"
+      pci_expr =
+        class_type ([3,73+27]..[3,73+76])
+          Pcty_signature
+          class_signature
+              Ptyp_any
+            (
+              Pctf_cstr ([3,73+34]..[3,73+72])
+                ext
+                Ptyp_class extension
+                (
+                     node
+                    (
+                        ext
+                    )
+                )
+                (
+                )
+            )
+  )
+  class
+  (
+      params =
+          (
+          )
+      class name = x
+      class expr =
+          class_structure
+            (
+              method node
+                assert false
+                    poly
+                       node
+                      (
+                           x
+                          (
+                          )
+                      )
+            )
+  )
+  type
+  (
+    t
+      type
+        params =
+          (
+          )
+        cstrs =
+          (
+          )
+        kind =
+               node
+              (
+                   x
+                  (
+                  )
+              )
+  )
+)

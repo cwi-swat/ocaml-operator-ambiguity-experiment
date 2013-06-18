@@ -1,0 +1,29 @@
+21,24c21
+<   modRec1 
+<   (
+<       M
+<       modTypeWith 
+---
+>   Pstr_recmodule
+25a23,24
+>     "M"
+>         Pmty_with
+27d25
+<           modConsType1 
+30c28,33
+<               "extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+---
+>             Pwith_type
+>               type
+>                 params =
+>                   (
+>                   )
+>                 cstrs =
+32a36,38
+>                 kind =
+>                        M.t
+>                       (
+48c54
+<          "extendedModulePath1"([],"M")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+---
+>                        M.t

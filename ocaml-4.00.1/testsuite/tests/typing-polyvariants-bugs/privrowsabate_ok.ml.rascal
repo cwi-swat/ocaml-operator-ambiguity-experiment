@@ -1,0 +1,713 @@
+
+(
+    								 
+  type
+  (  						
+      							    	 
+     termpc
+     type
+     params=
+     (
+     
+      
+      a
+     										 
+     )
+     cstrs =
+     (
+     )
+     kind =
+     <[],[<"And",["star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Or",["star"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Not",["tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Atom",["typexprConstr2"("typeConstr"([],"string")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
+     
+     														  
+     														 
+    											   
+  								        
+  )
+                                     
+  type
+  (  						
+      							    	 
+     termk
+     type
+     params=
+     (
+     
+      
+      a
+     										 
+     )
+     cstrs =
+     (
+     )
+     kind =
+     <[],[<"Dia",["tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Box",["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"termpc")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>
+     
+     														  
+     														 
+    											   
+  								        
+  )
+                                     
+  module type T
+   signature
+   (
+   		    				
+    type
+    (  						
+        							    	 
+       term
+       type
+       params=
+       (
+       
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+       
+       														  
+       														 
+      											   
+    								        
+    )
+   		    				
+    sig_value map
+    value_description
+    arrow
+    arrow
+    
+    term
+    (
+    )
+    								  
+    
+    term
+    (
+    )
+    								  
+       								   
+    arrow
+    
+    term
+    (
+    )
+    								  
+    
+    term
+    (
+    )
+    								  
+       								   
+       								   
+    (
+    )
+        								
+   		    				
+    sig_value nnf
+    value_description
+    arrow
+    
+    term
+    (
+    )
+    								  
+    
+    term
+    (
+    )
+    								  
+       								   
+    (
+    )
+        								
+   		    				
+    sig_value nnf_not
+    value_description
+    arrow
+    
+    term
+    (
+    )
+    								  
+    
+    term
+    (
+    )
+    								  
+       								   
+    (
+    )
+        								
+   		    				
+   )    								
+      							   
+                                     
+  module  Fpc
+  functor X
+  (
+   modTypeWith 
+   (
+       T
+       modConsType1 
+       (
+           
+           term
+           <["typexprConstr1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"termpc")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"a">
+       )
+       
+   )
+   functor []
+   (
+     
+     struct
+     (
+     							  
+     type
+     (  						
+         							    	 
+        term
+        type
+        params=
+        (
+        
+        )
+        cstrs =
+        (
+        )
+        kind =
+        
+         termpc
+         (
+           
+           "extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].term
+           (
+           )
+           								  
+         )
+         
+            									
+        
+        														  
+        														 
+       											   
+     								        
+     )
+     							  
+     let
+     (
+      
+       nnf
+       (
+        
+        case
+        (
+          patternAs 
+          (
+              tagNamePattern 
+              (
+                  Not
+                  tagNamePattern 
+                  (
+                      Atom
+                      _
+                  )
+              )
+              x
+          )
+          
+          x
+        ) 
+        	        											 
+          
+          case
+          (
+           tagNamePattern 
+           (
+               Not
+               x
+           )
+           
+           X.nnf_not
+           (
+               x
+           )
+          )
+          													    
+        	        											 
+          
+          case
+          (
+           x
+           
+           X.map
+           (
+               X.nnf
+               x
+           )
+          )
+          													    
+        	        											 
+        	        											 
+       )
+          							    
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       map
+      (
+       case
+           (
+       	  f
+            (
+             
+             case
+             (
+               tagNamePattern 
+               (
+                   Not
+                   x
+               )
+               
+               Not
+               (
+                   f
+                   (
+                       x
+                   )
+               )
+             ) 
+             	        											 
+               
+               case
+               (
+                tagNamePattern 
+                (
+                    And
+                    
+                    (
+                     x
+                         						 
+                    	y
+                    
+                    )
+                )
+                
+                And
+                (
+                    
+                    (
+                        					 f
+                          					 (
+                          					     x
+                          					 )
+                        					 
+                    	f
+                    	(
+                    	    y
+                    	)
+                        					 
+                    )
+                        					 
+                )
+               )
+               													    
+             	        											 
+               
+               case
+               (
+                tagNamePattern 
+                (
+                    Or
+                    
+                    (
+                     x
+                         						 
+                    	y
+                    
+                    )
+                )
+                
+                Or
+                (
+                    
+                    (
+                        					 f
+                          					 (
+                          					     x
+                          					 )
+                        					 
+                    	f
+                    	(
+                    	    y
+                    	)
+                        					 
+                    )
+                        					 
+                )
+               )
+               													    
+             	        											 
+               
+               case
+               (
+                patternAs 
+                (
+                    tagNamePattern 
+                    (
+                        Atom
+                        _
+                    )
+                    x
+                )
+                
+                x
+               )
+               													    
+             	        											 
+             	        											 
+            )
+               							   
+           )
+      )
+          		    
+     )
+     							  
+     let
+     (
+      
+       nnf_not
+       (
+        
+        case
+        (
+          tagNamePattern 
+          (
+              Not
+              x
+          )
+          
+          X.nnf
+          (
+              x
+          )
+        ) 
+        	        											 
+          
+          case
+          (
+           tagNamePattern 
+           (
+               And
+               
+               (
+                x
+                    						 
+               	y
+               
+               )
+           )
+           
+           Or
+           (
+               
+               (
+                   					 X.nnf_not
+                     					 (
+                     					     x
+                     					 )
+                   					 
+               	X.nnf_not
+               	(
+               	    y
+               	)
+                   					 
+               )
+                   					 
+           )
+          )
+          													    
+        	        											 
+          
+          case
+          (
+           tagNamePattern 
+           (
+               Or
+               
+               (
+                x
+                    						 
+               	y
+               
+               )
+           )
+           
+           And
+           (
+               
+               (
+                   					 X.nnf_not
+                     					 (
+                     					     x
+                     					 )
+                   					 
+               	X.nnf_not
+               	(
+               	    y
+               	)
+                   					 
+               )
+                   					 
+           )
+          )
+          													    
+        	        											 
+          
+          case
+          (
+           patternAs 
+           (
+               tagNamePattern 
+               (
+                   Atom
+                   _
+               )
+               x
+           )
+           
+           Not
+           (
+               x
+           )
+          )
+          													    
+        	        											 
+        	        											 
+       )
+          							    
+      							    		    
+     )
+     							  
+     )
+     							  
+   )
+   												
+  )
+      										    
+                                     
+  module  Fk
+  functor X
+  (
+   modTypeWith 
+   (
+       T
+       modConsType1 
+       (
+           
+           term
+           <["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"termk")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"a">
+       )
+       
+   )
+   functor []
+   (
+     
+     struct
+     (
+     							  
+     type
+     (  						
+         							    	 
+        term
+        type
+        params=
+        (
+        
+        )
+        cstrs =
+        (
+        )
+        kind =
+        
+         termk
+         (
+           
+           "extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].term
+           (
+           )
+           								  
+         )
+         
+            									
+        
+        														  
+        														 
+       											   
+     								        
+     )
+     							  
+     module  Pc
+      Fpc
+      (
+      X
+      )
+      								   
+     										    
+     							  
+     let
+     (
+      
+       map
+      (
+       case
+           (
+       	  f
+            (
+             
+             case
+             (
+               tagNamePattern 
+               (
+                   Dia
+                   x
+               )
+               
+               Dia
+               (
+                   f
+                   (
+                       x
+                   )
+               )
+             ) 
+             	        											 
+               
+               case
+               (
+                tagNamePattern 
+                (
+                    Box
+                    x
+                )
+                
+                Box
+                (
+                    f
+                    (
+                        x
+                    )
+                )
+               )
+               													    
+             	        											 
+               
+               case
+               (
+                patternAs 
+                (
+                    termpc
+                    x
+                )
+                
+                Pc.map
+                (
+                    f
+                    x
+                )
+               )
+               													    
+             	        											 
+             	        											 
+            )
+               							   
+           )
+      )
+          		    
+     )
+     							  
+     let
+     (
+      
+       nnf
+       Pc.nnf 
+      							    		    
+     )
+     							  
+     let
+     (
+      
+       nnf_not
+       (
+        
+        case
+        (
+          tagNamePattern 
+          (
+              Dia
+              x
+          )
+          
+          Box
+          (
+              X.nnf_not
+              (
+                  x
+              )
+          )
+        ) 
+        	        											 
+          
+          case
+          (
+           tagNamePattern 
+           (
+               Box
+               x
+           )
+           
+           Dia
+           (
+               X.nnf_not
+               (
+                   x
+               )
+           )
+          )
+          													    
+        	        											 
+          
+          case
+          (
+           patternAs 
+           (
+               termpc
+               x
+           )
+           
+           Pc.nnf_not
+           (
+               x
+           )
+          )
+          													    
+        	        											 
+        	        											 
+       )
+          							    
+      							    		    
+     )
+     							  
+     )
+     							  
+   )
+   												
+  )
+      										    
+                                     
+)

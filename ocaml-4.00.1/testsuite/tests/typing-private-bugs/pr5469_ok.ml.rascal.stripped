@@ -1,0 +1,71 @@
+(
+  module  M
+  functor T
+  (
+   signature
+   (
+    type
+    (  						
+       t
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+    )
+   )
+   functor []
+   (
+     struct
+     (
+     type
+     (  						
+        t
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+         t
+         polytype1 
+         (
+             "extendedModulePath1"([],"T")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+             (
+             )
+         )
+     )
+     )
+   )
+  )
+  module  P
+   struct
+   (
+   module  T
+    struct
+    (
+    type
+    (  						
+       t
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+    )
+    )
+   module  R
+    M
+    (
+    T
+    )
+   )
+)

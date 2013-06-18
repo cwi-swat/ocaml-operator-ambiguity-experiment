@@ -1,0 +1,55 @@
+2c2
+<   modRec1 
+---
+>   Pstr_recmodule
+4c4
+<       A
+---
+>     "A"
+18c18
+<           "extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+---
+>                          B.t
+36c36,73
+<          "extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+---
+>                        B.t
+>                       (
+>                       )
+>           )
+>         )
+>     "B"
+>         signature
+>         (
+>             type
+>             (
+>               t
+>                 type
+>                   params =
+>                     (
+>                     )
+>                   cstrs =
+>                     (
+>                     )
+>                   kind =
+>                          A.t
+>                         (
+>                         )
+>             )
+>         )
+>         struct
+>         (
+>           type
+>           (
+>             t
+>               type
+>                 params =
+>                   (
+>                   )
+>                 cstrs =
+>                   (
+>                   )
+>                 kind =
+>                        A.t
+41d77
+<       <"B","sig"([<"typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"struct2"(["typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>

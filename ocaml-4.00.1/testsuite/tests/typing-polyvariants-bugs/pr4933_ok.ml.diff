@@ -1,0 +1,31 @@
+27,29d26
+<    functor []
+<    (
+<      Priv
+48c45
+<    )
+---
+>         Priv
+71c68,73
+<        <"A",[]>
+---
+>                     Ptyp_variant closed=false
+>                     (
+>                       Rtag "A" true
+>                         (
+>                         )
+>                     )
+80,82d81
+<    functor []
+<    (
+<      Priv'
+96c95,99
+<         <[],[<"A",[]>]>
+---
+>                       Ptyp_variant closed=true
+>                       (
+>                         Rtag "A" true
+>                           (
+>                           )
+99a103
+>         Priv'
