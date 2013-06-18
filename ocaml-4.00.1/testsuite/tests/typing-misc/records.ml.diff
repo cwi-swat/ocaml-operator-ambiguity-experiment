@@ -1,30 +1,17 @@
-1d0
-< toplevels 
-14,15d12
-<          x
-<          polytype1 
-16a14,15
->               x
->                   poly
-20d18
-<          )
-22,23c20
-<          polytype1 
-<          (
----
->                   poly
-39c36
-<      patternRec 
+12a13
+>             (
+23a25
+>             )
+34c36
+<    patternRec 
 ---
 >       Ppat_record
-43c40,41
-<          <"field_name"("z")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"patternConstant"("posInt"("2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+38c40,41
+<        <"field_name"("z")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"patternConstant"("posInt"("2")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
 ---
 >         z
 >           2
-66,67d63
-<          u
-<          polytype1 
-68a65,66
->               u
->                   poly
+60a64
+>             (
+66a71
+>             )

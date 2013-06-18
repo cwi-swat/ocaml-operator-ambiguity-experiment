@@ -1,319 +1,250 @@
-toplevels 
+
 (
+    							  
+  
+      									 
+   open Tscanf2_io
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     open Tscanf2_io
-        									 
-        									 
-    
-        									 
-     let
+     slave
+     Array.get
      (
-      
-       slave
-       Array.get
-       (
-        Sys.argv
-        1
-       )
-           													 
-      							    		    
+      Sys.argv
+      1
      )
-        									 
-        									 
+     												 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
+     
      (
-      
-       
-       (
-        ic
-            						 
-       	oc
-       
-       )
-       Unix.open_process
-       (
-           slave
-       ) 
-      							    		    
+      ic
+          						 
+     	oc
+     
      )
-        									 
-        									 
-    
-        									 
-     let
+     Unix.open_process
      (
-      
-       ib
-       
-           								  
-        Scanf.Scanning
-           							     .from_channel
-       (
-           ic
-       ) 
-      							    		    
-     )
-        									 
-        									 
+         slave
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
+     ib
+     
+         								  
+      Scanf.Scanning
+         							     .from_channel
      (
-      
-       ob
-       Buffer.create
-       (
-           1024
-       ) 
-      							    		    
-     )
-        									 
-        									 
+         ic
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
+     ob
+     Buffer.create
      (
-      
-       send_string_ping
-      (
-       case
-           (
-       	  ob
-            send_string
+         1024
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     send_string_ping
+    (
+     case
+         (
+     	  ob
+          send_string
+          (
+              ob
+              oc
+              " Ping"
+          )
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     send_string_stop
+    (
+     case
+         (
+     	  ob
+          send_string
+          (
+              ob
+              oc
+              "stop"
+          )
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     interact
+    (
+     case
+         (
+     	  i
+          
+          sequence
+          (
+            Printf.eprintf
             (
-                ob
-                oc
                 " Ping"
             )
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       send_string_stop
-      (
-       case
-           (
-       	  ob
-            send_string
-            (
-                ob
-                oc
-                "stop"
-            )
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       interact
-      (
-       case
-           (
-       	  i
+          ;
             
             sequence
             (
-              Printf.eprintf
+              flush
               (
-                  " Ping"
+                  stderr
               )
             ;
               
               sequence
               (
-                flush
+                send_string_ping
                 (
-                    stderr
+                    ob
                 )
               ;
                 
-                sequence
+                let
                 (
-                  send_string_ping
-                  (
-                      ob
-                  )
-                ;
-                  
-                  let
-                  (
-                   (
-                      									  
-                    
-                     s
-                     receive_string
-                     (
-                         ib
-                     ) 
-                    							    		   
-                      									  
-                   )
-                  in
-                    ifthenelse
-                    (
-                     if
-                     (
-                      <>
-                      (
-                          s
-                          "-pong"
-                      )
-                     )
-                     then
-                     (
-                      failwith
-                      (
-                          ^
-                          (
-                              "Master: unbound string "
-                              s
-                          )
-                      )
-                     )
-                     else
-                     (
-                     )
-                    )
-                        									   
-                  )
-                      									
-                )
-                    							
-              )
-                  							
-            )
-                							
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    beginEnd 
-    (
-        
-        let
-        (
-         (
-            									  
-          
-           n
-           8 
-          							    		   
-            									  
-         )
-        in
-          
-          let
-          (
-           (
-              									  
-            
-             loop
-            (
-             case
                  (
-             	  i
+                    									  
+                  
+                   s
+                   receive_string
+                   (
+                       ib
+                   ) 
+                  							    		   
+                    									  
+                 )
+                in
                   ifthenelse
                   (
                    if
                    (
-                    >
+                    <>
                     (
-                        i
-                        0
+                        s
+                        "-pong"
                     )
                    )
                    then
                    (
-                    
-                    sequence
+                    failwith
                     (
-                      interact
-                      (
-                          i
-                      )
-                    ;
-                      loop
-                      (
-                          -
-                          (
-                              i
-                              1
-                          )
-                      )
+                        ^
+                        (
+                            "Master: unbound string "
+                            s
+                        )
                     )
-                        							
                    )
                    else
                    (
                    )
                   )
                       									   
-                 )
+                )
+                    									
+              )
+                  							
             )
-                		   
-              									  
-           )
-          in
-            loop
-            (
-                n
-            )
+                							
           )
-              									
-        )
-            									
+              							
+         )
     )
-    beginEnd 
+        		    
+   )
+      									 
+      									 
+                                 
+  
+  let
+  (
+   (
+      									  
+    
+     n
+     8 
+    							    		   
+      									  
+   )
+  in
+    
+    let
     (
-        
-        sequence
-        (
-          send_string_stop
-          (
-              ob
-          )
-        ;
-          
-          let
-          (
+     (
+        									  
+      
+       loop
+      (
+       case
            (
-              									  
-            
-             ack
-             receive_string
-             (
-                 ib
-             ) 
-            							    		   
-              									  
-           )
-          in
+       	  i
             ifthenelse
             (
              if
              (
-              =
+              >
               (
-                  ack
-                  "OK, bye!"
+                  i
+                  0
               )
              )
              then
@@ -321,41 +252,114 @@ toplevels
               
               sequence
               (
-                print_endline
+                interact
                 (
-                    "Test OK."
+                    i
                 )
               ;
-                exit
+                loop
                 (
-                    0
+                    -
+                    (
+                        i
+                        1
+                    )
                 )
               )
                   							
              )
              else
              (
-              
-              sequence
-              (
-                print_endline
-                (
-                    "Test Failed!"
-                )
-              ;
-                exit
-                (
-                    2
-                )
-              )
-                  							
-             ) 
+             )
             )
-            	    											 
+                									   
+           )
+      )
+          		   
+        									  
+     )
+    in
+      loop
+      (
+          n
+      )
+    )
+        									
+  )
+      									
+                                 
+  
+  sequence
+  (
+    send_string_stop
+    (
+        ob
+    )
+  ;
+    
+    let
+    (
+     (
+        									  
+      
+       ack
+       receive_string
+       (
+           ib
+       ) 
+      							    		   
+        									  
+     )
+    in
+      ifthenelse
+      (
+       if
+       (
+        =
+        (
+            ack
+            "OK, bye!"
+        )
+       )
+       then
+       (
+        
+        sequence
+        (
+          print_endline
+          (
+              "Test OK."
           )
-              									
+        ;
+          exit
+          (
+              0
+          )
         )
             							
+       )
+       else
+       (
+        
+        sequence
+        (
+          print_endline
+          (
+              "Test Failed!"
+          )
+        ;
+          exit
+          (
+              2
+          )
+        )
+            							
+       ) 
+      )
+      	    											 
     )
-    
+        									
+  )
+      							
+                                 
 )

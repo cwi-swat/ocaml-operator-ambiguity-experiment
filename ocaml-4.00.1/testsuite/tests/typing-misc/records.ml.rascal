@@ -1,151 +1,155 @@
-toplevels 
+
 (
-    
-        									 
-     type
-     (  						
-         							    	 
-        t
-        type
-        params=
-        (
-        
-        )
-        cstrs =
-        (
-        )
-        kind =
-        
-        
-        							     
-         
-         x
-         polytype1 
-         (
-             
-             int
-             (
-             )
-             								  
-         )
-        							     
-         
-         y
-         polytype1 
-         (
-             
-             int
-             (
-             )
-             								  
-         )
-        							     
-        	                           
-        														  
-        														 
-       											   
-     								        
-     )
-        									 
-        									 
-    record
-    (
-     x
-     3
-    										   	     
+    							  
+  
+      									 
+   type
+   (  						
+       							    	 
+      t
+      type
+      params=
+      (
       
-       z
-       2
-      										   
-    											   	 
-    )
-    (
-     
-     case
-     (
-     patternRec 
-     (
-         x
-         3
-         <"field_name"("z")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"patternConstant"("posInt"("2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-         
-     )
-     
-     ()
-     )
-     													 
-    )
-       						  
-    record
-    (
-     x
-     3
-    										   	     
+      )
+      cstrs =
+      (
+      )
+      kind =
       
-       contents
-       2
-      										   
-    											   	 
-    )
+      
+      							     
+       
+       x
+       poly
+       
+       int
+       (
+       )
+       								  
+                                              
+      							     
+       
+       y
+       poly
+       
+       int
+       (
+       )
+       								  
+                                              
+      							     
+      	                           
+      														  
+      														 
+     											   
+   								        
+   )
+      									 
+      									 
+                                 
+  record
+  (
+   x
+   3
+  										   	     
     
-        									 
-     type
-     (  						
-         							    	 
-        u
-        type
-        params=
-        (
-        
-        )
-        cstrs =
-        (
-        )
-        kind =
-        
-        
-        							     
-         
-         u
-         polytype1 
-         (
-             
-             int
-             (
-             )
-             								  
-         )
-        							     
-        	                           
-        														  
-        														 
-       											   
-     								        
-     )
-        									 
-        									 
-    record
-    (
-     u
-     3
-    										   	     
-    )
-    (
-     
-     case
-     (
-     x
-     
-     setfield
-     (
-     x
-     u
-     3
-     )
-     									  
-     )
-     													 
-    )
-       						  
+     z
+     2
+    										   
+  											   	 
+  )
+                                 
+  (
+   
+   case
+   (
+   patternRec 
+   (
+       x
+       3
+       <"field_name"("z")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"patternConstant"("posInt"("2")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+       
+   )
+   
+   ()
+   )
+   													 
+  )
+     						  
+                                 
+  record
+  (
+   x
+   3
+  										   	     
     
+     contents
+     2
+    										   
+  											   	 
+  )
+                                 
+  
+      									 
+   type
+   (  						
+       							    	 
+      u
+      type
+      params=
+      (
+      
+      )
+      cstrs =
+      (
+      )
+      kind =
+      
+      
+      							     
+       
+       u
+       poly
+       
+       int
+       (
+       )
+       								  
+                                              
+      							     
+      	                           
+      														  
+      														 
+     											   
+   								        
+   )
+      									 
+      									 
+                                 
+  record
+  (
+   u
+   3
+  										   	     
+  )
+                                 
+  (
+   
+   case
+   (
+   x
+   
+   setfield
+   (
+   x
+   u
+   3
+   )
+   									  
+   )
+   													 
+  )
+     						  
+                                 
 )

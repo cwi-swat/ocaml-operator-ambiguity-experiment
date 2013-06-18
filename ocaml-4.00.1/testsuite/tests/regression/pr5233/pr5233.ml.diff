@@ -1,46 +1,9 @@
-1d0
-< toplevels 
-81,82d79
-<                 semicolon 
-<                 (
-88d84
-<               ) 
-102,104c98
-<                      forloop 
-<                      (
-<                          i
----
->                     for i
-106d99
-<                          <>
-112,113d104
-<                          semicolon 
-<                          (
-118c109,111
-<                                Array.get
----
+108a109,110
 >                         !=
 >                         (
->                             String.get
-123,125d115
-<                                (
-<                                     !=
-<                                     (
-129d118
-<                               )
-141,142d129
-<                          )
+114,116d115
+<                       (
+<                            !=
+<                            (
+120d118
 <                      )
-144,145d130
-<                      semicolon 
-<                      (
-158d142
-<      )
-248,252c232
-<                path_field_name 
-<                (
-<                    Gc
-<                    heap_words
-<                )
----
->               Gc.heap_words

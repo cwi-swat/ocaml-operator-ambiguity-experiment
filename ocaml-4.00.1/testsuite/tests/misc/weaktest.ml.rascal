@@ -1,401 +1,448 @@
-toplevels 
+
 (
+    							  
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       debug
-       false 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     open Printf
-        									 
-        									 
-    
-        									 
-     module  Hashed
-      struct
-      (
-      							  
-      type
-      (  						
-          							    	 
-         t
-         type
-         params=
-         (
-         
-         )
-         cstrs =
-         (
-         )
-         kind =
-         
-          list
-          (
-            
-            string
-            (
-            )
-            								  
-          )
-          
-             									
-         
-         														  
-         														 
-        											   
-      								        
-      )
-      							  
-      let
-      (
-       
-        equal
-       (
-        case
-            (
-         		
-         		 x
-         		(
-         		 case
-         		     (
-         		 	  y
-         		      
-         		      sequence
-         		      (
-         		        eprintf
-         		        (
-         		            "equal: %s / %s\n"
-         		            List.hd
-         		            (
-         		                x
-         		            )
-         		            List.hd
-         		            (
-         		                y
-         		            )
-         		        )
-         		      ;
-         		        =
-         		        (
-         		            x
-         		            y
-         		        )
-         		      )
-         		          							
-         		     )
-         		)
-         		    		   
-            )
-       )
-           		    
-      )
-      							  
-      let
-      (
-       
-        hash
-       (
-        case
-            (
-        	  x
-             Hashtbl.hash
-             (
-                 List.hd
-                 (
-                     x
-                 )
-             )
-            )
-       )
-           		    
-      )
-      							  
-      )
-      							  
-     										    
-        									 
-        									 
-    
-        									 
-     module  HT
-      
-          								  
-       Weak.Make
-          							     
-      (
-      Hashed
-      )
-      								   
-     										    
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       tbl
-       HT.create
-       (
-           7
-       ) 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       r
-       ref
-       (
-           []
-       ) 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       bunch
-       ifthenelse
-       (
-        if
-        (
-         <
-         (
-             Array.length
-             (
-                 Sys.argv
-             )
-             2
-         )
-        )
-        then
-        (
-         10000
-        )
-        else
-        (
-         int_of_string
-         (
-             Array.get
-             (
-              Sys.argv
-              1
-             )
-                 													
-         )
-        ) 
-       )
-       	    											  
-      							    		    
-     )
-        									 
-        									 
-    Random.init
+     debug
+     false 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   open Printf
+      									 
+      									 
+                                 
+  
+      									 
+   module  Hashed
+    struct
     (
-        314
+    							  
+    type
+    (  						
+        							    	 
+       t
+       type
+       params=
+       (
+       
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+        list
+        (
+          
+          string
+          (
+          )
+          								  
+        )
+        
+           									
+       
+       														  
+       														 
+      											   
+    								        
     )
-    
-        									 
-     let
+    							  
+    let
+    (
+     
+      equal
      (
-      
-       random_string
-      (
-       case
+      case
+          (
+       		
+       		 x
+       		(
+       		 case
+       		     (
+       		 	  y
+       		      
+       		      sequence
+       		      (
+       		        eprintf
+       		        (
+       		            "equal: %s / %s\n"
+       		            List.hd
+       		            (
+       		                x
+       		            )
+       		            List.hd
+       		            (
+       		                y
+       		            )
+       		        )
+       		      ;
+       		        =
+       		        (
+       		            x
+       		            y
+       		        )
+       		      )
+       		          							
+       		     )
+       		)
+       		    		   
+          )
+     )
+         		    
+    )
+    							  
+    let
+    (
+     
+      hash
+     (
+      case
+          (
+      	  x
+           Hashtbl.hash
            (
-       	  n
+               List.hd
+               (
+                   x
+               )
+           )
+          )
+     )
+         		    
+    )
+    							  
+    )
+    							  
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  HT
+    
+        								  
+     Weak.Make
+        							     
+    (
+    Hashed
+    )
+    								   
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     tbl
+     HT.create
+     (
+         7
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     r
+     ref
+     (
+         []
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     bunch
+     ifthenelse
+     (
+      if
+      (
+       <
+       (
+           Array.length
+           (
+               Sys.argv
+           )
+           2
+       )
+      )
+      then
+      (
+       10000
+      )
+      else
+      (
+       int_of_string
+       (
+           Array.get
+           (
+            Sys.argv
+            1
+           )
+           												
+       )
+      ) 
+     )
+     	    											  
+    							    		    
+   )
+      									 
+      									 
+                                 
+  Random.init
+  (
+      314
+  )
+                                 
+  
+      									 
+   let
+   (
+    
+     random_string
+    (
+     case
+         (
+     	  n
+          
+          let
+          (
+           (
+              									  
             
-            let
-            (
+             result
+             String.create
              (
-                									  
-              
-               result
-               String.create
+                 n
+             ) 
+            							    		   
+              									  
+           )
+          in
+            
+            sequence
+            (
+               for i
+               0
+               -
                (
                    n
-               ) 
-              							    		   
-                									  
-             )
-            in
-              
-              sequence
-              (
-                forloop 
+                   1
+               )
+               String.set
+               (
+                result
+                i
+                Char.chr
                 (
-                    i
-                    0
-                    <>
-                    -
+                    +
                     (
-                        n
-                        1
-                    )
-                    semicolon 
-                    (
-                        Array.set
+                        32
+                        Random.int
                         (
-                         result
-                         i
-                         Char.chr
-                         (
-                             +
-                             (
-                                 32
-                                 Random.int
-                                 (
-                                     95
-                                 )
-                             )
-                         )
+                            95
                         )
-                            									
                     )
                 )
-              ;
-                result
-              )
-                  							
-            )
-                									
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       added
-       ref
-       (
-           0
-       ) 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       mistakes
-       ref
-       (
-           0
-       ) 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       print_status
-      (
-       case
-           (
-       	  ()
-            
-            let
-            (
-             (
-                									  
-              
-               
-               (
-                len
-                    						 
-               	entries
-               
-               	sumbuck
-               
-               	buckmin
-               
-               	buckmed
-               
-               	buckmax
-               
                )
-               HT.stats
-               (
-                   tbl
-               ) 
-              							    		   
-                									  
+                   									
+                  														  
+            ;
+              result
+            )
+                							
+          )
+              									
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     added
+     ref
+     (
+         0
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     mistakes
+     ref
+     (
+         0
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     print_status
+    (
+     case
+         (
+     	  ()
+          
+          let
+          (
+           (
+              									  
+            
+             
+             (
+              len
+                  						 
+             	entries
+             
+             	sumbuck
+             
+             	buckmin
+             
+             	buckmed
+             
+             	buckmax
+             
              )
-            in
-              
-              sequence
+             HT.stats
+             (
+                 tbl
+             ) 
+            							    		   
+              									  
+           )
+          in
+            
+            sequence
+            (
+              ifthenelse
               (
-                ifthenelse
+               if
+               (
+                >
                 (
-                 if
-                 (
-                  >
+                    entries
+                    *
+                    (
+                        bunch
+                        +
+                        (
+                            
+                             !
+                             (
+                             added
+                             )
+                                							 
+                            1
+                        )
+                    )
+                )
+               )
+               then
+               (
+                
+                sequence
+                (
+                  ifthenelse
                   (
-                      entries
-                      *
+                   if
+                   (
+                    debug
+                   )
+                   then
+                   (
+                    
+                    sequence
+                    (
+                      printf
                       (
-                          bunch
-                          +
-                          (
-                              
-                               !
-                               (
-                               added
-                               )
-                                  							 
-                              1
-                          )
+                          "\n===================\n"
                       )
-                  )
-                 )
-                 then
-                 (
-                  beginEnd 
-                  (
+                    ;
                       
                       sequence
                       (
-                        ifthenelse
+                        printf
                         (
-                         if
-                         (
-                          debug
-                         )
-                         then
-                         (
-                          beginEnd 
+                            "len = %d\n"
+                            len
+                        )
+                      ;
+                        
+                        sequence
+                        (
+                          printf
                           (
+                              "entries = %d\n"
+                              entries
+                          )
+                        ;
+                          
+                          sequence
+                          (
+                            printf
+                            (
+                                "sum of bucket sizes = %d\n"
+                                sumbuck
+                            )
+                          ;
+                            
+                            sequence
+                            (
+                              printf
+                              (
+                                  "min bucket = %d\n"
+                                  buckmin
+                              )
+                            ;
                               
                               sequence
                               (
                                 printf
                                 (
-                                    "\n===================\n"
+                                    "med bucket = %d\n"
+                                    buckmed
                                 )
                               ;
                                 
@@ -403,8 +450,8 @@ toplevels
                                 (
                                   printf
                                   (
-                                      "len = %d\n"
-                                      len
+                                      "max bucket = %d\n"
+                                      buckmax
                                   )
                                 ;
                                   
@@ -412,255 +459,186 @@ toplevels
                                   (
                                     printf
                                     (
-                                        "entries = %d\n"
-                                        entries
+                                        "GC count = %d\n"
+                                        field
+                                        (
+                                        Gc.quick_stat
+                                        (
+                                            ()
+                                        )
+                                        Gc.major_collections
+                                        )
+                                            									 
                                     )
                                   ;
-                                    
-                                    sequence
+                                    flush
                                     (
-                                      printf
-                                      (
-                                          "sum of bucket sizes = %d\n"
-                                          sumbuck
-                                      )
-                                    ;
-                                      
-                                      sequence
-                                      (
-                                        printf
-                                        (
-                                            "min bucket = %d\n"
-                                            buckmin
-                                        )
-                                      ;
-                                        
-                                        sequence
-                                        (
-                                          printf
-                                          (
-                                              "med bucket = %d\n"
-                                              buckmed
-                                          )
-                                        ;
-                                          
-                                          sequence
-                                          (
-                                            printf
-                                            (
-                                                "max bucket = %d\n"
-                                                buckmax
-                                            )
-                                          ;
-                                            
-                                            sequence
-                                            (
-                                              printf
-                                              (
-                                                  "GC count = %d\n"
-                                                  field
-                                                  (
-                                                  Gc.quick_stat
-                                                  (
-                                                      ()
-                                                  )
-                                                  path_field_name 
-                                                  (
-                                                      Gc
-                                                      major_collections
-                                                  )
-                                                  )
-                                                      									 
-                                              )
-                                            ;
-                                              semicolon 
-                                              (
-                                                  flush
-                                                  (
-                                                      stdout
-                                                  )
-                                              )
-                                            )
-                                                							
-                                          )
-                                              							
-                                        )
-                                            							
-                                      )
-                                          							
+                                        stdout
                                     )
-                                        							
                                   )
                                       							
                                 )
                                     							
                               )
                                   							
-                          )
-                         )
-                         else
-                         (
-                         )
-                        )
-                            									   
-                      ;
-                        semicolon 
-                        (
-                            incr
-                            (
-                                mistakes
                             )
+                                							
+                          )
+                              							
                         )
+                            							
                       )
                           							
-                  )
-                 )
-                 else
-                 (
-                 )
-                )
-                    									   
-              ;
-                semicolon 
-                (
-                    :=
-                    (
-                        added
-                        0
                     )
+                        							
+                   )
+                   else
+                   (
+                   )
+                  )
+                      									   
+                ;
+                  incr
+                  (
+                      mistakes
+                  )
                 )
+                    							
+               )
+               else
+               (
+               )
               )
-                  							
+                  									   
+            ;
+              :=
+              (
+                  added
+                  0
+              )
             )
-                									
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    Gc.create_alarm
-    (
-        print_status
-    )
-    forloop 
-    (
-        j
-        0
-        <>
-        99
-        
-        sequence
-        (
-          :=
-          (
-              r
-              []
+                							
           )
-        ;
+              									
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  Gc.create_alarm
+  (
+      print_status
+  )
+                                 
+   for j
+   0
+   99
+   
+   sequence
+   (
+     :=
+     (
+         r
+         []
+     )
+   ;
+     
+     sequence
+     (
+       incr
+       (
+           added
+       )
+     ;
+        for i
+        1
+        bunch
+        
+        let
+        (
+         (
+            									  
+          
+           c
+           random_string
+           (
+               7
+           ) 
+          							    		   
+            									  
+         )
+        in
           
           sequence
           (
-            incr
+            :=
             (
-                added
+                r
+                ::
+                (
+                    c
+                    
+                     !
+                     (
+                     r
+                     )
+                        							 
+                )
             )
           ;
-            semicolon 
+            HT.add
             (
-                forloop 
-                (
-                    i
-                    1
-                    <>
-                    bunch
-                    
-                    let
-                    (
-                     (
-                        									  
-                      
-                       c
-                       random_string
-                       (
-                           7
-                       ) 
-                      							    		   
-                        									  
-                     )
-                    in
-                      
-                      sequence
-                      (
-                        :=
-                        (
-                            r
-                            ::
-                            (
-                                c
-                                
-                                 !
-                                 (
-                                 r
-                                 )
-                                    							 
-                            )
-                        )
-                      ;
-                        semicolon 
-                        (
-                            HT.add
-                            (
-                                tbl
-                                
-                                 !
-                                 (
-                                 r
-                                 )
-                                    							 
-                            )
-                        )
-                      )
-                          							
-                    )
-                        									
-                )
+                tbl
+                
+                 !
+                 (
+                 r
+                 )
+                    							 
             )
           )
               							
         )
-            							
-    )
-    ifthenelse
+            									
+           														  
+     )
+         							
+   )
+       							
+      														  
+                                 
+  ifthenelse
+  (
+   if
+   (
+    <
     (
-     if
-     (
-      <
-      (
-          
-           !
-           (
-           mistakes
-           )
-              							 
-          5
-      )
-     )
-     then
-     (
-      printf
-      (
-          "pass\n"
-      )
-     )
-     else
-     (
-      printf
-      (
-          "fail\n"
-      )
-     ) 
+        
+         !
+         (
+         mistakes
+         )
+            							 
+        5
     )
-    	    											 
-    
+   )
+   then
+   (
+    printf
+    (
+        "pass\n"
+    )
+   )
+   else
+   (
+    printf
+    (
+        "fail\n"
+    )
+   ) 
+  )
+  	    											 
+                                 
 )

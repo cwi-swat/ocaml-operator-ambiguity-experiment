@@ -1,1026 +1,1051 @@
-toplevels 
+
 (
+    							  
+  
+      									 
+   let
+   (
     
-        									 
-     let
+     n0
+     Int64.of_int
+     (
+         0
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     n1
+     Int64.of_int
+     (
+         1
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     n2
+     Int64.of_int
+     (
+         2
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     n3
+     Int64.of_int
+     (
+         3
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     n5
+     Int64.of_int
+     (
+         5
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     %
+     Int64.rem 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     *
+     Int64.mul 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     /
+     Int64.div 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     +
+     Int64.add 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     digit
+     Int64.of_string
+     (
+         "1000000000000000000"
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     mul
+    (
+     case
+         (
+      		
+      		 n
+      		(
+      		 case
+      		     (
+      		 	  
+      		 	  (
+      		 	   pl
+      		 	       						 
+      		 	  	ph
+      		 	  
+      		 	  )
+      		      
+      		      (
+      		          					 %
+      		            					 (
+      		            					     *
+      		            					     (
+      		            					         n
+      		            					         pl
+      		            					     )
+      		            					     digit
+      		            					 )
+      		          					 
+      		      	+
+      		      	(
+      		      	    *
+      		      	    (
+      		      	        n
+      		      	        ph
+      		      	    )
+      		      	    /
+      		      	    (
+      		      	        *
+      		      	        (
+      		      	            n
+      		      	            pl
+      		      	        )
+      		      	        digit
+      		      	    )
+      		      	)
+      		          					 
+      		      )
+      		          					 
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     cmp
+    (
+     case
+         (
+      		
+      		 
+      		 (
+      		  nl
+      		      						 
+      		 	nh
+      		 
+      		 )
+      		(
+      		 case
+      		     (
+      		 	  
+      		 	  (
+      		 	   pl
+      		 	       						 
+      		 	  	ph
+      		 	  
+      		 	  )
+      		      ifthenelse
+      		      (
+      		       if
+      		       (
+      		        <
+      		        (
+      		            nh
+      		            ph
+      		        )
+      		       )
+      		       then
+      		       (
+      		        -1
+      		       )
+      		       else
+      		       (
+      		        ifthenelse
+      		        (
+      		         if
+      		         (
+      		          >
+      		          (
+      		              nh
+      		              ph
+      		          )
+      		         )
+      		         then
+      		         (
+      		          1
+      		         )
+      		         else
+      		         (
+      		          ifthenelse
+      		          (
+      		           if
+      		           (
+      		            <
+      		            (
+      		                nl
+      		                pl
+      		            )
+      		           )
+      		           then
+      		           (
+      		            -1
+      		           )
+      		           else
+      		           (
+      		            ifthenelse
+      		            (
+      		             if
+      		             (
+      		              >
+      		              (
+      		                  nl
+      		                  pl
+      		              )
+      		             )
+      		             then
+      		             (
+      		              1
+      		             )
+      		             else
+      		             (
+      		              0
+      		             ) 
+      		            )
+      		            	    											 
+      		           ) 
+      		          )
+      		          	    											 
+      		         ) 
+      		        )
+      		        	    											 
+      		       ) 
+      		      )
+      		      	    											 
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     x2
      (
       
-       n0
-       Int64.of_int
-       (
-           0
-       ) 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       n1
-       Int64.of_int
-       (
-           1
-       ) 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       n2
-       Int64.of_int
-       (
-           2
-       ) 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       n3
-       Int64.of_int
-       (
-           3
-       ) 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       n5
-       Int64.of_int
-       (
-           5
-       ) 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       %
-       Int64.rem 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       *
-       Int64.mul 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       /
-       Int64.div 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       +
-       Int64.add 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       digit
-       Int64.of_string
-       (
-           "1000000000000000000"
-       ) 
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       mul
+      case
       (
-       case
-           (
-        		
-        		 n
-        		(
-        		 case
-        		     (
-        		 	  
-        		 	  (
-        		 	   pl
-        		 	       						 
-        		 	  	ph
-        		 	  
-        		 	  )
-        		      
-        		      (
-        		          					 %
-        		            					 (
-        		            					     *
-        		            					     (
-        		            					         n
-        		            					         pl
-        		            					     )
-        		            					     digit
-        		            					 )
-        		          					 
-        		      	+
-        		      	(
-        		      	    *
-        		      	    (
-        		      	        n
-        		      	        ph
-        		      	    )
-        		      	    /
-        		      	    (
-        		      	        *
-        		      	        (
-        		      	            n
-        		      	            pl
-        		      	        )
-        		      	        digit
-        		      	    )
-        		      	)
-        		          					 
-        		      )
-        		          					 
-        		     )
-        		)
-        		    		   
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
+      p
       
-       cmp
+      mul
       (
-       case
-           (
-        		
-        		 
-        		 (
-        		  nl
-        		      						 
-        		 	nh
-        		 
-        		 )
-        		(
-        		 case
-        		     (
-        		 	  
-        		 	  (
-        		 	   pl
-        		 	       						 
-        		 	  	ph
-        		 	  
-        		 	  )
-        		      ifthenelse
-        		      (
-        		       if
-        		       (
-        		        <
-        		        (
-        		            nh
-        		            ph
-        		        )
-        		       )
-        		       then
-        		       (
-        		        -1
-        		       )
-        		       else
-        		       (
-        		        ifthenelse
-        		        (
-        		         if
-        		         (
-        		          >
-        		          (
-        		              nh
-        		              ph
-        		          )
-        		         )
-        		         then
-        		         (
-        		          1
-        		         )
-        		         else
-        		         (
-        		          ifthenelse
-        		          (
-        		           if
-        		           (
-        		            <
-        		            (
-        		                nl
-        		                pl
-        		            )
-        		           )
-        		           then
-        		           (
-        		            -1
-        		           )
-        		           else
-        		           (
-        		            ifthenelse
-        		            (
-        		             if
-        		             (
-        		              >
-        		              (
-        		                  nl
-        		                  pl
-        		              )
-        		             )
-        		             then
-        		             (
-        		              1
-        		             )
-        		             else
-        		             (
-        		              0
-        		             ) 
-        		            )
-        		            	    											 
-        		           ) 
-        		          )
-        		          	    											 
-        		         ) 
-        		        )
-        		        	    											 
-        		       ) 
-        		      )
-        		      	    											 
-        		     )
-        		)
-        		    		   
-           )
+          n2
+          p
       )
-          		    
+      )
+      													 
      )
-        									 
-        									 
+        						   
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
+     x3
      (
       
-       x2
-       (
-        
-        case
-        (
-        p
-        
-        mul
-        (
-            n2
-            p
-        )
-        )
-        													 
-       )
-          						   
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       x3
-       (
-        
-        case
-        (
-        p
-        
-        mul
-        (
-            n3
-            p
-        )
-        )
-        													 
-       )
-          						   
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       x5
-       (
-        
-        case
-        (
-        p
-        
-        mul
-        (
-            n5
-            p
-        )
-        )
-        													 
-       )
-          						   
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       nn1
-       
-       (
-           					 n1
-           					 
-       	n0
-           					 
-       )
-           					  
-      							    		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       pr
+      case
       (
-       case
-           (
-       	  
-       	  (
-       	   nl
-       	       						 
-       	  	nh
-       	  
-       	  )
-            ifthenelse
-            (
-             if
-             (
-              =
-              (
-                  compare
-                  (
-                      nh
-                      n0
-                  )
-                  0
-              )
-             )
-             then
-             (
-              Printf.printf
-              (
-                  "%Ld\n"
-                  nl
-              )
-             )
-             else
-             (
-              Printf.printf
-              (
-                  "%Ld%018Ld\n"
-                  nh
-                  nl
-              )
-             ) 
-            )
-            	    											 
-           )
+      p
+      
+      mul
+      (
+          n3
+          p
       )
-          		    
+      )
+      													 
      )
-        									 
-        									 
+        						   
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     open Lazy
-        									 
-        									 
+     x5
+     (
+      
+      case
+      (
+      p
+      
+      mul
+      (
+          n5
+          p
+      )
+      )
+      													 
+     )
+        						   
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     type
-     (  						
-         							    	 
-        lcons
-        type
-        params=
-        (
-        
-         
-         a
-        										 
-        )
-        cstrs =
-        (
-        )
-        kind =
-        
-        
-        (
-        								  
-        Cons
-        (
-        									
-         a
-        								     
-         
-          "extendedModulePath1"([],"Lazy")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+     nn1
+     
+     (
+         					 n1
+         					 
+     	n0
+         					 
+     )
+         					  
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     pr
+    (
+     case
+         (
+     	  
+     	  (
+     	   nl
+     	       						 
+     	  	nh
+     	  
+     	  )
+          ifthenelse
           (
-            
-             lcons
-             (
-               a
-             )
-             
-                									
+           if
+           (
+            =
+            (
+                compare
+                (
+                    nh
+                    n0
+                )
+                0
+            )
+           )
+           then
+           (
+            Printf.printf
+            (
+                "%Ld\n"
+                nl
+            )
+           )
+           else
+           (
+            Printf.printf
+            (
+                "%Ld%018Ld\n"
+                nh
+                nl
+            )
+           ) 
+          )
+          	    											 
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   open Lazy
+      									 
+      									 
+                                 
+  
+      									 
+   type
+   (  						
+       							    	 
+      lcons
+      type
+      params=
+      (
+      
+       
+       a
+      										 
+      )
+      cstrs =
+      (
+      )
+      kind =
+      
+      
+      (
+      								  
+      Cons
+      (
+      									
+       a
+      								     
+       
+        "extendedModulePath1"([],"Lazy")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+        (
+          
+           lcons
+           (
+             a
+           )
+           
+              									
+        )
+        
+           									
+      								     
+      )
+      								    
+      								  
+      )
+      								  
+      														  
+      														 
+     											   
+   								        
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   type
+   (  						
+       							    	 
+      llist
+      type
+      params=
+      (
+      
+       
+       a
+      										 
+      )
+      cstrs =
+      (
+      )
+      kind =
+      
+       "extendedModulePath1"([],"Lazy")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+       (
+         
+          lcons
+          (
+            a
           )
           
              									
-        								     
-        )
-        								    
-        								  
-        )
-        								  
-        														  
-        														 
-       											   
-     								        
-     )
-        									 
-        									 
-    
-        									 
-     type
-     (  						
-         							    	 
-        llist
-        type
-        params=
-        (
-        
-         
-         a
-        										 
-        )
-        cstrs =
-        (
-        )
-        kind =
-        
-         "extendedModulePath1"([],"Lazy")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-         (
-           
-            lcons
-            (
-              a
-            )
-            
-               									
-         )
-         
-            									
-        
-        														  
-        														 
-       											   
-     								        
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
+       )
+       
+          									
       
-       map
-      (
-       case
-           (
-        		
-        		 f
-        		(
-        		 case
-        		     (
-        		 	  l
-        		      lazy 
-        		      (
-        		          match
-        		          force
-        		          (
-        		              l
-        		          )
-        		          (
-        		          
-        		          case
-        		          (
-        		            
-        		            Cons
-        		            
-        		            (
-        		             x
-        		                 						 
-        		            	ll
-        		            
-        		            )
-        		            									  
-        		            
-        		            
-        		             Cons
-        		             
-        		             (
-        		                 					 f
-        		                   					 (
-        		                   					     x
-        		                   					 )
-        		                 					 
-        		             	map
-        		             	(
-        		             	    f
-        		             	    ll
-        		             	)
-        		                 					 
-        		             )
-        		                 					 
-        		                								 
-        		          ) 
-        		          	        											 
-        		          	        											 
-        		          )
-        		          			   
-        		      )
-        		     )
-        		)
-        		    		   
-           )
-      )
-          		    
-     )
-        									 
-        									 
+      														  
+      														 
+     											   
+   								        
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     let
-     (
-      
-       merge
-      (
-       case
-           (
-        		
-        		 cmp
-        		(
-        		 case
-        		     (
-        		  		
-        		  		 l1
-        		  		(
-        		  		 case
-        		  		     (
-        		  		 	  l2
-        		  		      lazy 
-        		  		      (
-        		  		          match
-        		  		          
-        		  		          (
-        		  		              					 force
-        		  		                					 (
-        		  		                					     l1
-        		  		                					 )
-        		  		              					 
-        		  		          	force
-        		  		          	(
-        		  		          	    l2
-        		  		          	)
-        		  		              					 
-        		  		          )
-        		  		              					 
-        		  		          (
-        		  		          
-        		  		          case
-        		  		          (
-        		  		            
-        		  		            (
-        		  		             
-        		  		             Cons
-        		  		             
-        		  		             (
-        		  		              x1
-        		  		                  						 
-        		  		             	ll1
-        		  		             
-        		  		             )
-        		  		             									  
-        		  		                 						 
-        		  		            	
-        		  		            	Cons
-        		  		            	
-        		  		            	(
-        		  		            	 x2
-        		  		            	     						 
-        		  		            		ll2
-        		  		            	
-        		  		            	)
-        		  		            										  
-        		  		            
-        		  		            )
-        		  		            
-        		  		            
-        		  		            let
-        		  		            (
-        		  		             (
-        		  		                									  
-        		  		              
-        		  		               c
-        		  		               cmp
-        		  		               (
-        		  		                   x1
-        		  		                   x2
-        		  		               ) 
-        		  		              							    		   
-        		  		                									  
-        		  		             )
-        		  		            in
-        		  		              ifthenelse
-        		  		              (
-        		  		               if
-        		  		               (
-        		  		                =
-        		  		                (
-        		  		                    c
-        		  		                    0
-        		  		                )
-        		  		               )
-        		  		               then
-        		  		               (
-        		  		                
-        		  		                 Cons
-        		  		                 
-        		  		                 (
-        		  		                     					 x1
-        		  		                     					 
-        		  		                 	merge
-        		  		                 	(
-        		  		                 	    cmp
-        		  		                 	    ll1
-        		  		                 	    ll2
-        		  		                 	)
-        		  		                     					 
-        		  		                 )
-        		  		                     					 
-        		  		                    								 
-        		  		               )
-        		  		               else
-        		  		               (
-        		  		                ifthenelse
-        		  		                (
-        		  		                 if
-        		  		                 (
-        		  		                  <
-        		  		                  (
-        		  		                      c
-        		  		                      0
-        		  		                  )
-        		  		                 )
-        		  		                 then
-        		  		                 (
-        		  		                  
-        		  		                   Cons
-        		  		                   
-        		  		                   (
-        		  		                       					 x1
-        		  		                       					 
-        		  		                   	merge
-        		  		                   	(
-        		  		                   	    cmp
-        		  		                   	    ll1
-        		  		                   	    l2
-        		  		                   	)
-        		  		                       					 
-        		  		                   )
-        		  		                       					 
-        		  		                      								 
-        		  		                 )
-        		  		                 else
-        		  		                 (
-        		  		                  
-        		  		                   Cons
-        		  		                   
-        		  		                   (
-        		  		                       					 x2
-        		  		                       					 
-        		  		                   	merge
-        		  		                   	(
-        		  		                   	    cmp
-        		  		                   	    l1
-        		  		                   	    ll2
-        		  		                   	)
-        		  		                       					 
-        		  		                   )
-        		  		                       					 
-        		  		                      								 
-        		  		                 ) 
-        		  		                )
-        		  		                	    											 
-        		  		               ) 
-        		  		              )
-        		  		              	    											 
-        		  		            )
-        		  		                									
-        		  		          ) 
-        		  		          	        											 
-        		  		          	        											 
-        		  		          )
-        		  		          			   
-        		  		      )
-        		  		     )
-        		  		)
-        		  		    		   
-        		     )
-        		)
-        		    		   
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       iter_interval
-      (
-       case
-           (
-        		
-        		 f
-        		(
-        		 case
-        		     (
-        		  		
-        		  		 l
-        		  		(
-        		  		 case
-        		  		     (
-        		  		 	  
-        		  		 	  (
-        		  		 	   start
-        		  		 	       						 
-        		  		 	  	stop
-        		  		 	  
-        		  		 	  )
-        		  		      ifthenelse
-        		  		      (
-        		  		       if
-        		  		       (
-        		  		        =
-        		  		        (
-        		  		            stop
-        		  		            0
-        		  		        )
-        		  		       )
-        		  		       then
-        		  		       (
-        		  		        ()
-        		  		       )
-        		  		       else
-        		  		       (
-        		  		        match
-        		  		        force
-        		  		        (
-        		  		            l
-        		  		        )
-        		  		        (
-        		  		        
-        		  		        case
-        		  		        (
-        		  		          
-        		  		          Cons
-        		  		          
-        		  		          (
-        		  		           x
-        		  		               						 
-        		  		          	ll
-        		  		          
-        		  		          )
-        		  		          									  
-        		  		          
-        		  		          
-        		  		          sequence
-        		  		          (
-        		  		            ifthenelse
-        		  		            (
-        		  		             if
-        		  		             (
-        		  		              <=
-        		  		              (
-        		  		                  start
-        		  		                  0
-        		  		              )
-        		  		             )
-        		  		             then
-        		  		             (
-        		  		              f
-        		  		              (
-        		  		                  x
-        		  		              )
-        		  		             )
-        		  		             else
-        		  		             (
-        		  		             )
-        		  		            )
-        		  		                									   
-        		  		          ;
-        		  		            iter_interval
-        		  		            (
-        		  		                f
-        		  		                ll
-        		  		                
-        		  		                (
-        		  		                    					 -
-        		  		                      					 (
-        		  		                      					     start
-        		  		                      					     1
-        		  		                      					 )
-        		  		                    					 
-        		  		                	-
-        		  		                	(
-        		  		                	    stop
-        		  		                	    1
-        		  		                	)
-        		  		                    					 
-        		  		                )
-        		  		                    					 
-        		  		            )
-        		  		          )
-        		  		              							
-        		  		        ) 
-        		  		        	        											 
-        		  		        	        											 
-        		  		        )
-        		  		        			   
-        		  		       ) 
-        		  		      )
-        		  		      	    											 
-        		  		     )
-        		  		)
-        		  		    		   
-        		     )
-        		)
-        		    		   
-           )
-      )
-          		    
-     )
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       hamming
-       lazy 
-       (
-           
-            Cons
-            
-            (
-                					 nn1
-                					 
-            	merge
-            	(
-            	    cmp
-            	    ham2
-            	    merge
-            	    (
-            	        cmp
-            	        ham3
-            	        ham5
-            	    )
-            	)
-                					 
-            )
-                					 
-               								 
-       ) 
-      							    		     
-      ham2
-      lazy 
-      (
-          force
-          (
-              map
-              (
-                  x2
-                  hamming
-              )
-          )
-      ) 
-     							    		     
-      ham3
-      lazy 
-      (
-          force
-          (
-              map
-              (
-                  x3
-                  hamming
-              )
-          )
-      ) 
-     							    		     
-      ham5
-      lazy 
-      (
-          force
-          (
-              map
-              (
-                  x5
-                  hamming
-              )
-          )
-      ) 
-     							    		    
-     )
-        									 
-        									 
-    iter_interval
+     map
     (
-        pr
-        hamming
-        
-        (
-            					 88000
-            					 
-        	88100
-            					 
-        )
-            					 
+     case
+         (
+      		
+      		 f
+      		(
+      		 case
+      		     (
+      		 	  l
+      		      lazy 
+      		      (
+      		          match
+      		          force
+      		          (
+      		              l
+      		          )
+      		          (
+      		          
+      		          case
+      		          (
+      		            
+      		            Cons
+      		            
+      		            (
+      		             x
+      		                 						 
+      		            	ll
+      		            
+      		            )
+      		            									  
+      		            
+      		            
+      		             Cons
+      		             
+      		             (
+      		                 					 f
+      		                   					 (
+      		                   					     x
+      		                   					 )
+      		                 					 
+      		             	map
+      		             	(
+      		             	    f
+      		             	    ll
+      		             	)
+      		                 					 
+      		             )
+      		                 					 
+      		                								 
+      		          ) 
+      		          	        											 
+      		          	        											 
+      		          )
+      		          			   
+      		      )
+      		     )
+      		)
+      		    		   
+         )
     )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
+     merge
+    (
+     case
+         (
+      		
+      		 cmp
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 l1
+      		  		(
+      		  		 case
+      		  		     (
+      		  		 	  l2
+      		  		      lazy 
+      		  		      (
+      		  		          match
+      		  		          
+      		  		          (
+      		  		              					 force
+      		  		                					 (
+      		  		                					     l1
+      		  		                					 )
+      		  		              					 
+      		  		          	force
+      		  		          	(
+      		  		          	    l2
+      		  		          	)
+      		  		              					 
+      		  		          )
+      		  		              					 
+      		  		          (
+      		  		          
+      		  		          case
+      		  		          (
+      		  		            
+      		  		            (
+      		  		             
+      		  		             Cons
+      		  		             
+      		  		             (
+      		  		              x1
+      		  		                  						 
+      		  		             	ll1
+      		  		             
+      		  		             )
+      		  		             									  
+      		  		                 						 
+      		  		            	
+      		  		            	Cons
+      		  		            	
+      		  		            	(
+      		  		            	 x2
+      		  		            	     						 
+      		  		            		ll2
+      		  		            	
+      		  		            	)
+      		  		            										  
+      		  		            
+      		  		            )
+      		  		            
+      		  		            
+      		  		            let
+      		  		            (
+      		  		             (
+      		  		                									  
+      		  		              
+      		  		               c
+      		  		               cmp
+      		  		               (
+      		  		                   x1
+      		  		                   x2
+      		  		               ) 
+      		  		              							    		   
+      		  		                									  
+      		  		             )
+      		  		            in
+      		  		              ifthenelse
+      		  		              (
+      		  		               if
+      		  		               (
+      		  		                =
+      		  		                (
+      		  		                    c
+      		  		                    0
+      		  		                )
+      		  		               )
+      		  		               then
+      		  		               (
+      		  		                
+      		  		                 Cons
+      		  		                 
+      		  		                 (
+      		  		                     					 x1
+      		  		                     					 
+      		  		                 	merge
+      		  		                 	(
+      		  		                 	    cmp
+      		  		                 	    ll1
+      		  		                 	    ll2
+      		  		                 	)
+      		  		                     					 
+      		  		                 )
+      		  		                     					 
+      		  		                    								 
+      		  		               )
+      		  		               else
+      		  		               (
+      		  		                ifthenelse
+      		  		                (
+      		  		                 if
+      		  		                 (
+      		  		                  <
+      		  		                  (
+      		  		                      c
+      		  		                      0
+      		  		                  )
+      		  		                 )
+      		  		                 then
+      		  		                 (
+      		  		                  
+      		  		                   Cons
+      		  		                   
+      		  		                   (
+      		  		                       					 x1
+      		  		                       					 
+      		  		                   	merge
+      		  		                   	(
+      		  		                   	    cmp
+      		  		                   	    ll1
+      		  		                   	    l2
+      		  		                   	)
+      		  		                       					 
+      		  		                   )
+      		  		                       					 
+      		  		                      								 
+      		  		                 )
+      		  		                 else
+      		  		                 (
+      		  		                  
+      		  		                   Cons
+      		  		                   
+      		  		                   (
+      		  		                       					 x2
+      		  		                       					 
+      		  		                   	merge
+      		  		                   	(
+      		  		                   	    cmp
+      		  		                   	    l1
+      		  		                   	    ll2
+      		  		                   	)
+      		  		                       					 
+      		  		                   )
+      		  		                       					 
+      		  		                      								 
+      		  		                 ) 
+      		  		                )
+      		  		                	    											 
+      		  		               ) 
+      		  		              )
+      		  		              	    											 
+      		  		            )
+      		  		                									
+      		  		          ) 
+      		  		          	        											 
+      		  		          	        											 
+      		  		          )
+      		  		          			   
+      		  		      )
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     iter_interval
+    (
+     case
+         (
+      		
+      		 f
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 l
+      		  		(
+      		  		 case
+      		  		     (
+      		  		 	  
+      		  		 	  (
+      		  		 	   start
+      		  		 	       						 
+      		  		 	  	stop
+      		  		 	  
+      		  		 	  )
+      		  		      ifthenelse
+      		  		      (
+      		  		       if
+      		  		       (
+      		  		        =
+      		  		        (
+      		  		            stop
+      		  		            0
+      		  		        )
+      		  		       )
+      		  		       then
+      		  		       (
+      		  		        ()
+      		  		       )
+      		  		       else
+      		  		       (
+      		  		        match
+      		  		        force
+      		  		        (
+      		  		            l
+      		  		        )
+      		  		        (
+      		  		        
+      		  		        case
+      		  		        (
+      		  		          
+      		  		          Cons
+      		  		          
+      		  		          (
+      		  		           x
+      		  		               						 
+      		  		          	ll
+      		  		          
+      		  		          )
+      		  		          									  
+      		  		          
+      		  		          
+      		  		          sequence
+      		  		          (
+      		  		            ifthenelse
+      		  		            (
+      		  		             if
+      		  		             (
+      		  		              <=
+      		  		              (
+      		  		                  start
+      		  		                  0
+      		  		              )
+      		  		             )
+      		  		             then
+      		  		             (
+      		  		              f
+      		  		              (
+      		  		                  x
+      		  		              )
+      		  		             )
+      		  		             else
+      		  		             (
+      		  		             )
+      		  		            )
+      		  		                									   
+      		  		          ;
+      		  		            iter_interval
+      		  		            (
+      		  		                f
+      		  		                ll
+      		  		                
+      		  		                (
+      		  		                    					 -
+      		  		                      					 (
+      		  		                      					     start
+      		  		                      					     1
+      		  		                      					 )
+      		  		                    					 
+      		  		                	-
+      		  		                	(
+      		  		                	    stop
+      		  		                	    1
+      		  		                	)
+      		  		                    					 
+      		  		                )
+      		  		                    					 
+      		  		            )
+      		  		          )
+      		  		              							
+      		  		        ) 
+      		  		        	        											 
+      		  		        	        											 
+      		  		        )
+      		  		        			   
+      		  		       ) 
+      		  		      )
+      		  		      	    											 
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     hamming
+     lazy 
+     (
+         
+          Cons
+          
+          (
+              					 nn1
+              					 
+          	merge
+          	(
+          	    cmp
+          	    ham2
+          	    merge
+          	    (
+          	        cmp
+          	        ham3
+          	        ham5
+          	    )
+          	)
+              					 
+          )
+              					 
+             								 
+     ) 
+    							    		     
+    ham2
+    lazy 
+    (
+        force
+        (
+            map
+            (
+                x2
+                hamming
+            )
+        )
+    ) 
+   							    		     
+    ham3
+    lazy 
+    (
+        force
+        (
+            map
+            (
+                x3
+                hamming
+            )
+        )
+    ) 
+   							    		     
+    ham5
+    lazy 
+    (
+        force
+        (
+            map
+            (
+                x5
+                hamming
+            )
+        )
+    ) 
+   							    		    
+   )
+      									 
+      									 
+                                 
+  iter_interval
+  (
+      pr
+      hamming
+      
+      (
+          					 88000
+          					 
+      	88100
+          					 
+      )
+          					 
+  )
+                                 
 )

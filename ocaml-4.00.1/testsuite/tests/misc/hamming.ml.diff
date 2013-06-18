@@ -1,58 +1,56 @@
-1d0
-< toplevels 
-328c327
-<           "extendedModulePath1"([],"Lazy")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+327c327
+<         "extendedModulePath1"([],"Lazy")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
 ---
 >                      Lazy.t
-350c349
-<          "extendedModulePath1"([],"Lazy")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+349c349
+<        "extendedModulePath1"([],"Lazy")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
 ---
 >                Lazy.t
-369,371c368
-<         		      lazy 
-<         		      (
-<         		          match
+368,370c368
+<       		      lazy 
+<       		      (
+<       		          match
 ---
 >               Pexp_lazy              match
-403d399
-<      )
-419,421c415
-<         		  		      lazy 
-<         		  		      (
-<         		  		          match
+402d399
+<    )
+418,420c415
+<       		  		      lazy 
+<       		  		      (
+<       		  		          match
 ---
 >                   Pexp_lazy                  match
-532d525
-<      )
-636,638c629
-<        lazy 
-<        (
-<             Cons
+531d525
+<    )
+635,637c629
+<      lazy 
+<      (
+<           Cons
 ---
 >       Pexp_lazy      Cons
-653d643
-<        ) 
-655,657c645
-<       lazy 
-<       (
-<           force
+652d643
+<      ) 
+654,656c645
+<     lazy 
+<     (
+<         force
 ---
 >       Pexp_lazy      force
-665d652
-<       ) 
-667,669c654
-<       lazy 
-<       (
-<           force
+664d652
+<     ) 
+666,668c654
+<     lazy 
+<     (
+<         force
 ---
 >       Pexp_lazy      force
-677d661
-<       ) 
-679,681c663
-<       lazy 
-<       (
-<           force
+676d661
+<     ) 
+678,680c663
+<     lazy 
+<     (
+<         force
 ---
 >       Pexp_lazy      force
-690d671
-<      )
+689d671
+<    )
