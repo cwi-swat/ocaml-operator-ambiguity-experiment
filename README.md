@@ -7,8 +7,8 @@ for implementing operator priority and associativity rules.
 ### Directory structure:
 
 1. modified-ocaml-astprinter: the modified printast.ml (printbrackets.ml) which prints the bracketed form the AST. Build instructions can be found in run.sh.
-
 2. ocaml.4.00.1: contains the source files in the OCaml test suite. 
+3. ocaml-rascal: the rascal grammar used for parsing the OCaml. Note that the current release of the Rascal parser does not support the rewriting technieque we used in this study. The rewriting functionality is implemented in the branch rascal-jigll of rascal. The new parser will be gradually integrated into Rascal.
 
 ### Method
 For this study, we only considered the .ml files:
