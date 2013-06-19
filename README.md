@@ -30,5 +30,12 @@ grep -v '^\\s*$  file.ml.ocaml > file.ml.ocaml.stripped
 
 The resulting stripped files were compared using the diff utility, ignoring the whitespace:
 ```
-diff -w file.ml.ocaml.stripped file.ml.rascal.stripped > file.ml.rascal.
+diff -w file.ml.ocaml.stripped file.ml.rascal.stripped > file.ml.diff
 ```
+
+If the size of the diff output is zero, it means that the ASTs were the same.
+
+
+
+
+
