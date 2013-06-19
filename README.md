@@ -4,19 +4,20 @@ Safe Specification of Operator Precedence Rules
 This repository reports on the experiment we did on validating the grammar transformation
 for implementing operator priority and associativity rules. 
 
-Directory structure:
+### Directory structure:
 
-modified-ocaml-astprinter: the modified printast.ml (printbrackets.ml) which prints the bracketed form the 
-AST. Build instructions can be found in run.sh.
+1. modified-ocaml-astprinter: the modified printast.ml (printbrackets.ml) which prints the bracketed form the AST. Build instructions can be found in run.sh.
 
-ocaml.4.00.1: contains the source files in the OCaml test suite. 
+2. ocaml.4.00.1: contains the source files in the OCaml test suite. 
 
-For this study, we only considered .ml files (The following commands should be executed in the ocaml.4.00.1 folder)
+### Method
+For this study, we only considered the .ml files:
 
 ```
 > find . -iname "*.ml" | wc -l
 387
 ```
+(The commands should be executed in the ocaml.4.00.1 folder, i.e., . = ocaml.4.00.1)
 
 We have not considered the files in the tool-ocaml folder of the test suite, as they only 
 contain only source code comments that document expected output (assembler code) of the compiler.
