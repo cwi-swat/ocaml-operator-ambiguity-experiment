@@ -13,39 +13,38 @@ import ParseTree;
 import Node;
 import Type;
 
-/*
-s = readFile(|home:///input.ml|);
-import OCaml;
-import Jigll;
-generate(#start[Program]);
-import Tests;
-*/
+str path = "Users/ali/workspace/ocaml-operator-ambiguity-experiment/ocaml-4.00.1/testsuite/tests/";
+
 public void run() {	 
-	files = readFileLines(|file:///Users/ali/workspace/ocaml-operator-ambiguity-experiment/new.txt|);
+	files = readFileLines(|file:///| + path + "/" + new.txt);
 	for (f <- files) {
+		runFile(f);
+	}
+}
+
+public void runFile(str f) {
 		print(f + "...");
 		try {
-			tree = jparse(#start[Implementation], readFile(|file:///Users/ali/workspace/ocaml-operator-ambiguity-experiment| + f));
+			tree = jparse(#start[Implementation], readFile(|file:///| + path + "/" + f));
 			
 			if (/amb(_) := tree) {
 				tree = filterOCaml(tree);
 				if(/amb(_) := tree) {
 					println("Ambiguous!");
-					continue;
+					return;
 				}
 			} 
 		
 			s = printAST(tree);
-   			writeFile(|file:///Users/ali/workspace/ocaml-operator-ambiguity-experiment| + (f + ".rascal"), s);
+   			writeFile(|file:///| + path + "/" + (f + ".rascal"), s);
 			println("OK");
 		}
 		catch ParseError(el) : {
 			println("Parse Error");
-			continue;
 		}	
-	}
+	
 }
-
+ 
 public void do(type[&T <: Tree] nont, str input) {
    x = jparse(nont, input);
    y = filterOCaml(x);
@@ -77,20 +76,8 @@ public void do(type[&T <: Tree] nont, str input) {
 
 &T<:Tree amb({&T elem}) = elem;
 
-//set[Expr] blahblah111(set[Tree] s) {
-//  if ({ifThenElse(Expr _, ifThen(Expr _, Expr _), Expr _), Expr x} := s) {
-//    return {x};
-//  }
-//  if({field(Expr _, field_name), Expr x} := s) {
-//  	return {x}; 
-//  }
-//  fail;
-//}
-
 default set[Expr] filterOCaml(set[Expr] x) = x;
 
-// TODO: Ali add your renamings here from the names of the grammar rules to the operators that
-// OCaml prints		
 map[str,str] renamings = ("plus":"+");
 
 str printAST(Tree x) = printAST(implode(#value, x));
@@ -630,13 +617,13 @@ str printAST(value v) {
 											   ' (
 											   ' )
 											   ' kind =
-											   '(
+											   ' (
 											   ' <printAST(info)>
-											   ')
+											   ' )
 											   ";
 											   
 											   
-	case "typeInformation"(eq, rep, constraints): return "<printAST(eq)>
+	case "typeInformation"(typeEquation, rep, constraints): return "<printAST(typeEquation)>
 														 '<printAST(rep)>
 														  <for(c <- constraints) {>
 							   							 ' <printAST(c)>
@@ -662,11 +649,9 @@ str printAST(value v) {
 	                           ";
 	                           
 	case "constrDecls"(_, _, l) : return "
-								 '(
 								  <for(constrDecl <- l) {>
 								 '<printAST(constrDecl)>
 								  <}>
-								 ')
 								  ";         
 								  
 	case "typexprConstr2"(t) : return printAST(t);							                   
