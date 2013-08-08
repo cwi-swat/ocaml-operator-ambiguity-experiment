@@ -62,9 +62,6 @@ public void do(type[&T <: Tree] nont, str input) {
 &T<:Tree filterOCaml(&T<:Tree p) = visit(p) {
   case amb(alts) :{
       
-	  if ({ifThenElse(Expr _, ifThen(Expr _, Expr _), Expr _), Expr x} := alts) {
-	   insert amb({x});
-	  }
 	  if({*_, field(Expr _, field_name), Expr x, *_} := alts) {
 	  	insert amb({x});
 	  }
@@ -73,23 +70,6 @@ public void do(type[&T <: Tree] nont, str input) {
 	    insert amb({x});
 	  }	  
 	  	  
-	  //"|"? Pattern ("when" Expr)? "-\>" Expr InnerPatternMatching*
-	  if({InnerPatternMatching+ x, InnerPatternMatching+ y} := alts, size(x.args) < size(y.args)) {
-	    insert amb({x});
-	  }
-//	    list[InnerPatternMatching] ipmForX = [ ];
-//	    if (InnerPatternMatching* ipm := x) 
-//	  		ipmForX = [ xi | xi <- ipm ];
-//
-//	    list[InnerPatternMatching] ipmForY = [ ];
-//	    if (InnerPatternMatching* ipm := y) 
-//	  		ipmForY = [ yi | yi <- ipm ];
-//
-//	   if(size(ipmForX) == 1) {
-//		   insert amb({x});
-//	   } else if(size(ipmForY) == 1) {
-	   	   //insert amb({y});
-	   //}
 	  fail;
   }
   

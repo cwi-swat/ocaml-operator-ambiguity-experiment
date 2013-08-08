@@ -34,8 +34,8 @@ syntax Expr
      | assign5: InstVarName "\<-" Expr)
      > right infix8: Expr InfixSymbol8 Expr
      > ifThenElse: "if" Expr "then" Expr "else" Expr
-     | ifThen: "if" Expr "then" Expr
-     > semicolon: Expr ";" !>> ";"
+     | ifThen: "if" Expr "then" Expr !>> (Layout "else")
+     > semicolon: Expr ";" !>>  ";"
      > right sep: Expr ";" Expr
      > match: "match" Expr "with" PatternMatching
      | function: "function" PatternMatching
@@ -75,7 +75,7 @@ syntax PatternMatching
      ;
      
 syntax InnerPatternMatching
-	 = innerPatternMatching: "|" Pattern ("when" Expr)? "-\>" Expr
+	 = innerPatternMatching: "|" Pattern ("when" Expr)? "-\>" Expr !>> (Layout "|")
 	 ;     
            
 syntax LetBinding 
