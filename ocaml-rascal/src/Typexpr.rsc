@@ -12,9 +12,9 @@ syntax Typexpr
 	 > "private" Typexpr
 	 | tagg: "\'" Ident
      | "_"
-     | "(" Typexpr ")"
+     | typeExprBrackets: "(" Typexpr ")"
      | typexprConstr2: TypeConstr
-  	 | "(" {Typexpr ","}+ ")" TypeConstr
+  	 | typeExprBrackets2: "(" {Typexpr ","}+ ")" TypeConstr
   	 | PolymorphicVariantType
   	 | "\<" ".."? "\>"
   	 | "\<" {MethodType ";"}+ (";" "..")? "\>"

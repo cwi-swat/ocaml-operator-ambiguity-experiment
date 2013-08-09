@@ -654,8 +654,6 @@ str printAST(value v) {
 								  <}>
 								  ";         
 								  
-	case "typexprConstr2"(t) : return printAST(t);							                   
-	
 	case "path_field_name"(path, name) : return "<printAST(path)>.<name>";
 	
 	
@@ -762,6 +760,18 @@ str printAST(value v) {
    								    
     case "tagg"(ident) : return "<ident>";	
     
+    
+    case "typeExprBrackets"(t) : return printAST(t);
+    
+    
+    case "typeExprBrackets2"(l, c): return "
+    									   ' <printAST(c)>
+    									   '    (
+    									   	<for (x <- l) {>
+    									   '	 <printAST(x)>				
+    									   	<}>   
+    									   '    ) 
+    									   ";
     
     case "typexprConstr2"(c) : return "
 								  '<printAST(c)>
@@ -1045,6 +1055,12 @@ str printAST(value v) {
     								'  <printAST(extDecl)>
     								<}>
     								";
+    								
+    
+    // TypeConstr = typeConstr: (ExtendedModulePath ".")? TypeconstrName;
+    case "typeConstr"([], typeConstrName): return "<typeConstrName>";
+    
+    case "typeConstr"([e], typeConstrName): return "<printAST(e)>.<typeConstrName>"; 								
     										 
     												 
     case node n : {
