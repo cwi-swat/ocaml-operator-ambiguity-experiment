@@ -29,8 +29,8 @@ lexical PositiveIntegerLiteral = [0-9] [0-9_]* !>> [0-9_.eElLn]
 
 lexical NegativeIntegerLiteral = [\-] PositiveIntegerLiteral;
 
-lexical FloatLiteral =  [\-]? [0-9] [0-9_]* !>> [0-9] [.]? [0-9_]* !>> [0-9] [eE] ([+\-]? [0-9] [0-9_]*)? !>> [0-9.eE\-]
-                     |  [\-]? [0-9] [0-9_]* !>> [0-9] [.] [0-9_]* !>> [0-9] ([eE] [+\-]? [0-9] [0-9_]*)? !>> [0-9.eE\-]
+lexical FloatLiteral =  [\-]? [0-9] [0-9_]* !>> [0-9] [.]? [0-9_]* !>> [0-9] [eE] [+\-]? [0-9] [0-9_]*? !>> [0-9.eE\-]
+                     |  [\-]? [0-9] [0-9_]* !>> [0-9] [.] ([0-9_]* ([eE] [+\-]? [0-9] [0-9_]*)?) !>> [0-9.eE\-]
 					 ;
 					 
 lexical CharLiteral = [\'] (RegularChar | EscapeSequence) [\'];

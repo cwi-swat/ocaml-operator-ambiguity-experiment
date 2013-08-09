@@ -13,7 +13,7 @@ import ParseTree;
 import Node;
 import Type;
 
-str path = "Users/ali/workspace/ocaml-operator-ambiguity-experiment/ocaml-4.00.1/testsuite/tests/";
+str path = "Users/aliafroozeh/workspace/ocaml-operator-ambiguity-experiment/ocaml-4.00.1/testsuite/tests/";
 
 public void run() {	 
 	files = readFileLines(|file:///| + path + "/" + new.txt);
