@@ -855,15 +855,15 @@ str printAST(value v) {
 										    
     										   
     										   
-   //patternTuple: "[" Pattern (";" Pattern)* ";"? "]"
-   case "patternTuple"([first, *rest]) : return "::
+   //patternTuple: "["  {Pattern ";"}+ ";"? "]"
+   case "patternTuple"([first, *rest], semicolon) : return "::
    												   '(
    												   '  <printAST(first)>
-   												   '  <printAST("patternTuple"(rest))>
+   												   '  <printAST("patternTuple"(rest, semicolon))>
    												   ')
    												   ";
    
-   case "patternTuple"([]): return "[]";
+   case "patternTuple"([], semicolon): return "[]";
    
    case "tagNamePattern"(t, p): return "<printAST(t)>
     								   '<printAST(p)>
