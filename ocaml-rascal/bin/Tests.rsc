@@ -682,16 +682,23 @@ str printAST(value v) {
 										  " <ident> = <typexpr>
 										  ";
 										  
+	case "record1"(field, [], l, _) : return "record
+											   '(
+											   ' <printAST(field)>
+											   ' <printAST(field)>
+										   	     <for (<a, []> <- l) {>
+											   '  <printAST("fieldExpr"(a, a))>
+											   	 <}>
+											   ')";										
 										  
-	case "record1"(field, expr, l, _) : return "record
+	case "record1"(field, [expr], l, _) : return "record
 											   '(
 											   ' <printAST(field)>
 											   ' <printAST(expr)>
-										   	     <for (x <- l) {>
-											   '  <printAST("fieldExpr"(x[0], x[1]))>
+										   	     <for (<a, b> <- l) {>
+											   '  <printAST("fieldExpr"(a, b))>
 											   	 <}>
-											   ')";
-											   
+											   ')";											   
 											   
 	case "fieldExpr"(field, expr) : return "
 										   ' <printAST(field)>
