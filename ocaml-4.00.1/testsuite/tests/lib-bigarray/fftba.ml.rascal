@@ -33,7 +33,30 @@
      		
      		 
      		 px
-     		 <["typexprConstr2"("typeConstr"([],"float")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"float64_elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"c_layout")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"Array1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+     		 
+     		  Array1.t
+     		     (
+     		     									   	
+     		 	 
+     		 	 float
+     		 	 (
+     		 	 )
+     		 	 								  				
+     		     									   	
+     		 	 
+     		 	 float64_elt
+     		 	 (
+     		 	 )
+     		 	 								  				
+     		     									   	
+     		 	 
+     		 	 c_layout
+     		 	 (
+     		 	 )
+     		 	 								  				
+     		     									   	   
+     		     ) 
+     		     									   
      		     										   
      		(
      		 case
@@ -41,7 +64,30 @@
      		  		
      		  		 
      		  		 py
-     		  		 <["typexprConstr2"("typeConstr"([],"float")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"float64_elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"c_layout")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"(["extendedModulePath1"([],"Array1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+     		  		 
+     		  		  Array1.t
+     		  		     (
+     		  		     									   	
+     		  		 	 
+     		  		 	 float
+     		  		 	 (
+     		  		 	 )
+     		  		 	 								  				
+     		  		     									   	
+     		  		 	 
+     		  		 	 float64_elt
+     		  		 	 (
+     		  		 	 )
+     		  		 	 								  				
+     		  		     									   	
+     		  		 	 
+     		  		 	 c_layout
+     		  		 	 (
+     		  		 	 )
+     		  		 	 								  				
+     		  		     									   	   
+     		  		     ) 
+     		  		     									   
      		  		     										   
      		  		(
      		  		 case
@@ -892,7 +938,11 @@
      		  		                                                                                       (
      		  		                                                                                           *.
      		  		                                                                                           (
-     		  		                                                                                               -s2
+     		  		                                                                                               ~-.
+     		  		                                                                                               (
+     		  		                                                                                                 s2
+     		  		                                                                                               )
+     		  		                                                                                                   								  
      		  		                                                                                               cc1
      		  		                                                                                           )
      		  		                                                                                           *.
@@ -2009,7 +2059,11 @@
                                                      j
                                                      1
                                                  )
-                                                 -y
+                                                 ~-.
+                                                 (
+                                                   y
+                                                 )
+                                                     								  
                                                 )
                                                     									
                                               )

@@ -951,7 +951,11 @@ str printAST(value v) {
     
     case "modTypePath"(path): return printAST(path);
     
-    case "floatUnaryMinus"(e): return "-<printAST(e)>";
+    case "floatUnaryMinus"(e): return "~-.
+    								  '(
+    								  '  <printAST(e)>
+    								  ')
+    								  ";
     
     
     // Specifications
