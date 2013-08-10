@@ -842,6 +842,7 @@ str printAST(value v) {
 										    
 	case "moduleDef1"(name, [], t , e) : return "module  <name>
 		    								' <printAST(e)>
+		    								' <printAST(t)>
 										    ";
 										    
     										   
