@@ -728,6 +728,7 @@
      (
        array
        (
+         x
        )
        x
      ) 
@@ -746,6 +747,7 @@
      (
        array
        (
+         x
        )
        x
      ) 
@@ -764,6 +766,7 @@
      (
        array
        (
+         x
        )
        x
      ) 
@@ -789,6 +792,7 @@
        (
         array
         (
+          x
         )
         +
         (
@@ -800,6 +804,8 @@
        (
         array
         (
+          x
+          y
         )
         +
         (
@@ -811,6 +817,9 @@
        (
         array
         (
+          x
+          y
+          z
         )
         +
         (
@@ -835,7 +844,11 @@
    value_description
    arrow
    int
+   (
+   )
    string
+   (
+   )
   (
      "caml_create_string"
   )
@@ -845,7 +858,11 @@
    value_description
    arrow
    int
+   (
+   )
    char
+   (
+   )
   (
      "%identity"
   )
@@ -855,11 +872,19 @@
    value_description
    arrow
    string
+   (
+   )
    arrow
    int
+   (
+   )
    arrow
    char
+   (
+   )
    unit
+   (
+   )
   (
      "%string_unsafe_set"
   )

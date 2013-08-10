@@ -362,7 +362,8 @@ str printAST(value v) {
 	
 	case "patternValueName"(x) : return printAST(x);	
 	
-	case "patternArray"(p, l): return "array
+	// "[|" {Pattern ";"}+ ";"? "|]"
+	case "patternArray"(l, _): return "array
 										 '(
 										 <for(x <- l) {>
 										 '  <printAST(x)>
