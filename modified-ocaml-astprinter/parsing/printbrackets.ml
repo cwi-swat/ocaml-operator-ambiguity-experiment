@@ -512,7 +512,8 @@ and class_expr i ppf x =
       class_expr i ppf ce;
       list i label_x_expression ppf l;
   | Pcl_let (rf, l, ce) ->
-      line i ppf "let %a\n" fmt_rec_flag rf;
+      (* line i ppf "let %a\n" fmt_rec_flag rf; *)
+      line i ppf "let\n";
       list i pattern_x_expression_def ppf l;
       class_expr i ppf ce;
   | Pcl_constraint (ce, ct) ->

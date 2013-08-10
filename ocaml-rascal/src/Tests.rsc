@@ -12,7 +12,7 @@ import ParseTree;
 import Node;
 import Type;
 
-str filePath = "Users/ali/workspace/ocaml-operator-ambiguity-experiment/ocaml-4.00.1/testsuite/tests/";
+str filePath = "Users/aliafroozeh/workspace/ocaml-operator-ambiguity-experiment/ocaml-4.00.1/testsuite/tests/";
 
 public void run() {	 
 	files = readFileLines(|file:///| + filePath + "/" + new.txt);
@@ -635,9 +635,10 @@ str printAST(value v) {
     case "polytype1"(typexpr) : return "poly
                                        '<printAST(typexpr)>
                                        ";
-    
-    case "polytype2"(l, t) : return "<for (id <- l) {>
-    								'<id>.<}><printAST(t)>
+    // ("\'" Ident)+ "." Typexpr
+    case "polytype2"(l, t) : return "poly
+                      				<for (id <- l) {> \'<id> <}>
+    								' <printAST(t)>
                                     ";
 	
 	case "fieldDecls"(_, l, _) : return "
@@ -980,6 +981,19 @@ str printAST(value v) {
     								   ')
     								   ";
     								   
+    								
+	// "let" "rec"? LetBinding ("and" LetBinding)* "in" ClassExpr
+   	case "letClass"(_, lb, l, ce) : return "let
+   										   '(
+   										   ' <printAST(lb)>
+   										   <for (x <- l) {>
+   										   ' <printAST(x)>
+   										   <}>
+   										   ')
+   										   ' <printAST(ce)>
+   										   ";
+    								   
+    								   
     case "object"(s) : return printAST(s);
     					      
     case "classBody"(_, l) : return "class_structure
@@ -1005,13 +1019,14 @@ str printAST(value v) {
     
     // ("method" | "method!") "private"? MethodName Parameter* (":" Typexpr)? "=" Expr
     case "method1"(_, _, name, params, _, e) : return "method <name>
-    												 '      <printAST(e)>
+    												 '  <printAST(e)>
     												 ";
     												 
     	
     //  method2: "method" "private"? MethodName ":"  PolyTypExpr "=" Expr											 
-    case "method2"(_, name, _, e) : return "method <name>
-    												 '      <printAST(e)>
+    case "method2"(_, name, polyTypeExpr, e) : return "method <name>
+    												 '	<printAST(e)>
+    												 '	<printAST(polyTypeExpr)>
     												 ";
     						
     // method3: "method" "private"? "virtual" MethodName ":" PolyTypExpr
