@@ -406,7 +406,7 @@ str printAST(value v) {
 												')
 												";
 
-    case "dotBracket3"(e1, e2) : return "Bigarray.Array1.get
+    case "dotBracket3"(e1, e2) : return "Bigarray.Array<getSize(e2)>.get
 												'(
 												' <printAST(e1)>
 												' <printAST(e2)>
@@ -456,7 +456,7 @@ str printAST(value v) {
     									";
    
        case "assign4"(e1, e2, e3) : 
-    								return "Bigarray.Array1.set
+    								return "Bigarray.Array<getSize(e2)>.set
     									'(
     									' <printAST(e1)>
     									' <printAST(e2)>
@@ -471,14 +471,14 @@ str printAST(value v) {
 									' <printAST(e3)>
 									')
 								   ";    
+
+    
                                 
     case "comma"(e, l) : return "
-    					 '(
     					 <printAST(e)>
     					 <for (exp <- l) {>
     					 '	<printAST(exp)>
     					 <}>
-    					 ')
     					 ";                            
                                 
     case "functionApplication"(e,args) : return "<printAST(e)>
@@ -1142,6 +1142,14 @@ int convert(str s) {
 	//	return toInt(s, 16);
 	//}
 	return toInt(s);
+}
+
+int getSize(value n) {
+	switch(n) {
+		case "comma"(e, l): return 1 + size(l);
+	}
+	
+	fail;
 }
 
 @javaClass{ocaml.Util}		
