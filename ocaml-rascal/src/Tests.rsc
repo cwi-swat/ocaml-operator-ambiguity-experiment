@@ -641,9 +641,11 @@ str printAST(value v) {
                                     ";
 	
 	case "fieldDecls"(_, l, _) : return "
+							   '(
 							     <for(fieldDecl <- l) {>
 							   ' <printAST(fieldDecl)>
 							     <}>
+							   ')
 	                           ";
 	                           
 	case "constrDecls"(_, _, l) : return "
