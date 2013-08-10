@@ -71,11 +71,11 @@ syntax Arg
      ;
            
 syntax PatternMatching 
-     = patternMatching: "|"? Pattern ("when" Expr)? "-\>" Expr InnerPatternMatching* 
+     = patternMatching: "|"? Pattern ("when" Expr)? "-\>" Expr InnerPatternMatching* !>> (Layout "|") 
      ;
      
 syntax InnerPatternMatching
-	 = innerPatternMatching: "|" Pattern ("when" Expr)? "-\>" Expr !>> (Layout "|")
+	 = innerPatternMatching: "|" Pattern ("when" Expr)? "-\>" Expr
 	 ;     
            
 syntax LetBinding 

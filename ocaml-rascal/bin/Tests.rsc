@@ -3,7 +3,6 @@ module Tests
 import OCaml;
 import Jigll;
 import IO;
-import IO;
 import String;
 import util::FileSystem;
 import Set;
@@ -13,10 +12,10 @@ import ParseTree;
 import Node;
 import Type;
 
-str path = "Users/aliafroozeh/workspace/ocaml-operator-ambiguity-experiment/ocaml-4.00.1/testsuite/tests/";
+str filePath = "Users/ali/workspace/ocaml-operator-ambiguity-experiment/ocaml-4.00.1/testsuite/tests/";
 
 public void run() {	 
-	files = readFileLines(|file:///| + path + "/" + new.txt);
+	files = readFileLines(|file:///| + filePath + "/" + new.txt);
 	for (f <- files) {
 		runFile(f);
 	}
@@ -25,7 +24,7 @@ public void run() {
 public void runFile(str f) {
 		print(f + "...");
 		try {
-			tree = jparse(#start[Implementation], readFile(|file:///| + path + "/" + f));
+			tree = jparse(#start[Implementation], readFile(|file:///| + filePath + "/" + f));
 			
 			if (/amb(_) := tree) {
 				tree = filterOCaml(tree);
@@ -36,7 +35,7 @@ public void runFile(str f) {
 			} 
 		
 			s = printAST(tree);
-   			writeFile(|file:///| + path + "/" + (f + ".rascal"), s);
+   			writeFile(|file:///| + filePath + "/" + (f + ".rascal"), s);
 			println("OK");
 		}
 		catch ParseError(el) : {
@@ -617,9 +616,7 @@ str printAST(value v) {
 											   ' (
 											   ' )
 											   ' kind =
-											   ' (
 											   ' <printAST(info)>
-											   ' )
 											   ";
 											   
 											   
@@ -649,9 +646,11 @@ str printAST(value v) {
 	                           ";
 	                           
 	case "constrDecls"(_, _, l) : return "
+								  '(
 								  <for(constrDecl <- l) {>
-								 '<printAST(constrDecl)>
+								  '<printAST(constrDecl)>
 								  <}>
+								  ')
 								  ";         
 								  
 	case "path_field_name"(path, name) : return "<printAST(path)>.<name>";
@@ -674,7 +673,7 @@ str printAST(value v) {
 	
 	case "typeConstr"([], typeconstrName) : return "<typeconstrName>";
 	
-	case "typeConstr"([path], typeconstrName) : return "<path>.<typeconstrName>";					                            
+	case "typeConstr"([path], typeconstrName) : return "<printAST(path)>.<typeconstrName>";					                            
 	                           
 	case "TypeConstraint"(ident, typexpr): return
 										  " <ident> = <typexpr>
@@ -764,6 +763,7 @@ str printAST(value v) {
     case "typeExprBrackets"(t) : return printAST(t);
     
     
+    // "(" {Typexpr ","}+ ")" TypeConstr
     case "typeExprBrackets2"(l, c): return "
     									   ' <printAST(c)>
     									   '    (
@@ -922,7 +922,7 @@ str printAST(value v) {
 
     case "exceptionDef"(x): return printAST(x);
     
-    case "open"(path): return "open <printAST(path)>";
+    case "open"(modulePath): return "open <printAST(modulePath)>";
     
     case "modTypePath"(path): return printAST(path);
     
@@ -1056,6 +1056,10 @@ str printAST(value v) {
     								<}>
     								";
     								
+    								
+    // Lexical 
+    case "hexNumber"(first, rest) : return "0x<first><rest>";								
+    								
     
     // TypeConstr = typeConstr: (ExtendedModulePath ".")? TypeconstrName;
     case "typeConstr"([], typeConstrName): return "<typeConstrName>";
@@ -1080,15 +1084,21 @@ str printAST(value v) {
 }
 
 int convert(str s) {
-	x = replaceAll(s, "\"", "");
-	x = replaceAll(x, "_", "");
-	if(/.o|O.*/ := x) {
-		return toInt(replaceFirst(replaceFirst(x, "o", ""), "O", ""), 8);
+	s = replaceAll(s, "\"", "");
+	s = replaceAll(s, "_", "");
+	
+	if(/0(o|O).*/ := s) {
+		return toInt(replaceFirst(replaceFirst(s, "o", ""), "O", ""), 8);
 	}
-	if(/.b.*/ := x) {
-		return toInt(replaceFirst(x, "b", ""), 2);
+	if(/0(b|B).*/ := s) {
+		return toInt(replaceFirst(replaceFirst(s, "b", ""), "B", ""), 2);
 	}
-	return toInt(x);
+	//if(/0x|X.*/ := s) {
+	//    s = replaceFirst(replaceFirst(s, "x", ""), "X", "");
+	//    println(s);
+	//	return toInt(s, 16);
+	//}
+	return toInt(s);
 }
 
 @javaClass{ocaml.Util}		

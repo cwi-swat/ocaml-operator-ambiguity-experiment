@@ -14,9 +14,9 @@
      (
      )
      kind =
-     
-     
      (
+     
+     
      								  
      One
      (
@@ -60,10 +60,10 @@
      )
      								    
      								  
-     )
      								  
      														  
      														 
+     )
     											   
   								        
   )
@@ -99,8 +99,7 @@
      		         
      		         true
      		        )
-     		        													    
-     		      	        											 
+     		        													   
      		        
      		        case
      		        (
@@ -128,7 +127,7 @@
      		            vars
      		            v
      		           )
-     		               													
+     		           												
      		          )
      		          then
      		          (
@@ -201,8 +200,7 @@
             
             0
            )
-           													    
-         	        											 
+           													   
            
            case
            (
@@ -315,14 +313,14 @@
      		  		      (
      		  		          +
      		  		          (
-     		  		              lsl
+     		  		              
      		  		              (
      		  		                  x
      		  		                  1
      		  		              )
      		  		              y
      		  		          )
-     		  		          lsl
+     		  		          
      		  		          (
      		  		              v
      		  		              2
@@ -456,7 +454,7 @@
                                 									  
                               
                                ind
-                               land
+                               
                                (
                                    hashVal
                                    (
@@ -491,7 +489,7 @@
                                       newArr
                                       ind
                                      )
-                                         													
+                                     												
                                  )
                                 )
                                     									
@@ -533,38 +531,35 @@
                  
                  sequence
                  (
-                   forloop 
-                   (
-                       n
-                       0
-                       <>
-                       
-                        !
+                    for n
+                    0
+                    
+                     !
+                     (
+                     sz_1
+                     )
+                        							 
+                    copyBucket
+                    (
+                        Array.get
                         (
-                        sz_1
+                         arr
+                         n
                         )
-                           							 
-                       copyBucket
-                       (
-                           Array.get
-                           (
-                            arr
-                            n
-                           )
-                               													
-                       )
-                   )
+                        												
+                    )
+                       														  
                  ;
                    
                    sequence
                    (
-                     :=
+                     
                      (
                          htab
                          newArr
                      )
                    ;
-                     :=
+                     
                      (
                          sz_1
                          newSz_1
@@ -703,7 +698,7 @@
      		  		  		  		  		              									  
      		  		  		  		  		            
      		  		  		  		  		             ind
-     		  		  		  		  		             land
+     		  		  		  		  		             
      		  		  		  		  		             (
      		  		  		  		  		                 hashVal
      		  		  		  		  		                 (
@@ -744,7 +739,7 @@
      		  		  		  		  		                      							 
      		  		  		  		  		                  ind
      		  		  		  		  		                 )
-     		  		  		  		  		                     													
+     		  		  		  		  		                 												
      		  		  		  		  		             )
      		  		  		  		  		            )
      		  		  		  		  		                									
@@ -786,7 +781,7 @@
          
          sequence
          (
-           :=
+           
            (
                sz_1
                initSize_1
@@ -795,7 +790,7 @@
            
            sequence
            (
-             :=
+             
              (
                  htab
                  Array.create
@@ -817,13 +812,13 @@
              
              sequence
              (
-               :=
+               
                (
                    n_items
                    0
                )
              ;
-               :=
+               
                (
                    nodeC
                    1
@@ -910,7 +905,7 @@
      		  		                									  
      		  		              
      		  		               ind
-     		  		               land
+     		  		               
      		  		               (
      		  		                   hashVal
      		  		                   (
@@ -946,7 +941,7 @@
      		  		                      							 
      		  		                  ind
      		  		                 )
-     		  		                     													 
+     		  		                 												 
      		  		                							    		   
      		  		                  									  
      		  		               )
@@ -1072,14 +1067,14 @@
      		  		                             (
      		  		                              if
      		  		                              (
-     		  		                               &&
+     		  		                               
      		  		                               (
      		  		                                   =
      		  		                                   (
      		  		                                       v
      		  		                                       v'
      		  		                                   )
-     		  		                                   &&
+     		  		                                   
      		  		                                   (
      		  		                                       =
      		  		                                       (
@@ -1180,9 +1175,9 @@
      (
      )
      kind =
-     
-     
      (
+     
+     
      								  
      LESS
      (
@@ -1202,10 +1197,10 @@
      )
      								    
      								  
-     )
      								  
      														  
      														 
+     )
     											   
   								        
   )
@@ -1436,11 +1431,11 @@
      		 case
      		     (
      		 	  y
-     		      mod
+     		      
      		      (
      		          +
      		          (
-     		              lsl
+     		              
      		              (
      		                  x
      		                  1
@@ -1483,8 +1478,7 @@
             
             Zero
            )
-           													    
-         	        											 
+           													   
            
            case
            (
@@ -1510,7 +1504,7 @@
                 									  
               
                h
-               mod
+               
                (
                    id
                    cacheSize
@@ -1531,7 +1525,7 @@
                      notslot1
                      h
                     )
-                        													
+                    												
                 )
                )
                then
@@ -1541,7 +1535,7 @@
                  notslot2
                  h
                 )
-                    													
+                												
                )
                else
                (
@@ -1688,7 +1682,7 @@
      		            (
      		             if
      		             (
-     		              &&
+     		              
      		              (
      		                  =
      		                  (
@@ -1698,7 +1692,7 @@
      		                       andslot1
      		                       h
      		                      )
-     		                          													
+     		                      												
      		                  )
      		                  =
      		                  (
@@ -1708,7 +1702,7 @@
      		                       andslot2
      		                       h
      		                      )
-     		                          													
+     		                      												
      		                  )
      		              )
      		             )
@@ -1719,7 +1713,7 @@
      		               andslot3
      		               h
      		              )
-     		                  													
+     		              												
      		             )
      		             else
      		             (
@@ -1778,8 +1772,7 @@
      		                        )
      		                    )
      		                   )
-     		                   													    
-     		                 	        											 
+     		                   													   
      		                   
      		                   case
      		                   (
@@ -1865,8 +1858,7 @@
      		           
      		           Zero
      		          )
-     		          													    
-     		        	        											 
+     		          													   
      		          
      		          case
      		          (
@@ -1888,8 +1880,7 @@
      		         
      		         Zero
      		        )
-     		        													    
-     		      	        											 
+     		        													   
      		        
      		        case
      		        (
@@ -1985,7 +1976,7 @@
      		            (
      		             if
      		             (
-     		              &&
+     		              
      		              (
      		                  =
      		                  (
@@ -1995,7 +1986,7 @@
      		                       andslot1
      		                       h
      		                      )
-     		                          													
+     		                      												
      		                  )
      		                  =
      		                  (
@@ -2005,7 +1996,7 @@
      		                       andslot2
      		                       h
      		                      )
-     		                          													
+     		                      												
      		                  )
      		              )
      		             )
@@ -2016,7 +2007,7 @@
      		               andslot3
      		               h
      		              )
-     		                  													
+     		              												
      		             )
      		             else
      		             (
@@ -2075,8 +2066,7 @@
      		                        )
      		                    )
      		                   )
-     		                   													    
-     		                 	        											 
+     		                   													   
      		                   
      		                   case
      		                   (
@@ -2162,8 +2152,7 @@
      		           
      		           n1
      		          )
-     		          													    
-     		        	        											 
+     		          													   
      		          
      		          case
      		          (
@@ -2188,8 +2177,7 @@
      		         
      		         n2
      		        )
-     		        													    
-     		      	        											 
+     		        													   
      		        
      		        case
      		        (
@@ -2422,7 +2410,7 @@
          
          sequence
          (
-           :=
+           
            (
                seed
                +
@@ -2443,7 +2431,7 @@
          ;
            >
            (
-               land
+               
                (
                    
                     !
@@ -2489,27 +2477,24 @@
            
            sequence
            (
-             forloop 
-             (
-                 i
-                 0
-                 <>
-                 -
-                 (
-                     n
-                     1
-                 )
-                 Array.set
-                 (
-                  vars
-                  i
-                  random
-                  (
-                      ()
-                  )
-                 )
-                     									
-             )
+              for i
+              0
+              -
+              (
+                  n
+                  1
+              )
+              Array.set
+              (
+               vars
+               i
+               random
+               (
+                   ()
+               )
+              )
+                  									
+                 														  
            ;
              vars
            )
@@ -2552,43 +2537,40 @@
      		        
      		        sequence
      		        (
-     		          forloop 
-     		          (
+     		           for i
+     		           0
+     		           -
+     		           (
+     		               Array.length
+     		               (
+     		                   vars
+     		               )
+     		               1
+     		           )
+     		           ifthenelse
+     		           (
+     		            if
+     		            (
+     		             Array.get
+     		             (
+     		              vars
      		              i
-     		              0
-     		              <>
-     		              -
-     		              (
-     		                  Array.length
-     		                  (
-     		                      vars
-     		                  )
-     		                  1
-     		              )
-     		              ifthenelse
-     		              (
-     		               if
-     		               (
-     		                Array.get
-     		                (
-     		                 vars
-     		                 i
-     		                )
-     		                    													
-     		               )
-     		               then
-     		               (
-     		                incr
-     		                (
-     		                    ntrue
-     		                )
-     		               )
-     		               else
-     		               (
-     		               )
-     		              )
-     		                  									   
-     		          )
+     		             )
+     		             												
+     		            )
+     		            then
+     		            (
+     		             incr
+     		             (
+     		                 ntrue
+     		             )
+     		            )
+     		            else
+     		            (
+     		            )
+     		           )
+     		               									   
+     		              														  
      		        ;
      		          =
      		          (
@@ -2628,7 +2610,7 @@
      		                     1
      		                 )
      		                )
-     		                    													
+     		                												
      		               )
      		               else
      		               (
@@ -2686,7 +2668,7 @@
                    Sys.argv
                    1
                   )
-                      													
+                  												
               )
              )
              else
@@ -2728,7 +2710,7 @@
                      Sys.argv
                      2
                     )
-                        													
+                    												
                 )
                )
                else
@@ -2774,34 +2756,31 @@
                  
                  sequence
                  (
-                   forloop 
-                   (
-                       i
-                       1
-                       <>
-                       ntests
-                       :=
-                       (
-                           succeeded
-                           &&
-                           (
-                               
-                                !
+                    for i
+                    1
+                    ntests
+                    
+                    (
+                        succeeded
+                        
+                        (
+                            
+                             !
+                             (
+                             succeeded
+                             )
+                                							 
+                            test_hwb
+                            (
+                                bdd
+                                random_vars
                                 (
-                                succeeded
+                                    n
                                 )
-                                   							 
-                               test_hwb
-                               (
-                                   bdd
-                                   random_vars
-                                   (
-                                       n
-                                   )
-                               )
-                           )
-                       )
-                   )
+                            )
+                        )
+                    )
+                       														  
                  ;
                    
                    sequence
