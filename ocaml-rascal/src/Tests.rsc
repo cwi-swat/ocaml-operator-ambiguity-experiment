@@ -64,6 +64,14 @@ public void do(type[&T <: Tree] nont, str input) {
 	  	insert amb({x});
 	  }
 
+	  if({x:polyVariant(_, _), functionApplication(_, _)} := alts) {
+	    insert amb({x});
+	  }
+	  
+	  if({x:constrExp(_, _), functionApplication(_, _)} := alts) {
+	    insert amb({x});
+	  }
+	  
 	  if({Expr x, functionApplication(_, _)} := alts) {
 	    insert amb({x});
 	  }	  
@@ -154,9 +162,14 @@ str printAST(value v) {
     case "field_name"(n) : return "<n>";             
         
     case "constrExp" (c, e) : return "
-    								 ' <printAST(c)>
-    								 ' <printAST(e)>
-    								 ";    
+    								 '<printAST(c)>
+    								 '   <printAST(e)>
+    								 ";
+    								 
+    case "polyVariant"(c, e): return "
+    								 '<printAST(c)>
+    								 '   <printAST(e)>
+    								 ";								  
     								 
     case "constr"(x) : return printAST(x);								    
     								 

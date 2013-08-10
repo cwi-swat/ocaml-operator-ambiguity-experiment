@@ -15,6 +15,7 @@ syntax Expr
 	 > hash: Expr "#" MethodName
      > non-assoc (functionApplication: Expr !semicolon Arg+
      | constrExp: Constr Expr
+     | polyVariant: "`" TagName Expr  
      | lazy: "lazy" Expr
      | assertExpr: "assert" Expr)
      > unaryMinus: "-" !>> [0-9] Expr | floatUnaryMinus: "-." Expr

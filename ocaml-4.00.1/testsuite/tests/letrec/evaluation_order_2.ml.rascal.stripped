@@ -10,17 +10,17 @@
      (
      )
      kind =
-    (
      (
      Tree
      (
        list
        (
          tree
+         (
+         )
        )
      )
      )
-    )
   )
   let
   (
@@ -86,17 +86,22 @@
       (
         (
          Tree
-         patternTuple 
+         ::
          (
-             y1
+           y1
+           ::
+           (
              z1
+             []
+           )
          )
         	Tree
         	[]
         	Tree
-        	patternTuple 
+        	::
         	(
-        	    x1
+        	  x1
+        	  []
         	)
         )
         sequence
