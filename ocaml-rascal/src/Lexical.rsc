@@ -90,6 +90,6 @@ keyword Keywords = "_" |
 lexical Comment
 	= @category="Comment" "(*" (![*] | Comment | "*" !>> [)])* "*)";         
 	
-lexical Whitespace = [\ \t\n\r];
+lexical Whitespace = [\ \t\n\r \u0009-\u000D];
 	
-layout Layout = (Comment | Whitespace)* !>> [\ \t\n\r] !>> "(*";
+layout Layout = (Comment | Whitespace)* !>> [\ \t\n\r \u0009-\u000D] !>> "(*";

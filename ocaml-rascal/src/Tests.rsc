@@ -63,6 +63,12 @@ public void do(type[&T <: Tree] nont, str input) {
 	  if({*_, field(_, _), x:valuePath(_), *_} := alts) {
 	  	insert amb({x});
 	  }
+	  
+	  // !Sys.interactive
+	  if({*_, field(_, _), x:prefix(_, _), *_} := alts) {
+	  	insert amb({x});
+	  }
+	  
 
 	  if({x:polyVariant(_, _), functionApplication(_, _)} := alts) {
 	    insert amb({x});
@@ -75,6 +81,18 @@ public void do(type[&T <: Tree] nont, str input) {
 	  if({x:uneq(_, _), functionApplication(_, _)} := alts) {
 	    insert amb({x});
 	  }
+	  
+	  // parse 2 / 1 - 3 as - ((/ 2 1) 3) rather than (/ 2 (1 (-3))
+	  
+	  if({infix2(_, _, _), x:infix3(_, _, _)} := alts) {
+	    insert amb({x});
+	  }
+	  
+	  //3 + 2 -1
+	  if({x:infix3(infix3(_, _, _), _, _), infix3(_, _, _)} := alts) {
+	    insert amb({x});
+	  }	   
+	  	   
 	  
 	  if({Expr x, functionApplication(_, _)} := alts) {
 	    insert amb({x});
