@@ -367,7 +367,8 @@ and expression i ppf x =
   | Pexp_assertfalse ->
       line i ppf "assert false\n";
   | Pexp_lazy (e) ->
-      line i ppf "Pexp_lazy";
+      (* line i ppf "Pexp_lazy"; *)
+      line i ppf "lazy\n";
       expression i ppf e;
   | Pexp_poly (e, cto) ->
       (* line i ppf "Pexp_poly\n"; *)

@@ -161,17 +161,17 @@
       		 	  
       		 	  )
       		      
+      		          					 (
+      		            					   %
       		      (
-      		          					 %
-      		            					 (
-      		            					     *
-      		            					     (
-      		            					         n
-      		            					         pl
-      		            					     )
-      		            					     digit
-      		            					 )
-      		          					 
+      		          *
+      		          (
+      		              n
+      		              pl
+      		          )
+      		          digit
+      		      )
+      		          					   
       		      	+
       		      	(
       		      	    *
@@ -189,9 +189,8 @@
       		      	        digit
       		      	    )
       		      	)
-      		          					 
-      		      )
-      		          					 
+      		          					   
+      		          					 )
       		     )
       		)
       		    		   
@@ -401,13 +400,12 @@
     
      nn1
      
-     (
-         					 n1
-         					 
+         					 (
+           					   n1
+         					   
      	n0
-         					 
-     )
-         					  
+         					   
+         					 ) 
     							    		    
    )
       									 
@@ -481,48 +479,48 @@
    (  						
        							    	 
       lcons
-      type
-      params=
-      (
-      
-       
-       a
-      										 
-      )
-      cstrs =
-      (
-      )
-      kind =
-      
-      
-      (
-      								  
-      Cons
-      (
-      									
-       a
-      								     
-       
-        "extendedModulePath1"([],"Lazy")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+        type
+        params=
         (
-          
-           lcons
-           (
-             a
-           )
-           
-              									
-        )
         
-           									
-      								     
-      )
-      								    
-      								  
-      )
-      								  
-      														  
-      														 
+         
+         a
+        										 
+        )
+        cstrs =
+        (
+        )
+        kind =
+        
+        
+        (
+        								  
+        Cons
+        (
+        									
+         a
+        								     
+         
+          Lazy.t
+          (
+            
+             lcons
+             (
+               a
+             )
+             
+                									
+          )
+          
+             									
+        								     
+        )
+        								    
+        								  
+        )
+        								  
+        														  
+        														 
      											   
    								        
    )
@@ -535,34 +533,34 @@
    (  						
        							    	 
       llist
-      type
-      params=
-      (
-      
-       
-       a
-      										 
-      )
-      cstrs =
-      (
-      )
-      kind =
-      
-       "extendedModulePath1"([],"Lazy")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-       (
+        type
+        params=
+        (
+        
          
-          lcons
-          (
-            a
-          )
-          
-             									
-       )
-       
-          									
-      
-      														  
-      														 
+         a
+        										 
+        )
+        cstrs =
+        (
+        )
+        kind =
+        
+         Lazy.t
+         (
+           
+            lcons
+            (
+              a
+            )
+            
+               									
+         )
+         
+            									
+        
+        														  
+        														 
      											   
    								        
    )
@@ -584,52 +582,50 @@
       		 case
       		     (
       		 	  l
-      		      lazy 
-      		      (
-      		          match
-      		          force
-      		          (
-      		              l
-      		          )
-      		          (
+      		      lazy
+      		        match
+      		        force
+      		        (
+      		            l
+      		        )
+      		        (
+      		        
+      		        case
+      		        (
       		          
-      		          case
+      		          Cons
+      		          
       		          (
-      		            
-      		            Cons
-      		            
-      		            (
-      		             x
-      		                 						 
-      		            	ll
-      		            
-      		            )
-      		            									  
-      		            
-      		            
-      		             Cons
+      		           x
+      		               						 
+      		          	ll
+      		          
+      		          )
+      		          									  
+      		          
+      		          
+      		          Cons
       		             
+      		                 					 (
+      		                   					   f
       		             (
-      		                 					 f
-      		                   					 (
-      		                   					     x
-      		                   					 )
-      		                 					 
+      		                 x
+      		             )
+      		                 					   
       		             	map
       		             	(
       		             	    f
       		             	    ll
       		             	)
-      		                 					 
-      		             )
-      		                 					 
-      		                								 
-      		          ) 
-      		          	        											 
-      		          	        											 
-      		          )
-      		          			   
-      		      )
+      		                 					   
+      		                 					 )
+      		              								 
+      		        ) 
+      		        	        											 
+      		        	        											 
+      		        )
+      		        			   
+      		          					    
       		     )
       		)
       		    		   
@@ -660,74 +656,102 @@
       		  		 case
       		  		     (
       		  		 	  l2
-      		  		      lazy 
-      		  		      (
-      		  		          match
+      		  		      lazy
+      		  		        match
+      		  		        
+      		  		            					 (
+      		  		              					   force
+      		  		        (
+      		  		            l1
+      		  		        )
+      		  		            					   
+      		  		        	force
+      		  		        	(
+      		  		        	    l2
+      		  		        	)
+      		  		            					   
+      		  		            					 )
+      		  		        (
+      		  		        
+      		  		        case
+      		  		        (
       		  		          
       		  		          (
-      		  		              					 force
-      		  		                					 (
-      		  		                					     l1
-      		  		                					 )
-      		  		              					 
-      		  		          	force
+      		  		           
+      		  		           Cons
+      		  		           
+      		  		           (
+      		  		            x1
+      		  		                						 
+      		  		           	ll1
+      		  		           
+      		  		           )
+      		  		           									  
+      		  		               						 
+      		  		          	
+      		  		          	Cons
+      		  		          	
       		  		          	(
-      		  		          	    l2
+      		  		          	 x2
+      		  		          	     						 
+      		  		          		ll2
+      		  		          	
       		  		          	)
-      		  		              					 
-      		  		          )
-      		  		              					 
-      		  		          (
+      		  		          										  
       		  		          
-      		  		          case
+      		  		          )
+      		  		          
+      		  		          
+      		  		          let
       		  		          (
+      		  		           (
+      		  		              									  
       		  		            
-      		  		            (
-      		  		             
-      		  		             Cons
-      		  		             
+      		  		             c
+      		  		             cmp
       		  		             (
-      		  		              x1
-      		  		                  						 
-      		  		             	ll1
-      		  		             
+      		  		                 x1
+      		  		                 x2
+      		  		             ) 
+      		  		            							    		   
+      		  		              									  
+      		  		           )
+      		  		          in
+      		  		            ifthenelse
+      		  		            (
+      		  		             if
+      		  		             (
+      		  		              =
+      		  		              (
+      		  		                  c
+      		  		                  0
+      		  		              )
       		  		             )
-      		  		             									  
-      		  		                 						 
-      		  		            	
-      		  		            	Cons
-      		  		            	
-      		  		            	(
-      		  		            	 x2
-      		  		            	     						 
-      		  		            		ll2
-      		  		            	
-      		  		            	)
-      		  		            										  
-      		  		            
-      		  		            )
-      		  		            
-      		  		            
-      		  		            let
-      		  		            (
+      		  		             then
       		  		             (
-      		  		                									  
       		  		              
-      		  		               c
-      		  		               cmp
-      		  		               (
-      		  		                   x1
-      		  		                   x2
-      		  		               ) 
-      		  		              							    		   
-      		  		                									  
+      		  		              Cons
+      		  		                 
+      		  		                     					 (
+      		  		                       					   x1
+      		  		                     					   
+      		  		                 	merge
+      		  		                 	(
+      		  		                 	    cmp
+      		  		                 	    ll1
+      		  		                 	    ll2
+      		  		                 	)
+      		  		                     					   
+      		  		                     					 )
+      		  		                  								 
       		  		             )
-      		  		            in
+      		  		             else
+      		  		             (
       		  		              ifthenelse
       		  		              (
       		  		               if
       		  		               (
-      		  		                =
+      		  		                <
       		  		                (
       		  		                    c
       		  		                    0
@@ -736,85 +760,52 @@
       		  		               then
       		  		               (
       		  		                
-      		  		                 Cons
-      		  		                 
-      		  		                 (
-      		  		                     					 x1
-      		  		                     					 
-      		  		                 	merge
-      		  		                 	(
-      		  		                 	    cmp
-      		  		                 	    ll1
-      		  		                 	    ll2
-      		  		                 	)
-      		  		                     					 
-      		  		                 )
-      		  		                     					 
-      		  		                    								 
-      		  		               )
-      		  		               else
-      		  		               (
-      		  		                ifthenelse
-      		  		                (
-      		  		                 if
-      		  		                 (
-      		  		                  <
-      		  		                  (
-      		  		                      c
-      		  		                      0
-      		  		                  )
-      		  		                 )
-      		  		                 then
-      		  		                 (
-      		  		                  
-      		  		                   Cons
+      		  		                Cons
       		  		                   
-      		  		                   (
-      		  		                       					 x1
-      		  		                       					 
+      		  		                       					 (
+      		  		                         					   x1
+      		  		                       					   
       		  		                   	merge
       		  		                   	(
       		  		                   	    cmp
       		  		                   	    ll1
       		  		                   	    l2
       		  		                   	)
-      		  		                       					 
-      		  		                   )
-      		  		                       					 
-      		  		                      								 
-      		  		                 )
-      		  		                 else
-      		  		                 (
-      		  		                  
-      		  		                   Cons
+      		  		                       					   
+      		  		                       					 )
+      		  		                    								 
+      		  		               )
+      		  		               else
+      		  		               (
+      		  		                
+      		  		                Cons
       		  		                   
-      		  		                   (
-      		  		                       					 x2
-      		  		                       					 
+      		  		                       					 (
+      		  		                         					   x2
+      		  		                       					   
       		  		                   	merge
       		  		                   	(
       		  		                   	    cmp
       		  		                   	    l1
       		  		                   	    ll2
       		  		                   	)
-      		  		                       					 
-      		  		                   )
-      		  		                       					 
-      		  		                      								 
-      		  		                 ) 
-      		  		                )
-      		  		                	    											 
+      		  		                       					   
+      		  		                       					 )
+      		  		                    								 
       		  		               ) 
       		  		              )
       		  		              	    											 
+      		  		             ) 
       		  		            )
-      		  		                									
-      		  		          ) 
-      		  		          	        											 
-      		  		          	        											 
+      		  		            	    											 
       		  		          )
-      		  		          			   
-      		  		      )
+      		  		              									
+      		  		        ) 
+      		  		        	        											 
+      		  		        	        											 
+      		  		        )
+      		  		        			   
+      		  		          					    
       		  		     )
       		  		)
       		  		    		   
@@ -921,21 +912,20 @@
       		  		                f
       		  		                ll
       		  		                
+      		  		                    					 (
+      		  		                      					   -
       		  		                (
-      		  		                    					 -
-      		  		                      					 (
-      		  		                      					     start
-      		  		                      					     1
-      		  		                      					 )
-      		  		                    					 
+      		  		                    start
+      		  		                    1
+      		  		                )
+      		  		                    					   
       		  		                	-
       		  		                	(
       		  		                	    stop
       		  		                	    1
       		  		                	)
-      		  		                    					 
-      		  		                )
-      		  		                    					 
+      		  		                    					   
+      		  		                    					 )
       		  		            )
       		  		          )
       		  		              							
@@ -966,14 +956,13 @@
    (
     
      hamming
-     lazy 
-     (
-         
-          Cons
+     lazy
+       
+       Cons
           
-          (
-              					 nn1
-              					 
+              					 (
+                					   nn1
+              					   
           	merge
           	(
           	    cmp
@@ -985,50 +974,46 @@
           	        ham5
           	    )
           	)
-              					 
-          )
-              					 
-             								 
-     ) 
+              					   
+              					 )
+           								 
+         					     
     							    		     
     ham2
-    lazy 
-    (
-        force
-        (
-            map
-            (
-                x2
-                hamming
-            )
-        )
-    ) 
+    lazy
+      force
+      (
+          map
+          (
+              x2
+              hamming
+          )
+      )
+        					     
    							    		     
     ham3
-    lazy 
-    (
-        force
-        (
-            map
-            (
-                x3
-                hamming
-            )
-        )
-    ) 
+    lazy
+      force
+      (
+          map
+          (
+              x3
+              hamming
+          )
+      )
+        					     
    							    		     
     ham5
-    lazy 
-    (
-        force
-        (
-            map
-            (
-                x5
-                hamming
-            )
-        )
-    ) 
+    lazy
+      force
+      (
+          map
+          (
+              x5
+              hamming
+          )
+      )
+        					     
    							    		    
    )
       									 
@@ -1039,13 +1024,12 @@
       pr
       hamming
       
-      (
-          					 88000
-          					 
+          					 (
+            					   88000
+          					   
       	88100
-          					 
-      )
-          					 
+          					   
+          					 )
   )
                                  
 )

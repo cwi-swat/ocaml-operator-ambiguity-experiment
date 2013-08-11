@@ -1,0 +1,344 @@
+
+(
+    								 
+  open Event
+                                     
+  type
+  (  						
+      							    	 
+     swap_chan
+       type
+       params=
+       (
+       
+        
+        a
+       										 
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+        channel
+        (
+          tuple
+          (
+           a
+             									
+            
+             channel
+             (
+               a
+             )
+             
+                									
+          									
+          )
+             								    
+        )
+        
+           									
+       
+       														  
+       														 
+    											   
+  								        
+  )
+                                     
+  let
+  (
+   
+    swap
+   (
+    case
+        (
+     		
+     		 msg_out
+     		(
+     		 case
+     		     (
+     		 	  ch
+     		      guard
+     		      (
+     		          (
+     		           
+     		           case
+     		           (
+     		           ()
+     		           
+     		           
+     		           let
+     		           (
+     		            (
+     		               									  
+     		             
+     		              ic
+     		              new_channel
+     		              (
+     		                  ()
+     		              ) 
+     		             							    		   
+     		               									  
+     		            )
+     		           in
+     		             choose
+     		             (
+     		                 ::
+     		                  (
+     		                  wrap
+     		                  (
+     		                      receive
+     		                      (
+     		                          ch
+     		                      )
+     		                      (
+     		                       
+     		                       case
+     		                       (
+     		                       
+     		                       (
+     		                        msg_in
+     		                            						 
+     		                       	oc
+     		                       
+     		                       )
+     		                       
+     		                       
+     		                       sequence
+     		                       (
+     		                         sync
+     		                         (
+     		                             send
+     		                             (
+     		                                 oc
+     		                                 msg_out
+     		                             )
+     		                         )
+     		                       ;
+     		                         msg_in
+     		                       )
+     		                           							
+     		                       )
+     		                       													 
+     		                      )
+     		                         						  
+     		                  )
+     		                  ::
+     		                  (
+     		                  wrap
+     		                  (
+     		                      send
+     		                      (
+     		                          ch
+     		                          
+     		                              					 (
+     		                                					   msg_out
+     		                              					   
+     		                          	ic
+     		                              					   
+     		                              					 )
+     		                      )
+     		                      (
+     		                       
+     		                       case
+     		                       (
+     		                       ()
+     		                       
+     		                       sync
+     		                       (
+     		                           receive
+     		                           (
+     		                               ic
+     		                           )
+     		                       )
+     		                       )
+     		                       													 
+     		                      )
+     		                         						  
+     		                  )
+     		                  []
+     		                  ) 
+     		                     						  
+     		                  ) 
+     		                     						  
+     		             )
+     		           )
+     		               									
+     		           )
+     		           													 
+     		          )
+     		             						  
+     		      )
+     		     )
+     		)
+     		    		   
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    ch
+    new_channel
+    (
+        ()
+    ) 
+   							    		    
+  )
+                                     
+  let
+  (
+   
+    f
+   (
+    case
+        (
+    	  ()
+         
+         let
+         (
+          (
+             									  
+           
+            res
+            sync
+            (
+                swap
+                (
+                    "F"
+                    ch
+                )
+            ) 
+           							    		   
+             									  
+          )
+         in
+           
+           sequence
+           (
+             print_string
+             (
+                 "f "
+             )
+           ;
+             
+             sequence
+             (
+               print_string
+               (
+                   res
+               )
+             ;
+               print_newline
+               (
+                   ()
+               )
+             )
+                 							
+           )
+               							
+         )
+             									
+        )
+   )
+       		    
+  )
+                                     
+  let
+  (
+   
+    g
+   (
+    case
+        (
+    	  ()
+         
+         let
+         (
+          (
+             									  
+           
+            res
+            sync
+            (
+                swap
+                (
+                    "G"
+                    ch
+                )
+            ) 
+           							    		   
+             									  
+          )
+         in
+           
+           sequence
+           (
+             print_string
+             (
+                 "g "
+             )
+           ;
+             
+             sequence
+             (
+               print_string
+               (
+                   res
+               )
+             ;
+               print_newline
+               (
+                   ()
+               )
+             )
+                 							
+           )
+               							
+         )
+             									
+        )
+   )
+       		    
+  )
+                                     
+  
+   
+   
+   let
+   (
+    (
+       									  
+     
+      id
+      Thread.create
+      (
+          f
+          ()
+      ) 
+     							    		   
+       									  
+    )
+   in
+     
+     sequence
+     (
+       g
+       (
+           ()
+       )
+     ;
+       Thread.join
+       (
+           id
+       )
+     )
+         							
+   )
+       									 
+  							    		    
+                                     
+)

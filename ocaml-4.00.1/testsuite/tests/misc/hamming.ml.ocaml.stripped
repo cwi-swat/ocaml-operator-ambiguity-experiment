@@ -365,7 +365,8 @@
             case
             (
               l
-              Pexp_lazy              match
+              lazy
+              match
               force
               (
                   l
@@ -412,7 +413,8 @@
                 case
                 (
                   l2
-                  Pexp_lazy                  match
+                  lazy
+                  match
                   (
                     force
                     (
@@ -626,7 +628,8 @@
   let
   (
     hamming
-      Pexp_lazy      Cons
+      lazy
+      Cons
         (
           nn1
           merge
@@ -642,7 +645,8 @@
           )
         )
     ham2
-      Pexp_lazy      force
+      lazy
+      force
       (
           map
           (
@@ -651,7 +655,8 @@
           )
       )
     ham3
-      Pexp_lazy      force
+      lazy
+      force
       (
           map
           (
@@ -660,7 +665,8 @@
           )
       )
     ham5
-      Pexp_lazy      force
+      lazy
+      force
       (
           map
           (
