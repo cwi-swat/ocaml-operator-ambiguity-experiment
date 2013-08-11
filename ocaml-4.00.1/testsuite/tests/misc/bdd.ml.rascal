@@ -5,65 +5,65 @@
   (  						
       							    	 
      bdd
-     type
-     params=
-     (
-     
-     )
-     cstrs =
-     (
-     )
-     kind =
-     (
-     
-     
-     								  
-     One
-     (
-     									
-     )
-     								    
-     								  
-     Zero
-     (
-     									
-     )
-     								    
-     								  
-     Node
-     (
-     									
-      
-      bdd
-      (
-      )
-      								  
-     								     
-      
-      int
-      (
-      )
-      								  
-     								     
-      
-      int
-      (
-      )
-      								  
-     								     
-      
-      bdd
-      (
-      )
-      								  
-     								     
-     )
-     								    
-     								  
-     								  
-     														  
-     														 
-     )
+       type
+       params=
+       (
+       
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+       
+       (
+       								  
+       One
+       (
+       									
+       )
+       								    
+       								  
+       Zero
+       (
+       									
+       )
+       								    
+       								  
+       Node
+       (
+       									
+        
+        bdd
+        (
+        )
+        								  
+       								     
+        
+        int
+        (
+        )
+        								  
+       								     
+        
+        int
+        (
+        )
+        								  
+       								     
+        
+        bdd
+        (
+        )
+        								  
+       								     
+       )
+       								    
+       								  
+       )
+       								  
+       														  
+       														 
     											   
   								        
   )
@@ -313,14 +313,14 @@
      		  		      (
      		  		          +
      		  		          (
-     		  		              
+     		  		              lsl
      		  		              (
      		  		                  x
      		  		                  1
      		  		              )
      		  		              y
      		  		          )
-     		  		          
+     		  		          lsl
      		  		          (
      		  		              v
      		  		              2
@@ -454,7 +454,7 @@
                                 									  
                               
                                ind
-                               
+                               land
                                (
                                    hashVal
                                    (
@@ -553,13 +553,13 @@
                    
                    sequence
                    (
-                     
+                     :=
                      (
                          htab
                          newArr
                      )
                    ;
-                     
+                     :=
                      (
                          sz_1
                          newSz_1
@@ -698,7 +698,7 @@
      		  		  		  		  		              									  
      		  		  		  		  		            
      		  		  		  		  		             ind
-     		  		  		  		  		             
+     		  		  		  		  		             land
      		  		  		  		  		             (
      		  		  		  		  		                 hashVal
      		  		  		  		  		                 (
@@ -781,7 +781,7 @@
          
          sequence
          (
-           
+           :=
            (
                sz_1
                initSize_1
@@ -790,7 +790,7 @@
            
            sequence
            (
-             
+             :=
              (
                  htab
                  Array.create
@@ -812,13 +812,13 @@
              
              sequence
              (
-               
+               :=
                (
                    n_items
                    0
                )
              ;
-               
+               :=
                (
                    nodeC
                    1
@@ -905,7 +905,7 @@
      		  		                									  
      		  		              
      		  		               ind
-     		  		               
+     		  		               land
      		  		               (
      		  		                   hashVal
      		  		                   (
@@ -973,34 +973,33 @@
      		  		                            
      		  		                             n
      		  		                             
-     		  		                              Node
-     		  		                              
-     		  		                              (
-     		  		                                  					 low
-     		  		                                  					 
-     		  		                              	v
-     		  		                                  					 
-     		  		                              	
-     		  		                              	sequence
-     		  		                              	(
-     		  		                              	  incr
-     		  		                              	  (
-     		  		                              	      nodeC
-     		  		                              	  )
-     		  		                              	;
-     		  		                              	  
-     		  		                              	   !
-     		  		                              	   (
-     		  		                              	   nodeC
-     		  		                              	   )
-     		  		                              	      							 
-     		  		                              	)
-     		  		                              	    							
-     		  		                                  					 
-     		  		                              	high
-     		  		                                  					 
-     		  		                              )
-     		  		                                  					 
+     		  		                             Node
+     		  		                                
+     		  		                                    					 (
+     		  		                                      					   low
+     		  		                                    					   
+     		  		                                	v
+     		  		                                    					   
+     		  		                                	
+     		  		                                	sequence
+     		  		                                	(
+     		  		                                	  incr
+     		  		                                	  (
+     		  		                                	      nodeC
+     		  		                                	  )
+     		  		                                	;
+     		  		                                	  
+     		  		                                	   !
+     		  		                                	   (
+     		  		                                	   nodeC
+     		  		                                	   )
+     		  		                                	      							 
+     		  		                                	)
+     		  		                                	    							
+     		  		                                    					   
+     		  		                                	high
+     		  		                                    					   
+     		  		                                    					 )
      		  		                                 								  
      		  		                            							    		   
      		  		                              									  
@@ -1067,14 +1066,14 @@
      		  		                             (
      		  		                              if
      		  		                              (
-     		  		                               
+     		  		                               &&
      		  		                               (
      		  		                                   =
      		  		                                   (
      		  		                                       v
      		  		                                       v'
      		  		                                   )
-     		  		                                   
+     		  		                                   &&
      		  		                                   (
      		  		                                       =
      		  		                                       (
@@ -1166,41 +1165,41 @@
   (  						
       							    	 
      ordering
-     type
-     params=
-     (
-     
-     )
-     cstrs =
-     (
-     )
-     kind =
-     (
-     
-     
-     								  
-     LESS
-     (
-     									
-     )
-     								    
-     								  
-     EQUAL
-     (
-     									
-     )
-     								    
-     								  
-     GREATER
-     (
-     									
-     )
-     								    
-     								  
-     								  
-     														  
-     														 
-     )
+       type
+       params=
+       (
+       
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+       
+       (
+       								  
+       LESS
+       (
+       									
+       )
+       								    
+       								  
+       EQUAL
+       (
+       									
+       )
+       								    
+       								  
+       GREATER
+       (
+       									
+       )
+       								    
+       								  
+       )
+       								  
+       														  
+       														 
     											   
   								        
   )
@@ -1431,11 +1430,11 @@
      		 case
      		     (
      		 	  y
-     		      
+     		      mod
      		      (
      		          +
      		          (
-     		              
+     		              lsl
      		              (
      		                  x
      		                  1
@@ -1504,7 +1503,7 @@
                 									  
               
                h
-               
+               mod
                (
                    id
                    cacheSize
@@ -1682,7 +1681,7 @@
      		            (
      		             if
      		             (
-     		              
+     		              &&
      		              (
      		                  =
      		                  (
@@ -1976,7 +1975,7 @@
      		            (
      		             if
      		             (
-     		              
+     		              &&
      		              (
      		                  =
      		                  (
@@ -2410,7 +2409,7 @@
          
          sequence
          (
-           
+           :=
            (
                seed
                +
@@ -2431,7 +2430,7 @@
          ;
            >
            (
-               
+               land
                (
                    
                     !
@@ -2759,10 +2758,10 @@
                     for i
                     1
                     ntests
-                    
+                    :=
                     (
                         succeeded
-                        
+                        &&
                         (
                             
                              !

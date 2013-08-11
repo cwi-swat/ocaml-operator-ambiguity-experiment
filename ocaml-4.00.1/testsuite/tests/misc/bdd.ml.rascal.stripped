@@ -2,37 +2,37 @@
   type
   (  						
      bdd
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-     (
-     One
-     (
-     )
-     Zero
-     (
-     )
-     Node
-     (
-      bdd
-      (
-      )
-      int
-      (
-      )
-      int
-      (
-      )
-      bdd
-      (
-      )
-     )
-     )
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       (
+       One
+       (
+       )
+       Zero
+       (
+       )
+       Node
+       (
+        bdd
+        (
+        )
+        int
+        (
+        )
+        int
+        (
+        )
+        bdd
+        (
+        )
+       )
+       )
   )
   let
   (
@@ -365,24 +365,20 @@
                in
                  sequence
                  (
-                   forloop 
-                   (
-                       n
-                       0
-                       <>
-                        !
+                    for n
+                    0
+                     !
+                     (
+                     sz_1
+                     )
+                    copyBucket
+                    (
+                        Array.get
                         (
-                        sz_1
+                         arr
+                         n
                         )
-                       copyBucket
-                       (
-                           Array.get
-                           (
-                            arr
-                            n
-                           )
-                       )
-                   )
+                    )
                  ;
                    sequence
                    (
@@ -707,24 +703,24 @@
      		  		                          (
      		  		                           (
      		  		                             n
-     		  		                              Node
-     		  		                              (
-     		  		                                  					 low
-     		  		                              	v
-     		  		                              	sequence
-     		  		                              	(
-     		  		                              	  incr
-     		  		                              	  (
-     		  		                              	      nodeC
-     		  		                              	  )
-     		  		                              	;
-     		  		                              	   !
-     		  		                              	   (
-     		  		                              	   nodeC
-     		  		                              	   )
-     		  		                              	)
-     		  		                              	high
-     		  		                              )
+     		  		                             Node
+     		  		                                    					 (
+     		  		                                      					   low
+     		  		                                	v
+     		  		                                	sequence
+     		  		                                	(
+     		  		                                	  incr
+     		  		                                	  (
+     		  		                                	      nodeC
+     		  		                                	  )
+     		  		                                	;
+     		  		                                	   !
+     		  		                                	   (
+     		  		                                	   nodeC
+     		  		                                	   )
+     		  		                                	)
+     		  		                                	high
+     		  		                                    					 )
      		  		                           )
      		  		                          in
      		  		                            sequence
@@ -846,25 +842,25 @@
   type
   (  						
      ordering
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-     (
-     LESS
-     (
-     )
-     EQUAL
-     (
-     )
-     GREATER
-     (
-     )
-     )
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       (
+       LESS
+       (
+       )
+       EQUAL
+       (
+       )
+       GREATER
+       (
+       )
+       )
   )
   let
   (
@@ -1842,26 +1838,22 @@
          in
            sequence
            (
-             forloop 
-             (
-                 i
-                 0
-                 <>
-                 -
-                 (
-                     n
-                     1
-                 )
-                 Array.set
-                 (
-                  vars
-                  i
-                  random
-                  (
-                      ()
-                  )
-                 )
-             )
+              for i
+              0
+              -
+              (
+                  n
+                  1
+              )
+              Array.set
+              (
+               vars
+               i
+               random
+               (
+                   ()
+               )
+              )
            ;
              vars
            )
@@ -1892,41 +1884,37 @@
      		      in
      		        sequence
      		        (
-     		          forloop 
-     		          (
+     		           for i
+     		           0
+     		           -
+     		           (
+     		               Array.length
+     		               (
+     		                   vars
+     		               )
+     		               1
+     		           )
+     		           ifthenelse
+     		           (
+     		            if
+     		            (
+     		             Array.get
+     		             (
+     		              vars
      		              i
-     		              0
-     		              <>
-     		              -
-     		              (
-     		                  Array.length
-     		                  (
-     		                      vars
-     		                  )
-     		                  1
-     		              )
-     		              ifthenelse
-     		              (
-     		               if
-     		               (
-     		                Array.get
-     		                (
-     		                 vars
-     		                 i
-     		                )
-     		               )
-     		               then
-     		               (
-     		                incr
-     		                (
-     		                    ntrue
-     		                )
-     		               )
-     		               else
-     		               (
-     		               )
-     		              )
-     		          )
+     		             )
+     		            )
+     		            then
+     		            (
+     		             incr
+     		             (
+     		                 ntrue
+     		             )
+     		            )
+     		            else
+     		            (
+     		            )
+     		           )
      		        ;
      		          =
      		          (
@@ -2075,32 +2063,28 @@
                in
                  sequence
                  (
-                   forloop 
-                   (
-                       i
-                       1
-                       <>
-                       ntests
-                       :=
-                       (
-                           succeeded
-                           &&
-                           (
-                                !
+                    for i
+                    1
+                    ntests
+                    :=
+                    (
+                        succeeded
+                        &&
+                        (
+                             !
+                             (
+                             succeeded
+                             )
+                            test_hwb
+                            (
+                                bdd
+                                random_vars
                                 (
-                                succeeded
+                                    n
                                 )
-                               test_hwb
-                               (
-                                   bdd
-                                   random_vars
-                                   (
-                                       n
-                                   )
-                               )
-                           )
-                       )
-                   )
+                            )
+                        )
+                    )
                  ;
                    sequence
                    (

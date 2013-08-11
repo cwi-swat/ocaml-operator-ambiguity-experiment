@@ -799,7 +799,9 @@ str printAST(value v) {
     										 ')
     										 ";
     										 
-   	case "exception1"(constrName, []): return "exception <constrName>";									 
+   	case "exception1"(constrName, []): return "exception <constrName>
+   											  '(
+   											  ')";									 
     										 
 
     // exception2: "exception" ConstrName "=" Constr
