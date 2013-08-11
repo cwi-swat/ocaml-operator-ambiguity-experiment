@@ -7,79 +7,79 @@
   type
   (  						
      t
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-     (
-     A
-     (
-     )
-     B
-     (
-      int
-      (
-      )
-     )
-     C
-     (
-      float
-      (
-      )
-     )
-     D
-     (
-      string
-      (
-      )
-     )
-     E
-     (
-      char
-      (
-      )
-     )
-     F
-     (
-      t
-      (
-      )
-     )
-     G
-     (
-      t
-      (
-      )
-      t
-      (
-      )
-     )
-     H
-     (
-      int
-      (
-      )
-      t
-      (
-      )
-     )
-     I
-     (
-      t
-      (
-      )
-      float
-      (
-      )
-     )
-     J
-     (
-     )
-     )
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       (
+       A
+       (
+       )
+       B
+       (
+        int
+        (
+        )
+       )
+       C
+       (
+        float
+        (
+        )
+       )
+       D
+       (
+        string
+        (
+        )
+       )
+       E
+       (
+        char
+        (
+        )
+       )
+       F
+       (
+        t
+        (
+        )
+       )
+       G
+       (
+        t
+        (
+        )
+        t
+        (
+        )
+       )
+       H
+       (
+        int
+        (
+        )
+        t
+        (
+        )
+       )
+       I
+       (
+        t
+        (
+        )
+        float
+        (
+        )
+       )
+       J
+       (
+       )
+       )
   )
   let
   (
@@ -264,8 +264,8 @@
                                      output_value
                                      (
                                          oc
-                                          B
-                                          1
+                                         B
+                                            1
                                      )
                                    ;
                                      sequence
@@ -273,8 +273,8 @@
                                        output_value
                                        (
                                            oc
-                                            C
-                                            2.718
+                                           C
+                                              2.718
                                        )
                                      ;
                                        sequence
@@ -282,8 +282,8 @@
                                          output_value
                                          (
                                              oc
-                                              D
-                                              "hello, world!"
+                                             D
+                                                "hello, world!"
                                          )
                                        ;
                                          sequence
@@ -291,8 +291,8 @@
                                            output_value
                                            (
                                                oc
-                                                E
-                                                6c
+                                               E
+                                                  6c
                                            )
                                          ;
                                            sequence
@@ -300,9 +300,9 @@
                                              output_value
                                              (
                                                  oc
-                                                  F
-                                                   B
-                                                   1
+                                                 F
+                                                    B
+                                                       1
                                              )
                                            ;
                                              sequence
@@ -310,27 +310,27 @@
                                                output_value
                                                (
                                                    oc
-                                                    G
-                                                    (
-                                                        					 A
-                                                    	 G
-                                                    	 (
-                                                    	       					  B
-                                                    	       					  2
-                                                    	 	 G
-                                                    	 	 (
-                                                    	 	       					  C
-                                                    	 	       					  3.14
-                                                    	 	 	 G
-                                                    	 	 	 (
-                                                    	 	 	       					  D
-                                                    	 	 	       					  "glop"
-                                                    	 	 	 	 E
-                                                    	 	 	 	 65
-                                                    	 	 	 )
-                                                    	 	 )
-                                                    	 )
-                                                    )
+                                                   G
+                                                          					 (
+                                                            					   A
+                                                      	G
+                                                      	       					 (
+                                                      	   B
+                                                      	      2
+                                                      	   	G
+                                                      	   	       					 (
+                                                      	   	   C
+                                                      	   	      3.14
+                                                      	   	   	G
+                                                      	   	   	       					 (
+                                                      	   	   	   D
+                                                      	   	   	      "glop"
+                                                      	   	   	   	E
+                                                      	   	   	   	   65
+                                                      	   	   	       					 )
+                                                      	   	       					 )
+                                                      	       					 )
+                                                          					 )
                                                )
                                              ;
                                                sequence
@@ -338,11 +338,11 @@
                                                  output_value
                                                  (
                                                      oc
-                                                      H
-                                                      (
-                                                          					 1
-                                                      	A
-                                                      )
+                                                     H
+                                                            					 (
+                                                              					   1
+                                                        	A
+                                                            					 )
                                                  )
                                                ;
                                                  sequence
@@ -350,46 +350,46 @@
                                                    output_value
                                                    (
                                                        oc
-                                                        I
-                                                        (
-                                                              					  B
-                                                              					  2
-                                                        	1e-6
-                                                        )
+                                                       I
+                                                              					 (
+                                                          B
+                                                             2
+                                                          	1e-6
+                                                              					 )
                                                    )
                                                  ;
                                                    let
                                                    (
                                                     (
                                                       x
-                                                       D
-                                                       "sharing"
+                                                      D
+                                                         "sharing"
                                                     )
                                                    in
                                                      let
                                                      (
                                                       (
                                                         y
-                                                         G
-                                                         (
-                                                             					 x
-                                                         	x
-                                                         )
+                                                        G
+                                                               					 (
+                                                                 					   x
+                                                           	x
+                                                               					 )
                                                       )
                                                      in
                                                        let
                                                        (
                                                         (
                                                           z
-                                                           G
-                                                           (
-                                                               					 y
-                                                           	 G
-                                                           	 (
-                                                           	     					 x
-                                                           	 	y
-                                                           	 )
-                                                           )
+                                                          G
+                                                                 					 (
+                                                                   					   y
+                                                             	G
+                                                             	       					 (
+                                                             	         					   x
+                                                             	   	y
+                                                             	       					 )
+                                                                 					 )
                                                         )
                                                        in
                                                          sequence
@@ -450,18 +450,18 @@
                                                                       )
                                                                       else
                                                                       (
-                                                                        H
-                                                                        (
-                                                                            					 n
-                                                                        	big
-                                                                        	(
-                                                                        	    -
-                                                                        	    (
-                                                                        	        n
-                                                                        	        1
-                                                                        	    )
-                                                                        	)
-                                                                        )
+                                                                       H
+                                                                              					 (
+                                                                                					   n
+                                                                          	big
+                                                                          	(
+                                                                          	    -
+                                                                          	    (
+                                                                          	        n
+                                                                          	        1
+                                                                          	    )
+                                                                          	)
+                                                                              					 )
                                                                       ) 
                                                                      )
                                                                     )
@@ -649,10 +649,10 @@
                                                                                                output_value
                                                                                                (
                                                                                                    oc
-                                                                                                   (
-                                                                                                       					 i
+                                                                                                       					 (
+                                                                                                         					   i
                                                                                                    	i
-                                                                                                   )
+                                                                                                       					 )
                                                                                                )
                                                                                              ;
                                                                                                close_out
@@ -1218,19 +1218,17 @@
                                                          (
                                                            G
                                                            (
-                                                            patternAs 
+                                                            alias t3
                                                             (
-                                                                G
-                                                                (
-                                                                 patternAs 
-                                                                 (
-                                                                     D
-                                                                     "sharing"
-                                                                     t1
-                                                                 )
-                                                                	t2
-                                                                )
-                                                                t3
+                                                              G
+                                                              (
+                                                               alias t1
+                                                               (
+                                                                 D
+                                                                 "sharing"
+                                                               )
+                                                              	t2
+                                                              )
                                                             )
                                                            	G
                                                            	(
@@ -1432,26 +1430,22 @@
                                                                  (
                                                                    G
                                                                    (
-                                                                    patternAs 
+                                                                    alias t1
                                                                     (
-                                                                        D
-                                                                        "sharing"
-                                                                        t1
+                                                                      D
+                                                                      "sharing"
                                                                     )
-                                                                   	patternAs 
+                                                                   	alias t2
                                                                    	(
-                                                                   	    D
-                                                                   	    "sharing"
-                                                                   	    t2
+                                                                   	  D
+                                                                   	  "sharing"
                                                                    	)
                                                                    )
-                                                                   t1
+                                                                   !=
                                                                    (
-                                                                        !=
-                                                                        (
-                                                                        t2
-                                                                        )
-                                                                   )
+                                                                      t1
+                                                                      t2
+                                                                   )  
                                                                  ) 
                                                                    case
                                                                    (
@@ -2173,8 +2167,8 @@
                                                             s
                                                             Marshal.to_string
                                                             (
-                                                                 B
-                                                                 1
+                                                                B
+                                                                   1
                                                                 []
                                                             ) 
                                                           )
@@ -2211,8 +2205,8 @@
                                                                 s
                                                                 Marshal.to_string
                                                                 (
-                                                                     C
-                                                                     2.718
+                                                                    C
+                                                                       2.718
                                                                     []
                                                                 ) 
                                                               )
@@ -2253,8 +2247,8 @@
                                                                     s
                                                                     Marshal.to_string
                                                                     (
-                                                                         D
-                                                                         "hello, world!"
+                                                                        D
+                                                                           "hello, world!"
                                                                         []
                                                                     ) 
                                                                   )
@@ -2291,8 +2285,8 @@
                                                                         s
                                                                         Marshal.to_string
                                                                         (
-                                                                             E
-                                                                             6c
+                                                                            E
+                                                                               6c
                                                                             []
                                                                         ) 
                                                                       )
@@ -2329,9 +2323,9 @@
                                                                             s
                                                                             Marshal.to_string
                                                                             (
-                                                                                 F
-                                                                                  B
-                                                                                  1
+                                                                                F
+                                                                                   B
+                                                                                      1
                                                                                 []
                                                                             ) 
                                                                           )
@@ -2369,27 +2363,27 @@
                                                                                 s
                                                                                 Marshal.to_string
                                                                                 (
-                                                                                     G
-                                                                                     (
-                                                                                         					 A
-                                                                                     	 G
-                                                                                     	 (
-                                                                                     	       					  B
-                                                                                     	       					  2
-                                                                                     	 	 G
-                                                                                     	 	 (
-                                                                                     	 	       					  C
-                                                                                     	 	       					  3.14
-                                                                                     	 	 	 G
-                                                                                     	 	 	 (
-                                                                                     	 	 	       					  D
-                                                                                     	 	 	       					  "glop"
-                                                                                     	 	 	 	 E
-                                                                                     	 	 	 	 65
-                                                                                     	 	 	 )
-                                                                                     	 	 )
-                                                                                     	 )
-                                                                                     )
+                                                                                    G
+                                                                                           					 (
+                                                                                             					   A
+                                                                                       	G
+                                                                                       	       					 (
+                                                                                       	   B
+                                                                                       	      2
+                                                                                       	   	G
+                                                                                       	   	       					 (
+                                                                                       	   	   C
+                                                                                       	   	      3.14
+                                                                                       	   	   	G
+                                                                                       	   	   	       					 (
+                                                                                       	   	   	   D
+                                                                                       	   	   	      "glop"
+                                                                                       	   	   	   	E
+                                                                                       	   	   	   	   65
+                                                                                       	   	   	       					 )
+                                                                                       	   	       					 )
+                                                                                       	       					 )
+                                                                                           					 )
                                                                                     []
                                                                                 ) 
                                                                               )
@@ -2445,11 +2439,11 @@
                                                                                     s
                                                                                     Marshal.to_string
                                                                                     (
-                                                                                         H
-                                                                                         (
-                                                                                             					 1
-                                                                                         	A
-                                                                                         )
+                                                                                        H
+                                                                                               					 (
+                                                                                                 					   1
+                                                                                           	A
+                                                                                               					 )
                                                                                         []
                                                                                     ) 
                                                                                   )
@@ -2489,12 +2483,12 @@
                                                                                         s
                                                                                         Marshal.to_string
                                                                                         (
-                                                                                             I
-                                                                                             (
-                                                                                                   					  B
-                                                                                                   					  2
-                                                                                             	1e-6
-                                                                                             )
+                                                                                            I
+                                                                                                   					 (
+                                                                                               B
+                                                                                                  2
+                                                                                               	1e-6
+                                                                                                   					 )
                                                                                             []
                                                                                         ) 
                                                                                       )
@@ -2533,34 +2527,34 @@
                                                                                          (
                                                                                           (
                                                                                             x
-                                                                                             D
-                                                                                             "sharing"
+                                                                                            D
+                                                                                               "sharing"
                                                                                           )
                                                                                          in
                                                                                            let
                                                                                            (
                                                                                             (
                                                                                               y
-                                                                                               G
-                                                                                               (
-                                                                                                   					 x
-                                                                                               	x
-                                                                                               )
+                                                                                              G
+                                                                                                     					 (
+                                                                                                       					   x
+                                                                                                 	x
+                                                                                                     					 )
                                                                                             )
                                                                                            in
                                                                                              let
                                                                                              (
                                                                                               (
                                                                                                 z
-                                                                                                 G
-                                                                                                 (
-                                                                                                     					 y
-                                                                                                 	 G
-                                                                                                 	 (
-                                                                                                 	     					 x
-                                                                                                 	 	y
-                                                                                                 	 )
-                                                                                                 )
+                                                                                                G
+                                                                                                       					 (
+                                                                                                         					   y
+                                                                                                   	G
+                                                                                                   	       					 (
+                                                                                                   	         					   x
+                                                                                                   	   	y
+                                                                                                   	       					 )
+                                                                                                       					 )
                                                                                               )
                                                                                              in
                                                                                                let
@@ -2590,19 +2584,17 @@
                                                                                                        (
                                                                                                          G
                                                                                                          (
-                                                                                                          patternAs 
+                                                                                                          alias t3
                                                                                                           (
-                                                                                                              G
-                                                                                                              (
-                                                                                                               patternAs 
-                                                                                                               (
-                                                                                                                   D
-                                                                                                                   "sharing"
-                                                                                                                   t1
-                                                                                                               )
-                                                                                                              	t2
-                                                                                                              )
-                                                                                                              t3
+                                                                                                            G
+                                                                                                            (
+                                                                                                             alias t1
+                                                                                                             (
+                                                                                                               D
+                                                                                                               "sharing"
+                                                                                                             )
+                                                                                                            	t2
+                                                                                                            )
                                                                                                           )
                                                                                                          	G
                                                                                                          	(
@@ -2727,18 +2719,18 @@
                                                                                                                 )
                                                                                                                 else
                                                                                                                 (
-                                                                                                                  H
-                                                                                                                  (
-                                                                                                                      					 n
-                                                                                                                  	big
-                                                                                                                  	(
-                                                                                                                  	    -
-                                                                                                                  	    (
-                                                                                                                  	        n
-                                                                                                                  	        1
-                                                                                                                  	    )
-                                                                                                                  	)
-                                                                                                                  )
+                                                                                                                 H
+                                                                                                                        					 (
+                                                                                                                          					   n
+                                                                                                                    	big
+                                                                                                                    	(
+                                                                                                                    	    -
+                                                                                                                    	    (
+                                                                                                                    	        n
+                                                                                                                    	        1
+                                                                                                                    	    )
+                                                                                                                    	)
+                                                                                                                        					 )
                                                                                                                 ) 
                                                                                                                )
                                                                                                               )
@@ -3330,8 +3322,8 @@
                                                                s
                                                                0
                                                                512
-                                                                B
-                                                                1
+                                                               B
+                                                                  1
                                                                []
                                                            )
                                                          ;
@@ -3368,8 +3360,8 @@
                                                                    s
                                                                    0
                                                                    512
-                                                                    C
-                                                                    2.718
+                                                                   C
+                                                                      2.718
                                                                    []
                                                                )
                                                              ;
@@ -3410,8 +3402,8 @@
                                                                        s
                                                                        0
                                                                        512
-                                                                        D
-                                                                        "hello, world!"
+                                                                       D
+                                                                          "hello, world!"
                                                                        []
                                                                    )
                                                                  ;
@@ -3448,8 +3440,8 @@
                                                                            s
                                                                            0
                                                                            512
-                                                                            E
-                                                                            6c
+                                                                           E
+                                                                              6c
                                                                            []
                                                                        )
                                                                      ;
@@ -3486,9 +3478,9 @@
                                                                                s
                                                                                0
                                                                                512
-                                                                                F
-                                                                                 B
-                                                                                 1
+                                                                               F
+                                                                                  B
+                                                                                     1
                                                                                []
                                                                            )
                                                                          ;
@@ -3526,27 +3518,27 @@
                                                                                    s
                                                                                    0
                                                                                    512
-                                                                                    G
-                                                                                    (
-                                                                                        					 A
-                                                                                    	 G
-                                                                                    	 (
-                                                                                    	       					  B
-                                                                                    	       					  2
-                                                                                    	 	 G
-                                                                                    	 	 (
-                                                                                    	 	       					  C
-                                                                                    	 	       					  3.14
-                                                                                    	 	 	 G
-                                                                                    	 	 	 (
-                                                                                    	 	 	       					  D
-                                                                                    	 	 	       					  "glop"
-                                                                                    	 	 	 	 E
-                                                                                    	 	 	 	 65
-                                                                                    	 	 	 )
-                                                                                    	 	 )
-                                                                                    	 )
-                                                                                    )
+                                                                                   G
+                                                                                          					 (
+                                                                                            					   A
+                                                                                      	G
+                                                                                      	       					 (
+                                                                                      	   B
+                                                                                      	      2
+                                                                                      	   	G
+                                                                                      	   	       					 (
+                                                                                      	   	   C
+                                                                                      	   	      3.14
+                                                                                      	   	   	G
+                                                                                      	   	   	       					 (
+                                                                                      	   	   	   D
+                                                                                      	   	   	      "glop"
+                                                                                      	   	   	   	E
+                                                                                      	   	   	   	   65
+                                                                                      	   	   	       					 )
+                                                                                      	   	       					 )
+                                                                                      	       					 )
+                                                                                          					 )
                                                                                    []
                                                                                )
                                                                              ;
@@ -3602,11 +3594,11 @@
                                                                                        s
                                                                                        0
                                                                                        512
-                                                                                        H
-                                                                                        (
-                                                                                            					 1
-                                                                                        	A
-                                                                                        )
+                                                                                       H
+                                                                                              					 (
+                                                                                                					   1
+                                                                                          	A
+                                                                                              					 )
                                                                                        []
                                                                                    )
                                                                                  ;
@@ -3646,12 +3638,12 @@
                                                                                            s
                                                                                            0
                                                                                            512
-                                                                                            I
-                                                                                            (
-                                                                                                  					  B
-                                                                                                  					  2
-                                                                                            	1e-6
-                                                                                            )
+                                                                                           I
+                                                                                                  					 (
+                                                                                              B
+                                                                                                 2
+                                                                                              	1e-6
+                                                                                                  					 )
                                                                                            []
                                                                                        )
                                                                                      ;
@@ -3689,34 +3681,34 @@
                                                                                          (
                                                                                           (
                                                                                             x
-                                                                                             D
-                                                                                             "sharing"
+                                                                                            D
+                                                                                               "sharing"
                                                                                           )
                                                                                          in
                                                                                            let
                                                                                            (
                                                                                             (
                                                                                               y
-                                                                                               G
-                                                                                               (
-                                                                                                   					 x
-                                                                                               	x
-                                                                                               )
+                                                                                              G
+                                                                                                     					 (
+                                                                                                       					   x
+                                                                                                 	x
+                                                                                                     					 )
                                                                                             )
                                                                                            in
                                                                                              let
                                                                                              (
                                                                                               (
                                                                                                 z
-                                                                                                 G
-                                                                                                 (
-                                                                                                     					 y
-                                                                                                 	 G
-                                                                                                 	 (
-                                                                                                 	     					 x
-                                                                                                 	 	y
-                                                                                                 	 )
-                                                                                                 )
+                                                                                                G
+                                                                                                       					 (
+                                                                                                         					   y
+                                                                                                   	G
+                                                                                                   	       					 (
+                                                                                                   	         					   x
+                                                                                                   	   	y
+                                                                                                   	       					 )
+                                                                                                       					 )
                                                                                               )
                                                                                              in
                                                                                                sequence
@@ -3746,19 +3738,17 @@
                                                                                                        (
                                                                                                          G
                                                                                                          (
-                                                                                                          patternAs 
+                                                                                                          alias t3
                                                                                                           (
-                                                                                                              G
-                                                                                                              (
-                                                                                                               patternAs 
-                                                                                                               (
-                                                                                                                   D
-                                                                                                                   "sharing"
-                                                                                                                   t1
-                                                                                                               )
-                                                                                                              	t2
-                                                                                                              )
-                                                                                                              t3
+                                                                                                            G
+                                                                                                            (
+                                                                                                             alias t1
+                                                                                                             (
+                                                                                                               D
+                                                                                                               "sharing"
+                                                                                                             )
+                                                                                                            	t2
+                                                                                                            )
                                                                                                           )
                                                                                                          	G
                                                                                                          	(
@@ -3883,18 +3873,18 @@
                                                                                                                 )
                                                                                                                 else
                                                                                                                 (
-                                                                                                                  H
-                                                                                                                  (
-                                                                                                                      					 n
-                                                                                                                  	big
-                                                                                                                  	(
-                                                                                                                  	    -
-                                                                                                                  	    (
-                                                                                                                  	        n
-                                                                                                                  	        1
-                                                                                                                  	    )
-                                                                                                                  	)
-                                                                                                                  )
+                                                                                                                 H
+                                                                                                                        					 (
+                                                                                                                          					   n
+                                                                                                                    	big
+                                                                                                                    	(
+                                                                                                                    	    -
+                                                                                                                    	    (
+                                                                                                                    	        n
+                                                                                                                    	        1
+                                                                                                                    	    )
+                                                                                                                    	)
+                                                                                                                        					 )
                                                                                                                 ) 
                                                                                                                )
                                                                                                               )
@@ -3994,27 +3984,27 @@
             s
             Marshal.to_string
             (
-                 G
-                 (
-                     					 A
-                 	 G
-                 	 (
-                 	       					  B
-                 	       					  2
-                 	 	 G
-                 	 	 (
-                 	 	       					  C
-                 	 	       					  3.14
-                 	 	 	 G
-                 	 	 	 (
-                 	 	 	       					  D
-                 	 	 	       					  "glop"
-                 	 	 	 	 E
-                 	 	 	 	 65
-                 	 	 	 )
-                 	 	 )
-                 	 )
-                 )
+                G
+                       					 (
+                         					   A
+                   	G
+                   	       					 (
+                   	   B
+                   	      2
+                   	   	G
+                   	   	       					 (
+                   	   	   C
+                   	   	      3.14
+                   	   	   	G
+                   	   	   	       					 (
+                   	   	   	   D
+                   	   	   	      "glop"
+                   	   	   	   	E
+                   	   	   	   	   65
+                   	   	   	       					 )
+                   	   	       					 )
+                   	       					 )
+                       					 )
                 []
             ) 
           )
@@ -4059,7 +4049,7 @@
    arrow
     list
     (
-      "extendedModulePath1"([],"Marshal")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].extern_flags
+      Marshal.extern_flags
       (
       )
     )
@@ -4446,8 +4436,8 @@
                                                            (
                                                                s
                                                                512
-                                                                B
-                                                                1
+                                                               B
+                                                                  1
                                                                []
                                                            )
                                                          ;
@@ -4483,8 +4473,8 @@
                                                                (
                                                                    s
                                                                    512
-                                                                    C
-                                                                    2.718
+                                                                   C
+                                                                      2.718
                                                                    []
                                                                )
                                                              ;
@@ -4524,8 +4514,8 @@
                                                                    (
                                                                        s
                                                                        512
-                                                                        D
-                                                                        "hello, world!"
+                                                                       D
+                                                                          "hello, world!"
                                                                        []
                                                                    )
                                                                  ;
@@ -4561,8 +4551,8 @@
                                                                        (
                                                                            s
                                                                            512
-                                                                            E
-                                                                            6c
+                                                                           E
+                                                                              6c
                                                                            []
                                                                        )
                                                                      ;
@@ -4598,9 +4588,9 @@
                                                                            (
                                                                                s
                                                                                512
-                                                                                F
-                                                                                 B
-                                                                                 1
+                                                                               F
+                                                                                  B
+                                                                                     1
                                                                                []
                                                                            )
                                                                          ;
@@ -4637,27 +4627,27 @@
                                                                                (
                                                                                    s
                                                                                    512
-                                                                                    G
-                                                                                    (
-                                                                                        					 A
-                                                                                    	 G
-                                                                                    	 (
-                                                                                    	       					  B
-                                                                                    	       					  2
-                                                                                    	 	 G
-                                                                                    	 	 (
-                                                                                    	 	       					  C
-                                                                                    	 	       					  3.14
-                                                                                    	 	 	 G
-                                                                                    	 	 	 (
-                                                                                    	 	 	       					  D
-                                                                                    	 	 	       					  "glop"
-                                                                                    	 	 	 	 E
-                                                                                    	 	 	 	 65
-                                                                                    	 	 	 )
-                                                                                    	 	 )
-                                                                                    	 )
-                                                                                    )
+                                                                                   G
+                                                                                          					 (
+                                                                                            					   A
+                                                                                      	G
+                                                                                      	       					 (
+                                                                                      	   B
+                                                                                      	      2
+                                                                                      	   	G
+                                                                                      	   	       					 (
+                                                                                      	   	   C
+                                                                                      	   	      3.14
+                                                                                      	   	   	G
+                                                                                      	   	   	       					 (
+                                                                                      	   	   	   D
+                                                                                      	   	   	      "glop"
+                                                                                      	   	   	   	E
+                                                                                      	   	   	   	   65
+                                                                                      	   	   	       					 )
+                                                                                      	   	       					 )
+                                                                                      	       					 )
+                                                                                          					 )
                                                                                    []
                                                                                )
                                                                              ;
@@ -4712,11 +4702,11 @@
                                                                                    (
                                                                                        s
                                                                                        512
-                                                                                        H
-                                                                                        (
-                                                                                            					 1
-                                                                                        	A
-                                                                                        )
+                                                                                       H
+                                                                                              					 (
+                                                                                                					   1
+                                                                                          	A
+                                                                                              					 )
                                                                                        []
                                                                                    )
                                                                                  ;
@@ -4755,12 +4745,12 @@
                                                                                        (
                                                                                            s
                                                                                            512
-                                                                                            I
-                                                                                            (
-                                                                                                  					  B
-                                                                                                  					  2
-                                                                                            	1e-6
-                                                                                            )
+                                                                                           I
+                                                                                                  					 (
+                                                                                              B
+                                                                                                 2
+                                                                                              	1e-6
+                                                                                                  					 )
                                                                                            []
                                                                                        )
                                                                                      ;
@@ -4798,34 +4788,34 @@
                                                                                          (
                                                                                           (
                                                                                             x
-                                                                                             D
-                                                                                             "sharing"
+                                                                                            D
+                                                                                               "sharing"
                                                                                           )
                                                                                          in
                                                                                            let
                                                                                            (
                                                                                             (
                                                                                               y
-                                                                                               G
-                                                                                               (
-                                                                                                   					 x
-                                                                                               	x
-                                                                                               )
+                                                                                              G
+                                                                                                     					 (
+                                                                                                       					   x
+                                                                                                 	x
+                                                                                                     					 )
                                                                                             )
                                                                                            in
                                                                                              let
                                                                                              (
                                                                                               (
                                                                                                 z
-                                                                                                 G
-                                                                                                 (
-                                                                                                     					 y
-                                                                                                 	 G
-                                                                                                 	 (
-                                                                                                 	     					 x
-                                                                                                 	 	y
-                                                                                                 	 )
-                                                                                                 )
+                                                                                                G
+                                                                                                       					 (
+                                                                                                         					   y
+                                                                                                   	G
+                                                                                                   	       					 (
+                                                                                                   	         					   x
+                                                                                                   	   	y
+                                                                                                   	       					 )
+                                                                                                       					 )
                                                                                               )
                                                                                              in
                                                                                                sequence
@@ -4854,19 +4844,17 @@
                                                                                                        (
                                                                                                          G
                                                                                                          (
-                                                                                                          patternAs 
+                                                                                                          alias t3
                                                                                                           (
-                                                                                                              G
-                                                                                                              (
-                                                                                                               patternAs 
-                                                                                                               (
-                                                                                                                   D
-                                                                                                                   "sharing"
-                                                                                                                   t1
-                                                                                                               )
-                                                                                                              	t2
-                                                                                                              )
-                                                                                                              t3
+                                                                                                            G
+                                                                                                            (
+                                                                                                             alias t1
+                                                                                                             (
+                                                                                                               D
+                                                                                                               "sharing"
+                                                                                                             )
+                                                                                                            	t2
+                                                                                                            )
                                                                                                           )
                                                                                                          	G
                                                                                                          	(
@@ -4990,18 +4978,18 @@
                                                                                                                 )
                                                                                                                 else
                                                                                                                 (
-                                                                                                                  H
-                                                                                                                  (
-                                                                                                                      					 n
-                                                                                                                  	big
-                                                                                                                  	(
-                                                                                                                  	    -
-                                                                                                                  	    (
-                                                                                                                  	        n
-                                                                                                                  	        1
-                                                                                                                  	    )
-                                                                                                                  	)
-                                                                                                                  )
+                                                                                                                 H
+                                                                                                                        					 (
+                                                                                                                          					   n
+                                                                                                                    	big
+                                                                                                                    	(
+                                                                                                                    	    -
+                                                                                                                    	    (
+                                                                                                                    	        n
+                                                                                                                    	        1
+                                                                                                                    	    )
+                                                                                                                    	)
+                                                                                                                        					 )
                                                                                                                 ) 
                                                                                                                )
                                                                                                               )
@@ -5155,62 +5143,56 @@
           )
           then
           (
-           beginEnd 
+           sequence
            (
-               sequence
-               (
-                 incr
+             incr
+             (
+                 counter
+             )
+           ;
+             B
+                 !
                  (
-                     counter
+                 counter
                  )
-               ;
-                  B
-                   !
-                   (
-                   counter
-                   )
-               )
            )
           )
           else
           (
-           beginEnd 
+           let
            (
-               let
-               (
-                (
-                  l
-                  make_big
+            (
+              l
+              make_big
+              (
+                  -
                   (
-                      -
-                      (
-                          n
-                          1
-                      )
-                  ) 
-                )
-               in
-                 let
-                 (
-                  (
-                    r
-                    make_big
-                    (
-                        -
-                        (
-                            n
-                            1
-                        )
-                    ) 
+                      n
+                      1
                   )
-                 in
-                    G
+              ) 
+            )
+           in
+             let
+             (
+              (
+                r
+                make_big
+                (
+                    -
                     (
-                        					 l
-                    	r
+                        n
+                        1
                     )
-                 )
-               )
+                ) 
+              )
+             in
+               G
+                      					 (
+                        					   l
+                  	r
+                      					 )
+             )
            )
           ) 
          )
@@ -5240,82 +5222,76 @@
      		       )
      		       then
      		       (
-     		        beginEnd 
+     		        match
+     		        x
      		        (
-     		            match
-     		            x
+     		        case
+     		        (
+     		          B
+     		          k
+     		          sequence
+     		          (
+     		            incr
      		            (
-     		            case
-     		            (
-     		              B
-     		              k
-     		              sequence
-     		              (
-     		                incr
-     		                (
-     		                    counter
-     		                )
-     		              ;
-     		                =
-     		                (
-     		                    k
-     		                     !
-     		                     (
-     		                     counter
-     		                     )
-     		                )
-     		              )
-     		            ) 
-     		              case
-     		              (
-     		               _
-     		               false
-     		              )
+     		                counter
      		            )
+     		          ;
+     		            =
+     		            (
+     		                k
+     		                 !
+     		                 (
+     		                 counter
+     		                 )
+     		            )
+     		          )
+     		        ) 
+     		          case
+     		          (
+     		           _
+     		           false
+     		          )
      		        )
      		       )
      		       else
      		       (
-     		        beginEnd 
+     		        match
+     		        x
      		        (
-     		            match
-     		            x
-     		            (
-     		            case
-     		            (
-     		              G
+     		        case
+     		        (
+     		          G
+     		          (
+     		           l
+     		          	r
+     		          )
+     		          &&
+     		          (
+     		              check_big
      		              (
-     		               l
-     		              	r
-     		              )
-     		              &&
-     		              (
-     		                  check_big
+     		                  -
      		                  (
-     		                      -
-     		                      (
-     		                          n
-     		                          1
-     		                      )
-     		                      l
+     		                      n
+     		                      1
      		                  )
-     		                  check_big
-     		                  (
-     		                      -
-     		                      (
-     		                          n
-     		                          1
-     		                      )
-     		                      r
-     		                  )
+     		                  l
      		              )
-     		            ) 
-     		              case
+     		              check_big
      		              (
-     		               _
-     		               false
+     		                  -
+     		                  (
+     		                      n
+     		                      1
+     		                  )
+     		                  r
      		              )
-     		            )
+     		          )
+     		        ) 
+     		          case
+     		          (
+     		           _
+     		           false
+     		          )
      		        )
      		       ) 
      		      )
@@ -5444,12 +5420,12 @@
                      		       (
                      		        loop
                      		        (
-                     		             G
-                     		             (
-                     		                 					 acc
-                     		             	 B
-                     		             	 i
-                     		             )
+                     		            G
+                     		                   					 (
+                     		                     					   acc
+                     		               	B
+                     		               	   i
+                     		                   					 )
                      		            +
                      		            (
                      		                i
@@ -5522,55 +5498,27 @@
     class expr = 
                 class_structure
                 (
-                   classValue 
-                   (
-                       <>
-                       data1
-                       "foo"
-                   )
-                   classValue 
-                   (
-                       <>
-                       data2
-                       "bar"
-                   )
-                   classValue 
-                   (
-                       <>
-                       data3
-                       42L
-                   )
-                   method1 
-                   (
-                       <>
-                       test1
-                       ^
-                       (
-                           data1
-                           data2
-                       )
-                   )
-                   method1 
-                   (
-                       <>
-                       test2
-                       false
-                   )
-                   method1 
-                   (
-                       <>
-                       test3
-                       send test1
-                       (
-                        self
-                       )
-                   )
-                   method1 
-                   (
-                       <>
-                       test4
-                       data3
-                   )
+                    data1
+                    "foo"
+                    data2
+                    "bar"
+                    data3
+                    42L
+                   method test1
+                     ^
+                     (
+                         data1
+                         data2
+                     )
+                   method test2
+                     false
+                   method test3
+                     send test1
+                     (
+                      self
+                     )
+                   method test4
+                     data3
                 )
   )
   class
@@ -5582,61 +5530,40 @@
     class expr = 
                 class_structure
                 (
-                   inheritance 
-                   (
-                       <>
-                       classPath 
-                       (
-                           foo
-                       )
-                       super
-                   )
-                   classValue 
-                   (
-                       <>
-                       data2
-                       "test5"
-                   )
-                   classValue 
-                   (
-                       <>
-                       data4
-                       "test3"
-                   )
-                   classValue 
-                   (
-                       <>
-                       data5
-                       "test4"
-                   )
-                   method1 
-                   (
-                       <>
-                       test1
-                       ^
-                       (
-                           data1
-                           ^
-                           (
-                               data2
-                               ^
-                               (
-                                   data4
-                                   ^
-                                   (
-                                       data5
-                                       Int64.to_string
-                                       (
-                                           send test4
-                                           (
-                                            self
-                                           )
-                                       )
-                                   )
-                               )
-                           )
-                       )
-                   )
+                   inherit
+                    constr foo
+                    (
+                    )
+                    data2
+                    "test5"
+                    data4
+                    "test3"
+                    data5
+                    "test4"
+                   method test1
+                     ^
+                     (
+                         data1
+                         ^
+                         (
+                             data2
+                             ^
+                             (
+                                 data4
+                                 ^
+                                 (
+                                     data5
+                                     Int64.to_string
+                                     (
+                                         send test4
+                                         (
+                                          self
+                                         )
+                                     )
+                                 )
+                             )
+                         )
+                     )
                 )
   )
   class
@@ -5648,23 +5575,14 @@
     class expr = 
                 class_structure
                 (
-                   inheritance 
-                   (
-                       <>
-                       classPath 
-                       (
-                           foo
-                       )
-                       super
-                   )
-                   inheritance 
-                   (
-                       <>
-                       classPath 
-                       (
-                           bar
-                       )
-                   )
+                   inherit
+                    constr foo
+                    (
+                    )
+                   inherit
+                    constr bar
+                    (
+                    )
                 )
   )
   let
@@ -6089,10 +6007,10 @@
                 s
                 Marshal.to_string
                 (
-                    (
-                        					 odd
+                        					 (
+                          					   odd
                     	even
-                    )
+                        					 )
                     ::
                      (
                      Marshal.Closures
@@ -6297,8 +6215,20 @@
           )
           then
           (
-           beginEnd 
+           sequence
            (
+             test_out
+             (
+                 "intext.data"
+             )
+           ;
+             sequence
+             (
+               test_in
+               (
+                   "intext.data"
+               )
+             ;
                sequence
                (
                  test_out
@@ -6315,72 +6245,56 @@
                  ;
                    sequence
                    (
-                     test_out
+                     Sys.remove
                      (
                          "intext.data"
                      )
                    ;
                      sequence
                      (
-                       test_in
+                       test_string
                        (
-                           "intext.data"
+                           ()
                        )
                      ;
                        sequence
                        (
-                         Sys.remove
+                         test_buffer
                          (
-                             "intext.data"
+                             ()
                          )
                        ;
                          sequence
                          (
-                           test_string
+                           test_size
                            (
                                ()
                            )
                          ;
                            sequence
                            (
-                             test_buffer
+                             test_block
                              (
                                  ()
                              )
                            ;
                              sequence
                              (
-                               test_size
+                               test_deep
                                (
                                    ()
                                )
                              ;
                                sequence
                                (
-                                 test_block
+                                 test_objects
                                  (
                                      ()
                                  )
                                ;
-                                 sequence
+                                 test_infix
                                  (
-                                   test_deep
-                                   (
-                                       ()
-                                   )
-                                 ;
-                                   sequence
-                                   (
-                                     test_objects
-                                     (
-                                         ()
-                                     )
-                                   ;
-                                     test_infix
-                                     (
-                                         ()
-                                     )
-                                   )
+                                     ()
                                  )
                                )
                              )
@@ -6391,6 +6305,7 @@
                    )
                  )
                )
+             )
            )
           )
           else
@@ -6411,59 +6326,56 @@
             )
             then
             (
-             beginEnd 
+             let
              (
-                 let
-                 (
-                  (
-                    n
-                    int_of_string
+              (
+                n
+                int_of_string
+                (
+                    Array.get
                     (
-                        Array.get
-                        (
-                         Sys.argv
-                         2
-                        )
-                    ) 
-                  )
-                 in
-                   let
-                   (
-                    (
-                      oc
-                      open_out_bin
-                      (
-                          "intext.data"
-                      ) 
+                     Sys.argv
+                     2
                     )
-                   in
-                     sequence
+                ) 
+              )
+             in
+               let
+               (
+                (
+                  oc
+                  open_out_bin
+                  (
+                      "intext.data"
+                  ) 
+                )
+               in
+                 sequence
+                 (
+                   :=
+                   (
+                       counter
+                       0
+                   )
+                 ;
+                   sequence
+                   (
+                     output_value
                      (
-                       :=
-                       (
-                           counter
-                           0
-                       )
-                     ;
-                       sequence
-                       (
-                         output_value
+                         oc
+                         make_big
                          (
-                             oc
-                             make_big
-                             (
-                                 n
-                             )
+                             n
                          )
-                       ;
-                         close_out
-                         (
-                             oc
-                         )
-                       )
+                     )
+                   ;
+                     close_out
+                     (
+                         oc
                      )
                    )
                  )
+               )
              )
             )
             else
@@ -6484,111 +6396,108 @@
               )
               then
               (
-               beginEnd 
+               let
                (
+                (
+                  n
+                  int_of_string
+                  (
+                      Array.get
+                      (
+                       Sys.argv
+                       2
+                      )
+                  ) 
+                )
+               in
+                 let
+                 (
+                  (
+                    ic
+                    open_in_bin
+                    (
+                        "intext.data"
+                    ) 
+                  )
+                 in
                    let
                    (
                     (
-                      n
-                      int_of_string
+                      b
                       (
-                          Array.get
-                          (
-                           Sys.argv
-                           2
-                          )
-                      ) 
+                      input_value
+                      (
+                          ic
+                      )
+                      :
+                      t
+                      (
+                      )
+                      )
                     )
                    in
-                     let
+                     sequence
                      (
-                      (
-                        ic
-                        open_in_bin
-                        (
-                            "intext.data"
-                        ) 
-                      )
-                     in
-                       let
+                       Gc.full_major
                        (
-                        (
-                          b
-                          (
-                          input_value
-                          (
-                              ic
-                          )
-                          :
-                          t
-                          (
-                          )
-                          )
-                        )
-                       in
+                           ()
+                       )
+                     ;
+                       sequence
+                       (
+                         close_in
+                         (
+                             ic
+                         )
+                       ;
                          sequence
                          (
-                           Gc.full_major
+                           :=
                            (
-                               ()
+                               counter
+                               0
                            )
                          ;
                            sequence
                            (
-                             close_in
+                             ifthenelse
                              (
-                                 ic
+                              if
+                              (
+                               check_big
+                               (
+                                   n
+                                   b
+                               )
+                              )
+                              then
+                              (
+                               Printf.printf
+                               (
+                                   "Test big %d passed"
+                                   n
+                               )
+                              )
+                              else
+                              (
+                               Printf.printf
+                               (
+                                   "Test big %d FAILED"
+                                   n
+                               )
+                              ) 
                              )
                            ;
-                             sequence
+                             print_newline
                              (
-                               :=
-                               (
-                                   counter
-                                   0
-                               )
-                             ;
-                               sequence
-                               (
-                                 ifthenelse
-                                 (
-                                  if
-                                  (
-                                   check_big
-                                   (
-                                       n
-                                       b
-                                   )
-                                  )
-                                  then
-                                  (
-                                   Printf.printf
-                                   (
-                                       "Test big %d passed"
-                                       n
-                                   )
-                                  )
-                                  else
-                                  (
-                                   Printf.printf
-                                   (
-                                       "Test big %d FAILED"
-                                       n
-                                   )
-                                  ) 
-                                 )
-                               ;
-                                 print_newline
-                                 (
-                                     ()
-                                 )
-                               )
+                                 ()
                              )
                            )
                          )
                        )
                      )
                    )
+                 )
                )
               )
               else

@@ -530,16 +530,17 @@ and class_field i ppf x =
   let loc = x.pcf_loc in
   match x.pcf_desc with
   | Pcf_inher (ovf, ce, so) ->
-      line i ppf "Pcf_inher %a\n" fmt_override_flag ovf;
+      (* line i ppf "Pcf_inher %a\n" fmt_override_flag ovf; *)
+      line i ppf "inherit\n";
       class_expr (i+1) ppf ce;
-      option (i+1) string ppf so;
+      (* option (i+1) string ppf so; *)
   | Pcf_valvirt (s, mf, ct) ->
-      line i ppf "Pcf_valvirt \"%s\" %a %a\n"
-        s.txt fmt_mutable_flag mf fmt_location loc;
+      (* line i ppf "Pcf_valvirt \"%s\" %a %a\n" s.txt fmt_mutable_flag mf fmt_location loc; *)
+      line i ppf "%s\n" s.txt;
       core_type (i+1) ppf ct;
   | Pcf_val (s, mf, ovf, e) ->
-      line i ppf "Pcf_val \"%s\" %a %a %a\n"
-        s.txt fmt_mutable_flag mf fmt_override_flag ovf fmt_location loc;
+      (* line i ppf "Pcf_val \"%s\" %a %a %a\n" s.txt fmt_mutable_flag mf fmt_override_flag ovf fmt_location loc; *)
+      line i ppf "%s\n" s.txt;
       expression (i+1) ppf e;
   | Pcf_virt (s, pf, ct) ->
       line i ppf "Pcf_virt \"%s\" %a %a\n"
@@ -587,7 +588,7 @@ and module_type i ppf x =
       module_type i ppf mt2;
       line i ppf ")\n";
   | Pmty_with (mt, l) ->
-      line i ppf "Pmty_with\n";
+      (* line i ppf "Pmty_with\n"; *)
       module_type i ppf mt;
       list i longident_x_with_constraint ppf l;
   | Pmty_typeof m ->
@@ -641,7 +642,7 @@ and modtype_declaration i ppf x =
 and with_constraint i ppf x =
   match x with
   | Pwith_type (td) ->
-      line i ppf "Pwith_type\n";
+      (* line i ppf "Pwith_type\n"; *)
       type_declaration (i+1) ppf td;
   | Pwith_typesubst (td) ->
       line i ppf "Pwith_typesubst\n";

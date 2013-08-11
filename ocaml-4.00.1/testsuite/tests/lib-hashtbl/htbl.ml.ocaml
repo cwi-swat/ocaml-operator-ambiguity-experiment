@@ -6,11 +6,9 @@
       Hashtbl.S
       functor M
       (
-        Pmty_with
           Map.S
         (
           key
-            Pwith_type
               type
                 params =
                   (
@@ -898,11 +896,9 @@
               Hashtbl.stats
           )
         )
-        Pmty_with
           Hashtbl.S
         (
           key
-            Pwith_type
               type
                 params =
                   (

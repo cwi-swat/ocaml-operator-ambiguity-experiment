@@ -6,17 +6,19 @@
    Hashtbl.S
    functor M
    (
-     modTypeWith 
-     (
-         Map.S
-         modConsType1 
-         (
-             key
-             H.key
-             (
-             )
-         )
-     )
+      Map.S
+       key
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+        H.key
+        (
+        )
      struct
      (
      let
@@ -567,16 +569,18 @@
    type
    (  						
       t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-      string
-      (
+        (
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        string
+        (
+        )
       )
    )
    let
@@ -616,16 +620,18 @@
    type
    (  						
       t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-      int
-      (
+        (
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        int
+        (
+        )
       )
    )
    let
@@ -665,21 +671,23 @@
    type
    (  						
       t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-      tuple
-      (
-       string
-       (
-       )
-        string
         (
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        tuple
+        (
+         string
+         (
+         )
+          string
+          (
+          )
         )
       )
    )
@@ -720,20 +728,22 @@
    type
    (  						
       t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-       list
-       (
-         string
+        (
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+         list
          (
+           string
+           (
+           )
          )
-       )
+      )
    )
    let
    (
@@ -773,37 +783,41 @@
    type
    (  						
       key
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-      M.key
-      (
+        (
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        M.key
+        (
+        )
       )
    )
    type
    (  						
       t
-      type
-      params=
-      (
-       a
+        (
+        type
+        params=
+        (
+         a
+        )
+        cstrs =
+        (
+        )
+        kind =
+         Hashtbl.t
+            (
+             key
+             (
+             )
+        	 a				
+            ) 
       )
-      cstrs =
-      (
-      )
-      kind =
-       Hashtbl.t
-          (
-           key
-           (
-           )
-      	 a				
-          ) 
    )
    let
    (
@@ -914,16 +928,18 @@
    type
    (  						
       t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-      string
-      (
+        (
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        string
+        (
+        )
       )
    )
    let
@@ -968,16 +984,18 @@
    type
    (  						
       t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-      int
-      (
+        (
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        int
+        (
+        )
       )
    )
    let
@@ -1126,11 +1144,13 @@
                           data
                           ::
                           (
-                                  					 l
+                                  					 (
+                                    					   l
                               	 !
                               	 (
                               	 lineno
                               	 )
+                                  					 )
                                !
                                (
                                data
@@ -1174,54 +1194,102 @@
     string_data
     array
     (
-         					 "Si"
+         					 (
+           					   "Si"
      	0
-         					 "non"
+         					 )
+         					 (
+           					   "non"
      	1
-         					 "e"
+         					 )
+         					 (
+           					   "e"
      	2
-         					 "vero"
+         					 )
+         					 (
+           					   "vero"
      	3
-         					 "e"
+         					 )
+         					 (
+           					   "e"
      	4
-         					 "ben"
+         					 )
+         					 (
+           					   "ben"
      	5
-         					 "trovato"
+         					 )
+         					 (
+           					   "trovato"
      	6
-         					 "An"
+         					 )
+         					 (
+           					   "An"
      	10
-         					 "apple"
+         					 )
+         					 (
+           					   "apple"
      	11
-         					 "a"
+         					 )
+         					 (
+           					   "a"
      	12
-         					 "day"
+         					 )
+         					 (
+           					   "day"
      	13
-         					 "keeps"
+         					 )
+         					 (
+           					   "keeps"
      	14
-         					 "the"
+         					 )
+         					 (
+           					   "the"
      	15
-         					 "doctor"
+         					 )
+         					 (
+           					   "doctor"
      	16
-         					 "away"
+         					 )
+         					 (
+           					   "away"
      	17
-         					 "Pierre"
+         					 )
+         					 (
+           					   "Pierre"
      	20
-         					 "qui"
+         					 )
+         					 (
+           					   "qui"
      	21
-         					 "roule"
+         					 )
+         					 (
+           					   "roule"
      	22
-         					 "n'amasse"
+         					 )
+         					 (
+           					   "n'amasse"
      	23
-         					 "pas"
+         					 )
+         					 (
+           					   "pas"
      	24
-         					 "mousse"
+         					 )
+         					 (
+           					   "mousse"
      	25
-         					 "Asinus"
+         					 )
+         					 (
+           					   "Asinus"
      	30
-         					 "asinum"
+         					 )
+         					 (
+           					   "asinum"
      	31
-         					 "fricat"
+         					 )
+         					 (
+           					   "fricat"
      	32
+         					 )
     )
   )
   let
@@ -1242,8 +1310,10 @@
      		         Array.make
      		         (
      		             num
-     		                 					 0
+     		                 					 (
+     		                   					   0
      		             	0
+     		                 					 )
      		         ) 
      		       )
      		      in
@@ -1260,11 +1330,13 @@
      		           (
      		            data
      		            i
-     		                					 Random.int
+     		                					 (
+     		                  					   Random.int
      		            (
      		                range
      		            )
      		            	i
+     		                					 )
      		           )
      		        ;
      		          data
@@ -1291,9 +1363,13 @@
                k
               	d
               )
-                  					 k
+                  					 (
+                  					 (
+                    					   k
               	k
+                  					 )
               	d
+                  					 )
               )
              )
              data
@@ -1322,8 +1398,10 @@
                     )
                     10
                 )
-                    					 []
+                    					 (
+                      					   []
                 	0
+                    					 )
             ) 
           )
          in
@@ -1443,7 +1521,8 @@
                   (
                    d
                    i
-                       					 mklist
+                       					 (
+                         					   mklist
                    (
                        Random.int
                        (
@@ -1451,6 +1530,7 @@
                        )
                    )
                    	i
+                       					 )
                   )
                ;
                  d

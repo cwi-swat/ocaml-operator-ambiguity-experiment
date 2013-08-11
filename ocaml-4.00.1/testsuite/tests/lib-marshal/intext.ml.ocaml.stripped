@@ -5498,11 +5498,11 @@
       class expr =
           class_structure
             (
-              Pcf_val "data1" Immutable Fresh ([451,16088+2]..[451,16088+19])
+              data1
                 "foo"
-              Pcf_val "data2" Immutable Fresh ([452,16108+2]..[452,16108+19])
+              data2
                 "bar"
-              Pcf_val "data3" Immutable Fresh ([453,16128+2]..[453,16128+17])
+              data3
                 42
               method test1
                 ^
@@ -5530,16 +5530,15 @@
       class expr =
           class_structure
             (
-              Pcf_inher Fresh
+              inherit
                   constr foo
                   (
                   )
-                  "super"
-              Pcf_val "data2" Immutable Override ([462,16313+2]..[462,16313+22])
+              data2
                 "test5"
-              Pcf_val "data4" Immutable Fresh ([463,16336+2]..[463,16336+21])
+              data4
                 "test3"
-              Pcf_val "data5" Immutable Fresh ([464,16358+2]..[464,16358+21])
+              data5
                 "test4"
               method test1
                 ^
@@ -5576,16 +5575,15 @@
       class expr =
           class_structure
             (
-              Pcf_inher Fresh
+              inherit
                   constr foo
                   (
                   )
-                  "super"
-              Pcf_inher Override
+              inherit
                   constr bar
                   (
                   )
-                            )
+            )
   )
   let
   (

@@ -72,6 +72,10 @@ public void do(type[&T <: Tree] nont, str input) {
 	    insert amb({x});
 	  }
 	  
+	  if({x:uneq(_, _), functionApplication(_, _)} := alts) {
+	    insert amb({x});
+	  }
+	  
 	  if({Expr x, functionApplication(_, _)} := alts) {
 	    insert amb({x});
 	  }	  
@@ -391,6 +395,13 @@ str printAST(value v) {
                                        ')"; 
                                 else fail;
                                 
+    case "uneq"(lhs, rhs): return "!=
+    							  '(
+    							  '   <printAST(lhs)>
+    							  '   <printAST(rhs)>
+    							  ')  
+                                  ";                            
+                                
     case "dotBracket1"(e1, e2) : return "Array.get
 												'(
 												' <printAST(e1)>
@@ -622,16 +633,16 @@ str printAST(value v) {
 	
 	case "typeDef"(params, constrName, info): return 
 											   " <printAST(constrName)>
-											   ' type
-											   ' params=
-											   ' (
-											   ' <printAST(params)>
-											   ' )
-											   ' cstrs =
-											   ' (
-											   ' )
-											   ' kind =
-											   ' <printAST(info)>
+											   '   type
+											   '   params=
+											   '   (
+											   '   <printAST(params)>
+											   '   )
+											   '   cstrs =
+											   '   (
+											   '   )
+											   '   kind =
+											   '   <printAST(info)>
 											   ";
 											   
 											   
@@ -988,6 +999,31 @@ str printAST(value v) {
     							'  <printAST(me)>
     							')"
     							;
+    					
+    // ModuleType "with" ModConstraint ("and" ModConstraint)*							
+    case "modTypeWith"(t, c, l): return "
+    								    ' <printAST(t)>
+    								    ' <printAST(c)>
+    								    <for (x <- l) {>
+    								    ' <printAST(x)>	
+    								    <}>
+    								    ";
+    								    
+    								    
+   // "type" TypeParams? TypeConstr "=" Typexpr
+   case "modConsType1"([], c, e): return " 
+   										 ' <printAST(c)>
+   										 ' type
+										 ' params=
+										 ' (
+										 ' )
+										 ' cstrs =
+										 ' (
+										 ' )
+										 ' kind =
+										 ' 
+   										 '  <printAST(e)>
+   										 "; 								    
     							
     // Classes
     case "classDef"(c) : return printAST(c);
@@ -1011,7 +1047,27 @@ str printAST(value v) {
    										   ')
    										   ' <printAST(ce)>
    										   ";
+   										   
+   	// ("val"|"val!") "mutable"? InstVarName (":" Typexpr)? "=" Expr
+   	case "classValue"(_, _, n, _, e): return " <printAST(n)>
+   											 ' <printAST(e)>
+   											 ";									   
     								   
+    // ("inherit" | "inherit!") ClassExpr ("as" ValueName)?
+  	case "inheritance"(_, ce, []): return "inherit
+											' constr <printAST(ce)>
+											' (
+											' )
+										    ";
+    								   
+	case "inheritance"(_, ce, [vn]): return "inherit
+											' constr <printAST(ce)>
+											' (
+											' )
+										    ";
+	
+	case "classPath"(cp) : return printAST(cp);
+
     								   
     case "object"(s) : return printAST(s);
     					      

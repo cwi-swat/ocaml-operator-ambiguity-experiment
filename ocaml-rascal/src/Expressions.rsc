@@ -25,6 +25,7 @@ syntax Expr
      > right coloncolon: Expr "::" Expr
      > right infix4: Expr InfixSymbol4 Expr
      > left  infix5: Expr InfixSymbol5 Expr
+     | left  uneq:   Expr "!=" Expr
      > right infix6: Expr InfixSymbol6 Expr
      > right infix7: Expr InfixSymbol7 Expr
      > non-assoc comma: Expr ("," Expr)+
@@ -66,9 +67,9 @@ syntax Expr
 syntax Arg 
  	 = Expr !unaryMinus !floatUnaryMinus !letbinding !ifThenElse !ifThen !match !function !fun !tryBock !letModule
  	 | Label
-     | LabelColon Expr !unaryMinus  !floatUnaryMinus !letbinding !ifThenElse !ifThen !match !function !fun !tryBock !letModule 
+     | LabelColon Expr !unaryMinus !floatUnaryMinus !letbinding !ifThenElse !ifThen !match !function !fun !tryBock !letModule
      | OptLabel
-     | OptLabelColon Expr !unaryMinus  !floatUnaryMinus !letbinding !ifThenElse !ifThen !match !function !fun !tryBock !letModule 
+     | OptLabelColon Expr !unaryMinus !floatUnaryMinus !letbinding !ifThenElse !ifThen !match !function !fun !tryBock !letModule 
      ;
            
 syntax PatternMatching 
