@@ -60,7 +60,7 @@ public void do(type[&T <: Tree] nont, str input) {
 &T<:Tree filterOCaml(&T<:Tree p) = visit(p) {
   case amb(alts) :{
       
-	  if({*_, field(Expr _, field_name), Expr x, *_} := alts) {
+	  if({*_, field(_, _), x:valuePath(_), *_} := alts) {
 	  	insert amb({x});
 	  }
 
@@ -306,7 +306,13 @@ str printAST(value v) {
     
     case "charLiteral"(c): return "<toHex(c)>";
     
-    case "floatLiteral"(f) : return "<f>";						     
+    case "floatLiteral"(f) : return "<f>";		
+    
+    case "int32"(x) : return "<substring(x, 0, size(x) - 1)>";
+    
+    case "int64"(x) : return "<substring(x, 0, size(x) - 1)>";
+    
+    case "nativeInt"(x) : return "<substring(x, 0, size(x) - 1)>";				     
                             
     case "coloncolon"(lhs,rhs) : return "::
                                    '(

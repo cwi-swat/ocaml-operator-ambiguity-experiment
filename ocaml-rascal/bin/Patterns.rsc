@@ -39,7 +39,7 @@ syntax Constant
 	 | emptyArray: "[|" "|]"
 	 | emptyCurly: "{\<" "\>}"
      | "`" TagName
-     | Int32Literal  
-	 | Int64Literal  
-     | NativeIntLiteral
+     | int32: Int32Literal  
+	 | int64: Int64Literal  
+     | nativeInt: NativeIntLiteral
      ;

@@ -11068,12 +11068,9 @@
           (
            if
            (
-            field
-            (
-            Scanf
-            Scanning.beginning_of_input
-            )
-                									 
+            
+                								  
+                							      Scanf.Scanning.beginning_of_input
             (
                 ib
             )
@@ -11396,12 +11393,9 @@
                 									  
               
                ib
-               field
-               (
-               Scanf.Scanning
-               from_function
-               )
-                   									 
+               
+                   								  
+                   							      Scanf.Scanning.from_function
                (
                    next_char
                    (
@@ -12162,7 +12156,7 @@
                       "%nd"
                       id
                   )
-                  123n
+                  123
               )
               &&
               (
@@ -12182,7 +12176,7 @@
                            (
                                i
                            )
-                           123n
+                           123
                        )
                        )
                        													 
@@ -12199,7 +12193,7 @@
                               "%ld"
                               id
                           )
-                          123l
+                          123
                       )
                       &&
                       (
@@ -12219,7 +12213,7 @@
                                    (
                                        i
                                    )
-                                   125l
+                                   125
                                )
                                )
                                													 
@@ -12236,7 +12230,7 @@
                                       "%Ld"
                                       id
                                   )
-                                  123L
+                                  123
                               )
                               sscanf
                               (
@@ -12254,7 +12248,7 @@
                                        (
                                            i
                                        )
-                                       123L
+                                       123
                                    )
                                    )
                                    													 
@@ -12525,12 +12519,9 @@
               									  
             
              ib
-             field
-             (
-             Scanf
-             Scanning.from_file
-             )
-                 									 
+             
+                 								  
+                 							      Scanf.Scanning.from_file
              (
                  fname
              ) 
@@ -12562,12 +12553,9 @@
                  while
                  not
                  (
-                     field
-                     (
-                     Scanf.Scanning
-                     end_of_input
-                     )
-                         									 
+                     
+                         								  
+                         							      Scanf.Scanning.end_of_input
                      (
                          ib
                      )
@@ -12898,12 +12886,9 @@
               									  
             
              ib
-             field
-             (
-             Scanf
-             Scanning.from_file
-             )
-                 									 
+             
+                 								  
+                 							      Scanf.Scanning.from_file
              (
                  fname
              ) 
