@@ -24,7 +24,7 @@ public void run() {
 public void runFile(str f) {
 		print(f + "...");
 		try {
-			tree = jparse(#start[Implementation], readFile(|file:///| + filePath + "/" + f));
+			tree = jparse(#start[TopLevel], readFile(|file:///| + filePath + "/" + f));
 			
 			if (/amb(_) := tree) {
 				tree = filterOCaml(tree);
@@ -1112,9 +1112,19 @@ str printAST(value v) {
     						
     						
     // Names
-    case "valuePath"("valuePath"([], n)) : return "<n>";
+    case "valuePath"("valuePath"([], n)) : return "<printAST(n)>";
     
-    case "valuePath"("valuePath"(p, n)) : return "<printAST(p)>.<n>";
+    case "valuePath"("valuePath"(p, n)) : return "<printAST(p)>.<printAST(n)>";
+    
+    //case "valName1"(x): return "<x>aaa";
+    //
+    //case "valName2"(l): return "fuck
+    //							  <for(x <- l) {>
+    //							  	<printAST(x)>
+    //							  <}>
+    //							 ";
+    //
+    //case "valName3"(x): return "<printAST(x)>";
     
     case "modulePath"([], n) : return "<n>";
     
