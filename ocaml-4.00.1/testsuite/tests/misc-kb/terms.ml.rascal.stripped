@@ -2,30 +2,34 @@
   type
   (  						
      term
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     (
-     Var
-     (
-      int
-     )
-     Term
-     (
-      string
-       list
+       type
+       params=
        (
-         term
        )
-     )
-     )
-    )
+       cstrs =
+       (
+       )
+       kind =
+       (
+       Var
+       (
+        int
+        (
+        )
+       )
+       Term
+       (
+        string
+        (
+        )
+         list
+         (
+           term
+           (
+           )
+         )
+       )
+       )
   )
   let
   (
@@ -161,18 +165,18 @@
              oper
             	sons
             )
-             Term
-             (
-                 					 oper
-             	List.map
-             	(
-             	    substitute
-             	    (
-             	        subst
-             	    )
-             	    sons
-             	)
-             )
+            Term
+                   					 (
+                     					   oper
+               	List.map
+               	(
+               	    substitute
+               	    (
+               	        subst
+               	    )
+               	    sons
+               	)
+                   					 )
           ) 
             case
             (
@@ -215,10 +219,10 @@
      		  		     (
      		  		 	  n
      		  		      match
-     		  		      (
-     		  		          					 u
+     		  		          					 (
+     		  		            					   u
      		  		      	m
-     		  		      )
+     		  		          					 )
      		  		      (
      		  		      case
      		  		      (
@@ -242,17 +246,17 @@
      		  		         		sons
      		  		         	)
      		  		         )
-     		  		          Term
-     		  		          (
-     		  		              					 oper
-     		  		          	replace_nth
-     		  		          	(
-     		  		          	    i
-     		  		          	    sons
-     		  		          	    u
-     		  		          	    n
-     		  		          	)
-     		  		          )
+     		  		         Term
+     		  		                					 (
+     		  		                  					   oper
+     		  		            	replace_nth
+     		  		            	(
+     		  		            	    i
+     		  		            	    sons
+     		  		            	    u
+     		  		            	    n
+     		  		            	)
+     		  		                					 )
      		  		        )
      		  		        case
      		  		        (
@@ -385,10 +389,10 @@
      		          		  		     (
      		          		  		 	  t2
      		          		  		      match
-     		          		  		      (
-     		          		  		          					 t1
+     		          		  		          					 (
+     		          		  		            					   t1
      		          		  		      	t2
-     		          		  		      )
+     		          		  		          					 )
      		          		  		      (
      		          		  		      case
      		          		  		      (
@@ -440,10 +444,10 @@
      		          		  		         (
      		          		  		          ::
      		          		  		          (
-     		          		  		              (
-     		          		  		                  					 v
+     		          		  		                  					 (
+     		          		  		                    					   v
      		          		  		              	t2
-     		          		  		              )
+     		          		  		                  					 )
      		          		  		              subst
      		          		  		          )
      		          		  		         ) 
@@ -543,14 +547,14 @@
      		                v
      		               	t
      		               )
-     		               (
-     		                   					 v
+     		                   					 (
+     		                     					   v
      		               	substitute
      		               	(
      		               	    subst1
      		               	    t
      		               	)
-     		               )
+     		                   					 )
      		               )
      		              )
      		              subst2
@@ -612,10 +616,10 @@
      		     (
      		 	  term2
      		      match
-     		      (
-     		          					 term1
+     		          					 (
+     		            					   term1
      		      	term2
-     		      )
+     		          					 )
      		      (
      		      case
      		      (
@@ -661,10 +665,10 @@
      		           (
      		            ::
      		             (
-     		             (
-     		                 					 n1
+     		                 					 (
+     		                   					   n1
      		             	term2
-     		             )
+     		                 					 )
      		             []
      		             ) 
      		           ) 
@@ -700,10 +704,10 @@
      		          (
      		           ::
      		            (
-     		            (
-     		                					 n2
+     		                					 (
+     		                  					   n2
      		            	term1
-     		            )
+     		                					 )
      		            []
      		            ) 
      		          ) 
@@ -850,10 +854,14 @@
           (
           case
           (
-            patternTuple 
+            ::
             (
-                s1
+              s1
+              ::
+              (
                 s2
+                []
+              )
             )
             sequence
             (
