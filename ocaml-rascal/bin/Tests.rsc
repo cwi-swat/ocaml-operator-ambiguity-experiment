@@ -787,10 +787,11 @@ str printAST(value v) {
     case "typeExprBrackets"(t) : return printAST(t);
     
     
-    // "(" {Typexpr ","}+ ")" TypeConstr
-    case "typeExprBrackets2"(l, c): return "
+    // "(" Typexpr (";" Typexpr)+ ")" TypeConstr
+    case "typeExprBrackets2"(t, l, c): return "
     									   ' <printAST(c)>
     									   '    (
+    									   '     <printAST(t)>
     									   	<for (x <- l) {>
     									   '	 <printAST(x)>				
     									   	<}>   

@@ -14,7 +14,7 @@ syntax Typexpr
      | "_"
      | typeExprBrackets: "(" Typexpr ")"
      | typexprConstr2: TypeConstr
-  	 | typeExprBrackets2: "(" {Typexpr ","}+ ")" TypeConstr
+  	 | typeExprBrackets2: "(" Typexpr ("," Typexpr)+ ")" TypeConstr
   	 | PolymorphicVariantType
   	 | "\<" ".."? "\>"
   	 | "\<" {MethodType ";"}+ (";" "..")? "\>"
