@@ -380,6 +380,8 @@ str printAST(value v) {
 	
 	case "patternConstant"(x) : return printAST(x); 		
 	
+	case "patternValueName"(list[value] l) : return "<for (x <- l) {><printAST(x)><}>";
+	
 	case "patternValueName"(x) : return printAST(x);	
 	
 	// "[|" {Pattern ";"}+ ";"? "|]"
