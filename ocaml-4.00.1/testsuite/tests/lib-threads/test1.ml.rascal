@@ -5,68 +5,88 @@
   (  						
       							    	 
      prodcons
-     type
-     params=
-     (
-     
-      
-      a
-     										 
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     
-     
-     							     
-      
-      buffer
-      poly
-      
-       array
+       type
+       params=
        (
-         a
-       )
        
-          									
-                                             
-     							     
-      
-      lock
-      poly
-      "extendedModulePath1"([],"Mutex")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-                                             
-     							     
-      
-      readpos
-      poly
-      int
-                                             
-     							     
-      
-      writepos
-      poly
-      int
-                                             
-     							     
-      
-      notempty
-      poly
-      "extendedModulePath1"([],"Condition")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-                                             
-     							     
-      
-      notfull
-      poly
-      "extendedModulePath1"([],"Condition")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-                                             
-     							     
-     	                           
-     														  
-     														 
-    )
+        
+        a
+       										 
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+       
+       (
+       							     
+        
+        buffer
+        poly
+        
+         array
+         (
+           a
+         )
+         
+            									
+                                               
+       							     
+        
+        lock
+        poly
+        
+        Mutex.t
+        (
+        )
+        								  
+                                               
+       							     
+        
+        readpos
+        poly
+        
+        int
+        (
+        )
+        								  
+                                               
+       							     
+        
+        writepos
+        poly
+        
+        int
+        (
+        )
+        								  
+                                               
+       							     
+        
+        notempty
+        poly
+        
+        Condition.t
+        (
+        )
+        								  
+                                               
+       							     
+        
+        notfull
+        poly
+        
+        Condition.t
+        (
+        )
+        								  
+                                               
+       							     
+       )
+       	                           
+       														  
+       														 
     											   
   								        
   )
