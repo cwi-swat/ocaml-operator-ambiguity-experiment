@@ -1,0 +1,124 @@
+1049c1049
+<                       "'a' '\n' '\t' '\000' '\032'"
+---
+>                       "'a' '\n' '\t' '\000' ' '"
+1124c1124
+<                       "a \n \t \000 \032b"
+---
+>                       "a \n \t \000  b"
+1370c1370
+<                               "a\010b"
+---
+>                               "a\nb"
+1376c1376
+<                                   "a\\\n\\n          b \\\n\\n          c\010\\\n\\n          b"
+---
+>                                   "a\\\nb \\\nc\n\\\nb"
+1382c1382
+<                                       "a\\\n\\n          \\\n\\n          \\\n\\n          b \\\n\\n          c\010\\\n\\n          b"
+---
+>                                       "a\\\n\\\n\\\nb \\\nc\n\\\nb"
+1388c1388
+<                                           "\xef"
+---
+>                                           "ï"
+1412c1412
+<                                                   "\xef"
+---
+>                                                   "ï"
+1448c1448
+<                                                           "\239\187\191"
+---
+>                                                           "ï»¿"
+1456c1456
+<                                                                   "\"\xef\xbb\xbf\""
+---
+>                                                                   "\"ï»¿\""
+1490c1490
+<                                                                       "\"\ \""
+---
+>                                                                       "\" \""
+1500c1500
+<                                                                   "\ "
+---
+>                                                                   " "
+1567c1567
+<                    "Une chaï¿½ne: \"celle-ci\" et \"celle-lï¿½\"!"
+---
+>                       "Une chaîne: \"celle-ci\" et \"celle-là\"!"
+1634c1634
+<                       "Unechaï¿½ne:celle-cietcelle-lï¿½!"
+---
+>                       "Unechaîne:celle-cietcelle-là!"
+1787c1787
+<                       "Jean-Luc\tde Lï¿½age\t68"
+---
+>                       "Jean-Luc\tde Léage\t68"
+1813c1813
+<                                        "de Lï¿½age"
+---
+>                                               "de Léage"
+8591,8595c8591
+<             field
+<             (
+<             Scanf
+<             Scanning.beginning_of_input
+<             )
+---
+>                     Scanf.Scanning.beginning_of_input
+8839,8843c8835
+<                field
+<                (
+<                Scanf.Scanning
+<                from_function
+<                )
+---
+>                   Scanf.Scanning.from_function
+9479c9471
+<                   123n
+---
+>                   123
+9497c9489
+<                            123n
+---
+>                               123
+9512c9504
+<                           123l
+---
+>                           123
+9530c9522
+<                                    125l
+---
+>                                       125
+9545c9537
+<                                   123L
+---
+>                                   123
+9561c9553
+<                                        123L
+---
+>                                           123
+9751,9755c9743
+<              field
+<              (
+<              Scanf
+<              Scanning.from_file
+<              )
+---
+>                 Scanf.Scanning.from_file
+9777,9781c9765
+<                      field
+<                      (
+<                      Scanf.Scanning
+<                      end_of_input
+<                      )
+---
+>                     Scanf.Scanning.end_of_input
+10023,10027c10007
+<              field
+<              (
+<              Scanf
+<              Scanning.from_file
+<              )
+---
+>                 Scanf.Scanning.from_file
