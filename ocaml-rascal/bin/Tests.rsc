@@ -475,11 +475,12 @@ str printAST(value v) {
     
                                 
     case "comma"(e, l) : return "
-    					 <printAST(e)>
-    					 <for (exp <- l) {>
+    					 (
+      					   <printAST(e)>
+    					   <for (exp <- l) {>
     					 '	<printAST(exp)>
-    					 <}>
-    					 ";                            
+    					   <}>
+    					 )";                            
                                 
     case "functionApplication"(e,args) : return "<printAST(e)>
                                                    '(

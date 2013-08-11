@@ -13,9 +13,9 @@
       (
       )
       kind =
-     (
       int
-     )
+      (
+      )
    )
    let
    (
@@ -24,6 +24,8 @@
      1
      :
      t
+     (
+     )
      )
    )
    let
@@ -33,6 +35,8 @@
      2
      :
      t
+     (
+     )
      )
    )
    let
@@ -43,6 +47,8 @@
          (
      	  z
      	  t
+     	  (
+     	  )
           (
           +
           (
@@ -51,6 +57,8 @@
           )
           :
           t
+          (
+          )
           )
          )
     )
@@ -74,24 +82,28 @@
       (
       )
       kind =
-     (
       tuple
       (
        t
+       (
+       )
         t
+        (
+        )
       )
-     )
    )
    let
    (
      p
      (
-     (
-         					 x
+         					 (
+           					   x
      	y
-     )
+         					 )
      :
      u
+     (
+     )
      )
    )
    let
@@ -105,19 +117,23 @@
      	  	y
      	  )
      	  u
+     	  (
+     	  )
           (
+              					 (
+                					   f
           (
-              					 f
-                					 (
-                					     x
-                					 )
+              x
+          )
           	f
           	(
           	    y
           	)
-          )
+              					 )
           :
           u
+          (
+          )
           )
          )
     )
@@ -187,10 +203,10 @@
          (
              B.g
              (
-                 (
-                     					 123
+                     					 (
+                       					   123
                  	456
-                 )
+                     					 )
              )
          )
        )
@@ -211,6 +227,8 @@
          (
      	  z
      	  t
+     	  (
+     	  )
           (
           -
           (
@@ -219,6 +237,8 @@
           )
           :
           t
+          (
+          )
           )
          )
     )
@@ -258,19 +278,23 @@
          (
          )
          kind =
-        (
-        )
       )
       sig_value f
       value_description
       arrow
       t
+      (
+      )
       int
+      (
+      )
       (
       )
       sig_value x
       value_description
       t
+      (
+      )
       (
       )
      )
@@ -381,7 +405,6 @@
       (
       )
       kind =
-     (
       (
       A
       (
@@ -389,9 +412,10 @@
       B
       (
        int
+       (
+       )
       )
       )
-     )
    )
    let
    (
@@ -455,8 +479,8 @@
               (
                 print_t
                 (
-                     B
-                     42
+                    B
+                       42
                 )
               ;
                 print_newline
@@ -495,8 +519,8 @@
          (
            D.print_t
            (
-                D.B
-                42
+               D.B
+                  42
            )
          ;
            print_newline
@@ -513,6 +537,8 @@
    exception Exn
    (
    string
+   (
+   )
    )
    class
    (
@@ -524,7 +550,7 @@
                  class_structure
                  (
                     method m
-                          1
+                      1
                  )
    )
    )
@@ -540,8 +566,8 @@
       try
       raise
       (
-           Exn
-           "foo"
+          Exn
+             "foo"
       )
       (
       case
@@ -577,8 +603,8 @@
      try
      raise
      (
-          G.Exn
-          "foo"
+         G.Exn
+            "foo"
      )
      (
      case

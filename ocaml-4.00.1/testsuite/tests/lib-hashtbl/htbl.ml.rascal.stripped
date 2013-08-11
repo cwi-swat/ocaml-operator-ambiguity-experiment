@@ -12,7 +12,9 @@
          modConsType1 
          (
              key
-             "extendedModulePath1"([],"H")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].key
+             H.key
+             (
+             )
          )
      )
      struct
@@ -558,7 +560,7 @@
    )
   )
   module  MS
-    Map.Make
+       							      Map.Make
    (
    struct
    (
@@ -573,9 +575,9 @@
       (
       )
       kind =
-     (
       string
-     )
+      (
+      )
    )
    let
    (
@@ -585,11 +587,15 @@
          (
       		 x
       		 t
+      		 (
+      		 )
       		(
       		 case
       		     (
       		 	  y
       		 	  t
+      		 	  (
+      		 	  )
       		      Pervasives.compare
       		      (
       		          x
@@ -603,7 +609,7 @@
    )
    )
   module  MI
-    Map.Make
+       							      Map.Make
    (
    struct
    (
@@ -618,9 +624,9 @@
       (
       )
       kind =
-     (
       int
-     )
+      (
+      )
    )
    let
    (
@@ -630,11 +636,15 @@
          (
       		 x
       		 t
+      		 (
+      		 )
       		(
       		 case
       		     (
       		 	  y
       		 	  t
+      		 	  (
+      		 	  )
       		      Pervasives.compare
       		      (
       		          x
@@ -648,7 +658,7 @@
    )
    )
   module  MSP
-    Map.Make
+       							      Map.Make
    (
    struct
    (
@@ -663,13 +673,15 @@
       (
       )
       kind =
-     (
       tuple
       (
        string
+       (
+       )
         string
+        (
+        )
       )
-     )
    )
    let
    (
@@ -679,11 +691,15 @@
          (
       		 x
       		 t
+      		 (
+      		 )
       		(
       		 case
       		     (
       		 	  y
       		 	  t
+      		 	  (
+      		 	  )
       		      Pervasives.compare
       		      (
       		          x
@@ -697,7 +713,7 @@
    )
    )
   module  MSL
-    Map.Make
+       							      Map.Make
    (
    struct
    (
@@ -712,12 +728,12 @@
       (
       )
       kind =
-     (
        list
        (
          string
+         (
+         )
        )
-     )
    )
    let
    (
@@ -727,11 +743,15 @@
          (
       		 x
       		 t
+      		 (
+      		 )
       		(
       		 case
       		     (
       		 	  y
       		 	  t
+      		 	  (
+      		 	  )
       		      Pervasives.compare
       		      (
       		          x
@@ -761,9 +781,9 @@
       (
       )
       kind =
-     (
-      "extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].key
-     )
+      M.key
+      (
+      )
    )
    type
    (  						
@@ -777,9 +797,13 @@
       (
       )
       kind =
-     (
-      <["typexprConstr2"("typeConstr"([],"key")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"(["extendedModulePath1"([],"Hashtbl")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-     )
+       Hashtbl.t
+          (
+           key
+           (
+           )
+      	 a				
+          ) 
    )
    let
    (
@@ -883,7 +907,7 @@
    MSL
    )
   module  HS2
-    Hashtbl.Make
+       							      Hashtbl.Make
    (
    struct
    (
@@ -898,9 +922,9 @@
       (
       )
       kind =
-     (
       string
-     )
+      (
+      )
    )
    let
    (
@@ -910,11 +934,15 @@
          (
       		 x
       		 t
+      		 (
+      		 )
       		(
       		 case
       		     (
       		 	  y
       		 	  t
+      		 	  (
+      		 	  )
       		      =
       		      (
       		          x
@@ -933,7 +961,7 @@
    )
    )
   module  HI2
-    Hashtbl.Make
+       							      Hashtbl.Make
    (
    struct
    (
@@ -948,9 +976,9 @@
       (
       )
       kind =
-     (
       int
-     )
+      (
+      )
    )
    let
    (
@@ -960,11 +988,15 @@
          (
       		 x
       		 t
+      		 (
+      		 )
       		(
       		 case
       		     (
       		 	  y
       		 	  t
+      		 	  (
+      		 	  )
       		      =
       		      (
       		          x
@@ -1094,13 +1126,11 @@
                           data
                           ::
                           (
-                              (
                                   					 l
                               	 !
                               	 (
                               	 lineno
                               	 )
-                              )
                                !
                                (
                                data
@@ -1144,102 +1174,54 @@
     string_data
     array
     (
-     (
          					 "Si"
      	0
-     )
-     (
          					 "non"
      	1
-     )
-     (
          					 "e"
      	2
-     )
-     (
          					 "vero"
      	3
-     )
-     (
          					 "e"
      	4
-     )
-     (
          					 "ben"
      	5
-     )
-     (
          					 "trovato"
      	6
-     )
-     (
          					 "An"
      	10
-     )
-     (
          					 "apple"
      	11
-     )
-     (
          					 "a"
      	12
-     )
-     (
          					 "day"
      	13
-     )
-     (
          					 "keeps"
      	14
-     )
-     (
          					 "the"
      	15
-     )
-     (
          					 "doctor"
      	16
-     )
-     (
          					 "away"
      	17
-     )
-     (
          					 "Pierre"
      	20
-     )
-     (
          					 "qui"
      	21
-     )
-     (
          					 "roule"
      	22
-     )
-     (
          					 "n'amasse"
      	23
-     )
-     (
          					 "pas"
      	24
-     )
-     (
          					 "mousse"
      	25
-     )
-     (
          					 "Asinus"
      	30
-     )
-     (
          					 "asinum"
      	31
-     )
-     (
          					 "fricat"
      	32
-     )
     )
   )
   let
@@ -1260,10 +1242,8 @@
      		         Array.make
      		         (
      		             num
-     		             (
      		                 					 0
      		             	0
-     		             )
      		         ) 
      		       )
      		      in
@@ -1280,13 +1260,11 @@
      		           (
      		            data
      		            i
-     		            (
      		                					 Random.int
-     		                  					 (
-     		                  					     range
-     		                  					 )
-     		            	i
+     		            (
+     		                range
      		            )
+     		            	i
      		           )
      		        ;
      		          data
@@ -1313,13 +1291,9 @@
                k
               	d
               )
-              (
-                    					 (
-                    					     					 k
-                    					 	k
-                    					 )
+                  					 k
+              	k
               	d
-              )
               )
              )
              data
@@ -1348,10 +1322,8 @@
                     )
                     10
                 )
-                (
                     					 []
                 	0
-                )
             ) 
           )
          in
@@ -1471,16 +1443,14 @@
                   (
                    d
                    i
-                   (
                        					 mklist
-                         					 (
-                         					     Random.int
-                         					     (
-                         					         16
-                         					     )
-                         					 )
-                   	i
+                   (
+                       Random.int
+                       (
+                           16
+                       )
                    )
+                   	i
                   )
                ;
                  d
