@@ -275,7 +275,10 @@ str printAST(value v) {
     						  ";
     						  
     
-    case "unaryMinus"(e): return "-<printAST(e)>";	
+    case "unaryMinus"(e): return "~-
+    								'(
+    								' <printAST(e)>
+    								')";	
     
     case "letModule"(name, moduleExpr, e): return "let module <name>
     											  '  (
