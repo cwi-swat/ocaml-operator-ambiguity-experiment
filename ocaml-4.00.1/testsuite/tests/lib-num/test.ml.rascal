@@ -1,1107 +1,1266 @@
 
 (
-    								 
-  open Printf
-                                     
-  let
-  (
-   
-    flush_all
+    							  
+  
+      									 
+   open Printf
+      									 
+      									 
+                                 
+  
+      									 
+   let
    (
-    case
-        (
-    	  ()
-         
-         sequence
-         (
-           flush
-           (
-               stdout
-           )
-         ;
-           flush
-           (
-               stderr
-           )
-         )
-             							
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    message
-   (
-    case
-        (
-    	  s
-         
-         sequence
-         (
-           print_string
-           (
-               s
-           )
-         ;
-           print_newline
-           (
-               ()
-           )
-         )
-             							
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    error_occurred
-    ref
+    
+     flush_all
     (
-        false
-    ) 
-   							    		    
-  )
-                                     
-  let
-  (
-   
-    immediate_failure
-    ref
-    (
-        true
-    ) 
-   							    		    
-  )
-                                     
-  let
-  (
-   
-    error
-   (
-    case
-        (
-    	  ()
-         ifthenelse
+     case
          (
-          if
+     	  ()
+          
+          sequence
           (
-           
-            !
+            flush
             (
-            immediate_failure
+                stdout
             )
-               							 
+          ;
+            flush
+            (
+                stderr
+            )
           )
-          then
-          (
-           exit
-           (
-               2
-           )
-          )
-          else
-          (
-           
-           sequence
-           (
-             :=
-             (
-                 error_occurred
-                 true
-             )
-           ;
-             
-             sequence
-             (
-               flush_all
-               (
-                   ()
-               )
-             ;
-               false
-             )
-                 							
-           )
-               							
-          ) 
+              							
          )
-         	    											 
-        )
+    )
+        		    
    )
-       		    
-  )
-                                     
-  let
-  (
-   
-    success
+      									 
+      									 
+                                 
+  
+      									 
+   let
    (
-    case
-        (
-    	  ()
-         
-         sequence
-         (
-           flush_all
-           (
-               ()
-           )
-         ;
-           true
-         )
-             							
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    function_tested
-    ref
+    
+     message
     (
-        ""
-    ) 
-   							    		    
-  )
-                                     
-  let
-  (
-   
-    testing_function
-   (
-    case
-        (
-    	  s
-         
-         sequence
+     case
          (
-           flush_all
-           (
-               ()
-           )
-         ;
-           
-           sequence
-           (
-             :=
-             (
-                 function_tested
-                 s
-             )
-           ;
-             
-             sequence
-             (
-               print_newline
-               (
-                   ()
-               )
-             ;
-               message
-               (
-                   s
-               )
-             )
-                 							
-           )
-               							
+     	  s
+          
+          sequence
+          (
+            print_string
+            (
+                s
+            )
+          ;
+            print_newline
+            (
+                ()
+            )
+          )
+              							
          )
-             							
-        )
+    )
+        		    
    )
-       		    
-  )
-                                     
-  let
-  (
-   
-    test
+      									 
+      									 
+                                 
+  
+      									 
+   let
    (
-    case
-        (
-     		
-     		 test_number
-     		(
-     		 case
-     		     (
-     		  		
-     		  		 eq_fun
-     		  		(
-     		  		 case
-     		  		     (
-     		  		 	  
-     		  		 	  (
-     		  		 	   answer
-     		  		 	       						 
-     		  		 	  	correct_answer
-     		  		 	  
-     		  		 	  )
-     		  		      
-     		  		      sequence
-     		  		      (
-     		  		        flush_all
-     		  		        (
-     		  		            ()
-     		  		        )
-     		  		      ;
-     		  		        ifthenelse
-     		  		        (
-     		  		         if
-     		  		         (
-     		  		          not
-     		  		          (
-     		  		              eq_fun
-     		  		              (
-     		  		                  answer
-     		  		                  correct_answer
-     		  		              )
-     		  		          )
-     		  		         )
-     		  		         then
-     		  		         (
-     		  		          
-     		  		          sequence
-     		  		          (
-     		  		            fprintf
-     		  		            (
-     		  		                stderr
-     		  		                ">>> Bad result (%s, test %d)\n"
-     		  		                
-     		  		                 !
-     		  		                 (
-     		  		                 function_tested
-     		  		                 )
-     		  		                    							 
-     		  		                test_number
-     		  		            )
-     		  		          ;
-     		  		            error
-     		  		            (
-     		  		                ()
-     		  		            )
-     		  		          )
-     		  		              							
-     		  		         )
-     		  		         else
-     		  		         (
-     		  		          
-     		  		          sequence
-     		  		          (
-     		  		            printf
-     		  		            (
-     		  		                " %d..."
-     		  		                test_number
-     		  		            )
-     		  		          ;
-     		  		            success
-     		  		            (
-     		  		                ()
-     		  		            )
-     		  		          )
-     		  		              							
-     		  		         ) 
-     		  		        )
-     		  		        	    											 
-     		  		      )
-     		  		          							
-     		  		     )
-     		  		)
-     		  		    		   
-     		     )
-     		)
-     		    		   
-        )
+    
+     error_occurred
+     ref
+     (
+         false
+     ) 
+    							    		    
    )
-       		    
-  )
-                                     
-  let
-  (
-   
-    failure_test
+      									 
+      									 
+                                 
+  
+      									 
+   let
    (
-    case
-        (
-     		
-     		 test_number
-     		(
-     		 case
-     		     (
-     		  		
-     		  		 fun_to_test
-     		  		(
-     		  		 case
-     		  		     (
-     		  		 	  arg
-     		  		      
-     		  		      sequence
-     		  		      (
-     		  		        flush_all
-     		  		        (
-     		  		            ()
-     		  		        )
-     		  		      ;
-     		  		        
-     		  		        try
-     		  		        
-     		  		        sequence
-     		  		        (
-     		  		          fun_to_test
-     		  		          (
-     		  		              arg
-     		  		          )
-     		  		        ;
-     		  		          
-     		  		          sequence
-     		  		          (
-     		  		            fprintf
-     		  		            (
-     		  		                stderr
-     		  		                ">>> Failure expected (%s, test %d)\n"
-     		  		                
-     		  		                 !
-     		  		                 (
-     		  		                 function_tested
-     		  		                 )
-     		  		                    							 
-     		  		                test_number
-     		  		            )
-     		  		          ;
-     		  		            error
-     		  		            (
-     		  		                ()
-     		  		            )
-     		  		          )
-     		  		              							
-     		  		        )
-     		  		            							
-     		  		        (
-     		  		        
-     		  		        case
-     		  		        (
-     		  		          _
-     		  		          
-     		  		          
-     		  		          sequence
-     		  		          (
-     		  		            printf
-     		  		            (
-     		  		                " %d..."
-     		  		                test_number
-     		  		            )
-     		  		          ;
-     		  		            success
-     		  		            (
-     		  		                ()
-     		  		            )
-     		  		          )
-     		  		              							
-     		  		        ) 
-     		  		        	        											 
-     		  		        	        											 
-     		  		        )
-     		  		            							   
-     		  		      )
-     		  		          							
-     		  		     )
-     		  		)
-     		  		    		   
-     		     )
-     		)
-     		    		   
-        )
+    
+     immediate_failure
+     ref
+     (
+         true
+     ) 
+    							    		    
    )
-       		    
-  )
-                                     
-  let
-  (
-   
-    failwith_test
+      									 
+      									 
+                                 
+  
+      									 
+   let
    (
-    case
-        (
-     		
-     		 test_number
-     		(
-     		 case
-     		     (
-     		  		
-     		  		 fun_to_test
-     		  		(
-     		  		 case
-     		  		     (
-     		  		  		
-     		  		  		 arg
-     		  		  		(
-     		  		  		 case
-     		  		  		     (
-     		  		  		 	  correct_failure
-     		  		  		      
-     		  		  		      sequence
-     		  		  		      (
-     		  		  		        flush_all
-     		  		  		        (
-     		  		  		            ()
-     		  		  		        )
-     		  		  		      ;
-     		  		  		        
-     		  		  		        try
-     		  		  		        
-     		  		  		        sequence
-     		  		  		        (
-     		  		  		          fun_to_test
-     		  		  		          (
-     		  		  		              arg
-     		  		  		          )
-     		  		  		        ;
-     		  		  		          
-     		  		  		          sequence
-     		  		  		          (
-     		  		  		            fprintf
-     		  		  		            (
-     		  		  		                stderr
-     		  		  		                ">>> Failure expected (%s, test %d)\n"
-     		  		  		                
-     		  		  		                 !
-     		  		  		                 (
-     		  		  		                 function_tested
-     		  		  		                 )
-     		  		  		                    							 
-     		  		  		                test_number
-     		  		  		            )
-     		  		  		          ;
-     		  		  		            error
-     		  		  		            (
-     		  		  		                ()
-     		  		  		            )
-     		  		  		          )
-     		  		  		              							
-     		  		  		        )
-     		  		  		            							
-     		  		  		        (
-     		  		  		        
-     		  		  		        case
-     		  		  		        (
-     		  		  		          x
-     		  		  		          
-     		  		  		          ifthenelse
-     		  		  		          (
-     		  		  		           if
-     		  		  		           (
-     		  		  		            =
-     		  		  		            (
-     		  		  		                x
-     		  		  		                correct_failure
-     		  		  		            )
-     		  		  		           )
-     		  		  		           then
-     		  		  		           (
-     		  		  		            
-     		  		  		            sequence
-     		  		  		            (
-     		  		  		              printf
-     		  		  		              (
-     		  		  		                  " %d..."
-     		  		  		                  test_number
-     		  		  		              )
-     		  		  		            ;
-     		  		  		              success
-     		  		  		              (
-     		  		  		                  ()
-     		  		  		              )
-     		  		  		            )
-     		  		  		                							
-     		  		  		           )
-     		  		  		           else
-     		  		  		           (
-     		  		  		            
-     		  		  		            sequence
-     		  		  		            (
-     		  		  		              fprintf
-     		  		  		              (
-     		  		  		                  stderr
-     		  		  		                  ">>> Bad failure (%s, test %d)\n"
-     		  		  		                  
-     		  		  		                   !
-     		  		  		                   (
-     		  		  		                   function_tested
-     		  		  		                   )
-     		  		  		                      							 
-     		  		  		                  test_number
-     		  		  		              )
-     		  		  		            ;
-     		  		  		              error
-     		  		  		              (
-     		  		  		                  ()
-     		  		  		              )
-     		  		  		            )
-     		  		  		                							
-     		  		  		           ) 
-     		  		  		          )
-     		  		  		          	    											 
-     		  		  		        ) 
-     		  		  		        	        											 
-     		  		  		        	        											 
-     		  		  		        )
-     		  		  		            							   
-     		  		  		      )
-     		  		  		          							
-     		  		  		     )
-     		  		  		)
-     		  		  		    		   
-     		  		     )
-     		  		)
-     		  		    		   
-     		     )
-     		)
-     		    		   
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    end_tests
-   (
-    case
-        (
-    	  ()
-         
-         sequence
+    
+     error
+    (
+     case
          (
-           flush_all
+     	  ()
+          ifthenelse
+          (
+           if
            (
-               ()
-           )
-         ;
-           
-           sequence
-           (
-             print_newline
+            
+             !
              (
-                 ()
+             immediate_failure
              )
-           ;
-             ifthenelse
-             (
-              if
+                							 
+           )
+           then
+           (
+            exit
+            (
+                2
+            )
+           )
+           else
+           (
+            
+            sequence
+            (
+              :=
               (
-               
-                !
+                  error_occurred
+                  true
+              )
+            ;
+              
+              sequence
+              (
+                flush_all
                 (
-                error_occurred
+                    ()
                 )
-                   							 
+              ;
+                false
               )
-              then
-              (
-               
-               sequence
-               (
-                 print_endline
-                 (
-                     "************* TESTS FAILED ****************"
-                 )
-               ;
-                 exit
-                 (
-                     2
-                 )
-               )
-                   							
-              )
-              else
-              (
-               
-               sequence
-               (
-                 print_endline
-                 (
-                     "************* TESTS COMPLETED SUCCESSFULLY ****************"
-                 )
-               ;
-                 exit
-                 (
-                     0
-                 )
-               )
-                   							
-              ) 
-             )
-             	    											 
-           )
-               							
-         )
-             							
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    eq
-    ["=","="] 
-   							    		    
-  )
-                                     
-  let
-  (
-   
-    eq_int
-   (
-    case
-        (
-     		
-     		 
-     		 i
-     		 int
-     		     										   
-     		(
-     		 case
-     		     (
-     		 	  
-     		 	  j
-     		 	  int
-     		 	      										   
-     		      =
-     		      (
-     		          i
-     		          j
-     		      )
-     		     )
-     		)
-     		    		   
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    eq_string
-   (
-    case
-        (
-     		
-     		 
-     		 i
-     		 string
-     		     										   
-     		(
-     		 case
-     		     (
-     		 	  
-     		 	  j
-     		 	  string
-     		 	      										   
-     		      =
-     		      (
-     		          i
-     		          j
-     		      )
-     		     )
-     		)
-     		    		   
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    eq_nativeint
-   (
-    case
-        (
-     		
-     		 
-     		 i
-     		 nativeint
-     		     										   
-     		(
-     		 case
-     		     (
-     		 	  
-     		 	  j
-     		 	  nativeint
-     		 	      										   
-     		      =
-     		      (
-     		          i
-     		          j
-     		      )
-     		     )
-     		)
-     		    		   
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    eq_int32
-   (
-    case
-        (
-     		
-     		 
-     		 i
-     		 int32
-     		     										   
-     		(
-     		 case
-     		     (
-     		 	  
-     		 	  j
-     		 	  int32
-     		 	      										   
-     		      =
-     		      (
-     		          i
-     		          j
-     		      )
-     		     )
-     		)
-     		    		   
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    eq_int64
-   (
-    case
-        (
-     		
-     		 
-     		 i
-     		 int64
-     		     										   
-     		(
-     		 case
-     		     (
-     		 	  
-     		 	  j
-     		 	  int64
-     		 	      										   
-     		      =
-     		      (
-     		          i
-     		          j
-     		      )
-     		     )
-     		)
-     		    		   
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    sixtyfour
-    <>
-    (
-        lsl
-        (
-            1
-            31
-        )
-        0
-    ) 
-   							    		    
-  )
-                                     
-  let
-  (
-   
-    gcd_int
-   (
-    case
-        (
-     		
-     		 i1
-     		(
-     		 case
-     		     (
-     		 	  i2
-     		      ifthenelse
-     		      (
-     		       if
-     		       (
-     		        =
-     		        (
-     		            i2
-     		            0
-     		        )
-     		       )
-     		       then
-     		       (
-     		        abs
-     		        (
-     		            i1
-     		        )
-     		       )
-     		       else
-     		       (
-     		        gcd_int
-     		        (
-     		            i2
-     		            mod
-     		            (
-     		                i1
-     		                i2
-     		            )
-     		        )
-     		       ) 
-     		      )
-     		      	    											 
-     		     )
-     		)
-     		    		   
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    num_bits_int_aux
-   (
-    case
-        (
-    	  n
-         ifthenelse
-         (
-          if
-          (
-           =
-           (
-               n
-               0
-           )
-          )
-          then
-          (
-           0
-          )
-          else
-          (
-           succ
-           (
-               num_bits_int_aux
-               (
-                   lsr
-                   (
-                       n
-                       1
-                   )
-               )
-           )
-          ) 
-         )
-         	    											 
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    num_bits_int
-   (
-    case
-        (
-    	  n
-         num_bits_int_aux
-         (
-             abs
-             (
-                 n
-             )
-         )
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    sign_int
-   (
-    case
-        (
-    	  i
-         ifthenelse
-         (
-          if
-          (
-           =
-           (
-               i
-               0
-           )
-          )
-          then
-          (
-           0
-          )
-          else
-          (
-           ifthenelse
-           (
-            if
-            (
-             >
-             (
-                 i
-                 0
-             )
+                  							
             )
-            then
+                							
+           ) 
+          )
+          	    											 
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     success
+    (
+     case
+         (
+     	  ()
+          
+          sequence
+          (
+            flush_all
             (
+                ()
+            )
+          ;
+            true
+          )
+              							
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     function_tested
+     ref
+     (
+         ""
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     testing_function
+    (
+     case
+         (
+     	  s
+          
+          sequence
+          (
+            flush_all
+            (
+                ()
+            )
+          ;
+            
+            sequence
+            (
+              :=
+              (
+                  function_tested
+                  s
+              )
+            ;
+              
+              sequence
+              (
+                print_newline
+                (
+                    ()
+                )
+              ;
+                message
+                (
+                    s
+                )
+              )
+                  							
+            )
+                							
+          )
+              							
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     test
+    (
+     case
+         (
+      		
+      		 test_number
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 eq_fun
+      		  		(
+      		  		 case
+      		  		     (
+      		  		 	  
+      		  		 	  (
+      		  		 	   answer
+      		  		 	       						 
+      		  		 	  	correct_answer
+      		  		 	  
+      		  		 	  )
+      		  		      
+      		  		      sequence
+      		  		      (
+      		  		        flush_all
+      		  		        (
+      		  		            ()
+      		  		        )
+      		  		      ;
+      		  		        ifthenelse
+      		  		        (
+      		  		         if
+      		  		         (
+      		  		          not
+      		  		          (
+      		  		              eq_fun
+      		  		              (
+      		  		                  answer
+      		  		                  correct_answer
+      		  		              )
+      		  		          )
+      		  		         )
+      		  		         then
+      		  		         (
+      		  		          
+      		  		          sequence
+      		  		          (
+      		  		            fprintf
+      		  		            (
+      		  		                stderr
+      		  		                ">>> Bad result (%s, test %d)\n"
+      		  		                
+      		  		                 !
+      		  		                 (
+      		  		                 function_tested
+      		  		                 )
+      		  		                    							 
+      		  		                test_number
+      		  		            )
+      		  		          ;
+      		  		            error
+      		  		            (
+      		  		                ()
+      		  		            )
+      		  		          )
+      		  		              							
+      		  		         )
+      		  		         else
+      		  		         (
+      		  		          
+      		  		          sequence
+      		  		          (
+      		  		            printf
+      		  		            (
+      		  		                " %d..."
+      		  		                test_number
+      		  		            )
+      		  		          ;
+      		  		            success
+      		  		            (
+      		  		                ()
+      		  		            )
+      		  		          )
+      		  		              							
+      		  		         ) 
+      		  		        )
+      		  		        	    											 
+      		  		      )
+      		  		          							
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     failure_test
+    (
+     case
+         (
+      		
+      		 test_number
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 fun_to_test
+      		  		(
+      		  		 case
+      		  		     (
+      		  		 	  arg
+      		  		      
+      		  		      sequence
+      		  		      (
+      		  		        flush_all
+      		  		        (
+      		  		            ()
+      		  		        )
+      		  		      ;
+      		  		        
+      		  		        try
+      		  		        
+      		  		        sequence
+      		  		        (
+      		  		          fun_to_test
+      		  		          (
+      		  		              arg
+      		  		          )
+      		  		        ;
+      		  		          
+      		  		          sequence
+      		  		          (
+      		  		            fprintf
+      		  		            (
+      		  		                stderr
+      		  		                ">>> Failure expected (%s, test %d)\n"
+      		  		                
+      		  		                 !
+      		  		                 (
+      		  		                 function_tested
+      		  		                 )
+      		  		                    							 
+      		  		                test_number
+      		  		            )
+      		  		          ;
+      		  		            error
+      		  		            (
+      		  		                ()
+      		  		            )
+      		  		          )
+      		  		              							
+      		  		        )
+      		  		            							
+      		  		        (
+      		  		        
+      		  		        case
+      		  		        (
+      		  		          _
+      		  		          
+      		  		          
+      		  		          sequence
+      		  		          (
+      		  		            printf
+      		  		            (
+      		  		                " %d..."
+      		  		                test_number
+      		  		            )
+      		  		          ;
+      		  		            success
+      		  		            (
+      		  		                ()
+      		  		            )
+      		  		          )
+      		  		              							
+      		  		        ) 
+      		  		        	        											 
+      		  		        	        											 
+      		  		        )
+      		  		            							   
+      		  		      )
+      		  		          							
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     failwith_test
+    (
+     case
+         (
+      		
+      		 test_number
+      		(
+      		 case
+      		     (
+      		  		
+      		  		 fun_to_test
+      		  		(
+      		  		 case
+      		  		     (
+      		  		  		
+      		  		  		 arg
+      		  		  		(
+      		  		  		 case
+      		  		  		     (
+      		  		  		 	  correct_failure
+      		  		  		      
+      		  		  		      sequence
+      		  		  		      (
+      		  		  		        flush_all
+      		  		  		        (
+      		  		  		            ()
+      		  		  		        )
+      		  		  		      ;
+      		  		  		        
+      		  		  		        try
+      		  		  		        
+      		  		  		        sequence
+      		  		  		        (
+      		  		  		          fun_to_test
+      		  		  		          (
+      		  		  		              arg
+      		  		  		          )
+      		  		  		        ;
+      		  		  		          
+      		  		  		          sequence
+      		  		  		          (
+      		  		  		            fprintf
+      		  		  		            (
+      		  		  		                stderr
+      		  		  		                ">>> Failure expected (%s, test %d)\n"
+      		  		  		                
+      		  		  		                 !
+      		  		  		                 (
+      		  		  		                 function_tested
+      		  		  		                 )
+      		  		  		                    							 
+      		  		  		                test_number
+      		  		  		            )
+      		  		  		          ;
+      		  		  		            error
+      		  		  		            (
+      		  		  		                ()
+      		  		  		            )
+      		  		  		          )
+      		  		  		              							
+      		  		  		        )
+      		  		  		            							
+      		  		  		        (
+      		  		  		        
+      		  		  		        case
+      		  		  		        (
+      		  		  		          x
+      		  		  		          
+      		  		  		          ifthenelse
+      		  		  		          (
+      		  		  		           if
+      		  		  		           (
+      		  		  		            =
+      		  		  		            (
+      		  		  		                x
+      		  		  		                correct_failure
+      		  		  		            )
+      		  		  		           )
+      		  		  		           then
+      		  		  		           (
+      		  		  		            
+      		  		  		            sequence
+      		  		  		            (
+      		  		  		              printf
+      		  		  		              (
+      		  		  		                  " %d..."
+      		  		  		                  test_number
+      		  		  		              )
+      		  		  		            ;
+      		  		  		              success
+      		  		  		              (
+      		  		  		                  ()
+      		  		  		              )
+      		  		  		            )
+      		  		  		                							
+      		  		  		           )
+      		  		  		           else
+      		  		  		           (
+      		  		  		            
+      		  		  		            sequence
+      		  		  		            (
+      		  		  		              fprintf
+      		  		  		              (
+      		  		  		                  stderr
+      		  		  		                  ">>> Bad failure (%s, test %d)\n"
+      		  		  		                  
+      		  		  		                   !
+      		  		  		                   (
+      		  		  		                   function_tested
+      		  		  		                   )
+      		  		  		                      							 
+      		  		  		                  test_number
+      		  		  		              )
+      		  		  		            ;
+      		  		  		              error
+      		  		  		              (
+      		  		  		                  ()
+      		  		  		              )
+      		  		  		            )
+      		  		  		                							
+      		  		  		           ) 
+      		  		  		          )
+      		  		  		          	    											 
+      		  		  		        ) 
+      		  		  		        	        											 
+      		  		  		        	        											 
+      		  		  		        )
+      		  		  		            							   
+      		  		  		      )
+      		  		  		          							
+      		  		  		     )
+      		  		  		)
+      		  		  		    		   
+      		  		     )
+      		  		)
+      		  		    		   
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     end_tests
+    (
+     case
+         (
+     	  ()
+          
+          sequence
+          (
+            flush_all
+            (
+                ()
+            )
+          ;
+            
+            sequence
+            (
+              print_newline
+              (
+                  ()
+              )
+            ;
+              ifthenelse
+              (
+               if
+               (
+                
+                 !
+                 (
+                 error_occurred
+                 )
+                    							 
+               )
+               then
+               (
+                
+                sequence
+                (
+                  print_endline
+                  (
+                      "************* TESTS FAILED ****************"
+                  )
+                ;
+                  exit
+                  (
+                      2
+                  )
+                )
+                    							
+               )
+               else
+               (
+                
+                sequence
+                (
+                  print_endline
+                  (
+                      "************* TESTS COMPLETED SUCCESSFULLY ****************"
+                  )
+                ;
+                  exit
+                  (
+                      0
+                  )
+                )
+                    							
+               ) 
+              )
+              	    											 
+            )
+                							
+          )
+              							
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     eq
+     == 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     eq_int
+    (
+     case
+         (
+      		
+      		 
+      		 i
+      		 
+      		 int
+      		 (
+      		 )
+      		 								  
+      		     										   
+      		(
+      		 case
+      		     (
+      		 	  
+      		 	  j
+      		 	  
+      		 	  int
+      		 	  (
+      		 	  )
+      		 	  								  
+      		 	      										   
+      		      =
+      		      (
+      		          i
+      		          j
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     eq_string
+    (
+     case
+         (
+      		
+      		 
+      		 i
+      		 
+      		 string
+      		 (
+      		 )
+      		 								  
+      		     										   
+      		(
+      		 case
+      		     (
+      		 	  
+      		 	  j
+      		 	  
+      		 	  string
+      		 	  (
+      		 	  )
+      		 	  								  
+      		 	      										   
+      		      =
+      		      (
+      		          i
+      		          j
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     eq_nativeint
+    (
+     case
+         (
+      		
+      		 
+      		 i
+      		 
+      		 nativeint
+      		 (
+      		 )
+      		 								  
+      		     										   
+      		(
+      		 case
+      		     (
+      		 	  
+      		 	  j
+      		 	  
+      		 	  nativeint
+      		 	  (
+      		 	  )
+      		 	  								  
+      		 	      										   
+      		      =
+      		      (
+      		          i
+      		          j
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     eq_int32
+    (
+     case
+         (
+      		
+      		 
+      		 i
+      		 
+      		 int32
+      		 (
+      		 )
+      		 								  
+      		     										   
+      		(
+      		 case
+      		     (
+      		 	  
+      		 	  j
+      		 	  
+      		 	  int32
+      		 	  (
+      		 	  )
+      		 	  								  
+      		 	      										   
+      		      =
+      		      (
+      		          i
+      		          j
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     eq_int64
+    (
+     case
+         (
+      		
+      		 
+      		 i
+      		 
+      		 int64
+      		 (
+      		 )
+      		 								  
+      		     										   
+      		(
+      		 case
+      		     (
+      		 	  
+      		 	  j
+      		 	  
+      		 	  int64
+      		 	  (
+      		 	  )
+      		 	  								  
+      		 	      										   
+      		      =
+      		      (
+      		          i
+      		          j
+      		      )
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     sixtyfour
+     <>
+     (
+         lsl
+         (
              1
-            )
-            else
-            (
-             -1
-            ) 
-           )
-           	    											 
-          ) 
+             31
          )
-         	    											 
-        )
+         0
+     ) 
+    							    		    
    )
-       		    
-  )
-                                     
-  let
-  (
-   
-    length_of_int
-    -
-    (
-        Sys.word_size
-        2
-    ) 
-   							    		    
-  )
-                                     
-  let
-  (
-   
-    monster_int
-    lsl
-    (
-        1
-        length_of_int
-    ) 
-   							    		    
-  )
-                                     
-  let
-  (
-   
-    biggest_int
-    -
-    (
-        monster_int
-        1
-    ) 
-   							    		    
-  )
-                                     
-  let
-  (
-   
-    least_int
-    -biggest_int 
-   							    		    
-  )
-                                     
-  let
-  (
-   
-    compare_int
+      									 
+      									 
+                                 
+  
+      									 
+   let
    (
-    case
-        (
-     		
-     		 n1
-     		(
-     		 case
-     		     (
-     		 	  n2
-     		      ifthenelse
-     		      (
-     		       if
-     		       (
-     		        ==
-     		        (
-     		            n1
-     		            n2
-     		        )
-     		       )
-     		       then
-     		       (
-     		        0
-     		       )
-     		       else
-     		       (
-     		        ifthenelse
-     		        (
-     		         if
-     		         (
-     		          >
-     		          (
-     		              n1
-     		              n2
-     		          )
-     		         )
-     		         then
-     		         (
-     		          1
-     		         )
-     		         else
-     		         (
-     		          -1
-     		         ) 
-     		        )
-     		        	    											 
-     		       ) 
-     		      )
-     		      	    											 
-     		     )
-     		)
-     		    		   
-        )
+    
+     gcd_int
+    (
+     case
+         (
+      		
+      		 i1
+      		(
+      		 case
+      		     (
+      		 	  i2
+      		      ifthenelse
+      		      (
+      		       if
+      		       (
+      		        =
+      		        (
+      		            i2
+      		            0
+      		        )
+      		       )
+      		       then
+      		       (
+      		        abs
+      		        (
+      		            i1
+      		        )
+      		       )
+      		       else
+      		       (
+      		        gcd_int
+      		        (
+      		            i2
+      		            mod
+      		            (
+      		                i1
+      		                i2
+      		            )
+      		        )
+      		       ) 
+      		      )
+      		      	    											 
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
    )
-       		    
-  )
-                                     
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     num_bits_int_aux
+    (
+     case
+         (
+     	  n
+          ifthenelse
+          (
+           if
+           (
+            =
+            (
+                n
+                0
+            )
+           )
+           then
+           (
+            0
+           )
+           else
+           (
+            succ
+            (
+                num_bits_int_aux
+                (
+                    lsr
+                    (
+                        n
+                        1
+                    )
+                )
+            )
+           ) 
+          )
+          	    											 
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     num_bits_int
+    (
+     case
+         (
+     	  n
+          num_bits_int_aux
+          (
+              abs
+              (
+                  n
+              )
+          )
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     sign_int
+    (
+     case
+         (
+     	  i
+          ifthenelse
+          (
+           if
+           (
+            =
+            (
+                i
+                0
+            )
+           )
+           then
+           (
+            0
+           )
+           else
+           (
+            ifthenelse
+            (
+             if
+             (
+              >
+              (
+                  i
+                  0
+              )
+             )
+             then
+             (
+              1
+             )
+             else
+             (
+              -1
+             ) 
+            )
+            	    											 
+           ) 
+          )
+          	    											 
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     length_of_int
+     -
+     (
+         Sys.word_size
+         2
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     monster_int
+     lsl
+     (
+         1
+         length_of_int
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     biggest_int
+     -
+     (
+         monster_int
+         1
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     least_int
+     ~-
+     (
+      biggest_int
+     ) 
+    							    		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     compare_int
+    (
+     case
+         (
+      		
+      		 n1
+      		(
+      		 case
+      		     (
+      		 	  n2
+      		      ifthenelse
+      		      (
+      		       if
+      		       (
+      		        ==
+      		        (
+      		            n1
+      		            n2
+      		        )
+      		       )
+      		       then
+      		       (
+      		        0
+      		       )
+      		       else
+      		       (
+      		        ifthenelse
+      		        (
+      		         if
+      		         (
+      		          >
+      		          (
+      		              n1
+      		              n2
+      		          )
+      		         )
+      		         then
+      		         (
+      		          1
+      		         )
+      		         else
+      		         (
+      		          -1
+      		         ) 
+      		        )
+      		        	    											 
+      		       ) 
+      		      )
+      		      	    											 
+      		     )
+      		)
+      		    		   
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
 )

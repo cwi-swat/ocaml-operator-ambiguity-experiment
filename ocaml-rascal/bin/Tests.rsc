@@ -1115,6 +1115,8 @@ str printAST(value v) {
     						
     						
     // Names
+    case "valuePath"("valuePath"([], list[value] l)) : return "<for (x <- l) {><printAST(x)><}>";
+    
     case "valuePath"("valuePath"([], n)) : return "<printAST(n)>";
     
     case "valuePath"("valuePath"(p, n)) : return "<printAST(p)>.<printAST(n)>";
