@@ -24,7 +24,7 @@ public void run() {
 public void runFile(str f) {
 		print(f + "...");
 		try {
-			tree = jparse(#start[TopLevel], readFile(|file:///| + filePath + "/" + f));
+			tree = jparse(#start[Implementation], readFile(|file:///| + filePath + "/" + f));
 			
 			if (/amb(_) := tree) {
 				tree = filterOCaml(tree);
@@ -509,14 +509,24 @@ str printAST(value v) {
                                                    '    <printAST(args)>
                                                    ')";
 
-    case "letBinding"(p, [], _, e) :
+    case "letBinding"(p, [], [], e) :
 							    	return "
 							               ' <printAST(p)>
 							               ' <printAST(e)> 
 							    		   ";
 
+    case "letBinding"(p, [], [t], e) :
+							    	return "
+							               ' <printAST(p)>
+							               ' (
+							               '  <printAST(e)> 
+							               '  :
+							               '  <printAST(t)>
+							               ')
+							    		   ";
+
     		   
-    case "letBinding"(p, [param], _, e) :
+    case "letBinding"(p, [param], [], e) :
     	return "
                ' <printAST(p)>
                '(
@@ -528,6 +538,23 @@ str printAST(value v) {
                ')
     		   ";		   
    
+
+    case "letBinding"(p, [param], [t], e) :
+    	return "
+               ' <printAST(p)>
+               '(
+               ' case
+               '     (
+               ' 	  <printAST(param)>
+               '	    (
+               '      	 <printAST(e)>
+               '         :
+               '		 <printAST(t)>
+               '		)
+               '     )
+               ')
+    		   ";		   
+
    
     case "letBinding"(p, [first, *rest], t, e) :
     	return "

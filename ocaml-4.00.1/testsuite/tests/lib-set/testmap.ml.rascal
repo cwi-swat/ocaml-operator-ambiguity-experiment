@@ -4,8 +4,7 @@
   module  M
    
        								  
-    Map.Make
-       							     
+       							      Map.Make
    (
    struct
    (
@@ -14,23 +13,23 @@
    (  						
        							    	 
       t
-      type
-      params=
-      (
-      
-      )
-      cstrs =
-      (
-      )
-      kind =
-      
-      int
-      (
-      )
-      								  
-      
-      														  
-      														 
+        type
+        params=
+        (
+        
+        )
+        cstrs =
+        (
+        )
+        kind =
+        
+        int
+        (
+        )
+        								  
+        
+        														  
+        														 
      											   
    								        
    )
@@ -47,6 +46,7 @@
    							  
    )
    								   
+   
   										    
                                      
   let
@@ -65,12 +65,12 @@
      		      
      		      try
      		      
-     		       Some
-     		       M.find
-     		       (
-     		           x
-     		           m
-     		       )
+     		      Some
+     		         M.find
+     		         (
+     		             x
+     		             m
+     		         )
      		          								 
      		      (
      		      
@@ -278,11 +278,15 @@
      		 	  )
      		 	     								    
      		 	      										   
-     		      f
-     		      (
-     		          x
-     		          y
-     		      )
+     			    (
+     		      	 f
+     		      	 (
+     		      	     x
+     		      	     y
+     		      	 )
+     		         :
+     				 c
+     				)
      		     )
      		)
      		    		   
@@ -436,8 +440,8 @@
      		  		  		                        then
      		  		  		                        (
      		  		  		                         
-     		  		  		                          Some
-     		  		  		                          v
+     		  		  		                         Some
+     		  		  		                            v
      		  		  		                             								 
      		  		  		                        )
      		  		  		                        else
@@ -507,8 +511,8 @@
      		  		  		                          then
      		  		  		                          (
      		  		  		                           
-     		  		  		                            Some
-     		  		  		                            v
+     		  		  		                           Some
+     		  		  		                              v
      		  		  		                               								 
      		  		  		                          )
      		  		  		                          else
@@ -623,13 +627,12 @@
      		  		  		                          		  		 	  o2
      		  		  		                          		  		      match
      		  		  		                          		  		      
-     		  		  		                          		  		      (
-     		  		  		                          		  		          					 o1
-     		  		  		                          		  		          					 
+     		  		  		                          		  		          					 (
+     		  		  		                          		  		            					   o1
+     		  		  		                          		  		          					   
      		  		  		                          		  		      	o2
-     		  		  		                          		  		          					 
-     		  		  		                          		  		      )
-     		  		  		                          		  		          					 
+     		  		  		                          		  		          					   
+     		  		  		                          		  		          					 )
      		  		  		                          		  		      (
      		  		  		                          		  		      
      		  		  		                          		  		      case
@@ -649,12 +652,12 @@
      		  		  		                          		  		        )
      		  		  		                          		  		        
      		  		  		                          		  		        
-     		  		  		                          		  		         Some
-     		  		  		                          		  		         +.
-     		  		  		                          		  		         (
-     		  		  		                          		  		             v1
-     		  		  		                          		  		             v2
-     		  		  		                          		  		         )
+     		  		  		                          		  		        Some
+     		  		  		                          		  		           +.
+     		  		  		                          		  		           (
+     		  		  		                          		  		               v1
+     		  		  		                          		  		               v2
+     		  		  		                          		  		           )
      		  		  		                          		  		            								 
      		  		  		                          		  		      ) 
      		  		  		                          		  		      	        											 
@@ -671,8 +674,7 @@
      		  		  		                          		  		         
      		  		  		                          		  		         o2
      		  		  		                          		  		        )
-     		  		  		                          		  		        													    
-     		  		  		                          		  		      	        											 
+     		  		  		                          		  		        													   
      		  		  		                          		  		        
      		  		  		                          		  		        case
      		  		  		                          		  		        (
@@ -787,13 +789,12 @@
      		  		  		                            		  		 	  o2
      		  		  		                            		  		      match
      		  		  		                            		  		      
-     		  		  		                            		  		      (
-     		  		  		                            		  		          					 o1
-     		  		  		                            		  		          					 
+     		  		  		                            		  		          					 (
+     		  		  		                            		  		            					   o1
+     		  		  		                            		  		          					   
      		  		  		                            		  		      	o2
-     		  		  		                            		  		          					 
-     		  		  		                            		  		      )
-     		  		  		                            		  		          					 
+     		  		  		                            		  		          					   
+     		  		  		                            		  		          					 )
      		  		  		                            		  		      (
      		  		  		                            		  		      
      		  		  		                            		  		      case
@@ -813,12 +814,12 @@
      		  		  		                            		  		        )
      		  		  		                            		  		        
      		  		  		                            		  		        
-     		  		  		                            		  		         Some
-     		  		  		                            		  		         -.
-     		  		  		                            		  		         (
-     		  		  		                            		  		             v1
-     		  		  		                            		  		             v2
-     		  		  		                            		  		         )
+     		  		  		                            		  		        Some
+     		  		  		                            		  		           -.
+     		  		  		                            		  		           (
+     		  		  		                            		  		               v1
+     		  		  		                            		  		               v2
+     		  		  		                            		  		           )
      		  		  		                            		  		            								 
      		  		  		                            		  		      ) 
      		  		  		                            		  		      	        											 
@@ -968,13 +969,12 @@
      		  		  		                                    ::
      		  		  		                                    (
      		  		  		                                        
-     		  		  		                                        (
-     		  		  		                                            					 hd
-     		  		  		                                            					 
+     		  		  		                                            					 (
+     		  		  		                                              					   hd
+     		  		  		                                            					   
      		  		  		                                        	v
-     		  		  		                                            					 
-     		  		  		                                        )
-     		  		  		                                            					 
+     		  		  		                                            					   
+     		  		  		                                            					 )
      		  		  		                                        extract
      		  		  		                                        (
      		  		  		                                            tl
@@ -1380,8 +1380,8 @@
      		  		  		                                                    s1
      		  		  		                                                )
      		  		  		                                                
-     		  		  		                                                 Some
-     		  		  		                                                 v
+     		  		  		                                                Some
+     		  		  		                                                   v
      		  		  		                                                    								 
      		  		  		                                            )
      		  		  		                                            M.for_all
@@ -1470,8 +1470,8 @@
      		  		  		                                                      s1
      		  		  		                                                  )
      		  		  		                                                  
-     		  		  		                                                   Some
-     		  		  		                                                   v
+     		  		  		                                                  Some
+     		  		  		                                                     v
      		  		  		                                                      								 
      		  		  		                                              )
      		  		  		                                              M.for_all
@@ -1558,8 +1558,8 @@
      		  		  		                                                    s1
      		  		  		                                                )
      		  		  		                                                
-     		  		  		                                                 Some
-     		  		  		                                                 v
+     		  		  		                                                Some
+     		  		  		                                                   v
      		  		  		                                                    								 
      		  		  		                                            )
      		  		  		                                          )
@@ -1798,37 +1798,34 @@
            
            sequence
            (
-             forloop 
-             (
-                 i
-                 1
-                 <>
-                 Random.int
-                 (
-                     10
-                 )
-                 :=
-                 (
-                     s
-                     M.add
-                     (
-                         rkey
-                         (
-                             ()
-                         )
-                         rdata
-                         (
-                             ()
-                         )
-                         
-                          !
-                          (
-                          s
-                          )
-                             							 
-                     )
-                 )
-             )
+              for i
+              1
+              Random.int
+              (
+                  10
+              )
+              :=
+              (
+                  s
+                  M.add
+                  (
+                      rkey
+                      (
+                          ()
+                      )
+                      rdata
+                      (
+                          ()
+                      )
+                      
+                       !
+                       (
+                       s
+                       )
+                          							 
+                  )
+              )
+                 														  
            ;
              
               !
@@ -1855,32 +1852,29 @@
          42
      )
    ;
-     forloop 
-     (
-         i
-         1
-         <>
-         25000
-         test
-         (
-             rkey
-             (
-                 ()
-             )
-             rdata
-             (
-                 ()
-             )
-             rmap
-             (
-                 ()
-             )
-             rmap
-             (
-                 ()
-             )
-         )
-     )
+      for i
+      1
+      25000
+      test
+      (
+          rkey
+          (
+              ()
+          )
+          rdata
+          (
+              ()
+          )
+          rmap
+          (
+              ()
+          )
+          rmap
+          (
+              ()
+          )
+      )
+         														  
    )
        							 
   							    		    
