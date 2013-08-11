@@ -1063,16 +1063,14 @@ str printAST(value v) {
     
     case "modulePath"(l, n) : return "
     								  <for (p <- l) {>
-    							     ' <p>.<}><n>
-    							     ";
+    							      <p>.<}><n>";
     							     
     case "extendedModulePath1"([], n) : return "<n>";
     							     
     							     
     case "extendedModulePath1"(l, n): return "
 		    								  <for (p <- l) {>
-		    							      ' <p>.<}><n>
-		    							      ";
+		    							      ' <p>.<}><n>";
     									 							     
     
     case "classPath"([], n): return "<n>";
