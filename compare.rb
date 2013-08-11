@@ -1,19 +1,13 @@
-files = Array.new
-home = ""
+#! /usr/bin/ruby  
 
+home = "ocaml-4.00.1/testsuite/tests/"
+file = ARGV[0]
+ 
+puts "grep -v '^\\s*$' #{home}#{file}.rascal > #{home}#{file}.rascal.stripped"
 
-File.foreach('successful_parse_disambiguate.txt') do |line|
-  f = line.chomp
-  files << f
-end
+`grep -v '^\\s*$' #{home}#{file}.rascal > #{home}#{file}.rascal.stripped`
 
-for i in 0..files.size  
-  puts "grep -v '^\\s*$' #{home}#{files[i]}.rascal > #{home}#{files[i]}.rascal.stripped"
-  puts "grep -v '^\\s*$' #{home}#{files[i]}.ocaml > #{home}#{files[i]}.ocaml.stripped"
+puts "diff -w #{home}#{file}.rascal.stripped #{home}#{file}.ocaml.stripped"
+`diff -w #{home}#{file}.rascal.stripped #{home}#{file}.ocaml.stripped > #{home}#{file}.diff`
 
-  `grep -v '^\\s*$' #{home}#{files[i]}.rascal > #{home}#{files[i]}.rascal.stripped`
-  `grep -v '^\\s*$' #{home}#{files[i]}.ocaml > #{home}#{files[i]}.ocaml.stripped`
-
-  puts "diff -w #{home}#{files[i]}.rascal.stripped #{home}#{files[i]}.ocaml.stripped"
-  `diff -w #{home}#{files[i]}.rascal.stripped #{home}#{files[i]}.ocaml.stripped > #{home}#{files[i]}.diff`
-end
+`cat #{home}#{file}.diff`
