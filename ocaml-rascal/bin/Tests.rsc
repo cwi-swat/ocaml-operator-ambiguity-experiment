@@ -1213,6 +1213,17 @@ str printAST(value v) {
     
     case "modTypePath"([ext], n): return "<printAST(ext)>.<n>";    
     
+    case "external"(list[value] l, t, extDecls): return 
+    								"external <for (x <- l) {><printAST(x)><}>
+    								'(
+    								' value_description
+    								' <printAST(t)>
+    								'(
+    								' <printAST(extDecls)>
+    								')
+    								')              
+    								";
+
     case "external"(valName, t, extDecls): return 
     								"external <valName>
     								'(
