@@ -6,18 +6,18 @@ extend Typexpr;
 extend Expressions;
 
 syntax ClassType 
-     = (("?"? LabelName ":")? Typexpr "-\>")* ClassBodyType;
+     = classType: (("?"? LabelName ":")? Typexpr "-\>")* ClassBodyType;
 
 syntax ClassBodyType 
-     = "object" ("(" Typexpr ")")? ClassFieldSpec* "end"
-     |  ("[" Typexpr ("," Typexpr)* "]")? ClassPath
+     = classBodyType1: "object" ("(" Typexpr ")")? ClassFieldSpec* "end"
+     | classBodyType2: ("[" Typexpr ("," Typexpr)* "]")? ClassPath
      ;
 
 syntax ClassFieldSpec 
-     = "inherit" ClassType
-     | "val" "mutable"? "virtual"? InstVarName ":" PolyTypExpr
-     | "method" "private"? "virtual"? MethodName ":" PolyTypExpr
-     | "constraint" Typexpr "=" Typexpr
+     = fieldSpec1: "inherit" ClassType
+     | fieldSpec2: "val" "mutable"? "virtual"? InstVarName ":" PolyTypExpr
+     | fieldSpec3: "method" "private"? "virtual"? MethodName ":" PolyTypExpr
+     | fieldSpec4: "constraint" Typexpr "=" Typexpr
      ;
      
 syntax ClassExpr 
@@ -52,7 +52,7 @@ syntax ClassBinding
 	 = classBinding: "virtual"? ("[" TypeParameters "]")? ClassName Parameter* (":" ClassType)? "=" ClassExpr;
 
 syntax TypeParameters 
-	 = "\'" Ident ("," "\'" Ident)*;
+	 = typeParameters: "\'" Ident ("," "\'" Ident)*;
 	 
 syntax ClassSpecification 
 	 = classSpecification: "class" ClassSpec ("and" ClassSpec)*;

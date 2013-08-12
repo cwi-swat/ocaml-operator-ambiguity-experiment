@@ -24,7 +24,7 @@ public void run() {
 public void runFile(str f) {
 		print(f + "...");
 		try {
-			tree = jparse(#start[Implementation], readFile(|file:///| + filePath + "/" + f));
+			tree = jparse(#start[TopLevel], readFile(|file:///| + filePath + "/" + f));
 			
 			if (/amb(_) := tree) {
 				tree = filterOCaml(tree);
@@ -1130,7 +1130,121 @@ str printAST(value v) {
 										    ";
 	
 	case "classPath"(cp) : return printAST(cp);
-
+	
+	
+	// (("?"? LabelName ":")? Typexpr "-\>")* ClassBodyType;
+	case "classType"(l, cbt): return "class_type
+									 ' fun
+									 <for (<labelName, typexpr> <- l) {>
+									 '	<printAST(labelName)>
+									 '	<printAST(typexpr)>
+									 <}>
+									 '	<printAST(cbt)>
+									 ";
+	
+	// classBodyType1: "object" ("(" Typexpr ")")? ClassFieldSpec* "end"
+	case "classBodyType1"([], l): return "class_type
+										 'signature
+										 'class_signature
+										 '(
+										 <for(x <- l) {>
+										 ' <printAST(x)>
+										 <}>
+										 ')
+										 ";
+										
+	case "classBodyType1"([t], l): return "class_type
+										  ' <printAST(t)>
+										  <for(x <- l) {>
+										  ' <printAST(x)>
+										  <}>
+										  ";
+	
+    // classBodyType2: ("[" Typexpr ("," Typexpr)* "]")? ClassPath
+    case "classBodyType2"([], cp): return "class_type
+     									  '   <printAST(cp)>
+    									  ";
+    
+    case "classBodyType2"([<t, l>], cp): return "
+    											'class_type
+	    										'constr <printAST(cp)>
+	    										'(
+	    										' <printAST(t)>
+	  	    									<for (x <- l) {>
+		    									'	<printAST(x)>
+		    									<}>
+		    									')
+		    									";
+	
+	// "\'" Ident ("," "\'" Ident)*;
+	case "typeParameters"(x, l): return "
+										' \"<printAST(x)>\"
+										<for (i <- l) {>
+										' \"<printAST(i)>\"
+										<}>
+										";
+	
+	// "class" {ClassBinding "and"}+;
+	case "classDefinition"(l): return "class
+									  <for (x <- l) {>
+									  '  <printAST(x)>
+									  <}>
+									  ";
+	
+	case "classTypeDef"(x): return "<printAST(x)>";
+	
+	// "class" "type" ClasstypeDef ("and" ClasstypeDef)*;
+	case "classTypeDefinition"(def, l): return "class_type
+											   '(
+											   '  <printAST(def)>
+											   <for (x <- l){>
+											   '  <printAST(x)>
+											   <}>
+											   ')
+											   ";
+											   	
+	// "virtual"? ("[" TypeParameters "]")? ClassName "=" ClassBodyType;
+	case "classTypeDef"(_, [], cn, cbt): return "class_type_declaration
+													  'params = 
+													  '(
+													  ' <printAST(params)>
+													  ') 
+													  'name = <printAST(cn)>
+													  'expr =
+													  ' <printAST(cbt)>
+													  ";	
+											   
+	case "classTypeDef"(_, [params], cn, cbt): return "class_type_declaration
+													  'params = 
+													  '(
+													  ' <printAST(params)>
+													  ') 
+													  'name = <printAST(cn)>
+													  'expr =
+													  ' <printAST(cbt)>
+													  ";
+					
+	case "classSpec"(x) : return printAST(x);					
+													  
+	// "virtual"? ("[" TypeParameters "]")? ClassName ":" ClassType;
+	case "classSpec"(_, _, cn, ct): return "sig_class
+										' (
+										'	class_description
+										'	params = 
+										'		(
+										'		)
+										'	name = <printAST(cn)>
+										'	expr =
+										'	<printAST(ct)>
+										' )
+										";
+	// "class" ClassSpec ("and" ClassSpec)*;		
+	case "classSpecification"(c, l): return "
+											'  <printAST(c)>
+											<for (x <- l) {>
+											'  <printAST(x)>
+											<}>
+										    "; 
     								   
     case "object"(s) : return printAST(s);
     					      
@@ -1180,17 +1294,7 @@ str printAST(value v) {
     case "valuePath"("valuePath"([], n)) : return "<printAST(n)>";
     
     case "valuePath"("valuePath"(p, n)) : return "<printAST(p)>.<printAST(n)>";
-    
-    //case "valName1"(x): return "<x>aaa";
-    //
-    //case "valName2"(l): return "fuck
-    //							  <for(x <- l) {>
-    //							  	<printAST(x)>
-    //							  <}>
-    //							 ";
-    //
-    //case "valName3"(x): return "<printAST(x)>";
-    
+        
     case "modulePath"([], n) : return "<n>";
     
     case "modulePath"(l, n) : return "

@@ -25,18 +25,16 @@
             )
   class_type
   (
-    class_type_declaration ([4,27+11]..[5,61+3])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
             "t"
           )
-      pci_name = "engine"
-      pci_expr =
-        class_type ([4,27+27]..[5,61+3])
-          Pcty_signature
+      name = engine
+      expr =
+        class_type
+          signature
           class_signature
-              Ptyp_any
             (
             )
   )
@@ -45,20 +43,19 @@
     (
         sig_class
         (
-          class_description ([8,88+6]..[8,88+50])
-            pci_virt = Concrete
-            pci_params =
+          class_description
+            params =
                 (
                 )
-            pci_name = "unbound_async_call"
-            pci_expr =
-              class_type ([8,88+27]..[8,88+50])
-                Pcty_fun ""
+            name = unbound_async_call
+            expr =
+              class_type
+                fun 
                    t
                   (
                   )
-                class_type ([8,88+32]..[8,88+50])
-                  Pcty_constr engine
+                class_type
+                  constr engine
                   (
                        xdr_value
                       (

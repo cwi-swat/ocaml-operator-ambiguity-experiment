@@ -1,67 +1,66 @@
-toplevels 
 (
-     let
-     (
-       foo
-       ["*"] 
-     )
-     let
-     (
-       f
-      (
-       case
-           (
-        		 x
-        		(
-        		 case
-        		     (
-        		 	  y
-        		      x
-        		     )
-        		)
-           )
-      )
-     )
-    sequence
+   let
+   (
+     foo
+     * 
+   )
+   let
+   (
+     f
     (
-      f
-      (
-          1
-      )
-    ;
-      f
-      (
-          1
-      )
+     case
+         (
+      		 x
+      		(
+      		 case
+      		     (
+      		 	  y
+      		      x
+      		     )
+      		)
+         )
     )
-     let
-     (
-       1
-       1 
-     )
-    sequence
+   )
+  sequence
+  (
+    f
     (
-      1
-    ;
-      1
+        1
     )
-    match
+  ;
+    f
+    (
+        1
+    )
+  )
+   let
+   (
+     1
+     1 
+   )
+  sequence
+  (
     1
-    (
+  ;
+    1
+  )
+  match
+  1
+  (
+  case
+  (
+    1
+    ()
+  ) 
     case
     (
-      1
-      ()
-    ) 
-      case
-      (
-       1
-       ()
-      )
-      case
-      (
-       _
-       ()
-      )
+     1
+     ()
     )
+    case
+    (
+     _
+     ()
+    )
+  )
 )

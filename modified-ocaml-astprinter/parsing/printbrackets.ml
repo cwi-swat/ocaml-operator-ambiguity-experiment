@@ -123,7 +123,8 @@ let rec core_type i ppf x =
   (* line i ppf "core_type %a\n" fmt_location x.ptyp_loc; *)
   let i = i+1 in
   match x.ptyp_desc with
-  | Ptyp_any -> line i ppf "Ptyp_any\n";
+  (* | Ptyp_any -> line i ppf "Ptyp_any\n"; *)
+  | Ptyp_any -> line i ppf "\n";
   | Ptyp_var (s) -> line i ppf "%s\n" s;
   | Ptyp_arrow (l, ct1, ct2) ->
       line i ppf "arrow\n";
@@ -429,17 +430,21 @@ and type_kind i ppf x =
 and exception_declaration i ppf x = list i core_type ppf x
 
 and class_type i ppf x =
-  line i ppf "class_type %a\n" fmt_location x.pcty_loc;
+  (* line i ppf "class_type %a\n" fmt_location x.pcty_loc; *)
+  line i ppf "class_type\n";
   let i = i+1 in
   match x.pcty_desc with
   | Pcty_constr (li, l) ->
-      line i ppf "Pcty_constr %a\n" fmt_longident li;
+      (* line i ppf "Pcty_constr %a\n" fmt_longident li; *)
+      line i ppf "constr %a\n" fmt_longident li;
       list i core_type ppf l;
   | Pcty_signature (cs) ->
-      line i ppf "Pcty_signature\n";
+      (* line i ppf "Pcty_signature\n"; *)
+      line i ppf "signature\n";
       class_signature i ppf cs;
   | Pcty_fun (l, co, cl) ->
-      line i ppf "Pcty_fun \"%s\"\n" l;
+      (* line i ppf "Pcty_fun \"%s\"\n" l; *)
+      line i ppf "fun %s\n" l;
       core_type i ppf co;
       class_type i ppf cl;
 
@@ -473,23 +478,31 @@ and class_type_field i ppf x =
       core_type i ppf ct2;
 
 and class_description i ppf x =
-  line i ppf "class_description %a\n" fmt_location x.pci_loc;
+  (* line i ppf "class_description %a\n" fmt_location x.pci_loc; *)
+  line i ppf "class_description\n";
   let i = i+1 in
-  line i ppf "pci_virt = %a\n" fmt_virtual_flag x.pci_virt;
-  line i ppf "pci_params =\n";
+  (* line i ppf "pci_virt = %a\n" fmt_virtual_flag x.pci_virt; *)
+  (* line i ppf "pci_params =\n"; *)
+  line i ppf "params =\n";
   string_list_x_location (i+1) ppf x.pci_params;
-  line i ppf "pci_name = \"%s\"\n" x.pci_name.txt;
-  line i ppf "pci_expr =\n";
+  (* line i ppf "pci_name = \"%s\"\n" x.pci_name.txt; *)
+  line i ppf "name = %s\n" x.pci_name.txt;
+  (* line i ppf "pci_expr =\n"; *)
+  line i ppf "expr =\n";
   class_type (i+1) ppf x.pci_expr;
 
 and class_type_declaration i ppf x =
-  line i ppf "class_type_declaration %a\n" fmt_location x.pci_loc;
+  (* line i ppf "class_type_declaration %a\n" fmt_location x.pci_loc; *)
+  line i ppf "class_type_declaration\n";
   let i = i+1 in
-  line i ppf "pci_virt = %a\n" fmt_virtual_flag x.pci_virt;
-  line i ppf "pci_params =\n";
+  (* line i ppf "pci_virt = %a\n" fmt_virtual_flag x.pci_virt; *)
+  (* line i ppf "pci_params =\n"; *)
+  line i ppf "params =\n";
   string_list_x_location (i+1) ppf x.pci_params;
-  line i ppf "pci_name = \"%s\"\n" x.pci_name.txt;
-  line i ppf "pci_expr =\n";
+  (* line i ppf "pci_name = \"%s\"\n" x.pci_name.txt; *)
+  line i ppf "name = %s\n" x.pci_name.txt;
+  (* line i ppf "pci_expr =\n"; *)
+  line i ppf "expr =\n";
   class_type (i+1) ppf x.pci_expr;
 
 and class_expr i ppf x =

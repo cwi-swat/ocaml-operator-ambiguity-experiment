@@ -1,57 +1,66 @@
 (
-  type
-  (  						
-     t
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-    )
-  )
-  type
-  (  						
-     xdr_value
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-    )
-  )
-  classTypeDef 
-  (
-      classTypeDefinition 
-      (
-          classTypeDef 
-          (
-              <"t",[]>
-              engine
-              <[],[]>
-          )
-      )
-  )
-  module type T
-   signature
-   (
-    classSpec 
-    (
-        classSpecification 
+   type
+   (  						
+      t
+        type
+        params=
         (
-            classSpec 
-            (
-                unbound_async_call
-                <[<[],"typexprConstr2"("typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],<[<"typexprConstr2"("typeConstr"([],"xdr_value")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>],"classPath"([],"engine")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>>
-            )
         )
-    )
-   )    								
+        cstrs =
+        (
+        )
+        kind =
+   )
+   type
+   (  						
+      xdr_value
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+   )
+   class_type
+   (
+     class_type_declaration
+     params = 
+     (
+       "t"
+     ) 
+     name = engine
+     expr =
+      class_type
+      signature
+      class_signature
+      (
+      )
+   )
+   module type T
+    signature
+    (
+       sig_class
+        (
+       	class_description
+       	params = 
+       		(
+       		)
+       	name = unbound_async_call
+       	expr =
+       	class_type
+       	 fun
+       		t
+       		(
+       		)
+       		class_type
+       		constr engine
+       		(
+       		 xdr_value
+       		 (
+       		 )
+       		)
+        )
+    )    								
 )
