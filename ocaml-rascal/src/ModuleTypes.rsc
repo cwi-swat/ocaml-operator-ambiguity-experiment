@@ -18,7 +18,7 @@ syntax Specification
      | modType1: "module" "type" ModTypeName "=" ModuleType
      | modType2: "module" "type" ModTypeName
      | open: "open" ModulePath
-     | include: "include" ModuleType
+     | includeSpec: "include" ModuleType
      ;
      
      

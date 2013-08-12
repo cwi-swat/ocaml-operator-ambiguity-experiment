@@ -2,24 +2,24 @@
   open StdLabels
   open MoreLabels
   module  Subst
-    Map.Make
+       							      Map.Make
    (
    struct
    (
    type
    (  						
       t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-     (
-      string
-     )
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        string
+        (
+        )
    )
    let
    (
@@ -29,24 +29,24 @@
    )
    )
   module  Names
-    Set.Make
+       							      Set.Make
    (
    struct
    (
    type
    (  						
       t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-     (
-      string
-     )
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        string
+        (
+        )
    )
    let
    (
@@ -58,17 +58,15 @@
   type
   (  						
      var
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>]>
-    )
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
   )
   let
   (
@@ -77,29 +75,37 @@
     case
         (
     	  subst
-         (
-          case
-          (
-            alias x
-            (
-              Var
-              s
-            )
-            try
-            Subst.find
-            (
-                s
-                subst
-            )
-            (
-            case
-            (
-              Not_found
-              x
-            ) 
-            )
-          ) 
-         )
+   	    (
+         	 (
+         	  case
+         	  (
+         	    alias x
+         	    (
+         	      Var
+         	      s
+         	    )
+         	    try
+         	    Subst.find
+         	    (
+         	        s
+         	        subst
+         	    )
+         	    (
+         	    case
+         	    (
+         	      Not_found
+         	      x
+         	    ) 
+         	    )
+         	  ) 
+         	 )
+            :
+   		 arrow
+   		 var
+   		 (
+   		 )
+   		 <>
+   		)
         )
    )
   )
@@ -107,32 +113,38 @@
   (
     free_var
     (
-     case
      (
-       Var
-       s
-       Names.singleton
-       (
-           s
-       )
-     ) 
+      case
+      (
+        Var
+        s
+        Names.singleton
+        (
+            s
+        )
+      ) 
+     )
+     :
+     arrow
+     var
+     (
+     )
+     <>
     )
   )
   type
   (  						
      lambda
-     type
-     params=
-     (
-      a
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Abs",["star"("typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"App",["star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
-    )
+       type
+       params=
+       (
+        a
+       )
+       cstrs =
+       (
+       )
+       kind =
+       <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Abs",["star"("typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"App",["star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
   )
   let
   (
@@ -141,54 +153,63 @@
     case
         (
     	  free_rec
-         (
-          case
-          (
-            alias x
-            (
-              var
-            )
-            free_var
-            (
-                x
-            )
-          ) 
-            case
-            (
-             Abs
-             (
-              s
-             	t
-             )
-             Names.remove
-             (
-                 s
-                 free_rec
-                 (
-                     t
-                 )
-             )
-            )
-            case
-            (
-             App
-             (
-              t1
-             	t2
-             )
-             Names.union
-             (
-                 free_rec
-                 (
-                     t1
-                 )
-                 free_rec
-                 (
-                     t2
-                 )
-             )
-            )
-         )
+   	    (
+         	 (
+         	  case
+         	  (
+         	    alias x
+         	    (
+         	      var
+         	    )
+         	    free_var
+         	    (
+         	        x
+         	    )
+         	  ) 
+         	    case
+         	    (
+         	     Abs
+         	     (
+         	      s
+         	     	t
+         	     )
+         	     Names.remove
+         	     (
+         	         s
+         	         free_rec
+         	         (
+         	             t
+         	         )
+         	     )
+         	    )
+         	    case
+         	    (
+         	     App
+         	     (
+         	      t1
+         	     	t2
+         	     )
+         	     Names.union
+         	     (
+         	         free_rec
+         	         (
+         	             t1
+         	         )
+         	         free_rec
+         	         (
+         	             t2
+         	         )
+         	     )
+         	    )
+         	 )
+            :
+   		 arrow
+   		  lambda
+   		  (
+   		    <>
+   		  )
+   		 <>
+   		)
         )
    )
   )
@@ -199,123 +220,128 @@
     case
         (
     	  map_rec
-         (
-          case
-          (
-            alias x
-            (
-              var
-            )
-            x
-          ) 
-            case
-            (
-             alias l
-             (
-               Abs
-               (
-                s
-               	t
-               )
-             )
-             let
-             (
-              (
-                t'
-                map_rec
-                (
-                    t
-                ) 
-              )
-             in
-               ifthenelse
-               (
-                if
-                (
-                 ==
-                 (
-                     t
-                     t'
-                 )
-                )
-                then
-                (
-                 l
-                )
-                else
-                (
-                 Abs
-                 (
-                     (
-                         					 s
-                     	t'
-                     )
-                 )
-                ) 
-               )
-             )
-            )
-            case
-            (
-             alias l
-             (
-               App
-               (
-                t1
-               	t2
-               )
-             )
-             let
-             (
-              (
-                t'1
-                map_rec
-                (
-                    t1
-                ) 
-                t'2
-                map_rec
-                (
-                    t2
-                ) 
-              )
-             in
-               ifthenelse
-               (
-                if
-                (
-                 &&
-                 (
-                     ==
-                     (
-                         t'1
-                         t1
-                     )
-                     ==
-                     (
-                         t'2
-                         t2
-                     )
-                 )
-                )
-                then
-                (
-                 l
-                )
-                else
-                (
-                 App
-                 (
-                     (
-                         					 t'1
-                     	t'2
-                     )
-                 )
-                ) 
-               )
-             )
-            )
-         )
+   	    (
+         	 (
+         	  case
+         	  (
+         	    alias x
+         	    (
+         	      var
+         	    )
+         	    x
+         	  ) 
+         	    case
+         	    (
+         	     alias l
+         	     (
+         	       Abs
+         	       (
+         	        s
+         	       	t
+         	       )
+         	     )
+         	     let
+         	     (
+         	      (
+         	        t'
+         	        map_rec
+         	        (
+         	            t
+         	        ) 
+         	      )
+         	     in
+         	       ifthenelse
+         	       (
+         	        if
+         	        (
+         	         ==
+         	         (
+         	             t
+         	             t'
+         	         )
+         	        )
+         	        then
+         	        (
+         	         l
+         	        )
+         	        else
+         	        (
+         	         Abs
+         	            (
+         	             s
+         	            	t'
+         	            )
+         	        ) 
+         	       )
+         	     )
+         	    )
+         	    case
+         	    (
+         	     alias l
+         	     (
+         	       App
+         	       (
+         	        t1
+         	       	t2
+         	       )
+         	     )
+         	     let
+         	     (
+         	      (
+         	        t'1
+         	        map_rec
+         	        (
+         	            t1
+         	        ) 
+         	        t'2
+         	        map_rec
+         	        (
+         	            t2
+         	        ) 
+         	      )
+         	     in
+         	       ifthenelse
+         	       (
+         	        if
+         	        (
+         	         &&
+         	         (
+         	             ==
+         	             (
+         	                 t'1
+         	                 t1
+         	             )
+         	             ==
+         	             (
+         	                 t'2
+         	                 t2
+         	             )
+         	         )
+         	        )
+         	        then
+         	        (
+         	         l
+         	        )
+         	        else
+         	        (
+         	         App
+         	            (
+         	             t'1
+         	            	t'2
+         	            )
+         	        ) 
+         	       )
+         	     )
+         	    )
+         	 )
+            :
+   		 arrow
+   		  lambda
+   		  (
+   		    <>
+   		  )
+   		 <>
+   		)
         )
    )
   )
@@ -354,11 +380,11 @@
   )
   let
   (
-    subst_lambda
+     subst_lambda
    (
     case
         (
-     		 subst_rec
+     		  subst_rec
      		(
      		 case
      		     (
@@ -367,119 +393,126 @@
      		  		 case
      		  		     (
      		  		 	  subst
-     		  		      (
-     		  		       case
-     		  		       (
-     		  		         alias x
-     		  		         (
-     		  		           var
-     		  		         )
-     		  		         subst_var
-     		  		         (
-     		  		             subst
-     		  		             x
-     		  		         )
-     		  		       ) 
-     		  		         case
-     		  		         (
-     		  		          alias l
-     		  		          (
-     		  		            Abs
-     		  		            (
-     		  		             s
-     		  		            	t
-     		  		            )
-     		  		          )
-     		  		          let
-     		  		          (
-     		  		           (
-     		  		             used
-     		  		             free
-     		  		             (
-     		  		                 t
-     		  		             ) 
-     		  		           )
-     		  		          in
-     		  		            let
-     		  		            (
-     		  		             (
-     		  		               used_expr
-     		  		               Subst.fold
-     		  		               (
-     		  		                   subst
-     		  		                   <"~init:","constant"("emptyBrackets"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-     		  		                   <"~f:","brackets"("fun"("multipleMatching"(["key","data","patternValueName"("acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"ifThenElse"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Names")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"mem")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"valuePath"("valuePath"([],"used")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"coloncolon"("valuePath"("valuePath"([],"data")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"valuePath"("valuePath"([],"acc")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"acc")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-     		  		               ) 
-     		  		             )
-     		  		            in
-     		  		              ifthenelse
-     		  		              (
-     		  		               if
-     		  		               (
-     		  		                List.exists
-     		  		                (
-     		  		                    used_expr
-     		  		                    <"~f:","brackets"("fun"("multipleMatching"(["patternValueName"("t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],"functionApplication"("valuePath"("valuePath"(["modulePath"([],"Names")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"mem")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"brackets"("functionApplication"("valuePath"("valuePath"([],"free")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-     		  		                )
-     		  		               )
-     		  		               then
-     		  		               (
-     		  		                let
-     		  		                (
-     		  		                 (
-     		  		                   name
-     		  		                   ^
-     		  		                   (
-     		  		                       s
-     		  		                       string_of_int
-     		  		                       (
-     		  		                           next_id
-     		  		                           (
-     		  		                               ()
-     		  		                           )
-     		  		                       )
-     		  		                   ) 
-     		  		                 )
-     		  		                in
-     		  		                  Abs
-     		  		                  (
-     		  		                      (
-     		  		                          					 name
-     		  		                      	subst_rec
-     		  		                      	(
-     		  		                      	    <"~subst:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"add")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[<"~key:","valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<"~data:","brackets"("functionApplication"("constant"("Var")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["valuePath"("valuePath"([],"name")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"valuePath"("valuePath"([],"subst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-     		  		                      	    t
-     		  		                      	)
-     		  		                      )
-     		  		                  )
-     		  		                )
-     		  		               )
-     		  		               else
-     		  		               (
-     		  		                map_lambda
-     		  		                (
-     		  		                    <"~map_rec:","brackets"("functionApplication"("valuePath"("valuePath"([],"subst_rec")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~subst:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"remove")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"subst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-     		  		                    l
-     		  		                )
-     		  		               ) 
-     		  		              )
-     		  		            )
-     		  		          )
-     		  		         )
-     		  		         case
-     		  		         (
-     		  		          alias l
-     		  		          (
-     		  		            App
-     		  		            _
-     		  		          )
-     		  		          map_lambda
-     		  		          (
-     		  		              <"~map_rec:","brackets"("functionApplication"("valuePath"("valuePath"([],"subst_rec")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["subst"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-     		  		              l
-     		  		          )
-     		  		         )
-     		  		      )
+     		  			    (
+     		  		      	 (
+     		  		      	  case
+     		  		      	  (
+     		  		      	    alias x
+     		  		      	    (
+     		  		      	      var
+     		  		      	    )
+     		  		      	    subst_var
+     		  		      	    (
+     		  		      	        subst
+     		  		      	        x
+     		  		      	    )
+     		  		      	  ) 
+     		  		      	    case
+     		  		      	    (
+     		  		      	     alias l
+     		  		      	     (
+     		  		      	       Abs
+     		  		      	       (
+     		  		      	        s
+     		  		      	       	t
+     		  		      	       )
+     		  		      	     )
+     		  		      	     let
+     		  		      	     (
+     		  		      	      (
+     		  		      	        used
+     		  		      	        free
+     		  		      	        (
+     		  		      	            t
+     		  		      	        ) 
+     		  		      	      )
+     		  		      	     in
+     		  		      	       let
+     		  		      	       (
+     		  		      	        (
+     		  		      	          used_expr
+     		  		      	          Subst.fold
+     		  		      	          (
+     		  		      	              subst
+     		  		      	              <"~init:","constant"("emptyBrackets"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     		  		      	              <"~f:","brackets"("fun"("multipleMatching"(["key","data","patternValueName"("acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"ifThenElse"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Names")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"mem")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"used")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"coloncolon"("valuePath"("valuePath"([],"data")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     		  		      	          ) 
+     		  		      	        )
+     		  		      	       in
+     		  		      	         ifthenelse
+     		  		      	         (
+     		  		      	          if
+     		  		      	          (
+     		  		      	           List.exists
+     		  		      	           (
+     		  		      	               used_expr
+     		  		      	               <"~f:","brackets"("fun"("multipleMatching"(["patternValueName"("t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"functionApplication"("valuePath"("valuePath"(["modulePath"([],"Names")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"mem")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"brackets"("functionApplication"("valuePath"("valuePath"([],"free")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     		  		      	           )
+     		  		      	          )
+     		  		      	          then
+     		  		      	          (
+     		  		      	           let
+     		  		      	           (
+     		  		      	            (
+     		  		      	              name
+     		  		      	              ^
+     		  		      	              (
+     		  		      	                  s
+     		  		      	                  string_of_int
+     		  		      	                  (
+     		  		      	                      next_id
+     		  		      	                      (
+     		  		      	                          ()
+     		  		      	                      )
+     		  		      	                  )
+     		  		      	              ) 
+     		  		      	            )
+     		  		      	           in
+     		  		      	             Abs
+     		  		      	                (
+     		  		      	                 name
+     		  		      	                	subst_rec
+     		  		      	                	(
+     		  		      	                	    <"~subst:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"add")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~key:","valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"~data:","brackets"("polyVariant"("Var","valuePath"("valuePath"([],"name")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"valuePath"("valuePath"([],"subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     		  		      	                	    t
+     		  		      	                	)
+     		  		      	                )
+     		  		      	           )
+     		  		      	          )
+     		  		      	          else
+     		  		      	          (
+     		  		      	           map_lambda
+     		  		      	           (
+     		  		      	               <"~map_rec:","brackets"("functionApplication"("valuePath"("valuePath"([],"subst_rec")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~subst:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"remove")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     		  		      	               l
+     		  		      	           )
+     		  		      	          ) 
+     		  		      	         )
+     		  		      	       )
+     		  		      	     )
+     		  		      	    )
+     		  		      	    case
+     		  		      	    (
+     		  		      	     alias l
+     		  		      	     (
+     		  		      	       App
+     		  		      	       _
+     		  		      	     )
+     		  		      	     map_lambda
+     		  		      	     (
+     		  		      	         <"~map_rec:","brackets"("functionApplication"("valuePath"("valuePath"([],"subst_rec")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["subst"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     		  		      	         l
+     		  		      	     )
+     		  		      	    )
+     		  		      	 )
+     		  		         :
+     		  				 arrow
+     		  				  lambda
+     		  				  (
+     		  				    <>
+     		  				  )
+     		  				 <>
+     		  				)
      		  		     )
      		  		)
      		     )
@@ -489,11 +522,11 @@
   )
   let
   (
-    eval_lambda
+     eval_lambda
    (
     case
         (
-     		 eval_rec
+     		  eval_rec
      		(
      		 case
      		     (
@@ -505,7 +538,7 @@
      		  		      match
      		  		      map_lambda
      		  		      (
-     		  		          <"~map_rec:","valuePath"("valuePath"([],"eval_rec")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+     		  		          <"~map_rec:","valuePath"("valuePath"([],"eval_rec")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
      		  		          l
      		  		      )
      		  		      (
@@ -524,7 +557,7 @@
      		  		        (
      		  		            subst
      		  		            (
-     		  		                <"~subst:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"add")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~key:","valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"~data:","valuePath"("valuePath"([],"t2")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,"valuePath"("valuePath"(["modulePath"([],"Subst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"empty")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     		  		                <"~subst:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"add")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~key:","valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"~data:","valuePath"("valuePath"([],"t2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"empty")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
      		  		                t1
      		  		            )
      		  		        )
@@ -566,8 +599,8 @@
     	  subst
          subst_lambda
          (
-             <"~subst_rec:","valuePath"("valuePath"([],"subst1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-             <"~free:","valuePath"("valuePath"([],"free1")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+             <"~subst_rec:","valuePath"("valuePath"([],"subst1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+             <"~free:","valuePath"("valuePath"([],"free1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
              subst
          )
         )
@@ -582,8 +615,8 @@
     	  x
          eval_lambda
          (
-             <"~eval_rec:","valuePath"("valuePath"([],"eval1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-             <"~subst:","valuePath"("valuePath"([],"subst1")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+             <"~eval_rec:","valuePath"("valuePath"([],"eval1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+             <"~subst:","valuePath"("valuePath"([],"subst1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
              x
          )
         )
@@ -592,18 +625,16 @@
   type
   (  						
      expr
-     type
-     params=
-     (
-      a
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Num",["typexprConstr2"("typeConstr"([],"int")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Add",["star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Neg",["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Mult",["star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>]>
-    )
+       type
+       params=
+       (
+        a
+       )
+       cstrs =
+       (
+       )
+       kind =
+       <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Num",["typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Add",["star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Neg",["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Mult",["star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
   )
   let
   (
@@ -612,72 +643,81 @@
     case
         (
     	  free_rec
-         (
-          case
-          (
-            alias x
-            (
-              var
-            )
-            free_var
-            (
-                x
-            )
-          ) 
-            case
-            (
-             Num
-             _
-             Names.empty
-            )
-            case
-            (
-             Add
-             (
-              x
-             	y
-             )
-             Names.union
-             (
-                 free_rec
-                 (
-                     x
-                 )
-                 free_rec
-                 (
-                     y
-                 )
-             )
-            )
-            case
-            (
-             Neg
-             x
-             free_rec
-             (
-                 x
-             )
-            )
-            case
-            (
-             Mult
-             (
-              x
-             	y
-             )
-             Names.union
-             (
-                 free_rec
-                 (
-                     x
-                 )
-                 free_rec
-                 (
-                     y
-                 )
-             )
-            )
-         )
+   	    (
+         	 (
+         	  case
+         	  (
+         	    alias x
+         	    (
+         	      var
+         	    )
+         	    free_var
+         	    (
+         	        x
+         	    )
+         	  ) 
+         	    case
+         	    (
+         	     Num
+         	     _
+         	     Names.empty
+         	    )
+         	    case
+         	    (
+         	     Add
+         	     (
+         	      x
+         	     	y
+         	     )
+         	     Names.union
+         	     (
+         	         free_rec
+         	         (
+         	             x
+         	         )
+         	         free_rec
+         	         (
+         	             y
+         	         )
+         	     )
+         	    )
+         	    case
+         	    (
+         	     Neg
+         	     x
+         	     free_rec
+         	     (
+         	         x
+         	     )
+         	    )
+         	    case
+         	    (
+         	     Mult
+         	     (
+         	      x
+         	     	y
+         	     )
+         	     Names.union
+         	     (
+         	         free_rec
+         	         (
+         	             x
+         	         )
+         	         free_rec
+         	         (
+         	             y
+         	         )
+         	     )
+         	    )
+         	 )
+            :
+   		 arrow
+   		  expr
+   		  (
+   		    <>
+   		  )
+   		 <>
+   		)
         )
    )
   )
@@ -688,192 +728,195 @@
     case
         (
     	  map_rec
-         (
-          case
-          (
-            alias x
-            (
-              var
-            )
-            x
-          ) 
-            case
-            (
-             alias x
-             (
-               Num
-               _
-             )
-             x
-            )
-            case
-            (
-             alias e
-             (
-               Add
-               (
-                x
-               	y
-               )
-             )
-             let
-             (
-              (
-                x'
-                map_rec
-                (
-                    x
-                ) 
-                y'
-                map_rec
-                (
-                    y
-                ) 
-              )
-             in
-               ifthenelse
-               (
-                if
-                (
-                 &&
-                 (
-                     ==
-                     (
-                         x
-                         x'
-                     )
-                     ==
-                     (
-                         y
-                         y'
-                     )
-                 )
-                )
-                then
-                (
-                 e
-                )
-                else
-                (
-                 Add
-                 (
-                     (
-                         					 x'
-                     	y'
-                     )
-                 )
-                ) 
-               )
-             )
-            )
-            case
-            (
-             alias e
-             (
-               Neg
-               x
-             )
-             let
-             (
-              (
-                x'
-                map_rec
-                (
-                    x
-                ) 
-              )
-             in
-               ifthenelse
-               (
-                if
-                (
-                 ==
-                 (
-                     x
-                     x'
-                 )
-                )
-                then
-                (
-                 e
-                )
-                else
-                (
-                 Neg
-                 (
-                     x'
-                 )
-                ) 
-               )
-             )
-            )
-            case
-            (
-             alias e
-             (
-               Mult
-               (
-                x
-               	y
-               )
-             )
-             let
-             (
-              (
-                x'
-                map_rec
-                (
-                    x
-                ) 
-                y'
-                map_rec
-                (
-                    y
-                ) 
-              )
-             in
-               ifthenelse
-               (
-                if
-                (
-                 &&
-                 (
-                     ==
-                     (
-                         x
-                         x'
-                     )
-                     ==
-                     (
-                         y
-                         y'
-                     )
-                 )
-                )
-                then
-                (
-                 e
-                )
-                else
-                (
-                 Mult
-                 (
-                     (
-                         					 x'
-                     	y'
-                     )
-                 )
-                ) 
-               )
-             )
-            )
-         )
+   	    (
+         	 (
+         	  case
+         	  (
+         	    alias x
+         	    (
+         	      var
+         	    )
+         	    x
+         	  ) 
+         	    case
+         	    (
+         	     alias x
+         	     (
+         	       Num
+         	       _
+         	     )
+         	     x
+         	    )
+         	    case
+         	    (
+         	     alias e
+         	     (
+         	       Add
+         	       (
+         	        x
+         	       	y
+         	       )
+         	     )
+         	     let
+         	     (
+         	      (
+         	        x'
+         	        map_rec
+         	        (
+         	            x
+         	        ) 
+         	        y'
+         	        map_rec
+         	        (
+         	            y
+         	        ) 
+         	      )
+         	     in
+         	       ifthenelse
+         	       (
+         	        if
+         	        (
+         	         &&
+         	         (
+         	             ==
+         	             (
+         	                 x
+         	                 x'
+         	             )
+         	             ==
+         	             (
+         	                 y
+         	                 y'
+         	             )
+         	         )
+         	        )
+         	        then
+         	        (
+         	         e
+         	        )
+         	        else
+         	        (
+         	         Add
+         	            (
+         	             x'
+         	            	y'
+         	            )
+         	        ) 
+         	       )
+         	     )
+         	    )
+         	    case
+         	    (
+         	     alias e
+         	     (
+         	       Neg
+         	       x
+         	     )
+         	     let
+         	     (
+         	      (
+         	        x'
+         	        map_rec
+         	        (
+         	            x
+         	        ) 
+         	      )
+         	     in
+         	       ifthenelse
+         	       (
+         	        if
+         	        (
+         	         ==
+         	         (
+         	             x
+         	             x'
+         	         )
+         	        )
+         	        then
+         	        (
+         	         e
+         	        )
+         	        else
+         	        (
+         	         Neg
+         	            x'
+         	        ) 
+         	       )
+         	     )
+         	    )
+         	    case
+         	    (
+         	     alias e
+         	     (
+         	       Mult
+         	       (
+         	        x
+         	       	y
+         	       )
+         	     )
+         	     let
+         	     (
+         	      (
+         	        x'
+         	        map_rec
+         	        (
+         	            x
+         	        ) 
+         	        y'
+         	        map_rec
+         	        (
+         	            y
+         	        ) 
+         	      )
+         	     in
+         	       ifthenelse
+         	       (
+         	        if
+         	        (
+         	         &&
+         	         (
+         	             ==
+         	             (
+         	                 x
+         	                 x'
+         	             )
+         	             ==
+         	             (
+         	                 y
+         	                 y'
+         	             )
+         	         )
+         	        )
+         	        then
+         	        (
+         	         e
+         	        )
+         	        else
+         	        (
+         	         Mult
+         	            (
+         	             x'
+         	            	y'
+         	            )
+         	        ) 
+         	       )
+         	     )
+         	    )
+         	 )
+            :
+   		 arrow
+   		  expr
+   		  (
+   		    <>
+   		  )
+   		 <>
+   		)
         )
    )
   )
   let
   (
-    subst_expr
+     subst_expr
    (
     case
         (
@@ -882,32 +925,41 @@
      		 case
      		     (
      		 	  subst
-     		      (
-     		       case
-     		       (
-     		         alias x
-     		         (
-     		           var
-     		         )
-     		         subst_var
-     		         (
-     		             subst
-     		             x
-     		         )
-     		       ) 
-     		         case
-     		         (
-     		          alias e
-     		          (
-     		            expr
-     		          )
-     		          map_expr
-     		          (
-     		              <"~map_rec:","brackets"("functionApplication"("valuePath"("valuePath"([],"subst_rec")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["subst"])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-     		              e
-     		          )
-     		         )
-     		      )
+     			    (
+     		      	 (
+     		      	  case
+     		      	  (
+     		      	    alias x
+     		      	    (
+     		      	      var
+     		      	    )
+     		      	    subst_var
+     		      	    (
+     		      	        subst
+     		      	        x
+     		      	    )
+     		      	  ) 
+     		      	    case
+     		      	    (
+     		      	     alias e
+     		      	     (
+     		      	       expr
+     		      	     )
+     		      	     map_expr
+     		      	     (
+     		      	         <"~map_rec:","brackets"("functionApplication"("valuePath"("valuePath"([],"subst_rec")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["subst"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     		      	         e
+     		      	     )
+     		      	    )
+     		      	 )
+     		         :
+     				 arrow
+     				  expr
+     				  (
+     				    <>
+     				  )
+     				 <>
+     				)
      		     )
      		)
         )
@@ -915,7 +967,7 @@
   )
   let
   (
-    eval_expr
+     eval_expr
    (
     case
         (
@@ -941,13 +993,11 @@
      		        	n
      		        )
      		        Num
-     		        (
-     		            +
-     		            (
-     		                m
-     		                n
-     		            )
-     		        )
+     		           +
+     		           (
+     		               m
+     		               n
+     		           )
      		      ) 
      		        case
      		        (
@@ -955,9 +1005,10 @@
      		         Num
      		         n
      		         Num
-     		         (
-     		             -n
-     		         )
+     		            ~-
+     		            (
+     		             n
+     		            )
      		        )
      		        case
      		        (
@@ -969,13 +1020,11 @@
      		         	n
      		         )
      		         Num
-     		         (
-     		             *
-     		             (
-     		                 m
-     		                 n
-     		             )
-     		         )
+     		            *
+     		            (
+     		                m
+     		                n
+     		            )
      		        )
      		        case
      		        (
@@ -1000,7 +1049,7 @@
     	  x
          free_expr
          (
-             <"~free_rec:","valuePath"("valuePath"([],"free2")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+             <"~free_rec:","valuePath"("valuePath"([],"free2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
              x
          )
         )
@@ -1015,7 +1064,7 @@
     	  subst
          subst_expr
          (
-             <"~subst_rec:","valuePath"("valuePath"([],"subst2")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+             <"~subst_rec:","valuePath"("valuePath"([],"subst2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
              subst
          )
         )
@@ -1030,7 +1079,7 @@
     	  x
          eval_expr
          (
-             <"~eval_rec:","valuePath"("valuePath"([],"eval2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+             <"~eval_rec:","valuePath"("valuePath"([],"eval2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
              x
          )
         )
@@ -1039,46 +1088,52 @@
   type
   (  						
      lexpr
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Abs",["star"("typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["typexprConstr2"("typeConstr"([],"lexpr")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"App",["star"("typexprConstr2"("typeConstr"([],"lexpr")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr2"("typeConstr"([],"lexpr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Num",["typexprConstr2"("typeConstr"([],"int")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Add",["star"("typexprConstr2"("typeConstr"([],"lexpr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["typexprConstr2"("typeConstr"([],"lexpr")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Neg",["typexprConstr2"("typeConstr"([],"lexpr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]]>,<"Mult",["star"("typexprConstr2"("typeConstr"([],"lexpr")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["typexprConstr2"("typeConstr"([],"lexpr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
-    )
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Abs",["star"("typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr2"("typeConstr"([],"lexpr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"App",["star"("typexprConstr2"("typeConstr"([],"lexpr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr2"("typeConstr"([],"lexpr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Num",["typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Add",["star"("typexprConstr2"("typeConstr"([],"lexpr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr2"("typeConstr"([],"lexpr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Neg",["typexprConstr2"("typeConstr"([],"lexpr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Mult",["star"("typexprConstr2"("typeConstr"([],"lexpr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr2"("typeConstr"([],"lexpr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
   )
   let
   (
     free
     (
-     case
      (
-       alias x
-       (
-         lambda
-       )
-       free_lambda
-       (
-           <"~free_rec:","valuePath"("valuePath"([],"free")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-           x
-       )
-     ) 
-       case
-       (
+      case
+      (
         alias x
         (
-          expr
+          lambda
         )
-        free_expr
+        free_lambda
         (
             <"~free_rec:","valuePath"("valuePath"([],"free")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
             x
         )
-       )
+      ) 
+        case
+        (
+         alias x
+         (
+           expr
+         )
+         free_expr
+         (
+             <"~free_rec:","valuePath"("valuePath"([],"free")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+             x
+         )
+        )
+     )
+     :
+     arrow
+     lexpr
+     (
+     )
+     <>
     )
   )
   let
@@ -1087,36 +1142,44 @@
    (
     case
         (
-    	  <"subst","patternValueName"("s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-         (
-          case
-          (
-            alias x
-            (
-              lambda
-            )
-            subst_lambda
-            (
-                <"~subst_rec:","valuePath"("valuePath"([],"subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                <"~subst:","valuePath"("valuePath"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                free
-                x
-            )
-          ) 
-            case
-            (
-             alias x
-             (
-               expr
-             )
-             subst_expr
-             (
-                 <"~subst_rec:","valuePath"("valuePath"([],"subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                 <"~subst:","valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-                 x
-             )
-            )
-         )
+    	  <"subst","patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+   	    (
+         	 (
+         	  case
+         	  (
+         	    alias x
+         	    (
+         	      lambda
+         	    )
+         	    subst_lambda
+         	    (
+         	        <"~subst_rec:","valuePath"("valuePath"([],"subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+         	        <"~subst:","valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+         	        free
+         	        x
+         	    )
+         	  ) 
+         	    case
+         	    (
+         	     alias x
+         	     (
+         	       expr
+         	     )
+         	     subst_expr
+         	     (
+         	         <"~subst_rec:","valuePath"("valuePath"([],"subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+         	         <"~subst:","valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+         	         x
+         	     )
+         	    )
+         	 )
+            :
+   		 arrow
+   		 lexpr
+   		 (
+   		 )
+   		 <>
+   		)
         )
    )
   )
@@ -1124,31 +1187,39 @@
   (
     eval
     (
-     case
      (
-       alias x
-       (
-         lambda
-       )
-       eval_lambda
-       (
-           <"~eval_rec:","valuePath"("valuePath"([],"eval")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-           subst
-           x
-       )
-     ) 
-       case
-       (
+      case
+      (
         alias x
         (
-          expr
+          lambda
         )
-        eval_expr
+        eval_lambda
         (
-            <"~eval_rec:","valuePath"("valuePath"([],"eval")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            <"~eval_rec:","valuePath"("valuePath"([],"eval")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            subst
             x
         )
-       )
+      ) 
+        case
+        (
+         alias x
+         (
+           expr
+         )
+         eval_expr
+         (
+             <"~eval_rec:","valuePath"("valuePath"([],"eval")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+             x
+         )
+        )
+     )
+     :
+     arrow
+     lexpr
+     (
+     )
+     <>
     )
   )
   let
@@ -1314,24 +1385,16 @@
        eval1
        (
            App
-           (
-               (
-                   					 Abs
-                     					 (
-                     					     (
-                     					         					 "x"
-                     					     	Var
-                     					     	(
-                     					     	    "x"
-                     					     	)
-                     					     )
-                     					 )
-               	Var
-               	(
-               	    "y"
-               	)
-               )
-           )
+              (
+               Abs
+                  (
+                   "x"
+                  	Var
+                  	   "x"
+                  )
+              	Var
+              	   "y"
+              )
        ) 
      )
     in
@@ -1342,30 +1405,18 @@
          eval2
          (
              Add
-             (
-                 (
-                     					 Mult
-                       					 (
-                       					     (
-                       					         					 Num
-                       					           					 (
-                       					           					     3
-                       					           					 )
-                       					     	Neg
-                       					     	(
-                       					     	    Num
-                       					     	    (
-                       					     	        2
-                       					     	    )
-                       					     	)
-                       					     )
-                       					 )
-                 	Var
-                 	(
-                 	    "x"
-                 	)
-                 )
-             )
+                (
+                 Mult
+                    (
+                     Num
+                        3
+                    	Neg
+                    	   Num
+                    	      2
+                    )
+                	Var
+                	   "x"
+                )
          ) 
        )
       in
@@ -1376,42 +1427,26 @@
            eval
            (
                Add
-               (
-                   (
-                       					 App
-                         					 (
-                         					     (
-                         					         					 Abs
-                         					           					 (
-                         					           					     (
-                         					           					         					 "x"
-                         					           					     	Mult
-                         					           					     	(
-                         					           					     	    (
-                         					           					     	        					 Var
-                         					           					     	          					 (
-                         					           					     	          					     "x"
-                         					           					     	          					 )
-                         					           					     	    	Var
-                         					           					     	    	(
-                         					           					     	    	    "x"
-                         					           					     	    	)
-                         					           					     	    )
-                         					           					     	)
-                         					           					     )
-                         					           					 )
-                         					     	Num
-                         					     	(
-                         					     	    2
-                         					     	)
-                         					     )
-                         					 )
-                   	Num
-                   	(
-                   	    5
-                   	)
-                   )
-               )
+                  (
+                   App
+                      (
+                       Abs
+                          (
+                           "x"
+                          	Mult
+                          	   (
+                          	    Var
+                          	       "x"
+                          	   	Var
+                          	   	   "x"
+                          	   )
+                          )
+                      	Num
+                      	   2
+                      )
+                  	Num
+                  	   5
+                  )
            ) 
          )
         in

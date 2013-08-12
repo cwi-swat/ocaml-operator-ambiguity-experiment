@@ -2,12 +2,14 @@
   module type INCLUDING
     signature
     (
-        sig_include
-          Pmty_typeof
+        include
+        (
             List
-        sig_include
-          Pmty_typeof
+        )
+        include
+        (
             ListLabels
+        )
     )
   module Including_typed
       struct

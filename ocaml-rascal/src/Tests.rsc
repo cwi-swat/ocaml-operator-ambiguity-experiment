@@ -1140,6 +1140,8 @@ str printAST(value v) {
     							'  <printAST(me)>
     							')"
     							;
+    							
+    case "modTypeOf"(x): return printAST(x); 							
     					
     // ModuleType "with" ModConstraint ("and" ModConstraint)*							
     case "modTypeWith"(t, c, l): return "

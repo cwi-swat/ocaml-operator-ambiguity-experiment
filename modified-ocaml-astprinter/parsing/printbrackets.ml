@@ -608,7 +608,7 @@ and module_type i ppf x =
       module_type i ppf mt;
       list i longident_x_with_constraint ppf l;
   | Pmty_typeof m ->
-      line i ppf "Pmty_typeof\n";
+      (* line i ppf "Pmty_typeof\n"; *)
       module_expr i ppf m;
 
 and signature i ppf x = list i signature_item ppf x
@@ -640,8 +640,11 @@ and signature_item i ppf x =
       modtype_declaration i ppf md;
   | Psig_open li -> line i ppf "sig_open %a\n" fmt_longident li;
   | Psig_include (mt) ->
-      line i ppf "sig_include\n";
+      (* line i ppf "sig_include\n"; *)
+      line i ppf "include\n";
+      line i ppf "(\n";
       module_type i ppf mt;
+      line i ppf ")\n";
   | Psig_class (l) ->
       line i ppf "sig_class\n";
       list i class_description ppf l;
