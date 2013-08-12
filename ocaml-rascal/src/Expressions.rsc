@@ -21,7 +21,7 @@ syntax Expr
      > unaryMinus: "-" !>> [0-9] Expr | floatUnaryMinus: "-." Expr
      > right infix1: Expr InfixSymbol1 Expr
      > left  infix2: Expr InfixSymbol2 Expr
-     > left  infix3: Expr InfixSymbol3 Expr
+     > left  infix3: Expr !semicolon InfixSymbol3 Expr   // to disambiguate [|   5.2026032092;     19132e-10;  -39e-10 |];
      > right coloncolon: Expr "::" Expr
      > right infix4: Expr InfixSymbol4 Expr
      > left  infix5: Expr InfixSymbol5 Expr

@@ -5,43 +5,41 @@
   (  						
       							    	 
      peg
-     type
-     params=
-     (
-     
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     
-     
-     (
-     								  
-     Out
-     (
-     									
-     )
-     								    
-     								  
-     Empty
-     (
-     									
-     )
-     								    
-     								  
-     Peg
-     (
-     									
-     )
-     								    
-     								  
-     )
-     								  
-     														  
-     														 
-    )
+       type
+       params=
+       (
+       
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+       
+       (
+       								  
+       Out
+       (
+       									
+       )
+       								    
+       								  
+       Empty
+       (
+       									
+       )
+       								    
+       								  
+       Peg
+       (
+       									
+       )
+       								    
+       								  
+       )
+       								  
+       														  
+       														 
     											   
   								        
   )
@@ -310,8 +308,7 @@
             " "
         )
        )
-       													    
-     	        											 
+       													   
        
        case
        (
@@ -379,35 +376,43 @@
   (  						
       							    	 
      direction
-     type
-     params=
-     (
-     
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     
-     
-     							     
-      
-      dx
-      poly
-      int
-                                             
-     							     
-      
-      dy
-      poly
-      int
-                                             
-     							     
-     	                           
-     														  
-     														 
-    )
+       type
+       params=
+       (
+       
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+       
+       (
+       							     
+        
+        dx
+        poly
+        
+        int
+        (
+        )
+        								  
+                                               
+       							     
+        
+        dy
+        poly
+        
+        int
+        (
+        )
+        								  
+                                               
+       							     
+       )
+       	                           
+       														  
+       														 
     											   
   								        
   )
@@ -477,47 +482,63 @@
   (  						
       							    	 
      move
-     type
-     params=
-     (
-     
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     
-     
-     							     
-      
-      x1
-      poly
-      int
-                                             
-     							     
-      
-      y1
-      poly
-      int
-                                             
-     							     
-      
-      x2
-      poly
-      int
-                                             
-     							     
-      
-      y2
-      poly
-      int
-                                             
-     							     
-     	                           
-     														  
-     														 
-    )
+       type
+       params=
+       (
+       
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+       
+       (
+       							     
+        
+        x1
+        poly
+        
+        int
+        (
+        )
+        								  
+                                               
+       							     
+        
+        y1
+        poly
+        
+        int
+        (
+        )
+        								  
+                                               
+       							     
+        
+        x2
+        poly
+        
+        int
+        (
+        )
+        								  
+                                               
+       							     
+        
+        y2
+        poly
+        
+        int
+        (
+        )
+        								  
+                                               
+       							     
+       )
+       	                           
+       														  
+       														 
     											   
   								        
   )
@@ -566,6 +587,8 @@
   )
                                      
   exception Found
+  (
+  )
                                      
   let
   (
