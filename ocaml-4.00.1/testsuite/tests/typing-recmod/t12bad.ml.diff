@@ -1,85 +1,20 @@
-2c2
-<   modRec1 
----
->   Pstr_recmodule
-4c4
-<       M
----
->     "M"
-7c7
-<        classSpec 
----
->             sig_class
-9c9,23
-<            classSpecification 
----
->               class_description ([4,47+12]..[6,123+9])
->                 pci_virt = Concrete
->                 pci_params =
->                     (
+11a12
 >                       "a"
->                     )
->                 pci_name = "c"
->                 pci_expr =
->                   class_type ([4,47+21]..[6,123+9])
->                     Pcty_fun ""
->                       a
->                     class_type ([4,47+27]..[6,123+9])
->                       Pcty_signature
->                       class_signature
->                           Ptyp_any
-11c25,31
-<                classSpec 
+22,24c23
+<        		 fieldSpec3 
+<        		 (
+<        		     map
 ---
 >                           Pctf_meth "map" Public ([5,81+8]..[5,81+41])
->                               poly
->                                 arrow
->                                   arrow
->                                     a
->                                     b
->                                    M.c
-13,15c33
-<                    <"a",[]>
-<                    c
-<                    <[<[],"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>],<[],[<[],[],"map","polytype1"("arrow1"("arrow1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"(["extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>>
----
->                                       b
-26,27c44
-<         x
-<         a
+37d35
+<     )
+44,45c42
+<       x
+<       a
 ---
 >                     "a"
-31,39c48,50
-<                     class_structure
-<                     (
-<                        method2 
-<                        (
-<                            map
-<                            poly
-<                            ' b
-<                            arrow
-<                            arrow
----
+48a46,49
 >                   fun
 >                   label=""
 >                                     x
-41,42c52
-<                            b
-<                             "extendedModulePath1"([],"M")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].c
----
->                     class_structure
-44,45c54
-<                               b
-<                             )
----
->                         method map
-58a68,76
->                               poly
->                                'b
->                                 arrow
->                                   arrow
->                                     a
->                                     b
->                                    M.c
->                                   (
->                                       b
+>                     a

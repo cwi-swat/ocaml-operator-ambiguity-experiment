@@ -1,12 +1,12 @@
 (
-  modRec1 
+  rec module
   (
-      A
-      signature
-      (
-       type
-       (  						
-          t
+    "A"
+    signature
+    (
+     type
+     (  						
+        t
           type
           params=
           (
@@ -15,16 +15,16 @@
           (
           )
           kind =
-         (
-          "extendedModulePath1"([],"B")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-         )
-       )
-      )
-      struct
-      (
-      type
-      (  						
-         t
+          B.t
+          (
+          )
+     )
+    )
+    struct
+    (
+    type
+    (  						
+       t
          type
          params=
          (
@@ -33,11 +33,47 @@
          (
          )
          kind =
-        (
-         "extendedModulePath1"([],"B")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-        )
-      )
-      )
-      <"B","sig"([<"typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"A")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"struct2"(["typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"A")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],[])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+         B.t
+         (
+         )
+    )
+    )
+    "B"
+    signature
+    (
+     type
+     (  						
+        t
+          type
+          params=
+          (
+          )
+          cstrs =
+          (
+          )
+          kind =
+          A.t
+          (
+          )
+     )
+    )
+    struct
+    (
+    type
+    (  						
+       t
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+         A.t
+         (
+         )
+    )
+    )
   )
 )

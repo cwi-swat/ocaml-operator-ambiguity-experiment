@@ -13,40 +13,40 @@
      (  						
          							    	 
         t
-        type
-        params=
-        (
-        
-         
-         a
-        										 
-        )
-        cstrs =
-        (
-        )
-        kind =
-        
-        
-        (
-        								  
-        Succ
-        (
-        									
-         
-          t
+          type
+          params=
           (
-            a
-          )
           
-             									
-        								     
-        )
-        								    
-        								  
-        )
-        								  
-        														  
-        														 
+           
+           a
+          										 
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          
+          (
+          								  
+          Succ
+          (
+          									
+           
+            t
+            (
+              a
+            )
+            
+               									
+          								     
+          )
+          								    
+          								  
+          )
+          								  
+          														  
+          														 
        											   
      								        
      )
@@ -58,29 +58,26 @@
    functor X
    (
     MyT
-    functor []
-    (
-      
-      X
-    )
-    												
+    X
    )
        										    
    							  
-   modRec1 
+   rec module
    (
-       MyList
-       MyT
-       MyMap
-       (
-       MyList
-       )
-       								   
-       
+     "MyList"
+     MyT
+     MyMap
+     (
+     MyList
+     )
+     								   
+   									   
    )
+   									   
    							  
    )
    							  
+   
   										    
                                      
   module  PR_4450_2
@@ -95,59 +92,59 @@
      (  						
          							    	 
         wrap
-        type
-        params=
-        (
-        
-         
-         a
-        										 
-        )
-        cstrs =
-        (
-        )
-        kind =
-        
-        
-        (
-        								  
-        My
-        (
-        									
-         
-          t
+          type
+          params=
           (
-            a
-          )
           
-             									
-        								     
-        )
-        								    
-        								  
-        )
-        								  
-        														  
-        														 
+           
+           a
+          										 
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          
+          (
+          								  
+          My
+          (
+          									
+           
+            t
+            (
+              a
+            )
+            
+               									
+          								     
+          )
+          								    
+          								  
+          )
+          								  
+          														  
+          														 
        											   
      								         
         t
-        type
-        params=
-        (
-        
-         
-         a
-        										 
-        )
-        cstrs =
-        (
-        )
-        kind =
-        <[<"map","polytype2"(["b"],"arrow1"("arrow1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"wrap")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>
-        
-        														  
-        														 
+          type
+          params=
+          (
+          
+           
+           a
+          										 
+          )
+          cstrs =
+          (
+          )
+          kind =
+          <[<"map","polytype2"(["b"],"arrow1"("typeExprBrackets"("arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"wrap")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>
+          
+          														  
+          														 
        											   
      								        
      )
@@ -181,99 +178,90 @@
    functor X
    (
     MyT
-    functor []
+    struct
     (
-      
-      struct
-      (
-      							  
-      include
-      (
-        X
-      )
-      							  
-      class
-      (
-          								   
-        params = 
-        (
-            	
-        l
-            	
-        )
-        class name = c
-        class expr = 
-                    class_structure
-                    (
-                        								
-                       method2 
-                       (
-                           
-                           map
-                           poly
-                           ' b
-                              									
-                           arrow
-                           arrow
-                           a
-                           b
-                              								   
-                           
-                            wrap
-                            (
-                              b
-                            )
-                            
-                               									
-                              								   
-                              									
-                           (
-                            
-                            case
-                            (
-                            f
-                            
-                            
-                             My
-                             create
-                             (
-                                 List.map
-                                 (
-                                     f
-                                     l
-                                 )
-                             )
-                                								 
-                            )
-                            													 
-                           )
-                              						  
-                       )
-                        								
-                    )
-                        								
-            	
-          								   
-      )
-          								   
-      							  
-      )
-      							  
+    							  
+    include
+    (
+      X
     )
-    												
+    							  
+    class
+    (
+        								   
+      params = 
+      (
+          	
+      l
+          	
+      )
+      class name = c
+      class expr = 
+                  class_structure
+                  (
+                      								
+                     method map
+                     	(
+                     	 
+                     	 case
+                     	 (
+                     	 f
+                     	 
+                     	 
+                     	 My
+                     	    create
+                     	    (
+                     	        List.map
+                     	        (
+                     	            f
+                     	            l
+                     	        )
+                     	    )
+                     	     								 
+                     	 )
+                     	 													 
+                     	)
+                     	   						  
+                     	poly
+                     	                      				 'b 
+                     	 arrow
+                     	 arrow
+                     	 a
+                     	 b
+                     	    								   
+                     	 
+                     	  wrap
+                     	  (
+                     	    b
+                     	  )
+                     	  
+                     	     									
+                     	    								   
+                     	                                    
+                         												 
+                      								
+                  )
+                      								
+          	
+        								   
+    )
+        								   
+    							  
+    )
+    							  
    )
        										    
    							  
-   modRec1 
+   rec module
    (
-       MyList
-       signature
-       (
-       		    				
-        type
-        (  						
-            							    	 
-           wrap
+     "MyList"
+     signature
+     (
+     		    				
+      type
+      (  						
+          							    	 
+         wrap
            type
            params=
            (
@@ -308,9 +296,9 @@
            								  
            														  
            														 
-          											   
-        								         
-           t
+        											   
+      								         
+         t
            type
            params=
            (
@@ -323,73 +311,75 @@
            (
            )
            kind =
-           <[<"map","polytype2"(["b"],"arrow1"("arrow1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"wrap")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>],[]>
+           <[<"map","polytype2"(["b"],"arrow1"("typeExprBrackets"("arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"wrap")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
            
            														  
            														 
-          											   
-        								        
-        )
-       		    				
-        sig_value create
-        value_description
-        arrow
-        
-         list
-         (
-           a
-         )
-         
-            									
-        
-         t
-         (
-           a
-         )
-         
-            									
-           								   
-        (
-        )
-            								
-       		    				
-       )
-       struct
+        											   
+      								        
+      )
+     		    				
+      sig_value create
+      value_description
+      arrow
+      
+       list
        (
-       							  
-       include
-       (
-         MyMap
-         (
-         MyList
-         )
-         								   
+         a
        )
-       							  
-       let
-       (
-        
-         create
-        (
-         case
-             (
-         	  l
-              new c
-              (
-                  l
-              )
-             )
-        )
-            		    
-       )
-       							  
-       )
-       							  
        
+          									
+      
+       t
+       (
+         a
+       )
+       
+          									
+         								   
+      (
+      )
+          								
+     		    				
+     )
+     struct
+     (
+     							  
+     include
+     (
+       MyMap
+       (
+       MyList
+       )
+       								   
+     )
+     							  
+     let
+     (
+      
+       create
+      (
+       case
+           (
+       	  l
+            new c
+            (
+                l
+            )
+           )
+      )
+          		    
+     )
+     							  
+     )
+     							  
+   									   
    )
+   									   
    							  
    )
    							  
+   
   										    
                                      
 )

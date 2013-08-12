@@ -5,45 +5,43 @@
    type
    (  						
       t
-      type
-      params=
-      (
-       a
-      )
-      cstrs =
-      (
-      )
-      kind =
-     (
-      a
-     )
+        type
+        params=
+        (
+         a
+        )
+        cstrs =
+        (
+        )
+        kind =
+        a
    )
    type
    (  						
       u
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-     (
-      int
-     )
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        int
+        (
+        )
       v
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-     (
-      bool
-     )
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        bool
+        (
+        )
    )
    let
    (
@@ -68,6 +66,77 @@
     )
    )
    )
+   signature
+   (
+    type
+    (  						
+       t
+         type
+         params=
+         (
+          a
+         )
+         cstrs =
+         (
+         )
+         kind =
+    )
+    type
+    (  						
+       u
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+          t
+          (
+            u
+            (
+            )
+          )
+       v
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+          t
+          (
+            v
+            (
+            )
+          )
+    )
+    sig_value f
+    value_description
+    arrow
+    int
+    (
+    )
+    u
+    (
+    )
+    (
+    )
+    sig_value g
+    value_description
+    arrow
+    v
+    (
+    )
+    bool
+    (
+    )
+    (
+    )
+   )
   let
   (
     h
@@ -76,13 +145,21 @@
         (
     	  x
     	  int
-         M.g
-         (
-             M.f
-             (
-                 x
-             )
-         )
+    	  (
+    	  )
+   	    (
+         	 M.g
+         	 (
+         	     M.f
+         	     (
+         	         x
+         	     )
+         	 )
+            :
+   		 bool
+   		 (
+   		 )
+   		)
         )
    )
   )

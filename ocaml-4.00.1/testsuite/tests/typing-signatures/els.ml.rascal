@@ -9,19 +9,19 @@
     (  						
         							    	 
        value
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -30,19 +30,19 @@
     (  						
         							    	 
        state
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -51,19 +51,19 @@
     (  						
         							    	 
        usert
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -84,7 +84,7 @@
     value_description
     arrow
     
-    "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].state
+    V.state
     (
     )
     								  
@@ -96,7 +96,7 @@
     								  
     arrow
     
-    "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
+    V.value
     (
     )
     								  
@@ -119,22 +119,22 @@
    signature
    (
    		    				
-    include
+    includeSpec 
     (
-      CORE0
+        CORE0
     )
    		    				
     sig_value apply
     value_description
     arrow
     
-    "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
+    V.value
     (
     )
     								  
     arrow
     
-    "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].state
+    V.state
     (
     )
     								  
@@ -143,7 +143,7 @@
      list
      (
        
-       "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
+       V.value
        (
        )
        								  
@@ -151,7 +151,7 @@
      
         									
     
-    "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
+    V.value
     (
     )
     								  
@@ -178,19 +178,19 @@
     (  						
         							    	 
        chunk
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -199,19 +199,19 @@
     (  						
         							    	 
        program
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -225,7 +225,7 @@
     )
     								  
     
-    "extendedModulePath1"([],"Value")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
+    Value.value
     (
     )
     								  
@@ -250,16 +250,15 @@
         								 
     bracketModType1 
     (
-        modTypeWith 
-        (
-            AST
-            modeConsModule2 
-            (
-                Value
-                Value
-            )
-            
-        )
+        
+         AST
+         modeConsModule2 
+         (
+             Value
+             Value
+         )
+            								    
+            								    
     )	
         								 
    		    				
@@ -267,23 +266,23 @@
     (  						
         							    	 
        state
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       "extendedModulePath1"([],"Value")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].state
-       (
-       )
-       								  
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         Value.state
+         (
+         )
+         								  
+         
+         														  
+         														 
       											   
     								        
     )
@@ -292,23 +291,23 @@
     (  						
         							    	 
        value
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       "extendedModulePath1"([],"Value")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
-       (
-       )
-       								  
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         Value.value
+         (
+         )
+         								  
+         
+         														  
+         														 
       											   
     								        
     )
@@ -328,7 +327,7 @@
     value_description
     arrow
     
-    "extendedModulePath1"([],"Ast")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].program
+    Ast.program
     (
     )
     								  
@@ -342,18 +341,17 @@
     )
         								
    		    				
-    include
+    includeSpec 
     (
-      modTypeWith 
-      (
-          CORE0
-          modeConsModule2 
-          (
-              V
-              Value
-          )
-          
-      )
+        
+         CORE0
+         modeConsModule2 
+         (
+             V
+             Value
+         )
+            								    
+            								    
     )
    		    				
    )    								
@@ -367,19 +365,19 @@
     (  						
         							    	 
        chunk
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -409,28 +407,34 @@
    signature
    (
    		    				
-    include
+    includeSpec 
     (
-      EVALUATOR
+        EVALUATOR
     )
    		    				
     module Parser
         								 
-    modTypeWith 
-    (
-        PARSER
-        modConsType1 
-        (
-            
-            chunk
-            
-            "extendedModulePath1"([],"Ast")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].chunk
-            (
-            )
-            								  
-        )
-        
-    )	
+    
+     PARSER
+      
+      chunk
+      type
+      params=
+      (
+      )
+      cstrs =
+      (
+      )
+      kind =
+      
+       
+       Ast.chunk
+       (
+       )
+       								  
+        										 
+        								    
+        								    	
         								 
    		    				
     sig_value dostring
@@ -493,19 +497,19 @@
     (  						
         							    	 
        t
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -564,19 +568,19 @@
     (  						
         							    	 
        combined
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -585,19 +589,19 @@
     (  						
         							    	 
        t
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -654,19 +658,19 @@
      (  						
          							    	 
         t
-        type
-        params=
-        (
-        
-        )
-        cstrs =
-        (
-        )
-        kind =
-        
-        
-        														  
-        														 
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          
+          														  
+          														 
        											   
      								        
      )
@@ -676,34 +680,32 @@
    		    				
     module TV1
         								 
-    modTypeWith 
-    (
-        TYPEVIEW
-        modConsType2 
-        (
-            
-            combined
-            
-            "extendedModulePath1"([],"T")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-        )
-        
-    )	
+    
+     TYPEVIEW
+     modConsType2 
+     (
+         
+         combined
+         
+         T.t
+     )
+        								    
+        								    	
         								 
    		    				
     module TV2
         								 
-    modTypeWith 
-    (
-        TYPEVIEW
-        modConsType2 
-        (
-            
-            combined
-            
-            "extendedModulePath1"([],"T")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-        )
-        
-    )	
+    
+     TYPEVIEW
+     modConsType2 
+     (
+         
+         combined
+         
+         T.t
+     )
+        								    
+        								    	
         								 
    		    				
    )    								
@@ -718,18 +720,17 @@
     USERTYPE	
         								 
    		    				
-    include
+    includeSpec 
     (
-      modTypeWith 
-      (
-          COMBINED_COMMON
-          modeConsModule2 
-          (
-              T
-              T
-          )
-          
-      )
+        
+         COMBINED_COMMON
+         modeConsModule2 
+         (
+             T
+             T
+         )
+            								    
+            								    
     )
    		    				
    )    								
@@ -743,19 +744,19 @@
     (  						
         							    	 
        state
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -785,50 +786,52 @@
   functor X
   (
    TYPEVIEW
-   functor []
+   struct
    (
-     
-     struct
-     (
-     							  
-     module type F
-      functor C
-      (
-        modTypeWith 
+   							  
+   module type F
+    functor C
+    (
+      
+       CORE
+        
+        V.usert
+        type
+        params=
         (
-            CORE
-            modConsType1 
-            (
-                
-                "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].usert
-                
-                "extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].combined
-                (
-                )
-                								  
-            )
-            
         )
-        modTypeWith 
+        cstrs =
         (
-            BARECODE
-            modConsType2 
-            (
-                
-                state
-                
-                "extendedModulePath1"(["extendedModulePath1"([],"C")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].state
-            )
-            
         )
-      )
-      												    								
-         							   
-     							  
-     )
-     							  
+        kind =
+        
+         
+         X.combined
+         (
+         )
+         								  
+          										 
+          								    
+          								    
+      
+       BARECODE
+       modConsType2 
+       (
+           
+           state
+           
+           
+           		    								  
+            "extendedModulePath1"([],"C").V.state
+       )
+          								    
+          								    
+    )
+    												    								
+       							   
+   							  
    )
-   												
+   							  
   )
       										    
                                      
@@ -840,25 +843,26 @@
    (  						
        							    	 
       t
-      type
-      params=
-      (
-      
-      )
-      cstrs =
-      (
-      )
-      kind =
-      
-      
-      														  
-      														 
+        type
+        params=
+        (
+        
+        )
+        cstrs =
+        (
+        )
+        kind =
+        
+        
+        														  
+        														 
      											   
    								        
    )
    							  
    )
    							  
+   
   										    
                                      
   module type WEAPON_LIB
@@ -869,65 +873,77 @@
     (  						
         							    	 
        t
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       "extendedModulePath1"([],"Weapon")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-       (
-       )
-       								  
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         Weapon.t
+         (
+         )
+         								  
+         
+         														  
+         														 
       											   
     								        
     )
    		    				
     module T
         								 
-    modTypeWith 
-    (
-        USERTYPE
-        modConsType1 
-        (
-            
-            t
-            
-            t
-            (
-            )
-            								  
-        )
-        
-    )	
+    
+     USERTYPE
+      
+      t
+      type
+      params=
+      (
+      )
+      cstrs =
+      (
+      )
+      kind =
+      
+       
+       t
+       (
+       )
+       								  
+        										 
+        								    
+        								    	
         								 
    		    				
     module Make
         								 
     functor TV
     (
-      modTypeWith 
-      (
-          TYPEVIEW
-          modConsType1 
-          (
-              
-              t
-              
-              t
-              (
-              )
-              								  
-          )
-          
-      )
+      
+       TYPEVIEW
+        
+        t
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        
+         
+         t
+         (
+         )
+         								  
+          										 
+          								    
+          								    
       extendedModulePath2 
       (
           USERCODE

@@ -2,18 +2,16 @@
   type
   (  						
      t
-     type
-     params=
-     (
-      par
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     par
-    )
+       type
+       params=
+       (
+        par
+       )
+       cstrs =
+       (
+       )
+       kind =
+       par
   )
   module  M
    struct
@@ -21,11 +19,23 @@
    let
    (
      x
-     Obj.magic
      (
-         ()
-     ) 
+      Obj.magic
+      (
+          ()
+      ) 
+      :
+      <[<"m","polytype2"(["a"],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+     )
    )
+   )
+   signature
+   (
+    sig_value x
+    value_description
+    <[<"m","polytype2"(["a"],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+    (
+    )
    )
   let
   (
@@ -48,7 +58,15 @@
                 class_structure
                 (
                    method alias
-                         ident
+                   	ident
+                   	poly
+                   	                      				 'a 
+                   	 arrow
+                   	  t
+                   	  (
+                   	    a
+                   	  )
+                   	 a
                 )
   )
 )

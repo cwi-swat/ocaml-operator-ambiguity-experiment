@@ -1,0 +1,86 @@
+(
+  module M
+      struct
+      (
+        class
+        (
+            params =
+                (
+                )
+            class name = c
+            class expr =
+                fun
+                label=""
+                                x
+                  class_structure
+                    (
+                      x
+                        x
+                    )
+        )
+      )
+      signature
+      (
+          sig_class
+          (
+            class_description
+              params =
+                  (
+                  )
+              name = c
+              expr =
+                class_type
+                  fun 
+                    a
+                  class_type
+                    signature
+                    class_signature
+                      (
+                        Pctf_val "x" Immutable Concrete ([1,0+38]..[1,0+48])
+                            b
+                      )
+          )
+      )
+  class
+  (
+      params =
+          (
+          )
+      class name = c
+      class expr =
+          fun
+          label=""
+                    x
+             int
+            (
+            )
+            class_structure
+              (
+                inherit
+                    Pcl_apply
+                      constr M.c
+                      (
+                      )
+                    (
+                        x
+                    )
+                method x
+                  x
+                      poly
+                         bool
+                        (
+                        )
+              )
+  )
+  let
+  (
+    r
+      send x
+      (
+        new c
+        (
+            2
+        )
+      )
+  )
+)

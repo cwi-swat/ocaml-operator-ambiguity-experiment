@@ -9,33 +9,20 @@
      class expr = 
                  class_structure
                  (
-                    classValue 
-                    (
-                        <>
-                        x
-                        x_init
-                    )
-                    method1 
-                    (
-                        <>
-                        get_x
-                        x
-                    )
-                    method1 
-                    (
-                        <>
-                        move
-                        d
-                        Array.set
-                        (
-                         x
-                         +
-                         (
-                             x
-                             d
-                         )
-                        )
-                    )
+                     x
+                     x_init
+                    method get_x
+                      x
+                    method move
+                      Array.set
+                      (
+                       x
+                       +
+                       (
+                           x
+                           d
+                       )
+                      )
                  )
    )
    let
@@ -80,10 +67,10 @@
     )
   ;
     (
-        					 send get_x
-          					 (
-          					  p
-          					 )
+     send get_x
+     (
+      p
+     )
     	send get_x
     	(
     	 q
@@ -104,30 +91,18 @@
      class expr = 
                  class_structure
                  (
-                    inheritance 
-                    (
-                        <>
-                        classArgs 
-                        (
-                            classPath 
+                    inherit
+                     constr classArgs 
                             (
                                 point
+                                x
                             )
-                            x
-                        )
-                    )
-                    classValue 
-                    (
-                        <>
-                        c
-                        c
-                    )
-                    method1 
-                    (
-                        <>
-                        color
-                        c
-                    )
+                     (
+                     )
+                     c
+                     c
+                    method color
+                      c
                  )
    )
    let
@@ -140,10 +115,10 @@
      ) 
    )
   (
-      					 send get_x
-        					 (
-        					  p'
-        					 )
+   send get_x
+   (
+    p'
+   )
   	send color
   	(
   	 p'
@@ -211,29 +186,16 @@
      class expr = 
                  class_structure
                  (
-                    classValue 
-                    (
-                        <>
-                        x
-                        x_init
-                    )
-                    method1 
-                    (
-                        <>
-                        get
-                        x
-                    )
-                    method1 
-                    (
-                        <>
-                        set
-                        y
-                        Array.set
-                        (
-                         x
-                         y
-                        )
-                    )
+                     x
+                     x_init
+                    method get
+                      x
+                    method set
+                      Array.set
+                      (
+                       x
+                       y
+                      )
                  )
    )
    class
@@ -249,29 +211,16 @@
      class expr = 
                  class_structure
                  (
-                    classValue 
-                    (
-                        <>
-                        x
-                        x_init
-                    )
-                    method1 
-                    (
-                        <>
-                        get
-                        x
-                    )
-                    method1 
-                    (
-                        <>
-                        set
-                        y
-                        Array.set
-                        (
-                         x
-                         y
-                        )
-                    )
+                     x
+                     x_init
+                    method get
+                      x
+                    method set
+                      Array.set
+                      (
+                       x
+                       y
+                      )
                  )
    )
    class
@@ -284,33 +233,20 @@
      class expr = 
                  class_structure
                  (
-                    classValue 
-                    (
-                        <>
-                        x
-                        (
-                        x_init
-                        :
-                        a
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        get
-                        x
-                    )
-                    method1 
-                    (
-                        <>
-                        set
-                        y
-                        Array.set
-                        (
-                         x
-                         y
-                        )
-                    )
+                     x
+                     (
+                     x_init
+                     :
+                     a
+                     )
+                    method get
+                      x
+                    method set
+                      Array.set
+                      (
+                       x
+                       y
+                      )
                  )
    )
   let
@@ -350,48 +286,31 @@
      class expr = 
                  class_structure
                  (
-                    classValue 
-                    (
-                        <>
-                        center
-                        c
-                    )
-                    method1 
-                    (
-                        <>
-                        center
-                        center
-                    )
-                    method1 
-                    (
-                        <>
-                        set_center
-                        c
-                        Array.set
-                        (
-                         center
-                         c
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        move
-                        (
-                        send move
-                        (
-                         center
-                        )
-                        :
-                        arrow
-                        int
-                        (
-                        )
-                        unit
-                        (
-                        )
-                        )
-                    )
+                     center
+                     c
+                    method center
+                      center
+                    method set_center
+                      Array.set
+                      (
+                       center
+                       c
+                      )
+                    method move
+                      (
+                      send move
+                      (
+                       center
+                      )
+                      :
+                      arrow
+                      int
+                      (
+                      )
+                      unit
+                      (
+                      )
+                      )
                  )
    )
    class
@@ -410,38 +329,21 @@
                         a
                         point
                     )
-                    classValue 
-                    (
-                        <>
-                        center
-                        c
-                    )
-                    method1 
-                    (
-                        <>
-                        center
-                        center
-                    )
-                    method1 
-                    (
-                        <>
-                        set_center
-                        c
-                        Array.set
-                        (
-                         center
-                         c
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        move
-                        send move
-                        (
-                         center
-                        )
-                    )
+                     center
+                     c
+                    method center
+                      center
+                    method set_center
+                      Array.set
+                      (
+                       center
+                       c
+                      )
+                    method move
+                      send move
+                      (
+                       center
+                      )
                  )
    )
    let
@@ -451,15 +353,15 @@
      	c'
      )
      (
-         					 new circle
-           					 (
-           					     p
-           					 )
+      new circle
+      (
+          p
+      )
      	new circle
      	(
      	    p'
      	)
-     )
+     ) 
    )
    class
    (
@@ -476,24 +378,19 @@
                         a
                         color_point
                     )
-                    inheritance 
-                    (
-                        <>
-                        classArgs 
-                        (
-                            <"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[],"classPath"([],"circle")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                            c
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        color
-                        send color
-                        (
-                         center
-                        )
-                    )
+                    inherit
+                     constr classArgs 
+                            (
+                                <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"circle")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                                c
+                            )
+                     (
+                     )
+                    method color
+                      send color
+                      (
+                       center
+                      )
                  )
    )
    let
@@ -564,30 +461,22 @@
      class expr = 
                  class_structure
                  (
-                    inheritance 
-                    (
-                        <>
-                        classArgs 
-                        (
-                            classPath 
+                    inherit
+                     constr classArgs 
                             (
                                 point
+                                y
                             )
-                            y
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        print
-                        print_int
-                        (
-                            send get_x
-                            (
-                             s
-                            )
-                        )
-                    )
+                     (
+                     )
+                    method print
+                      print_int
+                      (
+                          send get_x
+                          (
+                           s
+                          )
+                      )
                  )
    )
    let
@@ -613,76 +502,63 @@
      class expr = 
                  class_structure
                  (
-                    inheritance 
-                    (
-                        <>
-                        classArgs 
-                        (
-                            classPath 
+                    inherit
+                     constr classArgs 
                             (
                                 color_point
+                                y
+                                c
                             )
-                            y
-                            c
-                        )
-                    )
-                    inheritance 
-                    (
-                        <>
-                        classArgs 
-                        (
-                            classPath 
+                     (
+                     )
+                    inherit
+                     constr classArgs 
                             (
                                 printable_point
+                                y
                             )
-                            y
+                     (
+                     )
+                    method print
+                      sequence
+                      (
+                        print_string
+                        (
+                            "("
                         )
-                        super
-                    )
-                    method1 
-                    (
-                        <>
-                        print
+                      ;
                         sequence
                         (
-                          print_string
+                          send print
                           (
-                              "("
+                           super
                           )
                         ;
                           sequence
                           (
-                            send print
+                            print_string
                             (
-                             super
+                                ", "
                             )
                           ;
                             sequence
                             (
                               print_string
                               (
-                                  ", "
+                                  send color
+                                  (
+                                   self
+                                  )
                               )
                             ;
-                              sequence
+                              print_string
                               (
-                                print_string
-                                (
-                                    send color
-                                    (
-                                     self
-                                    )
-                                )
-                              ;
-                                print_string
-                                (
-                                    ")"
-                                )
+                                  ")"
                               )
                             )
                           )
                         )
-                    )
+                      )
                  )
    )
    let
@@ -708,33 +584,20 @@
      class expr = 
                  class_structure
                  (
-                    classValue 
-                    (
-                        <>
-                        x
-                        y
-                    )
-                    method1 
-                    (
-                        <>
-                        get_x
-                        x
-                    )
-                    method1 
-                    (
-                        <>
-                        move
-                        d
-                        brackets4 
-                        (
-                            x
-                            +
-                            (
-                                x
-                                d
-                            )
-                        )
-                    )
+                     x
+                     y
+                    method get_x
+                      x
+                    method move
+                      brackets4 
+                      (
+                          x
+                          +
+                          (
+                              x
+                              d
+                          )
+                      )
                  )
    )
    let
@@ -786,109 +649,42 @@
      class expr = 
                  class_structure
                  (
-                    method3 
-                    (
-                        null
-                        poly
-                        bool
+                    method null
+                       poly
+                       bool
+                       (
+                       )
+                    method hd
+                       poly
+                       a
+                    method tl
+                       poly
+                        lst
                         (
+                          a
                         )
-                    )
-                    method3 
-                    (
-                        hd
-                        poly
-                        a
-                    )
-                    method3 
-                    (
-                        tl
-                        poly
-                         lst
-                         (
-                           a
-                         )
-                    )
-                    method1 
-                    (
-                        <>
-                        map
-                        f
+                    method map
+                      (
+                      ifthenelse
+                      (
+                       if
+                       (
+                        send null
                         (
-                        ifthenelse
-                        (
-                         if
-                         (
-                          send null
-                          (
-                           self
-                          )
-                         )
-                         then
-                         (
-                          new nil
-                          (
-                              ()
-                          )
-                         )
-                         else
-                         (
-                          new cons
-                          (
-                              f
-                              (
-                                  send hd
-                                  (
-                                   self
-                                  )
-                              )
-                              send map
-                              (
-                               send tl
-                               (
-                                self
-                               )
-                              )
-                              (
-                                  f
-                              )
-                          )
-                         ) 
+                         self
                         )
-                        :
-                         lst
-                         (
-                           a
-                         )
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        iter
-                        f
-                        arrow
-                        a
-                        unit
+                       )
+                       then
+                       (
+                        new nil
                         (
+                            ()
                         )
-                        ifthenelse
+                       )
+                       else
+                       (
+                        new cons
                         (
-                         if
-                         (
-                          send null
-                          (
-                           self
-                          )
-                         )
-                         then
-                         (
-                          ()
-                         )
-                         else
-                         (
-                          sequence
-                          (
                             f
                             (
                                 send hd
@@ -896,8 +692,7 @@
                                  self
                                 )
                             )
-                          ;
-                            send iter
+                            send map
                             (
                              send tl
                              (
@@ -907,69 +702,103 @@
                             (
                                 f
                             )
-                          )
-                         ) 
                         )
-                    )
-                    method1 
-                    (
-                        <>
-                        print
-                        f
-                        arrow
-                        a
-                        unit
+                       ) 
+                      )
+                      :
+                       lst
+                       (
+                         a
+                       )
+                      )
+                    method iter
+                      ifthenelse
+                      (
+                       if
+                       (
+                        send null
                         (
+                         self
                         )
+                       )
+                       then
+                       (
+                        ()
+                       )
+                       else
+                       (
                         sequence
                         (
-                          print_string
+                          f
                           (
-                              "("
+                              send hd
+                              (
+                               self
+                              )
+                          )
+                        ;
+                          send iter
+                          (
+                           send tl
+                           (
+                            self
+                           )
+                          )
+                          (
+                              f
+                          )
+                        )
+                       ) 
+                      )
+                    method print
+                      sequence
+                      (
+                        print_string
+                        (
+                            "("
+                        )
+                      ;
+                        sequence
+                        (
+                          send iter
+                          (
+                           self
+                          )
+                          (
+                              (
+                               case
+                               (
+                               x
+                               sequence
+                               (
+                                 f
+                                 (
+                                     x
+                                 )
+                               ;
+                                 print_string
+                                 (
+                                     "::"
+                                 )
+                               )
+                               )
+                              )
                           )
                         ;
                           sequence
                           (
-                            send iter
+                            print_string
                             (
-                             self
-                            )
-                            (
-                                (
-                                 case
-                                 (
-                                 x
-                                 sequence
-                                 (
-                                   f
-                                   (
-                                       x
-                                   )
-                                 ;
-                                   print_string
-                                   (
-                                       "::"
-                                   )
-                                 )
-                                 )
-                                )
+                                "[]"
                             )
                           ;
-                            sequence
+                            print_string
                             (
-                              print_string
-                              (
-                                  "[]"
-                              )
-                            ;
-                              print_string
-                              (
-                                  ")"
-                              )
+                                ")"
                             )
                           )
                         )
-                    )
+                      )
                  )
      params = 
      (
@@ -979,39 +808,26 @@
      class expr = 
                  class_structure
                  (
-                    inheritance 
-                    (
-                        <>
-                        classArgs 
-                        (
-                            <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                            ()
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        null
-                        true
-                    )
-                    method1 
-                    (
-                        <>
-                        hd
-                        failwith
-                        (
-                            "hd"
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        tl
-                        failwith
-                        (
-                            "tl"
-                        )
-                    )
+                    inherit
+                     constr classArgs 
+                            (
+                                <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                                ()
+                            )
+                     (
+                     )
+                    method null
+                      true
+                    method hd
+                      failwith
+                      (
+                          "hd"
+                      )
+                    method tl
+                      failwith
+                      (
+                          "tl"
+                      )
                  )
      params = 
      (
@@ -1022,45 +838,24 @@
      class expr = 
                  class_structure
                  (
-                    inheritance 
-                    (
-                        <>
-                        classArgs 
-                        (
-                            <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-                            ()
-                        )
-                    )
-                    classValue 
-                    (
-                        <>
-                        h
-                        h
-                    )
-                    classValue 
-                    (
-                        <>
-                        t
-                        t
-                    )
-                    method1 
-                    (
-                        <>
-                        null
-                        false
-                    )
-                    method1 
-                    (
-                        <>
-                        hd
-                        h
-                    )
-                    method1 
-                    (
-                        <>
-                        tl
-                        t
-                    )
+                    inherit
+                     constr classArgs 
+                            (
+                                <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                                ()
+                            )
+                     (
+                     )
+                     h
+                     h
+                     t
+                     t
+                    method null
+                      false
+                    method hd
+                      h
+                    method tl
+                      t
                  )
    )
    let
@@ -1116,7 +911,7 @@
   )
    let
    (
-     map_list
+      map_list
     (
      case
          (
@@ -1217,16 +1012,13 @@
      class expr = 
                  class_structure
                  (
-                    method3 
-                    (
-                        leq
-                        poly
-                        arrow
-                        a
-                        bool
-                        (
-                        )
-                    )
+                    method leq
+                       poly
+                       arrow
+                       a
+                       bool
+                       (
+                       )
                  )
    )
    class
@@ -1242,44 +1034,27 @@
      class expr = 
                  class_structure
                  (
-                    inheritance 
-                    (
-                        <>
-                        classArgs 
-                        (
-                            classPath 
+                    inherit
+                     constr classArgs 
                             (
                                 comparable
+                                ()
                             )
-                            ()
-                        )
-                    )
-                    classValue 
-                    (
-                        <>
-                        x
-                        x
-                    )
-                    method1 
-                    (
-                        <>
-                        x
-                        x
-                    )
-                    method1 
-                    (
-                        <>
-                        leq
-                        p
-                        <=
-                        (
-                            x
-                            send x
-                            (
-                             p
-                            )
-                        )
-                    )
+                     (
+                     )
+                     x
+                     x
+                    method x
+                      x
+                    method leq
+                      <=
+                      (
+                          x
+                          send x
+                          (
+                           p
+                          )
+                      )
                  )
    )
    class
@@ -1292,35 +1067,22 @@
      class expr = 
                  class_structure
                  (
-                    inheritance 
-                    (
-                        <>
-                        classArgs 
-                        (
-                            classPath 
+                    inherit
+                     constr classArgs 
                             (
                                 int_comparable
+                                xi
                             )
-                            xi
-                        )
-                    )
-                    classValue 
-                    (
-                        <>
-                        x'
-                        xi
-                    )
-                    method1 
-                    (
-                        <>
-                        set_x
-                        y
-                        Array.set
-                        (
-                         x'
-                         y
-                        )
-                    )
+                     (
+                     )
+                     x'
+                     xi
+                    method set_x
+                      Array.set
+                      (
+                       x'
+                       y
+                      )
                  )
    )
    class
@@ -1338,103 +1100,90 @@
                         a
                         comparable
                     )
-                    classValue 
-                    (
-                        <>
-                        l
-                        (
-                        []
-                        :
-                         list
+                     l
+                     (
+                     []
+                     :
+                      list
+                      (
+                        a
+                      )
+                     )
+                    method add
+                      let
+                      (
+                       (
+                         insert
                          (
-                           a
-                         )
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        add
-                        x
-                        let
-                        (
-                         (
-                           insert
-                           (
+                          case
+                          (
+                            []
+                            ::
+                             (
+                             x
+                             []
+                             ) 
+                          ) 
                             case
                             (
-                              []
-                              ::
+                             alias l'
+                             (
+                               ::
                                (
-                               x
-                               []
-                               ) 
-                            ) 
-                              case
-                              (
-                               alias l'
-                               (
-                                 ::
-                                 (
-                                     a
-                                     l
-                                 )
+                                   a
+                                   l
                                )
-                               ifthenelse
+                             )
+                             ifthenelse
+                             (
+                              if
+                              (
+                               send leq
                                (
-                                if
-                                (
-                                 send leq
-                                 (
-                                  a
-                                 )
-                                 (
-                                     x
-                                 )
-                                )
-                                then
-                                (
-                                 ::
-                                 (
-                                     a
-                                     insert
-                                     (
-                                         l
-                                     )
-                                 )
-                                )
-                                else
-                                (
-                                 ::
-                                 (
-                                     x
-                                     l'
-                                 )
-                                ) 
+                                a
+                               )
+                               (
+                                   x
                                )
                               )
-                           )
+                              then
+                              (
+                               ::
+                               (
+                                   a
+                                   insert
+                                   (
+                                       l
+                                   )
+                               )
+                              )
+                              else
+                              (
+                               ::
+                               (
+                                   x
+                                   l'
+                               )
+                              ) 
+                             )
+                            )
                          )
-                        in
-                          Array.set
-                          (
-                           l
-                           insert
-                           (
-                               l
-                           )
-                          )
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        hd
-                        List.hd
+                       )
+                      in
+                        Array.set
                         (
-                            l
+                         l
+                         insert
+                         (
+                             l
+                         )
                         )
-                    )
+                      )
+                    method hd
+                      List.hd
+                      (
+                          l
+                      )
                  )
    )
    let
@@ -1504,46 +1253,25 @@
      class expr = 
                  class_structure
                  (
-                    classValue 
-                    (
-                        <>
-                        x
-                        x
-                    )
-                    method1 
-                    (
-                        <>
-                        leq
-                        y
-                        int_comparable
-                        (
-                        )
-                        <
-                        (
-                            x
-                            send x
-                            (
-                             y
-                            )
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        x
-                        x
-                    )
-                    method1 
-                    (
-                        <>
-                        setx
-                        y
-                        Array.set
-                        (
-                         x
-                         y
-                        )
-                    )
+                     x
+                     x
+                    method leq
+                      <
+                      (
+                          x
+                          send x
+                          (
+                           y
+                          )
+                      )
+                    method x
+                      x
+                    method setx
+                      Array.set
+                      (
+                       x
+                       y
+                      )
                  )
    )
    let
@@ -1723,7 +1451,7 @@
   )
    let
    (
-     min
+      min
     (
      case
          (
@@ -1798,92 +1526,61 @@
      class expr = 
                  class_structure
                  (
-                    classValue 
-                    (
-                        <>
-                        x
-                        x
-                    )
-                    classValue 
-                    (
-                        <>
-                        next
-                        (
+                     x
+                     x
+                     next
+                     (
+                     None
+                     :
+                      option
+                      (
+                        b
+                      )
+                     )
+                    method x
+                      x
+                    method next
+                      next
+                    method set_x
+                      Array.set
+                      (
+                       x
+                       y
+                      )
+                    method set_next
+                      Array.set
+                      (
+                       next
+                       l
+                      )
+                    method append
+                      match
+                      next
+                      (
+                      case
+                      (
                         None
-                        :
-                         option
-                         (
-                           b
-                         )
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        x
-                        x
-                    )
-                    method1 
-                    (
-                        <>
-                        next
-                        next
-                    )
-                    method1 
-                    (
-                        <>
-                        set_x
-                        y
-                        Array.set
+                        send set_next
                         (
-                         x
-                         y
+                         self
                         )
-                    )
-                    method1 
-                    (
-                        <>
-                        set_next
-                        l
-                        Array.set
                         (
-                         next
-                         l
+                            l
                         )
-                    )
-                    method1 
-                    (
-                        <>
-                        append
-                        l
-                        match
-                        next
-                        (
+                      ) 
                         case
                         (
-                          None
-                          send set_next
-                          (
-                           self
-                          )
-                          (
-                              l
-                          )
-                        ) 
-                          case
-                          (
-                           Some
-                           l'
-                           send append
-                           (
-                            l'
-                           )
-                           (
-                               l
-                           )
-                          )
+                         Some
+                         l'
+                         send append
+                         (
+                          l'
+                         )
+                         (
+                             l
+                         )
                         )
-                    )
+                      )
                  )
    )
    class
@@ -1896,91 +1593,72 @@
      class expr = 
                  class_structure
                  (
-                    inheritance 
-                    (
-                        <>
-                        classArgs 
-                        (
-                            <"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[],"classPath"([],"link")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-                            x
-                        )
-                    )
-                    classValue 
-                    (
-                        <>
-                        prev
-                        None
-                    )
-                    method1 
-                    (
-                        <>
-                        prev
-                        prev
-                    )
-                    method1 
-                    (
-                        <>
-                        set_next
-                        l
-                        sequence
-                        (
-                          Array.set
-                          (
-                           next
-                           l
-                          )
-                        ;
-                          match
-                          l
-                          (
-                          case
-                          (
-                            Some
-                            l
-                            send set_prev
+                    inherit
+                     constr classArgs 
                             (
-                             l
+                                <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"link")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                                x
                             )
-                            (
-                                 Some
-                                 self
-                            )
-                          ) 
-                            case
-                            (
-                             None
-                             ()
-                            )
-                          )
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        set_prev
-                        l
+                     (
+                     )
+                     prev
+                     None
+                    method prev
+                      prev
+                    method set_next
+                      sequence
+                      (
                         Array.set
                         (
-                         prev
+                         next
                          l
                         )
-                    )
+                      ;
+                        match
+                        l
+                        (
+                        case
+                        (
+                          Some
+                          l
+                          send set_prev
+                          (
+                           l
+                          )
+                          (
+                              Some
+                                 self
+                          )
+                        ) 
+                          case
+                          (
+                           None
+                           ()
+                          )
+                        )
+                      )
+                    method set_prev
+                      Array.set
+                      (
+                       prev
+                       l
+                      )
                  )
    )
    let
    (
-     fold_right
+      fold_right
     (
      case
          (
-      		 f
+      		  f
       		(
       		 case
       		     (
       		  		 l
       		  		  option
       		  		  (
-      		  		    <"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"classPath"([],"link")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+      		  		    <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"link")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
       		  		  )
       		  		(
       		  		 case
@@ -2033,156 +1711,119 @@
      class expr = 
                  class_structure
                  (
-                    classValue 
-                    (
-                        <>
-                        arg
-                        0.
-                    )
-                    classValue 
-                    (
-                        <>
-                        acc
-                        0.
-                    )
-                    classValue 
-                    (
-                        <>
-                        equals
+                     arg
+                     0.
+                     acc
+                     0.
+                     equals
+                     (
+                      case
+                      (
+                        s
+                        send arg
                         (
-                         case
-                         (
-                           s
-                           send arg
-                           (
-                            s
-                           )
-                         ) 
+                         s
                         )
-                    )
-                    method1 
-                    (
-                        <>
-                        arg
-                        arg
-                    )
-                    method1 
-                    (
-                        <>
-                        acc
-                        acc
-                    )
-                    method1 
-                    (
-                        <>
-                        enter
-                        n
+                      ) 
+                     )
+                    method arg
+                      arg
+                    method acc
+                      acc
+                    method enter
+                      sequence
+                      (
+                        Array.set
+                        (
+                         arg
+                         n
+                        )
+                      ;
+                        self
+                      )
+                    method add
+                      sequence
+                      (
+                        Array.set
+                        (
+                         acc
+                         equals
+                         (
+                             self
+                         )
+                        )
+                      ;
                         sequence
                         (
                           Array.set
                           (
-                           arg
-                           n
+                           equals
+                           (
+                            case
+                            (
+                              s
+                              +.
+                              (
+                                  send acc
+                                  (
+                                   s
+                                  )
+                                  send arg
+                                  (
+                                   s
+                                  )
+                              )
+                            ) 
+                           )
                           )
                         ;
                           self
                         )
-                    )
-                    method1 
-                    (
-                        <>
-                        add
+                      )
+                    method sub
+                      sequence
+                      (
+                        Array.set
+                        (
+                         acc
+                         equals
+                         (
+                             self
+                         )
+                        )
+                      ;
                         sequence
                         (
                           Array.set
                           (
-                           acc
                            equals
                            (
-                               self
+                            case
+                            (
+                              s
+                              -.
+                              (
+                                  send acc
+                                  (
+                                   s
+                                  )
+                                  send arg
+                                  (
+                                   s
+                                  )
+                              )
+                            ) 
                            )
                           )
                         ;
-                          sequence
-                          (
-                            Array.set
-                            (
-                             equals
-                             (
-                              case
-                              (
-                                s
-                                +.
-                                (
-                                    send acc
-                                    (
-                                     s
-                                    )
-                                    send arg
-                                    (
-                                     s
-                                    )
-                                )
-                              ) 
-                             )
-                            )
-                          ;
-                            self
-                          )
+                          self
                         )
-                    )
-                    method1 
-                    (
-                        <>
-                        sub
-                        sequence
-                        (
-                          Array.set
-                          (
-                           acc
-                           equals
-                           (
-                               self
-                           )
-                          )
-                        ;
-                          sequence
-                          (
-                            Array.set
-                            (
-                             equals
-                             (
-                              case
-                              (
-                                s
-                                -.
-                                (
-                                    send acc
-                                    (
-                                     s
-                                    )
-                                    send arg
-                                    (
-                                     s
-                                    )
-                                )
-                              ) 
-                             )
-                            )
-                          ;
-                            self
-                          )
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        equals
-                        equals
-                        (
-                            self
-                        )
-                    )
+                      )
+                    method equals
+                      equals
+                      (
+                          self
+                      )
                  )
    )
   send equals
@@ -2249,98 +1890,61 @@
      class expr = 
                  class_structure
                  (
-                    classValue 
-                    (
-                        <>
-                        arg
-                        0.
-                    )
-                    classValue 
-                    (
-                        <>
-                        acc
-                        0.
-                    )
-                    classValue 
-                    (
-                        <>
-                        equals
+                     arg
+                     0.
+                     acc
+                     0.
+                     equals
+                     (
+                      case
+                      (
+                        s
+                        send arg
                         (
-                         case
-                         (
-                           s
-                           send arg
-                           (
-                            s
-                           )
-                         ) 
+                         s
                         )
-                    )
-                    method1 
-                    (
-                        <>
-                        arg
-                        arg
-                    )
-                    method1 
-                    (
-                        <>
-                        acc
-                        acc
-                    )
-                    method1 
-                    (
-                        <>
-                        enter
-                        n
-                        sequence
+                      ) 
+                     )
+                    method arg
+                      arg
+                    method acc
+                      acc
+                    method enter
+                      sequence
+                      (
+                        Array.set
                         (
-                          Array.set
+                         arg
+                         n
+                        )
+                      ;
+                        self
+                      )
+                    method add
+                      brackets4 
+                      (
+                          acc
+                          equals
                           (
-                           arg
-                           n
+                              self
                           )
-                        ;
+                          <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"+.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                      )
+                    method sub
+                      brackets4 
+                      (
+                          acc
+                          equals
+                          (
+                              self
+                          )
+                          <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"-.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                      )
+                    method equals
+                      equals
+                      (
                           self
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        add
-                        brackets4 
-                        (
-                            acc
-                            equals
-                            (
-                                self
-                            )
-                            <"equals","function"("patternMatching"([],"patternValueName"("s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"+.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        sub
-                        brackets4 
-                        (
-                            acc
-                            equals
-                            (
-                                self
-                            )
-                            <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"-.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        equals
-                        equals
-                        (
-                            self
-                        )
-                    )
+                      )
                  )
    )
   send equals
@@ -2408,61 +2012,36 @@
      class expr = 
                  class_structure
                  (
-                    classValue 
-                    (
-                        <>
-                        arg
-                        arg
-                    )
-                    classValue 
-                    (
-                        <>
-                        acc
-                        acc
-                    )
-                    method1 
-                    (
-                        <>
-                        enter
-                        n
-                        new calculator
-                        (
-                            n
-                            acc
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        add
-                        new calculator_add
-                        (
-                            arg
-                            send equals
-                            (
-                             self
-                            )
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        sub
-                        new calculator_sub
-                        (
-                            arg
-                            send equals
-                            (
-                             self
-                            )
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        equals
-                        arg
-                    )
+                     arg
+                     arg
+                     acc
+                     acc
+                    method enter
+                      new calculator
+                      (
+                          n
+                          acc
+                      )
+                    method add
+                      new calculator_add
+                      (
+                          arg
+                          send equals
+                          (
+                           self
+                          )
+                      )
+                    method sub
+                      new calculator_sub
+                      (
+                          arg
+                          send equals
+                          (
+                           self
+                          )
+                      )
+                    method equals
+                      arg
                  )
      params = 
      (
@@ -2473,40 +2052,27 @@
      class expr = 
                  class_structure
                  (
-                    inheritance 
-                    (
-                        <>
-                        classArgs 
-                        (
-                            classPath 
+                    inherit
+                     constr classArgs 
                             (
                                 calculator
+                                arg
+                                acc
                             )
-                            arg
-                            acc
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        enter
-                        n
-                        new calculator_add
-                        (
-                            n
-                            acc
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        equals
-                        +.
-                        (
-                            acc
-                            arg
-                        )
-                    )
+                     (
+                     )
+                    method enter
+                      new calculator_add
+                      (
+                          n
+                          acc
+                      )
+                    method equals
+                      +.
+                      (
+                          acc
+                          arg
+                      )
                  )
      params = 
      (
@@ -2517,40 +2083,27 @@
      class expr = 
                  class_structure
                  (
-                    inheritance 
-                    (
-                        <>
-                        classArgs 
-                        (
-                            classPath 
+                    inherit
+                     constr classArgs 
                             (
                                 calculator
+                                arg
+                                acc
                             )
-                            arg
-                            acc
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        enter
-                        n
-                        new calculator_sub
-                        (
-                            n
-                            acc
-                        )
-                    )
-                    method1 
-                    (
-                        <>
-                        equals
-                        -.
-                        (
-                            acc
-                            arg
-                        )
-                    )
+                     (
+                     )
+                    method enter
+                      new calculator_sub
+                      (
+                          n
+                          acc
+                      )
+                    method equals
+                      -.
+                      (
+                          acc
+                          arg
+                      )
                  )
    )
    let

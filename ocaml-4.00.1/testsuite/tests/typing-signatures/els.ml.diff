@@ -1,141 +1,55 @@
-50c50
-<     "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].state
----
->                V.state
-58c58
-<     "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
----
->                    V.value
 70,71c70
-<     include
+<     includeSpec 
 <     (
 ---
 >         sig_include
 73d71
 <     )
-77c75
-<     "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
----
->                V.value
-81c79
-<     "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].state
----
->                  V.state
-87c85
-<        "extendedModulePath1"([],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
----
->                        V.value
-91c89
-<     "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
----
->                    V.value
-132c130
-<     "extendedModulePath1"([],"Value")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].value
----
->                Value.value
-144,147c142
+144,145c142
 <     bracketModType1 
 <     (
-<         modTypeWith 
-<         (
 ---
 >           Pmty_with
-149d143
-<             modeConsModule2 
-152,154c146
-<                 Value
-<             )
-<         )
+147d143
+<          modeConsModule2 
+150,151c146
+<              Value
+<          )
 ---
 >               Pwith_modsubst Value
-167c159
-<        "extendedModulePath1"([],"Value")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].state
----
->                      Value.state
-182c174
-<        "extendedModulePath1"([],"Value")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].value
----
->                      Value.value
-195c187
-<     "extendedModulePath1"([],"Ast")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].program
----
->                Ast.program
-203,206c195,196
-<     include
-<     (
-<       modTypeWith 
-<       (
----
->         sig_include
->           Pmty_with
-208d197
-<           modeConsModule2 
-211,213c200
-<               Value
-<           )
-<       )
----
->               Pwith_modsubst Value
-246,247c233
-<     include
+200,201c195,196
+<     includeSpec 
 <     (
 ---
 >         sig_include
-249d234
+>           Pmty_with
+203d197
+<          modeConsModule2 
+206,207c200
+<              Value
+<          )
+---
+>               Pwith_modsubst Value
+240,241c233
+<     includeSpec 
+<     (
+---
+>         sig_include
+243d234
 <     )
-251,252c236
-<     modTypeWith 
-<     (
----
+244a236
 >           Pmty_with
-254d237
-<         modConsType1 
-257c240,242
-<             "extendedModulePath1"([],"Ast")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].chunk
----
+245a238
+>           (
+246a240
 >               Pwith_type
->                 type
->                   params =
-259a245,250
->                   cstrs =
->                     (
->                     )
->                   kind =
->                          Ast.chunk
->                         (
-403,404c394
-<     modTypeWith 
-<     (
----
->           Pmty_with
-406d395
-<         modConsType2 
-409c398,401
-<             "extendedModulePath1"([],"T")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
----
->               Pwith_typesubst
->                 type
->                   params =
->                     (
-410a403,404
->                   cstrs =
->                     (
-412,413c406,407
-<     module TV2
-<     modTypeWith 
----
->                   kind =
->                          T.t
-414a409,412
->                         )
+257a252
 >           )
->         module TV2
+398a394
 >           Pmty_with
-416d413
-<         modConsType2 
-419c416,426
-<             "extendedModulePath1"([],"T")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
----
+400d395
+<      modConsType2 
+402a398,406
 >               Pwith_typesubst
 >                 type
 >                   params =
@@ -145,122 +59,85 @@
 >                     (
 >                     )
 >                   kind =
->                          T.t
+403a408,409
 >                         (
-428,431c435,436
-<     include
+>                         )
+405a412
+>           Pmty_with
+407d413
+<      modConsType2 
+409a416,424
+>               Pwith_typesubst
+>                 type
+>                   params =
+>                     (
+>                     )
+>                   cstrs =
+>                     (
+>                     )
+>                   kind =
+410a426,427
+>                         (
+>                         )
+418,419c435,436
+<     includeSpec 
 <     (
-<       modTypeWith 
-<       (
 ---
 >         sig_include
 >           Pmty_with
-433d437
-<           modeConsModule2 
-436,438c440
-<               T
-<           )
-<       )
+421d437
+<          modeConsModule2 
+424,425c440
+<              T
+<          )
 ---
 >               Pwith_modsubst T
-472,473d473
-<    functor []
-<    (
-479,480c479
-<         modTypeWith 
-<         (
----
+463a479
 >             Pmty_with
-482d480
-<             modConsType1 
-484,485c482,485
-<                 "extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].usert
-<                 "extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].combined
----
->               V.usert
+464a481
+>             (
+465a483
 >                 Pwith_type
->                   type
->                     params =
-487a488,489
->                     cstrs =
->                       (
-489,490c491,492
-<         )
-<         modTypeWith 
----
->                     kind =
->                            X.combined
-491a494,496
->                           )
+476a495,496
 >             )
 >             Pmty_with
-493d497
-<             modConsType2 
-496c500,503
-<                 "extendedModulePath1"(["extendedModulePath1"([],"C")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"V")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].state
+478d497
+<        modConsType2 
+481c500,511
+<             "extendedModulePath1"([],"C").V.state
 ---
 >                 Pwith_typesubst
 >                   type
 >                     params =
 >                       (
-497a505,510
+>                       )
 >                     cstrs =
 >                       (
 >                       )
 >                     kind =
 >                            C.V.state
 >                           (
-533c546
-<        "extendedModulePath1"([],"Weapon")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
----
->                      Weapon.t
-538,539c551
-<     modTypeWith 
-<     (
----
+>                           )
+520a551
 >           Pmty_with
-541d552
-<         modConsType1 
-544c555,557
-<             t
----
+521a553
+>           (
+522a555
 >               Pwith_type
->                 type
->                   params =
-546a560,565
->                   cstrs =
->                     (
->                     )
->                   kind =
->                          t
->                         (
-552,553c571
-<       modTypeWith 
-<       (
----
+533a567
+>           )
+536a571
 >             Pmty_with
-555d572
-<           modConsType1 
-558c575,577
-<               t
----
+537a573
+>             (
+538a575
 >                 Pwith_type
->                   type
->                     params =
-560a580,581
->                     cstrs =
->                       (
-562,563c583,584
-<       )
+550,554c587,588
 <       extendedModulePath2 
----
->                     kind =
->                            t
-565,567c586,588
+<       (
 <           USERCODE
 <           TV
 <       ).F
 ---
->                           )
 >             )
 >             USERCODE(TV).F

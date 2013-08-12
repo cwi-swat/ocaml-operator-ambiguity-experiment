@@ -33,15 +33,14 @@
     class_structure
     (
         								
-       inheritance 
-       (
-           <>
-           <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-           
-       )
+       inherit
+        constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+        (
+        )
+       										    
         								
        method m
-             42
+         42
            												 
         								
     )

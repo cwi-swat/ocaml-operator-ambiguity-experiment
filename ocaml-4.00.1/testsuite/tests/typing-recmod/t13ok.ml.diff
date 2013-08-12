@@ -1,69 +1,26 @@
-2c2
-<   classTypeDef 
----
->   class_type
-4c4,15
-<       classTypeDefinition 
----
->     class_type_declaration ([2,9+11]..[2,9+63])
->       pci_virt = Concrete
->       pci_params =
->           (
->             "node"
->           )
->       pci_name = "extension"
->       pci_expr =
->         class_type ([2,9+33]..[2,9+63])
->           Pcty_signature
->           class_signature
->               Ptyp_any
-6,11c17,19
-<           classTypeDef 
-<           (
-<               <"node",[]>
-<               extension
-<               <[],[<[],[],"node","tagg"("node")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>]>
-<           )
+15,17c15
+<       fieldSpec3 
+<       (
+<           node
 ---
 >               Pctf_meth "node" Public ([2,9+40]..[2,9+59])
->                   poly
->                     node
-14,16c22
-<   classTypeDef 
-<   (
-<       classTypeDefinition 
+22d19
+<   )
+36c33,37
+<       fieldSpec4 
 ---
->   class_type
-18c24,39
-<           classTypeDef 
----
->     class_type_declaration ([3,73+11]..[3,73+76])
->       pci_virt = Concrete
->       pci_params =
->           (
->             "ext"
->           )
->       pci_name = "node"
->       pci_expr =
->         class_type ([3,73+27]..[3,73+76])
->           Pcty_signature
->           class_signature
->               Ptyp_any
->             (
 >               Pctf_cstr ([3,73+34]..[3,73+72])
 >                 ext
 >                 Ptyp_class extension
-20d40
-<               <"ext",[]>
-22c42,46
-<               <[],[<"tagg"("ext")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],<"typexprConstr1"("tagg"("ext")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"node")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"extension")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>>]>
+>                 (
+>                      node
+39c40,42
+<           <"typexprConstr1"("tagg"("ext")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"node")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"extension")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
 ---
->                     (
->                         ext
 >                     )
 >                 )
 >                 (
-36a61,67
+53a57,63
 >                     poly
 >                        node
 >                       (

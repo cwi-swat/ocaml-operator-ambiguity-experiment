@@ -97,6 +97,14 @@ public void do(type[&T <: Tree] nont, str input) {
 	  if({Expr x, functionApplication(_, _)} := alts) {
 	    insert amb({x});
 	  }	  
+	  
+	  if({x:method1(_,_,_,_,_,_), y:method2(_,_,_,_)} := alts) {
+	  	insert amb({x});
+	  }
+	  
+	  if({x:letBinding(_, _, _, _), polyLetBiding(_, _, _)} := alts) {
+	  	insert amb({x});
+	  }
 	  	  
 	  fail;
   }
@@ -285,6 +293,15 @@ str printAST(value v) {
     								'<printAST(t)>
     								')
     								";
+    								
+    case "brackets3"(e, t1, t2): return "
+    									'(
+    									'  <printAST(e)>
+    									'  :
+    									'  <printAST(t1)>
+    									'  <printAST(t2)>
+    									')
+    									";								
     
     case "beginEnd"(e) : return printAST(e);			
     
@@ -1287,7 +1304,7 @@ str printAST(value v) {
 	case "classTypeDef"(_, [], cn, cbt): return "class_type_declaration
 													  'params = 
 													  '(
-													  ' <printAST(params)>
+													  ' 
 													  ') 
 													  'name = <printAST(cn)>
 													  'expr =

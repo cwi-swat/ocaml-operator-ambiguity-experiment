@@ -1,26 +1,24 @@
 (
-  Pstr_recmodule
+  rec module
   (
     "M"
         signature
         (
             sig_class
             (
-              class_description ([4,47+12]..[6,123+9])
-                pci_virt = Concrete
-                pci_params =
+              class_description
+                params =
                     (
                       "a"
                     )
-                pci_name = "c"
-                pci_expr =
-                  class_type ([4,47+21]..[6,123+9])
-                    Pcty_fun ""
+                name = c
+                expr =
+                  class_type
+                    fun 
                       a
-                    class_type ([4,47+27]..[6,123+9])
-                      Pcty_signature
+                    class_type
+                      signature
                       class_signature
-                          Ptyp_any
                         (
                           Pctf_meth "map" Public ([5,81+8]..[5,81+41])
                               poly

@@ -4,92 +4,88 @@
   let
   (
    
-    property
+     property
+               	   
+     t
+               	   
    (
     case
         (
      		
-     		 t
-     		(
-     		 case
-     		     (
-     		 	  ()
-     		      let module M
+     		 ()
+     		 let module M
+     		   (
+     		 		struct
+     		 		(
+     		 									  
+     		 		exception E
+     		 		(
+     		 		
+     		 		t
+     		 		(
+     		 		)
+     		 										  
+     		 		    										  
+     		 		)
+     		 		    										 
+     		 									  
+     		 		)
+     		 									  
+     		   )
+     		   in
+     		   (
+     		      
+     		      (
+     		       (
+     		        
+     		        case
      		        (
-     		      		struct
-     		      		(
-     		      									  
-     		      		exception E
-     		      		(
-     		      		
-     		      		t
-     		      		(
-     		      		)
-     		      										  
-     		      		    										  
-     		      		)
-     		      		    										 
-     		      									  
-     		      		)
-     		      									  
+     		        x
+     		        
+     		        
+     		        M.E
+     		           x
+     		            								 
      		        )
-     		        in
-     		        (
-     		           
-     		           (
-     		               					 (
-     		                 					  
-     		                 					  case
-     		                 					  (
-     		                 					  x
-     		                 					  
-     		                 					  
-     		                 					   M.E
-     		                 					   x
-     		                 					      								 
-     		                 					  )
-     		                 					  													 
-     		                 					 )
-     		                 					    						  
-     		               					 
-     		           	(
-     		           	 
-     		           	 case
-     		           	 (
-     		           	   
-     		           	   M.E
-     		           	   x
-     		           	   									  
-     		           	   
-     		           	   
-     		           	    Some
-     		           	    x
-     		           	       								 
-     		           	 ) 
-     		           	 	        											 
-     		           	   
-     		           	   case
-     		           	   (
-     		           	    _
-     		           	    
-     		           	    None
-     		           	   )
-     		           	   													    
-     		           	 	        											 
-     		           	 	        											 
-     		           	)
-     		           	   							   
-     		               					 
-     		           )
-     		               					 
-     		        )
-     		          											  
-     		     )
-     		)
-     		    		   
+     		        													 
+     		       )
+     		          						  
+     		          					   
+     		      	(
+     		      	 
+     		      	 case
+     		      	 (
+     		      	   
+     		      	   M.E
+     		      	   x
+     		      	   									  
+     		      	   
+     		      	   
+     		      	   Some
+     		      	      x
+     		      	       								 
+     		      	 ) 
+     		      	 	        											 
+     		      	   
+     		      	   case
+     		      	   (
+     		      	    _
+     		      	    
+     		      	    None
+     		      	   )
+     		      	   													    
+     		      	 	        											 
+     		      	 	        											 
+     		      	)
+     		      	   							   
+     		          					   
+     		      )
+     		   )
+     		     											   
+     									    		   
         )
    )
-       		    
+               	    
   )
                                      
   let
@@ -248,91 +244,85 @@
   let
   (
    
-    sort_uniq
+     sort_uniq
+               	   
+     s
+               	   
    (
     case
         (
      		
-     		 s
+     		 cmp
      		(
      		 case
      		     (
-     		  		
-     		  		 cmp
-     		  		(
-     		  		 case
-     		  		     (
-     		  		 	  l
-     		  		      let module S
-     		  		        (
-     		  		      		
-     		  		      		    								  
-     		  		      		 Set.Make
-     		  		      		    							     
-     		  		      		(
-     		  		      		struct
-     		  		      		(
-     		  		      									  
-     		  		      		type
-     		  		      		(  						
-     		  		      		    							    	 
-     		  		      		   t
-     		  		      		   type
-     		  		      		   params=
-     		  		      		   (
-     		  		      		   
-     		  		      		   )
-     		  		      		   cstrs =
-     		  		      		   (
-     		  		      		   )
-     		  		      		   kind =
-     		  		      		   
-     		  		      		   s
-     		  		      		   (
-     		  		      		   )
-     		  		      		   								  
-     		  		      		   
-     		  		      		   														  
-     		  		      		   														 
-     		  		      		  											   
-     		  		      										        
-     		  		      		)
-     		  		      									  
-     		  		      		let
-     		  		      		(
-     		  		      		 
-     		  		      		  compare
-     		  		      		  cmp 
-     		  		      		 							    		    
-     		  		      		)
-     		  		      									  
-     		  		      		)
-     		  		      									  
-     		  		      		)
-     		  		      										   
-     		  		        )
-     		  		        in
-     		  		        (
-     		  		           S.elements
-     		  		           (
-     		  		               List.fold_right
-     		  		               (
-     		  		                   S.add
-     		  		                   l
-     		  		                   S.empty
-     		  		               )
-     		  		           )
-     		  		        )
-     		  		          											  
-     		  		     )
-     		  		)
-     		  		    		   
+     		 	  l
+     		      let module S
+     		        (
+     		      		
+     		      		    								  
+     		      		    							      Set.Make
+     		      		(
+     		      		struct
+     		      		(
+     		      									  
+     		      		type
+     		      		(  						
+     		      		    							    	 
+     		      		   t
+     		      		     type
+     		      		     params=
+     		      		     (
+     		      		     
+     		      		     )
+     		      		     cstrs =
+     		      		     (
+     		      		     )
+     		      		     kind =
+     		      		     
+     		      		     s
+     		      		     (
+     		      		     )
+     		      		     								  
+     		      		     
+     		      		     														  
+     		      		     														 
+     		      		  											   
+     		      										        
+     		      		)
+     		      									  
+     		      		let
+     		      		(
+     		      		 
+     		      		  compare
+     		      		  cmp 
+     		      		 							    		    
+     		      		)
+     		      									  
+     		      		)
+     		      									  
+     		      		)
+     		      										   
+     		        )
+     		        in
+     		        (
+     		           S.elements
+     		           (
+     		               List.fold_right
+     		               (
+     		                   S.add
+     		                   l
+     		                   S.empty
+     		               )
+     		           )
+     		        )
+     		          											  
      		     )
      		)
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   let
@@ -372,7 +362,10 @@
   let
   (
    
-    f
+     f
+               	   
+     a
+               	   
    (
     case
         (
@@ -381,33 +374,25 @@
      		(
      		 case
      		     (
-     		  		
-     		  		 a
-     		  		(
-     		  		 case
-     		  		     (
-     		  		 	  
-     		  		 	  y
-     		  		 	  
-     		  		 	  a
-     		  		 	  (
-     		  		 	  )
-     		  		 	  								  
-     		  		 	      										   
-     		  		      =
-     		  		      (
-     		  		          x
-     		  		          y
-     		  		      )
-     		  		     )
-     		  		)
-     		  		    		   
+     		 	  
+     		 	  y
+     		 	  
+     		 	  a
+     		 	  (
+     		 	  )
+     		 	  								  
+     		 	      										   
+     		      =
+     		      (
+     		          x
+     		          y
+     		      )
      		     )
      		)
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   class
@@ -423,53 +408,53 @@
                 (
                     								
                    method m
-                         (
-                          
-                          case
-                          (
-                          x
-                          
-                          x
-                          )
-                          													 
-                         )
-                            						  
+                     (
+                      
+                      case
+                      (
+                      x
+                      
+                      x
+                      )
+                      													 
+                     )
+                        						  
                        												 
                     								
                    method n
-                         (
-                          
-                          case
-                          (
-                            g
-                            (
-                            
-                            case
-                            (
-                            
-                            x
-                            
-                            g
-                            (
-                            )
-                            								  
-                                										   
-                            
-                            send m
-                            (
-                             self
-                            )
-                                						  
-                            (
-                                x
-                            )
-                            )
-                            													 
-                            )
-                          )													
-                          													
-                         )
+                     (
+                      
+                      case
+                      (
+                        g
+                        (
+                        
+                        case
+                        (
+                        
+                        x
+                        
+                        g
+                        (
+                        )
+                        								  
+                            										   
+                        
+                        send m
+                        (
+                         self
+                        )
                             						  
+                        (
+                            x
+                        )
+                        )
+                        													 
+                        )
+                      )													
+                      													
+                     )
+                        						  
                        												 
                     								
                 )

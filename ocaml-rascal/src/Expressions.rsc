@@ -82,7 +82,7 @@ syntax InnerPatternMatching
            
 syntax LetBinding 
 	 = letBinding: Pattern Parameter* (":" Typexpr)? "=" Expr
-	 //| ValueName ":"  PolyTypExpr "="  Expr
+	 | polyLetBiding: ValueName ":"  PolyTypExpr "="  Expr
 	 | ValueName ":" "type"  TypeConstr* "."  Typexpr "="  Expr 
 	 ;
 	 

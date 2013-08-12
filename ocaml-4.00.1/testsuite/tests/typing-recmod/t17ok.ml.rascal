@@ -9,19 +9,19 @@
     (  						
         							    	 
        t
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -62,19 +62,19 @@
     (  						
         							    	 
        elt
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -83,19 +83,19 @@
     (  						
         							    	 
        t
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -139,56 +139,56 @@
   (  						
       							    	 
      tree
-     type
-     params=
-     (
-     
-      
-      a
-     										 
-     )
-     cstrs =
-     (
-     )
-     kind =
-     
-     
-     (
-     								  
-     E
-     (
-     									
-     )
-     								    
-     								  
-     N
-     (
-     									
-      
-       tree
+       type
+       params=
        (
-         a
-       )
        
-          									
-     								     
-      a
-     								     
-      
-       tree
+        
+        a
+       										 
+       )
+       cstrs =
        (
-         a
        )
+       kind =
        
-          									
-     								     
-     )
-     								    
-     								  
-     )
-     								  
-     														  
-     														 
+       
+       (
+       								  
+       E
+       (
+       									
+       )
+       								    
+       								  
+       N
+       (
+       									
+        
+         tree
+         (
+           a
+         )
+         
+            									
+       								     
+        a
+       								     
+        
+         tree
+         (
+           a
+         )
+         
+            									
+       								     
+       )
+       								    
+       								  
+       )
+       								  
+       														  
+       														 
     											   
   								        
   )
@@ -199,62 +199,60 @@
    functor X
    (
      ORD
-     modTypeWith 
-     (
-         SET
-         modConsType1 
+     
+      SET
+       
+       t
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+        
+         tree
          (
-             
-             t
-             
-              tree
-              (
-                
-                "extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-                (
-                )
-                								  
-              )
-              
-                 									
-         )
-         modConsType1 
-         (
-             
-             elt
-             
-             "extendedModulePath1"([],"X")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-             (
-             )
-             								  
-         )
-     )
-   )
-   												
-   functor []
-   (
-     modTypeWith 
-     (
-         SET
-         modConsType1 
-         (
-             
-             elt
-             
-             int
-             (
-             )
-             								  
+           
+           X.t
+           (
+           )
+           								  
          )
          
-     )
-     struct
-     (
-     							  
-     type
-     (  						
-         							    	 
-        elt
+            									
+         										 
+         								    
+       
+       elt
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+        
+        X.t
+        (
+        )
+        								  
+         										 	
+         								    
+         								    
+   )
+   												
+   struct
+   (
+   							  
+   type
+   (  						
+       							    	 
+      elt
         type
         params=
         (
@@ -272,332 +270,232 @@
         
         														  
         														 
-       											   
-     								        
-     )
-     							  
-     modRec1 
+     											   
+   								        
+   )
+   							  
+   rec module
+   (
+     "Elt"
+     signature
      (
-         Elt
-         signature
-         (
-         		    				
-          type
-          (  						
-              							    	 
-             t
-             type
-             params=
-             (
-             
-             )
-             cstrs =
-             (
-             )
-             kind =
-             
-             
-             (
-             								  
-             I
-             (
-             									
-              
-              int
-              (
-              )
-              								  
-             								     
-              
-              int
-              (
-              )
-              								  
-             								     
-             )
-             								    
-             								  
-             D
-             (
-             									
-              
-              int
-              (
-              )
-              								  
-             								     
-              
-              "extendedModulePath1"([],"Diet")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-              (
-              )
-              								  
-             								     
-              
-              int
-              (
-              )
-              								  
-             								     
-             )
-             								    
-             								  
-             )
-             								  
-             														  
-             														 
-            											   
-          								        
-          )
-         		    				
-          sig_value compare
-          value_description
-          arrow
-          
-          t
-          (
-          )
-          								  
-          arrow
-          
-          t
-          (
-          )
-          								  
-          
-          int
-          (
-          )
-          								  
-             								   
-             								   
-          (
-          )
-              								
-         		    				
-          sig_value iter
-          value_description
-          arrow
-          arrow
-          
-          int
-          (
-          )
-          								  
-          
-          unit
-          (
-          )
-          								  
-             								   
-          arrow
-          
-          t
-          (
-          )
-          								  
-          
-          unit
-          (
-          )
-          								  
-             								   
-             								   
-          (
-          )
-              								
-         		    				
-         )
-         struct
-         (
-         							  
-         type
-         (  						
-             							    	 
-            t
-            type
-            params=
-            (
+     		    				
+      type
+      (  						
+          							    	 
+         t
+           type
+           params=
+           (
+           
+           )
+           cstrs =
+           (
+           )
+           kind =
+           
+           
+           (
+           								  
+           I
+           (
+           									
             
-            )
-            cstrs =
+            int
             (
             )
-            kind =
+            								  
+           								     
             
+            int
+            (
+            )
+            								  
+           								     
+           )
+           								    
+           								  
+           D
+           (
+           									
             
+            int
             (
-            								  
-            I
-            (
-            									
-             
-             int
-             (
-             )
-             								  
-            								     
-             
-             int
-             (
-             )
-             								  
-            								     
-            )
-            								    
-            								  
-            D
-            (
-            									
-             
-             int
-             (
-             )
-             								  
-            								     
-             
-             "extendedModulePath1"([],"Diet")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-             (
-             )
-             								  
-            								     
-             
-             int
-             (
-             )
-             								  
-            								     
-            )
-            								    
-            								  
             )
             								  
-            														  
-            														 
-           											   
-         								        
-         )
-         							  
-         let
-         (
-          
-           compare
-          (
-           case
-               (
-            		
-            		 x1
-            		(
-            		 case
-            		     (
-            		 	  x2
-            		      0
-            		     )
-            		)
-            		    		   
-               )
-          )
-              		    
-         )
-         							  
-         let
-         (
-          
-           iter
-          (
-           case
-               (
-           	  f
-                (
-                 
-                 case
-                 (
-                   
-                   I
-                   
-                   (
-                    l
-                        						 
-                   	r
-                   
-                   )
-                   									  
-                   
-                   forloop 
-                   (
-                       i
-                       l
-                       <>
-                       r
-                       f
-                       (
-                           i
-                       )
-                   )
-                 ) 
-                 	        											 
-                   
-                   case
-                   (
-                    
-                    D
-                    
-                    (
-                     _
-                         						 
-                    	d
-                    
-                    	_
-                    
-                    )
-                    									  
-                    
-                    Diet.iter
-                    (
-                        iter
-                        (
-                            f
-                        )
-                        d
-                    )
-                   )
-                   													    
-                 	        											 
-                 	        											 
-                )
-                   							   
-               )
-          )
-              		    
-         )
-         							  
-         )
-         							  
-         <"Diet","modTypeWith"("modTypePath"("modTypePath"([],"SET")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modConsType1"([],"typeConstr"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr1"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"tree")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["modConsType1"([],"typeConstr"([],"elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modApp"("modExpModPath"("modulePath"([],"MakeDiet")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"modExpModPath"("modulePath"([],"Elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           								     
+            
+            Diet.t
+            (
+            )
+            								  
+           								     
+            
+            int
+            (
+            )
+            								  
+           								     
+           )
+           								    
+           								  
+           )
+           								  
+           														  
+           														 
+        											   
+      								        
+      )
+     		    				
+      sig_value compare
+      value_description
+      arrow
+      
+      t
+      (
+      )
+      								  
+      arrow
+      
+      t
+      (
+      )
+      								  
+      
+      int
+      (
+      )
+      								  
+         								   
+         								   
+      (
+      )
+          								
+     		    				
+      sig_value iter
+      value_description
+      arrow
+      arrow
+      
+      int
+      (
+      )
+      								  
+      
+      unit
+      (
+      )
+      								  
+         								   
+      arrow
+      
+      t
+      (
+      )
+      								  
+      
+      unit
+      (
+      )
+      								  
+         								   
+         								   
+      (
+      )
+          								
+     		    				
      )
+     struct
+     (
      							  
      type
      (  						
          							    	 
         t
-        type
-        params=
-        (
-        
-        )
-        cstrs =
-        (
-        )
-        kind =
-        
-        "extendedModulePath1"([],"Diet")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-        (
-        )
-        								  
-        
-        														  
-        														 
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          
+          (
+          								  
+          I
+          (
+          									
+           
+           int
+           (
+           )
+           								  
+          								     
+           
+           int
+           (
+           )
+           								  
+          								     
+          )
+          								    
+          								  
+          D
+          (
+          									
+           
+           int
+           (
+           )
+           								  
+          								     
+           
+           Diet.t
+           (
+           )
+           								  
+          								     
+           
+           int
+           (
+           )
+           								  
+          								     
+          )
+          								    
+          								  
+          )
+          								  
+          														  
+          														 
        											   
      								        
+     )
+     							  
+     let
+     (
+      
+        compare
+                  	   
+      (
+       case
+           (
+        		
+        		 x1
+        		(
+        		 case
+        		     (
+        		 	  x2
+        		      0
+        		     )
+        		)
+        		    		   
+           )
+      )
+                  	    
      )
      							  
      let
@@ -608,13 +506,61 @@
        case
            (
        	  f
-            Diet.iter
             (
-                Elt.iter
+             
+             case
+             (
+               
+               I
+               
+               (
+                l
+                    						 
+               	r
+               
+               )
+               									  
+               
+                for i
+                l
+                r
+                f
                 (
-                    f
+                    i
                 )
+                   														  
+             ) 
+             	        											 
+               
+               case
+               (
+                
+                D
+                
+                (
+                 _
+                     						 
+                	d
+                
+                	_
+                
+                )
+                									  
+                
+                Diet.iter
+                (
+                    iter
+                    (
+                        f
+                    )
+                    d
+                )
+               )
+               													    
+             	        											 
+             	        											 
             )
+               							   
            )
       )
           		    
@@ -622,8 +568,109 @@
      							  
      )
      							  
+   									   
+     "Diet"
+     
+      SET
+       
+       t
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+        
+         tree
+         (
+           
+           Elt.t
+           (
+           )
+           								  
+         )
+         
+            									
+         										 
+         								    
+       
+       elt
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+        
+        Elt.t
+        (
+        )
+        								  
+         										 	
+         								    
+         								    
+     MakeDiet
+     (
+     Elt
+     )
+     								   
+   									   
    )
-   												
+   									   
+   							  
+   type
+   (  						
+       							    	 
+      t
+        type
+        params=
+        (
+        
+        )
+        cstrs =
+        (
+        )
+        kind =
+        
+        Diet.t
+        (
+        )
+        								  
+        
+        														  
+        														 
+     											   
+   								        
+   )
+   							  
+   let
+   (
+    
+     iter
+    (
+     case
+         (
+     	  f
+          Diet.iter
+          (
+              Elt.iter
+              (
+                  f
+              )
+          )
+         )
+    )
+        		    
+   )
+   							  
+   )
+   							  
   )
       										    
                                      

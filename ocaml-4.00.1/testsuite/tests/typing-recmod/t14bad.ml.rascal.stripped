@@ -8,14 +8,14 @@
      type
      (  						
         t
-        type
-        params=
-        (
-        )
-        cstrs =
-        (
-        )
-        kind =
+          type
+          params=
+          (
+          )
+          cstrs =
+          (
+          )
+          kind =
      )
     )    								
    module type T
@@ -26,33 +26,44 @@
      type
      (  						
         t
-        type
-        params=
-        (
-        )
-        cstrs =
-        (
-        )
-        kind =
-        "extendedModulePath1"([],"D")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-        (
-        )
+          type
+          params=
+          (
+          )
+          cstrs =
+          (
+          )
+          kind =
+          D.t
+          (
+          )
      )
     )    								
-   modRec1 
+   rec module
    (
-       U
-       modTypeWith 
+     "U"
+      T
+      modeConsModule1 
+      (
+          D
+          U'
+      )
+     U
+     "U'"
+      S
+       t
+       type
+       params=
        (
-           T
-           modeConsModule1 
-           (
-               D
-               U'
-           )
        )
-       U
-       <"U\'","modTypeWith"("modTypePath"("modTypePath"([],"S")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modConsType1"([],"typeConstr"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"(["extendedModulePath1"([],"U\'")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"modExpModPath"("modulePath"([],"U")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+       cstrs =
+       (
+       )
+       kind =
+        U'.t
+        (
+        )
+     U
    )
    )
 )

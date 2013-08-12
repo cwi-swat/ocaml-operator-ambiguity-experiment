@@ -4,907 +4,586 @@
 >           fun
 >           label=""
 >                     x_init
-12,15c14
-<                     classValue 
-<                     (
-<                         <>
-<                         x
+12c14
+<                      x
 ---
 >                 Pcf_val "x" Mutable Fresh ([3,29+2]..[3,29+24])
-17,21c16
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         get_x
----
->                 method get_x
-23,24c18
-<                     )
-<                     method1 
----
->                                   method move
-26,29c20
-<                         <>
-<                         move
-<                         d
-<                         Array.set
+17d18
+<                       Array.set
+19c20,23
+<                        x
 ---
 >                     case
-31c22,23
-<                          x
----
+>                     (
 >                       d
 >                       Pexp_setinstvar "x"
-96a89,93
+27a32
+>   )
+83a89,93
 >           )
 >       class name = color_point
 >       class expr =
 >           fun
 >           label=""
-97a95,96
+84a95,96
 >             fun
 >             label=""
-102,104d100
+89,91d100
 <      )
 <      class name = color_point
 <      class expr = 
-107,112c103,105
-<                     inheritance 
-<                     (
-<                         <>
-<                         classArgs 
-<                         (
-<                             classPath 
+94,95c103,105
+<                     inherit
+<                      constr classArgs 
 ---
 >                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr point
-114d106
+97,98d106
 <                                 point
-115a108
->                       (
-118,121c111
-<                     )
-<                     classValue 
-<                     (
-<                         <>
+<                                 x
+100a109
+>                           x
+102c111
+<                      c
 ---
 >                                       Pcf_val "c" Immutable Fresh ([20,275+2]..[20,275+11])
-122a113
->                   method color
-125,131d115
-<                     method1 
-<                     (
-<                         <>
-<                         color
-<                         c
-<                     )
-<                  )
-160d143
+135d143
 <       brackets2 
-162a146
+137a146
 >               :
-208d191
+183d191
 <      x_init
-211a195,197
+186a195,197
 >           fun
 >           label=""
 >                     x_init
-214,217c200
-<                     classValue 
-<                     (
-<                         <>
-<                         x
+189c200
+<                      x
 ---
 >                 Pcf_val "x" Mutable Fresh ([35,495+2]..[35,495+24])
-219,223c202
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         get
----
->                 method get
-225,226c204
-<                     )
-<                     method1 
----
->                                   method set
-228,231c206
-<                         <>
-<                         set
-<                         y
-<                         Array.set
+194d204
+<                       Array.set
+196c206,207
+<                        x
 ---
 >                     case
-233c208,209
-<                          x
----
->                       y
+>                     (
+197a209,211
 >                       Pexp_setinstvar "x"
-242a219,223
+>                       y
+>                     )
+204a219,223
 >           )
 >       class name = ref
 >       class expr =
 >           fun
 >           label=""
-247,249d227
+209,211d227
 <      )
 <      class name = ref
 <      class expr = 
-252,255c230
-<                     classValue 
-<                     (
-<                         <>
-<                         x
+214c230
+<                      x
 ---
 >                 Pcf_val "x" Mutable Fresh ([41,600+2]..[41,600+24])
-257,261c232
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         get
----
->                 method get
-263,264c234
-<                     )
-<                     method1 
----
->                                   method set
-266,269c236
-<                         <>
-<                         set
-<                         y
-<                         Array.set
+219d234
+<                       Array.set
+221c236,239
+<                        x
 ---
 >                     case
-271c238,239
-<                          x
----
+>                     (
 >                       y
 >                       Pexp_setinstvar "x"
-281c249
+225a244
+>   )
+230c249
 <      x_init
 ---
 >             "a"
-284a253,255
+233a253,255
 >           fun
 >           label=""
 >                     x_init
-287,290c258
-<                     classValue 
-<                     (
-<                         <>
-<                         x
+236c258
+<                      x
 ---
 >                 Pcf_val "x" Mutable Fresh ([47,704+2]..[47,704+31])
-296,300c264
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         get
----
->                 method get
-302,303c266
-<                     )
-<                     method1 
----
->                                   method set
-305,308c268
-<                         <>
-<                         set
-<                         y
-<                         Array.set
+245d266
+<                       Array.set
+247c268,271
+<                        x
 ---
 >                     case
-310c270,271
-<                          x
----
+>                     (
 >                       y
 >                       Pexp_setinstvar "x"
-346,347c307
+251a276
+>   )
+282,283c307
 <      c
 <      a
 ---
 >             "a"
-350a311,314
+286a311,314
 >           fun
 >           label=""
 >                     c
 >             a
-353,356c317
-<                     classValue 
-<                     (
-<                         <>
-<                         center
+289c317
+<                      center
 ---
 >                 Pcf_val "center" Mutable Fresh ([55,861+2]..[55,861+24])
-358,362c319
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         center
----
->                 method center
-364,365c321
-<                     )
-<                     method1 
----
->                                   method set_center
-367,370c323
-<                         <>
-<                         set_center
-<                         c
-<                         Array.set
+294d321
+<                       Array.set
+296c323,326
+<                        center
 ---
 >                     case
-372c325,326
-<                          center
----
+>                     (
 >                       c
 >                       Pexp_setinstvar "center"
-376,379c330
-<                     method1 
-<                     (
-<                         <>
-<                         move
----
->                                   method move
-396d346
-<    )
-401,402c351
+298a329
+>                   )
+320,321c351
 <      c
 <      a
 ---
 >             "a"
-405a355,358
+324a355,358
 >           fun
 >           label=""
 >                     c
 >             a
-408,409c361
+327,328c361
 <                     classConstraint 
 <                     (
 ---
 >                 Pcf_constr ([62,1034+2]..[62,1034+24])
-411,413c363
+330c363,364
 <                         point
-<                     )
-<                     classValue 
 ---
 >                     Ptyp_class point
-415,417d364
-<                         <>
-<                         center
-<                         c
-419d365
-<                     method1 
-421,423d366
-<                         <>
-<                         center
-<                         center
-425,428c368
-<                     method1 
-<                     (
-<                         <>
-<                         set_center
+>                     (
+332c366,368
+<                      center
 ---
+>                     (
+>                     )
 >                 Pcf_val "center" Mutable Fresh ([63,1059+2]..[63,1059+24])
-430,431c370
-<                         Array.set
-<                         (
+337d372
+<                       Array.set
+339c374,377
+<                        center
 ---
->                 method center
-432a372,377
->                                   method set_center
->                   (
 >                     case
 >                     (
 >                       c
 >                       Pexp_setinstvar "center"
-436,439c381
-<                     method1 
-<                     (
-<                         <>
-<                         move
----
->                                   method move
-446d387
-<    )
-468c409
+341a380
+>                   )
+370c409
 <      c
 ---
 >             "a"
-471a413,415
+373a413,415
 >           fun
 >           label=""
 >                     c
-474,475c418
+376,377c418
 <                     classConstraint 
 <                     (
 ---
 >                 Pcf_constr ([72,1262+2]..[72,1262+30])
-477,479c420
+379c420,421
 <                         color_point
-<                     )
-<                     inheritance 
 ---
 >                     Ptyp_class color_point
-481,482c422
-<                         <>
-<                         classArgs 
----
->                     )
-484,485d423
-<                             <"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[],"classPath"([],"circle")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-<                             c
-486a425,429
+>                     (
+381,382d422
+<                     inherit
+<                      constr classArgs 
+384,385d423
+<                                 <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"circle")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+<                                 c
+386a425,427
 >                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr circle
->                       (
+387a429,432
 >                           a
-488d430
-<                     method1 
-490,491c432,434
-<                         <>
-<                         color
----
+>                       )
+>                     (
 >                         c
->                     )
->                                   method color
-498d440
-<    )
-515d456
+412d456
 <   brackets2 
-517a459
+414a459
 >   :
-525d466
+422d466
 <   brackets2 
-527a469
+424a469
 >   :
-539d480
+436d480
 <    brackets3 
-541a483
+438a483
 >       :
-561d502
+458d502
 <      y
-564a506,508
+461a506,508
 >           fun
 >           label=""
 >                     y
-567,570c511,513
-<                     inheritance 
-<                     (
-<                         <>
-<                         classArgs 
+464,465c511,513
+<                     inherit
+<                      constr classArgs 
 ---
 >                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr point
-572,574d514
-<                             classPath 
-<                             (
+467,468d514
 <                                 point
-575a516
->                     (
-578,582c519
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         print
----
->                                   method print
-592d528
-<    )
-609,610d544
+<                                 y
+470a517
+>                         y
+498,499d544
 <      y
 <      c
-613a548,553
+502a548,553
 >           fun
 >           label=""
 >                     y
 >             fun
 >             label=""
 >                         c
-616,619c556,558
-<                     inheritance 
-<                     (
-<                         <>
-<                         classArgs 
+505,506c556,560
+<                     inherit
+<                      constr classArgs 
 ---
 >                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr color_point
-621,623d559
-<                             classPath 
-<                             (
+>                         (
+>                         )
+508d561
 <                                 color_point
-624a561
->                       (
-628,629c565,567
-<                     )
-<                     inheritance 
----
+511a565,567
 >                                       Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr printable_point
-631,636d568
-<                         <>
-<                         classArgs 
-<                         (
-<                             classPath 
-<                             (
+514,515d569
+<                     inherit
+<                      constr classArgs 
+517d570
 <                                 printable_point
-637a570
->                       (
-640,645c573,574
-<                         super
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         print
+520,521c573
+<                      (
+<                      )
 ---
 >                       "super"
->                   method print
-687d615
-<    )
-705d632
+581d632
 <      y
-708a636,638
+584a636,638
 >           fun
 >           label=""
 >                     y
-711,714c641
-<                     classValue 
-<                     (
-<                         <>
-<                         x
+587c641
+<                      x
 ---
 >                 Pcf_val "x" Immutable Fresh ([107,2039+2]..[107,2039+11])
-716,720c643
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         get_x
+592d645
+<                       brackets4 
+594c647,652
+<                           x
 ---
->                 method get_x
-722,723c645,647
-<                     )
-<                     method1 
----
->                                   method move
->                   (
 >                     case
-725,726d648
-<                         <>
-<                         move
-728c650
-<                         brackets4 
----
+>                     (
+>                       d
 >                       Pexp_override
-730c652
-<                             x
----
+>                       (
 >                         <override> "x"
-739a662
+602a661,662
+>                                 )
 >   )
-770d692
+633d692
 <    brackets2 
-772a695
+635a695
 >       :
-783c706
+646c706
 <      ()
 ---
 >             "a"
-786a710,712
+649a710,712
 >           fun
 >           label=""
 >                     ()
-789,791c715
-<                     method3 
-<                     (
-<                         null
+652c715
+<                     method null
 ---
 >                 Pcf_virt "null" Public ([123,2334+2]..[123,2334+28])
-796,799c720
-<                     )
-<                     method3 
-<                     (
-<                         hd
+657c720
+<                     method hd
 ---
 >                 Pcf_virt "hd" Public ([124,2363+2]..[124,2363+24])
-802,805c723
-<                     )
-<                     method3 
-<                     (
-<                         tl
+660c723
+<                     method tl
 ---
 >                 Pcf_virt "tl" Public ([125,2388+2]..[125,2388+28])
-811,812c729,731
-<                     )
-<                     method1 
----
->                 method map
->                   (
+667a731,734
 >                     case
-814,815d732
-<                         <>
-<                         map
-865c782,785
-<                     method1 
----
+>                     (
+>                       f
+>                       (
+713a781,782
+>                     )
 >                   )
->                                   method iter
+714a784,792
 >                   (
 >                     case
-867,868d786
-<                         <>
-<                         iter
-914c832,835
-<                     method1 
----
+>                     (
+>                       f
+>                         arrow
+>                           a
+>                            unit
+>                           (
+>                           )
+752a831,832
+>                     )
 >                   )
->                                   method print
+753a834,842
 >                   (
 >                     case
-916,917d836
-<                         <>
-<                         print
-973a893
+>                     (
+>                       f
+>                         arrow
+>                           a
+>                            unit
+>                           (
+>                           )
+802a892,893
+>                   )
 >                                 )
-976c896
+805c896
 <      ()
 ---
 >             "a"
-979a900,902
+808a900,902
 >           fun
 >           label=""
 >                     ()
-982c905,907
-<                     inheritance 
+811,812c905,907
+<                     inherit
+<                      constr classArgs 
 ---
 >                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr lst
-984,985c909,910
-<                         <>
-<                         classArgs 
+814,815c909
+<                                 <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+<                                 ()
 ---
 >                           a
->                       )
-987d911
-<                             <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-990,994c914
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         null
----
->                                   method null
-996,1000c916
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         hd
----
->                                                     method hd
-1005,1009c921
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         tl
----
->                                   method tl
-1015d926
-<                  )
-1018,1019c929
+817a912
+>                         ()
+834,835c929
 <      h
 <      t
 ---
 >             "a"
-1022a933,938
+838a933,938
 >           fun
 >           label=""
 >                     h
 >             fun
 >             label=""
 >                         t
-1025c941,943
-<                     inheritance 
+841,842c941,943
+<                     inherit
+<                      constr classArgs 
 ---
 >                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr lst
-1027,1028c945,946
-<                         <>
-<                         classArgs 
+844,845c945
+<                                 <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+<                                 ()
 ---
 >                             a
->                         )
-1030d947
-<                             <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-1033,1037c950
-<                     )
-<                     classValue 
-<                     (
-<                         <>
-<                         h
----
+847a948
+>                           ()
+848a950
 >                                       Pcf_val "h" Immutable Fresh ([150,2997+2]..[150,2997+11])
-1039,1042c952
-<                     )
-<                     classValue 
-<                     (
-<                         <>
+850,851c952
+<                      h
+<                      t
 ---
 >                   Pcf_val "t" Immutable Fresh ([150,2997+12]..[150,2997+21])
-1044,1049c954
-<                         t
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         null
----
->                   method null
-1051,1055c956
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         hd
----
->                                                           method hd
-1057,1061c958
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         tl
----
->                                       method tl
-1065d961
-<    )
-1214d1109
+1009d1109
 <      ()
-1217a1113,1115
+1012a1113,1115
 >           fun
 >           label=""
 >                     ()
-1220,1222c1118
-<                     method3 
-<                     (
-<                         leq
+1015c1118
+<                     method leq
 ---
 >                 Pcf_virt "leq" Public ([173,3539+2]..[173,3539+33])
-1231d1126
-<    )
-1235a1131,1135
+1027a1131,1135
 >           )
 >       class name = int_comparable
 >       class expr =
 >           fun
 >           label=""
-1240,1242d1139
+1032,1034d1139
 <      )
 <      class name = int_comparable
 <      class expr = 
-1245c1142,1144
-<                     inheritance 
+1037,1038c1142,1144
+<                     inherit
+<                      constr classArgs 
 ---
 >                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr comparable
-1247,1252d1145
-<                         <>
-<                         classArgs 
-<                         (
-<                             classPath 
-<                             (
+1040,1041d1145
 <                                 comparable
-1253a1147
->                     (
-1256,1259c1150
-<                     )
-<                     classValue 
-<                     (
-<                         <>
+<                                 ()
+1043a1148
+>                         ()
+1045c1150
+<                      x
 ---
 >                                   Pcf_val "x" Immutable Fresh ([178,3646+2]..[178,3646+11])
-1260a1152
->                 method x
-1262,1263c1154
-<                     )
-<                     method1 
----
->                                   method leq
-1265,1269c1156
-<                         <>
-<                         x
-<                         x
-<                     )
-<                     method1 
----
+1049a1155,1158
+>                   (
 >                     case
-1271,1272d1157
-<                         <>
-<                         leq
-1284a1170
+>                     (
+>                       p
+1059a1169,1170
+>                                 )
 >   )
-1289d1174
+1064d1174
 <      xi
-1292a1178,1180
+1067a1178,1180
 >           fun
 >           label=""
 >                     xi
-1295,1300c1183,1185
-<                     inheritance 
-<                     (
-<                         <>
-<                         classArgs 
-<                         (
-<                             classPath 
+1070,1071c1183,1185
+<                     inherit
+<                      constr classArgs 
 ---
 >                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr int_comparable
-1302,1304d1186
+1073,1074d1186
 <                                 int_comparable
-<                             )
-<                             xi
-1306,1307d1187
-<                     )
-<                     classValue 
-1309,1310d1188
-<                         <>
-<                         x'
-1313c1191,1193
-<                     method1 
+<                                 xi
+1076a1189
+>                         xi
+1078c1191
+<                      x'
 ---
 >                                   Pcf_val "x'" Mutable Fresh ([185,3768+2]..[185,3768+21])
->                   xi
->                 method set_x
-1315,1318c1195
-<                         <>
-<                         set_x
-<                         y
-<                         Array.set
+1081d1193
+<                       Array.set
+1083c1195,1198
+<                        x'
 ---
 >                     case
-1320c1197,1198
-<                          x'
----
+>                     (
 >                       y
 >                       Pexp_setinstvar "x'"
-1330c1208
+1087a1203
+>   )
+1092c1208
 <      ()
 ---
 >             "a"
-1333a1212,1214
+1095a1212,1214
 >           fun
 >           label=""
 >                     ()
-1336,1337c1217
+1098,1099c1217
 <                     classConstraint 
 <                     (
 ---
 >                 Pcf_constr ([190,3859+2]..[190,3859+29])
-1339c1219,1220
+1101c1219,1220
 <                         comparable
 ---
 >                     Ptyp_class comparable
 >                     (
-1341d1221
-<                     classValue 
-1343,1344c1223,1224
-<                         <>
-<                         l
+1103c1222,1224
+<                      l
 ---
+>                     (
 >                     )
 >                 Pcf_val "l" Mutable Fresh ([191,3889+2]..[191,3889+32])
-1353,1354c1233,1235
-<                     )
-<                     method1 
----
->                 method add
+1112a1234,1237
 >                   (
 >                     case
-1356,1357d1236
-<                         <>
-<                         add
-1375,1376c1254
-<                                alias l'
-<                                (
+>                     (
+>                       x
+1129,1130c1254
+<                              alias l'
+<                              (
 ---
 >                                 Ppat_alias "l'"
-1382d1259
-<                                )
-1419,1421c1296
-<                           Array.set
-<                           (
-<                            l
+1136d1259
+<                              )
+1173,1175c1296
+<                         Array.set
+<                         (
+<                          l
 ---
 >                         Pexp_setinstvar "l"
-1429,1432c1304
-<                     method1 
-<                     (
-<                         <>
-<                         hd
----
->                                   method hd
-1439d1310
-<    )
-1476d1346
+1181a1303
+>                   )
+1225d1346
 <       brackets2 
-1478a1349
+1227a1349
 >       :
-1497a1369,1373
+1246a1369,1373
 >           )
 >       class name = int_comparable3
 >       class expr =
 >           fun
 >           label=""
-1502,1504d1377
+1251,1253d1377
 <      )
 <      class name = int_comparable3
 <      class expr = 
-1507,1509c1380
-<                     classValue 
-<                     (
-<                         <>
+1256c1380
+<                      x
 ---
 >                 Pcf_val "x" Mutable Fresh ([211,4379+2]..[211,4379+19])
-1511,1513c1382,1384
-<                         x
-<                     )
-<                     method1 
----
->                 method leq
+1258a1383,1389
 >                   (
 >                     case
-1515,1516d1385
-<                         <>
-<                         leq
-1530,1534d1398
-<                     method1 
-<                     (
-<                         <>
-<                         x
-<                         x
-1536c1400,1402
-<                     method1 
----
->                                   method x
->                   x
->                                   method setx
-1538,1541c1404
-<                         <>
-<                         setx
-<                         y
-<                         Array.set
+>                     (
+>                       y
+>                          int_comparable
+>                         (
+>                         )
+1266a1398,1399
+>                     )
+>                   )
+1270d1402
+<                       Array.set
+1272c1404,1407
+<                        x
 ---
 >                     case
-1543c1406,1407
-<                          x
----
+>                     (
 >                       y
 >                       Pexp_setinstvar "x"
-1562d1425
+1276a1412
+>   )
+1290d1425
 <       brackets2 
-1564a1428
+1292a1428
 >       :
-1589c1453,1457
+1317c1453,1457
 <      	     comparable
 ---
 >                 Ptyp_class comparable
@@ -912,11 +591,11 @@
 >                 )
 >                 (
 >                 )
-1662d1529
+1390d1529
 <       brackets2 
-1667a1535
+1395a1535
 >               :
-1731c1599,1603
+1459c1599,1603
 <       		 comparable
 ---
 >             Ptyp_class comparable
@@ -924,166 +603,110 @@
 >             )
 >             (
 >             )
-1794,1795c1666
+1522,1523c1666
 <      x
 <      a
 ---
 >             "a"
-1798a1670,1673
+1526a1670,1673
 >           fun
 >           label=""
 >                     x
 >             a
-1801,1803c1676
-<                     classValue 
-<                     (
-<                         <>
----
+1528a1676
 >                 Pcf_val "x" Mutable Fresh ([242,5288+2]..[242,5288+19])
-1805,1810c1678
-<                         x
-<                     )
-<                     classValue 
-<                     (
-<                         <>
-<                         next
+1530,1531c1678
+<                      x
+<                      next
 ---
 >                 Pcf_val "next" Mutable Fresh ([243,5308+2]..[243,5308+39])
-1819,1823c1687
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         x
----
->                 method x
-1825,1828c1689
-<                     )
-<                     method1 
-<                     (
-<                         <>
----
->                                   method next
-1830,1832c1691
-<                         next
-<                     )
-<                     method1 
----
->                                   method set_x
-1834,1837c1693
-<                         <>
-<                         set_x
-<                         y
-<                         Array.set
+1545d1691
+<                       Array.set
+1547c1693,1696
+<                        x
 ---
 >                     case
-1839c1695,1696
-<                          x
----
+>                     (
 >                       y
 >                       Pexp_setinstvar "x"
-1843c1700
-<                     method1 
----
->                                   method set_next
-1845,1848c1702
-<                         <>
-<                         set_next
-<                         l
-<                         Array.set
+1549a1699
+>                   )
+1551d1700
+<                       Array.set
+1553c1702,1703
+<                        next
 ---
 >                     case
-1850c1704,1705
-<                          next
----
->                       l
+>                     (
+1554a1705,1707
 >                       Pexp_setinstvar "next"
-1854c1709,1711
-<                     method1 
----
->                                   method append
+>                       l
+>                     )
+1556a1710,1713
 >                   (
 >                     case
-1856,1857d1712
-<                         <>
-<                         append
-1888a1744
+>                     (
+>                       l
+1585a1743,1744
+>                                 )
 >   )
-1893c1749
+1590c1749
 <      x
 ---
 >             "a"
-1896a1753,1755
+1593a1753,1755
 >           fun
 >           label=""
 >                     x
-1899c1758,1760
-<                     inheritance 
+1596,1597c1758,1760
+<                     inherit
+<                      constr classArgs 
 ---
 >                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr link
-1901,1902c1762,1763
-<                         <>
-<                         classArgs 
+1599,1600c1762
+<                                 <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"link")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+<                                 x
 ---
 >                           a
->                       )
-1904d1764
-<                             <"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[],"classPath"([],"link")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-1907,1911c1767
-<                     )
-<                     classValue 
-<                     (
-<                         <>
-<                         prev
+1602a1765
+>                         x
+1604c1767
+<                      prev
 ---
 >                                   Pcf_val "prev" Mutable Fresh ([258,5631+2]..[258,5631+25])
-1913,1916c1769
-<                     )
-<                     method1 
-<                     (
-<                         <>
----
->                                   method prev
-1918,1920c1771,1773
-<                         prev
-<                     )
-<                     method1 
----
->                                   method set_next
->                   (
->                     case
-1922,1923d1774
-<                         <>
-<                         set_next
-1927,1929c1778
-<                           Array.set
-<                           (
-<                            next
----
->                         Pexp_setinstvar "next"
-1931d1779
-<                           )
-1957c1805,1806
-<                     method1 
----
->                   )
->                                   method set_prev
-1959,1962c1808
-<                         <>
-<                         set_prev
-<                         l
+1609d1771
+<                       sequence
+1611c1773
 <                         Array.set
 ---
 >                     case
-1964c1810,1811
-<                          prev
+1613d1774
+<                          next
+1615c1776,1779
+<                         )
 ---
+>                       sequence
+>                       (
+>                         Pexp_setinstvar "next"
+>                         l
+1639a1804,1805
+>                     )
+>                   )
+1641d1806
+<                       Array.set
+1643c1808,1811
+<                        prev
+---
+>                     case
+>                     (
 >                       l
 >                       Pexp_setinstvar "prev"
-1983c1830,1835
-<       		  		    <"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"classPath"([],"link")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+1647a1816
+>   )
+1661c1830,1835
+<       		  		    <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"link")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
 ---
 >                     Ptyp_class link
 >                     (
@@ -1091,207 +714,120 @@
 >                     )
 >                     (
 >                     )
-2030d1881
+1708d1881
 <      ()
-2033a1885,1887
+1711a1885,1887
 >           fun
 >           label=""
 >                     ()
-2036,2039c1890
-<                     classValue 
-<                     (
-<                         <>
-<                         arg
+1714c1890
+<                      arg
 ---
 >                 Pcf_val "arg" Mutable Fresh ([275,6074+2]..[275,6074+22])
-2041,2045c1892
-<                     )
-<                     classValue 
-<                     (
-<                         <>
-<                         acc
+1716c1892
+<                      acc
 ---
 >                 Pcf_val "acc" Mutable Fresh ([276,6097+2]..[276,6097+22])
-2047,2051c1894
-<                     )
-<                     classValue 
-<                     (
-<                         <>
-<                         equals
+1718c1894
+<                      equals
 ---
 >                 Pcf_val "equals" Mutable Fresh ([277,6120+2]..[277,6120+42])
-2062,2065c1905
-<                     )
-<                     method1 
-<                     (
-<                         <>
+1734d1909
+<                       sequence
+1736c1911,1914
+<                         Array.set
 ---
->                 method arg
-2067,2072c1907
-<                         arg
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         acc
----
->                                   method acc
-2074,2075c1909,1911
-<                     )
-<                     method1 
----
->                                   method enter
->                   (
 >                     case
-2077,2078d1912
-<                         <>
-<                         enter
-2082,2084c1916
-<                           Array.set
-<                           (
-<                            arg
+>                     (
+>                       n
+>                       sequence
+1738c1916
+<                          arg
 ---
 >                         Pexp_setinstvar "arg"
-2086d1917
-<                           )
-2091,2094c1922,1923
-<                     method1 
-<                     (
-<                         <>
-<                         add
----
+1740d1917
+<                         )
+1743a1921,1922
+>                     )
 >                   )
->                                   method add
-2097,2099c1926
-<                           Array.set
-<                           (
-<                            acc
+1747,1749c1926
+<                         Array.set
+<                         (
+<                          acc
 ---
 >                     Pexp_setinstvar "acc"
-2104d1930
-<                           )
-2108,2110c1934
-<                             Array.set
-<                             (
-<                              equals
----
->                       Pexp_setinstvar "equals"
-2128d1951
-<                             )
-2133,2137c1956
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         sub
----
->                                   method sub
-2140,2142c1959
+1754d1930
+<                         )
+1758,1760c1934
 <                           Array.set
 <                           (
-<                            acc
----
->                     Pexp_setinstvar "acc"
-2147d1963
-<                           )
-2151,2153c1967
-<                             Array.set
-<                             (
-<                              equals
+<                            equals
 ---
 >                       Pexp_setinstvar "equals"
-2171d1984
-<                             )
-2176,2180c1989
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         equals
+1778d1951
+<                           )
+1786,1788c1959
+<                         Array.set
+<                         (
+<                          acc
 ---
->                                   method equals
-2187d1995
-<    )
-2246d2053
+>                     Pexp_setinstvar "acc"
+1793d1963
+<                         )
+1797,1799c1967
+<                           Array.set
+<                           (
+<                            equals
+---
+>                       Pexp_setinstvar "equals"
+1817d1984
+<                           )
+1887d2053
 <      ()
-2249a2057,2059
+1890a2057,2059
 >           fun
 >           label=""
 >                     ()
-2252,2255c2062
-<                     classValue 
-<                     (
-<                         <>
-<                         arg
+1893c2062
+<                      arg
 ---
 >                 Pcf_val "arg" Mutable Fresh ([297,6641+2]..[297,6641+22])
-2257,2261c2064
-<                     )
-<                     classValue 
-<                     (
-<                         <>
-<                         acc
+1895c2064
+<                      acc
 ---
 >                 Pcf_val "acc" Mutable Fresh ([298,6664+2]..[298,6664+22])
-2263,2267c2066
-<                     )
-<                     classValue 
-<                     (
-<                         <>
-<                         equals
+1897c2066
+<                      equals
 ---
 >                 Pcf_val "equals" Mutable Fresh ([299,6687+2]..[299,6687+42])
-2278,2281c2077
-<                     )
-<                     method1 
-<                     (
-<                         <>
+1913d2081
+<                       sequence
+1915c2083
+<                         Array.set
 ---
->                 method arg
-2283,2288c2079
-<                         arg
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         acc
----
->                                   method acc
-2290,2291c2081,2083
-<                     )
-<                     method1 
----
->                                   method enter
->                   (
 >                     case
-2293,2294d2084
-<                         <>
-<                         enter
-2298,2300c2088
-<                           Array.set
-<                           (
-<                            arg
+1917d2084
+<                          arg
+1919c2086,2089
+<                         )
 ---
+>                       sequence
+>                       (
 >                         Pexp_setinstvar "arg"
-2302d2089
-<                           )
-2307,2311c2094,2096
-<                     method1 
-<                     (
-<                         <>
-<                         add
-<                         brackets4 
----
+>                         n
+1922a2093,2094
+>                     )
 >                   )
->                                   method add
+1924c2096
+<                       brackets4 
+---
 >                   Pexp_override
-2313c2098
-<                             acc
+1926c2098
+<                           acc
 ---
 >                     <override> "acc"
-2318,2319c2103,2112
-<                             <"equals","function"("patternMatching"([],"patternValueName"("s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"+.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-<                         )
+1931c2103,2120
+<                           <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"+.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
 ---
 >                     <override> "equals"
 >                       (
@@ -1303,30 +839,24 @@
 >                               send acc
 >                               (
 >                                 s
-2321c2114
-<                     method1 
----
+>                               )
 >                               send arg
-2323,2325c2116,2123
-<                         <>
-<                         sub
-<                         brackets4 
----
+>                               (
 >                                 s
 >                               )
 >                           )
 >                         )
 >                       )
->                   )
->                                   method sub
+1934c2123
+<                       brackets4 
+---
 >                   Pexp_override
-2327c2125
-<                             acc
+1936c2125
+<                           acc
 ---
 >                     <override> "acc"
-2332,2333c2130,2139
-<                             <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"-.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-<                         )
+1941c2130,2147
+<                           <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"-.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
 ---
 >                     <override> "equals"
 >                       (
@@ -1338,171 +868,100 @@
 >                               send acc
 >                               (
 >                                 s
-2335c2141
-<                     method1 
----
+>                               )
 >                               send arg
-2337,2338c2143,2149
-<                         <>
-<                         equals
----
+>                               (
 >                                 s
 >                               )
 >                           )
 >                         )
 >                       )
->                   )
->                                   method equals
-2345d2155
-<    )
-2404,2405d2213
+2008,2009d2213
 <      arg
 <      acc
-2408a2217,2222
+2012a2217,2222
 >           fun
 >           label=""
 >                     arg
 >             fun
 >             label=""
 >                         acc
-2411,2413c2225
-<                     classValue 
-<                     (
-<                         <>
----
+2014a2225
 >                   Pcf_val "arg" Immutable Fresh ([313,7181+2]..[313,7181+15])
-2415,2420c2227
-<                         arg
-<                     )
-<                     classValue 
-<                     (
-<                         <>
-<                         acc
+2016,2017c2227
+<                      arg
+<                      acc
 ---
 >                   Pcf_val "acc" Immutable Fresh ([314,7197+2]..[314,7197+15])
-2422,2423c2229,2231
-<                     )
-<                     method1 
----
->                   method enter
+2019a2230,2233
 >                     (
 >                       case
-2425,2426d2232
-<                         <>
-<                         enter
-2434,2437c2240,2241
-<                     method1 
-<                     (
-<                         <>
-<                         add
----
+>                       (
+>                         n
+2024a2239,2240
+>                       )
 >                     )
->                                       method add
-2446,2450c2250
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         sub
----
->                                       method sub
-2459,2463c2259
-<                     )
-<                     method1 
-<                     (
-<                         <>
-<                         equals
----
->                                       method equals
-2466d2261
-<                  )
-2469,2470d2263
+2048,2049d2263
 <      arg
 <      acc
-2473a2267,2272
+2052a2267,2272
 >           fun
 >           label=""
 >                     arg
 >             fun
 >             label=""
 >                         acc
-2476c2275,2277
-<                     inheritance 
+2055,2056c2275,2277
+<                     inherit
+<                      constr classArgs 
 ---
 >                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr calculator
-2478,2483d2278
-<                         <>
-<                         classArgs 
-<                         (
-<                             classPath 
-<                             (
+2058,2060d2278
 <                                 calculator
-2484a2280
->                       (
-2488,2489c2284,2286
-<                     )
-<                     method1 
----
->                                       method enter
+<                                 arg
+<                                 acc
+2062a2281,2282
+>                           arg
+>                           acc
+2064a2285,2288
 >                     (
 >                       case
-2491,2492d2287
-<                         <>
-<                         enter
-2500,2503c2295,2296
-<                     method1 
-<                     (
-<                         <>
-<                         equals
----
+>                       (
+>                         n
+2069a2294,2295
+>                       )
 >                     )
->                                       method equals
-2510d2302
-<                  )
-2513,2514d2304
+2079,2080d2304
 <      arg
 <      acc
-2517a2308,2313
+2083a2308,2313
 >           fun
 >           label=""
 >                     arg
 >             fun
 >             label=""
 >                         acc
-2520c2316,2318
-<                     inheritance 
+2086,2087c2316,2318
+<                     inherit
+<                      constr classArgs 
 ---
 >                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr calculator
-2522,2527d2319
-<                         <>
-<                         classArgs 
-<                         (
-<                             classPath 
-<                             (
+2089,2091d2319
 <                                 calculator
-2528a2321
->                       (
-2532,2533c2325,2327
-<                     )
-<                     method1 
----
->                                       method enter
+<                                 arg
+<                                 acc
+2093a2322,2323
+>                           arg
+>                           acc
+2095a2326,2329
 >                     (
 >                       case
-2535,2536d2328
-<                         <>
-<                         enter
-2544,2547c2336,2337
-<                     method1 
-<                     (
-<                         <>
-<                         equals
----
+>                       (
+>                         n
+2100a2335,2336
+>                       )
 >                     )
->                                       method equals
-2555d2344
-<    )

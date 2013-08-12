@@ -1,27 +1,44 @@
 (
-  classTypeDef 
+  class_type
   (
-      classTypeDefinition 
+    class_type_declaration
+    params = 
+    (
+      "node"
+    ) 
+    name = extension
+    expr =
+     class_type
+     signature
+     class_signature
+     (
+      fieldSpec3 
       (
-          classTypeDef 
-          (
-              <"node",[]>
-              extension
-              <[],[<[],[],"node","tagg"("node")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>]>
-          )
+          node
+          poly
+          node
       )
+     )
   )
-  classTypeDef 
+  class_type
   (
-      classTypeDefinition 
+    class_type_declaration
+    params = 
+    (
+      "ext"
+    ) 
+    name = node
+    expr =
+     class_type
+     signature
+     class_signature
+     (
+      fieldSpec4 
       (
-          classTypeDef 
-          (
-              <"ext",[]>
-              node
-              <[],[<"tagg"("ext")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],<"typexprConstr1"("tagg"("ext")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"node")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"extension")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>>]>
-          )
+          ext
+          <"typexprConstr1"("tagg"("ext")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"node")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"extension")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
       )
+     )
   )
   class
   (
@@ -33,25 +50,25 @@
                 class_structure
                 (
                    method node
-                         assert false
+                     assert false
                 )
   )
   type
   (  						
      t
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-      node
-      (
-        x
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+        node
         (
+          x
+          (
+          )
         )
-      )
   )
 )

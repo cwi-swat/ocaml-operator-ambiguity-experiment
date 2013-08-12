@@ -1,16 +1,16 @@
 
 (
     								 
-  modRec1 
+  rec module
   (
-      A
-      signature
-      (
-      		    				
-       type
-       (  						
-           							    	 
-          t
+    "A"
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
           type
           params=
           (
@@ -20,27 +20,33 @@
           (
           )
           kind =
-         (
           arrow
-          "extendedModulePath1"([],"B")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+          
+          B.t
+          (
+          )
+          								  
+          
           int
+          (
+          )
+          								  
              								   
           
           														  
           														 
-         )
-         											   
-       								        
-       )
-      		    				
-      )
-      struct
-      (
-      							  
-      type
-      (  						
-          							    	 
-         t
+       											   
+     								        
+     )
+    		    				
+    )
+    struct
+    (
+    							  
+    type
+    (  						
+        							    	 
+       t
          type
          params=
          (
@@ -50,22 +56,90 @@
          (
          )
          kind =
-        (
          arrow
-         "extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+         
+         B.t
+         (
+         )
+         								  
+         
          int
+         (
+         )
+         								  
             								   
          
          														  
          														 
-        )
-        											   
-      								        
-      )
-      							  
-      )
-      							  
-      <"B","sig"([<"typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"A")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],[])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[]>])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"struct2"(["typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],[])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+      											   
+    								        
+    )
+    							  
+    )
+    							  
+  									   
+    "B"
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          A.t
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+    )
+    struct
+    (
+    							  
+    type
+    (  						
+        							    	 
+       t
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         A.t
+         (
+         )
+         								  
+         
+         														  
+         														 
+      											   
+    								        
+    )
+    							  
+    )
+    							  
+  									   
   )
+  									   
                                      
 )

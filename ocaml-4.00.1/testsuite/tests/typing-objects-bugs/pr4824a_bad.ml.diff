@@ -1,0 +1,40 @@
+9d8
+<      x
+12a12,14
+>                 fun
+>                 label=""
+>                                 x
+37,40c39
+<       		 fieldSpec2 
+<       		 (
+<       		     x
+<       		     poly
+---
+>                         Pctf_val "x" Immutable Concrete ([1,0+38]..[1,0+48])
+45d43
+<    )
+49a48,52
+>           )
+>       class name = c
+>       class expr =
+>           fun
+>           label=""
+54,56d56
+<     )
+<     class name = c
+<     class expr = 
+60c60,61
+<                     constr classArgs 
+---
+>                     Pcl_apply
+>                       constr M.c
+62,63d62
+<                                M.c
+<                                x
+65a65
+>                         x
+68a69,72
+>                       poly
+>                          bool
+>                         (
+>                         )

@@ -56,7 +56,7 @@
         )
       )
   )
-  Pstr_recmodule
+  rec module
   (
     "A"
         signature
@@ -206,11 +206,9 @@
           )
         )
     "ASet"
-        Pmty_with
           Set.S
         (
           elt
-            Pwith_type
               type
                 params =
                   (
@@ -332,7 +330,7 @@
       )
     )
   )
-  Pstr_recmodule
+  rec module
   (
     "Fib"
         signature
@@ -410,7 +408,7 @@
       )
       89
   )
-  Pstr_recmodule
+  rec module
   (
     "Fib2"
         signature
@@ -508,7 +506,7 @@
         (
           struct
           (
-            Pstr_recmodule
+            rec module
             (
               "Bad"
                   signature
@@ -579,7 +577,7 @@
         true
             )
   )
-  Pstr_recmodule
+  rec module
   (
     "After"
         signature
@@ -630,7 +628,7 @@
       After.x
       4
   )
-  Pstr_recmodule
+  rec module
   (
     "Strengthen"
         signature
@@ -720,7 +718,7 @@
           )
         )
   )
-  Pstr_recmodule
+  rec module
   (
     "Strengthen2"
         signature
@@ -870,7 +868,7 @@
                   )
                             )
             )
-          Pstr_recmodule
+          rec module
           (
             "R"
                 signature
@@ -929,7 +927,7 @@
           )
         )
   )
-  Pstr_recmodule
+  rec module
   (
     "PolyRec"
         signature
@@ -1079,7 +1077,7 @@
     (
       String
     )
-  Pstr_recmodule
+  rec module
   (
     "Expr"
         signature
@@ -1853,7 +1851,6 @@
       functor Element
       (
         ORDERED
-        Pmty_with
           HEAP
         (
           Elem
@@ -1867,7 +1864,7 @@
           (
             module Elem
               Element
-            Pstr_recmodule
+            rec module
             (
               "BE"
                   signature
@@ -2187,11 +2184,9 @@
                     )
                   )
               "PrimH"
-                  Pmty_with
                     HEAP
                   (
                     Elem.t
-                      Pwith_type
                         type
                           params =
                             (
@@ -2283,18 +2278,22 @@
                           case
                           (
                             (
-                              Ppat_alias "h1"
-                              BE.H
-                                (
-                                  e1
-                                  p1
-                                )
-                              Ppat_alias "h2"
-                              BE.H
-                                (
-                                  e2
-                                  p2
-                                )
+                              alias h1
+                              (
+                                BE.H
+                                  (
+                                    e1
+                                    p1
+                                  )
+                              )
+                              alias h2
+                              (
+                                BE.H
+                                  (
+                                    e2
+                                    p2
+                                  )
+                              )
                             )
                             ifthenelse
                             (
@@ -2466,7 +2465,6 @@
                 )
             )
           )
-          Pmty_with
             HEAP
           (
             Elem
@@ -2807,7 +2805,6 @@
               )
           )
         )
-        Pmty_with
           HEAP
         (
           Elem
@@ -2938,24 +2935,23 @@
       )
     )
   )
-  Pstr_recmodule
+  rec module
   (
     "Class1"
         signature
         (
             sig_class
             (
-              class_description ([376,9186+12]..[376,9186+48])
-                pci_virt = Concrete
-                pci_params =
+              class_description
+                params =
                     (
                     )
-                pci_name = "c"
-                pci_expr =
-                  class_type ([376,9186+16]..[376,9186+48])
-                    Pcty_signature
+                name = c
+                expr =
+                  class_type
+                    signature
                     class_signature
-                        Ptyp_any
+                        
                       (
                         Pctf_meth "m" Public ([376,9186+23]..[376,9186+44])
                             poly
@@ -3022,17 +3018,16 @@
         (
             sig_class
             (
-              class_description ([386,9388+12]..[386,9388+48])
-                pci_virt = Concrete
-                pci_params =
+              class_description
+                params =
                     (
                     )
-                pci_name = "d"
-                pci_expr =
-                  class_type ([386,9388+16]..[386,9388+48])
-                    Pcty_signature
+                name = d
+                expr =
+                  class_type
+                    signature
                     class_signature
-                        Ptyp_any
+                        
                       (
                         Pctf_meth "m" Public ([386,9388+23]..[386,9388+44])
                             poly
@@ -3059,11 +3054,10 @@
               class expr =
                   class_structure
                     (
-                      Pcf_inher Fresh
+                      inherit
                           constr Class1.c
                           (
                           )
-                          "super"
                       method m
                         (
                           case
@@ -3102,24 +3096,23 @@
   (
     struct
     (
-      Pstr_recmodule
+      rec module
       (
         "BadClass1"
             signature
             (
                 sig_class
                 (
-                  class_description ([406,9720+19]..[406,9720+48])
-                    pci_virt = Concrete
-                    pci_params =
+                  class_description
+                    params =
                         (
                         )
-                    pci_name = "c"
-                    pci_expr =
-                      class_type ([406,9720+23]..[406,9720+48])
-                        Pcty_signature
+                    name = c
+                    expr =
+                      class_type
+                        signature
                         class_signature
-                            Ptyp_any
+                            
                           (
                             Pctf_meth "m" Public ([406,9720+30]..[406,9720+44])
                                 poly
@@ -3193,7 +3186,7 @@
                 )
     )
   )
-  Pstr_recmodule
+  rec module
   (
     "Coerce1"
         signature
@@ -3369,7 +3362,7 @@
         )
       )
     )
-  Pstr_recmodule
+  rec module
   (
     "Coerce2"
         signature
@@ -3449,7 +3442,7 @@
         )
       )
     )
-  Pstr_recmodule
+  rec module
   (
     "Coerce5"
         signature
@@ -3534,7 +3527,7 @@
       )
       5
   )
-  Pstr_recmodule
+  rec module
   (
     "F"
         signature
@@ -3679,14 +3672,15 @@
       let
       (
         x
-          Pexp_lazy          3
+          lazy
+          3
       )
     )
   Lazy.force
   (
       M1.x
   )
-  Pstr_recmodule
+  rec module
   (
     "M2"
         signature
@@ -3720,7 +3714,7 @@
   (
       ()
         )
-  Pstr_recmodule
+  rec module
   (
     "M3"
         signature

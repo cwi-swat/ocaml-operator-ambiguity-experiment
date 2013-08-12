@@ -1,15 +1,16 @@
-toplevels 
+
 (
-    
-        									 
-     module  Foobar
-      struct
-      (
-      							  
-      type
-      (  						
-          							    	 
-         t
+    							  
+  
+      									 
+   module  Foobar
+    struct
+    (
+    							  
+    type
+    (  						
+        							    	 
+       t
          type
          params=
          (
@@ -27,107 +28,171 @@ toplevels
          
          														  
          														 
-        											   
-      								        
-      )
-      							  
-      )
-      							  
-     										    
-        									 
-        									 
-    
-        									 
-     module  F0
-      Foobar
-     										    
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       f
-      (
-       case
-           (
-       	  
-       	  x
-       	  
-       	  "extendedModulePath1"([],"F0")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-       	  (
-       	  )
-       	  								  
-       	      										   
-            
-            (
-            x
-            :
-            
-            "extendedModulePath1"([],"Foobar")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-            (
-            )
-            								  
-            )
-                								
-           )
-      )
-          		    
+      											   
+    								        
+    )
+    							  
+    )
+    							  
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          int
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
      )
-        									 
-        									 
-    
-        									 
-     module  F
-      Foobar
-     										    
-        									 
-        									 
-    
-        									 
-     let
-     (
-      
-       f
-      (
-       case
-           (
-       	  
-       	  x
-       	  
-       	  "extendedModulePath1"([],"F")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-       	  (
-       	  )
-       	  								  
-       	      										   
-            
-            (
-            x
-            :
-            
-            "extendedModulePath1"([],"Foobar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-            (
-            )
-            								  
-            )
-                								
-           )
-      )
-          		    
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  F0
+    Foobar
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          int
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
      )
-        									 
-        									 
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
     
-        									 
-     module  M
-      struct
-      (
-      							  
-      type
-      (  						
-          							    	 
-         t
+     f
+    (
+     case
+         (
+     	  
+     	  x
+     	  
+     	  F0.t
+     	  (
+     	  )
+     	  								  
+     	      										   
+          
+          (
+          x
+          :
+          
+          Foobar.t
+          (
+          )
+          								  
+          )
+              								
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   module  F
+    Foobar
+    
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   let
+   (
+    
+     f
+    (
+     case
+         (
+     	  
+     	  x
+     	  
+     	  F.t
+     	  (
+     	  )
+     	  								  
+     	      										   
+          
+          (
+          x
+          :
+          
+          Foobar.t
+          (
+          )
+          								  
+          )
+              								
+         )
+    )
+        		    
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   module  M
+    struct
+    (
+    							  
+    type
+    (  						
+        							    	 
+       t
          type
          params=
          (
@@ -137,161 +202,398 @@ toplevels
          (
          )
          kind =
-         <[<"m","polytype1"("typexprConstr2"("typeConstr"([],"int")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+         <[<"m","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
          
          														  
          														 
-        											   
-      								        
-      )
-      							  
-      )
-      							  
-     										    
-        									 
-        									 
+      											   
+    								        
+    )
+    							  
+    )
+    							  
     
-        									 
-     module  M1
-      M
-     										    
-        									 
-        									 
-    
-        									 
-     module  M2
-      M1
-     										    
-        									 
-        									 
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M1
+    M
+    signature
     (
-     
-     case
-     (
-     
-     x
-     
-     "extendedModulePath1"([],"M1")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-     (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          <[<"m","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>
+          
+          														  
+          														 
+       											   
+     								        
      )
-     								  
-         										   
-     
-     
-     (
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M2
+    M1
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          <[<"m","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  (
+   
+   case
+   (
+   
+   x
+   
+   M1.t
+   (
+   )
+   								  
+       										   
+   
+   
+   (
+   x
+   :
+   
+   M2.t
+   (
+   )
+   								  
+   )
+       								
+   )
+   													 
+  )
+     						  
+                                 
+  
+      									 
+   module  M3
+    M1
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          M1.t
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  (
+   
+   case
+   (
+   x
+   
+   
+   (
      x
      :
      
-     "extendedModulePath1"([],"M2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+     M3.t
      (
      )
      								  
-     )
-         								
-     )
-     													 
-    )
-       						  
-    
-        									 
-     module  M3
-      M1
-     										    
-        									 
-        									 
-    (
      
-     case
+     M1.t
      (
+     )
+     								  
+   )
+       									
+   )
+   													 
+  )
+     						  
+                                 
+  (
+   
+   case
+   (
+   x
+   
+   
+   (
      x
+     :
      
-     brackets3 
+     M3.t
      (
-         x
-         
-         "extendedModulePath1"([],"M3")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-         (
-         )
-         								  
-         
-         "extendedModulePath1"([],"M1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-         (
-         )
-         								  
      )
+     								  
+     
+     M.t
+     (
      )
-     													 
-    )
-       						  
+     								  
+   )
+       									
+   )
+   													 
+  )
+     						  
+                                 
+  
+      									 
+   module  M4
+    M2
+    signature
     (
-     
-     case
-     (
-     x
-     
-     brackets3 
-     (
-         x
-         
-         "extendedModulePath1"([],"M3")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-         (
-         )
-         								  
-         
-         "extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-         (
-         )
-         								  
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          M3.t
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
      )
-     )
-     													 
+    		    				
     )
-       						  
-    
-        									 
-     module  M4
-      M2
-     										    
-        									 
-        									 
-    
-        									 
-     module  M4
-      M
-     										    
-        									 
-        									 
-    
-        									 
-     module  M4
-      M1
-     										    
-        									 
-        									 
-    
-        									 
-     module  M5
-      M3
-     										    
-        									 
-        									 
-    
-        									 
-     module  M6
-      M1
-     										    
-        									 
-        									 
-    
-        									 
-     module  Bar
-      struct
-      (
-      							  
-      type
-      (  						
-          							    	 
-         t
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M4
+    M
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          M3.t
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M4
+    M1
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          M3.t
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M5
+    M3
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          M1.t
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M6
+    M1
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          <[<"n","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  Bar
+    struct
+    (
+    							  
+    type
+    (  						
+        							    	 
+       t
          type
          params=
          (
@@ -309,56 +611,104 @@ toplevels
          
          														  
          														 
-        											   
-      								        
-      )
-      							  
-      let
-      (
-       
-        f
-       (
-        case
-            (
-        	  
-        	  x
-        	  
-        	  int
-        	  (
-        	  )
-        	  								  
-        	      										   
-             
-             (
-             x
-             :
-             
-             t
-             (
-             )
-             								  
-             )
-                 								
-            )
-       )
-           		    
-      )
-      							  
-      )
-      							  
-     										    
-        									 
-        									 
-    
-        									 
-     module  M
-      struct
-      (
-      							  
-      type
-      (  						
-          							    	 
-         t
+      											   
+    								        
+    )
+    							  
+    let
+    (
+     
+      f
+     (
+      case
+          (
+      	  
+      	  x
+      	  
+      	  int
+      	  (
+      	  )
+      	  								  
+      	      										   
+           
+           (
+           x
+           :
+           
+           t
+           (
+           )
+           								  
+           )
+               								
+          )
+     )
+         		    
+    )
+    							  
+    )
+    							  
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          Foobar.t
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+     sig_value f
+     value_description
+     arrow
+     
+     int
+     (
+     )
+     								  
+     
+     t
+     (
+     )
+     								  
+        								   
+     (
+     )
+         								
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M
+    struct
+    (
+    							  
+    type
+    (  						
+        							    	 
+       t
          type
          params=
          (
@@ -388,42 +738,102 @@ toplevels
          								  
          														  
          														 
-        											   
-      								        
-      )
-      							  
-      let
-      (
-       
-        mk
-       (
-        case
-            (
-        	  x
-             
-              T
+      											   
+    								        
+    )
+    							  
+    let
+    (
+     
+      mk
+     (
+      case
+          (
+      	  x
+           
+           T
               x
-                 								 
-            )
-       )
-           		    
-      )
-      							  
-      )
-      							  
-     										    
-        									 
-        									 
-    
-        									 
-     module  M1
-      struct
-      (
-      							  
-      type
-      (  						
-          							    	 
-         t
+               								 
+          )
+     )
+         		    
+    )
+    							  
+    )
+    							  
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          
+          (
+          								  
+          T
+          (
+          									
+           
+           int
+           (
+           )
+           								  
+          								     
+          )
+          								    
+          								  
+          )
+          								  
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+     sig_value mk
+     value_description
+     arrow
+     
+     int
+     (
+     )
+     								  
+     
+     t
+     (
+     )
+     								  
+        								   
+     (
+     )
+         								
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M1
+    struct
+    (
+    							  
+    type
+    (  						
+        							    	 
+       t
          type
          params=
          (
@@ -434,84 +844,416 @@ toplevels
          )
          kind =
          
-         "extendedModulePath1"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+         M.t
          (
          )
          								  
          
          														  
          														 
-        											   
-      								        
-      )
-      							  
-      let
-      (
-       
-        mk
-        M.mk 
-       							    		    
-      )
-      							  
-      )
-      							  
-     										    
-        									 
-        									 
-    
-        									 
-     module  M2
-      struct
-      (
-      							  
-      include
-      (
-        M
-      )
-      							  
-      )
-      							  
-     										    
-        									 
-        									 
-    
-        									 
-     module  M3
+      											   
+    								        
+    )
+    							  
+    let
+    (
+     
+      mk
+      M.mk 
+     							    		    
+    )
+    							  
+    )
+    							  
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          M.t
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+     sig_value mk
+     value_description
+     arrow
+     
+     int
+     (
+     )
+     								  
+     
+     t
+     (
+     )
+     								  
+        								   
+     (
+     )
+         								
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M2
+    struct
+    (
+    							  
+    include
+    (
       M
-     										    
-        									 
-        									 
-    
-        									 
-     module  M4
-      M
-     										    
-        									 
-        									 
-    
-        									 
-     module  M5
-      M
-     										    
-        									 
-        									 
-    
-        									 
-     module  M6
-      M
-     										    
-        									 
-        									 
-    
-        									 
-     module  M'
-      struct
-      (
-      							  
-      type
-      (  						
-          							    	 
-         t_priv
+    )
+    							  
+    )
+    							  
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          M.t
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+     sig_value mk
+     value_description
+     arrow
+     
+     int
+     (
+     )
+     								  
+     
+     t
+     (
+     )
+     								  
+        								   
+     (
+     )
+         								
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M3
+    M
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          M.t
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+     sig_value mk
+     value_description
+     arrow
+     
+     int
+     (
+     )
+     								  
+     
+     t
+     (
+     )
+     								  
+        								   
+     (
+     )
+         								
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M4
+    M
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          M.t
+          (
+          )
+          								  
+          
+          (
+          								  
+          T
+          (
+          									
+           
+           int
+           (
+           )
+           								  
+          								     
+          )
+          								    
+          								  
+          )
+          								  
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+     sig_value mk
+     value_description
+     arrow
+     
+     int
+     (
+     )
+     								  
+     
+     t
+     (
+     )
+     								  
+        								   
+     (
+     )
+         								
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M5
+    M
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          M.t
+          (
+          )
+          								  
+          
+          (
+          								  
+          T
+          (
+          									
+           
+           int
+           (
+           )
+           								  
+          								     
+          )
+          								    
+          								  
+          )
+          								  
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+     sig_value mk
+     value_description
+     arrow
+     
+     int
+     (
+     )
+     								  
+     
+     t
+     (
+     )
+     								  
+        								   
+     (
+     )
+         								
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M6
+    M
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          
+          (
+          								  
+          T
+          (
+          									
+           
+           int
+           (
+           )
+           								  
+          								     
+          )
+          								    
+          								  
+          )
+          								  
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+     sig_value mk
+     value_description
+     arrow
+     
+     int
+     (
+     )
+     								  
+     
+     t
+     (
+     )
+     								  
+        								   
+     (
+     )
+         								
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M'
+    struct
+    (
+    							  
+    type
+    (  						
+        							    	 
+       t_priv
          type
          params=
          (
@@ -541,14 +1283,14 @@ toplevels
          								  
          														  
          														 
-        											   
-      								        
-      )
-      							  
-      type
-      (  						
-          							    	 
-         t
+      											   
+    								        
+    )
+    							  
+    type
+    (  						
+        							    	 
+       t
          type
          params=
          (
@@ -566,38 +1308,170 @@ toplevels
          
          														  
          														 
-        											   
-      								        
-      )
-      							  
-      let
-      (
-       
-        mk
-       (
-        case
-            (
-        	  x
-             
-              T
+      											   
+    								        
+    )
+    							  
+    let
+    (
+     
+      mk
+     (
+      case
+          (
+      	  x
+           
+           T
               x
-                 								 
-            )
-       )
-           		    
-      )
-      							  
-      )
-      							  
-     										    
-        									 
-        									 
-    
-        									 
-     module  M3'
-      M'
-     										    
-        									 
-        									 
-    
+               								 
+          )
+     )
+         		    
+    )
+    							  
+    )
+    							  
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t_priv
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          
+          (
+          								  
+          T
+          (
+          									
+           
+           int
+           (
+           )
+           								  
+          								     
+          )
+          								    
+          								  
+          )
+          								  
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          t_priv
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+     sig_value mk
+     value_description
+     arrow
+     
+     int
+     (
+     )
+     								  
+     
+     t
+     (
+     )
+     								  
+        								   
+     (
+     )
+         								
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
+  
+      									 
+   module  M3'
+    M'
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          M'.t
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+     sig_value mk
+     value_description
+     arrow
+     
+     int
+     (
+     )
+     								  
+     
+     t
+     (
+     )
+     								  
+        								   
+     (
+     )
+         								
+    		    				
+    )
+   										    
+      									 
+      									 
+                                 
 )

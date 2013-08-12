@@ -24,20 +24,51 @@
     )    								
        							   
    							  
-   modRec1 
+   rec module
    (
-       A
-       S
-       struct
-       (
-       							  
-       )
-       							  
-       <"C","sig"([<"include"("modTypeWith"("modTypePath"("modTypePath"([],"Mod")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"modeConsModule1"("modulePath"([],"Other")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"extendedModulePath1"([],"A")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[]>])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"struct2"(["moduleDef1"("Other",[],[],"modExpModPath"("modulePath"([],"A")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     "A"
+     S
+     struct
+     (
+     							  
+     )
+     							  
+   									   
+     "C"
+     signature
+     (
+     		    				
+      includeSpec 
+      (
+          
+           Mod
+           modeConsModule1 
+           (
+               Other
+               A
+           )
+              								    
+              								    
+      )
+     		    				
+     )
+     struct
+     (
+     							  
+     module  Other
+      A
+      
+     										    
+     							  
+     )
+     							  
+   									   
    )
+   									   
    							  
    )
    							  
+   
   										    
                                      
 )

@@ -1,16 +1,16 @@
 
 (
     								 
-  modRec1 
+  rec module
   (
-      DirElt
-      signature
-      (
-      		    				
-       type
-       (  						
-           							    	 
-          t
+    "DirElt"
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
           type
           params=
           (
@@ -34,7 +34,7 @@
           (
           									
            
-           "extendedModulePath1"([],"DirHash")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+           DirHash.t
            (
            )
            								  
@@ -46,18 +46,18 @@
           								  
           														  
           														 
-         											   
-       								        
-       )
-      		    				
-      )
-      struct
-      (
-      							  
-      type
-      (  						
-          							    	 
-         t
+       											   
+     								        
+     )
+    		    				
+    )
+    struct
+    (
+    							  
+    type
+    (  						
+        							    	 
+       t
          type
          params=
          (
@@ -81,7 +81,7 @@
          (
          									
           
-          "extendedModulePath1"([],"DirHash")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+          DirHash.t
           (
           )
           								  
@@ -93,14 +93,148 @@
          								  
          														  
          														 
-        											   
-      								        
-      )
-      							  
-      )
-      							  
-      <"DirCompare","sig"([<"typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"DirElt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],[])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"struct2"(["typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"DirElt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],[])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-      <"DirHash","sig"([<"typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr1"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"DirElt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"list")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[],[])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[]>])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"struct2"(["typeDef"("typeDefinition"(["typeDef"([],"t","typeInformation"(["typeEquation"("typexprConstr1"("typexprConstr2"("typeConstr"(["extendedModulePath1"([],"DirCompare")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"list")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+      											   
+    								        
+    )
+    							  
+    )
+    							  
+  									   
+    "DirCompare"
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+          DirElt.t
+          (
+          )
+          								  
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+    )
+    struct
+    (
+    							  
+    type
+    (  						
+        							    	 
+       t
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         DirElt.t
+         (
+         )
+         								  
+         
+         														  
+         														 
+      											   
+    								        
+    )
+    							  
+    )
+    							  
+  									   
+    "DirHash"
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
+          type
+          params=
+          (
+          
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+           list
+           (
+             
+             DirElt.t
+             (
+             )
+             								  
+           )
+           
+              									
+          
+          														  
+          														 
+       											   
+     								        
+     )
+    		    				
+    )
+    struct
+    (
+    							  
+    type
+    (  						
+        							    	 
+       t
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+          list
+          (
+            
+            DirCompare.t
+            (
+            )
+            								  
+          )
+          
+             									
+         
+         														  
+         														 
+      											   
+    								        
+    )
+    							  
+    )
+    							  
+  									   
   )
+  									   
                                      
 )

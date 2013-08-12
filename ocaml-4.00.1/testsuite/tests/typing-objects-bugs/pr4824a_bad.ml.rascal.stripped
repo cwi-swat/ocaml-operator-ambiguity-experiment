@@ -1,0 +1,82 @@
+(
+  module  M
+   struct
+   (
+   class
+   (
+     params = 
+     (
+     x
+     )
+     class name = c
+     class expr = 
+                 class_structure
+                 (
+                     x
+                     x
+                 )
+   )
+   )
+   signature
+   (
+      sig_class
+       (
+      	class_description
+      	params = 
+      		(
+      		)
+      	name = c
+      	expr =
+      	class_type
+      	 fun
+      		a
+      		class_type
+      		signature
+      		class_signature
+      		(
+      		 fieldSpec2 
+      		 (
+      		     x
+      		     poly
+      		     b
+      		 )
+      		)
+       )
+   )
+  class
+  (
+    params = 
+    (
+    x
+    int
+    (
+    )
+    )
+    class name = c
+    class expr = 
+                class_structure
+                (
+                   inherit
+                    constr classArgs 
+                           (
+                               M.c
+                               x
+                           )
+                    (
+                    )
+                   method x
+                     x
+                )
+  )
+  let
+  (
+    r
+    send x
+    (
+     new c
+     (
+         2
+     )
+    )
+  )
+)

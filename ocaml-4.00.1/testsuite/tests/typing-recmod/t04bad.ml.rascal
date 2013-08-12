@@ -1,16 +1,16 @@
 
 (
     								 
-  modRec1 
+  rec module
   (
-      A
-      signature
-      (
-      		    				
-       type
-       (  						
-           							    	 
-          t
+    "A"
+    signature
+    (
+    		    				
+     type
+     (  						
+         							    	 
+        t
           type
           params=
           (
@@ -20,31 +20,37 @@
           (
           )
           kind =
-         (
           tuple
           (
+           
            int
+           (
+           )
+           								  
              									
-            "extendedModulePath1"([],"A")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
+            
+            A.t
+            (
+            )
+            								  
           									
           )
              								    
           
           														  
           														 
-         )
-         											   
-       								        
-       )
-      		    				
-      )
-      struct
-      (
-      							  
-      type
-      (  						
-          							    	 
-         t
+       											   
+     								        
+     )
+    		    				
+    )
+    struct
+    (
+    							  
+    type
+    (  						
+        							    	 
+       t
          type
          params=
          (
@@ -54,26 +60,33 @@
          (
          )
          kind =
-        (
          tuple
          (
+          
           int
+          (
+          )
+          								  
             									
-           "extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
+           
+           A.t
+           (
+           )
+           								  
          									
          )
             								    
          
          														  
          														 
-        )
-        											   
-      								        
-      )
-      							  
-      )
-      							  
-      
+      											   
+    								        
+    )
+    							  
+    )
+    							  
+  									   
   )
+  									   
                                      
 )

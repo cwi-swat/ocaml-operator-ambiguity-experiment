@@ -1,0 +1,156 @@
+(
+  class
+  (
+    params = 
+    (
+    )
+    class name = observer
+    class expr = 
+                class_structure
+                (
+                   method notify
+                      poly
+                      arrow
+                      subject
+                      arrow
+                      event
+                      unit
+                      (
+                      )
+                )
+  )
+  class
+  (
+    params = 
+    (
+    )
+    class name = subject
+    class expr = 
+                class_structure
+                (
+                    observers
+                    (
+                    []
+                    :
+                     list
+                     (
+                        observer
+                           (
+                            subject
+                       	 event				
+                           ) 
+                     )
+                    )
+                   method add_observer
+                     Array.set
+                     (
+                      observers
+                      ::
+                      (
+                          obs
+                          observers
+                      )
+                     )
+                   method notify_observers
+                     List.iter
+                     (
+                         (
+                          case
+                          (
+                          x
+                          send notify
+                          (
+                           x
+                          )
+                          (
+                              self
+                              e
+                          )
+                          )
+                         )
+                         observers
+                     )
+                )
+  )
+  type
+  (  						
+     id
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       int
+       (
+       )
+  )
+  class
+  (
+    params = 
+    (
+    id
+    id
+    (
+    )
+    )
+    class name = entity
+    class expr = 
+                class_structure
+                (
+                    ent_destroy_subject
+                    new subject
+                   method destroy_subject
+                     ent_destroy_subject
+                   method entity_id
+                     id
+                )
+  )
+  class
+  (
+    params = 
+    (
+    )
+    class name = entity_container
+    class expr = 
+                class_structure
+                (
+                   inherit
+                    constr <"tagg"("entity")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr2"("typeConstr"([],"id")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"observer")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                    (
+                    )
+                   method add_entity
+                     send add_observer
+                     (
+                      send destroy_subject
+                      (
+                       e
+                      )
+                     )
+                     (
+                         self
+                     )
+                   method notify
+                     ()
+                )
+  )
+  let
+  (
+    f
+   (
+    case
+        (
+    	  x
+    	   entity_container
+    	   (
+    	     entity
+    	     (
+    	     )
+    	   )
+         ()
+        )
+   )
+  )
+)
