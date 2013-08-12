@@ -60,70 +60,68 @@
               ) 
             )
            in
-             whileloop 
-             (
-                 >
+              while
+              >
+              (
+                   !
+                   (
+                   tocopy
+                   )
+                  0
+              )
+              let
+              (
+               (
+                 m
+                 input
                  (
                       !
                       (
-                      tocopy
+                      ic
                       )
+                     copy_buffer
                      0
-                 )
-                 let
-                 (
-                  (
-                    m
-                    input
-                    (
-                         !
-                         (
-                         ic
-                         )
-                        copy_buffer
-                        0
-                        min
-                        (
-                             !
-                             (
-                             tocopy
-                             )
-                            String.length
-                            (
-                                copy_buffer
-                            )
-                        )
-                    ) 
-                  )
-                 in
-                   sequence
-                   (
-                     output
+                     min
                      (
                           !
                           (
-                          oc
+                          tocopy
                           )
-                         copy_buffer
-                         0
-                         m
-                     )
-                   ;
-                     :=
-                     (
-                         tocopy
-                         -
+                         String.length
                          (
-                              !
-                              (
-                              tocopy
-                              )
-                             m
+                             copy_buffer
                          )
                      )
-                   )
-                 )
-             )
+                 ) 
+               )
+              in
+                sequence
+                (
+                  output
+                  (
+                       !
+                       (
+                       oc
+                       )
+                      copy_buffer
+                      0
+                      m
+                  )
+                ;
+                  :=
+                  (
+                      tocopy
+                      -
+                      (
+                           !
+                           (
+                           tocopy
+                           )
+                          m
+                      )
+                  )
+                )
+              )
            )
          )
         )
@@ -203,31 +201,29 @@
   type
   (  						
      occurrence
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-      pos
-      polytype1 
-      (
-           list
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       (
+        pos
+        poly
+         list
+         (
+           int
            (
-             int
-             (
-             )
            )
-      )
-      freq
-      polytype1 
-      (
-          int
-          (
-          )
-      )
+         )
+        freq
+        poly
+        int
+        (
+        )
+       )
   )
   let
   (
@@ -248,107 +244,103 @@
          in
            sequence
            (
-             forloop 
-             (
-                 pos
-                 0
-                 <>
-                 -
-                 (
-                     Array.length
-                     (
-                         v
-                     )
-                     1
-                 )
-                 try
-                 let
-                 (
+              for pos
+              0
+              -
+              (
+                  Array.length
                   (
-                    occ
-                    List.assoc
+                      v
+                  )
+                  1
+              )
+              try
+              let
+              (
+               (
+                 occ
+                 List.assoc
+                 (
+                     Array.get
+                     (
+                      v
+                      pos
+                     )
+                      !
+                      (
+                      env
+                      )
+                 ) 
+               )
+              in
+                sequence
+                (
+                  setfield
+                  (
+                  occ
+                  pos
+                  ::
+                  (
+                      pos
+                      field
+                      (
+                      occ
+                      pos
+                      )
+                  )
+                  )
+                ;
+                  setfield
+                  (
+                  occ
+                  freq
+                  +
+                  (
+                      field
+                      (
+                      occ
+                      freq
+                      )
+                      1
+                  )
+                  )
+                )
+              )
+              (
+              case
+              (
+                Not_found
+                :=
+                (
+                    env
+                    ::
                     (
-                        Array.get
+                            					 (
+                              					   Array.get
                         (
                          v
                          pos
                         )
+                        	record
+                        	(
+                        	 pos
+                        	 ::
+                        	  (
+                        	  pos
+                        	  []
+                        	  ) 
+                        	   freq
+                        	   1
+                        	)
+                            					 )
                          !
                          (
                          env
                          )
-                    ) 
-                  )
-                 in
-                   sequence
-                   (
-                     setfield
-                     (
-                     occ
-                     pos
-                     ::
-                     (
-                         pos
-                         field
-                         (
-                         occ
-                         pos
-                         )
-                     )
-                     )
-                   ;
-                     setfield
-                     (
-                     occ
-                     freq
-                     +
-                     (
-                         field
-                         (
-                         occ
-                         freq
-                         )
-                         1
-                     )
-                     )
-                   )
-                 )
-                 (
-                 case
-                 (
-                   Not_found
-                   :=
-                   (
-                       env
-                       ::
-                       (
-                           (
-                               					 Array.get
-                                 					 (
-                                 					  v
-                                 					  pos
-                                 					 )
-                           	record
-                           	(
-                           	 pos
-                           	 ::
-                           	  (
-                           	  pos
-                           	  []
-                           	  ) 
-                           	   freq
-                           	   1
-                           	)
-                           )
-                            !
-                            (
-                            env
-                            )
-                       )
-                   )
-                 ) 
-                 )
-             )
+                    )
+                )
+              ) 
+              )
            ;
              Sort.list
              (
@@ -555,88 +547,85 @@
               )
               else
               (
-               beginEnd 
+               let
                (
-                   let
+                (
+                  n
+                  Char.code
+                  (
+                      c
+                  ) 
+                )
+               in
+                 sequence
+                 (
+                   output_char
                    (
-                    (
-                      n
-                      Char.code
-                      (
-                          c
-                      ) 
-                    )
-                   in
+                       oc
+                       5c
+                   )
+                 ;
+                   sequence
+                   (
+                     output_char
+                     (
+                         oc
+                         Char.chr
+                         (
+                             +
+                             (
+                                 48
+                                 /
+                                 (
+                                     n
+                                     100
+                                 )
+                             )
+                         )
+                     )
+                   ;
                      sequence
                      (
                        output_char
                        (
                            oc
-                           5c
-                       )
-                     ;
-                       sequence
-                       (
-                         output_char
-                         (
-                             oc
-                             Char.chr
-                             (
-                                 +
-                                 (
-                                     48
-                                     /
-                                     (
-                                         n
-                                         100
-                                     )
-                                 )
-                             )
-                         )
-                       ;
-                         sequence
-                         (
-                           output_char
+                           Char.chr
                            (
-                               oc
-                               Char.chr
+                               +
                                (
-                                   +
+                                   48
+                                   mod
                                    (
-                                       48
-                                       mod
-                                       (
-                                           /
-                                           (
-                                               n
-                                               10
-                                           )
-                                           10
-                                       )
-                                   )
-                               )
-                           )
-                         ;
-                           output_char
-                           (
-                               oc
-                               Char.chr
-                               (
-                                   +
-                                   (
-                                       48
-                                       mod
+                                       /
                                        (
                                            n
                                            10
                                        )
+                                       10
                                    )
                                )
                            )
-                         )
+                       )
+                     ;
+                       output_char
+                       (
+                           oc
+                           Char.chr
+                           (
+                               +
+                               (
+                                   48
+                                   mod
+                                   (
+                                       n
+                                       10
+                                   )
+                               )
+                           )
                        )
                      )
                    )
+                 )
                )
               ) 
              )
@@ -659,9 +648,10 @@
      ) 
        case
        (
-        patternTuple 
+        ::
         (
-            c
+          c
+          []
         )
         sequence
         (
@@ -935,41 +925,38 @@
              ;
                sequence
                (
-                 beginEnd 
+                 match
+                 what_to_do
                  (
-                     match
-                     what_to_do
-                     (
-                     case
-                     (
-                       No_remember
-                       ()
-                     ) 
-                       case
-                       (
-                        Remember
-                        i
-                        output_string
+                 case
+                 (
+                   No_remember
+                   ()
+                 ) 
+                   case
+                   (
+                    Remember
+                    i
+                    output_string
+                    (
+                         !
+                         (
+                         oc
+                         )
+                        ^
                         (
-                             !
-                             (
-                             oc
-                             )
+                            "  Lexing.set_backtrack lexbuf action_"
                             ^
                             (
-                                "  Lexing.set_backtrack lexbuf action_"
-                                ^
+                                string_of_int
                                 (
-                                    string_of_int
-                                    (
-                                        i
-                                    )
-                                    ";\n"
+                                    i
                                 )
+                                ";\n"
                             )
                         )
-                       )
-                     )
+                    )
+                   )
                  )
                ;
                  output_all_trans
@@ -1180,29 +1167,25 @@
      		                      ;
      		                        sequence
      		                        (
-     		                          forloop 
-     		                          (
-     		                              i
-     		                              0
-     		                              <>
-     		                              -
-     		                              (
-     		                                  Array.length
-     		                                  (
-     		                                      st
-     		                                  )
-     		                                  1
-     		                              )
-     		                              output_state
-     		                              (
-     		                                  i
-     		                                  Array.get
-     		                                  (
+     		                           for i
+     		                           0
+     		                           -
+     		                           (
+     		                               Array.length
+     		                               (
      		                                   st
-     		                                   i
-     		                                  )
-     		                              )
-     		                          )
+     		                               )
+     		                               1
+     		                           )
+     		                           output_state
+     		                           (
+     		                               i
+     		                               Array.get
+     		                               (
+     		                                st
+     		                                i
+     		                               )
+     		                           )
      		                        ;
      		                          output_entries
      		                          (

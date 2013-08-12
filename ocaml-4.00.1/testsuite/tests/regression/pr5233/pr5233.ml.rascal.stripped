@@ -106,17 +106,15 @@
                     (
                      if
                      (
-                      String.get
+                      !=
                       (
-                       s
-                       i
-                      )
-                      (
-                           !=
-                           (
-                           20
-                           )
-                      )
+                         String.get
+                         (
+                          s
+                          i
+                         )
+                         20
+                      )  
                      )
                      then
                      (
@@ -149,12 +147,12 @@
        smuggle
        )
       0
-       Some
-       String.make
-       (
-           size
-           20
-       )
+      Some
+         String.make
+         (
+             size
+             20
+         )
   )
   check
   (

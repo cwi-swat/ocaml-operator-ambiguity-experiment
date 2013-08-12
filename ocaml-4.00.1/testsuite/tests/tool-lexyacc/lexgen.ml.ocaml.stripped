@@ -487,22 +487,30 @@
                 case
                 (
                   (
-                    Ppat_alias "s1"
-                    ::
-                      (
-                        Ppat_alias "t1"
-                        OnChars
-                          n1
-                        r1
-                      )
-                    Ppat_alias "s2"
-                    ::
-                      (
-                        Ppat_alias "t2"
-                        OnChars
-                          n2
-                        r2
-                      )
+                    alias s1
+                    (
+                      ::
+                        (
+                          alias t1
+                          (
+                            OnChars
+                              n1
+                          )
+                          r1
+                        )
+                    )
+                    alias s2
+                    (
+                      ::
+                        (
+                          alias t2
+                          (
+                            OnChars
+                              n2
+                          )
+                          r2
+                        )
+                    )
                   )
                   ifthenelse
                   (
@@ -569,22 +577,30 @@
                 case
                 (
                   (
-                    Ppat_alias "s1"
-                    ::
-                      (
-                        Ppat_alias "t1"
-                        ToAction
-                          n1
-                        r1
-                      )
-                    Ppat_alias "s2"
-                    ::
-                      (
-                        Ppat_alias "t2"
-                        ToAction
-                          n2
-                        r2
-                      )
+                    alias s1
+                    (
+                      ::
+                        (
+                          alias t1
+                          (
+                            ToAction
+                              n1
+                          )
+                          r1
+                        )
+                    )
+                    alias s2
+                    (
+                      ::
+                        (
+                          alias t2
+                          (
+                            ToAction
+                              n2
+                          )
+                          r2
+                        )
+                    )
                   )
                   ifthenelse
                   (
@@ -653,18 +669,22 @@
                   (
                     ::
                       (
-                        Ppat_alias "t1"
-                        OnChars
-                          n1
+                        alias t1
+                        (
+                          OnChars
+                            n1
+                        )
                         r1
                       )
-                    Ppat_alias "s2"
-                    ::
-                      (
-                        ToAction
-                          n2
-                        r2
-                      )
+                    alias s2
+                    (
+                      ::
+                        (
+                          ToAction
+                            n2
+                          r2
+                        )
+                    )
                   )
                   ::
                     (
@@ -679,18 +699,22 @@
                 case
                 (
                   (
-                    Ppat_alias "s1"
+                    alias s1
+                    (
+                      ::
+                        (
+                          ToAction
+                            n1
+                          r1
+                        )
+                    )
                     ::
                       (
-                        ToAction
-                          n1
-                        r1
-                      )
-                    ::
-                      (
-                        Ppat_alias "t2"
-                        OnChars
-                          n2
+                        alias t2
+                        (
+                          OnChars
+                            n2
+                        )
                         r2
                       )
                   )
@@ -1184,10 +1208,12 @@
           (
             case
             (
-              Ppat_alias "act_pos_set"
+              alias act_pos_set
               (
-                act
-                pos_set
+                (
+                  act
+                  pos_set
+                )
               )
               (
                 case
