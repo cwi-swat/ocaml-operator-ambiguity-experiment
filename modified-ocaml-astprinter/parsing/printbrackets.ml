@@ -159,7 +159,8 @@ let rec core_type i ppf x =
         (fun ppf -> List.iter (fun x -> fprintf ppf " '%s" x)) sl;
         core_type i ppf ct;
   | Ptyp_package (s, l) ->
-      line i ppf "Ptyp_package %a\n" fmt_longident s;
+      (* line i ppf "Ptyp_package %a\n" fmt_longident s; *)
+      line i ppf "package %a\n" fmt_longident s;
       list i package_with ppf l;
 
 and package_with i ppf (s, t) =
@@ -379,10 +380,11 @@ and expression i ppf x =
       line i ppf "Pexp_object";
       class_structure i ppf s
   | Pexp_newtype (s, e) ->
-      line i ppf "Pexp_newtype \"%s\"\n" s;
+      (* line i ppf "Pexp_newtype \"%s\"\n" s; *)
+      line i ppf "%s\n" s;
       expression i ppf e
   | Pexp_pack me ->
-      line i ppf "Pexp_pack";
+      (* line i ppf "Pexp_pack"; *)
       module_expr i ppf me
   | Pexp_open (m, e) ->
       line i ppf "Pexp_open \"%a\"\n" fmt_longident m;
@@ -633,7 +635,8 @@ and signature_item i ppf x =
       line i ppf "sig_recmodule\n";
       list i string_x_module_type ppf decls;
   | Psig_modtype (s, md) ->
-      line i ppf "sig_modtype %s\n" s.txt;
+      (* line i ppf "sig_modtype %s\n" s.txt; *)
+      line i ppf "module type %s\n" s.txt;
       modtype_declaration i ppf md;
   | Psig_open li -> line i ppf "sig_open %a\n" fmt_longident li;
   | Psig_include (mt) ->
@@ -692,7 +695,8 @@ and module_expr i ppf x =
       module_expr i ppf me;
       module_type i ppf mt;
   | Pmod_unpack (e) ->
-      line i ppf "Pmod_unpack\n";
+      (* line i ppf "Pmod_unpack\n"; *)
+      line i ppf "module unpack\n";
       expression i ppf e;
 
 and structure i ppf x = list i structure_item ppf x
@@ -728,7 +732,8 @@ and structure_item i ppf x =
       line i ppf "module %s\n" s.txt;
       module_expr i ppf me;
   | Pstr_recmodule bindings ->
-      line i ppf "Pstr_recmodule\n";
+      (* line i ppf "Pstr_recmodule\n"; *)
+      line i ppf "rec module\n";
       list i string_x_modtype_x_module ppf bindings;
   | Pstr_modtype (s, mt) ->
       (* line i ppf "Pstr_modtype \"%s\"\n" s.txt; *)

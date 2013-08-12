@@ -68,6 +68,7 @@
                         (
                         )
                       kind =
+                        
                              s
                             (
                             )
@@ -200,10 +201,12 @@
                 (
                 )
               kind =
+                
                         )
         sig_value to_string
         value_description
             arrow
+            
                t
               (
               )
@@ -215,6 +218,7 @@
         sig_value apply
         value_description
             arrow
+            
                t
               (
               )
@@ -262,6 +266,7 @@
                               (
                               )
                             kind =
+                              
                                    s
                                   (
                                   )
@@ -521,6 +526,7 @@
                 (
                 )
               kind =
+                
                      unit
                     (
                     )
@@ -568,16 +574,19 @@
                   (
                   )
                 kind =
+                  
                             )
           sig_value apply
           value_description
               arrow
+              
                  t
                 (
                     a
                     b
                 )
                 arrow
+                
                   a
                   b
             (
@@ -594,6 +603,7 @@
           sig_value sym
           value_description
               arrow
+              
                  t
                 (
                     a
@@ -626,6 +636,7 @@
                             (
                             )
                           kind =
+                            
                                                 )
                     type
                     (
@@ -638,6 +649,7 @@
                             (
                             )
                           kind =
+                            
                                                 )
                     type
                     (
@@ -650,6 +662,7 @@
                             (
                             )
                           kind =
+                            
                                                 )
                     sig_value eq
                     value_description
@@ -751,6 +764,7 @@
                         (
                         )
                       kind =
+                        
                                         )
                 type
                 (
@@ -763,6 +777,7 @@
                         (
                         )
                       kind =
+                        
                                         )
                 type
                 (
@@ -775,6 +790,7 @@
                         (
                         )
                       kind =
+                        
                                         )
                 sig_value eq
                 value_description
@@ -902,6 +918,7 @@
                           (
                           )
                         kind =
+                          
                               tuple
                               (
                                    s1
@@ -923,6 +940,7 @@
                           (
                           )
                         kind =
+                          
                                s1
                               (
                               )
@@ -938,6 +956,7 @@
                           (
                           )
                         kind =
+                          
                                s2
                               (
                               )
@@ -1001,11 +1020,13 @@
             sig_value to_string
             value_description
                 arrow
+                
                    Typ.typ
                   (
                       a
                   )
                   arrow
+                  
                     a
                      string
                     (
@@ -1156,3 +1177,4 @@
       )
   )
 )
+

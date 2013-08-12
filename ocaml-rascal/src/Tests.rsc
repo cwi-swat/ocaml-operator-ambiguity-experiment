@@ -296,7 +296,16 @@ str printAST(value v) {
     						  ' <printAST(e)>
     						  ')
     						  ";
-    						  
+    	
+    // "(" "module" ModuleExpr  (":" PackageType)? ")"					  
+    case "moduleExpr"(m, []): return printAST(m);
+    
+    case "moduleExpr"(m, [p]): return "(
+    								  ' <printAST(m)>
+    								  ':
+    								  ' <printAST(p)>
+    								  ')
+    								  ";
     
     case "unaryMinus"(e): return "~-
     								'(
@@ -319,7 +328,9 @@ str printAST(value v) {
     						";
     						
     case "when"([]): return "";												  
-    									 
+    								
+    								
+    case "typeParam"(x): return printAST(x);									 
     							     
     case "posInt"(i) : return "<convert(i)>";
     
@@ -520,12 +531,12 @@ str printAST(value v) {
     
                                 
     case "comma"(e, l) : return "
-    					 (
-      					   <printAST(e)>
+    					 '(
+      					 ' <printAST(e)>
     					   <for (exp <- l) {>
     					 '	<printAST(exp)>
     					   <}>
-    					 )";                            
+    					 ')";                            
                                 
     case "functionApplication"(e,args) : return "<printAST(e)>
                                                    '(
@@ -545,12 +556,19 @@ str printAST(value v) {
 							               '  <printAST(e)> 
 							               '  :
 							               '  <printAST(t)>
-							               ')
+							               ' )
 							    		   ";
 
     		   
     case "letBinding"(p, [param], [], e) :
-    	return "
+    	if(!isPattern(param)) {
+    	    	return "
+               ' <printAST(p)>
+               ' 	 <printAST(param)>
+               '     <printAST(e)>
+    		   ";		   
+    	} else {
+    	    	return "
                ' <printAST(p)>
                '(
                ' case
@@ -560,8 +578,8 @@ str printAST(value v) {
                '     )
                ')
     		   ";		   
+    	}
    
-
     case "letBinding"(p, [param], [t], e) :
     	return "
                ' <printAST(p)>
@@ -578,17 +596,51 @@ str printAST(value v) {
                ')
     		   ";		   
 
+	case "letBinding"(p, l, t, e) : {
+            notP = [x | x <- l && !isPattern(x)];
+            rest = l - notP;
+            return "
+            	   '  <printAST(p)>
+            	   <for (x <- notP) {>
+            	   '  <printAST(x)>
+            	   <}>
+	               '(
+	               ' case
+	               '     (
+	               '  		<printAST("letBinding"(head(rest), tail(rest), t, e))>
+	               '     )
+	               ')
+            	   ";   
+       	}
+
    
-    case "letBinding"(p, [first, *rest], t, e) :
-    	return "
-               ' <printAST(p)>
-               '(
-               ' case
-               '     (
-               '  		<printAST("letBinding"(first, rest, t, e))>
-               '     )
-               ')
-    		   ";
+    //case "letBinding"(p, [first, *rest], t, e) :
+    //	if(!isPattern(first)) {
+    //		return "
+    //           ' <printAST(p)>
+    //           ' <printAST(first)>
+    //           '(
+    //           ' case
+    //           ' (
+    //           <if(size(rest) == 1) {>
+    //           '	<printAST("letBinding"(head(rest), [], t, e))>
+    //           <} else {>
+    //           '	<printAST("letBinding"(head(rest), tail(rest), t, e))>
+    //           <}>
+    //           ' )
+    //           ')
+    //		   ";
+    //	} else {
+    //	    return "
+    //           ' <printAST(p)>
+    //           '(
+    //           ' case
+    //           '     (
+    //           '  		<printAST("letBinding"(first, rest, t, e))>
+    //           '     )
+    //           ')
+    //		   ";
+    //	}
       
     case "brackets"(x) : return printAST(x);
     
@@ -957,7 +1009,6 @@ str printAST(value v) {
    case "tagNamePattern"(t, p): return "<printAST(t)>
     								   '<printAST(p)>
     								   ";
-	    										    
     										    
     case "functor"([], t, e): return printAST(e);								    
     										    
@@ -983,6 +1034,33 @@ str printAST(value v) {
     									 '<printAST(e)>
     									 '<printAST(t)>
     									 ";
+    									 
+	//moduleExprVal: "(" "val" Expr  (":" PackageType)? ")" 
+	case "moduleExprVal"(e, []): return printAST(e);
+	
+	case "moduleExprVal"(e, [t]): return "
+										 'module unpack
+										 '(
+										 '  <printAST(e)>
+										 '  :
+										 '  <printAST(t)>
+										 ')
+										 "; 	
+										 
+										 
+	// "module" "rec" ModuleName ":"  ModuleType "="  ModuleExpr  ("and" ModuleName ":"  ModuleType "="  ModuleExpr)*
+	case "modRec1"(n, t, e, l): return "rec module
+									   '(
+									   '  \"<printAST(n)>\"
+									   '  <printAST(t)>
+									   '  <printAST(e)>
+									   <for(<mn, mt, me> <- l) {>
+									   '  \"<printAST(mn)>\"
+									   '  <printAST(mt)>
+									   '  <printAST(me)>
+									   <}>
+									   ')
+									   "; 										 					 
     									 
 
 	case "modApp"(e1, e2) : return "<printAST(e1)>
@@ -1353,8 +1431,29 @@ str printAST(value v) {
     // TypeConstr = typeConstr: (ExtendedModulePath ".")? TypeconstrName;
     case "typeConstr"([], typeConstrName): return "<typeConstrName>";
     
-    case "typeConstr"([e], typeConstrName): return "<printAST(e)>.<typeConstrName>"; 								
-    										 
+    case "typeConstr"([e], typeConstrName): return "<printAST(e)>.<typeConstrName>";
+    
+    // Extensions
+    case "packageType1"(p): return "package <printAST(p)>
+    							   '(
+    							   ')
+    							   ";
+    
+    // ModTypePath "with"  PackageConstraint  ("and" PackageConstraint)*
+    case "packageType2"(m, p, l): return "
+    									 'package <printAST(m)> 
+    									 '(
+    									 'with type <printAST(p)>
+    									 <for(x <- l){>
+    									 '<printAST(x)>
+    									 <}>
+    									 ')
+    									 ";
+    									 
+    // "type" TypeConstr "="  Typexpr
+    case "packageConstraint"(tc, te): return "<printAST(tc)>
+    										 '<printAST(te)>
+    										 ";									 					
     												 
     case node n : {
       children = getChildren(n);
@@ -1370,6 +1469,14 @@ str printAST(value v) {
     
     case value v : return "<v>";
   } 
+}
+
+bool isPattern(value v) {
+	switch(v) {
+		case "typeParam"(x): return false;
+	}
+	
+	return true;
 }
 
 int convert(str s) {

@@ -59,7 +59,7 @@ syntax Expr
      | forloop: "for" Ident "=" Expr ("to" | "downto") Expr "do" Expr "done"
      | new: "new" ClassPath
      | object: "object" ClassBody "end"  
-     | "(" "module" ModuleExpr  (":" PackageType)? ")"  
+     | moduleExpr: "(" "module" ModuleExpr  (":" PackageType)? ")"  
      | valuePath: ValuePath
 	 | constant: Constant
      ; 
@@ -99,7 +99,7 @@ syntax Parameter
      | "?" "(" LabelName (":" Typexpr)? ("=" Expr)? ")"
      | "?" LabelName ":" Pattern
      | "?" LabelName ":" "(" Pattern (":" Typexpr)? ("=" Expr)? ")"
-     | "(" "type" TypeconstrName ")"  
+     | typeParam: "(" "type" TypeconstrName ")"  
      ;
      
 

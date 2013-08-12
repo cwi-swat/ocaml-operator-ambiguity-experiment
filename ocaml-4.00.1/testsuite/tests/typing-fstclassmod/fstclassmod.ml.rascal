@@ -4,117 +4,53 @@
   let
   (
    
-    sort
+     sort
+               	   
+     s
+               	   
    (
     case
         (
      		
-     		 s
+     		 set
      		(
      		 case
      		     (
-     		  		
-     		  		 set
-     		  		(
-     		  		 case
-     		  		     (
-     		  		 	  l
-     		  		      let module Set
-     		  		        (
-     		  		      		moduleExprVal 
-     		  		      		(
-     		  		      		    set
-     		  		      		    <"modTypePath"(["extendedModulePath1"([],"Set")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"S")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],<"typeConstr"([],"elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,[]>
-     		  		      		)
-     		  		        )
-     		  		        in
-     		  		        (
-     		  		           Set.elements
-     		  		           (
-     		  		               List.fold_right
-     		  		               (
-     		  		                   Set.add
-     		  		                   l
-     		  		                   Set.empty
-     		  		               )
-     		  		           )
-     		  		        )
-     		  		          											  
-     		  		     )
-     		  		)
-     		  		    		   
-     		     )
-     		)
-     		    		   
-        )
-   )
-       		    
-  )
-                                     
-  let
-  (
-   
-    make_set
-   (
-    case
-        (
-     		
-     		 s
-     		(
-     		 case
-     		     (
-     		 	  cmp
-     		      let module S
+     		 	  l
+     		      let module Set
      		        (
      		      		
-     		      		    								  
-     		      		 Set.Make
-     		      		    							     
+     		      		module unpack
      		      		(
-     		      		struct
-     		      		(
-     		      									  
-     		      		type
-     		      		(  						
-     		      		    							    	 
-     		      		   t
-     		      		   type
-     		      		   params=
-     		      		   (
-     		      		   
-     		      		   )
-     		      		   cstrs =
-     		      		   (
-     		      		   )
-     		      		   kind =
-     		      		   
-     		      		   s
-     		      		   (
-     		      		   )
-     		      		   								  
-     		      		   
-     		      		   														  
-     		      		   														 
-     		      		  											   
-     		      										        
+     		      		  set
+     		      		  :
+     		      		  
+     		      		  package Set.S 
+     		      		  (
+     		      		  with type elt
+     		      		            
+     		      		            s
+     		      		            (
+     		      		            )
+     		      		            								  
+     		      		                										 
+     		      		      									 
+     		      		  )
+     		      		      									 
      		      		)
-     		      									  
-     		      		let
-     		      		(
-     		      		 
-     		      		  compare
-     		      		  cmp 
-     		      		 							    		    
-     		      		)
-     		      									  
-     		      		)
-     		      									  
-     		      		)
-     		      										   
+     		      												 
      		        )
      		        in
      		        (
-     		           <"modExpModPath"("modulePath"([],"S")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"modTypePath"(["extendedModulePath1"([],"Set")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"S")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],<"typeConstr"([],"elt")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,[]>]>
+     		           Set.elements
+     		           (
+     		               List.fold_right
+     		               (
+     		                   Set.add
+     		                   l
+     		                   Set.empty
+     		               )
+     		           )
      		        )
      		          											  
      		     )
@@ -122,7 +58,94 @@
      		    		   
         )
    )
-       		    
+               	    
+  )
+                                     
+  let
+  (
+   
+     make_set
+               	   
+     s
+               	   
+   (
+    case
+        (
+     		
+     		 cmp
+     		 let module S
+     		   (
+     		 		
+     		 		    								  
+     		 		    							      Set.Make
+     		 		(
+     		 		struct
+     		 		(
+     		 									  
+     		 		type
+     		 		(  						
+     		 		    							    	 
+     		 		   t
+     		 		     type
+     		 		     params=
+     		 		     (
+     		 		     
+     		 		     )
+     		 		     cstrs =
+     		 		     (
+     		 		     )
+     		 		     kind =
+     		 		     
+     		 		     s
+     		 		     (
+     		 		     )
+     		 		     								  
+     		 		     
+     		 		     														  
+     		 		     														 
+     		 		  											   
+     		 										        
+     		 		)
+     		 									  
+     		 		let
+     		 		(
+     		 		 
+     		 		  compare
+     		 		  cmp 
+     		 		 							    		    
+     		 		)
+     		 									  
+     		 		)
+     		 									  
+     		 		)
+     		 										   
+     		   )
+     		   in
+     		   (
+     		      (
+     		       S
+     		      :
+     		       
+     		       package Set.S 
+     		       (
+     		       with type elt
+     		                 
+     		                 s
+     		                 (
+     		                 )
+     		                 								  
+     		                     										 
+     		           									 
+     		       )
+     		           									 
+     		      )
+     		          								  
+     		   )
+     		     											   
+     									    		   
+        )
+   )
+               	    
   )
                                      
   let
@@ -243,19 +266,19 @@
     (  						
         							    	 
        t
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-       
-       														  
-       														 
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
       											   
     								        
     )
@@ -313,134 +336,167 @@
   let
   (
    
-    create
+     create
+               	   
+     s
+               	   
    (
     case
         (
      		
-     		 s
+     		  to_string
+     		            	   
      		(
      		 case
      		     (
      		  		
-     		  		 to_string
+     		  		 apply
      		  		(
      		  		 case
      		  		     (
-     		  		  		
-     		  		  		 apply
-     		  		  		(
-     		  		  		 case
-     		  		  		     (
-     		  		  		 	  x
-     		  		  		      let module M
-     		  		  		        (
-     		  		  		      		struct
-     		  		  		      		(
-     		  		  		      									  
-     		  		  		      		type
-     		  		  		      		(  						
-     		  		  		      		    							    	 
-     		  		  		      		   t
-     		  		  		      		   type
-     		  		  		      		   params=
-     		  		  		      		   (
-     		  		  		      		   
-     		  		  		      		   )
-     		  		  		      		   cstrs =
-     		  		  		      		   (
-     		  		  		      		   )
-     		  		  		      		   kind =
-     		  		  		      		   
-     		  		  		      		   s
-     		  		  		      		   (
-     		  		  		      		   )
-     		  		  		      		   								  
-     		  		  		      		   
-     		  		  		      		   														  
-     		  		  		      		   														 
-     		  		  		      		  											   
-     		  		  		      										        
-     		  		  		      		)
-     		  		  		      									  
-     		  		  		      		let
-     		  		  		      		(
-     		  		  		      		 
-     		  		  		      		  to_string
-     		  		  		      		  to_string 
-     		  		  		      		 							    		    
-     		  		  		      		)
-     		  		  		      									  
-     		  		  		      		let
-     		  		  		      		(
-     		  		  		      		 
-     		  		  		      		  apply
-     		  		  		      		  apply 
-     		  		  		      		 							    		    
-     		  		  		      		)
-     		  		  		      									  
-     		  		  		      		let
-     		  		  		      		(
-     		  		  		      		 
-     		  		  		      		  x
-     		  		  		      		  x 
-     		  		  		      		 							    		    
-     		  		  		      		)
-     		  		  		      									  
-     		  		  		      		)
-     		  		  		      									  
-     		  		  		        )
-     		  		  		        in
-     		  		  		        (
-     		  		  		           <"modExpModPath"("modulePath"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[<"modTypePath"([],"S")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],<"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,[]>]>
-     		  		  		        )
-     		  		  		          											  
-     		  		  		     )
-     		  		  		)
-     		  		  		    		   
+     		  		 	  x
+     		  		      let module M
+     		  		        (
+     		  		      		struct
+     		  		      		(
+     		  		      									  
+     		  		      		type
+     		  		      		(  						
+     		  		      		    							    	 
+     		  		      		   t
+     		  		      		     type
+     		  		      		     params=
+     		  		      		     (
+     		  		      		     
+     		  		      		     )
+     		  		      		     cstrs =
+     		  		      		     (
+     		  		      		     )
+     		  		      		     kind =
+     		  		      		     
+     		  		      		     s
+     		  		      		     (
+     		  		      		     )
+     		  		      		     								  
+     		  		      		     
+     		  		      		     														  
+     		  		      		     														 
+     		  		      		  											   
+     		  		      										        
+     		  		      		)
+     		  		      									  
+     		  		      		let
+     		  		      		(
+     		  		      		 
+     		  		      		  to_string
+     		  		      		  to_string 
+     		  		      		 							    		    
+     		  		      		)
+     		  		      									  
+     		  		      		let
+     		  		      		(
+     		  		      		 
+     		  		      		  apply
+     		  		      		  apply 
+     		  		      		 							    		    
+     		  		      		)
+     		  		      									  
+     		  		      		let
+     		  		      		(
+     		  		      		 
+     		  		      		  x
+     		  		      		  x 
+     		  		      		 							    		    
+     		  		      		)
+     		  		      									  
+     		  		      		)
+     		  		      									  
+     		  		        )
+     		  		        in
+     		  		        (
+     		  		           (
+     		  		            M
+     		  		           :
+     		  		            
+     		  		            package S 
+     		  		            (
+     		  		            with type t
+     		  		                      
+     		  		                      s
+     		  		                      (
+     		  		                      )
+     		  		                      								  
+     		  		                          										 
+     		  		                									 
+     		  		            )
+     		  		                									 
+     		  		           )
+     		  		               								  
+     		  		        )
+     		  		          											  
      		  		     )
      		  		)
      		  		    		   
      		     )
      		)
-     		    		   
+     		            	   
         )
    )
-       		    
+               	    
   )
                                      
   let
   (
    
-    forget
+     forget
+               	   
+     s
+               	   
    (
     case
         (
      		
-     		 s
-     		(
-     		 case
-     		     (
-     		 	  x
-     		      let module M
-     		        (
-     		      		moduleExprVal 
-     		      		(
-     		      		    x
-     		      		    <"modTypePath"([],"S")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],<"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,[]>
-     		      		)
-     		        )
-     		        in
-     		        (
-     		           <"modExpModPath"("modulePath"([],"M")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["modTypePath"([],"S")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
-     		        )
-     		          											  
-     		     )
-     		)
-     		    		   
+     		 x
+     		 let module M
+     		   (
+     		 		
+     		 		module unpack
+     		 		(
+     		 		  x
+     		 		  :
+     		 		  
+     		 		  package S 
+     		 		  (
+     		 		  with type t
+     		 		            
+     		 		            s
+     		 		            (
+     		 		            )
+     		 		            								  
+     		 		                										 
+     		 		      									 
+     		 		  )
+     		 		      									 
+     		 		)
+     		 												 
+     		   )
+     		   in
+     		   (
+     		      (
+     		       M
+     		      :
+     		       package S
+     		       (
+     		       )
+     		           							   
+     		      )
+     		          								  
+     		   )
+     		     											   
+     									    		   
         )
    )
-       		    
+               	    
   )
                                      
   let
@@ -453,11 +509,17 @@
     	  x
          let module M
            (
-         		moduleExprVal 
+         		
+         		module unpack
          		(
-         		    x
-         		    S
+         		  x
+         		  :
+         		  package S
+         		  (
+         		  )
+         		      							   
          		)
+         												 
            )
            in
            (
@@ -485,11 +547,17 @@
     	  x
          let module M
            (
-         		moduleExprVal 
+         		
+         		module unpack
          		(
-         		    x
-         		    S
+         		  x
+         		  :
+         		  package S
+         		  (
+         		  )
+         		      							   
          		)
+         												 
            )
            in
            (
@@ -519,7 +587,15 @@
                 )
                 in
                 (
-                   <"modExpModPath"("modulePath"([],"N")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["modTypePath"([],"S")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+                   (
+                    N
+                   :
+                    package S
+                    (
+                    )
+                        							   
+                   )
+                       								  
                 )
                   											  
            )
@@ -645,35 +721,35 @@
    (  						
        							    	 
       t
-      type
-      params=
-      (
-      
-      									 
-       
+        type
+        params=
+        (
         
-        a
-       										 
-      									 
-       
+        									 
+         
+          
+          a
+         										 
+        									 
+         
+          
+          b
+         										 
+        									 
+        									 
+        )
+        cstrs =
+        (
+        )
+        kind =
         
-        b
-       										 
-      									 
-      									 
-      )
-      cstrs =
-      (
-      )
-      kind =
-      
-      unit
-      (
-      )
-      								  
-      
-      														  
-      														 
+        unit
+        (
+        )
+        								  
+        
+        														  
+        														 
      											   
    								        
    )
@@ -716,129 +792,255 @@
    							  
    )
    							  
+   signature
+   (
+   		    				
+    type
+    (  						
+        							    	 
+       t
+         type
+         params=
+         (
+         
+         									 
+          
+           
+           a
+          										 
+         									 
+          
+           
+           b
+          										 
+         									 
+         									 
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+         
+         														  
+         														 
+      											   
+    								        
+    )
+   		    				
+    sig_value apply
+    value_description
+    arrow
+    
+     t
+        (
+         a
+        									   	
+    	 b				
+        									   	   
+        ) 
+        									   
+    arrow
+    a
+    b
+       								   
+       								   
+    (
+    )
+        								
+   		    				
+    sig_value refl
+    value_description
+    
+     t
+        (
+         a
+        									   	
+    	 a				
+        									   	   
+        ) 
+        									   
+    (
+    )
+        								
+   		    				
+    sig_value sym
+    value_description
+    arrow
+    
+     t
+        (
+         a
+        									   	
+    	 b				
+        									   	   
+        ) 
+        									   
+    
+     t
+        (
+         b
+        									   	
+    	 a				
+        									   	   
+        ) 
+        									   
+       								   
+    (
+    )
+        								
+   		    				
+   )
   										    
                                      
-  modRec1 
+  rec module
   (
-      Typ
+    "Typ"
+    signature
+    (
+    		    				
+     module type PAIR
       signature
       (
-      		    				
-       module type PAIR
-        signature
-        (
-        		    				
-         type
-         (  						
-             							    	 
-            t
-            type
-            params=
-            (
-            
-            )
-            cstrs =
-            (
-            )
-            kind =
-            
-            
-            														  
-            														 
-           											   
-         								        
-         )
-        		    				
-         type
-         (  						
-             							    	 
-            t1
-            type
-            params=
-            (
-            
-            )
-            cstrs =
-            (
-            )
-            kind =
-            
-            
-            														  
-            														 
-           											   
-         								        
-         )
-        		    				
-         type
-         (  						
-             							    	 
-            t2
-            type
-            params=
-            (
-            
-            )
-            cstrs =
-            (
-            )
-            kind =
-            
-            
-            														  
-            														 
-           											   
-         								        
-         )
-        		    				
-         sig_value eq
-         value_description
-         <["typexprConstr2"("typeConstr"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"star"("typexprConstr2"("typeConstr"([],"t1")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr2"("typeConstr"([],"t2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"TypEq")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-         (
-         )
-             								
-        		    				
-         sig_value t1
-         value_description
-         
-          "extendedModulePath1"([],"Typ")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].typ
-          (
-            
-            t1
-            (
-            )
-            								  
-          )
-          
-             									
-         (
-         )
-             								
-        		    				
-         sig_value t2
-         value_description
-         
-          "extendedModulePath1"([],"Typ")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].typ
-          (
-            
-            t2
-            (
-            )
-            								  
-          )
-          
-             									
-         (
-         )
-             								
-        		    				
-        )    								
-           							   
       		    				
        type
        (  						
            							    	 
-          typ
+          t
+            type
+            params=
+            (
+            
+            )
+            cstrs =
+            (
+            )
+            kind =
+            
+            
+            														  
+            														 
+         											   
+       								        
+       )
+      		    				
+       type
+       (  						
+           							    	 
+          t1
+            type
+            params=
+            (
+            
+            )
+            cstrs =
+            (
+            )
+            kind =
+            
+            
+            														  
+            														 
+         											   
+       								        
+       )
+      		    				
+       type
+       (  						
+           							    	 
+          t2
+            type
+            params=
+            (
+            
+            )
+            cstrs =
+            (
+            )
+            kind =
+            
+            
+            														  
+            														 
+         											   
+       								        
+       )
+      		    				
+       sig_value eq
+       value_description
+       
+        TypEq.t
+           (
+            
+            t
+            (
+            )
+            								  
+           									   	
+       	 tuple
+       	 (
+       	  
+       	  t1
+       	  (
+       	  )
+       	  								  
+       	    									
+       	   
+       	   t2
+       	   (
+       	   )
+       	   								  
+       	 									
+       	 )
+       	    								    				
+           									   	   
+           ) 
+           									   
+       (
+       )
+           								
+      		    				
+       sig_value t1
+       value_description
+       
+        Typ.typ
+        (
+          
+          t1
+          (
+          )
+          								  
+        )
+        
+           									
+       (
+       )
+           								
+      		    				
+       sig_value t2
+       value_description
+       
+        Typ.typ
+        (
+          
+          t2
+          (
+          )
+          								  
+        )
+        
+           									
+       (
+       )
+           								
+      		    				
+      )    								
+         							   
+    		    				
+     type
+     (  						
+         							    	 
+        typ
           type
           params=
           (
@@ -858,7 +1060,19 @@
           Int
           (
           									
-           <["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"TypEq")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+           
+            TypEq.t
+               (
+                a
+               									   	
+           	 
+           	 int
+           	 (
+           	 )
+           	 								  				
+               									   	   
+               ) 
+               									   
           								     
           )
           								    
@@ -866,7 +1080,19 @@
           String
           (
           									
-           <["tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"string")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"(["extendedModulePath1"([],"TypEq")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           
+            TypEq.t
+               (
+                a
+               									   	
+           	 
+           	 string
+           	 (
+           	 )
+           	 								  				
+               									   	   
+               ) 
+               									   
           								     
           )
           								    
@@ -874,7 +1100,15 @@
           Pair
           (
           									
-           <"modTypePath"([],"PAIR")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],<"typeConstr"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,[]>
+           
+           package PAIR 
+           (
+           with type t
+                     a
+                         										 
+               									 
+           )
+               									 
           								     
           )
           								    
@@ -883,129 +1117,156 @@
           								  
           														  
           														 
-         											   
-       								        
-       )
-      		    				
-      )
-      struct
-      (
-      							  
-      module type PAIR
-       signature
-       (
-       		    				
-        type
-        (  						
-            							    	 
-           t
-           type
-           params=
-           (
-           
-           )
-           cstrs =
-           (
-           )
-           kind =
-           
-           
-           														  
-           														 
-          											   
-        								        
-        )
-       		    				
-        type
-        (  						
-            							    	 
-           t1
-           type
-           params=
-           (
-           
-           )
-           cstrs =
-           (
-           )
-           kind =
-           
-           
-           														  
-           														 
-          											   
-        								        
-        )
-       		    				
-        type
-        (  						
-            							    	 
-           t2
-           type
-           params=
-           (
-           
-           )
-           cstrs =
-           (
-           )
-           kind =
-           
-           
-           														  
-           														 
-          											   
-        								        
-        )
-       		    				
-        sig_value eq
-        value_description
-        <["typexprConstr2"("typeConstr"([],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"star"("typexprConstr2"("typeConstr"([],"t1")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["typexprConstr2"("typeConstr"([],"t2")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"(["extendedModulePath1"([],"TypEq")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-        (
-        )
-            								
-       		    				
-        sig_value t1
-        value_description
-        
-         "extendedModulePath1"([],"Typ")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].typ
-         (
-           
-           t1
-           (
-           )
-           								  
-         )
-         
-            									
-        (
-        )
-            								
-       		    				
-        sig_value t2
-        value_description
-        
-         "extendedModulePath1"([],"Typ")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].typ
-         (
-           
-           t2
-           (
-           )
-           								  
-         )
-         
-            									
-        (
-        )
-            								
-       		    				
-       )    								
-          							   
-      							  
+       											   
+     								        
+     )
+    		    				
+    )
+    struct
+    (
+    							  
+    module type PAIR
+     signature
+     (
+     		    				
       type
       (  						
           							    	 
-         typ
+         t
+           type
+           params=
+           (
+           
+           )
+           cstrs =
+           (
+           )
+           kind =
+           
+           
+           														  
+           														 
+        											   
+      								        
+      )
+     		    				
+      type
+      (  						
+          							    	 
+         t1
+           type
+           params=
+           (
+           
+           )
+           cstrs =
+           (
+           )
+           kind =
+           
+           
+           														  
+           														 
+        											   
+      								        
+      )
+     		    				
+      type
+      (  						
+          							    	 
+         t2
+           type
+           params=
+           (
+           
+           )
+           cstrs =
+           (
+           )
+           kind =
+           
+           
+           														  
+           														 
+        											   
+      								        
+      )
+     		    				
+      sig_value eq
+      value_description
+      
+       TypEq.t
+          (
+           
+           t
+           (
+           )
+           								  
+          									   	
+      	 tuple
+      	 (
+      	  
+      	  t1
+      	  (
+      	  )
+      	  								  
+      	    									
+      	   
+      	   t2
+      	   (
+      	   )
+      	   								  
+      	 									
+      	 )
+      	    								    				
+          									   	   
+          ) 
+          									   
+      (
+      )
+          								
+     		    				
+      sig_value t1
+      value_description
+      
+       Typ.typ
+       (
+         
+         t1
+         (
+         )
+         								  
+       )
+       
+          									
+      (
+      )
+          								
+     		    				
+      sig_value t2
+      value_description
+      
+       Typ.typ
+       (
+         
+         t2
+         (
+         )
+         								  
+       )
+       
+          									
+      (
+      )
+          								
+     		    				
+     )    								
+        							   
+    							  
+    type
+    (  						
+        							    	 
+       typ
          type
          params=
          (
@@ -1025,7 +1286,19 @@
          Int
          (
          									
-          <["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"int")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"TypEq")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+          
+           TypEq.t
+              (
+               a
+              									   	
+          	 
+          	 int
+          	 (
+          	 )
+          	 								  				
+              									   	   
+              ) 
+              									   
          								     
          )
          								    
@@ -1033,7 +1306,19 @@
          String
          (
          									
-          <["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"string")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"typeConstr"(["extendedModulePath1"([],"TypEq")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
+          
+           TypEq.t
+              (
+               a
+              									   	
+          	 
+          	 string
+          	 (
+          	 )
+          	 								  				
+              									   	   
+              ) 
+              									   
          								     
          )
          								    
@@ -1041,7 +1326,15 @@
          Pair
          (
          									
-          <"modTypePath"([],"PAIR")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],<"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,[]>
+          
+          package PAIR 
+          (
+          with type t
+                    a
+                        										 
+              									 
+          )
+              									 
          								     
          )
          								    
@@ -1050,14 +1343,15 @@
          								  
          														  
          														 
-        											   
-      								        
-      )
-      							  
-      )
-      							  
-      
+      											   
+    								        
+    )
+    							  
+    )
+    							  
+  									   
   )
+  									   
                                      
   open Typ
                                      
@@ -1066,8 +1360,8 @@
    
     int
     
-     Int
-     TypEq.refl
+    Int
+       TypEq.refl
         								  
    							    		    
   )
@@ -1077,8 +1371,8 @@
    
     str
     
-     String
-     TypEq.refl
+    String
+       TypEq.refl
         								  
    							    		    
   )
@@ -1086,351 +1380,379 @@
   let
   (
    
-    pair
+     pair
+               	   
+     s1
+               	   
+     s2
+               	   
    (
     case
         (
      		
-     		 s1
+     		 t1
      		(
      		 case
      		     (
-     		  		
-     		  		 s2
-     		  		(
-     		  		 case
-     		  		     (
-     		  		  		
-     		  		  		 t1
-     		  		  		(
-     		  		  		 case
-     		  		  		     (
-     		  		  		 	  t2
-     		  		  		      let module P
-     		  		  		        (
-     		  		  		      		struct
-     		  		  		      		(
-     		  		  		      									  
-     		  		  		      		type
-     		  		  		      		(  						
-     		  		  		      		    							    	 
-     		  		  		      		   t
-     		  		  		      		   type
-     		  		  		      		   params=
-     		  		  		      		   (
-     		  		  		      		   
-     		  		  		      		   )
-     		  		  		      		   cstrs =
-     		  		  		      		   (
-     		  		  		      		   )
-     		  		  		      		   kind =
-     		  		  		      		   tuple
-     		  		  		      		   (
-     		  		  		      		    
-     		  		  		      		    s1
-     		  		  		      		    (
-     		  		  		      		    )
-     		  		  		      		    								  
-     		  		  		      		      									
-     		  		  		      		     
-     		  		  		      		     s2
-     		  		  		      		     (
-     		  		  		      		     )
-     		  		  		      		     								  
-     		  		  		      		   									
-     		  		  		      		   )
-     		  		  		      		      								    
-     		  		  		      		   
-     		  		  		      		   														  
-     		  		  		      		   														 
-     		  		  		      		  											   
-     		  		  		      										        
-     		  		  		      		)
-     		  		  		      									  
-     		  		  		      		type
-     		  		  		      		(  						
-     		  		  		      		    							    	 
-     		  		  		      		   t1
-     		  		  		      		   type
-     		  		  		      		   params=
-     		  		  		      		   (
-     		  		  		      		   
-     		  		  		      		   )
-     		  		  		      		   cstrs =
-     		  		  		      		   (
-     		  		  		      		   )
-     		  		  		      		   kind =
-     		  		  		      		   
-     		  		  		      		   s1
-     		  		  		      		   (
-     		  		  		      		   )
-     		  		  		      		   								  
-     		  		  		      		   
-     		  		  		      		   														  
-     		  		  		      		   														 
-     		  		  		      		  											   
-     		  		  		      										        
-     		  		  		      		)
-     		  		  		      									  
-     		  		  		      		type
-     		  		  		      		(  						
-     		  		  		      		    							    	 
-     		  		  		      		   t2
-     		  		  		      		   type
-     		  		  		      		   params=
-     		  		  		      		   (
-     		  		  		      		   
-     		  		  		      		   )
-     		  		  		      		   cstrs =
-     		  		  		      		   (
-     		  		  		      		   )
-     		  		  		      		   kind =
-     		  		  		      		   
-     		  		  		      		   s2
-     		  		  		      		   (
-     		  		  		      		   )
-     		  		  		      		   								  
-     		  		  		      		   
-     		  		  		      		   														  
-     		  		  		      		   														 
-     		  		  		      		  											   
-     		  		  		      										        
-     		  		  		      		)
-     		  		  		      									  
-     		  		  		      		let
-     		  		  		      		(
-     		  		  		      		 
-     		  		  		      		  eq
-     		  		  		      		  TypEq.refl 
-     		  		  		      		 							    		    
-     		  		  		      		)
-     		  		  		      									  
-     		  		  		      		let
-     		  		  		      		(
-     		  		  		      		 
-     		  		  		      		  t1
-     		  		  		      		  t1 
-     		  		  		      		 							    		    
-     		  		  		      		)
-     		  		  		      									  
-     		  		  		      		let
-     		  		  		      		(
-     		  		  		      		 
-     		  		  		      		  t2
-     		  		  		      		  t2 
-     		  		  		      		 							    		    
-     		  		  		      		)
-     		  		  		      									  
-     		  		  		      		)
-     		  		  		      									  
-     		  		  		        )
-     		  		  		        in
-     		  		  		        (
-     		  		  		           
-     		  		  		           let
-     		  		  		           (
-     		  		  		            (
-     		  		  		               									  
-     		  		  		             
-     		  		  		              pair
-     		  		  		              <"modExpModPath"("modulePath"([],"P")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[<"modTypePath"([],"PAIR")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],<"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"star"("typexprConstr2"("typeConstr"([],"s1")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr2"("typeConstr"([],"s2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,[]>]> 
-     		  		  		             							    		   
-     		  		  		               									  
-     		  		  		            )
-     		  		  		           in
-     		  		  		             
-     		  		  		              Pair
-     		  		  		              pair
-     		  		  		                 								 
-     		  		  		           )
-     		  		  		               									
-     		  		  		        )
-     		  		  		          											  
-     		  		  		     )
-     		  		  		)
-     		  		  		    		   
-     		  		     )
-     		  		)
-     		  		    		   
+     		 	  t2
+     		      let module P
+     		        (
+     		      		struct
+     		      		(
+     		      									  
+     		      		type
+     		      		(  						
+     		      		    							    	 
+     		      		   t
+     		      		     type
+     		      		     params=
+     		      		     (
+     		      		     
+     		      		     )
+     		      		     cstrs =
+     		      		     (
+     		      		     )
+     		      		     kind =
+     		      		     tuple
+     		      		     (
+     		      		      
+     		      		      s1
+     		      		      (
+     		      		      )
+     		      		      								  
+     		      		        									
+     		      		       
+     		      		       s2
+     		      		       (
+     		      		       )
+     		      		       								  
+     		      		     									
+     		      		     )
+     		      		        								    
+     		      		     
+     		      		     														  
+     		      		     														 
+     		      		  											   
+     		      										        
+     		      		)
+     		      									  
+     		      		type
+     		      		(  						
+     		      		    							    	 
+     		      		   t1
+     		      		     type
+     		      		     params=
+     		      		     (
+     		      		     
+     		      		     )
+     		      		     cstrs =
+     		      		     (
+     		      		     )
+     		      		     kind =
+     		      		     
+     		      		     s1
+     		      		     (
+     		      		     )
+     		      		     								  
+     		      		     
+     		      		     														  
+     		      		     														 
+     		      		  											   
+     		      										        
+     		      		)
+     		      									  
+     		      		type
+     		      		(  						
+     		      		    							    	 
+     		      		   t2
+     		      		     type
+     		      		     params=
+     		      		     (
+     		      		     
+     		      		     )
+     		      		     cstrs =
+     		      		     (
+     		      		     )
+     		      		     kind =
+     		      		     
+     		      		     s2
+     		      		     (
+     		      		     )
+     		      		     								  
+     		      		     
+     		      		     														  
+     		      		     														 
+     		      		  											   
+     		      										        
+     		      		)
+     		      									  
+     		      		let
+     		      		(
+     		      		 
+     		      		  eq
+     		      		  TypEq.refl 
+     		      		 							    		    
+     		      		)
+     		      									  
+     		      		let
+     		      		(
+     		      		 
+     		      		  t1
+     		      		  t1 
+     		      		 							    		    
+     		      		)
+     		      									  
+     		      		let
+     		      		(
+     		      		 
+     		      		  t2
+     		      		  t2 
+     		      		 							    		    
+     		      		)
+     		      									  
+     		      		)
+     		      									  
+     		        )
+     		        in
+     		        (
+     		           
+     		           let
+     		           (
+     		            (
+     		               									  
+     		             
+     		              pair
+     		              (
+     		               P
+     		              :
+     		               
+     		               package PAIR 
+     		               (
+     		               with type t
+     		                         tuple
+     		                         (
+     		                          
+     		                          s1
+     		                          (
+     		                          )
+     		                          								  
+     		                            									
+     		                           
+     		                           s2
+     		                           (
+     		                           )
+     		                           								  
+     		                         									
+     		                         )
+     		                            								    
+     		                             										 
+     		                   									 
+     		               )
+     		                   									 
+     		              )
+     		                  								   
+     		             							    		   
+     		               									  
+     		            )
+     		           in
+     		             
+     		             Pair
+     		                pair
+     		                 								 
+     		           )
+     		               									
+     		        )
+     		          											  
      		     )
      		)
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
-  modRec1 
+  rec module
   (
-      Print
-      signature
+    "Print"
+    signature
+    (
+    		    				
+     sig_value to_string
+     value_description
+     arrow
+     
+      Typ.typ
       (
-      		    				
-       sig_value to_string
-       value_description
-       arrow
-       
-        "extendedModulePath1"([],"Typ")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].typ
-        (
-          a
-        )
-        
-           									
-       arrow
-       a
-       
-       string
-       (
-       )
-       								  
-          								   
-          								   
-       (
-       )
-           								
-      		    				
+        a
       )
-      struct
-      (
-      							  
-      let
-      (
-       
-        to_string
-       (
-        case
-            (
-         		
-         		 s
-         		(
-         		 case
-         		     (
-         		  		
-         		  		 t
-         		  		(
-         		  		 case
-         		  		     (
-         		  		 	  x
-         		  		      match
-         		  		      t
-         		  		      (
-         		  		      
-         		  		      case
-         		  		      (
-         		  		        
-         		  		        Int
-         		  		        eq
-         		  		        									  
-         		  		        
-         		  		        string_of_int
-         		  		        (
-         		  		            TypEq.apply
-         		  		            (
-         		  		                eq
-         		  		                x
-         		  		            )
-         		  		        )
-         		  		      ) 
-         		  		      	        											 
-         		  		        
-         		  		        case
-         		  		        (
-         		  		         
-         		  		         String
-         		  		         eq
-         		  		         									  
-         		  		         
-         		  		         Printf.sprintf
-         		  		         (
-         		  		             "%S"
-         		  		             TypEq.apply
-         		  		             (
-         		  		                 eq
-         		  		                 x
-         		  		             )
-         		  		         )
-         		  		        )
-         		  		        													    
-         		  		      	        											 
-         		  		        
-         		  		        case
-         		  		        (
-         		  		         
-         		  		         Pair
-         		  		         p
-         		  		         									  
-         		  		         
-         		  		         let module P
-         		  		           (
-         		  		         		moduleExprVal 
-         		  		         		(
-         		  		         		    p
-         		  		         		    <"modTypePath"([],"PAIR")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],<"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"s")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,[]>
-         		  		         		)
-         		  		           )
-         		  		           in
-         		  		           (
-         		  		              
-         		  		              let
-         		  		              (
-         		  		               (
-         		  		                  									  
-         		  		                
-         		  		                 
-         		  		                 (
-         		  		                  x1
-         		  		                      						 
-         		  		                 	x2
-         		  		                 
-         		  		                 )
-         		  		                 TypEq.apply
-         		  		                 (
-         		  		                     P.eq
-         		  		                     x
-         		  		                 ) 
-         		  		                							    		   
-         		  		                  									  
-         		  		               )
-         		  		              in
-         		  		                Printf.sprintf
-         		  		                (
-         		  		                    "(%s,%s)"
-         		  		                    Print.to_string
-         		  		                    (
-         		  		                        P.t1
-         		  		                        x1
-         		  		                    )
-         		  		                    Print.to_string
-         		  		                    (
-         		  		                        P.t2
-         		  		                        x2
-         		  		                    )
-         		  		                )
-         		  		              )
-         		  		                  									
-         		  		           )
-         		  		             											  
-         		  		        )
-         		  		        													    
-         		  		      	        											 
-         		  		      	        											 
-         		  		      )
-         		  		      			   
-         		  		     )
-         		  		)
-         		  		    		   
-         		     )
-         		)
-         		    		   
-            )
-       )
-           		    
-      )
-      							  
-      )
-      							  
       
+         									
+     arrow
+     a
+     
+     string
+     (
+     )
+     								  
+        								   
+        								   
+     (
+     )
+         								
+    		    				
+    )
+    struct
+    (
+    							  
+    let
+    (
+     
+       to_string
+                 	   
+       s
+                 	   
+     (
+      case
+          (
+       		
+       		 t
+       		(
+       		 case
+       		     (
+       		 	  x
+       		      match
+       		      t
+       		      (
+       		      
+       		      case
+       		      (
+       		        
+       		        Int
+       		        eq
+       		        									  
+       		        
+       		        string_of_int
+       		        (
+       		            TypEq.apply
+       		            (
+       		                eq
+       		                x
+       		            )
+       		        )
+       		      ) 
+       		      	        											 
+       		        
+       		        case
+       		        (
+       		         
+       		         String
+       		         eq
+       		         									  
+       		         
+       		         Printf.sprintf
+       		         (
+       		             "%S"
+       		             TypEq.apply
+       		             (
+       		                 eq
+       		                 x
+       		             )
+       		         )
+       		        )
+       		        													    
+       		      	        											 
+       		        
+       		        case
+       		        (
+       		         
+       		         Pair
+       		         p
+       		         									  
+       		         
+       		         let module P
+       		           (
+       		         		
+       		         		module unpack
+       		         		(
+       		         		  p
+       		         		  :
+       		         		  
+       		         		  package PAIR 
+       		         		  (
+       		         		  with type t
+       		         		            
+       		         		            s
+       		         		            (
+       		         		            )
+       		         		            								  
+       		         		                										 
+       		         		      									 
+       		         		  )
+       		         		      									 
+       		         		)
+       		         												 
+       		           )
+       		           in
+       		           (
+       		              
+       		              let
+       		              (
+       		               (
+       		                  									  
+       		                
+       		                 
+       		                 (
+       		                  x1
+       		                      						 
+       		                 	x2
+       		                 
+       		                 )
+       		                 TypEq.apply
+       		                 (
+       		                     P.eq
+       		                     x
+       		                 ) 
+       		                							    		   
+       		                  									  
+       		               )
+       		              in
+       		                Printf.sprintf
+       		                (
+       		                    "(%s,%s)"
+       		                    Print.to_string
+       		                    (
+       		                        P.t1
+       		                        x1
+       		                    )
+       		                    Print.to_string
+       		                    (
+       		                        P.t2
+       		                        x2
+       		                    )
+       		                )
+       		              )
+       		                  									
+       		           )
+       		             											  
+       		        )
+       		        													    
+       		      	        											 
+       		      	        											 
+       		      )
+       		      			   
+       		     )
+       		)
+       		    		   
+          )
+     )
+                 	    
+    )
+    							  
+    )
+    							  
+  									   
   )
+  									   
                                      
   let
   (
@@ -1463,19 +1785,17 @@
               )
               
               (
-                  					 123
-                  					 
+               123
+                  					   
               	
               	(
-              	    					 "A"
-              	    					 
+              	 "A"
+              	    					   
               		456
-              	    					 
+              	    					   
               	)
-              	    					 
-                  					 
+                  					   
               )
-                  					 
           )
       )
     )
