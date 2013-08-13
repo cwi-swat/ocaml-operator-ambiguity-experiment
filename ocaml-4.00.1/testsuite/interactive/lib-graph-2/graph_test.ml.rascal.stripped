@@ -159,12 +159,18 @@
                 rlineto
                 (
                     0
-                    -c
+                    ~-
+                    (
+                     c
+                    )
                 )
               ;
                 rlineto
                 (
-                    -c
+                    ~-
+                    (
+                     c
+                    )
                     0
                 )
               )
@@ -698,19 +704,19 @@
       array
       (
        (
-           					 40
+        40
        	10
        )
        (
-           					 150
+        150
        	70
        )
        (
-           					 150
+        150
        	10
        )
        (
-           					 40
+        40
        	10
        )
       )
@@ -853,30 +859,30 @@
       array
       (
        (
-           					 150
+        150
        	10
        )
        (
-           					 150
+        150
        	70
        )
        (
-           					 260
+        260
        	10
        )
        (
-           					 150
+        150
        	10
        )
       )
   )
    let
    (
-     equi
+      equi
     (
      case
          (
-      		 x
+      		  x
       		(
       		 case
       		     (
@@ -888,19 +894,19 @@
       		  		      array
       		  		      (
       		  		       (
-      		  		           					 -
-      		  		             					 (
-      		  		             					     x
-      		  		             					     /
-      		  		             					     (
-      		  		             					         l
-      		  		             					         2
-      		  		             					     )
-      		  		             					 )
+      		  		        -
+      		  		        (
+      		  		            x
+      		  		            /
+      		  		            (
+      		  		                l
+      		  		                2
+      		  		            )
+      		  		        )
       		  		       	y
       		  		       )
       		  		       (
-      		  		           					 x
+      		  		        x
       		  		       	+
       		  		       	(
       		  		       	    y
@@ -925,15 +931,15 @@
       		  		       	)
       		  		       )
       		  		       (
-      		  		           					 +
-      		  		             					 (
-      		  		             					     x
-      		  		             					     /
-      		  		             					     (
-      		  		             					         l
-      		  		             					         2
-      		  		             					     )
-      		  		             					 )
+      		  		        +
+      		  		        (
+      		  		            x
+      		  		            /
+      		  		            (
+      		  		                l
+      		  		                2
+      		  		            )
+      		  		        )
       		  		       	y
       		  		       )
       		  		      )
@@ -1117,15 +1123,15 @@
   )
    let
    (
-     draw_arc_ellipse
+      draw_arc_ellipse
     (
      case
          (
-      		 x
+      		  x
       		(
       		 case
       		     (
-      		  		 y
+      		  		  y
       		  		(
       		  		 case
       		  		     (
@@ -1187,15 +1193,15 @@
   )
    let
    (
-     draw_arc_ellipses
+      draw_arc_ellipses
     (
      case
          (
-      		 x
+      		  x
       		(
       		 case
       		     (
-      		  		 y
+      		  		  y
       		  		(
       		  		 case
       		  		     (
@@ -1283,23 +1289,23 @@
   )
    let
    (
-     fill_arc_ellipse
+      fill_arc_ellipse
     (
      case
          (
-      		 x
+      		  x
       		(
       		 case
       		     (
-      		  		 y
+      		  		  y
       		  		(
       		  		 case
       		  		     (
-      		  		  		 r1
+      		  		  		  r1
       		  		  		(
       		  		  		 case
       		  		  		     (
-      		  		  		  		 r2
+      		  		  		  		  r2
       		  		  		  		(
       		  		  		  		 case
       		  		  		  		     (
@@ -1361,15 +1367,15 @@
    )
    let
    (
-     fill_arc_ellipses
+      fill_arc_ellipses
     (
      case
          (
-      		 x
+      		  x
       		(
       		 case
       		     (
-      		  		 y
+      		  		  y
       		  		(
       		  		 case
       		  		     (
@@ -1403,7 +1409,7 @@
       		  		  		          let
       		  		  		          (
       		  		  		           (
-      		  		  		             exchange
+      		  		  		              exchange
       		  		  		            (
       		  		  		             case
       		  		  		                 (

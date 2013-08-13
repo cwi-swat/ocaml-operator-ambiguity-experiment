@@ -323,6 +323,9 @@ str printAST(value v) {
     								  ' <printAST(p)>
     								  ')
     								  ";
+
+    case "unaryMinus"("constant"(p)): return "-<printAST(p)>";  // - 3 should be printed as "-3" not "~-(3)" based on 
+    															// what we observed from the OCaml AST
     
     case "unaryMinus"(e): return "~-
     								'(
