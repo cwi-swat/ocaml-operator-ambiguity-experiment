@@ -54,6 +54,6 @@ syntax TypeConstraint
 	 = typeConstraint: "constraint" "\'" Ident "=" Typexpr;
      
 syntax ExceptionDefinition 
-	 = exception1: "exception" ConstrName ("of" Typexpr ("*" Typexpr)* )?
+	 = exception1: "exception" ConstrName ("of" Typexpr !star ("*" Typexpr)* )?
      | exception2: "exception" ConstrName "=" Constr
      ;

@@ -24,7 +24,7 @@ public void run() {
 public void runFile(str f) {
 		print(f + "...");
 		try {
-			tree = jparse(#start[Implementation], readFile(|file:///| + filePath + "/" + f));
+			tree = jparse(#start[TopLevel], readFile(|file:///| + filePath + "/" + f));
 			
 			if (/amb(_) := tree) {
 				tree = filterOCaml(tree);
