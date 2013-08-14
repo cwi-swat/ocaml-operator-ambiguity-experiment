@@ -8,7 +8,7 @@
           Set.OrderedType
           struct
           (
-            Pstr_recmodule
+            rec module
             (
               "Mod"
                   signature
@@ -196,11 +196,9 @@
                     )
                   )
               "ModSet"
-                  Pmty_with
                     Set.S
                   (
                     elt
-                      Pwith_type
                         type
                           params =
                             (

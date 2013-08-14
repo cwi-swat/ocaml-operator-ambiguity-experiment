@@ -16,44 +16,25 @@
           (
           )
           kind =
-          <[<"m","polytype1"("typexprConstr1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"list")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"n","polytype1"("typexprConstr1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"array")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
-     )
-    )
-    struct
-    (
-    type
-    (  						
-       t
-         type
-         params=
-         (
-          a
-         )
-         cstrs =
-         (
-         )
-         kind =
-         <[<"m","polytype1"("typexprConstr1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"list")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"n","polytype1"("typexprConstr1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"array")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
-    )
-    )
-    "B"
-    signature
-    (
-     type
-     (  						
-        t
-          type
-          params=
-          (
-           a
-          )
-          cstrs =
-          (
-          )
-          kind =
-           A.t
            (
-             a
+            	m
+            	poly
+            	 B.t
+            	 (
+            	    list
+            	    (
+            	      a
+            	    )
+            	 )
+            	n
+            	poly
+            	 B.t
+            	 (
+            	    array
+            	    (
+            	      a
+            	    )
+            	 )
            )
      )
     )
@@ -71,10 +52,67 @@
          (
          )
          kind =
-          A.t
           (
-            a
+           	m
+           	poly
+           	 B.t
+           	 (
+           	    list
+           	    (
+           	      a
+           	    )
+           	 )
+           	n
+           	poly
+           	 B.t
+           	 (
+           	    array
+           	    (
+           	      a
+           	    )
+           	 )
           )
+    )
+    )
+    "B"
+    signature
+    (
+     type
+     (  						
+        t
+          type
+          params=
+          (
+           a
+          )
+          cstrs =
+          (
+          )
+          kind =
+            A.t
+            (
+              a
+            )
+     )
+    )
+    struct
+    (
+    type
+    (  						
+       t
+         type
+         params=
+         (
+          a
+         )
+         cstrs =
+         (
+         )
+         kind =
+           A.t
+           (
+             a
+           )
     )
     )
   )

@@ -16,6 +16,39 @@
           (
           )
           kind =
+           tuple
+           (
+             B.t
+             (
+                array
+                (
+                  a
+                )
+             )
+              B.t
+              (
+                 list
+                 (
+                   a
+                 )
+              )
+           )
+     )
+    )
+    struct
+    (
+    type
+    (  						
+       t
+         type
+         params=
+         (
+          a
+         )
+         cstrs =
+         (
+         )
+         kind =
           tuple
           (
             B.t
@@ -33,39 +66,6 @@
                 )
              )
           )
-     )
-    )
-    struct
-    (
-    type
-    (  						
-       t
-         type
-         params=
-         (
-          a
-         )
-         cstrs =
-         (
-         )
-         kind =
-         tuple
-         (
-           B.t
-           (
-              array
-              (
-                a
-              )
-           )
-            B.t
-            (
-               list
-               (
-                 a
-               )
-            )
-         )
     )
     )
     "B"
@@ -83,7 +83,14 @@
           (
           )
           kind =
-          <[<"m","polytype1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+           (
+            	m
+            	poly
+            	 B.t
+            	 (
+            	   a
+            	 )
+           )
      )
     )
     struct
@@ -100,7 +107,14 @@
          (
          )
          kind =
-         <[<"m","polytype1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"(["extendedModulePath1"([],"B")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+          (
+           	m
+           	poly
+           	 B.t
+           	 (
+           	   a
+           	 )
+          )
     )
     )
   )
