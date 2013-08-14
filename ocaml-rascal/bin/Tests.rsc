@@ -24,7 +24,7 @@ public void run() {
 public void runFile(str f) {
 		print(f + "...");
 		try {
-			tree = jparse(#start[TopLevel], readFile(|file:///| + filePath + "/" + f));
+			tree = jparse(#start[Implementation], readFile(|file:///| + filePath + "/" + f));
 			
 			if (/amb(_) := tree) {
 				tree = filterOCaml(tree);
@@ -1026,13 +1026,18 @@ str printAST(value v) {
    case "tagNamePattern"(t, p): return "<printAST(t)>
     								   '<printAST(p)>
     								   ";
-    										    
-    case "functor"([], t, e): return printAST(e);								    
+    								
+	// for calls from moduleName    										    
+    case "functor"([], t, e): return "
+    								 '	<printAST(e)>
+    								 '	<printAST(t)>
+    								 ";								    
     										    
     case "functor"([<modeName, modType>], t, e): return "functor <modeName>
     													'(
     													'  <printAST(modType)>
     													'  <printAST(e)>
+    													'  <printAST(t)>
     													')
     													";
     										       
@@ -1217,7 +1222,6 @@ str printAST(value v) {
 	// modeConsModule1: "module" ModulePath "=" ExtendedModulePath
  	case "modeConsModule1"(modulePath, extendedModulePath): return "
  																   '<printAST(modulePath)>
- 																   '<printAST(extendedModulePath)>
  																   ";
  																   
  	// modeConsModule2: "module" ModuleName ":="  ExtendedModulePath
@@ -1269,10 +1273,14 @@ str printAST(value v) {
 	
 	case "classPath"(cp) : return printAST(cp);
 	
+	// "method" "private"? "virtual"? MethodName ":" PolyTypExpr
+	case "fieldSpec3"(_, _, n, e): return "
+										  '  <printAST(e)>	
+										  ";
+	
 	
 	// (("?"? LabelName ":")? Typexpr "-\>")* ClassBodyType;
-	case "classType"(l, cbt): return "class_type
-									 ' fun
+	case "classType"(l, cbt): return "
 									 <for (<labelName, typexpr> <- l) {>
 									 '	<printAST(labelName)>
 									 '	<printAST(typexpr)>
@@ -1408,8 +1416,18 @@ str printAST(value v) {
     	"; 								   
     
     // ("method" | "method!") "private"? MethodName Parameter* (":" Typexpr)? "=" Expr
+    case "method1"(_, _, name, [], _, e) : return "method <name>
+    											  '  	<printAST(e)>
+    											  ";
+    
     case "method1"(_, _, name, params, _, e) : return "method <name>
-    												 '  <printAST(e)>
+    											     '(
+    											     '  case
+    											     '	(
+    											     '		<printAST(params)>
+    												 '  	<printAST(e)>
+    												 '	)
+    												 ')
     												 ";
     												 
     	
@@ -1421,8 +1439,8 @@ str printAST(value v) {
     						
     // method3: "method" "private"? "virtual" MethodName ":" PolyTypExpr
     case "method3"(_, name, e) : return "method <name>
-    												 '   <printAST(e)>
-    												 ";
+    									'   <printAST(e)>
+    									";
     						
     						
     						

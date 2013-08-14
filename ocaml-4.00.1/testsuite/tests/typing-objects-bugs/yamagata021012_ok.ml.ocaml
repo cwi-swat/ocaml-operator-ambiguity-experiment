@@ -16,11 +16,9 @@
           class_signature
               
             (
-              Pctf_meth "get" Public ([6,82+4]..[6,82+19])
                   poly
                   
                     a
-              Pctf_meth "incr" Public ([7,102+4]..[7,102+30])
                   poly
                   
                     arrow
@@ -31,7 +29,6 @@
                        unit
                       (
                       )
-              Pctf_meth "is_last" Public ([8,133+4]..[8,133+25])
                   poly
                   
                      bool
@@ -53,20 +50,17 @@
           class_signature
               self
             (
-              Pctf_meth "first" Public ([13,209+4]..[13,209+28])
                   poly
                   
                      cursor
                     (
                         a
                     )
-              Pctf_meth "len" Public ([14,238+4]..[14,238+20])
                   poly
                   
                      int
                     (
                     )
-              Pctf_meth "nth" Public ([15,259+4]..[15,259+33])
                   poly
                   
                     arrow
@@ -78,11 +72,9 @@
                       (
                           a
                       )
-              Pctf_meth "copy" Public ([16,293+4]..[16,293+23])
                   poly
                   
                     self
-              Pctf_meth "sub" Public ([17,317+4]..[17,317+36])
                   poly
                   
                     arrow
@@ -96,7 +88,6 @@
                         (
                         )
                         self
-              Pctf_meth "concat" Public ([18,354+4]..[18,354+39])
                   poly
                   
                     arrow
@@ -106,7 +97,6 @@
                           a
                       )
                       self
-              Pctf_meth "fold" Public ([19,394+4]..[19,394+57])
                   poly
                    'b
                     arrow
@@ -127,7 +117,6 @@
                       
                         b
                         b
-              Pctf_meth "iter" Public ([20,452+4]..[20,452+38])
                   poly
                   
                     arrow
@@ -419,7 +408,6 @@
           class_signature
               
             (
-              Pctf_meth "get" Public ([47,1278+4]..[47,1278+27])
                   poly
                   
                     arrow
@@ -428,7 +416,6 @@
                       (
                       )
                       a
-              Pctf_meth "close" Public ([48,1306+4]..[48,1306+31])
                   poly
                   
                     arrow
@@ -455,7 +442,6 @@
           class_signature
               
             (
-              Pctf_meth "put" Public ([53,1391+4]..[53,1391+27])
                   poly
                   
                     arrow
@@ -464,7 +450,6 @@
                        unit
                       (
                       )
-              Pctf_meth "flush" Public ([54,1419+4]..[54,1419+31])
                   poly
                   
                     arrow
@@ -475,7 +460,6 @@
                        unit
                       (
                       )
-              Pctf_meth "close" Public ([55,1451+4]..[55,1451+31])
                   poly
                   
                     arrow

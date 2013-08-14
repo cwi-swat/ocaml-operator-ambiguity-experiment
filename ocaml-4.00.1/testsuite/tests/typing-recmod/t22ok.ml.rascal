@@ -334,24 +334,26 @@
     "ASet"
     
      Set.S
-      
-      elt
-      type
-      params=
       (
-      )
-      cstrs =
-      (
-      )
-      kind =
-      
-       
-       A.t
-       (
-       )
-       								  
-        										 
+          
+          elt
+          type
+          params=
+          (
+          )
+          cstrs =
+          (
+          )
+          kind =
+          
+           
+           A.t
+           (
+           )
+           								  
+            										 
         								    
+       )
         								    
     
         								  
@@ -1290,9 +1292,7 @@
       C
       :
       
-      
-      		    								  
-       "extendedModulePath1"([],"Strengthen2").M.u
+      Strengthen2.M.u
       (
       )
       								  
@@ -1325,9 +1325,7 @@
             )
             kind =
             
-            
-            		    								  
-             "extendedModulePath1"([],"Strengthen2").R.v
+            Strengthen2.R.v
             (
             )
             								  
@@ -1395,9 +1393,7 @@
        D
        :
        
-       
-       		    								  
-        "extendedModulePath1"([],"Strengthen2").R.v
+       Strengthen2.R.v
        (
        )
        								  
@@ -2922,12 +2918,12 @@
      ORDERED
      
       HEAP
-      modeConsModule1 
-      (
+       (
+          
           Elem
-          Element
-      )
+           																   
          								    
+        )
          								    
    )
    												
@@ -3488,24 +3484,26 @@
        "PrimH"
        
         HEAP
-         
-         Elem.t
-         type
-         params=
          (
-         )
-         cstrs =
-         (
-         )
-         kind =
-         
-          
-          BE.t
-          (
-          )
-          								  
-           										 
+             
+             Elem.t
+             type
+             params=
+             (
+             )
+             cstrs =
+             (
+             )
+             kind =
+             
+              
+              BE.t
+              (
+              )
+              								  
+               										 
            								    
+          )
            								    
        MakeH
        (
@@ -3926,6 +3924,15 @@
      							  
      )
      							  
+     
+      HEAP
+       (
+          
+          Elem
+           																   
+         								    
+        )
+         								    
    )
        													
   )
@@ -3935,524 +3942,535 @@
   functor Element
   (
    ORDERED
-   struct
-   (
-   							  
-   module  Elem
-    Element
-    
-   										    
-   							  
-   type
-   (  						
-       							    	 
-      heap
-        type
-        params=
-        (
-        
-        )
-        cstrs =
-        (
-        )
-        kind =
-        
-        
-        (
-        								  
-        E
-        (
-        									
-        )
-        								    
-        								  
-        T
-        (
-        									
-         
-         int
-         (
-         )
-         								  
-        								     
-         
-         Elem.t
-         (
-         )
-         								  
-        								     
-         
-         heap
-         (
-         )
-         								  
-        								     
-         
-         heap
-         (
-         )
-         								  
-        								     
-        )
-        								    
-        								  
-        )
-        								  
-        														  
-        														 
-     											   
-   								        
-   )
-   							  
-   let
-   (
-    
-     rank
-     (
-      
-      case
-      (
-        E
-        
-        0
-      ) 
-      	        											 
-        
-        case
-        (
-         
-         T
-         
-         (
-          r
-              						 
-         	_
-         
-         	_
-         
-         	_
-         
-         )
-         									  
-         
-         r
-        )
-        													    
-      	        											 
-      	        											 
-     )
-        							    
-    							    		    
-   )
-   							  
-   let
-   (
-    
-      make
-                	   
-    (
-     case
-         (
-      		
-      		  x
-      		            	   
-      		(
-      		 case
-      		     (
-      		  		
-      		  		 a
-      		  		(
-      		  		 case
-      		  		     (
-      		  		 	  b
-      		  		      ifthenelse
-      		  		      (
-      		  		       if
-      		  		       (
-      		  		        >=
-      		  		        (
-      		  		            rank
-      		  		            (
-      		  		                a
-      		  		            )
-      		  		            rank
-      		  		            (
-      		  		                b
-      		  		            )
-      		  		        )
-      		  		       )
-      		  		       then
-      		  		       (
-      		  		        
-      		  		        T
-      		  		           
-      		  		           (
-      		  		            +
-      		  		            (
-      		  		                rank
-      		  		                (
-      		  		                    b
-      		  		                )
-      		  		                1
-      		  		            )
-      		  		               					   
-      		  		           	x
-      		  		               					   
-      		  		           	a
-      		  		               					   
-      		  		           	b
-      		  		               					   
-      		  		           )
-      		  		            								 
-      		  		       )
-      		  		       else
-      		  		       (
-      		  		        
-      		  		        T
-      		  		           
-      		  		           (
-      		  		            +
-      		  		            (
-      		  		                rank
-      		  		                (
-      		  		                    a
-      		  		                )
-      		  		                1
-      		  		            )
-      		  		               					   
-      		  		           	x
-      		  		               					   
-      		  		           	b
-      		  		               					   
-      		  		           	a
-      		  		               					   
-      		  		           )
-      		  		            								 
-      		  		       ) 
-      		  		      )
-      		  		      	    											 
-      		  		     )
-      		  		)
-      		  		    		   
-      		     )
-      		)
-      		            	   
-         )
-    )
-                	    
-   )
-   							  
-   let
-   (
-    
-     empty
-     E 
-    							    		    
-   )
-   							  
-   let
-   (
-    
-     isEmpty
-     (
-      
-      case
-      (
-        E
-        
-        true
-      ) 
-      	        											 
-        
-        case
-        (
-         _
-         
-         false
-        )
-        													    
-      	        											 
-      	        											 
-     )
-        							    
-    							    		    
-   )
-   							  
-   let
-   (
-    
-      merge
-                	   
-    (
-     case
-         (
-      		
-      		 h1
-      		(
-      		 case
-      		     (
-      		 	  h2
-      		      match
-      		      
-      		      (
-      		       h1
-      		          					   
-      		      	h2
-      		          					   
-      		      )
-      		      (
-      		      
-      		      case
-      		      (
-      		        
-      		        (
-      		         _
-      		             						 
-      		        	E
-      		        
-      		        )
-      		        
-      		        h1
-      		      ) 
-      		      	        											 
-      		        
-      		        case
-      		        (
-      		         
-      		         (
-      		          E
-      		              						 
-      		         	_
-      		         
-      		         )
-      		         
-      		         h2
-      		        )
-      		        													    
-      		      	        											 
-      		        
-      		        case
-      		        (
-      		         
-      		         (
-      		          
-      		          T
-      		          
-      		          (
-      		           _
-      		               						 
-      		          	x1
-      		          
-      		          	a1
-      		          
-      		          	b1
-      		          
-      		          )
-      		          									  
-      		              						 
-      		         	
-      		         	T
-      		         	
-      		         	(
-      		         	 _
-      		         	     						 
-      		         		x2
-      		         	
-      		         		a2
-      		         	
-      		         		b2
-      		         	
-      		         	)
-      		         										  
-      		         
-      		         )
-      		         
-      		         ifthenelse
-      		         (
-      		          if
-      		          (
-      		           Elem.leq
-      		           (
-      		               x1
-      		               x2
-      		           )
-      		          )
-      		          then
-      		          (
-      		           make
-      		           (
-      		               x1
-      		               a1
-      		               merge
-      		               (
-      		                   b1
-      		                   h2
-      		               )
-      		           )
-      		          )
-      		          else
-      		          (
-      		           make
-      		           (
-      		               x2
-      		               a2
-      		               merge
-      		               (
-      		                   h1
-      		                   b2
-      		               )
-      		           )
-      		          ) 
-      		         )
-      		         	    											 
-      		        )
-      		        													    
-      		      	        											 
-      		      	        											 
-      		      )
-      		      			   
-      		     )
-      		)
-      		    		   
-         )
-    )
-                	    
-   )
-   							  
-   let
-   (
-    
-      insert
-                	   
-    (
-     case
-         (
-      		
-      		 x
-      		(
-      		 case
-      		     (
-      		 	  h
-      		      merge
-      		      (
-      		          
-      		          T
-      		             
-      		             (
-      		              1
-      		                 					   
-      		             	x
-      		                 					   
-      		             	E
-      		                 					   
-      		             	E
-      		                 					   
-      		             )
-      		              								 
-      		          h
-      		      )
-      		     )
-      		)
-      		    		   
-         )
-    )
-                	    
-   )
-   							  
-   let
-   (
-    
-     findMin
-     (
-      
-      case
-      (
-        E
-        
-        raise
-        (
-            Not_found
-        )
-      ) 
-      	        											 
-        
-        case
-        (
-         
-         T
-         
-         (
-          _
-              						 
-         	x
-         
-         	_
-         
-         	_
-         
-         )
-         									  
-         
-         x
-        )
-        													    
-      	        											 
-      	        											 
-     )
-        							    
-    							    		    
-   )
-   							  
-   let
-   (
-    
-     deleteMin
-     (
-      
-      case
-      (
-        E
-        
-        raise
-        (
-            Not_found
-        )
-      ) 
-      	        											 
-        
-        case
-        (
-         
-         T
-         
-         (
-          _
-              						 
-         	x
-         
-         	a
-         
-         	b
-         
-         )
-         									  
-         
-         merge
-         (
-             a
-             b
-         )
-        )
-        													    
-      	        											 
-      	        											 
-     )
-        							    
-    							    		    
-   )
-   							  
-   )
-   							  
+   
+   	struct
+   	(
+   								  
+   	module  Elem
+   	 Element
+   	 
+   											    
+   								  
+   	type
+   	(  						
+   	    							    	 
+   	   heap
+   	     type
+   	     params=
+   	     (
+   	     
+   	     )
+   	     cstrs =
+   	     (
+   	     )
+   	     kind =
+   	     
+   	     
+   	     (
+   	     								  
+   	     E
+   	     (
+   	     									
+   	     )
+   	     								    
+   	     								  
+   	     T
+   	     (
+   	     									
+   	      
+   	      int
+   	      (
+   	      )
+   	      								  
+   	     								     
+   	      
+   	      Elem.t
+   	      (
+   	      )
+   	      								  
+   	     								     
+   	      
+   	      heap
+   	      (
+   	      )
+   	      								  
+   	     								     
+   	      
+   	      heap
+   	      (
+   	      )
+   	      								  
+   	     								     
+   	     )
+   	     								    
+   	     								  
+   	     )
+   	     								  
+   	     														  
+   	     														 
+   	  											   
+   									        
+   	)
+   								  
+   	let
+   	(
+   	 
+   	  rank
+   	  (
+   	   
+   	   case
+   	   (
+   	     E
+   	     
+   	     0
+   	   ) 
+   	   	        											 
+   	     
+   	     case
+   	     (
+   	      
+   	      T
+   	      
+   	      (
+   	       r
+   	           						 
+   	      	_
+   	      
+   	      	_
+   	      
+   	      	_
+   	      
+   	      )
+   	      									  
+   	      
+   	      r
+   	     )
+   	     													    
+   	   	        											 
+   	   	        											 
+   	  )
+   	     							    
+   	 							    		    
+   	)
+   								  
+   	let
+   	(
+   	 
+   	   make
+   	             	   
+   	 (
+   	  case
+   	      (
+   	   		
+   	   		  x
+   	   		            	   
+   	   		(
+   	   		 case
+   	   		     (
+   	   		  		
+   	   		  		 a
+   	   		  		(
+   	   		  		 case
+   	   		  		     (
+   	   		  		 	  b
+   	   		  		      ifthenelse
+   	   		  		      (
+   	   		  		       if
+   	   		  		       (
+   	   		  		        >=
+   	   		  		        (
+   	   		  		            rank
+   	   		  		            (
+   	   		  		                a
+   	   		  		            )
+   	   		  		            rank
+   	   		  		            (
+   	   		  		                b
+   	   		  		            )
+   	   		  		        )
+   	   		  		       )
+   	   		  		       then
+   	   		  		       (
+   	   		  		        
+   	   		  		        T
+   	   		  		           
+   	   		  		           (
+   	   		  		            +
+   	   		  		            (
+   	   		  		                rank
+   	   		  		                (
+   	   		  		                    b
+   	   		  		                )
+   	   		  		                1
+   	   		  		            )
+   	   		  		               					   
+   	   		  		           	x
+   	   		  		               					   
+   	   		  		           	a
+   	   		  		               					   
+   	   		  		           	b
+   	   		  		               					   
+   	   		  		           )
+   	   		  		            								 
+   	   		  		       )
+   	   		  		       else
+   	   		  		       (
+   	   		  		        
+   	   		  		        T
+   	   		  		           
+   	   		  		           (
+   	   		  		            +
+   	   		  		            (
+   	   		  		                rank
+   	   		  		                (
+   	   		  		                    a
+   	   		  		                )
+   	   		  		                1
+   	   		  		            )
+   	   		  		               					   
+   	   		  		           	x
+   	   		  		               					   
+   	   		  		           	b
+   	   		  		               					   
+   	   		  		           	a
+   	   		  		               					   
+   	   		  		           )
+   	   		  		            								 
+   	   		  		       ) 
+   	   		  		      )
+   	   		  		      	    											 
+   	   		  		     )
+   	   		  		)
+   	   		  		    		   
+   	   		     )
+   	   		)
+   	   		            	   
+   	      )
+   	 )
+   	             	    
+   	)
+   								  
+   	let
+   	(
+   	 
+   	  empty
+   	  E 
+   	 							    		    
+   	)
+   								  
+   	let
+   	(
+   	 
+   	  isEmpty
+   	  (
+   	   
+   	   case
+   	   (
+   	     E
+   	     
+   	     true
+   	   ) 
+   	   	        											 
+   	     
+   	     case
+   	     (
+   	      _
+   	      
+   	      false
+   	     )
+   	     													    
+   	   	        											 
+   	   	        											 
+   	  )
+   	     							    
+   	 							    		    
+   	)
+   								  
+   	let
+   	(
+   	 
+   	   merge
+   	             	   
+   	 (
+   	  case
+   	      (
+   	   		
+   	   		 h1
+   	   		(
+   	   		 case
+   	   		     (
+   	   		 	  h2
+   	   		      match
+   	   		      
+   	   		      (
+   	   		       h1
+   	   		          					   
+   	   		      	h2
+   	   		          					   
+   	   		      )
+   	   		      (
+   	   		      
+   	   		      case
+   	   		      (
+   	   		        
+   	   		        (
+   	   		         _
+   	   		             						 
+   	   		        	E
+   	   		        
+   	   		        )
+   	   		        
+   	   		        h1
+   	   		      ) 
+   	   		      	        											 
+   	   		        
+   	   		        case
+   	   		        (
+   	   		         
+   	   		         (
+   	   		          E
+   	   		              						 
+   	   		         	_
+   	   		         
+   	   		         )
+   	   		         
+   	   		         h2
+   	   		        )
+   	   		        													    
+   	   		      	        											 
+   	   		        
+   	   		        case
+   	   		        (
+   	   		         
+   	   		         (
+   	   		          
+   	   		          T
+   	   		          
+   	   		          (
+   	   		           _
+   	   		               						 
+   	   		          	x1
+   	   		          
+   	   		          	a1
+   	   		          
+   	   		          	b1
+   	   		          
+   	   		          )
+   	   		          									  
+   	   		              						 
+   	   		         	
+   	   		         	T
+   	   		         	
+   	   		         	(
+   	   		         	 _
+   	   		         	     						 
+   	   		         		x2
+   	   		         	
+   	   		         		a2
+   	   		         	
+   	   		         		b2
+   	   		         	
+   	   		         	)
+   	   		         										  
+   	   		         
+   	   		         )
+   	   		         
+   	   		         ifthenelse
+   	   		         (
+   	   		          if
+   	   		          (
+   	   		           Elem.leq
+   	   		           (
+   	   		               x1
+   	   		               x2
+   	   		           )
+   	   		          )
+   	   		          then
+   	   		          (
+   	   		           make
+   	   		           (
+   	   		               x1
+   	   		               a1
+   	   		               merge
+   	   		               (
+   	   		                   b1
+   	   		                   h2
+   	   		               )
+   	   		           )
+   	   		          )
+   	   		          else
+   	   		          (
+   	   		           make
+   	   		           (
+   	   		               x2
+   	   		               a2
+   	   		               merge
+   	   		               (
+   	   		                   h1
+   	   		                   b2
+   	   		               )
+   	   		           )
+   	   		          ) 
+   	   		         )
+   	   		         	    											 
+   	   		        )
+   	   		        													    
+   	   		      	        											 
+   	   		      	        											 
+   	   		      )
+   	   		      			   
+   	   		     )
+   	   		)
+   	   		    		   
+   	      )
+   	 )
+   	             	    
+   	)
+   								  
+   	let
+   	(
+   	 
+   	   insert
+   	             	   
+   	 (
+   	  case
+   	      (
+   	   		
+   	   		 x
+   	   		(
+   	   		 case
+   	   		     (
+   	   		 	  h
+   	   		      merge
+   	   		      (
+   	   		          
+   	   		          T
+   	   		             
+   	   		             (
+   	   		              1
+   	   		                 					   
+   	   		             	x
+   	   		                 					   
+   	   		             	E
+   	   		                 					   
+   	   		             	E
+   	   		                 					   
+   	   		             )
+   	   		              								 
+   	   		          h
+   	   		      )
+   	   		     )
+   	   		)
+   	   		    		   
+   	      )
+   	 )
+   	             	    
+   	)
+   								  
+   	let
+   	(
+   	 
+   	  findMin
+   	  (
+   	   
+   	   case
+   	   (
+   	     E
+   	     
+   	     raise
+   	     (
+   	         Not_found
+   	     )
+   	   ) 
+   	   	        											 
+   	     
+   	     case
+   	     (
+   	      
+   	      T
+   	      
+   	      (
+   	       _
+   	           						 
+   	      	x
+   	      
+   	      	_
+   	      
+   	      	_
+   	      
+   	      )
+   	      									  
+   	      
+   	      x
+   	     )
+   	     													    
+   	   	        											 
+   	   	        											 
+   	  )
+   	     							    
+   	 							    		    
+   	)
+   								  
+   	let
+   	(
+   	 
+   	  deleteMin
+   	  (
+   	   
+   	   case
+   	   (
+   	     E
+   	     
+   	     raise
+   	     (
+   	         Not_found
+   	     )
+   	   ) 
+   	   	        											 
+   	     
+   	     case
+   	     (
+   	      
+   	      T
+   	      
+   	      (
+   	       _
+   	           						 
+   	      	x
+   	      
+   	      	a
+   	      
+   	      	b
+   	      
+   	      )
+   	      									  
+   	      
+   	      merge
+   	      (
+   	          a
+   	          b
+   	      )
+   	     )
+   	     													    
+   	   	        											 
+   	   	        											 
+   	  )
+   	     							    
+   	 							    		    
+   	)
+   								  
+   	)
+   								  
+   	
+   	 HEAP
+   	  (
+   	     
+   	     Elem
+   	      																   
+   	    								    
+   	   )
+   	    								    
+       								 
   )
       										    
                                      
@@ -4643,34 +4661,29 @@
        		)
        	name = c
        	expr =
-       	class_type
-       	 fun
+       	
        										 
        		class_type
        		signature
        		class_signature
        		(
        												 
-       		 fieldSpec3 
-       		 (
-       		     
-       		     
-       		     m
-       		     poly
-       		     arrow
-       		     
-       		     int
-       		     (
-       		     )
-       		     								  
-       		     
-       		     int
-       		     (
-       		     )
-       		     								  
-       		        								   
-       		                                            
-       		 )
+       		 
+       		   poly
+       		   arrow
+       		   
+       		   int
+       		   (
+       		   )
+       		   								  
+       		   
+       		   int
+       		   (
+       		   )
+       		   								  
+       		      								   
+       		                                          	
+       		 										  
        												 
        		)
        												 
@@ -4697,33 +4710,39 @@
                   (
                       								
                      method m
-                       ifthenelse
-                       (
-                        if
-                        (
-                         <=
-                         (
-                             x
-                             0
-                         )
-                        )
-                        then
-                        (
-                         x
-                        )
-                        else
-                        (
-                         send m
-                         (
-                          new Class2.d
-                         )
-                             						  
-                         (
-                             x
-                         )
-                        ) 
-                       )
-                       	    											 
+                     (
+                       case
+                     	(
+                     		x
+                       	ifthenelse
+                       	(
+                       	 if
+                       	 (
+                       	  <=
+                       	  (
+                       	      x
+                       	      0
+                       	  )
+                       	 )
+                       	 then
+                       	 (
+                       	  x
+                       	 )
+                       	 else
+                       	 (
+                       	  send m
+                       	  (
+                       	   new Class2.d
+                       	  )
+                       	      						  
+                       	  (
+                       	      x
+                       	  )
+                       	 ) 
+                       	)
+                       		    											 
+                     	)
+                     )
                          												 
                       								
                   )
@@ -4749,34 +4768,29 @@
        		)
        	name = d
        	expr =
-       	class_type
-       	 fun
+       	
        										 
        		class_type
        		signature
        		class_signature
        		(
        												 
-       		 fieldSpec3 
-       		 (
-       		     
-       		     
-       		     m
-       		     poly
-       		     arrow
-       		     
-       		     int
-       		     (
-       		     )
-       		     								  
-       		     
-       		     int
-       		     (
-       		     )
-       		     								  
-       		        								   
-       		                                            
-       		 )
+       		 
+       		   poly
+       		   arrow
+       		   
+       		   int
+       		   (
+       		   )
+       		   								  
+       		   
+       		   int
+       		   (
+       		   )
+       		   								  
+       		      								   
+       		                                          	
+       		 										  
        												 
        		)
        												 
@@ -4809,14 +4823,27 @@
                      										    
                       								
                      method m
-                       send m
-                       (
-                        super
-                       )
-                           						  
-                       (
-                           0
-                       )
+                     (
+                       case
+                     	(
+                     		
+                     		x
+                     		
+                     		int
+                     		(
+                     		)
+                     										  
+                     		    										   
+                       	send m
+                       	(
+                       	 super
+                       	)
+                       	    						  
+                       	(
+                       	    0
+                       	)
+                     	)
+                     )
                          												 
                       								
                   )
@@ -4873,27 +4900,22 @@
    		     		)
    		     	name = c
    		     	expr =
-   		     	class_type
-   		     	 fun
+   		     	
    		     										 
    		     		class_type
    		     		signature
    		     		class_signature
    		     		(
    		     												 
-   		     		 fieldSpec3 
-   		     		 (
-   		     		     
-   		     		     
-   		     		     m
-   		     		     poly
-   		     		     
-   		     		     int
-   		     		     (
-   		     		     )
-   		     		     								  
-   		     		                                            
-   		     		 )
+   		     		 
+   		     		   poly
+   		     		   
+   		     		   int
+   		     		   (
+   		     		   )
+   		     		   								  
+   		     		                                          	
+   		     		 										  
    		     												 
    		     		)
    		     												 
@@ -4920,8 +4942,8 @@
    		                (
    		                    								
    		                   method m
-   		                     123
-   		                       												 
+   		                     	123
+   		                       											  
    		                    								
    		                )
    		                    								
@@ -5164,81 +5186,84 @@
    (
    		    				
    )
-   struct
-   (
-   							  
-   let
-   (
-    
-     f1
-    (
-     case
-         (
-     	  ()
-          1
-         )
-    )
-        		    
-   )
-   							  
-   let
-   (
-    
-     f2
-    (
-     case
-         (
-     	  ()
-          2
-         )
-    )
-        		    
-   )
-   							  
-   let
-   (
-    
-     f3
-    (
-     case
-         (
-     	  ()
-          3
-         )
-    )
-        		    
-   )
-   							  
-   let
-   (
-    
-     f4
-    (
-     case
-         (
-     	  ()
-          4
-         )
-    )
-        		    
-   )
-   							  
-   let
-   (
-    
-     f5
-    (
-     case
-         (
-     	  ()
-          5
-         )
-    )
-        		    
-   )
-   							  
-   )
-   							  
+   
+   	struct
+   	(
+   								  
+   	let
+   	(
+   	 
+   	  f1
+   	 (
+   	  case
+   	      (
+   	  	  ()
+   	       1
+   	      )
+   	 )
+   	     		    
+   	)
+   								  
+   	let
+   	(
+   	 
+   	  f2
+   	 (
+   	  case
+   	      (
+   	  	  ()
+   	       2
+   	      )
+   	 )
+   	     		    
+   	)
+   								  
+   	let
+   	(
+   	 
+   	  f3
+   	 (
+   	  case
+   	      (
+   	  	  ()
+   	       3
+   	      )
+   	 )
+   	     		    
+   	)
+   								  
+   	let
+   	(
+   	 
+   	  f4
+   	 (
+   	  case
+   	      (
+   	  	  ()
+   	       4
+   	      )
+   	 )
+   	     		    
+   	)
+   								  
+   	let
+   	(
+   	 
+   	  f5
+   	 (
+   	  case
+   	      (
+   	  	  ()
+   	       5
+   	      )
+   	 )
+   	     		    
+   	)
+   								  
+   	)
+   								  
+   	
+       								 
   )
       										    
                                      
@@ -5325,36 +5350,39 @@
         								
    		    				
    )
-   struct
-   (
-   							  
-   let
-   (
-    
-     x
-     0 
-    							    		    
-   )
-   							  
-   let
-   (
-    
-     at
-    (
-     case
-         (
-     	  a
-          A.f
-          (
-              a
-          )
-         )
-    )
-        		    
-   )
-   							  
-   )
-   							  
+   
+   	struct
+   	(
+   								  
+   	let
+   	(
+   	 
+   	  x
+   	  0 
+   	 							    		    
+   	)
+   								  
+   	let
+   	(
+   	 
+   	  at
+   	 (
+   	  case
+   	      (
+   	  	  a
+   	       A.f
+   	       (
+   	           a
+   	       )
+   	      )
+   	 )
+   	     		    
+   	)
+   								  
+   	)
+   								  
+   	
+       								 
   )
       										    
                                      
@@ -5701,16 +5729,19 @@
         								
    		    				
    )
-   struct
-   (
-   							  
-   include
-   (
-     S
-   )
-   							  
-   )
-   							  
+   
+   	struct
+   	(
+   								  
+   	include
+   	(
+   	  S
+   	)
+   								  
+   	)
+   								  
+   	
+       								 
   )
       										    
                                      

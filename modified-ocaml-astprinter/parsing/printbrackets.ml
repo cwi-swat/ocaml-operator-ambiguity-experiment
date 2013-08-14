@@ -471,8 +471,8 @@ and class_type_field i ppf x =
         "Pctf_virt \"%s\" %a %a\n" s fmt_private_flag pf fmt_location loc;
       core_type (i+1) ppf ct;
   | Pctf_meth (s, pf, ct) ->
-      line i ppf
-        "Pctf_meth \"%s\" %a %a\n" s fmt_private_flag pf fmt_location loc;
+      (*line i ppf
+        "Pctf_meth \"%s\" %a %a\n" s fmt_private_flag pf fmt_location loc;*)
       core_type (i+1) ppf ct;
   | Pctf_cstr (ct1, ct2) ->
       line i ppf "Pctf_cstr %a\n" fmt_location loc;
@@ -667,7 +667,8 @@ and with_constraint i ppf x =
   | Pwith_typesubst (td) ->
       (* line i ppf "Pwith_typesubst\n"; *)
       type_declaration (i+1) ppf td;
-  | Pwith_module li -> line i ppf "Pwith_module %a\n" fmt_longident li;
+  (* | Pwith_module li -> line i ppf "Pwith_module %a\n" fmt_longident li; *)
+  | Pwith_module li -> line i ppf "";
   (* | Pwith_modsubst li -> line i ppf "Pwith_modsubst %a\n" fmt_longident li; *)
   | Pwith_modsubst li -> line i ppf "";
 
