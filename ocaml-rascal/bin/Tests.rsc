@@ -643,7 +643,7 @@ str printAST(value v) {
     		   ";		   
 
 	case "letBinding"(p, l, t, e) : {
-            notP = [x | x <- l && !isPattern(x)];
+            notP = getNonPatterns(l);
             rest = l - notP;
             return "
             	   '  <printAST(p)>
@@ -986,7 +986,15 @@ str printAST(value v) {
    	case "arrow1"(t1, t2) : return "arrow
    								   '<printAST(t1)>
    								   '<printAST(t2)>
-   								   ";							    
+   								   ";
+   								   
+   				
+	// "?"? LabelName ":" Typexpr !arrow1 "-\>" Typexpr)   								   
+	case "arrow2"(_, l, t1, t2): return "arrow
+										'<printAST(l)>
+										'<printAST(t1)>
+										'<printAST(t2)>
+										"; 						    
    								    
    								    
     case "tagg"(ident) : return "<ident>";	
@@ -1032,7 +1040,16 @@ str printAST(value v) {
 	case "typexprHash2"(t, c): return "<printAST(c)>
 									  '(
 									  '  <printAST(t)>
-									  ')";    									
+									  ')";
+									  
+	// "(" {Typexpr ","}+ ")" "#" ClassPath									  
+	case "typexprHash3"(l, c): return "<printAST(c)>
+									  '(
+									  <for (x <- l) {>
+									  '  <printAST(x)>
+									  <}>
+									  ')
+									  ";									      									
     
     // MethodName ":" PolyTypExpr							
 	case "methodType"(n, e): return "
@@ -1377,7 +1394,7 @@ str printAST(value v) {
 									 '	<printAST(cbt)>
 									 ";
 	
-	// classBodyType1: "object" ("(" Typexpr ")")? ClassFieldSpec* "end"
+	// classBodyType1: "object" ("(" Typexpr ")")? fieSpec* "end"
 	case "classBodyType1"([], l): return "class_type
 										 'signature
 										 'class_signature
@@ -1412,7 +1429,9 @@ str printAST(value v) {
 		    									";
 	
 	// "\'" Ident ("," "\'" Ident)*;
-	case "typeParameters"(x, l): return "<printAST(x)><for (i <- l) {><i><}>";
+	case "typeParameters"(x, l): return "\"<x>\"<for (i <- l) {>
+										'\"<i>\"
+										<}>";
 	
 	// "class" {ClassBinding "and"}+;
 	case "classDefinition"(l): return "class
@@ -1446,7 +1465,7 @@ str printAST(value v) {
 	case "classTypeDef"(_, [params], cn, cbt): return "class_type_declaration
 													  'params = 
 													  '(
-													  ' \"<printAST(params)>\"
+													  '  <printAST(params)>
 													  ') 
 													  'name = <printAST(cn)>
 													  'expr =
@@ -1502,7 +1521,7 @@ str printAST(value v) {
     case "classBinding"(_, [x], className, params, t, classExpr) : return
 										    	"params = 
 										    	'(
-										    	' \"<printAST(x)>\"
+										    	' <printAST(x)>
 										    	')
 										    	'class name = <className>
 										    	'class expr = 
@@ -1518,15 +1537,48 @@ str printAST(value v) {
     											  '   <printAST(t)>	
     											  ";
     
-    case "method1"(_, _, name, params, _, e) : return "method <name>
+    case "method1"(_, _, name, [param], _, e) : return "method <name>
+										     '(
+										     '  case
+										     '	(
+										     '		<printAST(param)>
+											 '  	<printAST(e)>
+											 '	)
+											 ')
+											 ";
+    
+    
+    case "method1"(m, p, name, [first, *rest], t, e) : return "method <name>
     											     '(
     											     '  case
     											     '	(
-    											     '		<printAST(params)>
-    												 '  	<printAST(e)>
+    											     '		<printAST(first)>
+    											     '		(
+	    											 '			case
+    											     '			(		
+    												 '  		<printAST("method1x"(m, p, name, rest, t, e))>
+    												 '			)
+    												 '		)
     												 '	)
     												 ')
     												 ";
+    												     												 
+    												 
+	case "method1x"(_, _, name, [param], _, e) : return "
+										     '   <printAST(param)>
+											 '   <printAST(e)>
+											 ";
+    												 
+ 	case "method1x"(m, p, name, [first, *rest], t, e) : return "
+    											     '	<printAST(first)>
+    											     '	(
+    											     '		case 
+    											     '		(
+    												 '  		<printAST("method1x"(m, p, name, rest, t, e))>
+    												 '		)
+    												 '	)
+    												 ";
+    												 
     												 
     	
     //  method2: "method" "private"? MethodName ":"  PolyTypExpr "=" Expr											 
@@ -1539,6 +1591,13 @@ str printAST(value v) {
     case "method3"(_, name, e) : return "method <name>
     									'   <printAST(e)>
     									";
+    									
+	// "constraint" Typexpr "=" Typexpr
+	case "classConstraint"(t1, t2): return "<printAST(t1)>
+										   '(
+										   '	<printAST(t2)>
+										   ')
+										   "; 									
 
     						
     // Names
@@ -1650,6 +1709,14 @@ bool isPattern(value v) {
 	}
 	
 	return true;
+}
+
+list[value] getNonPatterns(list[value] l) {
+	if([*a, b, _*] := l && isPattern(b)) {
+		return *a;
+	}
+		
+	return l;
 }
 
 int convert(str s) {

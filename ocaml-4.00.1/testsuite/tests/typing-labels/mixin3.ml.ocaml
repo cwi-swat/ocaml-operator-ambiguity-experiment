@@ -174,7 +174,7 @@
   let
   (
     var
-      Pexp_object      class_structure
+      class_structure
         (
           method subst
             (
@@ -360,7 +360,7 @@
                 )
             )
           in
-            Pexp_object            class_structure
+            class_structure
               (
                 method free
                   (
@@ -991,7 +991,7 @@
                 )
             )
           in
-            Pexp_object            class_structure
+            class_structure
               (
                 method free
                   (
@@ -1452,12 +1452,10 @@
         kind =
           
               (
-                Rinherit
                      lambda
                     (
                         a
                     )
-                Rinherit
                      expr
                     (
                         a
@@ -1501,7 +1499,7 @@
                   )
               )
             in
-              Pexp_object              class_structure
+              class_structure
                 (
                   method free
                     (

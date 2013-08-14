@@ -3006,7 +3006,7 @@
         case
         (
           Has_m
-                    Pexp_object          class_structure
+                    class_structure
             (
               method m
                 1
@@ -3015,7 +3015,7 @@
         case
         (
           Has_b
-                    Pexp_object          class_structure
+                    class_structure
             (
               method b
                 true
@@ -3460,7 +3460,7 @@
   let
   (
     x
-      Pexp_object      class_structure
+      class_structure
         (
           method m
             true

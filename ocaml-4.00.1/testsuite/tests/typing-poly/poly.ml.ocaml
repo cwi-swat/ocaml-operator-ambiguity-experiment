@@ -233,7 +233,7 @@
         case
         (
           l
-          Pexp_object          class_structure
+          class_structure
             (
               inherit
                   constr vlist
@@ -972,7 +972,6 @@
               arrow
               
                 (
-                  Rinherit
                        v
                       (
                       )
@@ -1001,7 +1000,6 @@
                     
                       Ptyp_alias "a"
                         (
-                          Rinherit
                                V.v
                               (
                               )
@@ -3227,7 +3225,6 @@
                       
                         Ptyp_alias "a"
                           (
-                            Rinherit
                                  t
                                 (
                                     a
@@ -3278,7 +3275,6 @@
                       
                         Ptyp_alias "a"
                           (
-                            Rinherit
                                  t
                                 (
                                     a
@@ -3319,7 +3315,6 @@
                       
                         Ptyp_alias "a"
                           (
-                            Rinherit
                                  t
                                 (
                                     a
@@ -3555,7 +3550,6 @@
       class expr =
           class_structure
             (
-              Pcf_constr ([404,9318+22]..[404,9318+52])
                   t
                   (
                     A
@@ -4468,7 +4462,7 @@
         case
         (
           ()
-                    Pexp_object          class_structure
+                    class_structure
             (
               method m
                 1
@@ -4483,7 +4477,7 @@
         case
         (
           ()
-                    Pexp_object          class_structure
+                    class_structure
             (
               method n
                 1
@@ -4503,7 +4497,7 @@
         case
         (
           ()
-                    Pexp_object          class_structure
+                    class_structure
             (
               method n
                 1
@@ -4525,7 +4519,7 @@
         case
         (
           ()
-                    Pexp_object          class_structure
+                    class_structure
             (
               method n
                 1
@@ -4542,9 +4536,8 @@
         case
         (
           ()
-                    Pexp_object          class_structure
+                    class_structure
             (
-              Pcf_constr ([477,11659+25]..[477,11659+52])
                   s
                   (
                       n
@@ -4572,7 +4565,7 @@
               method x
                 1
                               method m
-                Pexp_object                class_structure
+                class_structure
                   (
                     method x
                       3
@@ -4584,12 +4577,12 @@
   let
   (
     o
-      Pexp_object      class_structure
+      class_structure
         (
           method x
             1
                       method m
-            Pexp_object            class_structure
+            class_structure
               (
                 method x
                   3
@@ -5493,7 +5486,6 @@
         kind =
           
               (
-                Rinherit
                      t
                     (
                     )
@@ -5528,7 +5520,6 @@
         kind =
           
               (
-                Rinherit
                      t
                     (
                     )
@@ -5581,7 +5572,6 @@
         kind =
           
               (
-                Rinherit
                      t
                     (
                     )

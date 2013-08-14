@@ -379,7 +379,7 @@ and expression i ppf x =
       expression i ppf e;
       option i core_type ppf cto;
   | Pexp_object s ->
-      line i ppf "Pexp_object";
+      (* line i ppf "Pexp_object"; *)
       class_structure i ppf s
   | Pexp_newtype (s, e) ->
       (* line i ppf "Pexp_newtype \"%s\"\n" s; *)
@@ -570,7 +570,7 @@ and class_field i ppf x =
         s.txt; (* fmt_private_flag pf fmt_override_flag ovf fmt_location loc; *)
       expression (i+1) ppf e;
   | Pcf_constr (ct1, ct2) ->
-      line i ppf "Pcf_constr %a\n" fmt_location loc;
+      (* line i ppf "Pcf_constr %a\n" fmt_location loc; *)
       core_type (i+1) ppf ct1;
       core_type (i+1) ppf ct2;
   | Pcf_init (e) ->
@@ -835,7 +835,7 @@ and label_x_bool_x_core_type_list i ppf x =
       line i ppf "%s\n" l;
       list (i+1) core_type ppf ctl
   | Rinherit (ct) ->
-      line i ppf "Rinherit\n";
+      (* line i ppf "Rinherit\n"; *)
       core_type (i+1) ppf ct
 ;;
 

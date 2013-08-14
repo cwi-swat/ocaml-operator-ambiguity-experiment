@@ -136,7 +136,7 @@
                      
                       Lazy.t
                       (
-                        <>
+                        
                       )
                          									
                      )
@@ -172,7 +172,9 @@
     class_type_declaration
     params = 
     (
-     "ab"
+      "a"
+      "b"
+      										
     ) 
     name = ops
     expr =
@@ -193,21 +195,19 @@
                                              
      										 
       poly
-      arrow2 
-      (
-          
-          sub
-          
-           Subst.t
-           (
-             a
-           )
-              									
-          arrow
-          b
-          a
-             								   
-      )
+      arrow
+      sub
+      
+       Subst.t
+       (
+         a
+       )
+          									
+      arrow
+      b
+      a
+         								   
+      										
                                              
      										 
       poly
@@ -238,7 +238,21 @@
        )
        kind =
        
-        <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
+        
+        (
+           											   
+          
+          Var
+          (
+          	
+          	string
+          	(
+          	)
+          									  
+          )
+        
+        )
+           											   
         
        														  
        														 
@@ -259,47 +273,57 @@
       class_structure
       (
           								
-         classConstraint 
+         a
          (
-             a
-             
-             var
-             (
-             )
-             								  
+         	
+         	  
+         	  var
+         	  (
+         	  )
+         	  								  
+         	
+         											   
          )
+         										   
           								
          method subst
          (
            case
          	(
          		sub
-         		alias x
          		(
-         		  Var
-         		  s
-         		      								   
+         			case
+         			(		
+           		
+           		   alias x
+           		   (
+           		     Var
+           		     s
+           		         								   
+           		   )
+           		       									   
+           		   
+           		   try
+           		   Subst.find
+           		   (
+           		       s
+           		       sub
+           		   )
+           		   (
+           		   
+           		   case
+           		   (
+           		     Not_found
+           		     
+           		     x
+           		   ) 
+           		   	        											 
+           		   	        											 
+           		   )
+           		       							   
+           													 
+         			)
          		)
-         		    									   
-           	
-           	try
-           	Subst.find
-           	(
-           	    s
-           	    sub
-           	)
-           	(
-           	
-           	case
-           	(
-           	  Not_found
-           	  
-           	  x
-           	) 
-           		        											 
-           		        											 
-           	)
-           	    							   
          	)
          )
              												 
@@ -317,7 +341,7 @@
            	)
          	)
          )
-             												 
+         											 
           								
          method eval
          (
@@ -331,7 +355,7 @@
            	v
          	)
          )
-             												 
+         											 
           								
       )
           								
@@ -357,7 +381,51 @@
        )
        kind =
        
-        <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Abs",["star"("typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"App",["star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
+        
+        (
+           											   
+          
+          Var
+          (
+          	
+          	string
+          	(
+          	)
+          									  
+          )
+        
+          
+          Abs
+          (
+          	tuple
+          	(
+          	 
+          	 string
+          	 (
+          	 )
+          	 								  
+          	   									
+          	  a
+          										
+          	)
+          	   								    
+          )
+        
+          
+          App
+          (
+          	tuple
+          	(
+          	 a
+          	   									
+          	  a
+          										
+          	)
+          	   								    
+          )
+        
+        )
+           											   
         
        														  
        														 
@@ -430,7 +498,15 @@
       
        Lazy.t
        (
-         <["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+         ops
+         (
+         									  
+           a
+         									  
+           a
+         									  
+         )
+         									  
        )
           									
           										   
@@ -503,16 +579,19 @@
        class_structure
        (
            								
-          classConstraint 
+          a
           (
-              a
-              
-               lambda
-               (
-                 a
-               )
-                  									
+          	
+          	  
+          	   lambda
+          	   (
+          	     a
+          	   )
+          	      									
+          	
+          											   
           )
+          										   
            								
           method free
           	  (
@@ -778,7 +857,7 @@
             	   							   
           	)
           )
-              												 
+          											 
            								
           method subst
           (
@@ -802,6 +881,7 @@
             	       						  
             	   (
             	       sub
+            	       	sub
             	       x
             	   )
             	 ) 
@@ -853,8 +933,61 @@
             	         Subst.fold
             	         (
             	             sub
-            	             <"~init:","constant"("emptyBrackets"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-            	             <"~f:","brackets"("fun"("multipleMatching"(["key","data","patternValueName"("acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"ifThenElse"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Names")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"mem")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"used")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"coloncolon"("valuePath"("valuePath"([],"data")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            	             init
+            	             []
+            	                 							    
+            	             f
+            	             (
+            	              
+            	              case
+            	              (
+            	                key
+            	                (
+            	                
+            	                case
+            	                (
+            	                  data
+            	                  (
+            	                  
+            	                  case
+            	                  (
+            	                  acc
+            	                  
+            	                  ifthenelse
+            	                  (
+            	                   if
+            	                   (
+            	                    Names.mem
+            	                    (
+            	                        s
+            	                        used
+            	                    )
+            	                   )
+            	                   then
+            	                   (
+            	                    ::
+            	                    (
+            	                        data
+            	                        acc
+            	                    )
+            	                   )
+            	                   else
+            	                   (
+            	                    acc
+            	                   ) 
+            	                  )
+            	                  	    											 
+            	                  )
+            	                  													 
+            	                  )
+            	                )													
+            	                													
+            	                )
+            	              )													
+            	              													
+            	             )
+            	                						  
+            	                 							    
             	         ) 
             	        							    		   
             	          									  
@@ -867,7 +1000,31 @@
             	          List.exists
             	          (
             	              used_expr
-            	              <"~f:","brackets"("fun"("multipleMatching"(["patternValueName"("t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"functionApplication"("valuePath"("valuePath"(["modulePath"([],"Names")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"mem")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"free")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            	              f
+            	              (
+            	               
+            	               case
+            	               (
+            	               t
+            	               
+            	               Names.mem
+            	               (
+            	                   s
+            	                   
+            	                    !!
+            	                    (
+            	                    free
+            	                    )
+            	                       							 
+            	                   (
+            	                       t
+            	                   )
+            	               )
+            	               )
+            	               													 
+            	              )
+            	                 						  
+            	                  							    
             	          )
             	         )
             	         then
@@ -907,7 +1064,21 @@
             	               	 )
             	               	    							 
             	               	(
-            	               	    <"~sub:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"add")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~key:","valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"~data:","brackets"("polyVariant"("Var","valuePath"("valuePath"([],"name")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"valuePath"("valuePath"([],"sub")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            	               	    sub
+            	               	    Subst.add
+            	               	    (
+            	               	        key
+            	               	        s
+            	               	            							    
+            	               	        data
+            	               	        
+            	               	        Var
+            	               	           name
+            	               	            								 
+            	               	            							    
+            	               	        sub
+            	               	    )
+            	               	        							    
             	               	    t
             	               	)
             	                   					   
@@ -924,7 +1095,23 @@
             	          )
             	              						  
             	          (
-            	              <"~f:","brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~sub:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"remove")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"sub")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            	              f
+            	              
+            	               !!
+            	               (
+            	               subst
+            	               )
+            	                  							 
+            	              (
+            	                  sub
+            	                  Subst.remove
+            	                  (
+            	                      s
+            	                      sub
+            	                  )
+            	                      							    
+            	              )
+            	                  							    
             	              l
             	          )
             	         ) 
@@ -954,7 +1141,18 @@
             	    )
             	        						  
             	    (
-            	        <"~f:","brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["sub"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            	        f
+            	        
+            	         !!
+            	         (
+            	         subst
+            	         )
+            	            							 
+            	        (
+            	            sub
+            	            	sub
+            	        )
+            	            							    
             	        l
             	    )
             	   )
@@ -965,7 +1163,7 @@
             	   							   
           	)
           )
-              												 
+          											 
            								
           method eval
           (
@@ -979,7 +1177,14 @@
             	)
             	    						  
             	(
-            	    <"~f:","prefix"("!!","valuePath"("valuePath"([],"eval")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            	    f
+            	    
+            	     !!
+            	     (
+            	     eval
+            	     )
+            	        							 
+            	        							    
             	    l
             	)
             	(
@@ -1018,7 +1223,18 @@
             	       )
             	          							 
             	      (
-            	          <"~sub:","brackets"("functionApplication"("valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"add")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<"~key:","valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"~data:","valuePath"("valuePath"([],"t2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"valuePath"("valuePath"(["modulePath"([],"Subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"empty")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            	          sub
+            	          Subst.add
+            	          (
+            	              key
+            	              s
+            	                  							    
+            	              data
+            	              t2
+            	                  							    
+            	              Subst.empty
+            	          )
+            	              							    
             	          t1
             	      )
             	  )
@@ -1038,7 +1254,7 @@
             				   
           	)
           )
-              												 
+          											 
            								
        )
            								
@@ -1076,7 +1292,63 @@
        )
        kind =
        
-        <[],[<"Var",["typexprConstr2"("typeConstr"([],"string")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Num",["typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Add",["star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Neg",["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"Mult",["star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
+        
+        (
+           											   
+          
+          Var
+          (
+          	
+          	string
+          	(
+          	)
+          									  
+          )
+        
+          
+          Num
+          (
+          	
+          	int
+          	(
+          	)
+          									  
+          )
+        
+          
+          Add
+          (
+          	tuple
+          	(
+          	 a
+          	   									
+          	  a
+          										
+          	)
+          	   								    
+          )
+        
+          
+          Neg
+          (
+          	a
+          )
+        
+          
+          Mult
+          (
+          	tuple
+          	(
+          	 a
+          	   									
+          	  a
+          										
+          	)
+          	   								    
+          )
+        
+        )
+           											   
         
        														  
        														 
@@ -1099,7 +1371,15 @@
       
        Lazy.t
        (
-         <["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+         ops
+         (
+         									  
+           a
+         									  
+           a
+         									  
+         )
+         									  
        )
           									
           										   
@@ -1172,16 +1452,19 @@
        class_structure
        (
            								
-          classConstraint 
+          a
           (
-              a
-              
-               expr
-               (
-                 a
-               )
-                  									
+          	
+          	  
+          	   expr
+          	   (
+          	     a
+          	   )
+          	      									
+          	
+          											   
           )
+          										   
            								
           method free
           	  (
@@ -1570,7 +1853,7 @@
             	   							   
           	)
           )
-              												 
+          											 
            								
           method subst
           (
@@ -1594,6 +1877,7 @@
             	       						  
             	   (
             	       sub
+            	       	sub
             	       x
             	   )
             	 ) 
@@ -1613,7 +1897,18 @@
             	    )
             	        						  
             	    (
-            	        <"~f:","brackets"("functionApplication"("prefix"("!!","valuePath"("valuePath"([],"subst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["sub"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            	        f
+            	        
+            	         !!
+            	         (
+            	         subst
+            	         )
+            	            							 
+            	        (
+            	            sub
+            	            	sub
+            	        )
+            	            							    
             	        e
             	    )
             	   )
@@ -1624,7 +1919,7 @@
             	   							   
           	)
           )
-              												 
+          											 
            								
           method eval
           (
@@ -1642,7 +1937,14 @@
             	)
             	    						  
             	(
-            	    <"~f:","prefix"("!!","valuePath"("valuePath"([],"eval")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            	    f
+            	    
+            	     !!
+            	     (
+            	     eval
+            	     )
+            	        							 
+            	        							    
             	    e
             	)
             	(
@@ -1734,7 +2036,7 @@
             				   
           	)
           )
-              												 
+          											 
            								
        )
            								
@@ -1772,7 +2074,25 @@
        )
        kind =
        
-        <[],["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"lambda")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"expr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+        
+        (
+           											   
+          
+           lambda
+           (
+             a
+           )
+              									
+        
+          
+           expr
+           (
+             a
+           )
+              									
+        
+        )
+           											   
         
        														  
        														 
@@ -1795,7 +2115,15 @@
       
        Lazy.t
        (
-         <["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+         ops
+         (
+         									  
+           a
+         									  
+           a
+         									  
+         )
+         									  
        )
           									
           										   
@@ -1825,16 +2153,19 @@
         class_structure
         (
             								
-           classConstraint 
+           a
            (
-               a
-               
-                lexpr
-                (
-                  a
-                )
-                   									
+           	
+           	  
+           	   lexpr
+           	   (
+           	     a
+           	   )
+           	      									
+           	
+           											   
            )
+           										   
             								
            method free
            	  (
@@ -1905,6 +2236,7 @@
              	       						  
              	   (
              	       sub
+             	       	sub
              	       x
              	   )
              	 ) 
@@ -1925,6 +2257,7 @@
              	        						  
              	    (
              	        sub
+             	        	sub
              	        x
              	    )
              	   )
@@ -1935,7 +2268,7 @@
              	   							   
            	)
            )
-               												 
+           											 
             								
            method eval
            	  (

@@ -148,9 +148,8 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "Var" false
+                Var
                   (
                        string
                       (
@@ -168,11 +167,8 @@
       class expr =
           class_structure
             (
-              Pcf_constr ([35,806+2]..[35,806+25])
                   a
-                  Ptyp_variant closed=false
                   (
-                    Rinherit
                          var
                         (
                         )
@@ -225,7 +221,7 @@
                   (
                     alias v
                     (
-                      pat_type                      var
+                      var
                     )
                     v
                   )
@@ -244,15 +240,14 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "Var" false
+                Var
                   (
                        string
                       (
                       )
                   )
-                Rtag "Abs" false
+                Abs
                   (
                       tuple
                       (
@@ -262,7 +257,7 @@
                           a
                       )
                   )
-                Rtag "App" false
+                App
                   (
                       tuple
                       (
@@ -363,11 +358,8 @@
             )
               class_structure
                 (
-                  Pcf_constr ([57,1439+4]..[57,1439+33])
                       a
-                      Ptyp_variant closed=false
                       (
-                        Rinherit
                              lambda
                             (
                                 a
@@ -379,7 +371,7 @@
                       (
                         alias x
                         (
-                          pat_type                          var
+                          var
                         )
                         send free
                         (
@@ -444,7 +436,7 @@
                           (
                             alias x
                             (
-                              pat_type                              var
+                              var
                             )
                             x
                           )
@@ -564,13 +556,14 @@
                           (
                             alias x
                             (
-                              pat_type                              var
+                              var
                             )
                             send subst
                             (
                               var
                             )
                             (
+                              sub
                                 sub
                                 x
                             )
@@ -605,8 +598,10 @@
                                     Subst.fold
                                     (
                                         sub
+                                      init
                                         []
-                                                                                (
+                                                                              f
+                                        (
                                           case
                                           (
                                             key
@@ -657,6 +652,7 @@
                                     List.exists
                                     (
                                         used_expr
+                                      f
                                         (
                                           case
                                           (
@@ -703,9 +699,12 @@
                                               subst
                                           )
                                           (
+                                            sub
                                               Subst.add
                                               (
+                                                key
                                                   s
+                                                data
                                                   Var
                                                     name
                                                   sub
@@ -722,11 +721,13 @@
                                         self
                                       )
                                       (
+                                        f
                                           !!
                                           (
                                               subst
                                           )
                                           (
+                                            sub
                                               Subst.remove
                                               (
                                                   s
@@ -752,11 +753,13 @@
                               self
                             )
                             (
+                              f
                                 !!
                                 (
                                     subst
                                 )
                                 (
+                                  sub
                                     sub
                                 )
                                 l
@@ -776,6 +779,7 @@
                           self
                         )
                         (
+                          f
                             !!
                             (
                                 eval
@@ -804,9 +808,12 @@
                                     subst
                                 )
                                 (
+                                  sub
                                     Subst.add
                                     (
+                                      key
                                         s
+                                      data
                                         t2
                                         Subst.empty
                                     )
@@ -844,21 +851,20 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "Var" false
+                Var
                   (
                        string
                       (
                       )
                   )
-                Rtag "Num" false
+                Num
                   (
                        int
                       (
                       )
                   )
-                Rtag "Add" false
+                Add
                   (
                       tuple
                       (
@@ -866,11 +872,11 @@
                           a
                       )
                   )
-                Rtag "Neg" false
+                Neg
                   (
                       a
                   )
-                Rtag "Mult" false
+                Mult
                   (
                       tuple
                       (
@@ -938,11 +944,8 @@
             )
               class_structure
                 (
-                  Pcf_constr ([112,3238+4]..[112,3238+31])
                       a
-                      Ptyp_variant closed=false
                       (
-                        Rinherit
                              expr
                             (
                                 a
@@ -954,7 +957,7 @@
                       (
                         alias x
                         (
-                          pat_type                          var
+                          var
                         )
                         send free
                         (
@@ -1043,7 +1046,7 @@
                           (
                             alias x
                             (
-                              pat_type                              var
+                              var
                             )
                             x
                           )
@@ -1224,13 +1227,14 @@
                           (
                             alias x
                             (
-                              pat_type                              var
+                              var
                             )
                             send subst
                             (
                               var
                             )
                             (
+                              sub
                                 sub
                                 x
                             )
@@ -1239,18 +1243,20 @@
                           (
                             alias e
                             (
-                              pat_type                              expr
+                              expr
                             )
                             send map
                             (
                               self
                             )
                             (
+                              f
                                 !!
                                 (
                                     subst
                                 )
                                 (
+                                  sub
                                     sub
                                 )
                                 e
@@ -1265,7 +1271,7 @@
                       (
                         alias e
                         (
-                          pat_type                          expr
+                          expr
                         )
                         match
                         send map
@@ -1273,6 +1279,7 @@
                           self
                         )
                         (
+                          f
                             !!
                             (
                                 eval
@@ -1353,14 +1360,11 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rinherit
                      lambda
                     (
                         a
                     )
-                Rinherit
                      expr
                     (
                         a
@@ -1402,11 +1406,8 @@
               )
                 class_structure
                   (
-                    Pcf_constr ([159,4589+4]..[159,4589+32])
                         a
-                        Ptyp_variant closed=false
                         (
-                          Rinherit
                                lexpr
                               (
                                   a
@@ -1418,7 +1419,7 @@
                         (
                           alias x
                           (
-                            pat_type                            lambda
+                            lambda
                           )
                           send free
                           (
@@ -1432,7 +1433,7 @@
                         (
                           alias x
                           (
-                            pat_type                            expr
+                            expr
                           )
                           send free
                           (
@@ -1453,13 +1454,14 @@
                             (
                               alias x
                               (
-                                pat_type                                lambda
+                                lambda
                               )
                               send subst
                               (
                                 lambda
                               )
                               (
+                                sub
                                   sub
                                   x
                               )
@@ -1468,13 +1470,14 @@
                             (
                               alias x
                               (
-                                pat_type                                expr
+                                expr
                               )
                               send subst
                               (
                                 expr
                               )
                               (
+                                sub
                                   sub
                                   x
                               )
@@ -1488,7 +1491,7 @@
                         (
                           alias x
                           (
-                            pat_type                            lambda
+                            lambda
                           )
                           send eval
                           (
@@ -1502,7 +1505,7 @@
                         (
                           alias x
                           (
-                            pat_type                            expr
+                            expr
                           )
                           send eval
                           (
