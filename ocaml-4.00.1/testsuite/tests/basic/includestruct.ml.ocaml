@@ -53,7 +53,9 @@
               (
               +
               (
+                
                   x
+                
                   z
               )
               :
@@ -125,10 +127,12 @@
               (
                 f
                 (
+                  
                     x
                 )
                 f
                 (
+                  
                     y
                 )
               )
@@ -156,6 +160,7 @@
             (
               print_int
               (
+                
                   x
               )
             ;
@@ -163,6 +168,7 @@
               (
                 print_string
                 (
+                  
                     ", "
                 )
               ;
@@ -170,11 +176,13 @@
                 (
                   print_int
                   (
+                    
                       y
                   )
                 ;
                   print_newline
                   (
+                    
                       ()
                                         )
                 )
@@ -188,6 +196,7 @@
     (
       print_pair
       (
+        
           B.p
       )
     ;
@@ -195,16 +204,20 @@
       (
         print_pair
         (
+          
             B.g
             (
+              
                 B.p
             )
         )
       ;
         print_pair
         (
+          
             B.g
             (
+              
                 (
                   123
                   456
@@ -234,7 +247,9 @@
               (
               -
               (
+                
                   x
+                
                   1
               )
               :
@@ -250,14 +265,17 @@
   (
     print_int
     (
+      
         H.f
         (
+          
             H.x
         )
     )
   ;
     print_newline
     (
+      
         ()
             )
   )
@@ -308,6 +326,7 @@
         z
           f
           (
+            
               x
           )
       )
@@ -316,6 +335,7 @@
   (
     print_int
     (
+      
         C.z
     )
   ;
@@ -323,6 +343,7 @@
     (
       print_newline
       (
+        
           ()
                 )
     ;
@@ -330,14 +351,17 @@
       (
         print_int
         (
+          
             C.f
             (
+              
                 C.x
             )
         )
       ;
         print_newline
         (
+          
             ()
                     )
       )
@@ -351,6 +375,7 @@
   (
     print_int
     (
+      
         x
     )
   ;
@@ -358,6 +383,7 @@
     (
       print_newline
       (
+        
           ()
                 )
     ;
@@ -365,14 +391,17 @@
       (
         print_int
         (
+          
             f
             (
+              
                 y
             )
         )
       ;
         print_newline
         (
+          
             ()
                     )
       )
@@ -390,11 +419,13 @@
         (
           print_string
           (
+            
               "F is called"
           )
         ;
           print_newline
           (
+            
               ()
                         )
         )
@@ -430,6 +461,7 @@
                 A
                                 print_string
                 (
+                  
                     "A"
                 )
               )
@@ -439,6 +471,7 @@
                   x
                 print_int
                 (
+                  
                     x
                 )
               )
@@ -469,6 +502,7 @@
               (
                 print_t
                 (
+                  
                     A
                                     )
               ;
@@ -476,6 +510,7 @@
                 (
                   print_newline
                   (
+                    
                       ()
                                         )
                 ;
@@ -483,12 +518,14 @@
                   (
                     print_t
                     (
+                      
                         B
                           42
                     )
                   ;
                     print_newline
                     (
+                      
                         ()
                                             )
                   )
@@ -502,6 +539,7 @@
   (
     D.test
     (
+      
         ()
             )
   ;
@@ -509,6 +547,7 @@
     (
       D.print_t
       (
+        
           D.A
                 )
     ;
@@ -516,6 +555,7 @@
       (
         print_newline
         (
+          
             ()
                     )
       ;
@@ -523,12 +563,14 @@
         (
           D.print_t
           (
+            
               D.B
                 42
           )
         ;
           print_newline
           (
+            
               ()
                         )
         )
@@ -570,6 +612,7 @@
         try
         raise
         (
+          
             Exn
               "foo"
         )
@@ -580,6 +623,7 @@
               s
             print_string
             (
+              
                 s
             )
           )
@@ -589,6 +633,7 @@
         (
           print_int
           (
+            
               send m
               (
                 new c
@@ -597,6 +642,7 @@
         ;
           print_newline
           (
+            
               ()
                         )
         )
@@ -607,6 +653,7 @@
     try
     raise
     (
+      
         G.Exn
           "foo"
     )
@@ -617,6 +664,7 @@
           s
         print_string
         (
+          
             s
         )
       )
@@ -626,6 +674,7 @@
     (
       print_int
       (
+        
           send m
           (
             new G.c
@@ -634,6 +683,7 @@
     ;
       print_newline
       (
+        
           ()
                 )
     )

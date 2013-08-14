@@ -1,66 +1,62 @@
-15,17c15
-<        )
-<        kind =
-<       (
+15,16c15
+<          )
+<          kind =
 ---
 >                   <constraint> ([2,23+28]..[2,23+37])
-19c17
-<         typeConstraint 
+18c17
+<           typeConstraint 
 ---
 >                       Ptyp_variant closed=false
-21d18
-<             a
-23a21,22
+20d18
+<               a
+22a21,23
 >               kind =
 >                     a
-46,50c45
-<         )
-<         kind =
-<        (
-<          "extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-<          (
+>         )
+44,51c45
+<           )
+<           kind =
+<             A.t
+<             (
+<               a
+<             )
+<            typeConstraint 
+<            (
 ---
 >                     <constraint> ([6,112+38]..[6,112+49])
-52,56c47
-<          )
-<          typeConstraint 
-<          (
-<              a
-<               "extendedModulePath1"([],"B")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
----
->                          B.t
-60a52,55
+57a52,56
 >                 kind =
 >                        A.t
 >                       (
 >                           a
-81,83c76
-<       )
-<       kind =
-<      (
+>                       )
+77,78c76
+<         )
+<         kind =
 ---
 >                     <constraint> ([10,186+36]..[10,186+45])
-85c78
-<        typeConstraint 
+80c78
+<          typeConstraint 
 ---
 >                         Ptyp_variant closed=false
-87d79
-<            a
-89a82,83
+82d79
+<              a
+84a82,84
 >                 kind =
 >                       a
-106,108c100
-<       )
-<       kind =
-<      (
+>           )
+100,101c100
+<         )
+<         kind =
 ---
 >                   <constraint> ([11,237+36]..[11,237+45])
-110c102
-<        typeConstraint 
+103c102
+<          typeConstraint 
 ---
 >                       Ptyp_variant closed=false
-112d103
-<            a
-114a106,107
+105d103
+<              a
+107a106,108
 >               kind =
 >                     a
+>         )

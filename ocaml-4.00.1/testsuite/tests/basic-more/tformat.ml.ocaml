@@ -14,6 +14,7 @@
               b
                 Buffer.create
                 (
+                  
                     10
                 )
             )
@@ -29,8 +30,11 @@
               (
                 Format.bprintf
                 (
+                  
                     b
+                  
                     "%s"
+                  
                     msg
                 )
               ;
@@ -40,13 +44,16 @@
                     s
                       Buffer.contents
                       (
+                        
                           b
                       )
                   )
                 in
                   =
                   (
+                    
                       s
+                    
                       msg
                   )
                 )
@@ -58,8 +65,10 @@
   )
   test
   (
+    
       test0
       (
+        
           ()
                 )
   )

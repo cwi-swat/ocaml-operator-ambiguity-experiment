@@ -4,6 +4,7 @@
     output_lock
       Mutex.create
       (
+        
           ()
                 )
   )
@@ -20,7 +21,9 @@
             (
               <=
               (
+                
                   n
+                
                   2
               )
             )
@@ -32,19 +35,27 @@
             (
                 +
                 (
+                  
                     fib
                     (
+                      
                         -
                         (
+                          
                             n
+                          
                             1
                         )
                     )
+                  
                     fib
                     (
+                      
                         -
                         (
+                          
                             n
+                          
                             2
                         )
                     )
@@ -67,6 +78,7 @@
           (
             Mutex.lock
             (
+              
                 output_lock
             )
           ;
@@ -74,8 +86,10 @@
             (
               print_int
               (
+                
                   fib
                   (
+                    
                       n
                   )
               )
@@ -84,11 +98,13 @@
               (
                 print_newline
                 (
+                  
                     ()
                                     )
               ;
                 Mutex.unlock
                 (
+                  
                     output_lock
                 )
               )
@@ -101,7 +117,9 @@
   (
     Thread.create
     (
+      
         fibtask
+      
         28
     )
   ;
@@ -109,6 +127,7 @@
     (
       Thread.delay
       (
+        
           1.0
       )
     ;
@@ -120,6 +139,7 @@
           l
             read_line
             (
+              
                 ()
                             )
         )
@@ -128,6 +148,7 @@
         (
           Mutex.lock
           (
+            
               output_lock
           )
         ;
@@ -135,6 +156,7 @@
           (
             print_string
             (
+              
                 ">> "
             )
           ;
@@ -142,6 +164,7 @@
             (
               print_string
               (
+                
                   l
               )
             ;
@@ -149,11 +172,13 @@
               (
                 print_newline
                 (
+                  
                     ()
                                     )
               ;
                 Mutex.unlock
                 (
+                  
                     output_lock
                 )
               )

@@ -66,10 +66,10 @@ syntax Expr
      
 syntax Arg 
  	 = Expr !unaryMinus !floatUnaryMinus !letbinding !ifThenElse !ifThen !match !function !fun !tryBock !letModule
- 	 | Label
-     | LabelColon Expr !unaryMinus !floatUnaryMinus !letbinding !ifThenElse !ifThen !match !function !fun !tryBock !letModule
-     | OptLabel
-     | OptLabelColon Expr !unaryMinus !floatUnaryMinus !letbinding !ifThenElse !ifThen !match !function !fun !tryBock !letModule 
+ 	 | label: Label
+     | labelColon:    LabelColon Expr !unaryMinus !floatUnaryMinus !letbinding !ifThenElse !ifThen !match !function !fun !tryBock !letModule
+     | optlabel:      OptLabel
+     | optlabelColon: OptLabelColon Expr !unaryMinus !floatUnaryMinus !letbinding !ifThenElse !ifThen !match !function !fun !tryBock !letModule 
      ;
            
 syntax PatternMatching 
@@ -83,7 +83,7 @@ syntax InnerPatternMatching
 syntax LetBinding 
 	 = letBinding: Pattern Parameter* (":" Typexpr)? "=" Expr
 	 | polyLetBiding: ValueName ":"  PolyTypExpr "="  Expr
-	 | ValueName ":" "type"  TypeConstr* "."  Typexpr "="  Expr 
+	 | bindingNew: ValueName ":" "type"  TypeConstr* "."  Typexpr "="  Expr 
 	 ;
 	 
 	 
@@ -92,13 +92,13 @@ syntax MultipleMatching
 
 syntax Parameter 
 	 = Pattern
-     | "~" LabelName !>> ":"
-     | "~" "(" LabelName (":" Typexpr)? ")"
-     | "~" LabelName ":" Pattern
-     | "?" LabelName !>> ":"
-     | "?" "(" LabelName (":" Typexpr)? ("=" Expr)? ")"
-     | "?" LabelName ":" Pattern
-     | "?" LabelName ":" "(" Pattern (":" Typexpr)? ("=" Expr)? ")"
+     | param1: "~" LabelName !>> ":"
+     | param2: "~" "(" LabelName (":" Typexpr)? ")"
+     | param3: "~" LabelName ":" Pattern
+     | param4: "?" LabelName !>> ":"
+     | param5: "?" "(" LabelName (":" Typexpr)? ("=" Expr)? ")"
+     | param6: "?" LabelName ":" Pattern
+     | param7: "?" LabelName ":" "(" Pattern (":" Typexpr)? ("=" Expr)? ")"
      | typeParam: "(" "type" TypeconstrName ")"  
      ;
      

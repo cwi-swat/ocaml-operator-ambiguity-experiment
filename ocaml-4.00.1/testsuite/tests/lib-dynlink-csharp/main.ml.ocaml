@@ -10,13 +10,16 @@
           (
             Printf.printf
             (
+              
                 "Loading %s\n%!"
+              
                 s
             )
           ;
             try
             Dynlink.loadfile
             (
+              
                 s
             )
             (
@@ -26,8 +29,10 @@
                   e
                 print_endline
                 (
+                  
                     Dynlink.error_message
                     (
+                      
                         e
                     )
                 )
@@ -44,6 +49,7 @@
       (
         print_endline
         (
+          
             "Main is running."
         )
       ;
@@ -51,6 +57,7 @@
         (
           Dynlink.init
           (
+            
               ()
                         )
         ;
@@ -58,6 +65,7 @@
           (
             Dynlink.allow_unsafe_modules
             (
+              
                 true
                             )
           ;
@@ -95,6 +103,7 @@
               (
                 load
                 (
+                  
                     s1
                 )
               ;
@@ -102,11 +111,13 @@
                 (
                   load
                   (
+                    
                       s2
                   )
                 ;
                   print_endline
                   (
+                    
                       "OK."
                   )
                 )

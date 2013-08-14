@@ -4,16 +4,19 @@
     chars
       ref
       (
+        
           0
       )
     words
       ref
       (
+        
           0
       )
     lines
       ref
       (
+        
           0
       )
   )
@@ -58,6 +61,7 @@
                         c
                           input_char
                           (
+                            
                               in_channel
                           )
                       )
@@ -66,6 +70,7 @@
                       (
                         incr
                         (
+                          
                             chars
                         )
                       ;
@@ -79,11 +84,13 @@
                             (
                               incr
                               (
+                                
                                   lines
                               )
                             ;
                               count
                               (
+                                
                                   Outside_word
                                                                 )
                             )
@@ -97,6 +104,7 @@
                             )
                             count
                             (
+                              
                                 Outside_word
                                                             )
                           )
@@ -111,7 +119,9 @@
                                 (
                                   =
                                   (
+                                    
                                       status
+                                    
                                       Outside_word
                                                                         )
                                 )
@@ -121,6 +131,7 @@
                                   (
                                     incr
                                     (
+                                      
                                         words
                                     )
                                   ;
@@ -134,6 +145,7 @@
                             ;
                               count
                               (
+                                
                                   Inside_word
                                                                 )
                             )
@@ -148,6 +160,7 @@
             try
             count
             (
+              
                 Outside_word
                             )
             (
@@ -174,6 +187,7 @@
               ic
                 open_in
                 (
+                  
                     name
                 )
             )
@@ -182,11 +196,13 @@
             (
               count_channel
               (
+                
                   ic
               )
             ;
               close_in
               (
+                
                   ic
               )
             )
@@ -205,8 +221,10 @@
           (
             print_int
             (
+              
                 !
                 (
+                  
                     chars
                 )
             )
@@ -215,6 +233,7 @@
             (
               print_string
               (
+                
                   " characters, "
               )
             ;
@@ -222,8 +241,10 @@
               (
                 print_int
                 (
+                  
                     !
                     (
+                      
                         words
                     )
                 )
@@ -232,6 +253,7 @@
                 (
                   print_string
                   (
+                    
                       " words, "
                   )
                 ;
@@ -239,8 +261,10 @@
                   (
                     print_int
                     (
+                      
                         !
                         (
+                          
                             lines
                         )
                     )
@@ -249,11 +273,13 @@
                     (
                       print_string
                       (
+                        
                           " lines"
                       )
                     ;
                       print_newline
                       (
+                        
                           ()
                                                 )
                     )
@@ -276,11 +302,13 @@
           (
             count_file
             (
+              
                 name
             )
           ;
             print_result
             (
+              
                 ()
                             )
           )
@@ -296,10 +324,13 @@
       (
         <=
         (
+          
             Array.length
             (
+              
                 Sys.argv
             )
+          
             1
         )
       )
@@ -307,6 +338,7 @@
       (
         count_channel
         (
+          
             stdin
         )
       )
@@ -316,17 +348,23 @@
           1
           -
           (
+            
               Array.length
               (
+                
                   Sys.argv
               )
+            
               1
           )
           count_file
           (
+            
               Array.get
               (
+                
                   Sys.argv
+                
                   i
               )
           )
@@ -335,6 +373,7 @@
   ;
     print_result
     (
+      
         ()
             )
   )
@@ -347,6 +386,7 @@
       (
         print_string
         (
+          
             "I/O error: "
         )
       ;
@@ -354,11 +394,13 @@
         (
           print_string
           (
+            
               s
           )
         ;
           print_newline
           (
+            
               ()
                         )
         )

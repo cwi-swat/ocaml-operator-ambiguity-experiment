@@ -12,11 +12,11 @@
         (
         )
         kind =
-        (
-         t
-         poly
-         a
-        )
+         (
+          t
+          poly
+          a
+         )
    )
    type
    (  						
@@ -30,26 +30,26 @@
         (
         )
         kind =
-        (
-         fold
-         poly
-                               				 'b 
-          arrow2 
-          (
-              f
-              arrow
-              b
-              arrow
-              a
-              b
-              arrow2 
-              (
-                  init
-                  b
-                  b
-              )
-          )
-        )
+         (
+          fold
+          poly
+                                				 'b 
+           arrow2 
+           (
+               f
+               arrow
+               b
+               arrow
+               a
+               b
+               arrow2 
+               (
+                   init
+                   b
+                   b
+               )
+           )
+         )
    )
    let
    (
@@ -97,114 +97,128 @@
    (
      params = 
      (
-     l
+      "b"
      )
      class name = ilist
      class expr = 
-                 class_structure
-                 (
-                     l
-                     l
-                    method add
-                      brackets4 
-                      (
-                          l
-                          ::
-                          (
-                              x
-                              l
-                          )
-                      )
-                    method fold
-                    	List.fold_left
-                    	(
-                    	    l
-                    	)
-                    	poly
-                    	                      				 'a 
-                    	 arrow2 
-                    	 (
-                    	     f
-                    	     arrow
-                    	     a
-                    	     arrow
-                    	     b
-                    	     a
-                    	     arrow2 
-                    	     (
-                    	         init
-                    	         a
-                    	         a
-                    	     )
-                    	 )
-                 )
+       l
+       class_structure
+       (
+           l
+           l
+          method add
+          (
+            case
+          	(
+          		x
+            	brackets4 
+            	(
+            	    l
+            	    ::
+            	    (
+            	        x
+            	        l
+            	    )
+            	)
+          	)
+          )
+          method fold
+          	List.fold_left
+          	(
+          	    l
+          	)
+          	poly
+          	                      				 'a 
+          	 arrow2 
+          	 (
+          	     f
+          	     arrow
+          	     a
+          	     arrow
+          	     b
+          	     a
+          	     arrow2 
+          	     (
+          	         init
+          	         a
+          	         a
+          	     )
+          	 )
+       )
    )
    class
    (
      params = 
      (
+      "a"
      )
      class name = vlist
      class expr = 
-                 class_structure
-                 (
-                    method add
-                       poly
-                       arrow
-                       a
-                       self
-                    method fold
-                       poly
-                                             				 'b 
-                        arrow2 
-                        (
-                            f
-                            arrow
-                            b
-                            arrow
-                            a
-                            b
-                            arrow2 
-                            (
-                                init
-                                b
-                                b
-                            )
-                        )
-                 )
+       class_structure
+       (
+          method add
+             poly
+             arrow
+             a
+             self
+          method fold
+             poly
+                                   				 'b 
+              arrow2 
+              (
+                  f
+                  arrow
+                  b
+                  arrow
+                  a
+                  b
+                  arrow2 
+                  (
+                      init
+                      b
+                      b
+                  )
+              )
+       )
    )
    class
    (
      params = 
      (
-     l
      )
      class name = ilist2
      class expr = 
-                 class_structure
-                 (
-                    inherit
-                     constr <"typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"vlist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                     (
-                     )
-                     l
-                     l
-                    method add
-                      brackets4 
-                      (
-                          l
-                          ::
-                          (
-                              x
-                              l
-                          )
-                      )
-                    method fold
-                      List.fold_left
-                      (
-                          l
-                      )
-                 )
+       l
+       class_structure
+       (
+          inherit
+           constr <"typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"vlist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           (
+           )
+           l
+           l
+          method add
+          (
+            case
+          	(
+          		x
+            	brackets4 
+            	(
+            	    l
+            	    ::
+            	    (
+            	        x
+            	        l
+            	    )
+            	)
+          	)
+          )
+          method fold
+          	  List.fold_left
+          	  (
+          	      l
+          	  )
+       )
    )
    let
    (
@@ -222,20 +236,26 @@
               l
               l
              method add
-               brackets4 
-               (
-                   l
-                   ::
-                   (
-                       x
-                       l
-                   )
-               )
+             (
+               case
+             	(
+             		x
+               	brackets4 
+               	(
+               	    l
+               	    ::
+               	    (
+               	        x
+               	        l
+               	    )
+               	)
+             	)
+             )
              method fold
-               List.fold_left
-               (
-                   l
-               )
+             	  List.fold_left
+             	  (
+             	      l
+             	  )
           )
          )
     )
@@ -244,386 +264,461 @@
    (
      params = 
      (
-     l
+      "a"
      )
      class name = ilist3
      class expr = 
-                 class_structure
-                 (
-                    inherit
-                     constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"vlist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                     (
-                     )
-                     l
-                     l
-                    method add
-                      brackets4 
-                      (
-                          l
-                          ::
-                          (
-                              x
-                              l
-                          )
-                      )
-                    method fold
-                      List.fold_left
-                      (
-                          l
-                      )
-                 )
+       l
+       class_structure
+       (
+          inherit
+           constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"vlist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           (
+           )
+           l
+           l
+          method add
+          (
+            case
+          	(
+          		x
+            	brackets4 
+            	(
+            	    l
+            	    ::
+            	    (
+            	        x
+            	        l
+            	    )
+            	)
+          	)
+          )
+          method fold
+          	  List.fold_left
+          	  (
+          	      l
+          	  )
+       )
    )
    class
    (
      params = 
      (
-     l
-      list
-      (
-        a
-      )
+      "a"
      )
      class name = ilist4
      class expr = 
-                 class_structure
-                 (
-                     l
-                     l
-                    method add
-                       poly
-                       <>
-                    method add
-                      brackets4 
-                      (
-                          l
-                          ::
-                          (
-                              x
-                              l
-                          )
-                      )
-                    method fold
-                       poly
-                                             				 'b 
-                        arrow2 
-                        (
-                            f
-                            arrow
-                            b
-                            arrow
-                            a
-                            b
-                            arrow2 
-                            (
-                                init
-                                b
-                                b
-                            )
-                        )
-                    method fold
-                      List.fold_left
-                      (
-                          l
-                      )
-                 )
+       l
+        list
+        (
+          a
+        )
+       class_structure
+       (
+           l
+           l
+          method add
+             poly
+             <>
+          method add
+          (
+            case
+          	(
+          		x
+            	brackets4 
+            	(
+            	    l
+            	    ::
+            	    (
+            	        x
+            	        l
+            	    )
+            	)
+          	)
+          )
+          method fold
+             poly
+                                   				 'b 
+              arrow2 
+              (
+                  f
+                  arrow
+                  b
+                  arrow
+                  a
+                  b
+                  arrow2 
+                  (
+                      init
+                      b
+                      b
+                  )
+              )
+          method fold
+          	  List.fold_left
+          	  (
+          	      l
+          	  )
+       )
    )
    class
    (
      params = 
      (
-     l
-      list
-      (
-        a
-      )
+      "a"
      )
      class name = ilist5
      class expr = 
-                 class_structure
-                 (
-                     l
-                     l
-                    method add
-                      brackets4 
-                      (
-                          l
-                          ::
-                          (
-                              x
-                              l
-                          )
-                      )
-                    method fold
-                       poly
-                                             				 'b 
-                        arrow2 
-                        (
-                            f
-                            arrow
-                            b
-                            arrow
-                            a
-                            b
-                            arrow2 
-                            (
-                                init
-                                b
-                                b
-                            )
-                        )
-                    method fold2
-                       poly
-                                             				 'b 
-                        arrow2 
-                        (
-                            f
-                            arrow
-                            b
-                            arrow
-                            a
-                            b
-                            arrow2 
-                            (
-                                init
-                                b
-                                b
-                            )
-                        )
-                    method fold2
-                      send fold
-                      (
-                       self
-                      )
-                      (
-                          f
-                          <"~init:","brackets"("functionApplication"("hash"("valuePath"("valuePath"([],"self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"fold")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["f","init"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                      )
-                    method fold
-                      List.fold_left
-                      (
-                          l
-                      )
-                 )
+       l
+        list
+        (
+          a
+        )
+       class_structure
+       (
+           l
+           l
+          method add
+          (
+            case
+          	(
+          		x
+            	brackets4 
+            	(
+            	    l
+            	    ::
+            	    (
+            	        x
+            	        l
+            	    )
+            	)
+          	)
+          )
+          method fold
+             poly
+                                   				 'b 
+              arrow2 
+              (
+                  f
+                  arrow
+                  b
+                  arrow
+                  a
+                  b
+                  arrow2 
+                  (
+                      init
+                      b
+                      b
+                  )
+              )
+          method fold2
+             poly
+                                   				 'b 
+              arrow2 
+              (
+                  f
+                  arrow
+                  b
+                  arrow
+                  a
+                  b
+                  arrow2 
+                  (
+                      init
+                      b
+                      b
+                  )
+              )
+          method fold2
+          (
+            case
+          	(
+          		f
+          		init
+            	send fold
+            	(
+            	 self
+            	)
+            	(
+            	    f
+            	    <"~init:","brackets"("functionApplication"("hash"("valuePath"("valuePath"([],"self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"fold")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["f","init"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            	)
+          	)
+          )
+          method fold
+          	  List.fold_left
+          	  (
+          	      l
+          	  )
+       )
    )
    class
    (
      params = 
      (
-     l
+      "a"
      )
      class name = ilist6
      class expr = 
-                 class_structure
-                 (
-                    inherit
-                     constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"vlist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                     (
-                     )
-                     l
-                     l
-                    method add
-                      brackets4 
-                      (
-                          l
-                          ::
-                          (
-                              x
-                              l
-                          )
-                      )
-                    method fold2
-                       poly
-                                             				 'b 
-                        arrow2 
-                        (
-                            f
-                            arrow
-                            b
-                            arrow
-                            a
-                            b
-                            arrow2 
-                            (
-                                init
-                                b
-                                b
-                            )
-                        )
-                    method fold2
-                      send fold
-                      (
-                       self
-                      )
-                      (
-                          f
-                          <"~init:","brackets"("functionApplication"("hash"("valuePath"("valuePath"([],"self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"fold")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["f","init"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                      )
-                    method fold
-                      List.fold_left
-                      (
-                          l
-                      )
-                 )
+       l
+       class_structure
+       (
+          inherit
+           constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"vlist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           (
+           )
+           l
+           l
+          method add
+          (
+            case
+          	(
+          		x
+            	brackets4 
+            	(
+            	    l
+            	    ::
+            	    (
+            	        x
+            	        l
+            	    )
+            	)
+          	)
+          )
+          method fold2
+             poly
+                                   				 'b 
+              arrow2 
+              (
+                  f
+                  arrow
+                  b
+                  arrow
+                  a
+                  b
+                  arrow2 
+                  (
+                      init
+                      b
+                      b
+                  )
+              )
+          method fold2
+          (
+            case
+          	(
+          		f
+          		init
+            	send fold
+            	(
+            	 self
+            	)
+            	(
+            	    f
+            	    <"~init:","brackets"("functionApplication"("hash"("valuePath"("valuePath"([],"self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"fold")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["f","init"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            	)
+          	)
+          )
+          method fold
+          	  List.fold_left
+          	  (
+          	      l
+          	  )
+       )
    )
    class
    (
      params = 
      (
+      "a"
      )
      class name = olist
      class expr = 
-                 class_structure
-                 (
-                    method fold
-                       poly
-                                             				 'c 
-                        arrow2 
-                        (
-                            f
-                            arrow
-                            a
-                            arrow
-                            c
-                            c
-                            arrow2 
-                            (
-                                init
-                                c
-                                c
-                            )
-                        )
-                 )
+       class_structure
+       (
+          method fold
+             poly
+                                   				 'c 
+              arrow2 
+              (
+                  f
+                  arrow
+                  a
+                  arrow
+                  c
+                  c
+                  arrow2 
+                  (
+                      init
+                      c
+                      c
+                  )
+              )
+       )
    )
    class
    (
      params = 
      (
+      "a"
      )
      class name = onil
      class expr = 
-                 class_structure
-                 (
-                    inherit
-                     constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                     (
-                     )
-                    method fold
-                      init
-                 )
+       class_structure
+       (
+          inherit
+           constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           (
+           )
+          method fold
+          (
+            case
+          	(
+          		f
+          		init
+            	init
+          	)
+          )
+       )
    )
    class
    (
      params = 
      (
-     hd
-     tl
+      "a"
      )
      class name = ocons
      class expr = 
-                 class_structure
-                 (
-                    inherit
-                     constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                     (
-                     )
-                     hd
-                     hd
-                     tl
-                     tl
-                    method fold
-                      f
-                      (
-                          hd
-                          send fold
-                          (
-                           tl
-                          )
-                          (
-                              f
-                              init
-                          )
-                      )
-                 )
+       hd
+       tl
+       class_structure
+       (
+          inherit
+           constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           (
+           )
+           hd
+           hd
+           tl
+           tl
+          method fold
+          (
+            case
+          	(
+          		f
+          		init
+            	f
+            	(
+            	    hd
+            	    send fold
+            	    (
+            	     tl
+            	    )
+            	    (
+            	        f
+            	        init
+            	    )
+            	)
+          	)
+          )
+       )
    )
    class
    (
      params = 
      (
-     hd
-     tl
+      "a"
      )
      class name = ostream
      class expr = 
-                 class_structure
-                 (
-                    inherit
-                     constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                     (
-                     )
-                     hd
-                     hd
-                     tl
-                     (
-                     tl
-                     :
-                      ostream
-                      (
-                        a
-                      )
-                     )
-                    method fold
-                      f
-                      (
-                          hd
-                          send fold
-                          (
-                           tl
-                          )
-                          (
-                              f
-                              init
-                          )
-                      )
-                    method empty
-                      false
-                 )
+       hd
+       tl
+       class_structure
+       (
+          inherit
+           constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           (
+           )
+           hd
+           hd
+           tl
+           (
+           tl
+           :
+            ostream
+            (
+              a
+            )
+           )
+          method fold
+          (
+            case
+          	(
+          		f
+          		init
+            	f
+            	(
+            	    hd
+            	    send fold
+            	    (
+            	     tl
+            	    )
+            	    (
+            	        f
+            	        init
+            	    )
+            	)
+          	)
+          )
+          method empty
+          	  false
+       )
    )
    class
    (
      params = 
      (
-     hd
-     tl
+      "a"
      )
      class name = ostream1
      class expr = 
-                 class_structure
-                 (
-                    inherit
-                     constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                     (
-                     )
-                     hd
-                     hd
-                     tl
-                     tl
-                    method hd
-                      hd
-                    method tl
-                      tl
-                    method fold
-                      send fold
-                      (
-                       send tl
-                       (
-                        self
-                       )
-                      )
-                      (
-                          f
-                          <"~init:","brackets"("functionApplication"("valuePath"("valuePath"([],"f")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["hash"("valuePath"("valuePath"([],"self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"hd")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"init")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                      )
-                 )
+       hd
+       tl
+       class_structure
+       (
+          inherit
+           constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           (
+           )
+           hd
+           hd
+           tl
+           tl
+          method hd
+          	  hd
+          method tl
+          	  tl
+          method fold
+          (
+            case
+          	(
+          		f
+          		init
+            	send fold
+            	(
+            	 send tl
+            	 (
+            	  self
+            	 )
+            	)
+            	(
+            	    f
+            	    <"~init:","brackets"("functionApplication"("valuePath"("valuePath"([],"f")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["hash"("valuePath"("valuePath"([],"self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"hd")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"init")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+            	)
+          	)
+          )
+       )
    )
    class
    (
@@ -632,34 +727,34 @@
      )
      class name = vari
      class expr = 
-                 class_structure
-                 (
-                    method m
-                       poly
-                                             				 'a 
-                        arrow
-                        <<[],[<"A",[],[]>,<"B",[],[]>,<"C",[],[]>],[]>,"a">
-                        int
-                        (
-                        )
-                    method m
-                      (
-                       case
-                       (
-                         A
-                         1
-                       ) 
-                         case
-                         (
-                          pat_or
-                          (
-                           B
-                           C
-                          )
-                          0
-                         )
-                      )
-                 )
+       class_structure
+       (
+          method m
+             poly
+                                   				 'a 
+              arrow
+              <<[],[<"A",[],[]>,<"B",[],[]>,<"C",[],[]>],[]>,"a">
+              int
+              (
+              )
+          method m
+          	  (
+          	   case
+          	   (
+          	     A
+          	     1
+          	   ) 
+          	     case
+          	     (
+          	      pat_or
+          	      (
+          	       B
+          	       C
+          	      )
+          	      0
+          	     )
+          	  )
+       )
    )
    class
    (
@@ -668,33 +763,33 @@
      )
      class name = vari
      class expr = 
-                 class_structure
-                 (
-                    method m
-                    	(
-                    	 case
-                    	 (
-                    	   A
-                    	   1
-                    	 ) 
-                    	   case
-                    	   (
-                    	    pat_or
-                    	    (
-                    	     B
-                    	     C
-                    	    )
-                    	    0
-                    	   )
-                    	)
-                    	poly
-                    	                      				 'a 
-                    	 arrow
-                    	 <<[],[<"A",[],[]>,<"B",[],[]>,<"C",[],[]>],[]>,"a">
-                    	 int
-                    	 (
-                    	 )
-                 )
+       class_structure
+       (
+          method m
+          	(
+          	 case
+          	 (
+          	   A
+          	   1
+          	 ) 
+          	   case
+          	   (
+          	    pat_or
+          	    (
+          	     B
+          	     C
+          	    )
+          	    0
+          	   )
+          	)
+          	poly
+          	                      				 'a 
+          	 arrow
+          	 <<[],[<"A",[],[]>,<"B",[],[]>,<"C",[],[]>],[]>,"a">
+          	 int
+          	 (
+          	 )
+       )
    )
    module  V
     struct
@@ -710,7 +805,7 @@
          (
          )
          kind =
-         <[],[<"A",[]>,<"B",[]>,<"C",[]>]>
+          <[],[<"A",[]>,<"B",[]>,<"C",[]>]>
     )
     let
     (
@@ -744,19 +839,19 @@
      )
      class name = varj
      class expr = 
-                 class_structure
-                 (
-                    method m
-                       poly
-                                             				 'a 
-                        arrow
-                        <<[],["typexprConstr2"("typeConstr"(["extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"v")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>,"a">
-                        int
-                        (
-                        )
-                    method m
-                      V.m
-                 )
+       class_structure
+       (
+          method m
+             poly
+                                   				 'a 
+              arrow
+              <<[],["typexprConstr2"("typeConstr"(["extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"v")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>,"a">
+              int
+              (
+              )
+          method m
+          	  V.m
+       )
    )
    module type T
     signature
@@ -769,23 +864,17 @@
        		)
        	name = vari
        	expr =
-       	class_type
-       	 fun
        		class_type
        		signature
        		class_signature
        		(
-       		 fieldSpec3 
-       		 (
-       		     m
-       		     poly
-       		                           				 'a 
-       		      arrow
-       		      <<[],[<"A",[],[]>,<"B",[],[]>,<"C",[],[]>],[]>,"a">
-       		      int
-       		      (
-       		      )
-       		 )
+       		 poly
+       		                       				 'a 
+       		  arrow
+       		  <<[],[<"A",[],[]>,<"B",[],[]>,<"C",[],[]>],[]>,"a">
+       		  int
+       		  (
+       		  )
        		)
         )
     )    								
@@ -799,34 +888,34 @@
       )
       class name = vari
       class expr = 
-                  class_structure
-                  (
-                     method m
-                        poly
-                                              				 'a 
-                         arrow
-                         <<[],[<"A",[],[]>,<"B",[],[]>,<"C",[],[]>],[]>,"a">
-                         int
-                         (
-                         )
-                     method m
-                       (
-                        case
-                        (
-                          A
-                          1
-                        ) 
-                          case
-                          (
-                           pat_or
-                           (
-                            B
-                            C
-                           )
-                           0
-                          )
-                       )
-                  )
+        class_structure
+        (
+           method m
+              poly
+                                    				 'a 
+               arrow
+               <<[],[<"A",[],[]>,<"B",[],[]>,<"C",[],[]>],[]>,"a">
+               int
+               (
+               )
+           method m
+           	  (
+           	   case
+           	   (
+           	     A
+           	     1
+           	   ) 
+           	     case
+           	     (
+           	      pat_or
+           	      (
+           	       B
+           	       C
+           	      )
+           	      0
+           	     )
+           	  )
+        )
     )
     )
    module  M
@@ -848,164 +937,173 @@
    (
      params = 
      (
-     x
-     y
      )
      class name = point
      class expr = 
-                 class_structure
-                 (
-                     x
-                     x
-                     y
-                     y
-                    method x
-                      x
-                    method y
-                      y
-                 )
+       x
+       y
+       class_structure
+       (
+           x
+           x
+           y
+           y
+          method x
+          	  x
+          method y
+          	  y
+       )
    )
    class
    (
      params = 
      (
-     x
-     y
-     color
      )
      class name = color_point
      class expr = 
-                 class_structure
-                 (
-                    inherit
-                     constr classArgs 
-                            (
-                                point
-                                x
-                                y
-                            )
-                     (
-                     )
-                     color
-                     color
-                    method color
-                      color
-                 )
+       x
+       y
+       color
+       class_structure
+       (
+          inherit
+           constr classArgs 
+                  (
+                      point
+                      x
+                      y
+                  )
+           (
+           )
+           color
+           color
+          method color
+          	  color
+       )
    )
    class
    (
      params = 
      (
-     p
-     point
-     r
      )
      class name = circle
      class expr = 
-                 class_structure
-                 (
-                     p
-                     brackets2 
-                     (
-                         p
-                         point
-                         (
-                         )
-                     )
-                     r
-                     r
-                    method distance
-                       poly
-                                             				 'a 
-                        arrow
-                        <"classPath"([],"point")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
-                        float
-                        (
-                        )
-                    method distance
-                      let
-                      (
-                       (
-                         dx
-                         -
-                         (
-                             send x
-                             (
-                              p
-                             )
-                             send x
-                             (
-                              p'
-                             )
-                         ) 
-                         dy
-                         -
-                         (
-                             send y
-                             (
-                              p
-                             )
-                             send y
-                             (
-                              p'
-                             )
-                         ) 
-                       )
-                      in
-                        let
-                        (
-                         (
-                           d
-                           -.
-                           (
-                               sqrt
-                               (
-                                   float
-                                   (
-                                       +
-                                       (
-                                           *
-                                           (
-                                               dx
-                                               dx
-                                           )
-                                           *
-                                           (
-                                               dy
-                                               dy
-                                           )
-                                       )
-                                   )
-                               )
-                               float
-                               (
-                                   r
-                               )
-                           ) 
-                         )
-                        in
-                          ifthenelse
-                          (
-                           if
-                           (
-                            <
-                            (
-                                d
-                                0.
-                            )
-                           )
-                           then
-                           (
-                            0.
-                           )
-                           else
-                           (
-                            d
-                           ) 
-                          )
-                        )
-                      )
-                 )
+       p
+       typexprHash1 
+       (
+           point
+       )
+       r
+       class_structure
+       (
+           p
+           brackets2 
+           (
+               p
+               point
+               (
+               )
+           )
+           r
+           r
+          method distance
+             poly
+                                   				 'a 
+              arrow
+              <"typexprHash1"("classPath"([],"point")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+              float
+              (
+              )
+          method distance
+          (
+            case
+          	(
+          		p'
+            	let
+            	(
+            	 (
+            	   dx
+            	   -
+            	   (
+            	       send x
+            	       (
+            	        p
+            	       )
+            	       send x
+            	       (
+            	        p'
+            	       )
+            	   ) 
+            	   dy
+            	   -
+            	   (
+            	       send y
+            	       (
+            	        p
+            	       )
+            	       send y
+            	       (
+            	        p'
+            	       )
+            	   ) 
+            	 )
+            	in
+            	  let
+            	  (
+            	   (
+            	     d
+            	     -.
+            	     (
+            	         sqrt
+            	         (
+            	             float
+            	             (
+            	                 +
+            	                 (
+            	                     *
+            	                     (
+            	                         dx
+            	                         dx
+            	                     )
+            	                     *
+            	                     (
+            	                         dy
+            	                         dy
+            	                     )
+            	                 )
+            	             )
+            	         )
+            	         float
+            	         (
+            	             r
+            	         )
+            	     ) 
+            	   )
+            	  in
+            	    ifthenelse
+            	    (
+            	     if
+            	     (
+            	      <
+            	      (
+            	          d
+            	          0.
+            	      )
+            	     )
+            	     then
+            	     (
+            	      0.
+            	     )
+            	     else
+            	     (
+            	      d
+            	     ) 
+            	    )
+            	  )
+            	)
+          	)
+          )
+       )
    )
    let
    (
@@ -1062,11 +1160,25 @@
      case
          (
      	  x
-     	  <[<"m","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+     	  (
+     	   	m
+     	   	poly
+     	   	                      				 'a 
+     	   	 arrow
+     	   	 a
+     	   	 a
+     	  )
           (
           x
           :
-          <[<"m","polytype2"(["b"],"arrow1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+          (
+           	m
+           	poly
+           	                      				 'b 
+           	 arrow
+           	 b
+           	 b
+          )
           )
          )
     )
@@ -1078,11 +1190,28 @@
      case
          (
      	  x
-     	  <[<"m","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"list")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+     	  (
+     	   	m
+     	   	poly
+     	   	                      				 'a 
+     	   	 arrow
+     	   	 a
+     	   	  list
+     	   	  (
+     	   	    a
+     	   	  )
+     	  )
           (
           x
           :
-          <[<"m","polytype2"(["b"],"arrow1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+          (
+           	m
+           	poly
+           	                      				 'b 
+           	 arrow
+           	 b
+           	 c
+          )
           )
          )
     )
@@ -1094,17 +1223,23 @@
      )
      class name = id
      class expr = 
-                 class_structure
-                 (
-                    method id
-                       poly
-                                             				 'a 
-                        arrow
-                        a
-                        a
-                    method id
-                      x
-                 )
+       class_structure
+       (
+          method id
+             poly
+                                   				 'a 
+              arrow
+              a
+              a
+          method id
+          (
+            case
+          	(
+          		x
+            	x
+          	)
+          )
+       )
    )
    class_type
    (
@@ -1118,14 +1253,10 @@
       signature
       class_signature
       (
-       fieldSpec3 
-       (
-           id
-           poly
-           arrow
-           a
-           a
-       )
+       poly
+       arrow
+       a
+       a
       )
    )
    class
@@ -1135,11 +1266,17 @@
      )
      class name = id_impl
      class expr = 
-                 class_structure
-                 (
-                    method id
-                      x
-                 )
+       class_structure
+       (
+          method id
+          (
+            case
+          	(
+          		x
+            	x
+          	)
+          )
+       )
    )
    class
    (
@@ -1148,141 +1285,172 @@
      )
      class name = a
      class expr = 
-                 class_structure
-                 (
-                    method m
-                      send id
-                      (
-                       (
-                       new b
-                       :
-                       id_spec
-                       (
-                       )
-                       )
-                      )
-                      (
-                          true
-                      )
-                 )
+       class_structure
+       (
+          method m
+          	  send id
+          	  (
+          	   (
+          	   new b
+          	   :
+          	   id_spec
+          	   (
+          	   )
+          	   )
+          	  )
+          	  (
+          	      true
+          	  )
+       )
      params = 
      (
      )
      class name = b
      class expr = 
-                 class_structure
-                 (
-                    method id
-                      x
-                 )
+       class_structure
+       (
+          method id
+          (
+            case
+          	(
+          		x
+            	x
+          	)
+          )
+       )
    )
    class
    (
      params = 
      (
+      "a"
      )
      class name = id1
      class expr = 
-                 class_structure
-                 (
-                    method id
-                       poly
-                                             				 'b 
-                        arrow
-                        b
-                        a
-                    method id
-                      x
-                 )
+       class_structure
+       (
+          method id
+             poly
+                                   				 'b 
+              arrow
+              b
+              a
+          method id
+          (
+            case
+          	(
+          		x
+            	x
+          	)
+          )
+       )
    )
    class
    (
      params = 
      (
-     x
-     a
      )
      class name = id2
      class expr = 
-                 class_structure
-                 (
-                    method id
-                       poly
-                                             				 'b 
-                        arrow
-                        b
-                        a
-                    method id
-                      x
-                 )
+       x
+       a
+       class_structure
+       (
+          method id
+             poly
+                                   				 'b 
+              arrow
+              b
+              a
+          method id
+          (
+            case
+          	(
+          		x
+            	x
+          	)
+          )
+       )
    )
    class
    (
      params = 
      (
-     x
      )
      class name = id3
      class expr = 
-                 class_structure
-                 (
-                     x
-                     x
-                    method id
-                       poly
-                                             				 'a 
-                        arrow
-                        a
-                        a
-                    method id
-                      x
-                 )
+       x
+       class_structure
+       (
+           x
+           x
+          method id
+             poly
+                                   				 'a 
+              arrow
+              a
+              a
+          method id
+          (
+            case
+          	(
+          		_
+            	x
+          	)
+          )
+       )
    )
    class
    (
      params = 
      (
-     ()
      )
      class name = id4
      class expr = 
-                 class_structure
-                 (
-                     r
-                     None
-                    method id
-                       poly
-                                             				 'a 
-                        arrow
-                        a
-                        a
-                    method id
-                      match
-                      r
-                      (
-                      case
-                      (
-                        None
-                        sequence
-                        (
-                          Array.set
-                          (
-                           r
-                           Some
-                              x
-                          )
-                        ;
-                          x
-                        )
-                      ) 
-                        case
-                        (
-                         Some
-                         y
-                         y
-                        )
-                      )
-                 )
+       ()
+       class_structure
+       (
+           r
+           None
+          method id
+             poly
+                                   				 'a 
+              arrow
+              a
+              a
+          method id
+          (
+            case
+          	(
+          		x
+            	match
+            	r
+            	(
+            	case
+            	(
+            	  None
+            	  sequence
+            	  (
+            	    Array.set
+            	    (
+            	     r
+            	     Some
+            	        x
+            	    )
+            	  ;
+            	    x
+            	  )
+            	) 
+            	  case
+            	  (
+            	   Some
+            	   y
+            	   y
+            	  )
+            	)
+          	)
+          )
+       )
    )
    class
    (
@@ -1291,19 +1459,26 @@
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                    method m
-                       poly
-                                             				 'a  'b 
-                        arrow
-                        a
-                        arrow
-                        b
-                        a
-                    method m
-                      x
-                 )
+       class_structure
+       (
+          method m
+             poly
+                                   				 'a  'b 
+              arrow
+              a
+              arrow
+              b
+              a
+          method m
+          (
+            case
+          	(
+          		x
+          		y
+            	x
+          	)
+          )
+       )
    )
    let
    (
@@ -1445,40 +1620,50 @@
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                    method m
-                       poly
-                                             				 'a 
-                        arrow
-                        <"classPath"([],"id")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
-                        tuple
-                        (
-                         int
-                         (
-                         )
-                          bool
-                          (
-                          )
-                        )
-                    method m
-                      (
-                       send id
-                       (
-                        f
-                       )
-                       (
-                           1
-                       )
-                      	send id
-                      	(
-                      	 f
-                      	)
-                      	(
-                      	    true
-                      	)
-                      )
-                 )
+       class_structure
+       (
+          method m
+             poly
+                                   				 'a 
+              arrow
+              <"typexprHash1"("classPath"([],"id")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+              tuple
+              (
+               int
+               (
+               )
+                bool
+                (
+                )
+              )
+          method m
+          (
+            case
+          	(
+          		f
+          		typexprHash1 
+          		(
+          		    id
+          		)
+            	(
+            	 send id
+            	 (
+            	  f
+            	 )
+            	 (
+            	     1
+            	 )
+            		send id
+            		(
+            		 f
+            		)
+            		(
+            		    true
+            		)
+            	)
+          	)
+          )
+       )
    )
    class
    (
@@ -1487,19 +1672,34 @@
      )
      class name = id2
      class expr = 
-                 class_structure
-                 (
-                    method id
-                       poly
-                                             				 'a 
-                        arrow
-                        a
-                        a
-                    method id
-                      x
-                    method mono
-                      x
-                 )
+       class_structure
+       (
+          method id
+             poly
+                                   				 'a 
+              arrow
+              a
+              a
+          method id
+          (
+            case
+          	(
+          		x
+            	x
+          	)
+          )
+          method mono
+          (
+            case
+          	(
+          		x
+          		int
+          		(
+          		)
+            	x
+          	)
+          )
+       )
    )
    let
    (
@@ -1524,26 +1724,27 @@
         (
         )
         kind =
-         list
-         (
-            foo
-            (
-              a
-            )
-         )
+          list
+          (
+             foo
+             (
+               a
+             )
+          )
    )
    class
    (
      params = 
      (
-     x
-     a
+      "a"
      )
      class name = bar
      class expr = 
-                 class_structure
-                 (
-                 )
+       x
+       a
+       class_structure
+       (
+       )
    )
    type
    (  						
@@ -1557,13 +1758,13 @@
         (
         )
         kind =
-         bar
-         (
-            foo
-            (
-              a
-            )
-         )
+          bar
+          (
+             foo
+             (
+               a
+             )
+          )
    )
   (
    case
@@ -1574,7 +1775,7 @@
     (
     x
     :
-    <<[<"m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"b">
+    <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
     )
    )
    )
@@ -1588,7 +1789,7 @@
     (
     x
     :
-    <<[<"m","polytype2"(["a"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"list")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"b">
+    <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"list")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
     )
    )
    )
@@ -1605,7 +1806,7 @@
            (
            x
            :
-           <<[<"m","polytype2"(["a"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"(<<[<"n","polytype1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>,"a">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"b">
+           <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"(<"typexprAngleBrackets"(["methodType"("n","polytype1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
            )
           )
          )
@@ -1615,7 +1816,7 @@
    case
    (
    x
-   <<[<"p","polytype2"(["a"],<<[<"m","polytype1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"n","polytype1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>,"a">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"b">
+   <"typexprAngleBrackets"(["methodType"("p","polytype2"(["a"],<"typexprAngleBrackets"(["methodType"("m","polytype1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"methodType"("n","polytype1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
    send p
    (
     x
@@ -1626,7 +1827,7 @@
    case
    (
    x
-   <<[<"m","polytype2"(["a"],<"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<[<"p","polytype2"(["b"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("d")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"c">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"d">
+   <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],<"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("p","polytype2"(["b"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("d")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"c">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"d">
    send m
    (
     x
@@ -1637,7 +1838,16 @@
    case
    (
    x
-   <[<"m","polytype2"(["a"],<[<"p","polytype1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+   (
+    	m
+    	poly
+    	                      				 'a 
+    	 (
+    	  	p
+    	  	poly
+    	  	a
+    	 )
+   )
    send m
    (
     x
@@ -1655,12 +1865,19 @@
         (
         )
         kind =
-        (
-        T
-        (
-         <[<"id","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
-        )
-        )
+         (
+         T
+         (
+          (
+           	id
+           	poly
+           	                      				 'a 
+           	 arrow
+           	 a
+           	 a
+          )
+         )
+         )
    )
   (
    case
@@ -1684,11 +1901,18 @@
         (
         )
         kind =
-        (
-         r
-         poly
-         <[<"id","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
-        )
+         (
+          r
+          poly
+          (
+           	id
+           	poly
+           	                      				 'a 
+           	 arrow
+           	 a
+           	 a
+          )
+         )
    )
   (
    case
@@ -1725,22 +1949,22 @@
      )
      class name = myself
      class expr = 
-                 class_structure
-                 (
-                    method self
-                    	(
-                    	 case
-                    	 (
-                    	 _
-                    	 self
-                    	 )
-                    	)
-                    	poly
-                    	                      				 'a 
-                    	 arrow
-                    	 a
-                    	 b
-                 )
+       class_structure
+       (
+          method self
+          	(
+          	 case
+          	 (
+          	 _
+          	 self
+          	 )
+          	)
+          	poly
+          	                      				 'a 
+          	 arrow
+          	 a
+          	 b
+       )
    )
    class
    (
@@ -1749,97 +1973,97 @@
      )
      class name = number
      class expr = 
-                 class_structure
-                 (
-                     num
-                     0
-                    method num
-                      num
-                    method succ
-                      brackets4 
-                      (
-                          num
-                          +
-                          (
-                              num
-                              1
-                          )
-                      )
-                    method prev
-                      send switch
-                      (
-                       self
-                      )
-                      (
-                          <"~zero:","brackets"("fun"("multipleMatching"(["patternConstant"("emptyParenthesis"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"functionApplication"("valuePath"("valuePath"([],"failwith")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["constant"("stringLiteral"("\"zero\"")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                          <"~prev:","brackets"("fun"("multipleMatching"(["patternValueName"("x")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"valuePath"("valuePath"([],"x")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                      )
-                    method switch
-                    	(
-                    	 case
-                    	 (
-                    	   zero
-                    	   (
-                    	   case
-                    	   (
-                    	   prev
-                    	   ifthenelse
-                    	   (
-                    	    if
-                    	    (
-                    	     =
-                    	     (
-                    	         num
-                    	         0
-                    	     )
-                    	    )
-                    	    then
-                    	    (
-                    	     zero
-                    	     (
-                    	         ()
-                    	     )
-                    	    )
-                    	    else
-                    	    (
-                    	     prev
-                    	     (
-                    	         brackets4 
-                    	         (
-                    	             num
-                    	             -
-                    	             (
-                    	                 num
-                    	                 1
-                    	             )
-                    	         )
-                    	     )
-                    	    ) 
-                    	   )
-                    	   )
-                    	   )
-                    	 )													
-                    	)
-                    	poly
-                    	                      				 'a 
-                    	 arrow2 
-                    	 (
-                    	     zero
-                    	     arrow
-                    	     unit
-                    	     (
-                    	     )
-                    	     a
-                    	     arrow2 
-                    	     (
-                    	         prev
-                    	         arrow
-                    	         self
-                    	         a
-                    	         a
-                    	     )
-                    	 )
-                 )
+       class_structure
+       (
+           num
+           0
+          method num
+          	  num
+          method succ
+          	  brackets4 
+          	  (
+          	      num
+          	      +
+          	      (
+          	          num
+          	          1
+          	      )
+          	  )
+          method prev
+          	  send switch
+          	  (
+          	   self
+          	  )
+          	  (
+          	      <"~zero:","brackets"("fun"("multipleMatching"(["patternConstant"("emptyParenthesis"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"functionApplication"("valuePath"("valuePath"([],"failwith")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["constant"("stringLiteral"("\"zero\"")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+          	      <"~prev:","brackets"("fun"("multipleMatching"(["patternValueName"("x")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"valuePath"("valuePath"([],"x")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+          	  )
+          method switch
+          	(
+          	 case
+          	 (
+          	   zero
+          	   (
+          	   case
+          	   (
+          	   prev
+          	   ifthenelse
+          	   (
+          	    if
+          	    (
+          	     =
+          	     (
+          	         num
+          	         0
+          	     )
+          	    )
+          	    then
+          	    (
+          	     zero
+          	     (
+          	         ()
+          	     )
+          	    )
+          	    else
+          	    (
+          	     prev
+          	     (
+          	         brackets4 
+          	         (
+          	             num
+          	             -
+          	             (
+          	                 num
+          	                 1
+          	             )
+          	         )
+          	     )
+          	    ) 
+          	   )
+          	   )
+          	   )
+          	 )													
+          	)
+          	poly
+          	                      				 'a 
+          	 arrow2 
+          	 (
+          	     zero
+          	     arrow
+          	     unit
+          	     (
+          	     )
+          	     a
+          	     arrow2 
+          	     (
+          	         prev
+          	         arrow
+          	         self
+          	         a
+          	         a
+          	     )
+          	 )
+       )
    )
    let
    (
@@ -1859,16 +2083,16 @@
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                    method id
-                    	id
-                    	poly
-                    	                      				 'a 
-                    	 arrow
-                    	 a
-                    	 a
-                 )
+       class_structure
+       (
+          method id
+          	id
+          	poly
+          	                      				 'a 
+          	 arrow
+          	 a
+          	 a
+       )
    )
    class
    (
@@ -1877,15 +2101,15 @@
      )
      class name = c'
      class expr = 
-                 class_structure
-                 (
-                    inherit
-                     constr c
-                     (
-                     )
-                    method id
-                      id
-                 )
+       class_structure
+       (
+          inherit
+           constr c
+           (
+           )
+          method id
+          	  id
+       )
    )
    class
    (
@@ -1894,88 +2118,101 @@
      )
      class name = d
      class expr = 
-                 class_structure
-                 (
-                    inherit
-                     constr c
-                     (
-                     )
-                     count
-                     0
-                    method id
-                      sequence
-                      (
-                        Array.set
-                        (
-                         count
-                         +
-                         (
-                             count
-                             1
-                         )
-                        )
-                      ;
-                        x
-                      )
-                    method count
-                      count
-                    method old
-                    	send id
-                    	(
-                    	 c
-                    	)
-                    	poly
-                    	                      				 'a 
-                    	 arrow
-                    	 a
-                    	 a
-                 )
+       class_structure
+       (
+          inherit
+           constr c
+           (
+           )
+           count
+           0
+          method id
+          (
+            case
+          	(
+          		x
+            	sequence
+            	(
+            	  Array.set
+            	  (
+            	   count
+            	   +
+            	   (
+            	       count
+            	       1
+            	   )
+            	  )
+            	;
+            	  x
+            	)
+          	)
+          )
+          method count
+          	  count
+          method old
+          	send id
+          	(
+          	 c
+          	)
+          	poly
+          	                      				 'a 
+          	 arrow
+          	 a
+          	 a
+       )
    )
    class
    (
      params = 
      (
-     l
+      "a"
      )
      class name = olist
      class expr = 
-                 class_structure
-                 (
-                     l
-                     l
-                    method fold
-                    	List.fold_right
-                    	(
-                    	    l
-                    	)
-                    	poly
-                    	                      				 'b 
-                    	 arrow2 
-                    	 (
-                    	     f
-                    	     arrow
-                    	     a
-                    	     arrow
-                    	     b
-                    	     b
-                    	     arrow2 
-                    	     (
-                    	         init
-                    	         b
-                    	         b
-                    	     )
-                    	 )
-                    method cons
-                      brackets4 
-                      (
-                          l
-                          ::
-                          (
-                              a
-                              l
-                          )
-                      )
-                 )
+       l
+       class_structure
+       (
+           l
+           l
+          method fold
+          	List.fold_right
+          	(
+          	    l
+          	)
+          	poly
+          	                      				 'b 
+          	 arrow2 
+          	 (
+          	     f
+          	     arrow
+          	     a
+          	     arrow
+          	     b
+          	     b
+          	     arrow2 
+          	     (
+          	         init
+          	         b
+          	         b
+          	     )
+          	 )
+          method cons
+          (
+            case
+          	(
+          		a
+            	brackets4 
+            	(
+            	    l
+            	    ::
+            	    (
+            	        a
+            	        l
+            	    )
+            	)
+          	)
+          )
+       )
    )
    let
    (
@@ -1984,7 +2221,10 @@
      case
          (
      	  l
-     	  <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     	  olist
+     	  (
+     	    a
+     	  )
           send fold
           (
            l
@@ -2003,7 +2243,10 @@
      case
          (
      	  l
-     	  <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     	  olist
+     	  (
+     	    a
+     	  )
           send fold
           (
            l
@@ -2022,12 +2265,18 @@
      case
          (
       		 l
-      		 <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+      		 olist
+      		 (
+      		   a
+      		 )
       		(
       		 case
       		     (
       		 	  l'
-      		 	  <"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+      		 	  olist
+      		 	  (
+      		 	    b
+      		 	  )
       		      send fold
       		      (
       		       l
@@ -2053,9 +2302,9 @@
         (
         )
         kind =
-        unit
-        (
-        )
+         unit
+         (
+         )
    )
    class
    (
@@ -2064,27 +2313,27 @@
      )
      class name = o
      class expr = 
-                 class_structure
-                 (
-                    method x
-                    	(
-                    	 case
-                    	 (
-                    	 _
-                    	 ()
-                    	 )
-                    	)
-                    	poly
-                    	                      				 'a 
-                    	 arrow
-                    	  t
-                    	  (
-                    	    <[<"A",[]>],"a">
-                    	  )
-                    	 unit
-                    	 (
-                    	 )
-                 )
+       class_structure
+       (
+          method x
+          	(
+          	 case
+          	 (
+          	 _
+          	 ()
+          	 )
+          	)
+          	poly
+          	                      				 'a 
+          	 arrow
+          	  t
+          	  (
+          	    <[<"A",[]>],"a">
+          	  )
+          	 unit
+          	 (
+          	 )
+       )
    )
    class
    (
@@ -2093,50 +2342,50 @@
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                    method m
-                      new d
-                      (
-                          ()
-                      )
-                 )
+       class_structure
+       (
+          method m
+          	  new d
+          	  (
+          	      ()
+          	  )
+       )
      params = 
      (
-     <"x",[],["constant"("posInt"("0")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
-     ()
      )
      class name = d
      class expr = 
-                 class_structure
-                 (
-                 )
+       <"x",[],["constant"("posInt"("0")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+       ()
+       class_structure
+       (
+       )
    )
    class
    (
      params = 
      (
-     <"x",[],["constant"("posInt"("0")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
-     ()
      )
      class name = d
      class expr = 
-                 class_structure
-                 (
-                 )
+       <"x",[],["constant"("posInt"("0")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+       ()
+       class_structure
+       (
+       )
      params = 
      (
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                    method m
-                      new d
-                      (
-                          ()
-                      )
-                 )
+       class_structure
+       (
+          method m
+          	  new d
+          	  (
+          	      ()
+          	  )
+       )
    )
    class_type
    (
@@ -2150,18 +2399,14 @@
       signature
       class_signature
       (
-       fieldSpec3 
-       (
-           fold
-           poly
-           arrow
-           arrow
-           a
-           a
-           arrow
-           a
-           a
-       )
+       poly
+       arrow
+       arrow
+       a
+       a
+       arrow
+       a
+       a
       )
    )
    class
@@ -2171,36 +2416,53 @@
      )
      class name = zero
      class expr = 
-                 class_structure
-                 (
-                    method fold
-                      x
-                 )
+       class_structure
+       (
+          method fold
+          (
+            case
+          	(
+          		f
+          		x
+            	x
+          	)
+          )
+       )
    )
    class
    (
      params = 
      (
-     n
-     numeral
      )
      class name = next
      class expr = 
-                 class_structure
-                 (
-                    method fold
-                      send fold
-                      (
-                       n
-                      )
-                      (
-                          f
-                          f
-                          (
-                              x
-                          )
-                      )
-                 )
+       n
+       typexprHash1 
+       (
+           numeral
+       )
+       class_structure
+       (
+          method fold
+          (
+            case
+          	(
+          		f
+          		x
+            	send fold
+            	(
+            	 n
+            	)
+            	(
+            	    f
+            	    f
+            	    (
+            	        x
+            	    )
+            	)
+          	)
+          )
+       )
    )
    class_type
    (
@@ -2214,12 +2476,8 @@
       signature
       class_signature
       (
-       fieldSpec3 
-       (
-           as_variant
-           poly
-           <"Node",["typexprConstr2"("typeConstr"([],"node_type")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
-       )
+       poly
+       <"Node",["typexprConstr2"("typeConstr"([],"node_type")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
       )
    )
    class
@@ -2229,21 +2487,21 @@
      )
      class name = node
      class expr = 
-                 class_structure
-                 (
-                    method as_variant
-                    	Node
-                    	   brackets2 
-                    	   (
-                    	       self
-                    	       node_type
-                    	       (
-                    	       )
-                    	   )
-                    	poly
-                    	                      				 'a 
-                    	 <[<"Node",["typexprConstr2"("typeConstr"([],"node_type")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>],"a">
-                 )
+       class_structure
+       (
+          method as_variant
+          	Node
+          	   brackets2 
+          	   (
+          	       self
+          	       node_type
+          	       (
+          	       )
+          	   )
+          	poly
+          	                      				 'a 
+          	 <[<"Node",["typexprConstr2"("typeConstr"([],"node_type")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>],"a">
+       )
    )
    class
    (
@@ -2252,18 +2510,18 @@
      )
      class name = node
      class expr = 
-                 class_structure
-                 (
-                    method as_variant
-                      Node
-                         brackets2 
-                         (
-                             self
-                             node_type
-                             (
-                             )
-                         )
-                 )
+       class_structure
+       (
+          method as_variant
+          	  Node
+          	     brackets2 
+          	     (
+          	         self
+          	         node_type
+          	         (
+          	         )
+          	     )
+       )
    )
    type
    (  						
@@ -2276,18 +2534,18 @@
         (
         )
         kind =
-        (
-         bad
-         poly
-                               				 'a 
-           ref
-           (
-              option
-              (
-                a
-              )
-           )
-        )
+         (
+          bad
+          poly
+                                				 'a 
+            ref
+            (
+               option
+               (
+                 a
+               )
+            )
+         )
    )
    let
    (
@@ -2312,21 +2570,21 @@
         (
         )
         kind =
-        (
-         bad2
-         poly
-                               				 'a 
-           option
-           (
-              ref
-              (
-                 option
-                 (
-                   a
-                 )
-              )
-           )
-        )
+         (
+          bad2
+          poly
+                                				 'a 
+            option
+            (
+               ref
+               (
+                  option
+                  (
+                    a
+                  )
+               )
+            )
+         )
    )
    let
    (
@@ -2354,7 +2612,12 @@
      case
          (
       		 x
-      		 <[<"m","polytype2"(["a"],<<[<"p","polytype1"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"b">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+      		 (
+      		  	m
+      		  	poly
+      		  	                      				 'a 
+      		  	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+      		 )
       		(
       		 case
       		     (
@@ -2373,7 +2636,16 @@
      case
          (
       		 x
-      		 <[<"m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"(<<[<"p","polytype1"("star"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"b">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+      		 (
+      		  	m
+      		  	poly
+      		  	                      				 'a 
+      		  	 tuple
+      		  	 (
+      		  	  a
+      		  	   <"typexprAngleBrackets"(["methodType"("p","polytype1"("star"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+      		  	 )
+      		 )
       		(
       		 case
       		     (
@@ -2397,7 +2669,7 @@
         (
         )
         kind =
-        <[],[<"A",["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
+         <[],[<"A",["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
    )
    class
    (
@@ -2406,30 +2678,30 @@
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                    method m
-                    	(
-                    	 case
-                    	 (
-                    	 x
-                    	 send m
-                    	 (
-                    	  self
-                    	 )
-                    	 (
-                    	     x
-                    	 )
-                    	 )
-                    	)
-                    	poly
-                    	                      				 'a 
-                    	 arrow
-                    	 <["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"a">
-                    	 unit
-                    	 (
-                    	 )
-                 )
+       class_structure
+       (
+          method m
+          	(
+          	 case
+          	 (
+          	 x
+          	 send m
+          	 (
+          	  self
+          	 )
+          	 (
+          	     x
+          	 )
+          	 )
+          	)
+          	poly
+          	                      				 'a 
+          	 arrow
+          	 <["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"a">
+          	 unit
+          	 (
+          	 )
+       )
    )
    class
    (
@@ -2438,39 +2710,39 @@
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                    method m
-                    	(
-                    	 case
-                    	 (
-                    	   A
-                    	   x'
-                    	   send m
-                    	   (
-                    	    self
-                    	   )
-                    	   (
-                    	       x'
-                    	   )
-                    	 ) 
-                    	   case
-                    	   (
-                    	    _
-                    	    failwith
-                    	    (
-                    	        "c#m"
-                    	    )
-                    	   )
-                    	)
-                    	poly
-                    	                      				 'a 
-                    	 arrow
-                    	 <["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"a">
-                    	 unit
-                    	 (
-                    	 )
-                 )
+       class_structure
+       (
+          method m
+          	(
+          	 case
+          	 (
+          	   A
+          	   x'
+          	   send m
+          	   (
+          	    self
+          	   )
+          	   (
+          	       x'
+          	   )
+          	 ) 
+          	   case
+          	   (
+          	    _
+          	    failwith
+          	    (
+          	        "c#m"
+          	    )
+          	   )
+          	)
+          	poly
+          	                      				 'a 
+          	 arrow
+          	 <["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"a">
+          	 unit
+          	 (
+          	 )
+       )
    )
    class
    (
@@ -2479,28 +2751,28 @@
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                    method m
-                    	(
-                    	 case
-                    	 (
-                    	 x
-                    	 send m
-                    	 (
-                    	  self
-                    	 )
-                    	 (
-                    	     x
-                    	 )
-                    	 )
-                    	)
-                    	poly
-                    	                      				 'a 
-                    	 arrow
-                    	 <["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"a">
-                    	 a
-                 )
+       class_structure
+       (
+          method m
+          	(
+          	 case
+          	 (
+          	 x
+          	 send m
+          	 (
+          	  self
+          	 )
+          	 (
+          	     x
+          	 )
+          	 )
+          	)
+          	poly
+          	                      				 'a 
+          	 arrow
+          	 <["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"a">
+          	 a
+       )
    )
    class
    (
@@ -2509,56 +2781,57 @@
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                    method m
-                    	(
-                    	 case
-                    	 (
-                    	 x
-                    	 A
-                    	 )
-                    	)
-                    	poly
-                    	                      				 'a 
-                    	 arrow
-                    	  option
-                    	  (
-                    	    a
-                    	  )
-                    	 <[<"A",[]>],"a">
-                 )
+       class_structure
+       (
+          method m
+          	(
+          	 case
+          	 (
+          	 x
+          	 A
+          	 )
+          	)
+          	poly
+          	                      				 'a 
+          	 arrow
+          	  option
+          	  (
+          	    a
+          	  )
+          	 <[<"A",[]>],"a">
+       )
    )
    class
    (
      params = 
      (
+      "a"
      )
      class name = visitor
      class expr = 
-                 class_structure
-                 (
-                    method caseNil
-                       poly
-                       a
-                 )
+       class_structure
+       (
+          method caseNil
+             poly
+             a
+       )
      params = 
      (
      )
      class name = int_list
      class expr = 
-                 class_structure
-                 (
-                    method visit
-                       poly
-                                             				 'a 
-                        arrow
-                         visitor
-                         (
-                           a
-                         )
-                        a
-                 )
+       class_structure
+       (
+          method visit
+             poly
+                                   				 'a 
+              arrow
+               visitor
+               (
+                 a
+               )
+              a
+       )
    )
    type
    (  						
@@ -2573,7 +2846,21 @@
         (
         )
         kind =
-        <[<"caseNil","polytype1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"caseCons","polytype1"("arrow1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arrow1"("typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"list")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+         (
+          	caseNil
+          	poly
+          	a
+          	caseCons
+          	poly
+          	arrow
+          	b
+          	arrow
+          	 list
+          	 (
+          	   b
+          	 )
+          	a
+         )
    )
    type
    (  						
@@ -2587,7 +2874,18 @@
         (
         )
         kind =
-        <[<"visit","polytype2"(["a"],"arrow1"("typeExprBrackets2"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"([],"list_visitor")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+         (
+          	visit
+          	poly
+          	                      				 'a 
+          	 arrow
+          	  list_visitor
+          	     (
+          	      a
+          	 	 b				
+          	     ) 
+          	 a
+         )
    )
    class_type
    (
@@ -2599,19 +2897,83 @@
      expr =
       class_type
        s
-       fieldSpec3 
+       poly
+       arrow
+       arrow
+       b
+       arrow
+       s
+       b
+       arrow
+       b
+       b
+   )
+   type
+   (  						
+      t
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+         (
+          f
+          poly
+                                				 'a  'b 
+           arrow
+           arrow
+           b
+           arrow
+           <"typexprHash1"("classPath"([],"ct")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+           b
+           b
+         )
+   )
+   type
+   (  						
+      t
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+         u
+         (
+         )
+      u
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+         t
+         (
+         )
+   )
+   class
+   (
+     params = 
+     (
+      "t"
+     )
+     class name = a
+     class expr = 
+       class_structure
        (
-           fold
-           poly
-           arrow
-           arrow
-           b
-           arrow
-           s
-           b
-           arrow
-           b
-           b
+          classConstraint 
+          (
+              t
+              <"A",["typexprConstr1"("tagg"("t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+          )
        )
    )
    type
@@ -2625,74 +2987,7 @@
         (
         )
         kind =
-        (
-         f
-         poly
-                               				 'a  'b 
-          arrow
-          arrow
-          b
-          arrow
-          <"classPath"([],"ct")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
-          b
-          b
-        )
-   )
-   type
-   (  						
-      t
-        type
-        params=
-        (
-        )
-        cstrs =
-        (
-        )
-        kind =
-        u
-        (
-        )
-      u
-        type
-        params=
-        (
-        )
-        cstrs =
-        (
-        )
-        kind =
-        t
-        (
-        )
-   )
-   class
-   (
-     params = 
-     (
-     )
-     class name = a
-     class expr = 
-                 class_structure
-                 (
-                    classConstraint 
-                    (
-                        t
-                        <"A",["typexprConstr1"("tagg"("t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
-                    )
-                 )
-   )
-   type
-   (  						
-      t
-        type
-        params=
-        (
-        )
-        cstrs =
-        (
-        )
-        kind =
-        <[],[<"A",["typexprConstr1"("typexprConstr2"("typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
+         <[],[<"A",["typexprConstr1"("typexprConstr2"("typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
    )
    type
    (  						
@@ -2723,11 +3018,11 @@
         (
         )
         kind =
-         t
-            (
-             a
-        	 b				
-            ) 
+          t
+             (
+              a
+         	 b				
+             ) 
    )
    type
    (  						
@@ -2741,7 +3036,7 @@
         (
         )
         kind =
-        a
+         a
       u
         type
         params=
@@ -2751,12 +3046,12 @@
         (
         )
         kind =
-         t
-         (
-           int
-           (
-           )
-         )
+          t
+          (
+            int
+            (
+            )
+          )
    )
    type
    (  						
@@ -2790,7 +3085,7 @@
         (
         )
         kind =
-        a
+         a
       v
         type
         params=
@@ -2801,13 +3096,13 @@
         (
         )
         kind =
-         t
-         (
-            u
-            (
-              a
-            )
-         )
+          t
+          (
+             u
+             (
+               a
+             )
+          )
    )
    type
    (  						
@@ -2821,7 +3116,7 @@
         (
         )
         kind =
-        a
+         a
       v
         type
         params=
@@ -2832,13 +3127,13 @@
         (
         )
         kind =
-         t
-         (
-            u
-            (
-              a
-            )
-         )
+          t
+          (
+             u
+             (
+               a
+             )
+          )
          typeConstraint 
          (
              a
@@ -2858,9 +3153,9 @@
         (
         )
         kind =
-        int
-        (
-        )
+         int
+         (
+         )
    )
    type
    (  						
@@ -2874,9 +3169,9 @@
         (
         )
         kind =
-        unit
-        (
-        )
+         unit
+         (
+         )
          typeConstraint 
          (
              a
@@ -2897,7 +3192,7 @@
         (
         )
         kind =
-        a
+         a
       v
         type
         params=
@@ -2908,13 +3203,13 @@
         (
         )
         kind =
-         t
-         (
-            u
-            (
-              a
-            )
-         )
+          t
+          (
+             u
+             (
+               a
+             )
+          )
    )
    type
    (  						
@@ -2928,7 +3223,7 @@
         (
         )
         kind =
-        a
+         a
       v
         type
         params=
@@ -2939,13 +3234,13 @@
         (
         )
         kind =
-         t
-         (
-            u
-            (
-              a
-            )
-         )
+          t
+          (
+             u
+             (
+               a
+             )
+          )
          typeConstraint 
          (
              a
@@ -2966,7 +3261,14 @@
         (
         )
         kind =
-        <[<"m","polytype1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"v")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+         (
+          	m
+          	poly
+          	 v
+          	 (
+          	   a
+          	 )
+         )
       v
         type
         params=
@@ -2977,12 +3279,48 @@
         (
         )
         kind =
-         u
+          u
+          (
+             list
+             (
+               a
+             )
+          )
+   )
+   type
+   (  						
+      t
+        type
+        params=
+        (
+         a
+        )
+        cstrs =
+        (
+        )
+        kind =
+         a
+   )
+   type
+   (  						
+      u
+        type
+        params=
+        (
+         a
+        )
+        cstrs =
+        (
+        )
+        kind =
          (
-            list
-            (
-              a
-            )
+         A
+         (
+           t
+           (
+             a
+           )
+         )
          )
    )
    type
@@ -2997,43 +3335,11 @@
         (
         )
         kind =
-        a
-   )
-   type
-   (  						
-      u
-        type
-        params=
-        (
-         a
-        )
-        cstrs =
-        (
-        )
-        kind =
-        (
-        A
-        (
-          t
-          (
-            a
-          )
-        )
-        )
-   )
-   type
-   (  						
-      t
-        type
-        params=
-        (
-         a
-        )
-        cstrs =
-        (
-        )
-        kind =
-        <[<"a","polytype1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+         (
+          	a
+          	poly
+          	a
+         )
    )
   (
    case
@@ -3061,7 +3367,7 @@
         (
         )
         kind =
-        <"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+         <"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
    )
    type
    (  						
@@ -3074,14 +3380,14 @@
         (
         )
         kind =
-        (
-        A
-        (
-        )
-        B
-        (
-        )
-        )
+         (
+         A
+         (
+         )
+         B
+         (
+         )
+         )
    )
   (
    case
@@ -3339,11 +3645,11 @@
         (
         )
         kind =
-        arrow
-        a
-        unit
-        (
-        )
+         arrow
+         a
+         unit
+         (
+         )
          typeConstraint 
          (
              a
@@ -3360,11 +3666,11 @@
         (
         )
         kind =
-        arrow
-        b
-        unit
-        (
-        )
+         arrow
+         b
+         unit
+         (
+         )
          typeConstraint 
          (
              b
@@ -3376,8 +3682,7 @@
      class_type_declaration
      params = 
      (
-       "a"
-       "b"
+      "ab"
      ) 
      name = a
      expr =
@@ -3385,28 +3690,19 @@
       signature
       class_signature
       (
-       fieldSpec3 
-       (
-           b
-           poly
-           <<["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"b">
-       )
-       fieldSpec3 
-       (
-           as_a
-           poly
+       poly
+       <<["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"b">
+       poly
+        a
+           (
             a
-               (
-                a
-           	 b				
-               ) 
-       )
+       	 b				
+           ) 
       )
      class_type_declaration
      params = 
      (
-       "a"
-       "b"
+      "ab"
      ) 
      name = b
      expr =
@@ -3414,22 +3710,14 @@
       signature
       class_signature
       (
-       fieldSpec3 
-       (
-           a
-           poly
-           <<["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"a">
-       )
-       fieldSpec3 
-       (
-           as_b
-           poly
-            b
-               (
-                a
-           	 b				
-               ) 
-       )
+       poly
+       <<["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"a">
+       poly
+        b
+           (
+            a
+       	 b				
+           ) 
       )
    )
    class_type
@@ -3437,46 +3725,36 @@
      class_type_declaration
      params = 
      (
-       "b"
+      "b"
      ) 
      name = ca
      expr =
       class_type
        s
-       fieldSpec1 
-       (
-           class_type
-            fun
-           	class_type
-           	constr a
-           	(
-           	 s
-           		b
-           	)
-       )
+       	class_type
+       	constr a
+       	(
+       	 s
+       		b
+       	)
    )
    class_type
    (
      class_type_declaration
      params = 
      (
-       "a"
+      "a"
      ) 
      name = cb
      expr =
       class_type
        s
-       fieldSpec1 
-       (
-           class_type
-            fun
-           	class_type
-           	constr b
-           	(
-           	 a
-           		s
-           	)
-       )
+       	class_type
+       	constr b
+       	(
+       	 a
+       		s
+       	)
    )
    type
    (  						
@@ -3489,7 +3767,7 @@
         (
         )
         kind =
-        <"typexprConstr1"("typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"ca")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"cb")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+         <"typexprConstr1"("typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"ca")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"cb")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
    )
    class
    (
@@ -3498,11 +3776,11 @@
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                    method m
-                      1
-                 )
+       class_structure
+       (
+          method m
+          	  1
+       )
    )
    let
    (
@@ -3514,7 +3792,7 @@
           class_structure
           (
              method m
-               1
+             	  1
           )
          )
     )
@@ -3529,12 +3807,12 @@
           class_structure
           (
              method n
-               1
+             	  1
              method m
-               send n
-               (
-                self
-               )
+             	  send n
+             	  (
+             	   self
+             	  )
           )
          )
     )
@@ -3549,11 +3827,11 @@
           class_structure
           (
              method n
-               1
+             	  1
              method m
-               send n
-               (
-               )
+             	  send n
+             	  (
+             	  )
           )
          )
     )
@@ -3568,9 +3846,9 @@
           class_structure
           (
              method n
-               1
+             	  1
              method m
-               2
+             	  2
           )
          )
     )
@@ -3587,10 +3865,16 @@
              classConstraint 
              (
                  s
-                 <[<"n","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+                 (
+                  	n
+                  	poly
+                  	int
+                  	(
+                  	)
+                 )
              )
              method m
-               1
+             	  1
           )
          )
     )
@@ -3602,19 +3886,19 @@
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                    method x
-                      1
-                    method m
-                      class_structure
-                      (
-                         method x
-                           3
-                         method m
-                           self
-                      )
-                 )
+       class_structure
+       (
+          method x
+          	  1
+          method m
+          	  class_structure
+          	  (
+          	     method x
+          	     	  3
+          	     method m
+          	     	  self
+          	  )
+       )
    )
    let
    (
@@ -3622,26 +3906,35 @@
      class_structure
      (
         method x
-          1
+        	  1
         method m
-          class_structure
-          (
-             method x
-               3
-             method m
-               self
-          )
+        	  class_structure
+        	  (
+        	     method x
+        	     	  3
+        	     method m
+        	     	  self
+        	  )
      )
    )
   (
    case
    (
    x
-   <<[<"m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<[<"m","polytype2"(["b"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"foo">
+   <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["b"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
    (
    x
    :
-   <[<"m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"(<<[<"m","polytype2"(["b"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<[<"m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"bar">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+   (
+    	m
+    	poly
+    	                      				 'a 
+    	 tuple
+    	 (
+    	  a
+    	   <"typexprAngleBrackets"(["methodType"("m","polytype2"(["b"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
+    	 )
+   )
    )
    )
   )
@@ -3657,7 +3950,19 @@
         (
         )
         kind =
-        <[<"m","polytype2"(["b"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+         (
+          	m
+          	poly
+          	                      				 'b 
+          	 tuple
+          	 (
+          	  a
+          	    foo
+          	    (
+          	      a
+          	    )
+          	 )
+         )
    )
    type
    (  						
@@ -3670,7 +3975,19 @@
         (
         )
         kind =
-        <[<"m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+         (
+          	m
+          	poly
+          	                      				 'a 
+          	 tuple
+          	 (
+          	  a
+          	    foo
+          	    (
+          	      a
+          	    )
+          	 )
+         )
    )
    type
    (  						
@@ -3684,7 +4001,28 @@
         (
         )
         kind =
-        <[<"m","polytype2"(["b"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<[<"m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+         (
+          	m
+          	poly
+          	                      				 'b 
+          	 tuple
+          	 (
+          	  a
+          	   (
+          	    	m
+          	    	poly
+          	    	                      				 'c 
+          	    	 tuple
+          	    	 (
+          	    	  c
+          	    	    bar
+          	    	    (
+          	    	      a
+          	    	    )
+          	    	 )
+          	   )
+          	 )
+         )
    )
    type
    (  						
@@ -3697,7 +4035,19 @@
         (
         )
         kind =
-        <[<"m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+         (
+          	m
+          	poly
+          	                      				 'a 
+          	 tuple
+          	 (
+          	  a
+          	    bar
+          	    (
+          	      a
+          	    )
+          	 )
+         )
    )
    let
    (
@@ -3723,11 +4073,20 @@
    case
    (
    x
-   <[<"m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"(<"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<[<"m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+   (
+    	m
+    	poly
+    	                      				 'a 
+    	 tuple
+    	 (
+    	  a
+    	   <"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
+    	 )
+   )
    (
    x
    :
-   <<[<"m","polytype2"(["b"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<[<"m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"bar">
+   <"typexprAngleBrackets"(["methodType"("m","polytype2"(["b"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
    )
    )
   )
@@ -3735,11 +4094,20 @@
    case
    (
    x
-   <[<"m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"(<"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<[<"m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+   (
+    	m
+    	poly
+    	                      				 'a 
+    	 tuple
+    	 (
+    	  a
+    	   <"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
+    	 )
+   )
    (
    x
    :
-   <<[<"m","polytype2"(["b"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<[<"m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"bar">
+   <"typexprAngleBrackets"(["methodType"("m","polytype2"(["b"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
    )
    )
   )
@@ -3747,11 +4115,20 @@
    case
    (
    x
-   <<[<"m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"foo">
+   <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
    (
    x
    :
-   <[<"m","polytype2"(["b"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"(<"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<[<"m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+   (
+    	m
+    	poly
+    	                      				 'b 
+    	 tuple
+    	 (
+    	  b
+    	   <"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
+    	 )
+   )
    )
    )
   )
@@ -3762,11 +4139,18 @@
      case
          (
      	  x
-          brackets3 
           (
-              x
-              <[<"m","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeExprBrackets"(<"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<[<"m","polytype2"(["c"],"arrow1"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
-              <<[<"m","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeExprBrackets"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"foo">
+            x
+            :
+            (
+             	m
+             	poly
+             	                      				 'a 
+             	 arrow
+             	 a
+             	 <"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"arrow1"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
+            )
+            <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeExprBrackets"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
           )
          )
     )
@@ -3781,7 +4165,7 @@
       case
           (
       	  x
-      	  <<[<"m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"foo">
+      	  <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
            ()
           )
      )
@@ -3792,7 +4176,16 @@
      sig_value f
      value_description
      arrow
-     <[<"m","polytype2"(["b"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"(<"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<[<"m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+     (
+      	m
+      	poly
+      	                      				 'b 
+      	 tuple
+      	 (
+      	  b
+      	   <"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
+      	 )
+     )
      unit
      (
      )
@@ -3813,7 +4206,7 @@
          (
          )
          kind =
-         <<[<"m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"foo">
+          <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
     )
     )
     signature
@@ -3829,7 +4222,16 @@
           (
           )
           kind =
-          <[<"m","polytype2"(["b"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"(<"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[<[<"m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+           (
+            	m
+            	poly
+            	                      				 'b 
+            	 tuple
+            	 (
+            	  b
+            	   <"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
+            	 )
+           )
      )
     )
    module  M
@@ -3847,9 +4249,9 @@
          (
          )
          kind =
-         int
-         (
-         )
+          int
+          (
+          )
     )
     type
     (  						
@@ -3862,7 +4264,13 @@
          (
          )
          kind =
-         <[<"m","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+          (
+           	m
+           	poly
+           	int
+           	(
+           	)
+          )
     )
     )
     signature
@@ -3891,7 +4299,15 @@
           (
           )
           kind =
-          <[<"m","polytype2"(["a"],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+           (
+            	m
+            	poly
+            	                      				 'a 
+            	  t
+            	  (
+            	    a
+            	  )
+           )
      )
     )
    module  M
@@ -3909,9 +4325,9 @@
          (
          )
          kind =
-         int
-         (
-         )
+          int
+          (
+          )
     )
     let
     (
@@ -3920,7 +4336,13 @@
       case
           (
       	  x
-      	  <[<"m","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+      	  (
+      	   	m
+      	   	poly
+      	   	int
+      	   	(
+      	   	)
+      	  )
            send m
            (
             x
@@ -3947,7 +4369,15 @@
      sig_value f
      value_description
      arrow
-     <[<"m","polytype2"(["a"],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+     (
+      	m
+      	poly
+      	                      				 'a 
+      	  t
+      	  (
+      	    a
+      	  )
+     )
      int
      (
      )
@@ -3969,9 +4399,9 @@
          (
          )
          kind =
-         int
-         (
-         )
+          int
+          (
+          )
     )
     let
     (
@@ -4006,7 +4436,15 @@
      sig_value f
      value_description
      arrow
-     <[<"m","polytype2"(["a"],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+     (
+      	m
+      	poly
+      	                      				 'a 
+      	  t
+      	  (
+      	    a
+      	  )
+     )
      int
      (
      )
@@ -4031,7 +4469,7 @@
       		            brackets2 
       		            (
       		                x
-      		                <<[<"m","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[[]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"c">
+      		                <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[[]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"c">
       		            )
       		        )
       		      ;
@@ -4042,7 +4480,7 @@
       		              brackets2 
       		              (
       		                  y
-      		                  <<[<"m","polytype2"(["b"],"arrow1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"star"("tagg"("d")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[[]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>,"d">
+      		                  <"typexprAngleBrackets"(["methodType"("m","polytype2"(["b"],"arrow1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"star"("tagg"("d")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[[]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"d">
       		              )
       		          )
       		        ;
@@ -4069,7 +4507,7 @@
         (
         )
         kind =
-        <[],[<"A",[]>,<"B",[]>]>
+         <[],[<"A",[]>,<"B",[]>]>
    )
    type
    (  						
@@ -4082,23 +4520,23 @@
         (
         )
         kind =
-        t
-        (
-        )
+         t
+         (
+         )
    )
   (
    case
    (
    x
-   brackets3 
    (
-       x
-       t
-       (
-       )
-       v
-       (
-       )
+     x
+     :
+     t
+     (
+     )
+     v
+     (
+     )
    )
    )
   )
@@ -4113,21 +4551,21 @@
         (
         )
         kind =
-        <[],["typexprConstr2"("typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>
+         <[],["typexprConstr2"("typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>
    )
   (
    case
    (
    x
-   brackets3 
    (
-       x
-       u
-       (
-       )
-       v
-       (
-       )
+     x
+     :
+     u
+     (
+     )
+     v
+     (
+     )
    )
    )
   )
@@ -4135,15 +4573,15 @@
    case
    (
    x
-   brackets3 
    (
-       x
-       v
-       (
-       )
-       u
-       (
-       )
+     x
+     :
+     v
+     (
+     )
+     u
+     (
+     )
    )
    )
   )
@@ -4158,21 +4596,21 @@
         (
         )
         kind =
-        <[],["typexprConstr2"("typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>
+         <[],["typexprConstr2"("typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>
    )
   (
    case
    (
    x
-   brackets3 
    (
-       x
-       u
-       (
-       )
-       v
-       (
-       )
+     x
+     :
+     u
+     (
+     )
+     v
+     (
+     )
    )
    )
   )
@@ -4187,7 +4625,13 @@
         (
         )
         kind =
-        <[<"x","polytype1"("typexprConstr2"("typeConstr"([],"p")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+         (
+          	x
+          	poly
+          	p
+          	(
+          	)
+         )
    )
    type
    (  						
@@ -4200,21 +4644,27 @@
         (
         )
         kind =
-        <[<"x","polytype1"("typexprConstr2"("typeConstr"([],"p")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>
+         (
+          	x
+          	poly
+          	p
+          	(
+          	)
+         )
    )
   (
    case
    (
    x
-   brackets3 
    (
-       x
-       q
-       (
-       )
-       p
-       (
-       )
+     x
+     :
+     q
+     (
+     )
+     p
+     (
+     )
    )
    )
   )
@@ -4222,15 +4672,15 @@
    case
    (
    x
-   brackets3 
    (
-       x
-       p
-       (
-       )
-       q
-       (
-       )
+     x
+     :
+     p
+     (
+     )
+     q
+     (
+     )
    )
    )
   )
@@ -4241,11 +4691,29 @@
      case
          (
      	  x
-          brackets3 
           (
-              x
-              <[<"m","polytype2"(["a"],"arrow1"("typeExprBrackets"(<<[<"p","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>,"a">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
-              <[<"m","polytype2"(["b"],"arrow1"("typeExprBrackets"(<<[<"p","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"q","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>,"b">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+            x
+            :
+            (
+             	m
+             	poly
+             	                      				 'a 
+             	 arrow
+             	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+             	 int
+             	 (
+             	 )
+            )
+            (
+             	m
+             	poly
+             	                      				 'b 
+             	 arrow
+             	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"methodType"("q","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+             	 int
+             	 (
+             	 )
+            )
           )
          )
     )
@@ -4257,11 +4725,29 @@
      case
          (
      	  x
-          brackets3 
           (
-              x
-              <[<"m","polytype2"(["a"],"arrow1"("typeExprBrackets"(<<[<"p","polytype1"(<[<"a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>,"a">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
-              <[<"m","polytype2"(["b"],"arrow1"("typeExprBrackets"(<<[<"p","polytype1"(<[<"a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"b","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>,"b">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+            x
+            :
+            (
+             	m
+             	poly
+             	                      				 'a 
+             	 arrow
+             	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("typexprAngleBrackets"(["methodType"("a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+             	 int
+             	 (
+             	 )
+            )
+            (
+             	m
+             	poly
+             	                      				 'b 
+             	 arrow
+             	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("typexprAngleBrackets"(["methodType"("a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"methodType"("b","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+             	 int
+             	 (
+             	 )
+            )
           )
          )
     )
@@ -4273,11 +4759,29 @@
      case
          (
      	  x
-          brackets3 
           (
-              x
-              <[<"m","polytype2"(["a"],"arrow1"("typeExprBrackets"(<<[<"p","polytype1"(<[<"a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"b","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>,"a">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
-              <[<"m","polytype2"(["b"],"arrow1"("typeExprBrackets"(<<[<"p","polytype1"(<[<"a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>,"b">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+            x
+            :
+            (
+             	m
+             	poly
+             	                      				 'a 
+             	 arrow
+             	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("typexprAngleBrackets"(["methodType"("a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"methodType"("b","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+             	 int
+             	 (
+             	 )
+            )
+            (
+             	m
+             	poly
+             	                      				 'b 
+             	 arrow
+             	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("typexprAngleBrackets"(["methodType"("a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+             	 int
+             	 (
+             	 )
+            )
           )
          )
     )
@@ -4289,11 +4793,36 @@
      case
          (
      	  x
-          brackets3 
           (
-              x
-              <[<"p","polytype1"(<[<"a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<"b","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>
-              <[<"p","polytype1"(<[<"a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>
+            x
+            :
+            (
+             	p
+             	poly
+             	(
+             	 	a
+             	 	poly
+             	 	int
+             	 	(
+             	 	)
+             	 	b
+             	 	poly
+             	 	int
+             	 	(
+             	 	)
+             	)
+            )
+            (
+             	p
+             	poly
+             	(
+             	 	a
+             	 	poly
+             	 	int
+             	 	(
+             	 	)
+             	)
+            )
           )
          )
     )
@@ -4305,11 +4834,21 @@
      case
          (
      	  x
-          brackets3 
           (
-              x
-              <[<"m","polytype2"(["a"],<<[],[<"A",[<[<"p","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>],[]>],[]>,"a">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
-              <[<"m","polytype2"(["a"],<<[],[<"A",[],[]>],[]>,"a">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+            x
+            :
+            (
+             	m
+             	poly
+             	                      				 'a 
+             	 <<[],[<"A",["typexprAngleBrackets"(["methodType"("p","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>],[]>,"a">
+            )
+            (
+             	m
+             	poly
+             	                      				 'a 
+             	 <<[],[<"A",[],[]>],[]>,"a">
+            )
           )
          )
     )
@@ -4321,11 +4860,21 @@
      case
          (
      	  x
-          brackets3 
           (
-              x
-              <[<"m","polytype2"(["a"],<<[],[<"A",[],[]>],[]>,"a">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
-              <[<"m","polytype2"(["a"],<<[],[<"A",[<[<"p","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>],[]>],[]>,"a">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+            x
+            :
+            (
+             	m
+             	poly
+             	                      				 'a 
+             	 <<[],[<"A",[],[]>],[]>,"a">
+            )
+            (
+             	m
+             	poly
+             	                      				 'a 
+             	 <<[],[<"A",["typexprAngleBrackets"(["methodType"("p","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>],[]>,"a">
+            )
           )
          )
     )
@@ -4348,7 +4897,14 @@
             (
             x
             :
-            <[<"m","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+            (
+             	m
+             	poly
+             	                      				 'a 
+             	 arrow
+             	 a
+             	 a
+            )
             )
            )
            else
@@ -4393,7 +4949,14 @@
             (
             x
             :
-            <[<"m","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+            (
+             	m
+             	poly
+             	                      				 'a 
+             	 arrow
+             	 a
+             	 a
+            )
             )
            )
            else
@@ -4440,7 +5003,14 @@
              (
              x
              :
-             <[<"m","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+             (
+              	m
+              	poly
+              	                      				 'a 
+              	 arrow
+              	 a
+              	 a
+             )
              )
             )
            )
@@ -4479,22 +5049,22 @@
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                    method id
-                    	(
-                    	 case
-                    	 (
-                    	 x
-                    	 x
-                    	 )
-                    	)
-                    	poly
-                    	                      				 'a 
-                    	 arrow
-                    	 a
-                    	 a
-                 )
+       class_structure
+       (
+          method id
+          	(
+          	 case
+          	 (
+          	 x
+          	 x
+          	 )
+          	)
+          	poly
+          	                      				 'a 
+          	 arrow
+          	 a
+          	 a
+       )
    )
    type
    (  						
@@ -4507,12 +5077,12 @@
         (
         )
         kind =
-         option
-         (
-           c
-           (
-           )
-         )
+          option
+          (
+            c
+            (
+            )
+          )
    )
    let
    (
@@ -4740,12 +5310,12 @@
         (
         )
         kind =
-         option
-         (
-           c
-           (
-           )
-         )
+          option
+          (
+            c
+            (
+            )
+          )
    )
    let
    (
@@ -4853,23 +5423,23 @@
         (
         )
         kind =
-        (
-        Leaf
-        (
-         a
-        )
-        Node
-        (
-          t
-          (
-            tuple
-            (
-             a
+         (
+         Leaf
+         (
+          a
+         )
+         Node
+         (
+           t
+           (
+             tuple
+             (
               a
-            )
-          )
-        )
-        )
+               a
+             )
+           )
+         )
+         )
    )
    let
    (
@@ -5146,12 +5716,12 @@
         (
         )
         kind =
-        (
-         f
-         poly
-                               				 'a 
-          <[<"Int",["typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"B",["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>],"a">
-        )
+         (
+          f
+          poly
+                                				 'a 
+           <[<"Int",["typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"B",["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>],"a">
+         )
    )
    let
    (
@@ -5174,12 +5744,12 @@
         (
         )
         kind =
-        (
-         f
-         poly
-                               				 'a 
-          <<[],[<"Int",["typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>],[]>,"a">
-        )
+         (
+          f
+          poly
+                                				 'a 
+           <<[],[<"Int",["typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>],[]>,"a">
+         )
    )
    let
    (
@@ -5250,44 +5820,44 @@
         (
         )
         kind =
-        (
-        A
-        (
-         int
          (
+         A
+         (
+          int
+          (
+          )
          )
-        )
-        B
-        (
-          list
-          (
-            tuple
-            (
-             int
+         B
+         (
+           list
+           (
+             tuple
              (
-             )
-              t
+              int
               (
               )
-            )
-          )
-        )
-        C
-        (
-          list
-          (
-            tuple
-            (
-             string
-             (
+               t
+               (
+               )
              )
-              t
+           )
+         )
+         C
+         (
+           list
+           (
+             tuple
+             (
+              string
               (
               )
-            )
-          )
-        )
-        )
+               t
+               (
+               )
+             )
+           )
+         )
+         )
    )
    let
    (
@@ -5412,22 +5982,22 @@
         (
         )
         kind =
-        (
-         f
-         poly
-                               				 'a 
-           Lazy.t
-           (
-             arrow
-              list
+         (
+          f
+          poly
+                                				 'a 
+            Lazy.t
+            (
+              arrow
+               list
+               (
+                 a
+               )
+              int
               (
-                a
               )
-             int
-             (
-             )
-           )
-        )
+            )
+         )
    )
    let
    (
@@ -5459,16 +6029,16 @@
         (
         )
         kind =
-        (
-         f
-         poly
-                               				 'a 
-          arrow
-          a
-          unit
-          (
-          )
-        )
+         (
+          f
+          poly
+                                				 'a 
+           arrow
+           a
+           unit
+           (
+           )
+         )
    )
   let
   (
@@ -5535,7 +6105,7 @@
          (
          )
          kind =
-         par
+          par
     )
     let
     (
@@ -5555,19 +6125,19 @@
       )
       class name = alias
       class expr = 
-                  class_structure
-                  (
-                     method alias
-                     	ident
-                     	poly
-                     	                      				 'a 
-                     	 arrow
-                     	  t
-                     	  (
-                     	    a
-                     	  )
-                     	 a
-                  )
+        class_structure
+        (
+           method alias
+           	ident
+           	poly
+           	                      				 'a 
+           	 arrow
+           	  t
+           	  (
+           	    a
+           	  )
+           	 a
+        )
     )
     let
     (
@@ -5576,11 +6146,24 @@
       case
           (
       	  x
-      	  <[<"m","polytype2"(["a"],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+      	  (
+      	   	m
+      	   	poly
+      	   	                      				 'a 
+      	   	  t
+      	   	  (
+      	   	    a
+      	   	  )
+      	  )
            (
            x
            :
-           <[<"m","polytype2"(["a"],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+           (
+            	m
+            	poly
+            	                      				 'a 
+            	 a
+           )
            )
           )
      )
@@ -5620,13 +6203,13 @@
         (
         )
         kind =
-        (
-         foo
-         poly
-         int
          (
+          foo
+          poly
+          int
+          (
+          )
          )
-        )
    )
    let
    (
@@ -5656,14 +6239,14 @@
         (
         )
         kind =
-        (
-        A
-        (
-         int
          (
+         A
+         (
+          int
+          (
+          )
          )
-        )
-        )
+         )
    )
    let
    (
@@ -5692,6 +6275,14 @@
         (
         )
         kind =
-        <[<"f","polytype2"(["y"],"typexprConstr1"("tagg"("y")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+         (
+          	f
+          	poly
+          	                      				 'y 
+          	  t
+          	  (
+          	    y
+          	  )
+         )
    )
 )

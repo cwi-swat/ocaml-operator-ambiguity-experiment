@@ -59,12 +59,16 @@
                       all_vars
                         union
                         (
+                          
                             vars
                             (
+                              
                                 m
                             )
+                          
                             vars
                             (
+                              
                                 n
                             )
                         )
@@ -76,6 +80,7 @@
                         counter
                           ref
                           (
+                            
                               0
                           )
                       )
@@ -86,6 +91,7 @@
                           subst
                             List.map
                             (
+                              
                                 (
                                   case
                                   (
@@ -94,6 +100,7 @@
                                     (
                                       incr
                                       (
+                                        
                                           counter
                                       )
                                     ;
@@ -102,14 +109,17 @@
                                         Var
                                           !
                                           (
+                                            
                                               counter
                                           )
                                       )
                                     )
                                   )
                                 )
+                              
                                 List.rev
                                 (
+                                  
                                     all_vars
                                 )
                             )
@@ -122,18 +132,23 @@
                           numvars
                             !
                             (
+                              
                                 counter
                             )
                           lhs
                             substitute
                             (
+                              
                                 subst
+                              
                                 m
                             )
                           rhs
                             substitute
                             (
+                              
                                 subst
+                              
                                 n
                             )
                         )
@@ -160,6 +175,7 @@
               counter
                 ref
                 (
+                  
                     0
                 )
             )
@@ -168,6 +184,7 @@
             (
               List.iter
               (
+                
                   (
                     case
                     (
@@ -176,6 +193,7 @@
                       (
                         incr
                         (
+                          
                             counter
                         )
                       ;
@@ -185,13 +203,16 @@
                           (
                             <>
                             (
+                              
                                 field
                                 (
                                 r
                                 number
                                 )
+                              
                                 !
                                 (
+                                  
                                     counter
                                 )
                             )
@@ -200,6 +221,7 @@
                           (
                             failwith
                             (
+                              
                                 "Rule numbers not in sequence"
                             )
                           )
@@ -210,11 +232,13 @@
                       )
                     )
                   )
+                
                   rules
               )
             ;
               !
               (
+                
                   counter
               )
             )
@@ -233,6 +257,7 @@
           (
             print_int
             (
+              
                 field
                 (
                 rule
@@ -244,6 +269,7 @@
             (
               print_string
               (
+                
                   " : "
               )
             ;
@@ -251,6 +277,7 @@
               (
                 pretty_term
                 (
+                  
                     field
                     (
                     rule
@@ -262,6 +289,7 @@
                 (
                   print_string
                   (
+                    
                       " = "
                   )
                 ;
@@ -269,6 +297,7 @@
                   (
                     pretty_term
                     (
+                      
                         field
                         (
                         rule
@@ -278,6 +307,7 @@
                   ;
                     print_newline
                     (
+                      
                         ()
                                             )
                   )
@@ -297,7 +327,9 @@
           rules
           List.iter
           (
+            
               pretty_rule
+            
               rules
           )
         )
@@ -320,11 +352,15 @@
                   r
                   substitute
                   (
+                    
                       matching
                       (
+                        
                           l
+                        
                           m
                       )
+                    
                       r
                   )
                 )
@@ -352,7 +388,9 @@
                   _
                     matching
                     (
+                      
                         l
+                      
                         m
                     )
                 )
@@ -385,11 +423,15 @@
               m
               ||
               (
+                
                   can_match
                   (
+                    
                       l
+                    
                       m
                   )
+                
                   match
                   m
                   (
@@ -402,10 +444,13 @@
                         )
                       List.exists
                       (
+                        
                           reducible
                           (
+                            
                               l
                           )
+                        
                           sons
                       )
                     )
@@ -440,6 +485,7 @@
                   []
                                     failwith
                   (
+                    
                       "mreduce"
                   )
                 )
@@ -453,12 +499,15 @@
                   try
                   reduce
                   (
+                    
                       field
                       (
                       rule
                       lhs
                       )
+                    
                       m
+                    
                       field
                       (
                       rule
@@ -472,7 +521,9 @@
                         _
                       mreduce
                       (
+                        
                           rest
+                        
                           m
                       )
                     )
@@ -498,7 +549,9 @@
               try
               mreduce
               (
+                
                   rules
+                
                   m
               )
               (
@@ -515,6 +568,7 @@
                         n
                       failwith
                       (
+                        
                           "mrewrite1"
                       )
                     )
@@ -530,7 +584,9 @@
                           f
                           mrewrite1_sons
                           (
+                            
                               rules
+                            
                               sons
                           )
                         )
@@ -553,6 +609,7 @@
               []
                             failwith
               (
+                
                   "mrewrite1"
               )
             )
@@ -568,7 +625,9 @@
                 (
                   mrewrite1
                   (
+                    
                       rules
+                    
                       son
                   )
                   rest
@@ -583,7 +642,9 @@
                       son
                       mrewrite1_sons
                       (
+                        
                           rules
+                        
                           rest
                       )
                     )
@@ -608,10 +669,14 @@
               try
               mrewrite_all
               (
+                
                   rules
+                
                   mrewrite1
                   (
+                    
                       rules
+                    
                       m
                   )
               )

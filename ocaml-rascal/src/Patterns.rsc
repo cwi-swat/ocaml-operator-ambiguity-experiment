@@ -17,12 +17,12 @@ syntax Pattern
      | patternRange: CharLiteral ".." CharLiteral   // Extensions
      | patternBrackets: "(" Pattern ")"
      | patternTypxprBrackets: "(" Pattern ":" Typexpr ")"
-     | "#" TypeconstrName
+     | patternHash: "#" TypeconstrName
      | patternRec: "{" Field ("=" Pattern)? (";" Field "=" Pattern)* ";"? "}"
      | patternTuple: "["  {Pattern ";"}+ ";"? "]"
      | patternArray: "[|" {Pattern ";"}+ ";"? "|]"
      | lazyPattern: "lazy" Pattern
-     | "(" "module" ModuleName  (":" PackageType)? ")"  
+     | patternPackage: "(" "module" ModuleName  (":" PackageType)? ")"  
      ;       
          
 syntax Constant 

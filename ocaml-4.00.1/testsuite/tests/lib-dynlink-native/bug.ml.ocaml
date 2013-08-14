@@ -5,6 +5,7 @@
           try
       raise
       (
+        
           Invalid_argument
             "X"
       )
@@ -15,10 +16,13 @@
             s
           raise
           (
+            
               Invalid_argument
                 ^
                 (
+                  
                     s
+                  
                     s
                 )
           )

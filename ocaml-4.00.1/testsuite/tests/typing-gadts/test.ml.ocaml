@@ -129,10 +129,12 @@
               (
                 eval
                 (
+                  
                     x
                 )
                 eval
                 (
+                  
                     y
                 )
               )
@@ -146,11 +148,14 @@
                 )
               eval
               (
+                
                   f
               )
               (
+                
                   eval
                   (
+                    
                       a
                   )
               )
@@ -352,6 +357,7 @@
                 )
               length
               (
+                
                   b
               )
             )
@@ -894,6 +900,7 @@
             (
             failwith
             (
+              
                 "foo"
             )
             :
@@ -1063,9 +1070,8 @@
             
               tuple
               (
-                  Ptyp_variant closed=true
                   (
-                    Rtag "A" true
+                    A
                       (
                       )
                   )
@@ -1104,9 +1110,8 @@
               
                 tuple
                 (
-                    Ptyp_variant closed=true
                     (
-                      Rtag "A" true
+                      A
                         (
                         )
                     )
@@ -1365,9 +1370,12 @@
               (
                 ignore
                 (
+                  
                     =
                     (
+                      
                         x
+                      
                         y
                     )
                 )
@@ -1399,6 +1407,7 @@
           Int
                     ky
           (
+            
               (
               1
               :
@@ -1406,6 +1415,7 @@
                   (
                   )
                             )
+            
               1
           )
         )
@@ -1477,6 +1487,7 @@
           Int
                     ky
           (
+            
               (
               1
               :
@@ -1484,6 +1495,7 @@
                   (
                   )
                             )
+            
               1
           )
         )
@@ -1530,6 +1542,7 @@
                     Int
                                         ky
                     (
+                      
                         (
                         1
                         :
@@ -1537,6 +1550,7 @@
                             (
                             )
                                                 )
+                      
                         1
                     )
                   )
@@ -1591,7 +1605,9 @@
                     Int
                                         ky
                     (
+                      
                         1
+                      
                         (
                         1
                         :
@@ -1651,7 +1667,9 @@
                     Int
                                         ky
                     (
+                      
                         1
+                      
                         1
                     )
                   )
@@ -1853,6 +1871,7 @@
               r
                 ref
                 (
+                  
                     None
                                     )
             )
@@ -1867,7 +1886,9 @@
                   Int
                                     :=
                   (
+                    
                       r
+                    
                       Some
                         (
                         1
@@ -1882,6 +1903,7 @@
             ;
               !
               (
+                
                   r
               )
             )
@@ -1933,6 +1955,7 @@
                 (
                 ref
                 (
+                  
                     None
                                     )
                 :
@@ -1958,7 +1981,9 @@
                   Int
                                     :=
                   (
+                    
                       r
+                    
                       Some
                         1
                   )
@@ -1967,6 +1992,7 @@
             ;
               !
               (
+                
                   r
               )
             )
@@ -2018,6 +2044,7 @@
                 (
                 ref
                 (
+                  
                     None
                                     )
                 :
@@ -2039,6 +2066,7 @@
                 u
                   ref
                   (
+                    
                       None
                                         )
               )
@@ -2055,16 +2083,21 @@
                     (
                       :=
                       (
+                        
                           r
+                        
                           Some
                             1
                       )
                     ;
                       :=
                       (
+                        
                           u
+                        
                           !
                           (
+                            
                               r
                           )
                       )
@@ -2074,6 +2107,7 @@
               ;
                 !
                 (
+                  
                     u
                 )
               )
@@ -2126,6 +2160,7 @@
                 (
                 ref
                 (
+                  
                     None
                                     )
                 :
@@ -2147,6 +2182,7 @@
                 u
                   ref
                   (
+                    
                       None
                                         )
               )
@@ -2163,16 +2199,21 @@
                     (
                       :=
                       (
+                        
                           u
+                        
                           Some
                             1
                       )
                     ;
                       :=
                       (
+                        
                           r
+                        
                           !
                           (
+                            
                               u
                           )
                       )
@@ -2182,6 +2223,7 @@
               ;
                 !
                 (
+                  
                     u
                 )
               )
@@ -2233,6 +2275,7 @@
               u
                 ref
                 (
+                  
                     None
                                     )
             )
@@ -2244,6 +2287,7 @@
                   (
                   ref
                   (
+                    
                       None
                                         )
                   :
@@ -2271,16 +2315,21 @@
                     (
                       :=
                       (
+                        
                           r
+                        
                           Some
                             1
                       )
                     ;
                       :=
                       (
+                        
                           u
+                        
                           !
                           (
+                            
                               r
                           )
                       )
@@ -2290,6 +2339,7 @@
               ;
                 !
                 (
+                  
                     u
                 )
               )
@@ -2341,6 +2391,7 @@
               u
                 ref
                 (
+                  
                     None
                                     )
             )
@@ -2356,6 +2407,7 @@
                         (
                         ref
                         (
+                          
                             None
                                                     )
                         :
@@ -2383,16 +2435,21 @@
                           (
                             :=
                             (
+                              
                                 r
+                              
                                 Some
                                   1
                             )
                           ;
                             :=
                             (
+                              
                                 u
+                              
                                 !
                                 (
+                                  
                                     r
                                 )
                             )
@@ -2402,6 +2459,7 @@
                     ;
                       !
                       (
+                        
                           u
                       )
                     )
@@ -2468,7 +2526,9 @@
                       y
                         either
                         (
+                          
                             1
+                          
                             x
                         )
                     )
@@ -2504,6 +2564,7 @@
               (
                 ignore
                 (
+                  
                     (
                     y
                     :
@@ -2585,6 +2646,7 @@
                 (
                   ignore
                   (
+                    
                       (
                       y
                       :
@@ -2624,6 +2686,7 @@
               (
                 ignore
                 (
+                  
                     (
                     y
                     :
@@ -2693,6 +2756,7 @@
                 (
                   ignore
                   (
+                    
                       (
                       y
                       :
@@ -2990,9 +3054,8 @@
                 )
                      j
                     (
-                        Ptyp_variant closed=true
                         (
-                          Rtag "A" false
+                          A
                             (
                                  int
                                 (
@@ -3005,9 +3068,8 @@
                 )
                      j
                     (
-                        Ptyp_variant closed=true
                         (
-                          Rtag "B" false
+                          B
                             (
                                  bool
                                 (
@@ -3380,6 +3442,7 @@
       (
       Obj.magic
       (
+        
           Eq
                 )
       :
@@ -3410,7 +3473,9 @@
         x
         f
         (
+          
             int_of_bool
+          
             x
         )
       )
@@ -3454,6 +3519,7 @@
               (
                 ignore
                 (
+                  
                     (
                     o
                     :
@@ -3471,10 +3537,12 @@
               ;
                 =
                 (
+                  
                     send m
                     (
                       o
                     )
+                  
                     3
                 )
               )
@@ -3551,6 +3619,7 @@
               (
                 ignore
                 (
+                  
                     (
                     o
                     :
@@ -3699,6 +3768,7 @@
                 (
                   ignore
                   (
+                    
                       (
                       o
                       :
@@ -3767,16 +3837,14 @@
           )
           arrow
           
-            Ptyp_variant closed=false
             (
-              Rtag "A" false
+              A
                 (
                     a
                 )
             )
-                        Ptyp_variant closed=false
-            (
-              Rtag "A" false
+                        (
+              A
                 (
                     b
                 )
@@ -3811,18 +3879,16 @@
             )
             arrow
             
-              Ptyp_variant closed=false
               (
-                Rtag "A" false
+                A
                   (
                        a
                       (
                       )
                   )
               )
-                            Ptyp_variant closed=false
-              (
-                Rtag "A" false
+                            (
+                A
                   (
                        b
                       (
@@ -3853,9 +3919,8 @@
             case
             (
               v
-                Ptyp_variant closed=false
                 (
-                  Rtag "A" false
+                  A
                     (
                          a
                         (
@@ -3873,9 +3938,8 @@
                 )
               )
               :
-                  Ptyp_variant closed=false
                   (
-                    Rtag "A" false
+                    A
                       (
                            b
                           (
@@ -3902,25 +3966,23 @@
           )
           arrow
           
-            Ptyp_variant closed=true
             (
-              Rtag "A" false
+              A
                 (
                     a
                 )
-              Rtag "B" true
+              B
                 (
                 )
             )
               (
               )
-            Ptyp_variant closed=true
             (
-              Rtag "A" false
+              A
                 (
                     b
                 )
-              Rtag "B" true
+              B
                 (
                 )
             )
@@ -3956,29 +4018,27 @@
             )
             arrow
             
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        a
                       (
                       )
                   )
-                Rtag "B" true
+                B
                   (
                   )
               )
                 (
                 )
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        b
                       (
                       )
                   )
-                Rtag "B" true
+                B
                   (
                   )
               )
@@ -4000,23 +4060,21 @@
           )
           arrow
           
-            Ptyp_variant closed=true
             (
-              Rtag "A" false
+              A
                 (
                     a
                 )
-              Rtag "B" true
+              B
                 (
                 )
             )
-                        Ptyp_variant closed=true
-            (
-              Rtag "A" false
+                        (
+              A
                 (
                     b
                 )
-              Rtag "B" true
+              B
                 (
                 )
             )
@@ -4050,27 +4108,25 @@
             )
             arrow
             
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        a
                       (
                       )
                   )
-                Rtag "B" true
+                B
                   (
                   )
               )
-                            Ptyp_variant closed=true
-              (
-                Rtag "A" false
+                            (
+                A
                   (
                        b
                       (
                       )
                   )
-                Rtag "B" true
+                B
                   (
                   )
               )
@@ -4092,9 +4148,8 @@
           )
           arrow
           
-            Ptyp_variant closed=true
             (
-              Rtag "A" false
+              A
                 (
                     a
                 )
@@ -4145,9 +4200,8 @@
             )
             arrow
             
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        a
                       (
@@ -4173,23 +4227,21 @@
           )
           arrow
           
-            Ptyp_variant closed=false
             (
-              Rtag "A" false
+              A
                 (
                     a
                 )
-              Rtag "B" true
+              B
                 (
                 )
             )
-                        Ptyp_variant closed=true
-            (
-              Rtag "A" false
+                        (
+              A
                 (
                     b
                 )
-              Rtag "B" true
+              B
                 (
                 )
             )
@@ -4208,18 +4260,18 @@
               (
                 ignore
                 (
+                  
                     (
                     o
                     :
-                        Ptyp_variant closed=true
                         (
-                          Rtag "A" false
+                          A
                             (
                                  a
                                 (
                                 )
                             )
-                          Rtag "B" true
+                          B
                             (
                             )
                         )
@@ -4243,15 +4295,14 @@
                         )
                       )
                       :
-                          Ptyp_variant closed=true
                           (
-                            Rtag "A" false
+                            A
                               (
                                    b
                                   (
                                   )
                               )
-                            Rtag "B" true
+                            B
                               (
                               )
                           )
@@ -4279,27 +4330,25 @@
             )
             arrow
             
-              Ptyp_variant closed=false
               (
-                Rtag "A" false
+                A
                   (
                        a
                       (
                       )
                   )
-                Rtag "B" true
+                B
                   (
                   )
               )
-                            Ptyp_variant closed=true
-              (
-                Rtag "A" false
+                            (
+                A
                   (
                        b
                       (
                       )
                   )
-                Rtag "B" true
+                B
                   (
                   )
               )
@@ -4319,23 +4368,21 @@
           )
           arrow
           
-            Ptyp_variant closed=false
             (
-              Rtag "A" false
+              A
                 (
                     a
                 )
-              Rtag "B" true
+              B
                 (
                 )
             )
-                        Ptyp_variant closed=true
-            (
-              Rtag "A" false
+                        (
+              A
                 (
                     b
                 )
-              Rtag "B" true
+              B
                 (
                 )
             )
@@ -4365,15 +4412,14 @@
                       )
                     )
                     :
-                        Ptyp_variant closed=true
                         (
-                          Rtag "A" false
+                          A
                             (
                                  b
                                 (
                                 )
                             )
-                          Rtag "B" true
+                          B
                             (
                             )
                         )
@@ -4384,18 +4430,18 @@
                 (
                   ignore
                   (
+                    
                       (
                       o
                       :
-                          Ptyp_variant closed=true
                           (
-                            Rtag "A" false
+                            A
                               (
                                    a
                                   (
                                   )
                               )
-                            Rtag "B" true
+                            B
                               (
                               )
                           )
@@ -4425,27 +4471,25 @@
             )
             arrow
             
-              Ptyp_variant closed=false
               (
-                Rtag "A" false
+                A
                   (
                        a
                       (
                       )
                   )
-                Rtag "B" true
+                B
                   (
                   )
               )
-                            Ptyp_variant closed=true
-              (
-                Rtag "A" false
+                            (
+                A
                   (
                        b
                       (
                       )
                   )
-                Rtag "B" true
+                B
                   (
                   )
               )
@@ -4633,6 +4677,7 @@
                   )
                   truncate
                   (
+                    
                       z
                   )
                 )
@@ -4696,6 +4741,7 @@
                   )
                   truncate
                   (
+                    
                       z
                   )
                 )
@@ -4812,6 +4858,7 @@
                   )
                   truncate
                   (
+                    
                       z
                   )
                 )
@@ -4950,6 +4997,7 @@
                   )
                   truncate
                   (
+                    
                       z
                   )
                 )
@@ -5124,6 +5172,7 @@
                   )
                   truncate
                   (
+                    
                       z
                   )
                 )
@@ -5307,6 +5356,7 @@
                   )
                   truncate
                   (
+                    
                       z
                   )
                 )
@@ -5679,12 +5729,11 @@
                 )
                      t
                     (
-                        Ptyp_variant closed=true
                         (
-                          Rtag "A" true
+                          A
                             (
                             )
-                          Rtag "B" true
+                          B
                             (
                             )
                         )
@@ -5694,12 +5743,11 @@
                 )
                      t
                     (
-                        Ptyp_variant closed=true
                         (
-                          Rtag "C" true
+                          C
                             (
                             )
-                          Rtag "D" true
+                          D
                             (
                             )
                         )
@@ -5748,6 +5796,7 @@
   )
   f
   (
+    
       V1
         )
   type

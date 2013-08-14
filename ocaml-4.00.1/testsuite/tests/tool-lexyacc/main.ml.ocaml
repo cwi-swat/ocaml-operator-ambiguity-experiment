@@ -19,10 +19,13 @@
               (
                 <>
                 (
+                  
                     Array.length
                     (
+                      
                         Sys.argv
                     )
+                  
                     2
                 )
               )
@@ -32,11 +35,13 @@
                 (
                   prerr_string
                   (
+                    
                       "Usage: camllex <input file>\n"
                   )
                 ;
                   exit
                   (
+                    
                       2
                   )
                 )
@@ -52,7 +57,9 @@
                 source_name
                   Array.get
                   (
+                    
                       Sys.argv
+                    
                       1
                   )
               )
@@ -67,7 +74,9 @@
                       (
                         Filename.check_suffix
                         (
+                          
                             source_name
+                          
                             ".mll"
                         )
                       )
@@ -75,11 +84,15 @@
                       (
                         ^
                         (
+                          
                             Filename.chop_suffix
                             (
+                              
                                 source_name
+                              
                                 ".mll"
                             )
+                          
                             ".ml"
                         )
                       )
@@ -87,7 +100,9 @@
                       (
                           ^
                           (
+                            
                               source_name
+                            
                               ".ml"
                           )
                       )
@@ -98,9 +113,12 @@
                 (
                   :=
                   (
+                    
                       ic
+                    
                       open_in
                       (
+                        
                           source_name
                       )
                   )
@@ -109,6 +127,7 @@
                   (
                     ignore
                     (
+                      
                         dest_name
                     )
                   ;
@@ -116,7 +135,9 @@
                     (
                       :=
                       (
+                        
                           oc
+                        
                           stdout
                       )
                     ;
@@ -126,8 +147,10 @@
                           lexbuf
                             Lexing.from_channel
                             (
+                              
                                 !
                                 (
+                                  
                                     ic
                                 )
                             )
@@ -147,7 +170,9 @@
                               try
                               Grammar.lexer_definition
                               (
+                                
                                   Scanner.main
+                                
                                   lexbuf
                               )
                               (
@@ -158,6 +183,7 @@
                                   (
                                     prerr_string
                                     (
+                                      
                                         "Syntax error around char "
                                     )
                                   ;
@@ -165,8 +191,10 @@
                                     (
                                       prerr_int
                                       (
+                                        
                                           Lexing.lexeme_start
                                           (
+                                            
                                               lexbuf
                                           )
                                       )
@@ -175,11 +203,13 @@
                                       (
                                         prerr_endline
                                         (
+                                          
                                             "."
                                         )
                                       ;
                                         exit
                                         (
+                                          
                                             2
                                         )
                                       )
@@ -194,6 +224,7 @@
                                   (
                                     prerr_string
                                     (
+                                      
                                         "Lexical error around char "
                                     )
                                   ;
@@ -201,8 +232,10 @@
                                     (
                                       prerr_int
                                       (
+                                        
                                           Lexing.lexeme_start
                                           (
+                                            
                                               lexbuf
                                           )
                                       )
@@ -211,6 +244,7 @@
                                       (
                                         prerr_string
                                         (
+                                          
                                             ": "
                                         )
                                       ;
@@ -218,6 +252,7 @@
                                         (
                                           prerr_string
                                           (
+                                            
                                               s
                                           )
                                         ;
@@ -225,11 +260,13 @@
                                           (
                                             prerr_endline
                                             (
+                                              
                                                 "."
                                             )
                                           ;
                                             exit
                                             (
+                                              
                                                 2
                                             )
                                           )
@@ -254,6 +291,7 @@
                               )
                                 make_dfa
                                 (
+                                  
                                     def
                                 )
                             )
@@ -262,7 +300,9 @@
                             (
                               output_lexdef
                               (
+                                
                                   header
+                                
                                   dfa
                               )
                             ;
@@ -270,16 +310,20 @@
                               (
                                 close_in
                                 (
+                                  
                                     !
                                     (
+                                      
                                         ic
                                     )
                                 )
                               ;
                                 close_out
                                 (
+                                  
                                     !
                                     (
+                                      
                                         oc
                                     )
                                 )
@@ -301,11 +345,13 @@
   (
     main
     (
+      
         ()
             )
   ;
     exit
     (
+      
         0
     )
   )

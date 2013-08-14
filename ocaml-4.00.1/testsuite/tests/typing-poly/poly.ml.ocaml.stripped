@@ -97,12 +97,10 @@
           )
       class name = ilist
       class expr =
-          fun
-          label=""
                     l
             class_structure
               (
-                Pcf_val "l" Immutable Fresh ([16,386+2]..[16,386+11])
+                l
                   l
                 method add
                   (
@@ -178,19 +176,17 @@
           )
       class name = ilist2
       class expr =
-          fun
-          label=""
                     l
             class_structure
               (
-                Pcf_inher Fresh
+                inherit
                     constr vlist
                     (
                          int
                         (
                         )
                     )
-                                  Pcf_val "l" Immutable Fresh ([29,716+2]..[29,716+11])
+                l
                   l
                 method add
                   (
@@ -224,12 +220,11 @@
           l
           Pexp_object          class_structure
             (
-              Pcf_inher Fresh
+              inherit
                   constr vlist
                   (
-                      Ptyp_any
                   )
-                              Pcf_val "l" Immutable Fresh ([36,844+2]..[36,844+11])
+              l
                 l
               method add
                 (
@@ -264,17 +259,15 @@
           )
       class name = ilist3
       class expr =
-          fun
-          label=""
                     l
             class_structure
               (
-                Pcf_inher Fresh
+                inherit
                     constr vlist
                     (
                         a
                     )
-                                  Pcf_val "l" Immutable Fresh ([43,980+2]..[43,980+11])
+                l
                   l
                 method add
                   (
@@ -307,8 +300,6 @@
           )
       class name = ilist4
       class expr =
-          fun
-          label=""
                     l
              list
             (
@@ -316,11 +307,10 @@
             )
             class_structure
               (
-                Pcf_val "l" Immutable Fresh ([49,1107+2]..[49,1107+11])
+                l
                   l
                 Pcf_virt "add" Public ([50,1119+2]..[50,1119+24])
                     poly
-                      Ptyp_any
                 method add
                   (
                     case
@@ -366,8 +356,6 @@
           )
       class name = ilist5
       class expr =
-          fun
-          label=""
                     l
              list
             (
@@ -375,7 +363,7 @@
             )
             class_structure
               (
-                Pcf_val "l" Immutable Fresh ([57,1330+2]..[57,1330+11])
+                l
                   l
                 method add
                   (
@@ -464,17 +452,15 @@
           )
       class name = ilist6
       class expr =
-          fun
-          label=""
                     l
             class_structure
               (
-                Pcf_inher Fresh
+                inherit
                     constr vlist
                     (
                         a
                     )
-                                  Pcf_val "l" Immutable Fresh ([67,1668+2]..[67,1668+11])
+                l
                   l
                 method add
                   (
@@ -577,12 +563,12 @@
       class expr =
           class_structure
             (
-              Pcf_inher Fresh
+              inherit
                   constr olist
                   (
                       a
                   )
-                              method fold
+              method fold
                 (
                   case
                   (
@@ -606,26 +592,22 @@
           )
       class name = ocons
       class expr =
-          fun
-          label="hd"
                     hd
-            fun
-            label="tl"
                         tl
               class_structure
                 (
-                  Pcf_inher Fresh
+                  inherit
                       constr olist
                       (
                           a
                       )
-                                      Pcf_val "hd" Immutable Fresh ([85,2137+2]..[85,2137+18])
+                  hd
                     (
                     hd
                     :
                         a
                                         )
-                  Pcf_val "tl" Immutable Fresh ([86,2156+2]..[86,2156+24])
+                  tl
                     (
                     tl
                     :
@@ -669,26 +651,22 @@
           )
       class name = ostream
       class expr =
-          fun
-          label="hd"
                     hd
-            fun
-            label="tl"
                         tl
               class_structure
                 (
-                  Pcf_inher Fresh
+                  inherit
                       constr olist
                       (
                           a
                       )
-                                      Pcf_val "hd" Immutable Fresh ([92,2303+2]..[92,2303+18])
+                  hd
                     (
                     hd
                     :
                         a
                                         )
-                  Pcf_val "tl" Immutable Fresh ([93,2322+2]..[93,2322+39])
+                  tl
                     (
                     (
                     tl
@@ -699,10 +677,7 @@
                         )
                                         )
                     :
-                        Ptyp_class olist
-                        (
-                            Ptyp_any
-                        )
+                        olist
                         (
                         )
                                         )
@@ -743,22 +718,18 @@
           )
       class name = ostream1
       class expr =
-          fun
-          label="hd"
                     hd
-            fun
-            label="tl"
                         tl
               class_structure
                 (
-                  Pcf_inher Fresh
+                  inherit
                       constr olist
                       (
                           a
                       )
-                                      Pcf_val "hd" Immutable Fresh ([100,2511+2]..[100,2511+13])
+                  hd
                     hd
-                  Pcf_val "tl" Immutable Fresh ([101,2525+2]..[101,2525+18])
+                  tl
                     (
                     tl
                     :
@@ -836,15 +807,15 @@
                 (
                   case
                   (
-                    Ppat_variant "A"
+                    A
                                         1
                   )
                   case
                   (
                     pat_or
                     (
-                    Ppat_variant "B"
-                                        Ppat_variant "C"
+                    B
+                                        C
                                         )
                     0
                   )
@@ -864,15 +835,15 @@
                 (
                   case
                   (
-                    Ppat_variant "A"
+                    A
                                         1
                   )
                   case
                   (
                     pat_or
                     (
-                    Ppat_variant "B"
-                                        Ppat_variant "C"
+                    B
+                                        C
                                         )
                     0
                   )
@@ -934,7 +905,7 @@
           (
             case
             (
-              Ppat_variant "A"
+              A
                             1
             )
             case
@@ -995,19 +966,16 @@
     (
         sig_class
         (
-          class_description ([131,3106+8]..[131,3106+72])
-            pci_virt = Concrete
-            pci_params =
+          class_description
+            params =
                 (
                 )
-            pci_name = "vari"
-            pci_expr =
-              class_type ([131,3106+15]..[131,3106+72])
-                Pcty_signature
+            name = vari
+            expr =
+              class_type
+                signature
                 class_signature
-                    Ptyp_any
                   (
-                    Pctf_meth "m" Public ([131,3106+22]..[131,3106+68])
                         poly
                          'a
                           arrow
@@ -1070,15 +1038,15 @@
                     (
                       case
                       (
-                        Ppat_variant "A"
+                        A
                                                 1
                       )
                       case
                       (
                         pat_or
                         (
-                        Ppat_variant "B"
-                                                Ppat_variant "C"
+                        B
+                                                C
                                                 )
                         0
                       )
@@ -1099,7 +1067,7 @@
     v
   )
   (
-      Pexp_variant "A"
+      A
         )
   class
   (
@@ -1108,15 +1076,11 @@
           )
       class name = point
       class expr =
-          fun
-          label="x"
                     x
-            fun
-            label="y"
                         y
               class_structure
                 (
-                  Pcf_val "x" Immutable Fresh ([147,3419+2]..[147,3419+17])
+                  x
                     (
                     x
                     :
@@ -1124,7 +1088,7 @@
                         (
                         )
                                         )
-                  Pcf_val "y" Immutable Fresh ([148,3437+2]..[148,3437+17])
+                  y
                     (
                     y
                     :
@@ -1145,18 +1109,12 @@
           )
       class name = color_point
       class expr =
-          fun
-          label="x"
                     x
-            fun
-            label="y"
                         y
-              fun
-              label="color"
                             color
                 class_structure
                   (
-                    Pcf_inher Fresh
+                    inherit
                         Pcl_apply
                           constr point
                           (
@@ -1165,7 +1123,7 @@
                             x
                             y
                         )
-                                          Pcf_val "color" Immutable Fresh ([155,3554+2]..[155,3554+28])
+                    color
                       (
                       color
                       :
@@ -1184,20 +1142,14 @@
           )
       class name = circle
       class expr =
-          fun
-          label=""
                     p
-            Ptyp_class point
+            point
             (
             )
-            (
-            )
-            fun
-            label="r"
                         r
               class_structure
                 (
-                  Pcf_val "p" Immutable Fresh ([160,3651+2]..[160,3651+22])
+                  p
                     (
                     p
                     :
@@ -1205,16 +1157,14 @@
                         (
                         )
                     )
-                  Pcf_val "r" Immutable Fresh ([161,3674+2]..[161,3674+11])
+                  r
                     r
                   Pcf_virt "distance" Public ([162,3686+2]..[162,3686+55])
                       poly
                        'a
                         arrow
                           Ptyp_alias "a"
-                            Ptyp_class point
-                            (
-                            )
+                            point
                             (
                             )
                            float
@@ -1366,10 +1316,8 @@
         case
         (
           x
-            Ptyp_object
             (
-              core_field_type ([175,4073+13]..[175,4073+29])
-                Pfield "m"
+                m
                   poly
                    'a
                     arrow
@@ -1379,10 +1327,8 @@
           (
           x
           :
-              Ptyp_object
               (
-                core_field_type ([175,4073+42]..[175,4073+58])
-                  Pfield "m"
+                  m
                     poly
                      'b
                       arrow
@@ -1400,10 +1346,8 @@
         case
         (
           x
-            Ptyp_object
             (
-              core_field_type ([177,4138+13]..[177,4138+34])
-                Pfield "m"
+                m
                   poly
                    'a
                     arrow
@@ -1416,10 +1360,8 @@
           (
           x
           :
-              Ptyp_object
               (
-                core_field_type ([177,4138+47]..[177,4138+63])
-                  Pfield "m"
+                  m
                     poly
                      'b
                       arrow
@@ -1457,19 +1399,16 @@
   )
   class_type
   (
-    class_type_declaration ([186,4288+11]..[188,4339+3])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
           )
-      pci_name = "id_spec"
-      pci_expr =
-        class_type ([186,4288+21]..[188,4339+3])
-          Pcty_signature
+      name = id_spec
+      expr =
+        class_type
+          signature
           class_signature
-              Ptyp_any
             (
-              Pctf_meth "id" Public ([187,4316+2]..[187,4316+22])
                   poly
                     arrow
                       a
@@ -1569,8 +1508,6 @@
           )
       class name = id2
       class expr =
-          fun
-          label=""
                     x
             a
             class_structure
@@ -1598,12 +1535,10 @@
           )
       class name = id3
       class expr =
-          fun
-          label=""
                     x
             class_structure
               (
-                Pcf_val "x" Immutable Fresh ([214,4719+2]..[214,4719+11])
+                x
                   x
                 Pcf_virt "id" Public ([215,4731+2]..[215,4731+34])
                     poly
@@ -1628,12 +1563,10 @@
           )
       class name = id4
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
-                Pcf_val "r" Mutable Fresh ([220,4813+2]..[220,4813+22])
+                r
                   None
                                   Pcf_virt "id" Public ([221,4836+2]..[221,4836+34])
                     poly
@@ -1852,9 +1785,7 @@
                    'a
                     arrow
                       Ptyp_alias "a"
-                        Ptyp_class id
-                        (
-                        )
+                        id
                         (
                         )
                       tuple
@@ -1871,9 +1802,7 @@
                   case
                   (
                     f
-                      Ptyp_class id
-                      (
-                      )
+                      id
                       (
                       )
                     (
@@ -1971,8 +1900,6 @@
           )
       class name = bar
       class expr =
-          fun
-          label=""
                     x
             a
             class_structure
@@ -2009,10 +1936,8 @@
         x
         :
             Ptyp_alias "b"
-              Ptyp_object
               (
-                core_field_type ([265,5575+16]..[265,5575+31])
-                  Pfield "m"
+                  m
                     poly
                      'a
                       tuple
@@ -2035,10 +1960,8 @@
         x
         :
             Ptyp_alias "b"
-              Ptyp_object
               (
-                core_field_type ([266,5620+16]..[266,5620+36])
-                  Pfield "m"
+                  m
                     poly
                      'a
                       tuple
@@ -2067,24 +1990,18 @@
             x
             :
                 Ptyp_alias "b"
-                  Ptyp_object
                   (
-                    core_field_type ([267,5669+17]..[267,5669+52])
-                      Pfield "m"
+                      m
                         poly
                          'a
                           tuple
                           (
                               b
                               Ptyp_alias "a"
-                                Ptyp_object
                                 (
-                                  core_field_type ([267,5669+33]..[267,5669+39])
-                                    Pfield "n"
+                                    n
                                       poly
                                         a
-                                  core_field_type ([267,5669+41]..[267,5669+43])
-                                    Pfield_var
                                 )
                           )
                   )
@@ -2098,25 +2015,18 @@
     (
       x
         Ptyp_alias "b"
-          Ptyp_object
           (
-            core_field_type ([268,5735+11]..[268,5735+49])
-              Pfield "p"
+              p
                 poly
                  'a
                   Ptyp_alias "a"
-                    Ptyp_object
                     (
-                      core_field_type ([268,5735+21]..[268,5735+27])
-                        Pfield "m"
+                        m
                           poly
                             a
-                      core_field_type ([268,5735+30]..[268,5735+36])
-                        Pfield "n"
+                        n
                           poly
                             b
-                      core_field_type ([268,5735+39]..[268,5735+41])
-                        Pfield_var
                     )
           )
       send p
@@ -2130,20 +2040,16 @@
     (
       x
         Ptyp_alias "d"
-          Ptyp_object
           (
-            core_field_type ([269,5803+10]..[269,5803+47])
-              Pfield "m"
+              m
                 poly
                  'a
                   Ptyp_alias "c"
                     tuple
                     (
                         a
-                        Ptyp_object
                         (
-                          core_field_type ([269,5803+22]..[269,5803+40])
-                            Pfield "p"
+                            p
                               poly
                                'b
                                 tuple
@@ -2165,20 +2071,14 @@
     case
     (
       x
-        Ptyp_object
         (
-          core_field_type ([271,5924+10]..[271,5924+24])
-            Pfield "m"
+            m
               poly
                'a
-                Ptyp_object
                 (
-                  core_field_type ([271,5924+16]..[271,5924+20])
-                    Pfield "p"
+                    p
                       poly
                         a
-                  core_field_type ([271,5924+21]..[271,5924+23])
-                    Pfield_var
                 )
         )
       send m
@@ -2201,10 +2101,8 @@
             (
               T
                 (
-                    Ptyp_object
                     (
-                      core_field_type ([273,5962+18]..[273,5962+34])
-                        Pfield "id"
+                        id
                           poly
                            'a
                             arrow
@@ -2239,10 +2137,8 @@
             (
               r
                   poly
-                    Ptyp_object
                     (
-                      core_field_type ([276,6023+21]..[276,6023+37])
-                        Pfield "id"
+                        id
                           poly
                            'a
                             arrow
@@ -2312,7 +2208,7 @@
       class expr =
           class_structure
             (
-              Pcf_val "num" Immutable Fresh ([285,6225+2]..[285,6225+13])
+              num
                 0
               method num
                 num
@@ -2451,11 +2347,11 @@
       class expr =
           class_structure
             (
-              Pcf_inher Fresh
+              inherit
                   constr c
                   (
                   )
-                              method id
+              method id
                 id
                             )
   )
@@ -2468,12 +2364,11 @@
       class expr =
           class_structure
             (
-              Pcf_inher Fresh
+              inherit
                   constr c
                   (
                   )
-                  "c"
-              Pcf_val "count" Mutable Fresh ([309,6700+2]..[309,6700+23])
+              count
                 0
               method id
                 (
@@ -2515,12 +2410,10 @@
           )
       class name = olist
       class expr =
-          fun
-          label=""
                     l
             class_structure
               (
-                Pcf_val "l" Immutable Fresh ([316,6853+2]..[316,6853+11])
+                l
                   l
                 method fold
                   List.fold_right
@@ -2565,11 +2458,9 @@
         case
         (
           l
-            Ptyp_class olist
+            olist
             (
                 a
-            )
-            (
             )
           send fold
           (
@@ -2605,11 +2496,9 @@
         case
         (
           l
-            Ptyp_class olist
+            olist
             (
                 a
-            )
-            (
             )
           send fold
           (
@@ -2645,21 +2534,17 @@
         case
         (
           l
-            Ptyp_class olist
+            olist
             (
                 a
-            )
-            (
             )
           (
             case
             (
               l'
-                Ptyp_class olist
+                olist
                 (
                     b
-                )
-                (
                 )
               send fold
               (
@@ -2763,12 +2648,8 @@
           )
       class name = d
       class expr =
-          fun
-          label="?x"
             0
           x
-            fun
-            label=""
                         ()
                           class_structure
                 (
@@ -2781,12 +2662,8 @@
           )
       class name = d
       class expr =
-          fun
-          label="?x"
             0
           x
-            fun
-            label=""
                         ()
                           class_structure
                 (
@@ -2807,19 +2684,16 @@
   )
   class_type
   (
-    class_type_declaration ([338,7468+11]..[338,7468+68])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
           )
-      pci_name = "numeral"
-      pci_expr =
-        class_type ([338,7468+21]..[338,7468+68])
-          Pcty_signature
+      name = numeral
+      expr =
+        class_type
+          signature
           class_signature
-              Ptyp_any
             (
-              Pctf_meth "fold" Public ([338,7468+28]..[338,7468+64])
                   poly
                     arrow
                       arrow
@@ -2862,12 +2736,8 @@
           )
       class name = next
       class expr =
-          fun
-          label=""
                     n
-            Ptyp_class numeral
-            (
-            )
+            numeral
             (
             )
             class_structure
@@ -2900,19 +2770,16 @@
   )
   class_type
   (
-    class_type_declaration ([344,7689+11]..[346,7765+3])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
           )
-      pci_name = "node_type"
-      pci_expr =
-        class_type ([344,7689+24]..[346,7765+3])
-          Pcty_signature
+      name = node_type
+      expr =
+        class_type
+          signature
           class_signature
-              Ptyp_any
             (
-              Pctf_meth "as_variant" Public ([345,7720+2]..[345,7720+44])
                   poly
                     Ptyp_variant closed=false
                     (
@@ -2936,7 +2803,7 @@
             class_structure
               (
                 method as_variant
-                  Pexp_variant "Node"
+                  Node
                     (
                     self
                     :
@@ -2957,8 +2824,8 @@
                               )
                           )
                                         )
-          class_type ([347,7771+13]..[347,7771+22])
-            Pcty_constr node_type
+          class_type
+            constr node_type
             (
             )
   )
@@ -2972,7 +2839,7 @@
           class_structure
             (
               method as_variant
-                Pexp_variant "Node"
+                Node
                   (
                   self
                   :
@@ -3071,17 +2938,13 @@
         case
         (
           x
-            Ptyp_object
             (
-              core_field_type ([363,8225+11]..[363,8225+34])
-                Pfield "m"
+                m
                   poly
                    'a
                     Ptyp_alias "b"
-                      Ptyp_object
                       (
-                        core_field_type ([363,8225+17]..[363,8225+27])
-                          Pfield "p"
+                          p
                             poly
                               tuple
                               (
@@ -3108,20 +2971,16 @@
         case
         (
           x
-            Ptyp_object
             (
-              core_field_type ([364,8278+11]..[364,8278+40])
-                Pfield "m"
+                m
                   poly
                    'a
                     tuple
                     (
                         a
                         Ptyp_alias "b"
-                          Ptyp_object
                           (
-                            core_field_type ([364,8278+24]..[364,8278+32])
-                              Pfield "p"
+                              p
                                 poly
                                   tuple
                                   (
@@ -3217,7 +3076,7 @@
                 (
                   case
                   (
-                    Ppat_variant "A"
+                    A
                       x'
                     send m
                     (
@@ -3305,7 +3164,7 @@
                   case
                   (
                     x
-                    Pexp_variant "A"
+                    A
                                       )
                 )
                     poly
@@ -3369,14 +3228,11 @@
           (
           )
         kind =
-              Ptyp_object
               (
-                core_field_type ([391,8981+30]..[391,8981+42])
-                  Pfield "caseNil"
+                  caseNil
                     poly
                       a
-                core_field_type ([391,8981+44]..[391,8981+74])
-                  Pfield "caseCons"
+                  caseCons
                     poly
                       arrow
                         b
@@ -3400,10 +3256,8 @@
           (
           )
         kind =
-              Ptyp_object
               (
-                core_field_type ([392,9058+18]..[392,9058+56])
-                  Pfield "visit"
+                  visit
                     poly
                      'a
                       arrow
@@ -3417,19 +3271,17 @@
   )
   class_type
   (
-    class_type_declaration ([395,9132+11]..[397,9205+3])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
           )
-      pci_name = "ct"
-      pci_expr =
-        class_type ([395,9132+16]..[397,9205+3])
-          Pcty_signature
+      name = ct
+      expr =
+        class_type
+          signature
           class_signature
               s
             (
-              Pctf_meth "fold" Public ([396,9160+2]..[396,9160+44])
                   poly
                     arrow
                       arrow
@@ -3462,9 +3314,7 @@
                         b
                         arrow
                           Ptyp_alias "a"
-                            Ptyp_class ct
-                            (
-                            )
+                            ct
                             (
                             )
                           b
@@ -3808,10 +3658,8 @@
           (
           )
         kind =
-              Ptyp_object
               (
-                core_field_type ([425,9925+14]..[425,9925+22])
-                  Pfield "m"
+                  m
                     poly
                        v
                       (
@@ -3884,10 +3732,8 @@
           (
           )
         kind =
-              Ptyp_object
               (
-                core_field_type ([432,10077+14]..[432,10077+20])
-                  Pfield "a"
+                  a
                     poly
                       a
               )
@@ -3952,7 +3798,7 @@
     case
     (
       (
-        Ppat_variant "A"
+        A
                 _
       )
       1
@@ -3978,7 +3824,7 @@
     case
     (
       (
-        Ppat_variant "A"
+        A
                 _
       )
       1
@@ -4001,7 +3847,7 @@
     (
       (
         Some
-          Ppat_variant "A"
+          A
                   _
       )
       1
@@ -4037,7 +3883,7 @@
     (
       (
         Some
-          Ppat_variant "A"
+          A
                   A
               )
       1
@@ -4046,7 +3892,7 @@
     (
       (
         Some
-          Ppat_variant "A"
+          A
                   B
               )
       1
@@ -4082,7 +3928,7 @@
     (
       (
         A
-                Ppat_variant "A"
+                A
               )
       1
     )
@@ -4090,7 +3936,7 @@
     (
       (
         A
-                Ppat_variant "B"
+                B
               )
       2
     )
@@ -4107,7 +3953,7 @@
     case
     (
       (
-        Ppat_variant "A"
+        A
                 A
               )
       1
@@ -4115,7 +3961,7 @@
     case
     (
       (
-        Ppat_variant "B"
+        B
                 A
               )
       2
@@ -4135,8 +3981,8 @@
       (
         pat_or
         (
-        Ppat_variant "A"
-                Ppat_variant "B"
+        A
+                B
                 )
         _
       )
@@ -4148,8 +3994,8 @@
         _
         pat_or
         (
-        Ppat_variant "A"
-                Ppat_variant "B"
+        A
+                B
                 )
       )
       1
@@ -4159,7 +4005,7 @@
     case
     (
       (
-        Ppat_variant "B"
+        B
                 1
       )
       1
@@ -4178,7 +4024,7 @@
     (
       (
         1
-        Ppat_variant "B"
+        B
               )
       1
     )
@@ -4256,31 +4102,25 @@
   )
   class_type
   (
-    class_type_declaration ([457,11037+11]..[460,11124+3])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
             "a"
             "b"
           )
-      pci_name = "a"
-      pci_expr =
-        class_type ([457,11037+24]..[460,11124+3])
-          Pcty_signature
+      name = a
+      expr =
+        class_type
+          signature
           class_signature
-              Ptyp_any
             (
-              Pctf_meth "b" Public ([458,11068+2]..[458,11068+29])
                   poly
                     Ptyp_alias "b"
-                      Ptyp_class b
+                      b
                       (
                           a
                           b
                       )
-                      (
-                      )
-              Pctf_meth "as_a" Public ([459,11098+2]..[459,11098+25])
                   poly
                      a
                     (
@@ -4288,31 +4128,25 @@
                         b
                     )
             )
-    class_type_declaration ([460,11124+8]..[463,11208+3])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
             "a"
             "b"
           )
-      pci_name = "b"
-      pci_expr =
-        class_type ([460,11124+21]..[463,11208+3])
-          Pcty_signature
+      name = b
+      expr =
+        class_type
+          signature
           class_signature
-              Ptyp_any
             (
-              Pctf_meth "a" Public ([461,11152+2]..[461,11152+29])
                   poly
                     Ptyp_alias "a"
-                      Ptyp_class a
+                      a
                       (
                           a
                           b
                       )
-                      (
-                      )
-              Pctf_meth "as_b" Public ([462,11182+2]..[462,11182+25])
                   poly
                      b
                     (
@@ -4323,22 +4157,21 @@
   )
   class_type
   (
-    class_type_declaration ([465,11213+11]..[465,11213+55])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
             "b"
           )
-      pci_name = "ca"
-      pci_expr =
-        class_type ([465,11213+21]..[465,11213+55])
-          Pcty_signature
+      name = ca
+      expr =
+        class_type
+          signature
           class_signature
               s
             (
               Pctf_inher
-              class_type ([465,11213+41]..[465,11213+51])
-                Pcty_constr a
+              class_type
+                constr a
                 (
                     s
                     b
@@ -4347,22 +4180,21 @@
   )
   class_type
   (
-    class_type_declaration ([466,11269+11]..[466,11269+55])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
             "a"
           )
-      pci_name = "cb"
-      pci_expr =
-        class_type ([466,11269+21]..[466,11269+55])
-          Pcty_signature
+      name = cb
+      expr =
+        class_type
+          signature
           class_signature
               s
             (
               Pctf_inher
-              class_type ([466,11269+41]..[466,11269+51])
-                Pcty_constr b
+              class_type
+                constr b
                 (
                     a
                     s
@@ -4487,10 +4319,8 @@
             (
               Pcf_constr ([477,11659+25]..[477,11659+52])
                   s
-                  Ptyp_object
                   (
-                    core_field_type ([477,11659+43]..[477,11659+50])
-                      Pfield "n"
+                      n
                         poly
                            int
                           (
@@ -4545,19 +4375,15 @@
     (
       x
         Ptyp_alias "foo"
-          Ptyp_object
           (
-            core_field_type ([491,12008+10]..[491,12008+41])
-              Pfield "m"
+              m
                 poly
                  'a
                   tuple
                   (
                       a
-                      Ptyp_object
                       (
-                        core_field_type ([491,12008+24]..[491,12008+40])
-                          Pfield "m"
+                          m
                             poly
                              'b
                               tuple
@@ -4571,29 +4397,23 @@
       (
       x
       :
-          Ptyp_object
           (
-            core_field_type ([492,12064+8]..[492,12064+62])
-              Pfield "m"
+              m
                 poly
                  'a
                   tuple
                   (
                       a
                       Ptyp_alias "bar"
-                        Ptyp_object
                         (
-                          core_field_type ([492,12064+23]..[492,12064+51])
-                            Pfield "m"
+                            m
                               poly
                                'b
                                 tuple
                                 (
                                     a
-                                    Ptyp_object
                                     (
-                                      core_field_type ([492,12064+35]..[492,12064+50])
-                                        Pfield "m"
+                                        m
                                           poly
                                            'c
                                             tuple
@@ -4621,10 +4441,8 @@
           (
           )
         kind =
-              Ptyp_object
               (
-                core_field_type ([493,12132+15]..[493,12132+33])
-                  Pfield "m"
+                  m
                     poly
                      'b
                       tuple
@@ -4648,10 +4466,8 @@
           (
           )
         kind =
-              Ptyp_object
               (
-                core_field_type ([494,12167+15]..[494,12167+33])
-                  Pfield "m"
+                  m
                     poly
                      'a
                       tuple
@@ -4676,19 +4492,15 @@
           (
           )
         kind =
-              Ptyp_object
               (
-                core_field_type ([495,12202+15]..[495,12202+47])
-                  Pfield "m"
+                  m
                     poly
                      'b
                       tuple
                       (
                           a
-                          Ptyp_object
                           (
-                            core_field_type ([495,12202+28]..[495,12202+46])
-                              Pfield "m"
+                              m
                                 poly
                                  'c
                                   tuple
@@ -4714,10 +4526,8 @@
           (
           )
         kind =
-              Ptyp_object
               (
-                core_field_type ([496,12252+15]..[496,12252+33])
-                  Pfield "m"
+                  m
                     poly
                      'a
                       tuple
@@ -4754,10 +4564,8 @@
     case
     (
       x
-        Ptyp_object
         (
-          core_field_type ([499,12321+10]..[499,12321+57])
-            Pfield "m"
+            m
               poly
                'a
                 tuple
@@ -4767,10 +4575,8 @@
                       tuple
                       (
                           a
-                          Ptyp_object
                           (
-                            core_field_type ([499,12321+30]..[499,12321+47])
-                              Pfield "m"
+                              m
                                 poly
                                  'a
                                   tuple
@@ -4786,10 +4592,8 @@
       x
       :
           Ptyp_alias "bar"
-            Ptyp_object
             (
-              core_field_type ([500,12384+8]..[500,12384+54])
-                Pfield "m"
+                m
                   poly
                    'b
                     tuple
@@ -4798,10 +4602,8 @@
                         tuple
                         (
                             b
-                            Ptyp_object
                             (
-                              core_field_type ([500,12384+28]..[500,12384+52])
-                                Pfield "m"
+                                m
                                   poly
                                    'c
                                     tuple
@@ -4824,10 +4626,8 @@
     case
     (
       x
-        Ptyp_object
         (
-          core_field_type ([501,12451+10]..[501,12451+57])
-            Pfield "m"
+            m
               poly
                'a
                 tuple
@@ -4837,10 +4637,8 @@
                       tuple
                       (
                           a
-                          Ptyp_object
                           (
-                            core_field_type ([501,12451+30]..[501,12451+47])
-                              Pfield "m"
+                              m
                                 poly
                                  'a
                                   tuple
@@ -4856,10 +4654,8 @@
       x
       :
           Ptyp_alias "bar"
-            Ptyp_object
             (
-              core_field_type ([502,12514+8]..[502,12514+54])
-                Pfield "m"
+                m
                   poly
                    'b
                     tuple
@@ -4868,10 +4664,8 @@
                         tuple
                         (
                             b
-                            Ptyp_object
                             (
-                              core_field_type ([502,12514+28]..[502,12514+52])
-                                Pfield "m"
+                                m
                                   poly
                                    'c
                                     tuple
@@ -4895,10 +4689,8 @@
     (
       x
         Ptyp_alias "foo"
-          Ptyp_object
           (
-            core_field_type ([503,12581+10]..[503,12581+34])
-              Pfield "m"
+              m
                 poly
                  'a
                   tuple
@@ -4914,10 +4706,8 @@
       (
       x
       :
-          Ptyp_object
           (
-            core_field_type ([504,12629+8]..[504,12629+53])
-              Pfield "m"
+              m
                 poly
                  'b
                   tuple
@@ -4927,10 +4717,8 @@
                         tuple
                         (
                             b
-                            Ptyp_object
                             (
-                              core_field_type ([504,12629+28]..[504,12629+43])
-                                Pfield "m"
+                                m
                                   poly
                                    'c
                                     tuple
@@ -4955,10 +4743,8 @@
           (
           x
           :
-              Ptyp_object
               (
-                core_field_type ([506,12697+10]..[506,12697+57])
-                  Pfield "m"
+                  m
                     poly
                      'a
                       arrow
@@ -4967,10 +4753,8 @@
                           tuple
                           (
                               a
-                              Ptyp_object
                               (
-                                core_field_type ([506,12697+31]..[506,12697+47])
-                                  Pfield "m"
+                                  m
                                     poly
                                      'c
                                       arrow
@@ -4980,10 +4764,8 @@
                           )
               )
               Ptyp_alias "foo"
-                Ptyp_object
                 (
-                  core_field_type ([507,12756+11]..[507,12756+36])
-                    Pfield "m"
+                    m
                       poly
                        'a
                         arrow
@@ -5009,10 +4791,8 @@
               (
                 x
                   Ptyp_alias "foo"
-                    Ptyp_object
                     (
-                      core_field_type ([511,12891+21]..[511,12891+45])
-                        Pfield "m"
+                        m
                           poly
                            'a
                             tuple
@@ -5035,10 +4815,8 @@
           sig_value f
           value_description
               arrow
-                Ptyp_object
                 (
-                  core_field_type ([510,12815+16]..[510,12815+61])
-                    Pfield "m"
+                    m
                       poly
                        'b
                         tuple
@@ -5048,10 +4826,8 @@
                               tuple
                               (
                                   b
-                                  Ptyp_object
                                   (
-                                    core_field_type ([510,12815+36]..[510,12815+51])
-                                      Pfield "m"
+                                      m
                                         poly
                                          'c
                                           tuple
@@ -5084,10 +4860,8 @@
                 )
               kind =
                     Ptyp_alias "foo"
-                      Ptyp_object
                       (
-                        core_field_type ([514,13034+19]..[514,13034+43])
-                          Pfield "m"
+                          m
                             poly
                              'a
                               tuple
@@ -5115,10 +4889,8 @@
                   (
                   )
                 kind =
-                      Ptyp_object
                       (
-                        core_field_type ([513,12967+16]..[513,12967+61])
-                          Pfield "m"
+                          m
                             poly
                              'b
                               tuple
@@ -5128,10 +4900,8 @@
                                     tuple
                                     (
                                         b
-                                        Ptyp_object
                                         (
-                                          core_field_type ([513,12967+36]..[513,12967+51])
-                                            Pfield "m"
+                                            m
                                               poly
                                                'c
                                                 tuple
@@ -5175,10 +4945,8 @@
                 (
                 )
               kind =
-                    Ptyp_object
                     (
-                      core_field_type ([517,13146+35]..[517,13146+41])
-                        Pfield "m"
+                        m
                           poly
                              int
                             (
@@ -5212,10 +4980,8 @@
                   (
                   )
                 kind =
-                      Ptyp_object
                       (
-                        core_field_type ([516,13094+35]..[516,13094+46])
-                          Pfield "m"
+                          m
                             poly
                              'a
                                t
@@ -5251,10 +5017,8 @@
               case
               (
                 x
-                  Ptyp_object
                   (
-                    core_field_type ([519,13253+37]..[519,13253+42])
-                      Pfield "m"
+                      m
                         poly
                            int
                           (
@@ -5286,10 +5050,8 @@
           sig_value f
           value_description
               arrow
-                Ptyp_object
                 (
-                  core_field_type ([518,13195+34]..[518,13195+45])
-                    Pfield "m"
+                    m
                       poly
                        'a
                          t
@@ -5355,10 +5117,8 @@
           sig_value f
           value_description
               arrow
-                Ptyp_object
                 (
-                  core_field_type ([521,13354+34]..[521,13354+45])
-                    Pfield "m"
+                    m
                       poly
                        'a
                          t
@@ -5391,10 +5151,8 @@
                     x
                     :
                                             Ptyp_alias "c"
-                          Ptyp_object
                           (
-                            core_field_type ([525,13470+16]..[525,13470+35])
-                              Pfield "m"
+                              m
                                 poly
                                  'a
                                   arrow
@@ -5402,7 +5160,6 @@
                                     tuple
                                     (
                                         c
-                                        Ptyp_object
                                         (
                                         )
                                     )
@@ -5418,10 +5175,8 @@
                       y
                       :
                                                 Ptyp_alias "d"
-                            Ptyp_object
                             (
-                              core_field_type ([526,13516+16]..[526,13516+35])
-                                Pfield "m"
+                                m
                                   poly
                                    'b
                                     arrow
@@ -5429,7 +5184,6 @@
                                       tuple
                                       (
                                           d
-                                          Ptyp_object
                                           (
                                           )
                                       )
@@ -5606,10 +5360,8 @@
           (
           )
         kind =
-              Ptyp_object
               (
-                core_field_type ([540,13781+10]..[540,13781+13])
-                  Pfield "x"
+                  x
                     poly
                        p
                       (
@@ -5627,16 +5379,12 @@
           (
           )
         kind =
-              Ptyp_object
               (
-                core_field_type ([541,13798+18]..[541,13798+21])
-                  Pfield "x"
+                  x
                     poly
                        p
                       (
                       )
-                core_field_type ([541,13798+23]..[541,13798+25])
-                  Pfield_var
               )
   )
   (
@@ -5681,53 +5429,40 @@
           (
           x
           :
-              Ptyp_object
               (
-                core_field_type ([546,13887+8]..[546,13887+39])
-                  Pfield "m"
+                  m
                     poly
                      'a
                       arrow
                         Ptyp_alias "a"
-                          Ptyp_object
                           (
-                            core_field_type ([546,13887+16]..[546,13887+21])
-                              Pfield "p"
+                              p
                                 poly
                                    int
                                   (
                                   )
-                            core_field_type ([546,13887+22]..[546,13887+24])
-                              Pfield_var
                           )
                          int
                         (
                         )
               )
-              Ptyp_object
               (
-                core_field_type ([547,13928+8]..[547,13928+45])
-                  Pfield "m"
+                  m
                     poly
                      'b
                       arrow
                         Ptyp_alias "b"
-                          Ptyp_object
                           (
-                            core_field_type ([547,13928+16]..[547,13928+21])
-                              Pfield "p"
+                              p
                                 poly
                                    int
                                   (
                                   )
-                            core_field_type ([547,13928+22]..[547,13928+27])
-                              Pfield "q"
+                              q
                                 poly
                                    int
                                   (
                                   )
-                            core_field_type ([547,13928+28]..[547,13928+30])
-                              Pfield_var
                           )
                          int
                         (
@@ -5747,65 +5482,48 @@
           (
           x
           :
-              Ptyp_object
               (
-                core_field_type ([549,13989+8]..[549,13989+43])
-                  Pfield "m"
+                  m
                     poly
                      'a
                       arrow
                         Ptyp_alias "a"
-                          Ptyp_object
                           (
-                            core_field_type ([549,13989+16]..[549,13989+25])
-                              Pfield "p"
+                              p
                                 poly
-                                  Ptyp_object
                                   (
-                                    core_field_type ([549,13989+19]..[549,13989+24])
-                                      Pfield "a"
+                                      a
                                         poly
                                            int
                                           (
                                           )
                                   )
-                            core_field_type ([549,13989+26]..[549,13989+28])
-                              Pfield_var
                           )
                          int
                         (
                         )
               )
-              Ptyp_object
               (
-                core_field_type ([550,14034+8]..[550,14034+49])
-                  Pfield "m"
+                  m
                     poly
                      'b
                       arrow
                         Ptyp_alias "b"
-                          Ptyp_object
                           (
-                            core_field_type ([550,14034+16]..[550,14034+31])
-                              Pfield "p"
+                              p
                                 poly
-                                  Ptyp_object
                                   (
-                                    core_field_type ([550,14034+19]..[550,14034+24])
-                                      Pfield "a"
+                                      a
                                         poly
                                            int
                                           (
                                           )
-                                    core_field_type ([550,14034+25]..[550,14034+30])
-                                      Pfield "b"
+                                      b
                                         poly
                                            int
                                           (
                                           )
                                   )
-                            core_field_type ([550,14034+32]..[550,14034+34])
-                              Pfield_var
                           )
                          int
                         (
@@ -5825,65 +5543,48 @@
           (
           x
           :
-              Ptyp_object
               (
-                core_field_type ([552,14099+8]..[552,14099+49])
-                  Pfield "m"
+                  m
                     poly
                      'a
                       arrow
                         Ptyp_alias "a"
-                          Ptyp_object
                           (
-                            core_field_type ([552,14099+16]..[552,14099+31])
-                              Pfield "p"
+                              p
                                 poly
-                                  Ptyp_object
                                   (
-                                    core_field_type ([552,14099+19]..[552,14099+24])
-                                      Pfield "a"
+                                      a
                                         poly
                                            int
                                           (
                                           )
-                                    core_field_type ([552,14099+25]..[552,14099+30])
-                                      Pfield "b"
+                                      b
                                         poly
                                            int
                                           (
                                           )
                                   )
-                            core_field_type ([552,14099+32]..[552,14099+34])
-                              Pfield_var
                           )
                          int
                         (
                         )
               )
-              Ptyp_object
               (
-                core_field_type ([553,14150+8]..[553,14150+43])
-                  Pfield "m"
+                  m
                     poly
                      'b
                       arrow
                         Ptyp_alias "b"
-                          Ptyp_object
                           (
-                            core_field_type ([553,14150+16]..[553,14150+25])
-                              Pfield "p"
+                              p
                                 poly
-                                  Ptyp_object
                                   (
-                                    core_field_type ([553,14150+19]..[553,14150+24])
-                                      Pfield "a"
+                                      a
                                         poly
                                            int
                                           (
                                           )
                                   )
-                            core_field_type ([553,14150+26]..[553,14150+28])
-                              Pfield_var
                           )
                          int
                         (
@@ -5903,45 +5604,32 @@
           (
           x
           :
-              Ptyp_object
               (
-                core_field_type ([554,14198+17]..[554,14198+32])
-                  Pfield "p"
+                  p
                     poly
-                      Ptyp_object
                       (
-                        core_field_type ([554,14198+20]..[554,14198+25])
-                          Pfield "a"
+                          a
                             poly
                                int
                               (
                               )
-                        core_field_type ([554,14198+26]..[554,14198+31])
-                          Pfield "b"
+                          b
                             poly
                                int
                               (
                               )
                       )
-                core_field_type ([554,14198+33]..[554,14198+35])
-                  Pfield_var
               )
-              Ptyp_object
               (
-                core_field_type ([554,14198+41]..[554,14198+50])
-                  Pfield "p"
+                  p
                     poly
-                      Ptyp_object
                       (
-                        core_field_type ([554,14198+44]..[554,14198+49])
-                          Pfield "a"
+                          a
                             poly
                                int
                               (
                               )
                       )
-                core_field_type ([554,14198+51]..[554,14198+53])
-                  Pfield_var
               )
           )
         )
@@ -5957,10 +5645,8 @@
           (
           x
           :
-              Ptyp_object
               (
-                core_field_type ([556,14267+8]..[556,14267+38])
-                  Pfield "m"
+                  m
                     poly
                      'a
                       Ptyp_alias "a"
@@ -5968,10 +5654,8 @@
                         (
                           Rtag "A" false
                             (
-                                Ptyp_object
                                 (
-                                  core_field_type ([556,14267+24]..[556,14267+29])
-                                    Pfield "p"
+                                    p
                                       poly
                                          int
                                         (
@@ -5982,10 +5666,8 @@
                           (
                           )
               )
-              Ptyp_object
               (
-                core_field_type ([556,14267+44]..[556,14267+70])
-                  Pfield "m"
+                  m
                     poly
                      'a
                       Ptyp_alias "a"
@@ -5993,7 +5675,6 @@
                         (
                           Rtag "A" false
                             (
-                                Ptyp_object
                                 (
                                 )
                             )
@@ -6015,10 +5696,8 @@
           (
           x
           :
-              Ptyp_object
               (
-                core_field_type ([558,14353+8]..[558,14353+34])
-                  Pfield "m"
+                  m
                     poly
                      'a
                       Ptyp_alias "a"
@@ -6026,7 +5705,6 @@
                         (
                           Rtag "A" false
                             (
-                                Ptyp_object
                                 (
                                 )
                             )
@@ -6034,10 +5712,8 @@
                           (
                           )
               )
-              Ptyp_object
               (
-                core_field_type ([558,14353+40]..[558,14353+70])
-                  Pfield "m"
+                  m
                     poly
                      'a
                       Ptyp_alias "a"
@@ -6045,10 +5721,8 @@
                         (
                           Rtag "A" false
                             (
-                                Ptyp_object
                                 (
-                                  core_field_type ([558,14353+56]..[558,14353+61])
-                                    Pfield "p"
+                                    p
                                       poly
                                          int
                                         (
@@ -6081,10 +5755,8 @@
               (
               x
               :
-                  Ptyp_object
                   (
-                    core_field_type ([561,14461+30]..[561,14461+46])
-                      Pfield "m"
+                      m
                         poly
                          'a
                           arrow
@@ -6135,10 +5807,8 @@
               (
               x
               :
-                  Ptyp_object
                   (
-                    core_field_type ([563,14556+35]..[563,14556+51])
-                      Pfield "m"
+                      m
                         poly
                          'a
                           arrow
@@ -6191,10 +5861,8 @@
                 (
                 x
                 :
-                    Ptyp_object
                     (
-                      core_field_type ([565,14660+33]..[565,14660+49])
-                        Pfield "m"
+                        m
                           poly
                            'a
                             arrow
@@ -6549,7 +6217,6 @@
                                                 :
                              u
                             (
-                                Ptyp_any
                             )
                                                 )
                         []
@@ -6578,7 +6245,6 @@
        'a
         arrow
           a
-          Ptyp_any
       (
         case
         (
@@ -6638,7 +6304,6 @@
           (
               a
           )
-          Ptyp_any
       (
         case
         (
@@ -6671,7 +6336,6 @@
           (
               a
           )
-          Ptyp_any
       (
         case
         (
@@ -6715,7 +6379,6 @@
           (
               a
           )
-          Ptyp_any
       (
         case
         (
@@ -6748,7 +6411,6 @@
           (
               a
           )
-          Ptyp_any
       (
         case
         (
@@ -6837,8 +6499,6 @@
       poly
        'a
         arrow
-          Ptyp_any
-          Ptyp_any
       (
         case
         (
@@ -6866,7 +6526,7 @@
                   a
               )
           )
-                Pexp_variant "Int"
+                Int
         0
   )
   let
@@ -6886,7 +6546,7 @@
           )
             (
             )
-      Pexp_variant "Int"
+      Int
         0
   )
   type
@@ -6926,7 +6586,7 @@
       record
       (
         f
-          Pexp_variant "Int"
+          Int
             0
       )
         )
@@ -6965,7 +6625,7 @@
       record
       (
         f
-          Pexp_variant "Int"
+          Int
             0
       )
         )
@@ -7110,7 +6770,6 @@
       poly
        'a
         arrow
-          Ptyp_any
           arrow
              list
             (
@@ -7208,7 +6867,8 @@
       record
       (
         f
-          Pexp_lazy          raise
+          lazy
+          raise
           (
               Not_found
                         )
@@ -7347,10 +7007,8 @@
             case
             (
               x
-                Ptyp_object
                 (
-                  core_field_type ([644,17273+14]..[644,17273+26])
-                    Pfield "m"
+                    m
                       poly
                        'a
                          t
@@ -7361,10 +7019,8 @@
               (
               x
               :
-                  Ptyp_object
                   (
-                    core_field_type ([644,17273+37]..[644,17273+47])
-                      Pfield "m"
+                      m
                         poly
                          'a
                           a
@@ -7481,10 +7137,8 @@
           (
           )
         kind =
-              Ptyp_object
               (
-                core_field_type ([657,17504+14]..[657,17504+26])
-                  Pfield "f"
+                  f
                     poly
                      'y
                        t

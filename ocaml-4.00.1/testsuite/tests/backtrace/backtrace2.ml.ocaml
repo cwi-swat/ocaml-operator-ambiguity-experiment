@@ -22,7 +22,9 @@
                 (
                   =
                   (
+                    
                       n
+                    
                       0
                   )
                 )
@@ -30,6 +32,7 @@
                 (
                   raise
                   (
+                    
                       Error
                         msg
                   )
@@ -38,13 +41,19 @@
                 (
                     +
                     (
+                      
                         1
+                      
                         f
                         (
+                          
                             msg
+                          
                             -
                             (
+                              
                                 n
+                              
                                 1
                             )
                         )
@@ -66,7 +75,9 @@
           try
           f
           (
+            
               msg
+            
               5
           )
           (
@@ -78,6 +89,7 @@
               (
                 print_string
                 (
+                  
                     "a"
                 )
               ;
@@ -85,6 +97,7 @@
                 (
                   print_newline
                   (
+                    
                       ()
                                         )
                 ;
@@ -103,6 +116,7 @@
               (
                 print_string
                 (
+                  
                     "b"
                 )
               ;
@@ -110,11 +124,13 @@
                 (
                   print_newline
                   (
+                    
                       ()
                                         )
                 ;
                   raise
                   (
+                    
                       exn
                   )
                 )
@@ -126,6 +142,7 @@
                 "c"
               raise
               (
+                
                   Error
                     "c"
               )
@@ -146,11 +163,15 @@
           (
             ignore
             (
+              
                 g
                 (
+                  
                     Array.get
                     (
+                      
                         args
+                      
                         0
                     )
                 )
@@ -158,6 +179,7 @@
           ;
             print_string
             (
+              
                 "No exception\n"
             )
           )
@@ -169,15 +191,19 @@
               (
                 Printf.printf
                 (
+                  
                     "Uncaught exception %s\n"
+                  
                     Printexc.to_string
                     (
+                      
                         exn
                     )
                 )
               ;
                 Printexc.print_backtrace
                 (
+                  
                     stdout
                 )
               )
@@ -190,6 +216,7 @@
   (
     Printexc.record_backtrace
     (
+      
         true
             )
   ;
@@ -197,6 +224,7 @@
     (
       run
       (
+        
           array
           (
             "a"
@@ -207,6 +235,7 @@
       (
         run
         (
+          
             array
             (
               "b"
@@ -217,6 +246,7 @@
         (
           run
           (
+            
               array
               (
                 "c"
@@ -227,6 +257,7 @@
           (
             run
             (
+              
                 array
                 (
                   "d"
@@ -235,6 +266,7 @@
           ;
             run
             (
+              
                 array
                 (
                 )

@@ -28,7 +28,9 @@
                 )
               ==
               (
+                
                   x
+                
                   x'
               )
             )
@@ -43,6 +45,7 @@
         (
           print_string
           (
+            
               "Test 1: passed\n"
           )
         )
@@ -50,6 +53,7 @@
         (
             print_string
             (
+              
                 "Test 1: FAILED\n"
             )
         )
@@ -72,7 +76,9 @@
                     one
                     +
                     (
+                      
                         one
+                      
                         1
                     )
                   )
@@ -101,7 +107,9 @@
                       )
                     ==
                     (
+                      
                         y
+                      
                         y'
                     )
                   )
@@ -116,6 +124,7 @@
               (
                 print_string
                 (
+                  
                     "Test 2: passed\n"
                 )
               )
@@ -123,6 +132,7 @@
               (
                   print_string
                   (
+                    
                       "Test 2: FAILED\n"
                   )
               )
@@ -138,6 +148,7 @@
                       (
                         Gc.minor
                         (
+                          
                             ()
                                                     )
                       ;
@@ -145,7 +156,9 @@
                           one
                           +
                           (
+                            
                               one
+                            
                               1
                           )
                         )
@@ -161,8 +174,10 @@
                 50000
                 ignore
                 (
+                  
                     ref
                     (
+                      
                         0
                     )
                 )
@@ -186,7 +201,9 @@
                           )
                         ==
                         (
+                          
                             z
+                          
                             z'
                         )
                       )
@@ -201,6 +218,7 @@
                   (
                     print_string
                     (
+                      
                         "Test 3: passed\n"
                     )
                   )
@@ -208,6 +226,7 @@
                   (
                       print_string
                       (
+                        
                           "Test 3: FAILED\n"
                       )
                   )
@@ -236,7 +255,9 @@
                 x
                 Printf.printf
                 (
+                  
                     "%s\n"
+                  
                     x
                 )
               )
@@ -247,6 +268,7 @@
         (
           f
           (
+            
               "foo"
           )
         ;
@@ -271,9 +293,12 @@
               ()
                             fst
               (
+                
                   Array.get
                   (
+                    
                       x2
+                    
                       idx
                   )
               )
@@ -290,6 +315,7 @@
         )
   Gc.minor
   (
+    
       ()
         )
   ifthenelse
@@ -298,23 +324,31 @@
     (
       ==
       (
+        
           List.hd
           (
+            
               !
               (
+                
                   snd
                   (
+                    
                       Array.get
                       (
+                        
                           x2
+                        
                           0
                       )
                   )
               )
           )
           (
+            
               ()
                         )
+        
           s
       )
     )
@@ -322,6 +356,7 @@
     (
       print_string
       (
+        
           "Test 4: passed\n"
       )
     )
@@ -329,6 +364,7 @@
     (
         print_string
         (
+          
             "Test 4: FAILED\n"
         )
     )

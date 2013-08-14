@@ -6,6 +6,7 @@
       (
         Api.reg_mod
         (
+          
             "Plugin_thread"
         )
       ;
@@ -15,6 +16,7 @@
             _t
               Thread.create
               (
+                
                   (
                     case
                     (
@@ -26,6 +28,7 @@
                       (
                         print_endline
                         (
+                          
                             "Thread"
                         )
                       ;
@@ -33,17 +36,20 @@
                         (
                           flush
                           (
+                            
                               stdout
                           )
                         ;
                           Thread.delay
                           (
+                            
                               1.
                           )
                         )
                       )
                     )
                   )
+                
                   ()
                                 )
           )
@@ -55,6 +61,7 @@
           (
             print_endline
             (
+              
                 "Thread"
             )
           ;
@@ -62,11 +69,13 @@
             (
               flush
               (
+                
                   stdout
               )
             ;
               Thread.delay
               (
+                
                   0.50
               )
             )

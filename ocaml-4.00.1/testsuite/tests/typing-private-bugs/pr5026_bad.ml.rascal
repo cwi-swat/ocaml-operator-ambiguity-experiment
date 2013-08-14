@@ -5,21 +5,20 @@
   (  						
       							    	 
      untyped
-     type
-     params=
-     (
-     
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     
-     
-     														  
-     														 
-    )
+       type
+       params=
+       (
+       
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+        
+        
+       														  
+       														 
     											   
   								        
   )
@@ -28,24 +27,27 @@
   (  						
       							    	 
      typed
-     type
-     params=
-     (
-     
-      <>
-      a
-     										 
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     untyped
-     
-     														  
-     														 
-    )
+       type
+       params=
+       (
+       
+        <>
+        a
+       										 
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+        
+        untyped
+        (
+        )
+        								  
+        
+       														  
+       														 
     											   
   								        
   )
@@ -54,126 +56,140 @@
   (  						
       							    	 
      wrapped
-     type
-     params=
-     (
-     
-      <>
-      typing
-     										 
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     sexp
-     
-     														  
-     														 
-    )
+       type
+       params=
+       (
+       
+        <>
+        typing
+       										 
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+        
+        sexp
+        (
+        )
+        								  
+        
+       														  
+       														 
     											   
   								         
      t
-     type
-     params=
-     (
-     
-      <>
-      a
-     										 
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     
-      wrapped
-      (
+       type
+       params=
+       (
+       
+        <>
+        a
+       										 
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
         
-         typed
+         wrapped
          (
-           a
+           
+            typed
+            (
+              a
+            )
+               									
          )
-         
             									
-      )
-      
-         									
-     
-     														  
-     														 
-    )
+        
+       														  
+       														 
     											   
   								         
      sexp
-     type
-     params=
-     (
-     
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     
-      wrapped
-      (
-        untyped
-      )
-      
-         									
-     
-     														  
-     														 
-    )
+       type
+       params=
+       (
+       
+       )
+       cstrs =
+       (
+       )
+       kind =
+       
+        
+         wrapped
+         (
+           
+           untyped
+           (
+           )
+           								  
+         )
+            									
+        
+       														  
+       														 
     											   
   								        
   )
                                      
-  classTypeDef 
+  class_type
   (
-      classTypeDefinition 
-      (
-          classTypeDef 
-          (
-              
-              <"a",[]>
-              s3
-              <[],[<[],[],"underlying","polytype1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
-          )
-          
-      )
+    class_type_declaration
+    params = 
+    (
+     "a"
+    ) 
+    name = s3
+    expr =
+     class_type
+     signature
+     class_signature
+     (
+     										 
+      underlying
+      poly
+      
+       t
+       (
+         a
+       )
+          									
+                                             
+     										 
+     )
+     										 
+    													  
+  											   
   )
+  											   
                                      
   class
   (
       								   
     params = 
     (
-        	
-    r
-        	
+     "a"
     )
     class name = s3object
     class expr = 
-                class_structure
-                (
-                    								
-                   classValue 
-                   (
-                       <>
-                       
-                       underlying
-                       
-                       r
-                   )
-                    								
-                )
-                    								
-        	
+    										    	
+      r
+    										    	
+      class_structure
+      (
+          								
+          underlying
+          r
+            											 
+          								
+      )
+          								
+    										    	
       								   
   )
       								   

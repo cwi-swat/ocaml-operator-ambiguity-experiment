@@ -8,27 +8,27 @@ syntax Typexpr
 	 > non-assoc star: Typexpr "*" {Typexpr !star "*"}+
 	 > right (arrow1: Typexpr "-\>" Typexpr
 	 |        arrow2: "?"? LabelName ":" Typexpr !arrow1 "-\>" Typexpr)
-	 > Typexpr "as" "\'" Ident 
-	 > "private" Typexpr
+	 > typexprAsId: Typexpr "as" "\'" Ident 
+	 > typexprPrivate: "private" Typexpr
 	 | tagg: "\'" Ident
-     | "_"
+     | anyTypexpr: "_"
      | typeExprBrackets: "(" Typexpr ")"
      | typexprConstr2: TypeConstr
   	 | typeExprBrackets2: "(" Typexpr ("," Typexpr)+ ")" TypeConstr
-  	 | PolymorphicVariantType
-  	 | "\<" ".."? "\>"
+  	 | polymorphicVariantType: PolymorphicVariantType
+  	 | typexprEmptyAngleBrackets: "\<" ".."? "\>"
   	 | typexprAngleBrackets: "\<" {MethodType ";"}+ (";" "..")? "\>"
   	 | typexprHash1: "#" ClassPath
   	 | typexprHash2: Typexpr "#" ClassPath
-  	 | "(" {Typexpr ","}+ ")" "#" ClassPath
-  	 | "(" "module" PackageType ")"  
+  	 | typexprHash3: "(" {Typexpr ","}+ ")" "#" ClassPath
+  	 | typexprPackage: "(" "module" PackageType ")"  
      ;
 
     
 syntax PolymorphicVariantType
- 	 = "[" "|"? {TagSpec "|"}* "]"
-     | "[\>" {TagSpec "|"}* "]"
-     | "[\<"  "|"? {TagSpecFull "|"}+ ("\>" ("`" TagName)+ )?  "]"
+ 	 = polymorphicVariantType1: "[" "|"? {TagSpec "|"}* "]"
+     | polymorphicVariantType2: "[\>" {TagSpec "|"}* "]"
+     | polymorphicVariantType3: "[\<"  "|"? {TagSpecFull "|"}+ ("\>" ("`" TagName)+ )?  "]"
      ;
        
 syntax PolyTypExpr 
@@ -41,12 +41,12 @@ syntax MethodType
        
        
 syntax TagSpec
-     = "`" TagName ("of" Typexpr)?
-	 | Typexpr
+     = tagSpec1: "`" TagName ("of" Typexpr)?
+	 | tagSpec2: Typexpr
 	 ;
 
 syntax TagSpecFull 
-	 = "`" TagName ("of" Typexpr)? ("&" Typexpr)*
-     | Typexpr
+	 = tagSpecFull1: "`" TagName ("of" Typexpr)? ("&" Typexpr)*
+     | tagSpecFull2: Typexpr
      ;
        

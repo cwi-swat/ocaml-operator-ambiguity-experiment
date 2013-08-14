@@ -16,6 +16,7 @@
               (
                 print_char
                 (
+                  
                     c
                 )
               ;
@@ -23,11 +24,13 @@
                 (
                   flush
                   (
+                    
                       stdout
                   )
                 ;
                   Thread.delay
                   (
+                    
                       delay
                   )
                 )
@@ -41,8 +44,10 @@
   (
     Thread.sigmask
     (
+      
         Unix.SIG_BLOCK
-                ::
+              
+        ::
           (
             Sys.sigint
             ::
@@ -59,10 +64,13 @@
         th1
           Thread.create
           (
+            
               print_message
               (
+                
                   0.6666666666
               )
+            
               61
           )
       )
@@ -73,10 +81,13 @@
           th2
             Thread.create
             (
+              
                 print_message
                 (
+                  
                     1.0
                 )
+              
                 62
             )
         )
@@ -87,6 +98,7 @@
             s
               Thread.wait_signal
               (
+                
                   ::
                     (
                       Sys.sigint
@@ -101,7 +113,9 @@
         in
           Printf.printf
           (
+            
               "Got signal %d, exiting...\n"
+            
               s
           )
         )

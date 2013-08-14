@@ -75,11 +75,13 @@
           (
             print_string
             (
+              
                 "v"
             )
           ;
             print_int
             (
+              
                 v
             )
           )
@@ -95,6 +97,7 @@
           (
             print_string
             (
+              
                 "("
             )
           ;
@@ -102,6 +105,7 @@
             (
               print_string
               (
+                
                   field
                   (
                   head
@@ -113,6 +117,7 @@
               (
                 List.iter
                 (
+                  
                     (
                       case
                       (
@@ -121,21 +126,25 @@
                         (
                           print_string
                           (
+                            
                               " "
                           )
                         ;
                           print_term
                           (
+                            
                               t
                           )
                         )
                       )
                     )
+                  
                     argl
                 )
               ;
                 print_string
                 (
+                  
                     ")"
                 )
               )
@@ -149,6 +158,7 @@
     lemmas
       ref
       (
+        
           (
           []
                     :
@@ -186,11 +196,13 @@
                       (
                         =
                         (
+                          
                             field
                             (
                             hd1
                             name
                             )
+                          
                             name
                         )
                       )
@@ -202,6 +214,7 @@
                       (
                           get_rec
                           (
+                            
                               hdl
                           )
                       )
@@ -227,12 +240,15 @@
                       (
                         :=
                         (
+                          
                             lemmas
+                          
                             ::
                               (
                                 entry
                                 !
                                 (
+                                  
                                     lemmas
                                 )
                               )
@@ -247,8 +263,10 @@
           in
             get_rec
             (
+              
                 !
                 (
+                  
                     lemmas
                 )
             )
@@ -351,6 +369,7 @@
                         []
                                                 failwith
                         (
+                          
                             "unbound"
                         )
                       )
@@ -371,7 +390,9 @@
                           (
                             =
                             (
+                              
                                 v
+                              
                                 w
                             )
                           )
@@ -383,6 +404,7 @@
                           (
                               get_rec
                               (
+                                
                                   rest
                               )
                           )
@@ -393,6 +415,7 @@
               in
                 get_rec
                 (
+                  
                     list
                 )
               )
@@ -424,7 +447,9 @@
                         try
                         get_binding
                         (
+                          
                             v
+                          
                             alist
                         )
                         (
@@ -448,7 +473,9 @@
                             head
                             List.map
                             (
+                              
                                 as_rec
+                              
                                 argl
                             )
                           )
@@ -458,6 +485,7 @@
               in
                 as_rec
                 (
+                  
                     term
                 )
               )
@@ -482,8 +510,11 @@
               term2
               unify1
               (
+                
                   term1
+                
                   term2
+                
                   []
                                 )
             )
@@ -517,11 +548,15 @@
                         (
                           =
                           (
+                            
                               get_binding
                               (
+                                
                                   v
+                                
                                   unify_subst
                               )
+                            
                               term1
                           )
                         )
@@ -533,6 +568,7 @@
                         (
                             raise
                             (
+                              
                                 Unify
                                                             )
                         )
@@ -570,6 +606,7 @@
                             _
                           raise
                           (
+                            
                               Unify
                                                         )
                         )
@@ -586,7 +623,9 @@
                             (
                               ==
                               (
+                                
                                   head1
+                                
                                   head2
                               )
                             )
@@ -594,8 +633,11 @@
                             (
                               unify1_lst
                               (
+                                
                                   argl1
+                                
                                   argl2
+                                
                                   unify_subst
                               )
                             )
@@ -603,6 +645,7 @@
                             (
                                 raise
                                 (
+                                  
                                     Unify
                                                                     )
                             )
@@ -660,12 +703,18 @@
                       )
                       unify1_lst
                       (
+                        
                           r1
+                        
                           r2
+                        
                           unify1
                           (
+                            
                               h1
+                            
                               h2
+                            
                               unify_subst
                           )
                       )
@@ -675,6 +724,7 @@
                       _
                       raise
                       (
+                        
                           Unify
                                                 )
                     )
@@ -708,15 +758,19 @@
             )
           rewrite_with_lemmas
           (
+            
               Prop
                 (
                   head
                   List.map
                   (
+                    
                       rewrite
+                    
                       argl
                   )
                 )
+            
               field
               (
               head
@@ -755,13 +809,18 @@
                   try
                   rewrite
                   (
+                    
                       apply_subst
                       (
+                        
                           unify
                           (
+                            
                               term
+                            
                               t1
                           )
+                        
                           t2
                       )
                   )
@@ -771,7 +830,9 @@
                       Unify
                                             rewrite_with_lemmas
                       (
+                        
                           term
+                        
                           rest
                       )
                     )
@@ -837,11 +898,14 @@
             (
               get
               (
+                
                   p
               )
               List.map
               (
+                
                   cterm_to_term
+                
                   l
               )
             )
@@ -857,8 +921,10 @@
           t
           add_lemma
           (
+            
               cterm_to_term
               (
+                
                   t
               )
           )
@@ -869,6 +935,7 @@
   (
     add
     (
+      
         CProp
           (
             "equal"
@@ -930,6 +997,7 @@
     (
       add
       (
+        
           CProp
             (
               "equal"
@@ -993,6 +1061,7 @@
       (
         add
         (
+          
             CProp
               (
                 "equal"
@@ -1040,6 +1109,7 @@
         (
           add
           (
+            
               CProp
                 (
                   "equal"
@@ -1087,6 +1157,7 @@
           (
             add
             (
+              
                 CProp
                   (
                     "equal"
@@ -1134,6 +1205,7 @@
             (
               add
               (
+                
                   CProp
                     (
                       "equal"
@@ -1208,6 +1280,7 @@
               (
                 add
                 (
+                  
                     CProp
                       (
                         "equal"
@@ -1281,6 +1354,7 @@
                 (
                   add
                   (
+                    
                       CProp
                         (
                           "equal"
@@ -1355,6 +1429,7 @@
                   (
                     add
                     (
+                      
                         CProp
                           (
                             "equal"
@@ -1410,6 +1485,7 @@
                     (
                       add
                       (
+                        
                           CProp
                             (
                               "equal"
@@ -1455,6 +1531,7 @@
                       (
                         add
                         (
+                          
                             CProp
                               (
                                 "equal"
@@ -1500,6 +1577,7 @@
                         (
                           add
                           (
+                            
                               CProp
                                 (
                                   "equal"
@@ -1555,6 +1633,7 @@
                           (
                             add
                             (
+                              
                                 CProp
                                   (
                                     "equal"
@@ -1618,6 +1697,7 @@
                             (
                               add
                               (
+                                
                                   CProp
                                     (
                                       "equal"
@@ -1681,6 +1761,7 @@
                               (
                                 add
                                 (
+                                  
                                     CProp
                                       (
                                         "equal"
@@ -1734,6 +1815,7 @@
                                 (
                                   add
                                   (
+                                    
                                       CProp
                                         (
                                           "equal"
@@ -1787,6 +1869,7 @@
                                   (
                                     add
                                     (
+                                      
                                         CProp
                                           (
                                             "equal"
@@ -1903,6 +1986,7 @@
                                     (
                                       add
                                       (
+                                        
                                           CProp
                                             (
                                               "equal"
@@ -1982,6 +2066,7 @@
                                       (
                                         add
                                         (
+                                          
                                             CProp
                                               (
                                                 "equal"
@@ -2069,6 +2154,7 @@
                                         (
                                           add
                                           (
+                                            
                                               CProp
                                                 (
                                                   "equal"
@@ -2122,6 +2208,7 @@
                                           (
                                             add
                                             (
+                                              
                                                 CProp
                                                   (
                                                     "equal"
@@ -2201,6 +2288,7 @@
                                             (
                                               add
                                               (
+                                                
                                                   CProp
                                                     (
                                                       "equal"
@@ -2259,6 +2347,7 @@
                                               (
                                                 add
                                                 (
+                                                  
                                                     CProp
                                                       (
                                                         "equal"
@@ -2370,6 +2459,7 @@
                                                 (
                                                   add
                                                   (
+                                                    
                                                       CProp
                                                         (
                                                           "equal"
@@ -2444,6 +2534,7 @@
                                                   (
                                                     add
                                                     (
+                                                      
                                                         CProp
                                                           (
                                                             "equal"
@@ -2517,6 +2608,7 @@
                                                     (
                                                       add
                                                       (
+                                                        
                                                           CProp
                                                             (
                                                               "equal"
@@ -2596,6 +2688,7 @@
                                                       (
                                                         add
                                                         (
+                                                          
                                                             CProp
                                                               (
                                                                 "equal"
@@ -2633,6 +2726,7 @@
                                                         (
                                                           add
                                                           (
+                                                            
                                                               CProp
                                                                 (
                                                                   "equal"
@@ -2722,6 +2816,7 @@
                                                           (
                                                             add
                                                             (
+                                                              
                                                                 CProp
                                                                   (
                                                                     "equal"
@@ -2793,6 +2888,7 @@
                                                             (
                                                               add
                                                               (
+                                                                
                                                                   CProp
                                                                     (
                                                                       "equal"
@@ -2898,6 +2994,7 @@
                                                               (
                                                                 add
                                                                 (
+                                                                  
                                                                     CProp
                                                                       (
                                                                         "equal"
@@ -3008,6 +3105,7 @@
                                                                 (
                                                                   add
                                                                   (
+                                                                    
                                                                       CProp
                                                                         (
                                                                           "equal"
@@ -3079,6 +3177,7 @@
                                                                   (
                                                                     add
                                                                     (
+                                                                      
                                                                         CProp
                                                                           (
                                                                             "equal"
@@ -3152,6 +3251,7 @@
                                                                     (
                                                                       add
                                                                       (
+                                                                        
                                                                           CProp
                                                                             (
                                                                               "equal"
@@ -3223,6 +3323,7 @@
                                                                       (
                                                                         add
                                                                         (
+                                                                          
                                                                             CProp
                                                                               (
                                                                                 "equal"
@@ -3309,6 +3410,7 @@
                                                                         (
                                                                           add
                                                                           (
+                                                                            
                                                                               CProp
                                                                                 (
                                                                                   "equal"
@@ -3382,6 +3484,7 @@
                                                                           (
                                                                             add
                                                                             (
+                                                                              
                                                                                 CProp
                                                                                   (
                                                                                     "equal"
@@ -3461,6 +3564,7 @@
                                                                             (
                                                                               add
                                                                               (
+                                                                                
                                                                                   CProp
                                                                                     (
                                                                                       "equal"
@@ -3549,6 +3653,7 @@
                                                                               (
                                                                                 add
                                                                                 (
+                                                                                  
                                                                                     CProp
                                                                                       (
                                                                                         "equal"
@@ -3604,6 +3709,7 @@
                                                                                 (
                                                                                   add
                                                                                   (
+                                                                                    
                                                                                       CProp
                                                                                         (
                                                                                           "equal"
@@ -3690,6 +3796,7 @@
                                                                                   (
                                                                                     add
                                                                                     (
+                                                                                      
                                                                                         CProp
                                                                                           (
                                                                                             "equal"
@@ -3745,6 +3852,7 @@
                                                                                     (
                                                                                       add
                                                                                       (
+                                                                                        
                                                                                           CProp
                                                                                             (
                                                                                               "equal"
@@ -3790,6 +3898,7 @@
                                                                                       (
                                                                                         add
                                                                                         (
+                                                                                          
                                                                                             CProp
                                                                                               (
                                                                                                 "equal"
@@ -3876,6 +3985,7 @@
                                                                                         (
                                                                                           add
                                                                                           (
+                                                                                            
                                                                                               CProp
                                                                                                 (
                                                                                                   "equal"
@@ -3916,6 +4026,7 @@
                                                                                           (
                                                                                             add
                                                                                             (
+                                                                                              
                                                                                                 CProp
                                                                                                   (
                                                                                                     "equal"
@@ -4002,6 +4113,7 @@
                                                                                             (
                                                                                               add
                                                                                               (
+                                                                                                
                                                                                                   CProp
                                                                                                     (
                                                                                                       "equal"
@@ -4075,6 +4187,7 @@
                                                                                               (
                                                                                                 add
                                                                                                 (
+                                                                                                  
                                                                                                     CProp
                                                                                                       (
                                                                                                         "equal"
@@ -4130,6 +4243,7 @@
                                                                                                 (
                                                                                                   add
                                                                                                   (
+                                                                                                    
                                                                                                       CProp
                                                                                                         (
                                                                                                           "equal"
@@ -4175,6 +4289,7 @@
                                                                                                   (
                                                                                                     add
                                                                                                     (
+                                                                                                      
                                                                                                         CProp
                                                                                                           (
                                                                                                             "equal"
@@ -4261,6 +4376,7 @@
                                                                                                     (
                                                                                                       add
                                                                                                       (
+                                                                                                        
                                                                                                           CProp
                                                                                                             (
                                                                                                               "equal"
@@ -4334,6 +4450,7 @@
                                                                                                       (
                                                                                                         add
                                                                                                         (
+                                                                                                          
                                                                                                             CProp
                                                                                                               (
                                                                                                                 "equal"
@@ -4415,6 +4532,7 @@
                                                                                                         (
                                                                                                           add
                                                                                                           (
+                                                                                                            
                                                                                                               CProp
                                                                                                                 (
                                                                                                                   "equal"
@@ -4493,6 +4611,7 @@
                                                                                                           (
                                                                                                             add
                                                                                                             (
+                                                                                                              
                                                                                                                 CProp
                                                                                                                   (
                                                                                                                     "equal"
@@ -4602,6 +4721,7 @@
                                                                                                             (
                                                                                                               add
                                                                                                               (
+                                                                                                                
                                                                                                                   CProp
                                                                                                                     (
                                                                                                                       "equal"
@@ -4642,6 +4762,7 @@
                                                                                                               (
                                                                                                                 add
                                                                                                                 (
+                                                                                                                  
                                                                                                                     CProp
                                                                                                                       (
                                                                                                                         "equal"
@@ -4705,6 +4826,7 @@
                                                                                                                 (
                                                                                                                   add
                                                                                                                   (
+                                                                                                                    
                                                                                                                       CProp
                                                                                                                         (
                                                                                                                           "equal"
@@ -4742,6 +4864,7 @@
                                                                                                                   (
                                                                                                                     add
                                                                                                                     (
+                                                                                                                      
                                                                                                                         CProp
                                                                                                                           (
                                                                                                                             "equal"
@@ -4863,6 +4986,7 @@
                                                                                                                     (
                                                                                                                       add
                                                                                                                       (
+                                                                                                                        
                                                                                                                           CProp
                                                                                                                             (
                                                                                                                               "equal"
@@ -4981,6 +5105,7 @@
                                                                                                                       (
                                                                                                                         add
                                                                                                                         (
+                                                                                                                          
                                                                                                                             CProp
                                                                                                                               (
                                                                                                                                 "equal"
@@ -5036,6 +5161,7 @@
                                                                                                                         (
                                                                                                                           add
                                                                                                                           (
+                                                                                                                            
                                                                                                                               CProp
                                                                                                                                 (
                                                                                                                                   "equal"
@@ -5135,6 +5261,7 @@
                                                                                                                           (
                                                                                                                             add
                                                                                                                             (
+                                                                                                                              
                                                                                                                                 CProp
                                                                                                                                   (
                                                                                                                                     "equal"
@@ -5182,6 +5309,7 @@
                                                                                                                             (
                                                                                                                               add
                                                                                                                               (
+                                                                                                                                
                                                                                                                                   CProp
                                                                                                                                     (
                                                                                                                                       "equal"
@@ -5289,6 +5417,7 @@
                                                                                                                               (
                                                                                                                                 add
                                                                                                                                 (
+                                                                                                                                  
                                                                                                                                     CProp
                                                                                                                                       (
                                                                                                                                         "equal"
@@ -5344,6 +5473,7 @@
                                                                                                                                 (
                                                                                                                                   add
                                                                                                                                   (
+                                                                                                                                    
                                                                                                                                       CProp
                                                                                                                                         (
                                                                                                                                           "equal"
@@ -5399,6 +5529,7 @@
                                                                                                                                   (
                                                                                                                                     add
                                                                                                                                     (
+                                                                                                                                      
                                                                                                                                         CProp
                                                                                                                                           (
                                                                                                                                             "equal"
@@ -5472,6 +5603,7 @@
                                                                                                                                     (
                                                                                                                                       add
                                                                                                                                       (
+                                                                                                                                        
                                                                                                                                           CProp
                                                                                                                                             (
                                                                                                                                               "equal"
@@ -5558,6 +5690,7 @@
                                                                                                                                       (
                                                                                                                                         add
                                                                                                                                         (
+                                                                                                                                          
                                                                                                                                             CProp
                                                                                                                                               (
                                                                                                                                                 "equal"
@@ -5608,6 +5741,7 @@
                                                                                                                                         (
                                                                                                                                           add
                                                                                                                                           (
+                                                                                                                                            
                                                                                                                                               CProp
                                                                                                                                                 (
                                                                                                                                                   "equal"
@@ -5681,6 +5815,7 @@
                                                                                                                                           (
                                                                                                                                             add
                                                                                                                                             (
+                                                                                                                                              
                                                                                                                                                 CProp
                                                                                                                                                   (
                                                                                                                                                     "equal"
@@ -5744,6 +5879,7 @@
                                                                                                                                             (
                                                                                                                                               add
                                                                                                                                               (
+                                                                                                                                                
                                                                                                                                                   CProp
                                                                                                                                                     (
                                                                                                                                                       "equal"
@@ -5817,6 +5953,7 @@
                                                                                                                                               (
                                                                                                                                                 add
                                                                                                                                                 (
+                                                                                                                                                  
                                                                                                                                                     CProp
                                                                                                                                                       (
                                                                                                                                                         "equal"
@@ -5919,6 +6056,7 @@
                                                                                                                                                 (
                                                                                                                                                   add
                                                                                                                                                   (
+                                                                                                                                                    
                                                                                                                                                       CProp
                                                                                                                                                         (
                                                                                                                                                           "equal"
@@ -5982,6 +6120,7 @@
                                                                                                                                                   (
                                                                                                                                                     add
                                                                                                                                                     (
+                                                                                                                                                      
                                                                                                                                                         CProp
                                                                                                                                                           (
                                                                                                                                                             "equal"
@@ -6068,6 +6207,7 @@
                                                                                                                                                     (
                                                                                                                                                       add
                                                                                                                                                       (
+                                                                                                                                                        
                                                                                                                                                           CProp
                                                                                                                                                             (
                                                                                                                                                               "equal"
@@ -6123,6 +6263,7 @@
                                                                                                                                                       (
                                                                                                                                                         add
                                                                                                                                                         (
+                                                                                                                                                          
                                                                                                                                                             CProp
                                                                                                                                                               (
                                                                                                                                                                 "equal"
@@ -6215,6 +6356,7 @@
                                                                                                                                                         (
                                                                                                                                                           add
                                                                                                                                                           (
+                                                                                                                                                            
                                                                                                                                                               CProp
                                                                                                                                                                 (
                                                                                                                                                                   "equal"
@@ -6260,6 +6402,7 @@
                                                                                                                                                           (
                                                                                                                                                             add
                                                                                                                                                             (
+                                                                                                                                                              
                                                                                                                                                                 CProp
                                                                                                                                                                   (
                                                                                                                                                                     "equal"
@@ -6323,6 +6466,7 @@
                                                                                                                                                             (
                                                                                                                                                               add
                                                                                                                                                               (
+                                                                                                                                                                
                                                                                                                                                                   CProp
                                                                                                                                                                     (
                                                                                                                                                                       "equal"
@@ -6439,6 +6583,7 @@
                                                                                                                                                               (
                                                                                                                                                                 add
                                                                                                                                                                 (
+                                                                                                                                                                  
                                                                                                                                                                     CProp
                                                                                                                                                                       (
                                                                                                                                                                         "equal"
@@ -6505,6 +6650,7 @@
                                                                                                                                                                 (
                                                                                                                                                                   add
                                                                                                                                                                   (
+                                                                                                                                                                    
                                                                                                                                                                       CProp
                                                                                                                                                                         (
                                                                                                                                                                           "equal"
@@ -6621,6 +6767,7 @@
                                                                                                                                                                   (
                                                                                                                                                                     add
                                                                                                                                                                     (
+                                                                                                                                                                      
                                                                                                                                                                         CProp
                                                                                                                                                                           (
                                                                                                                                                                             "equal"
@@ -6692,6 +6839,7 @@
                                                                                                                                                                     (
                                                                                                                                                                       add
                                                                                                                                                                       (
+                                                                                                                                                                        
                                                                                                                                                                           CProp
                                                                                                                                                                             (
                                                                                                                                                                               "equal"
@@ -6763,6 +6911,7 @@
                                                                                                                                                                       (
                                                                                                                                                                         add
                                                                                                                                                                         (
+                                                                                                                                                                          
                                                                                                                                                                             CProp
                                                                                                                                                                               (
                                                                                                                                                                                 "equal"
@@ -6876,6 +7025,7 @@
                                                                                                                                                                         (
                                                                                                                                                                           add
                                                                                                                                                                           (
+                                                                                                                                                                            
                                                                                                                                                                               CProp
                                                                                                                                                                                 (
                                                                                                                                                                                   "equal"
@@ -6931,6 +7081,7 @@
                                                                                                                                                                           (
                                                                                                                                                                             add
                                                                                                                                                                             (
+                                                                                                                                                                              
                                                                                                                                                                                 CProp
                                                                                                                                                                                   (
                                                                                                                                                                                     "equal"
@@ -7044,6 +7195,7 @@
                                                                                                                                                                             (
                                                                                                                                                                               add
                                                                                                                                                                               (
+                                                                                                                                                                                
                                                                                                                                                                                   CProp
                                                                                                                                                                                     (
                                                                                                                                                                                       "equal"
@@ -7094,6 +7246,7 @@
                                                                                                                                                                               (
                                                                                                                                                                                 add
                                                                                                                                                                                 (
+                                                                                                                                                                                  
                                                                                                                                                                                     CProp
                                                                                                                                                                                       (
                                                                                                                                                                                         "equal"
@@ -7289,6 +7442,7 @@
                                                                                                                                                                                 (
                                                                                                                                                                                   add
                                                                                                                                                                                   (
+                                                                                                                                                                                    
                                                                                                                                                                                       CProp
                                                                                                                                                                                         (
                                                                                                                                                                                           "equal"
@@ -7365,6 +7519,7 @@
                                                                                                                                                                                   (
                                                                                                                                                                                     add
                                                                                                                                                                                     (
+                                                                                                                                                                                      
                                                                                                                                                                                         CProp
                                                                                                                                                                                           (
                                                                                                                                                                                             "equal"
@@ -7428,6 +7583,7 @@
                                                                                                                                                                                     (
                                                                                                                                                                                       add
                                                                                                                                                                                       (
+                                                                                                                                                                                        
                                                                                                                                                                                           CProp
                                                                                                                                                                                             (
                                                                                                                                                                                               "equal"
@@ -7465,6 +7621,7 @@
                                                                                                                                                                                       (
                                                                                                                                                                                         add
                                                                                                                                                                                         (
+                                                                                                                                                                                          
                                                                                                                                                                                             CProp
                                                                                                                                                                                               (
                                                                                                                                                                                                 "equal"
@@ -7596,6 +7753,7 @@
                                                                                                                                                                                         (
                                                                                                                                                                                           add
                                                                                                                                                                                           (
+                                                                                                                                                                                            
                                                                                                                                                                                               CProp
                                                                                                                                                                                                 (
                                                                                                                                                                                                   "equal"
@@ -7657,6 +7815,7 @@
                                                                                                                                                                                           (
                                                                                                                                                                                             add
                                                                                                                                                                                             (
+                                                                                                                                                                                              
                                                                                                                                                                                                 CProp
                                                                                                                                                                                                   (
                                                                                                                                                                                                     "equal"
@@ -7749,6 +7908,7 @@
                                                                                                                                                                                             (
                                                                                                                                                                                               add
                                                                                                                                                                                               (
+                                                                                                                                                                                                
                                                                                                                                                                                                   CProp
                                                                                                                                                                                                     (
                                                                                                                                                                                                       "equal"
@@ -7823,6 +7983,7 @@
                                                                                                                                                                                               (
                                                                                                                                                                                                 add
                                                                                                                                                                                                 (
+                                                                                                                                                                                                  
                                                                                                                                                                                                     CProp
                                                                                                                                                                                                       (
                                                                                                                                                                                                         "equal"
@@ -7920,6 +8081,7 @@
                                                                                                                                                                                                 (
                                                                                                                                                                                                   add
                                                                                                                                                                                                   (
+                                                                                                                                                                                                    
                                                                                                                                                                                                       CProp
                                                                                                                                                                                                         (
                                                                                                                                                                                                           "equal"
@@ -8113,6 +8275,7 @@
                                                                                                                                                                                                   (
                                                                                                                                                                                                     add
                                                                                                                                                                                                     (
+                                                                                                                                                                                                      
                                                                                                                                                                                                         CProp
                                                                                                                                                                                                           (
                                                                                                                                                                                                             "equal"
@@ -8267,6 +8430,7 @@
                                                                                                                                                                                                     (
                                                                                                                                                                                                       add
                                                                                                                                                                                                       (
+                                                                                                                                                                                                        
                                                                                                                                                                                                           CProp
                                                                                                                                                                                                             (
                                                                                                                                                                                                               "equal"
@@ -8369,6 +8533,7 @@
                                                                                                                                                                                                       (
                                                                                                                                                                                                         add
                                                                                                                                                                                                         (
+                                                                                                                                                                                                          
                                                                                                                                                                                                             CProp
                                                                                                                                                                                                               (
                                                                                                                                                                                                                 "equal"
@@ -8438,6 +8603,7 @@
                                                                                                                                                                                                         (
                                                                                                                                                                                                           add
                                                                                                                                                                                                           (
+                                                                                                                                                                                                            
                                                                                                                                                                                                               CProp
                                                                                                                                                                                                                 (
                                                                                                                                                                                                                   "equal"
@@ -8569,6 +8735,7 @@
                                                                                                                                                                                                           (
                                                                                                                                                                                                             add
                                                                                                                                                                                                             (
+                                                                                                                                                                                                              
                                                                                                                                                                                                                 CProp
                                                                                                                                                                                                                   (
                                                                                                                                                                                                                     "equal"
@@ -8679,6 +8846,7 @@
                                                                                                                                                                                                             (
                                                                                                                                                                                                               add
                                                                                                                                                                                                               (
+                                                                                                                                                                                                                
                                                                                                                                                                                                                   CProp
                                                                                                                                                                                                                     (
                                                                                                                                                                                                                       "equal"
@@ -8783,6 +8951,7 @@
                                                                                                                                                                                                               (
                                                                                                                                                                                                                 add
                                                                                                                                                                                                                 (
+                                                                                                                                                                                                                  
                                                                                                                                                                                                                     CProp
                                                                                                                                                                                                                       (
                                                                                                                                                                                                                         "equal"
@@ -8865,6 +9034,7 @@
                                                                                                                                                                                                                 (
                                                                                                                                                                                                                   add
                                                                                                                                                                                                                   (
+                                                                                                                                                                                                                    
                                                                                                                                                                                                                       CProp
                                                                                                                                                                                                                         (
                                                                                                                                                                                                                           "equal"
@@ -8971,6 +9141,7 @@
                                                                                                                                                                                                                   (
                                                                                                                                                                                                                     add
                                                                                                                                                                                                                     (
+                                                                                                                                                                                                                      
                                                                                                                                                                                                                         CProp
                                                                                                                                                                                                                           (
                                                                                                                                                                                                                             "equal"
@@ -9053,6 +9224,7 @@
                                                                                                                                                                                                                   ;
                                                                                                                                                                                                                     add
                                                                                                                                                                                                                     (
+                                                                                                                                                                                                                      
                                                                                                                                                                                                                         CProp
                                                                                                                                                                                                                           (
                                                                                                                                                                                                                             "equal"
@@ -9272,18 +9444,24 @@
                     )
                   ||
                   (
+                    
                       =
                       (
+                        
                           field
                           (
                           head
                           name
                           )
+                        
                           "true"
                       )
+                    
                       List.mem
                       (
+                        
                           x
+                        
                           lst
                       )
                   )
@@ -9293,7 +9471,9 @@
                   _
                   List.mem
                   (
+                    
                       x
+                    
                       lst
                   )
                 )
@@ -9323,18 +9503,24 @@
                     )
                   ||
                   (
+                    
                       =
                       (
+                        
                           field
                           (
                           head
                           name
                           )
+                        
                           "false"
                       )
+                    
                       List.mem
                       (
+                        
                           x
+                        
                           lst
                       )
                   )
@@ -9344,7 +9530,9 @@
                   _
                   List.mem
                   (
+                    
                       x
+                    
                       lst
                   )
                 )
@@ -9375,7 +9563,9 @@
                     (
                       truep
                       (
+                        
                           x
+                        
                           true_lst
                       )
                     )
@@ -9391,7 +9581,9 @@
                           (
                             falsep
                             (
+                              
                                 x
+                              
                                 false_lst
                             )
                           )
@@ -9435,11 +9627,13 @@
                                     (
                                       =
                                       (
+                                        
                                           field
                                           (
                                           head
                                           name
                                           )
+                                        
                                           "if"
                                       )
                                     )
@@ -9451,7 +9645,9 @@
                                         (
                                           truep
                                           (
+                                            
                                               test
+                                            
                                               true_lst
                                           )
                                         )
@@ -9459,8 +9655,11 @@
                                         (
                                           tautologyp
                                           (
+                                            
                                               yes
+                                            
                                               true_lst
+                                            
                                               false_lst
                                           )
                                         )
@@ -9472,7 +9671,9 @@
                                               (
                                                 falsep
                                                 (
+                                                  
                                                     test
+                                                  
                                                     false_lst
                                                 )
                                               )
@@ -9480,8 +9681,11 @@
                                               (
                                                 tautologyp
                                                 (
+                                                  
                                                     no
+                                                  
                                                     true_lst
+                                                  
                                                     false_lst
                                                 )
                                               )
@@ -9489,20 +9693,28 @@
                                               (
                                                   &&
                                                   (
+                                                    
                                                       tautologyp
                                                       (
+                                                        
                                                           yes
+                                                        
                                                           ::
                                                             (
                                                               test
                                                               true_lst
                                                             )
+                                                        
                                                           false_lst
                                                       )
+                                                    
                                                       tautologyp
                                                       (
+                                                        
                                                           no
+                                                        
                                                           true_lst
+                                                        
                                                           ::
                                                             (
                                                               test
@@ -9551,15 +9763,19 @@
               y
                 rewrite
                 (
+                  
                     x
                 )
             )
           in
             tautologyp
             (
+              
                 y
+              
                 []
-                                []
+                              
+                []
                             )
           )
         )
@@ -9575,6 +9791,7 @@
               23
               cterm_to_term
               (
+                
                   CProp
                     (
                       "f"
@@ -9636,6 +9853,7 @@
                   24
                   cterm_to_term
                   (
+                    
                       CProp
                         (
                           "f"
@@ -9694,6 +9912,7 @@
                       25
                       cterm_to_term
                       (
+                        
                           CProp
                             (
                               "f"
@@ -9750,6 +9969,7 @@
                           20
                           cterm_to_term
                           (
+                            
                               CProp
                                 (
                                   "equal"
@@ -9800,6 +10020,7 @@
                               22
                               cterm_to_term
                               (
+                                
                                   CProp
                                     (
                                       "lt"
@@ -9863,6 +10084,7 @@
     term
       cterm_to_term
       (
+        
           CProp
             (
               "implies"
@@ -9990,6 +10212,7 @@
       ok
         ref
         (
+          
             true
                     )
     )
@@ -10005,11 +10228,15 @@
         (
           not
           (
+            
               tautp
               (
+                
                   apply_subst
                   (
+                    
                       subst
+                    
                       term
                   )
               )
@@ -10019,7 +10246,9 @@
         (
           :=
           (
+            
               ok
+            
               false
                         )
         )
@@ -10036,6 +10265,7 @@
           (
             !
             (
+              
                 ok
             )
           )
@@ -10043,6 +10273,7 @@
           (
             print_string
             (
+              
                 "Proved!\n"
             )
           )
@@ -10050,6 +10281,7 @@
           (
               print_string
               (
+                
                   "Cannot prove!\n"
               )
           )
@@ -10057,6 +10289,7 @@
       ;
         exit
         (
+          
             0
         )
       )

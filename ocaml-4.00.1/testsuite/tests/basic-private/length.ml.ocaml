@@ -28,7 +28,9 @@
             (
               >=
               (
+                
                   x
+                
                   0
               )
             )
@@ -40,9 +42,12 @@
             (
                 failwith
                 (
+                  
                     Printf.sprintf
                     (
+                      
                         "cannot build negative length : %i"
+                      
                         x
                     )
                 )

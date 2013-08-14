@@ -11,9 +11,8 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "Abs" false
+                Abs
                   (
                       tuple
                       (
@@ -25,7 +24,7 @@
                           )
                       )
                   )
-                Rtag "App" false
+                App
                   (
                       tuple
                       (
@@ -105,8 +104,11 @@
                               (
                                 Hashtbl.add
                                 (
+                                  
                                     env
+                                  
                                     var
+                                  
                                     r
                                 )
                               ;

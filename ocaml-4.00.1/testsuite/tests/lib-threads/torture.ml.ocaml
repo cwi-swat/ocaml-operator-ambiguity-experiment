@@ -12,11 +12,13 @@
           (
             Gc.minor
             (
+              
                 ()
                             )
           ;
             Thread.yield
             (
+              
                 ()
                             )
           )
@@ -36,6 +38,7 @@
           (
             print_string
             (
+              
                 ">"
             )
           ;
@@ -43,6 +46,7 @@
             (
               flush
               (
+                
                   stdout
               )
             ;
@@ -52,6 +56,7 @@
                   s
                     read_line
                     (
+                      
                         ()
                                             )
                 )
@@ -60,6 +65,7 @@
                 (
                   print_string
                   (
+                    
                       " >>> "
                   )
                 ;
@@ -67,11 +73,13 @@
                   (
                     print_string
                     (
+                      
                         s
                     )
                   ;
                     print_newline
                     (
+                      
                         ()
                                             )
                   )
@@ -100,16 +108,22 @@
               buff
                 String.make
                 (
+                  
                     size
+                  
                     61
                 )
             )
           in
             Unix.write
             (
+              
                 oc
+              
                 buff
+              
                 0
+              
                 size
             )
           )
@@ -134,6 +148,7 @@
               buff
                 String.create
                 (
+                  
                     size
                 )
             )
@@ -144,9 +159,13 @@
                 n
                   Unix.read
                   (
+                    
                       ic
+                    
                       buff
+                    
                       0
+                    
                       size
                   )
               )
@@ -155,7 +174,9 @@
               0
               -
               (
+                
                   n
+                
                   1
               )
               ifthenelse
@@ -164,11 +185,15 @@
                 (
                   <>
                   (
+                    
                       String.get
                       (
+                        
                           buff
+                        
                           i
                       )
+                    
                       61
                   )
                 )
@@ -176,6 +201,7 @@
                 (
                   prerr_endline
                   (
+                    
                       "error in reader_thread"
                   )
                 )
@@ -199,7 +225,9 @@
           (
             Thread.create
             (
+              
                 gc_thread
+              
                 ()
                             )
           ;
@@ -212,6 +240,7 @@
                 )
                   Unix.pipe
                   (
+                    
                       ()
                                         )
               )
@@ -220,7 +249,9 @@
               (
                 Thread.create
                 (
+                  
                     writer_thread
+                  
                     (
                       in1
                       4096
@@ -231,7 +262,9 @@
                 (
                   Thread.create
                   (
+                    
                       reader_thread
+                    
                       (
                         out1
                         4096
@@ -247,6 +280,7 @@
                       )
                         Unix.pipe
                         (
+                          
                             ()
                                                     )
                     )
@@ -255,7 +289,9 @@
                     (
                       Thread.create
                       (
+                        
                           writer_thread
+                        
                           (
                             in2
                             16
@@ -266,7 +302,9 @@
                       (
                         Thread.create
                         (
+                          
                             reader_thread
+                          
                             (
                               out2
                               16
@@ -275,6 +313,7 @@
                       ;
                         stdin_thread
                         (
+                          
                             ()
                                                     )
                       )
@@ -289,6 +328,7 @@
   )
   main
   (
+    
       ()
         )
 )

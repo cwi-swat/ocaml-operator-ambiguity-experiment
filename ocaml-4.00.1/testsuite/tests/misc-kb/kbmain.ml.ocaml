@@ -430,11 +430,13 @@
                   r1
                     group_rank
                     (
+                      
                         op1
                     )
                   r2
                     group_rank
                     (
+                      
                         op2
                     )
                 )
@@ -445,7 +447,9 @@
                   (
                     =
                     (
+                      
                         r1
+                      
                         r2
                     )
                   )
@@ -461,7 +465,9 @@
                         (
                           >
                           (
+                            
                               r1
+                            
                               r2
                           )
                         )
@@ -487,7 +493,9 @@
     group_order
       rpo
       (
+        
           group_precedence
+        
           lex_ext
       )
   )
@@ -501,6 +509,7 @@
           match
           group_order
           (
+            
               pair
           )
           (
@@ -523,9 +532,12 @@
   20
   kb_complete
   (
+    
       greater
+    
       []
-            geom_rules
+          
+      geom_rules
   )
 )
 

@@ -31,6 +31,7 @@
       (
       Hashtbl.create
       (
+        
           57
       )
       :
@@ -58,6 +59,7 @@
               id
                 Ident.create
                 (
+                  
                     s
                 )
             )
@@ -66,8 +68,11 @@
             (
               Hashtbl.add
               (
+                
                   tbl_ident
+                
                   s
+                
                   id
               )
             ;
@@ -87,7 +92,9 @@
           try
           Hashtbl.find
           (
+            
               tbl_ident
+            
               s
           )
           (
@@ -96,6 +103,7 @@
               Not_found
                             raise
               (
+                
                   Error
                     Unbound
                       s
@@ -114,9 +122,12 @@
           id
           Hashtbl.remove
           (
+            
               tbl_ident
+            
               Ident.name
               (
+                
                   id
               )
           )
@@ -135,6 +146,7 @@
           (
             prerr_string
             (
+              
                 "Unbound identifier "
             )
           ;
@@ -142,11 +154,13 @@
             (
               prerr_string
               (
+                
                   s
               )
             ;
               prerr_endline
               (
+                
                   "."
               )
             )

@@ -71,6 +71,7 @@
       in
         List.iter
         (
+          
             (
               case
               (
@@ -80,21 +81,26 @@
                 )
                 List.iter
                 (
+                  
                     (
                       case
                       (
                         t
                         assert                        ==
                         (
+                          
                             f
                             (
+                              
                                 t
                             )
+                          
                             t_ref
                         )
                         
                       )
                     )
+                  
                     ::
                       (
                         x
@@ -111,6 +117,7 @@
                 )
               )
             )
+          
             ::
               (
                 (

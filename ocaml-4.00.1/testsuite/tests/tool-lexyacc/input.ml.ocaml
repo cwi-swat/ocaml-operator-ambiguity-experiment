@@ -11,6 +11,7 @@
           lexbuf
           comment
           (
+            
               lexbuf
           )
         )
@@ -22,6 +23,7 @@
           lexbuf
           raise
           (
+            
               Lexical_error
                 "unterminated comment"
           )
@@ -36,6 +38,7 @@
           (
             reset_string_buffer
             (
+              
                 ()
                             )
           ;
@@ -43,6 +46,7 @@
             (
               string
               (
+                
                   lexbuf
               )
             ;
@@ -50,11 +54,13 @@
               (
                 reset_string_buffer
                 (
+                  
                     ()
                                     )
               ;
                 comment
                 (
+                  
                     lexbuf
                 )
               )
@@ -71,6 +77,7 @@
           (
             decr
             (
+              
                 comment_depth
             )
           ;
@@ -80,10 +87,13 @@
               (
                 =
                 (
+                  
                     !
                     (
+                      
                         comment_depth
                     )
+                  
                     0
                 )
               )
@@ -95,6 +105,7 @@
               (
                   comment
                   (
+                    
                       lexbuf
                   )
               )
@@ -111,11 +122,13 @@
           (
             incr
             (
+              
                 comment_depth
             )
           ;
             comment
             (
+              
                 lexbuf
             )
           )
@@ -128,6 +141,7 @@
           lexbuf
           raise
           (
+            
               Lexical_error
                 "bad character constant"
           )
@@ -140,7 +154,9 @@
           lexbuf
           char_for_decimal_code
           (
+            
               lexbuf
+            
               1
           )
         )
@@ -152,9 +168,12 @@
           lexbuf
           char_for_backslash
           (
+            
               Lexing.lexeme_char
               (
+                
                   lexbuf
+                
                   1
               )
           )
@@ -167,7 +186,9 @@
           lexbuf
           Lexing.lexeme_char
           (
+            
               lexbuf
+            
               0
           )
         )
@@ -181,15 +202,19 @@
           (
             store_string_char
             (
+              
                 Lexing.lexeme_char
                 (
+                  
                     lexbuf
+                  
                     0
                 )
             )
           ;
             string
             (
+              
                 lexbuf
             )
           )
@@ -202,6 +227,7 @@
           lexbuf
           raise
           (
+            
               Lexical_error
                 "unterminated string"
           )
@@ -216,15 +242,19 @@
           (
             store_string_char
             (
+              
                 char_for_decimal_code
                 (
+                  
                     lexbuf
+                  
                     1
                 )
             )
           ;
             string
             (
+              
                 lexbuf
             )
           )
@@ -239,11 +269,15 @@
           (
             store_string_char
             (
+              
                 char_for_backslash
                 (
+                  
                     Lexing.lexeme_char
                     (
+                      
                         lexbuf
+                      
                         1
                     )
                 )
@@ -251,6 +285,7 @@
           ;
             string
             (
+              
                 lexbuf
             )
           )
@@ -263,6 +298,7 @@
           lexbuf
           string
           (
+            
               lexbuf
           )
         )
@@ -282,6 +318,7 @@
           lexbuf
           action
           (
+            
               lexbuf
           )
         )
@@ -293,6 +330,7 @@
           lexbuf
           raise
           (
+            
               Lexical_error
                 "unterminated action"
           )
@@ -307,7 +345,9 @@
           (
             :=
             (
+              
                 comment_depth
+              
                 1
             )
           ;
@@ -315,11 +355,13 @@
             (
               comment
               (
+                
                   lexbuf
               )
             ;
               action
               (
+                
                   lexbuf
               )
             )
@@ -337,12 +379,14 @@
               _
                 char
                 (
+                  
                     lexbuf
                 )
             )
           in
             action
             (
+              
                 lexbuf
             )
           )
@@ -357,6 +401,7 @@
           (
             reset_string_buffer
             (
+              
                 ()
                             )
           ;
@@ -364,6 +409,7 @@
             (
               string
               (
+                
                   lexbuf
               )
             ;
@@ -371,11 +417,13 @@
               (
                 reset_string_buffer
                 (
+                  
                     ()
                                     )
               ;
                 action
                 (
+                  
                     lexbuf
                 )
               )
@@ -392,6 +440,7 @@
           (
             decr
             (
+              
                 brace_depth
             )
           ;
@@ -401,10 +450,13 @@
               (
                 =
                 (
+                  
                     !
                     (
+                      
                         brace_depth
                     )
+                  
                     0
                 )
               )
@@ -412,6 +464,7 @@
               (
                 Lexing.lexeme_start
                 (
+                  
                     lexbuf
                 )
               )
@@ -419,6 +472,7 @@
               (
                   action
                   (
+                    
                       lexbuf
                   )
               )
@@ -435,11 +489,13 @@
           (
             incr
             (
+              
                 brace_depth
             )
           ;
             action
             (
+              
                 lexbuf
             )
           )
@@ -452,12 +508,16 @@
           lexbuf
           raise
           (
+            
               Lexical_error
                 ^
                 (
+                  
                     "illegal character "
+                  
                     Lexing.lexeme
                     (
+                      
                         lexbuf
                     )
                 )
@@ -471,6 +531,7 @@
           lexbuf
           raise
           (
+            
               Lexical_error
                 "unterminated lexer definition"
           )
@@ -599,6 +660,7 @@
               n1
                 Lexing.lexeme_end
                 (
+                  
                     lexbuf
                 )
             )
@@ -607,7 +669,9 @@
             (
               :=
               (
+                
                   brace_depth
+                
                   1
               )
             ;
@@ -617,6 +681,7 @@
                   n2
                     action
                     (
+                      
                         lexbuf
                     )
                 )
@@ -640,6 +705,7 @@
           Tchar
             char
             (
+              
                 lexbuf
             )
         )
@@ -653,6 +719,7 @@
           (
             reset_string_buffer
             (
+              
                 ()
                             )
           ;
@@ -660,12 +727,14 @@
             (
               string
               (
+                
                   lexbuf
               )
             ;
               Tstring
                 get_stored_string
                 (
+                  
                     ()
                                     )
             )
@@ -680,6 +749,7 @@
           match
           Lexing.lexeme
           (
+            
               lexbuf
           )
           (
@@ -721,7 +791,9 @@
           (
             :=
             (
+              
                 comment_depth
+              
                 1
             )
           ;
@@ -729,11 +801,13 @@
             (
               comment
               (
+                
                   lexbuf
               )
             ;
               main
               (
+                
                   lexbuf
               )
             )
@@ -747,6 +821,7 @@
           lexbuf
           main
           (
+            
               lexbuf
           )
         )
@@ -763,6 +838,7 @@
           next_char
           )
           (
+            
               lexbuf
           )
           (
@@ -971,6 +1047,7 @@
               )
               state_51
               (
+                
                   lexbuf
               )
             )
@@ -991,6 +1068,7 @@
               )
               state_40
               (
+                
                   lexbuf
               )
             )
@@ -999,6 +1077,7 @@
               7c
               action_8
               (
+                
                   lexbuf
               )
             )
@@ -1007,6 +1086,7 @@
               7b
               action_5
               (
+                
                   lexbuf
               )
             )
@@ -1015,6 +1095,7 @@
               65
               state_56
               (
+                
                   lexbuf
               )
             )
@@ -1023,6 +1104,7 @@
               5f
               state_55
               (
+                
                   lexbuf
               )
             )
@@ -1031,6 +1113,7 @@
               5e
               action_18
               (
+                
                   lexbuf
               )
             )
@@ -1039,6 +1122,7 @@
               5d
               action_12
               (
+                
                   lexbuf
               )
             )
@@ -1047,6 +1131,7 @@
               5b
               action_11
               (
+                
                   lexbuf
               )
             )
@@ -1055,6 +1140,7 @@
               3f
               action_14
               (
+                
                   lexbuf
               )
             )
@@ -1063,6 +1149,7 @@
               3d
               action_6
               (
+                
                   lexbuf
               )
             )
@@ -1071,6 +1158,7 @@
               3b
               state_48
               (
+                
                   lexbuf
               )
             )
@@ -1079,6 +1167,7 @@
               2d
               action_19
               (
+                
                   lexbuf
               )
             )
@@ -1087,6 +1176,7 @@
               2b
               action_15
               (
+                
                   lexbuf
               )
             )
@@ -1095,6 +1185,7 @@
               2a
               action_13
               (
+                
                   lexbuf
               )
             )
@@ -1103,6 +1194,7 @@
               29
               action_17
               (
+                
                   lexbuf
               )
             )
@@ -1111,6 +1203,7 @@
               28
               state_43
               (
+                
                   lexbuf
               )
             )
@@ -1119,6 +1212,7 @@
               27
               action_4
               (
+                
                   lexbuf
               )
             )
@@ -1127,6 +1221,7 @@
               22
               action_3
               (
+                
                   lexbuf
               )
             )
@@ -1135,6 +1230,7 @@
               00
               action_20
               (
+                
                   lexbuf
               )
             )
@@ -1143,6 +1239,7 @@
               _
               action_21
               (
+                
                   lexbuf
               )
             )
@@ -1161,6 +1258,7 @@
           next_char
           )
           (
+            
               lexbuf
           )
           (
@@ -1169,6 +1267,7 @@
               7d
               action_23
               (
+                
                   lexbuf
               )
             )
@@ -1177,6 +1276,7 @@
               7b
               action_22
               (
+                
                   lexbuf
               )
             )
@@ -1185,6 +1285,7 @@
               28
               state_34
               (
+                
                   lexbuf
               )
             )
@@ -1193,6 +1294,7 @@
               27
               action_25
               (
+                
                   lexbuf
               )
             )
@@ -1201,6 +1303,7 @@
               22
               action_24
               (
+                
                   lexbuf
               )
             )
@@ -1209,6 +1312,7 @@
               00
               action_27
               (
+                
                   lexbuf
               )
             )
@@ -1217,6 +1321,7 @@
               _
               action_28
               (
+                
                   lexbuf
               )
             )
@@ -1235,6 +1340,7 @@
           next_char
           )
           (
+            
               lexbuf
           )
           (
@@ -1243,6 +1349,7 @@
               5c
               state_24
               (
+                
                   lexbuf
               )
             )
@@ -1251,6 +1358,7 @@
               22
               action_29
               (
+                
                   lexbuf
               )
             )
@@ -1259,6 +1367,7 @@
               00
               action_33
               (
+                
                   lexbuf
               )
             )
@@ -1267,6 +1376,7 @@
               _
               action_34
               (
+                
                   lexbuf
               )
             )
@@ -1285,6 +1395,7 @@
           next_char
           )
           (
+            
               lexbuf
           )
           (
@@ -1293,6 +1404,7 @@
               5c
               state_13
               (
+                
                   lexbuf
               )
             )
@@ -1305,6 +1417,7 @@
               backtrack
               )
               (
+                
                   lexbuf
               )
             )
@@ -1313,6 +1426,7 @@
               _
               state_12
               (
+                
                   lexbuf
               )
             )
@@ -1331,6 +1445,7 @@
           next_char
           )
           (
+            
               lexbuf
           )
           (
@@ -1339,6 +1454,7 @@
               2a
               state_9
               (
+                
                   lexbuf
               )
             )
@@ -1347,6 +1463,7 @@
               28
               state_8
               (
+                
                   lexbuf
               )
             )
@@ -1355,6 +1472,7 @@
               22
               action_41
               (
+                
                   lexbuf
               )
             )
@@ -1363,6 +1481,7 @@
               00
               action_42
               (
+                
                   lexbuf
               )
             )
@@ -1371,6 +1490,7 @@
               _
               action_43
               (
+                
                   lexbuf
               )
             )
@@ -1386,7 +1506,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_43
             )
           ;
@@ -1397,6 +1519,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -1405,6 +1528,7 @@
                 2a
                 action_39
                 (
+                  
                     lexbuf
                 )
               )
@@ -1417,6 +1541,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -1433,7 +1558,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_43
             )
           ;
@@ -1444,6 +1571,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -1452,6 +1580,7 @@
                 29
                 action_40
                 (
+                  
                     lexbuf
                 )
               )
@@ -1464,6 +1593,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -1480,7 +1610,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_38
             )
           ;
@@ -1491,6 +1623,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -1499,6 +1632,7 @@
                 27
                 action_35
                 (
+                  
                     lexbuf
                 )
               )
@@ -1511,6 +1645,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -1527,7 +1662,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_38
             )
           ;
@@ -1538,6 +1675,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -1582,6 +1720,7 @@
                 )
                 state_15
                 (
+                  
                     lexbuf
                 )
               )
@@ -1610,6 +1749,7 @@
                 )
                 state_14
                 (
+                  
                     lexbuf
                 )
               )
@@ -1622,6 +1762,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -1641,6 +1782,7 @@
           next_char
           )
           (
+            
               lexbuf
           )
           (
@@ -1649,6 +1791,7 @@
               27
               action_36
               (
+                
                   lexbuf
               )
             )
@@ -1661,6 +1804,7 @@
               backtrack
               )
               (
+                
                   lexbuf
               )
             )
@@ -1679,6 +1823,7 @@
           next_char
           )
           (
+            
               lexbuf
           )
           (
@@ -1723,6 +1868,7 @@
               )
               state_16
               (
+                
                   lexbuf
               )
             )
@@ -1735,6 +1881,7 @@
               backtrack
               )
               (
+                
                   lexbuf
               )
             )
@@ -1753,6 +1900,7 @@
           next_char
           )
           (
+            
               lexbuf
           )
           (
@@ -1797,6 +1945,7 @@
               )
               state_17
               (
+                
                   lexbuf
               )
             )
@@ -1809,6 +1958,7 @@
               backtrack
               )
               (
+                
                   lexbuf
               )
             )
@@ -1827,6 +1977,7 @@
           next_char
           )
           (
+            
               lexbuf
           )
           (
@@ -1835,6 +1986,7 @@
               27
               action_37
               (
+                
                   lexbuf
               )
             )
@@ -1847,6 +1999,7 @@
               backtrack
               )
               (
+                
                   lexbuf
               )
             )
@@ -1862,7 +2015,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_34
             )
           ;
@@ -1873,6 +2028,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -1917,6 +2073,7 @@
                 )
                 state_27
                 (
+                  
                     lexbuf
                 )
               )
@@ -1945,6 +2102,7 @@
                 )
                 action_31
                 (
+                  
                     lexbuf
                 )
               )
@@ -1973,6 +2131,7 @@
                 )
                 state_25
                 (
+                  
                     lexbuf
                 )
               )
@@ -1985,6 +2144,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -2001,7 +2161,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_30
             )
           ;
@@ -2012,6 +2174,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -2040,6 +2203,7 @@
                 )
                 state_25
                 (
+                  
                     lexbuf
                 )
               )
@@ -2052,6 +2216,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -2071,6 +2236,7 @@
           next_char
           )
           (
+            
               lexbuf
           )
           (
@@ -2115,6 +2281,7 @@
               )
               state_28
               (
+                
                   lexbuf
               )
             )
@@ -2127,6 +2294,7 @@
               backtrack
               )
               (
+                
                   lexbuf
               )
             )
@@ -2145,6 +2313,7 @@
           next_char
           )
           (
+            
               lexbuf
           )
           (
@@ -2189,6 +2358,7 @@
               )
               action_32
               (
+                
                   lexbuf
               )
             )
@@ -2201,6 +2371,7 @@
               backtrack
               )
               (
+                
                   lexbuf
               )
             )
@@ -2216,7 +2387,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_28
             )
           ;
@@ -2227,6 +2400,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -2235,6 +2409,7 @@
                 2a
                 action_26
                 (
+                  
                     lexbuf
                 )
               )
@@ -2247,6 +2422,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -2263,7 +2439,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_0
             )
           ;
@@ -2274,6 +2452,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -2294,6 +2473,7 @@
                 )
                 state_65
                 (
+                  
                     lexbuf
                 )
               )
@@ -2306,6 +2486,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -2322,7 +2503,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_16
             )
           ;
@@ -2333,6 +2516,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -2341,6 +2525,7 @@
                 2a
                 action_1
                 (
+                  
                     lexbuf
                 )
               )
@@ -2353,6 +2538,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -2369,7 +2555,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_21
             )
           ;
@@ -2380,6 +2568,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -2388,6 +2577,7 @@
                 3b
                 action_7
                 (
+                  
                     lexbuf
                 )
               )
@@ -2400,6 +2590,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -2416,7 +2607,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_2
             )
           ;
@@ -2427,6 +2620,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -2683,6 +2877,7 @@
                 )
                 state_59
                 (
+                  
                     lexbuf
                 )
               )
@@ -2691,6 +2886,7 @@
                 5f
                 state_60
                 (
+                  
                     lexbuf
                 )
               )
@@ -2703,6 +2899,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -2719,7 +2916,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_9
             )
           ;
@@ -2730,6 +2929,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -2986,6 +3186,7 @@
                 )
                 state_59
                 (
+                  
                     lexbuf
                 )
               )
@@ -2998,6 +3199,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -3014,7 +3216,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_2
             )
           ;
@@ -3025,6 +3229,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -3277,6 +3482,7 @@
                 )
                 state_59
                 (
+                  
                     lexbuf
                 )
               )
@@ -3285,6 +3491,7 @@
                 6f
                 state_61
                 (
+                  
                     lexbuf
                 )
               )
@@ -3293,6 +3500,7 @@
                 5f
                 state_60
                 (
+                  
                     lexbuf
                 )
               )
@@ -3305,6 +3513,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -3321,7 +3530,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_2
             )
           ;
@@ -3332,6 +3543,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -3588,6 +3800,7 @@
                 )
                 state_59
                 (
+                  
                     lexbuf
                 )
               )
@@ -3596,6 +3809,7 @@
                 5f
                 state_60
                 (
+                  
                     lexbuf
                 )
               )
@@ -3608,6 +3822,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -3627,6 +3842,7 @@
           next_char
           )
           (
+            
               lexbuf
           )
           (
@@ -3883,6 +4099,7 @@
               )
               state_59
               (
+                
                   lexbuf
               )
             )
@@ -3895,6 +4112,7 @@
               backtrack
               )
               (
+                
                   lexbuf
               )
             )
@@ -3910,7 +4128,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_2
             )
           ;
@@ -3921,6 +4141,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -4173,6 +4394,7 @@
                 )
                 state_59
                 (
+                  
                     lexbuf
                 )
               )
@@ -4181,6 +4403,7 @@
                 66
                 state_62
                 (
+                  
                     lexbuf
                 )
               )
@@ -4189,6 +4412,7 @@
                 5f
                 state_60
                 (
+                  
                     lexbuf
                 )
               )
@@ -4201,6 +4425,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -4217,7 +4442,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_2
             )
           ;
@@ -4228,6 +4455,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -4484,6 +4712,7 @@
                 )
                 state_59
                 (
+                  
                     lexbuf
                 )
               )
@@ -4492,6 +4721,7 @@
                 5f
                 state_60
                 (
+                  
                     lexbuf
                 )
               )
@@ -4504,6 +4734,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -4520,7 +4751,9 @@
           (
             Lexing.set_backtrack
             (
+              
                 lexbuf
+              
                 action_0
             )
           ;
@@ -4531,6 +4764,7 @@
             next_char
             )
             (
+              
                 lexbuf
             )
             (
@@ -4551,6 +4785,7 @@
                 )
                 state_65
                 (
+                  
                     lexbuf
                 )
               )
@@ -4563,6 +4798,7 @@
                 backtrack
                 )
                 (
+                  
                     lexbuf
                 )
               )
@@ -4579,11 +4815,13 @@
           (
             Lexing.init
             (
+              
                 lexbuf
             )
           ;
             state_0
             (
+              
                 lexbuf
             )
           )
@@ -4598,11 +4836,13 @@
           (
             Lexing.init
             (
+              
                 lexbuf
             )
           ;
             state_1
             (
+              
                 lexbuf
             )
           )
@@ -4617,11 +4857,13 @@
           (
             Lexing.init
             (
+              
                 lexbuf
             )
           ;
             state_2
             (
+              
                 lexbuf
             )
           )
@@ -4636,11 +4878,13 @@
           (
             Lexing.init
             (
+              
                 lexbuf
             )
           ;
             state_3
             (
+              
                 lexbuf
             )
           )
@@ -4655,11 +4899,13 @@
           (
             Lexing.init
             (
+              
                 lexbuf
             )
           ;
             state_4
             (
+              
                 lexbuf
             )
           )

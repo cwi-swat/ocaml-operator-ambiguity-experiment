@@ -12,9 +12,8 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "And" false
+                And
                   (
                       tuple
                       (
@@ -22,7 +21,7 @@
                           a
                       )
                   )
-                Rtag "Or" false
+                Or
                   (
                       tuple
                       (
@@ -30,11 +29,11 @@
                           a
                       )
                   )
-                Rtag "Not" false
+                Not
                   (
                       a
                   )
-                Rtag "Atom" false
+                Atom
                   (
                        string
                       (
@@ -55,13 +54,12 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "Dia" false
+                Dia
                   (
                       a
                   )
-                Rtag "Box" false
+                Box
                   (
                       a
                   )
@@ -151,7 +149,6 @@
               kind =
                 
                     Ptyp_alias "a"
-                      Ptyp_variant closed=false
                       (
                         Rinherit
                              termpc
@@ -201,6 +198,7 @@
                   x
                 X.nnf_not
                 (
+                  
                     x
                 )
               )
@@ -209,7 +207,9 @@
                 x
                 X.map
                 (
+                  
                     X.nnf
+                  
                     x
                 )
               )
@@ -231,6 +231,7 @@
                     Not
                       f
                       (
+                        
                           x
                       )
                   )
@@ -245,10 +246,12 @@
                       (
                         f
                         (
+                          
                             x
                         )
                         f
                         (
+                          
                             y
                         )
                       )
@@ -264,10 +267,12 @@
                       (
                         f
                         (
+                          
                             x
                         )
                         f
                         (
+                          
                             y
                         )
                       )
@@ -306,6 +311,7 @@
                   x
                 X.nnf
                 (
+                  
                     x
                 )
               )
@@ -320,10 +326,12 @@
                   (
                     X.nnf_not
                     (
+                      
                         x
                     )
                     X.nnf_not
                     (
+                      
                         y
                     )
                   )
@@ -339,10 +347,12 @@
                   (
                     X.nnf_not
                     (
+                      
                         x
                     )
                     X.nnf_not
                     (
+                      
                         y
                     )
                   )
@@ -385,7 +395,6 @@
               kind =
                 
                     Ptyp_alias "a"
-                      Ptyp_variant closed=false
                       (
                         Rinherit
                              termk
@@ -436,6 +445,7 @@
                     Dia
                       f
                       (
+                        
                           x
                       )
                   )
@@ -446,6 +456,7 @@
                     Box
                       f
                       (
+                        
                           x
                       )
                   )
@@ -453,11 +464,13 @@
                   (
                     alias x
                     (
-                      pat_type                      termpc
+                      termpc
                     )
                     Pc.map
                     (
+                      
                         f
+                      
                         x
                     )
                   )
@@ -490,6 +503,7 @@
                 Box
                   X.nnf_not
                   (
+                    
                       x
                   )
               )
@@ -500,6 +514,7 @@
                 Dia
                   X.nnf_not
                   (
+                    
                       x
                   )
               )
@@ -507,10 +522,11 @@
               (
                 alias x
                 (
-                  pat_type                  termpc
+                  termpc
                 )
                 Pc.nnf_not
                 (
+                  
                     x
                 )
               )

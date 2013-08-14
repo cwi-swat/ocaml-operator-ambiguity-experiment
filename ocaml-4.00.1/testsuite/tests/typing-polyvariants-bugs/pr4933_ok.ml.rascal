@@ -9,21 +9,24 @@
     (  						
         							    	 
        t
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-      (
-       int
-       
-       														  
-       														 
-      )
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+          
+          int
+          (
+          )
+          								  
+          
+         														  
+         														 
       											   
     								        
     )
@@ -38,34 +41,40 @@
    (
    		    				
    )
-   struct
-   (
-   							  
-   type
-   (  						
-       							    	 
-      t
-      type
-      params=
-      (
-      
-      )
-      cstrs =
-      (
-      )
-      kind =
-     (
-      int
-      
-      														  
-      														 
-     )
-     											   
-   								        
-   )
-   							  
-   )
-   							  
+   
+   	struct
+   	(
+   								  
+   	type
+   	(  						
+   	    							    	 
+   	   t
+   	     type
+   	     params=
+   	     (
+   	     
+   	     )
+   	     cstrs =
+   	     (
+   	     )
+   	     kind =
+   	     
+   	      
+   	      int
+   	      (
+   	      )
+   	      								  
+   	      
+   	     														  
+   	     														 
+   	  											   
+   									        
+   	)
+   								  
+   	)
+   								  
+   	Priv
+       								 
   )
       										    
                                      
@@ -79,6 +88,7 @@
    							  
    )
    								   
+   
   										    
                                      
   module type Priv'
@@ -89,21 +99,20 @@
     (  						
         							    	 
        t
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-      (
-       <"A",[]>
-       
-       														  
-       														 
-      )
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+         )
+         kind =
+         
+          <"A",[]>
+          
+         														  
+         														 
       											   
     								        
     )
@@ -118,34 +127,36 @@
    (
    		    				
    )
-   struct
-   (
-   							  
-   type
-   (  						
-       							    	 
-      t
-      type
-      params=
-      (
-      
-      )
-      cstrs =
-      (
-      )
-      kind =
-     (
-      <[],[<"A",[]>]>
-      
-      														  
-      														 
-     )
-     											   
-   								        
-   )
-   							  
-   )
-   							  
+   
+   	struct
+   	(
+   								  
+   	type
+   	(  						
+   	    							    	 
+   	   t
+   	     type
+   	     params=
+   	     (
+   	     
+   	     )
+   	     cstrs =
+   	     (
+   	     )
+   	     kind =
+   	     
+   	      <[],[<"A",[]>]>
+   	      
+   	     														  
+   	     														 
+   	  											   
+   									        
+   	)
+   								  
+   	)
+   								  
+   	Priv'
+       								 
   )
       										    
                                      
@@ -159,6 +170,7 @@
    							  
    )
    								   
+   
   										    
                                      
 )

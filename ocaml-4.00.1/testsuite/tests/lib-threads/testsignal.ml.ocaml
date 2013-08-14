@@ -10,6 +10,7 @@
           (
             print_string
             (
+              
                 "Got ctrl-C, exiting..."
             )
           ;
@@ -17,11 +18,13 @@
             (
               print_newline
               (
+                
                   ()
                                 )
             ;
               exit
               (
+                
                   0
               )
             )
@@ -46,6 +49,7 @@
               (
                 print_char
                 (
+                  
                     c
                 )
               ;
@@ -53,11 +57,13 @@
                 (
                   flush
                   (
+                    
                       stdout
                   )
                 ;
                   Thread.delay
                   (
+                    
                       delay
                   )
                 )
@@ -71,7 +77,9 @@
   (
     Sys.signal
     (
+      
         Sys.sigint
+      
         Sys.Signal_handle
           sighandler
     )
@@ -80,16 +88,21 @@
     (
       Thread.create
       (
+        
           print_message
           (
+            
               0.6666666666
           )
+        
           61
       )
     ;
       print_message
       (
+        
           1.0
+        
           62
       )
     )

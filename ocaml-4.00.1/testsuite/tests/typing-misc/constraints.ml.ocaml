@@ -13,9 +13,8 @@
         kind =
           
               Ptyp_alias "a"
-                Ptyp_variant closed=true
                 (
-                  Rtag "A" false
+                  A
                     (
                          t
                         (
@@ -40,9 +39,8 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        t
                       (
@@ -73,9 +71,8 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        t
                       (
@@ -106,9 +103,8 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        t
                       (
@@ -131,9 +127,8 @@
         kind =
           
               Ptyp_alias "a"
-                Ptyp_variant closed=true
                 (
-                  Rtag "A" false
+                  A
                     (
                         a
                     )
@@ -157,9 +152,8 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        v
                       (
@@ -245,7 +239,9 @@
                 a
               =
               (
+                
                   x
+                
                   y
               )
             )

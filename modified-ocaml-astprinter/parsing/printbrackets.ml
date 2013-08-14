@@ -140,7 +140,7 @@ let rec core_type i ppf x =
       line i ppf " %a\n" fmt_longident li;
       list i core_type ppf l;
   | Ptyp_variant (l, closed, low) ->
-      line i ppf "Ptyp_variant closed=%s\n" (string_of_bool closed);
+      (* line i ppf "Ptyp_variant closed=%s\n" (string_of_bool closed); *)
       list i label_x_bool_x_core_type_list ppf l;
       option i (fun i -> list i string) ppf low
   | Ptyp_object (l) ->
@@ -225,7 +225,7 @@ and pattern i ppf x =
       pattern i ppf p;
       core_type i ppf ct;
   | Ppat_type (li) ->
-      line i ppf "pat_type";
+      (* line i ppf "pat_type"; *)
       longident i ppf li
   | Ppat_unpack s ->
       line i ppf "Ppat_unpack \"%s\"\n" s.txt;
@@ -825,12 +825,14 @@ and longident_x_expression i ppf (li, e) =
 
 and label_x_expression i ppf (l,e) =
   (* line i ppf "<label> \"%s\"\n" l; *)
+  line i ppf "%s\n" l;
   expression (i+1) ppf e;
 
 and label_x_bool_x_core_type_list i ppf x =
   match x with
     Rtag (l, b, ctl) ->
-      line i ppf "Rtag \"%s\" %s\n" l (string_of_bool b);
+      (* line i ppf "Rtag \"%s\" %s\n" l (string_of_bool b); *)
+      line i ppf "%s\n" l;
       list (i+1) core_type ppf ctl
   | Rinherit (ct) ->
       line i ppf "Rinherit\n";

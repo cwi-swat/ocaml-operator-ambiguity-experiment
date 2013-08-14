@@ -43,7 +43,8 @@ public void runFile(str f) {
 		}	
 	
 }
- 
+
+
 public void do(type[&T <: Tree] nont, str input) {
    x = jparse(nont, input);
    y = filterOCaml(x);
@@ -347,14 +348,39 @@ str printAST(value v) {
     						'<printAST(e)>
     						";
     						
-    case "when"([]): return "";												  
+    case "when"([]): return "";		
+    
+    
+    // Arg
+    
+    case "label"(x): return "<printAST(x)>
+    					    '	<printAST(x)>";
+    
+    case "labelColon"(l, e): return "<replaceLast(replaceFirst(printAST(l), "~", ""), ":", "")>
+    							    '<printAST(e)>
+    							    ";
+    							    
+	case "optlabelColon"(x): return printAST(x);    							    						  
     								
+	case "optlabelColon"(l, e): return "<printAST(l)>
+									   '<printAST(e)>
+									   ";
+									   
+									   
+	case "param1"(x): return printAST(x);
+	
+	case "param3"(l, p): return printAST(p);									   
     								
-    case "typeParam"(x): return printAST(x);									 
+    case "typeParam"(x): return printAST(x);	
+    
+    
+    								 
     							     
     case "posInt"(i) : return "<convert(i)>";
     
     case "negInt"(i) : return "<convert(i)>";
+    
+    case "emptyBrackets"(): return "[]";
     
     case "stringLiteral"(s) : return "<escape(s, (("\n": "\\n")))>";	
     
@@ -801,6 +827,44 @@ str printAST(value v) {
                       				<for (id <- l) {> \'<id> <}>
     								' <printAST(t)>
                                     ";
+                                    
+                                    
+	case "polymorphicVariantType"(x): return printAST(x);
+	
+	
+    // polymorphicVariantType1: "[" "|"? {TagSpec "|"}* "]"
+   	case polymorphicVariantType1(_, l): return "
+   											   '(
+   											   <for (x <- l) {>
+   											   '  <printAST(x)>
+   										       '<}>
+   										       ')
+   											   "; 
+      
+    // polymorphicVariantType2: "[\>" {TagSpec "|"}* "]"
+   	case polymorphicVariantType2(l): return "<for (x <- l) {>
+										   '  <printAST(x)>
+									       '<}>
+										   "; 
+    
+    // polymorphicVariantType3: "[\<"  "|"? {TagSpecFull "|"}+ ("\>" ("`" TagName)+ )?  "]"
+    case polymorphicVariantType3(l, _): return "<for (x <- l) {>
+										   '  <printAST(x)>
+									       '<}>
+										   "; 
+	                                 
+	                                 
+	// "`" TagName ("of" Typexpr)?
+	case "tagSpec1"(n, []): return printAST(n);
+	
+	case "tagSpec1"(n, [e]): return "
+									'<printAST(n)>
+									'(
+									'	<printAST(e)>
+									')";
+	
+	// tagSpec2: Typexr
+	case "tagSpec2"(e): return printAST(e);               
 	
 	case "fieldDecls"(_, l, _) : return "
 							   '(
@@ -983,10 +1047,6 @@ str printAST(value v) {
     										   ";														    
 										   
 										   
-    case [] : return "";
-    
-    case "emptyBrackets"() : return "[]";
-    
     case "emptyArray"() : return "array
 	    						 '(
 	    						 ')";
@@ -1040,6 +1100,8 @@ str printAST(value v) {
    												   ";
    
    case "patternTuple"([], semicolon): return "[]";
+   
+   case "patternHash"(x): return printAST(x);
    
    case "tagNamePattern"(t, p): return "<printAST(t)>
     								   '<printAST(p)>
@@ -1572,11 +1634,13 @@ str printAST(value v) {
              ')";
     }
     
+    
+    case [] : return "";
+    
     case list[value] l : return "<printAST(head(l))><for (e <- tail(l)) {>
                                 '<printAST(e)><}>";
     
-    
-    case value v : return "<v>";
+    case value v : return replaceAll("<v>", "\\", " ");
   } 
 }
 

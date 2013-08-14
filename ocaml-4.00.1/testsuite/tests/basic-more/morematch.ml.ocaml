@@ -24,10 +24,13 @@
                         (
                           <>
                           (
+                            
                               f
                               (
+                                
                                   arg
                               )
+                            
                               r
                           )
                         )
@@ -37,11 +40,13 @@
                           (
                             prerr_endline
                             (
+                              
                                 msg
                             )
                           ;
                             failwith
                             (
+                              
                                 "Malaise"
                             )
                           )
@@ -136,30 +141,42 @@
   (
     test
     (
+      
         "un"
+      
         f
+      
         C
-                1
+              
+        1
     )
   ;
     sequence
     (
       test
       (
+        
           "un"
+        
           f
+        
           D
-                    2
+                  
+          2
       )
     ;
       sequence
       (
         test
         (
+          
             "un"
+          
             f
+          
             F
-                        3
+                      
+            3
         )
       ;
         ()
@@ -232,9 +249,13 @@
   (
     test
     (
+      
         "deux"
+      
         g
+      
         5
+      
         4
     )
   ;
@@ -242,9 +263,13 @@
     (
       test
       (
+        
           "deux"
+        
           g
+        
           6
+        
           5
       )
     ;
@@ -252,9 +277,13 @@
       (
         test
         (
+          
             "deux"
+          
             g
+          
             9
+          
             7
         )
       ;
@@ -326,9 +355,13 @@
   )
   test
   (
+    
       "trois"
+    
       g
+    
       10
+    
       8
   )
   let
@@ -410,9 +443,13 @@
   (
     test
     (
+      
         "quatre"
+      
         g
+      
         4
+      
         4
     )
   ;
@@ -420,9 +457,13 @@
     (
       test
       (
+        
           "quatre"
+        
           g
+        
           7
+        
           100
       )
     ;
@@ -492,12 +533,16 @@
   (
     test
     (
+      
         "cinq"
+      
         h
+      
         (
           2
           2
         )
+      
         3
     )
   ;
@@ -505,12 +550,16 @@
     (
       test
       (
+        
           "cinq"
+        
           h
+        
           (
             2
             1
           )
+        
           2
       )
     ;
@@ -518,12 +567,16 @@
       (
         test
         (
+          
             "cinq"
+          
             h
+          
             (
               2
               4
             )
+          
             100
         )
       ;
@@ -831,12 +884,16 @@
   (
     test
     (
+      
         "six"
+      
         f
+      
         (
           1
           3
         )
+      
         1
     )
   ;
@@ -844,12 +901,16 @@
     (
       test
       (
+        
           "six"
+        
           f
+        
           (
             3
             2
           )
+        
           1
       )
     ;
@@ -857,12 +918,16 @@
       (
         test
         (
+          
             "six"
+          
             f
+          
             (
               3
               5
             )
+          
             2
         )
       ;
@@ -870,12 +935,16 @@
         (
           test
           (
+            
               "six"
+            
               f
+            
               (
                 3
                 7
               )
+            
               3
           )
         ;
@@ -965,8 +1034,11 @@
   (
     test
     (
+      
         "sept"
+      
         f
+      
         record
         (
           a
@@ -974,15 +1046,19 @@
                       b
             true
                     )
-                1
+              
+        1
     )
   ;
     sequence
     (
       test
       (
+        
           "sept"
+        
           f
+        
           record
           (
             a
@@ -994,15 +1070,19 @@
             b
               false
                         )
-                    1
+                  
+          1
       )
     ;
       sequence
       (
         test
         (
+          
             "sept"
+          
             f
+          
             record
             (
               a
@@ -1018,15 +1098,19 @@
               b
                 true
                             )
-                        2
+                      
+            2
         )
       ;
         sequence
         (
           test
           (
+            
               "sept"
+            
               f
+            
               record
               (
                 a
@@ -1038,7 +1122,8 @@
                 b
                   false
                                 )
-                            2
+                          
+              2
           )
         ;
           ()
@@ -1095,12 +1180,16 @@
   (
     test
     (
+      
         "huit"
+      
         f
+      
         (
           []
                     true
                   )
+      
         1
     )
   ;
@@ -1108,8 +1197,11 @@
     (
       test
       (
+        
           "huit"
+        
           f
+        
           (
             ::
               (
@@ -1118,6 +1210,7 @@
                               )
             false
                       )
+        
           1
       )
     ;
@@ -1125,8 +1218,11 @@
       (
         test
         (
+          
             "huit"
+          
             f
+          
             (
               ::
                 (
@@ -1139,6 +1235,7 @@
                 )
               true
                           )
+          
             2
         )
       ;
@@ -1146,8 +1243,11 @@
         (
           test
           (
+            
               "huit"
+            
               f
+            
               (
                 ::
                   (
@@ -1156,6 +1256,7 @@
                                       )
                 false
                               )
+            
               2
           )
         ;
@@ -1198,10 +1299,14 @@
   (
     test
     (
+      
         "oubli"
+      
         split_cases
+      
         Nil
-                A
+              
+        A
           Nil
               )
   ;
@@ -1209,10 +1314,14 @@
     (
       test
       (
+        
           "oubli"
+        
           split_cases
+        
           Cons
             1
+        
           A
             Cons
               1
@@ -1222,10 +1331,14 @@
       (
         test
         (
+          
             "oubli"
+          
             split_cases
+          
             Snoc
               1
+          
             B
               Snoc
                 1
@@ -1282,19 +1395,27 @@
   (
     test
     (
+      
         "neuf"
+      
         f1
+      
         A
           1
+      
         1
     )
   ;
     test
     (
+      
         "neuf"
+      
         f1
+      
         B
           1
+      
         1
     )
   )
@@ -1359,22 +1480,30 @@
   (
     test
     (
+      
         "dix"
+      
         g
+      
         A
           1
+      
         1
     )
   ;
     test
     (
+      
         "dix"
+      
         g
+      
         B
           (
             1
             2
           )
+      
         2
     )
   )
@@ -1430,13 +1559,17 @@
   (
     test
     (
+      
         "encore"
+      
         h
+      
         ::
           (
             1
             []
                       )
+      
         1
     )
   ;
@@ -1444,8 +1577,11 @@
     (
       test
       (
+        
           "encore"
+        
           h
+        
           ::
             (
               1
@@ -1455,6 +1591,7 @@
                   []
                                   )
             )
+        
           2
       )
     ;
@@ -1462,8 +1599,11 @@
       (
         test
         (
+          
             "encore"
+          
             h
+          
             ::
               (
                 1
@@ -1477,6 +1617,7 @@
                                               )
                   )
               )
+          
             3
         )
       ;
@@ -1484,8 +1625,11 @@
         (
           test
           (
+            
               "encore"
+            
               h
+            
               ::
                 (
                   0
@@ -1495,6 +1639,7 @@
                       []
                                           )
                 )
+            
               0
           )
         ;
@@ -1525,7 +1670,9 @@
           )
           -
           (
+            
               y
+            
               x
           )
         )
@@ -1535,23 +1682,31 @@
   (
     test
     (
+      
         "foo1"
+      
         f
+      
         (
           1
           0
         )
+      
         -1
     )
   ;
     test
     (
+      
         "foo1"
+      
         f
+      
         (
           1
           2
         )
+      
         -1
     )
   )
@@ -1604,23 +1759,31 @@
   (
     test
     (
+      
         "zob"
+      
         f
+      
         []
-                []
+              
+        []
             )
   ;
     sequence
     (
       test
       (
+        
           "zob"
+        
           f
+        
           ::
             (
               1
               []
                           )
+        
           ::
             (
               1
@@ -1630,8 +1793,11 @@
     ;
       test
       (
+        
           "zob"
+        
           f
+        
           ::
             (
               1
@@ -1645,6 +1811,7 @@
                                           )
                 )
             )
+        
           ::
             (
               3
@@ -1722,6 +1889,7 @@
             (
               f
               (
+                
                   x
               )
               i
@@ -1738,6 +1906,7 @@
             (
               f
               (
+                
                   x
               )
               0
@@ -1749,23 +1918,31 @@
   (
     test
     (
+      
         "fin"
+      
         f
+      
         B
-                A
+              
+        A
             )
   ;
     sequence
     (
       test
       (
+        
           "fin"
+        
           f
+        
           D
             (
               C
                             1
             )
+        
           D
             (
               A
@@ -1777,13 +1954,17 @@
       (
         test
         (
+          
             "fin"
+          
             f
+          
             E
               (
                 C
                                 A
                               )
+          
             D
               (
                 A
@@ -1863,10 +2044,14 @@
   (
     test
     (
+      
         "length"
+      
         length
+      
         Char
           10
+      
         10
     )
   ;
@@ -1874,10 +2059,14 @@
     (
       test
       (
+        
           "length"
+        
           length
+        
           Pixel
             20
+        
           20
       )
     ;
@@ -1885,20 +2074,28 @@
       (
         test
         (
+          
             "length"
+          
             length
+          
             Default
-                        0
+                      
+            0
         )
       ;
         sequence
         (
           test
           (
+            
               "length"
+            
               length
+            
               Percent
                 100
+            
               0
           )
         ;
@@ -1934,10 +2131,14 @@
   (
     test
     (
+      
         "length2"
+      
         length2
+      
         Char
           10
+      
         10
     )
   ;
@@ -1945,10 +2146,14 @@
     (
       test
       (
+        
           "length2"
+        
           length2
+        
           Pixel
             20
+        
           0
       )
     ;
@@ -1956,20 +2161,28 @@
       (
         test
         (
+          
             "length2"
+          
             length2
+          
             Default
-                        0
+                      
+            0
         )
       ;
         sequence
         (
           test
           (
+            
               "length2"
+            
               length2
+            
               Percent
                 100
+            
               100
           )
         ;
@@ -2004,10 +2217,14 @@
   (
     test
     (
+      
         "length3"
+      
         length3
+      
         Char
           10
+      
         true
             )
   ;
@@ -2015,10 +2232,14 @@
     (
       test
       (
+        
           "length3"
+        
           length3
+        
           No
             ""
+        
           true
                 )
     ;
@@ -2026,10 +2247,14 @@
       (
         test
         (
+          
             "length3"
+          
             length3
+          
             Pixel
               20
+          
             false
                     )
       ;
@@ -2037,20 +2262,28 @@
         (
           test
           (
+            
               "length3"
+            
               length3
+            
               Default
-                            false
+                          
+              false
                         )
         ;
           sequence
           (
             test
             (
+              
                 "length3"
+              
                 length3
+              
                 Percent
                   100
+              
                 false
                             )
           ;
@@ -2115,30 +2348,42 @@
   (
     test
     (
+      
         "hevea"
+      
         h
+      
         A
-                1
+              
+        1
     )
   ;
     sequence
     (
       test
       (
+        
           "hevea"
+        
           h
+        
           B
-                    2
+                  
+          2
       )
     ;
       sequence
       (
         test
         (
+          
             "hevea"
+          
             h
+          
             B
-                        2
+                      
+            2
         )
       ;
         ()
@@ -2579,9 +2824,12 @@
                       when
                         not
                         (
+                          
                             approx_present
                             (
+                              
                                 v
+                              
                                 ls
                             )
                         )
@@ -2613,9 +2861,12 @@
                       when
                         not
                         (
+                          
                             approx_present
                             (
+                              
                                 v
+                              
                                 ls
                             )
                         )
@@ -2649,12 +2900,17 @@
   (
     test
     (
+      
         "lower_bind"
+      
         lower_bind
         (
+          
             0
+          
             0
         )
+      
         Llet
           (
             true
@@ -2664,6 +2920,7 @@
             Lvar
               2
           )
+      
         4
     )
   ;
@@ -2671,25 +2928,36 @@
     (
       test
       (
+        
           "lower_bind"
+        
           lower_bind
           (
+            
               0
+            
               0
           )
+        
           Lvar
             0
+        
           5
       )
     ;
       test
       (
+        
           "lower_bind"
+        
           lower_bind
           (
+            
               0
+            
               0
           )
+        
           Lifthenelse
             (
               Lvar
@@ -2699,6 +2967,7 @@
               Lvar
                 2
             )
+        
           1
       )
     )
@@ -2796,6 +3065,7 @@
     r
       ref
       (
+        
           Some
             Fpresent
                   )
@@ -2804,13 +3074,17 @@
   (
     test
     (
+      
         "unify"
+      
         unify_kind
+      
         (
           Fvar
             r
           Fpresent
                   )
+      
         1
     )
   ;
@@ -2818,14 +3092,18 @@
     (
       test
       (
+        
           "unify"
+        
           unify_kind
+        
           (
             Fvar
               r
             Fvar
               r
           )
+        
           1
       )
     ;
@@ -2833,13 +3111,17 @@
       (
         test
         (
+          
             "unify"
+          
             unify_kind
+          
             (
               Fvar
                 r
               Fabsent
                           )
+          
             4
         )
       ;
@@ -2847,13 +3129,17 @@
         (
           test
           (
+            
               "unify"
+            
               unify_kind
+            
               (
                 Fpresent
                                 Fvar
                   r
               )
+            
               2
           )
         ;
@@ -2861,12 +3147,16 @@
           (
             test
             (
+              
                 "unify"
+              
                 unify_kind
+              
                 (
                   Fpresent
                                     Fpresent
                                   )
+              
                 3
             )
           ;
@@ -2874,12 +3164,16 @@
             (
               test
               (
+                
                   "unify"
+                
                   unify_kind
+                
                   (
                     Fabsent
                                         Fpresent
                                       )
+                
                   4
               )
             ;
@@ -2994,13 +3288,17 @@
   (
     test
     (
+      
         "foo2"
+      
         foo
+      
         (
           D
             A
                       A
                   )
+      
         1
     )
   ;
@@ -3008,13 +3306,17 @@
     (
       test
       (
+        
           "foo2"
+        
           foo
+        
           (
             D
               A
                           B
                       )
+        
           4
       )
     ;
@@ -3022,12 +3324,16 @@
       (
         test
         (
+          
             "foo2"
+          
             foo
+          
             (
               A
                             A
                           )
+          
             4
         )
       ;
@@ -3105,13 +3411,17 @@
   (
     test
     (
+      
         "yaya"
+      
         yaya
+      
         (
           A
                     A
                     0
         )
+      
         1
     )
   ;
@@ -3119,13 +3429,17 @@
     (
       test
       (
+        
           "yaya"
+        
           yaya
+        
           (
             B
                         A
                         0
           )
+        
           2
       )
     ;
@@ -3133,13 +3447,17 @@
       (
         test
         (
+          
             "yaya"
+          
             yaya
+          
             (
               B
                             B
                             100
             )
+          
             3
         )
       ;
@@ -3338,6 +3656,7 @@
           )
           autre
           (
+            
               (
                 x
                 x
@@ -3389,8 +3708,11 @@
   (
     test
     (
+      
         "autre"
+      
         autre
+      
         (
           J
                     J
@@ -3400,6 +3722,7 @@
                             D
                           )
         )
+      
         3
     )
   ;
@@ -3407,13 +3730,17 @@
     (
       test
       (
+        
           "autre"
+        
           autre
+        
           (
             J
                         J
                         D
                       )
+        
           3
       )
     ;
@@ -3421,13 +3748,17 @@
       (
         test
         (
+          
             "autre"
+          
             autre
+          
             (
               J
                             J
                             I
                           )
+          
             9
         )
       ;
@@ -3435,14 +3766,18 @@
         (
           test
           (
+            
               "autre"
+            
               autre
+            
               (
                 H
                   I
                                   I
                                 I
                               )
+            
               4
           )
         ;
@@ -3450,14 +3785,18 @@
           (
             test
             (
+              
                 "autre"
+              
                 autre
+              
                 (
                   J
                                     J
                                     H
                     I
                                     )
+              
                 9
             )
           ;
@@ -3623,13 +3962,17 @@
   (
     test
     (
+      
         "xyz"
+      
         xyz
+      
         (
           YC
                     YC
                     X
                   )
+      
         6
     )
   ;
@@ -3637,14 +3980,18 @@
     (
       test
       (
+        
           "xyz"
+        
           xyz
+        
           (
             YC
                         YB
                         U
               X
                         )
+        
           8
       )
     ;
@@ -3652,13 +3999,17 @@
       (
         test
         (
+          
             "xyz"
+          
             xyz
+          
             (
               YB
                             YC
                             X
                           )
+          
             6
         )
       ;
@@ -3678,7 +4029,9 @@
           )
           =
           (
+            
               x
+            
               y
           )
         )
@@ -3688,12 +4041,16 @@
   (
     test
     (
+      
         "eq"
+      
         eq
+      
         (
           "coucou"
           "coucou"
         )
+      
         true
             )
   ;
@@ -3735,8 +4092,10 @@
               when
                 is_none
                 (
+                  
                     snd
                     (
+                      
                         x
                     )
                 )
@@ -3756,7 +4115,9 @@
               when
                 =
                 (
+                  
                     pc
+                  
                     pc'
                 )
                 2
@@ -3774,8 +4135,11 @@
   (
     test
     (
+      
         "garde"
+      
         garde
+      
         (
           Some
             (
@@ -3784,6 +4148,7 @@
             )
           None
                   )
+      
         1
     )
   ;
@@ -3791,8 +4156,11 @@
     (
       test
       (
+        
           "garde"
+        
           garde
+        
           (
             Some
               (
@@ -3802,6 +4170,7 @@
             Some
               1
           )
+        
           2
       )
     ;
@@ -3809,8 +4178,11 @@
       (
         test
         (
+          
             "garde"
+          
             garde
+          
             (
               Some
                 (
@@ -3820,6 +4192,7 @@
               Some
                 1
             )
+          
             3
         )
       ;
@@ -3860,9 +4233,13 @@
   (
     test
     (
+      
         "orstring"
+      
         orstring
+      
         "A"
+      
         2
     )
   ;
@@ -3870,9 +4247,13 @@
     (
       test
       (
+        
           "orstring"
+        
           orstring
+        
           "B"
+        
           2
       )
     ;
@@ -3880,9 +4261,13 @@
       (
         test
         (
+          
             "orstring"
+          
             orstring
+          
             "C"
+          
             2
         )
       ;
@@ -3890,9 +4275,13 @@
         (
           test
           (
+            
               "orstring"
+            
               orstring
+            
               "D"
+            
               3
           )
         ;
@@ -3900,9 +4289,13 @@
           (
             test
             (
+              
                 "orstring"
+              
                 orstring
+              
                 "E"
+              
                 4
             )
           ;
@@ -3924,22 +4317,20 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "Variant" false
+                Variant
                   (
-                      Ptyp_variant closed=true
                       (
-                        Rtag "Some" false
+                        Some
                           (
                                string
                               (
                               )
                           )
-                        Rtag "None" true
+                        None
                           (
                           )
-                        Rtag "Foo" true
+                        Foo
                           (
                           )
                       )
@@ -3985,22 +4376,30 @@
   (
     test
     (
+      
         "crash"
+      
         crash
+      
         Variant
           None
-                  "none"
+                
+        "none"
     )
   ;
     sequence
     (
       test
       (
+        
           "crash"
+        
           crash
+        
           Variant
             Some
               "coucou"
+        
           "coucou"
       )
     ;
@@ -4008,11 +4407,15 @@
       (
         test
         (
+          
             "crash"
+          
             crash
+          
             Variant
               Foo
-                          "foo"
+                        
+            "foo"
         )
       ;
         ()
@@ -4058,7 +4461,9 @@
                 when
                   =
                   (
+                    
                       y
+                    
                       2
                   )
                   1
@@ -4092,12 +4497,16 @@
   (
     test
     (
+      
         "flatgarde"
+      
         flatgarde
+      
         (
           1
           2
         )
+      
         1
     )
   ;
@@ -4105,12 +4514,16 @@
     (
       test
       (
+        
           "flatgarde"
+        
           flatgarde
+        
           (
             1
             3
           )
+        
           2
       )
     ;
@@ -4118,12 +4531,16 @@
       (
         test
         (
+          
             "flatgarde"
+          
             flatgarde
+          
             (
               2
               3
             )
+          
             2
         )
       ;
@@ -4131,12 +4548,16 @@
         (
           test
           (
+            
               "flatgarde"
+            
               flatgarde
+            
               (
                 2
                 4
               )
+            
               3
           )
         ;
@@ -4350,12 +4771,16 @@
   (
     test
     (
+      
         "jerome_constr"
+      
         replicaContent2shortString
+      
         (
           ABSENT
                     Unchanged
                   )
+      
         "        "
     )
   ;
@@ -4363,12 +4788,16 @@
     (
       test
       (
+        
           "jerome_constr"
+        
           replicaContent2shortString
+        
           (
             ABSENT
                         Deleted
                       )
+        
           "deleted "
       )
     ;
@@ -4376,12 +4805,16 @@
       (
         test
         (
+          
             "jerome_constr"
+          
             replicaContent2shortString
+          
             (
               FILE
                             Modified
                           )
+          
             "changed "
         )
       ;
@@ -4389,12 +4822,16 @@
         (
           test
           (
+            
               "jerome_constr"
+            
               replicaContent2shortString
+            
               (
                 DIRECTORY
                                 PropsChanged
                               )
+            
               "props   "
           )
         ;
@@ -4402,12 +4839,16 @@
           (
             test
             (
+              
                 "jerome_constr"
+              
                 replicaContent2shortString
+              
                 (
                   FILE
                                     Deleted
                                   )
+              
                 "assert false"
             )
           ;
@@ -4415,12 +4856,16 @@
             (
               test
               (
+                
                   "jerome_constr"
+                
                   replicaContent2shortString
+                
                   (
                     SYMLINK
                                         Deleted
                                       )
+                
                   "assert false"
               )
             ;
@@ -4428,12 +4873,16 @@
               (
                 test
                 (
+                  
                     "jerome_constr"
+                  
                     replicaContent2shortString
+                  
                     (
                       SYMLINK
                                             PropsChanged
                                           )
+                  
                     "assert false"
                 )
               ;
@@ -4441,12 +4890,16 @@
                 (
                   test
                   (
+                    
                       "jerome_constr"
+                    
                       replicaContent2shortString
+                    
                       (
                         DIRECTORY
                                                 Deleted
                                               )
+                    
                       "assert false"
                   )
                 ;
@@ -4454,12 +4907,16 @@
                   (
                     test
                     (
+                      
                         "jerome_constr"
+                      
                         replicaContent2shortString
+                      
                         (
                           ABSENT
                                                     Created
                                                   )
+                      
                         "assert false"
                     )
                   ;
@@ -4467,23 +4924,31 @@
                     (
                       test
                       (
+                        
                           "jerome_constr"
+                        
                           replicaContent2shortString
+                        
                           (
                             ABSENT
                                                         Modified
                                                       )
+                        
                           "assert false"
                       )
                     ;
                       test
                       (
+                        
                           "jerome_constr"
+                        
                           replicaContent2shortString
+                        
                           (
                             ABSENT
                                                         PropsChanged
                                                       )
+                        
                           "assert false"
                       )
                     )
@@ -4646,12 +5111,16 @@
   (
     test
     (
+      
         "jerome_variant"
+      
         replicaContent2shortString
+      
         (
           ABSENT
                     Unchanged
                   )
+      
         "        "
     )
   ;
@@ -4659,12 +5128,16 @@
     (
       test
       (
+        
           "jerome_variant"
+        
           replicaContent2shortString
+        
           (
             ABSENT
                         Deleted
                       )
+        
           "deleted "
       )
     ;
@@ -4672,12 +5145,16 @@
       (
         test
         (
+          
             "jerome_variant"
+          
             replicaContent2shortString
+          
             (
               FILE
                             Modified
                           )
+          
             "changed "
         )
       ;
@@ -4685,12 +5162,16 @@
         (
           test
           (
+            
               "jerome_variant"
+            
               replicaContent2shortString
+            
               (
                 DIRECTORY
                                 PropsChanged
                               )
+            
               "props   "
           )
         ;
@@ -4698,12 +5179,16 @@
           (
             test
             (
+              
                 "jerome_variant"
+              
                 replicaContent2shortString
+              
                 (
                   FILE
                                     Deleted
                                   )
+              
                 "assert false"
             )
           ;
@@ -4711,12 +5196,16 @@
             (
               test
               (
+                
                   "jerome_variant"
+                
                   replicaContent2shortString
+                
                   (
                     SYMLINK
                                         Deleted
                                       )
+                
                   "assert false"
               )
             ;
@@ -4724,12 +5213,16 @@
               (
                 test
                 (
+                  
                     "jerome_variant"
+                  
                     replicaContent2shortString
+                  
                     (
                       SYMLINK
                                             PropsChanged
                                           )
+                  
                     "assert false"
                 )
               ;
@@ -4737,12 +5230,16 @@
                 (
                   test
                   (
+                    
                       "jerome_variant"
+                    
                       replicaContent2shortString
+                    
                       (
                         DIRECTORY
                                                 Deleted
                                               )
+                    
                       "assert false"
                   )
                 ;
@@ -4750,12 +5247,16 @@
                   (
                     test
                     (
+                      
                         "jerome_variant"
+                      
                         replicaContent2shortString
+                      
                         (
                           ABSENT
                                                     Created
                                                   )
+                      
                         "assert false"
                     )
                   ;
@@ -4763,23 +5264,31 @@
                     (
                       test
                       (
+                        
                           "jerome_variant"
+                        
                           replicaContent2shortString
+                        
                           (
                             ABSENT
                                                         Modified
                                                       )
+                        
                           "assert false"
                       )
                     ;
                       test
                       (
+                        
                           "jerome_variant"
+                        
                           replicaContent2shortString
+                        
                           (
                             ABSENT
                                                         PropsChanged
                                                       )
+                        
                           "assert false"
                       )
                     )
@@ -4876,13 +5385,17 @@
   (
     test
     (
+      
         "ohl"
+      
         ohl
+      
         (
           A
             0
           C
                   )
+      
         0
     )
   ;
@@ -4890,13 +5403,17 @@
     (
       test
       (
+        
           "ohl"
+        
           ohl
+        
           (
             B
               0
             D
                       )
+        
           0
       )
     ;
@@ -4964,8 +5481,11 @@
   (
     test
     (
+      
         "pottier"
+      
         pottier
+      
         (
           (
             B
@@ -4973,6 +5493,7 @@
           )
           A
                   )
+      
         false
             )
   ;
@@ -4980,8 +5501,11 @@
     (
       test
       (
+        
           "pottier"
+        
           pottier
+        
           (
             (
               B
@@ -4989,6 +5513,7 @@
             )
             B
                       )
+        
           true
                 )
     ;
@@ -4996,8 +5521,11 @@
       (
         test
         (
+          
             "pottier"
+          
             pottier
+          
             (
               (
                 A
@@ -5005,6 +5533,7 @@
               )
               A
                           )
+          
             true
                     )
       ;
@@ -5055,11 +5584,15 @@
               )
               -
               (
+                
                   +
                   (
+                    
                       y
+                    
                       defs
                   )
+                
                   modu
               )
             )
@@ -5076,8 +5609,11 @@
   (
     test
     (
+      
         "coquery"
+      
         coquery
+      
         (
           1
           0
@@ -5095,6 +5631,7 @@
                 )
             )
         )
+      
         0
     )
   ;
@@ -5102,8 +5639,11 @@
     (
       test
       (
+        
           "coquery"
+        
           coquery
+        
           (
             1
             0
@@ -5117,6 +5657,7 @@
                                       )
               )
           )
+        
           2
       )
     ;
@@ -5187,10 +5728,14 @@
   (
     test
     (
+      
         "vars1"
+      
         vars1
+      
         A
           1
+      
         1
     )
   ;
@@ -5198,13 +5743,17 @@
     (
       test
       (
+        
           "vars1"
+        
           vars1
+        
           B
             (
               1
               2
             )
+        
           2
       )
     ;
@@ -5263,13 +5812,17 @@
   (
     test
     (
+      
         "vars2"
+      
         vars2
+      
         ::
           (
             1
             []
                       )
+      
         1
     )
   ;
@@ -5277,8 +5830,11 @@
     (
       test
       (
+        
           "vars2"
+        
           vars2
+        
           ::
             (
               1
@@ -5288,6 +5844,7 @@
                   []
                                   )
             )
+        
           2
       )
     ;
@@ -5295,8 +5852,11 @@
       (
         test
         (
+          
             "vars2"
+          
             vars2
+          
             ::
               (
                 1
@@ -5310,6 +5870,7 @@
                                               )
                   )
               )
+          
             3
         )
       ;
@@ -5317,8 +5878,11 @@
         (
           test
           (
+            
               "vars2"
+            
               vars2
+            
               ::
                 (
                   0
@@ -5328,6 +5892,7 @@
                       []
                                           )
                 )
+            
               0
           )
         ;
@@ -5399,8 +5964,11 @@
   (
     test
     (
+      
         "eber"
+      
         eber
+      
         record
         (
           x
@@ -5410,15 +5978,19 @@
           z
             true
                     )
-                0
+              
+        0
     )
   ;
     sequence
     (
       test
       (
+        
           "eber"
+        
           eber
+        
           record
           (
             x
@@ -5428,7 +6000,8 @@
             z
               false
                         )
-                    0
+                  
+          0
       )
     ;
       ()
@@ -5466,9 +6039,13 @@
   (
     test
     (
+      
         "escaped"
+      
         escaped
+      
         22
+      
         2
     )
   ;
@@ -5476,9 +6053,13 @@
     (
       test
       (
+        
           "escaped"
+        
           escaped
+        
           5c
+        
           2
       )
     ;
@@ -5486,9 +6067,13 @@
       (
         test
         (
+          
             "escaped"
+          
             escaped
+          
             0a
+          
             2
         )
       ;
@@ -5496,9 +6081,13 @@
         (
           test
           (
+            
               "escaped"
+            
               escaped
+            
               09
+            
               2
           )
         ;
@@ -5506,9 +6095,13 @@
           (
             test
             (
+              
                 "escaped"
+              
                 escaped
+              
                 00
+              
                 1
             )
           ;
@@ -5516,9 +6109,13 @@
             (
               test
               (
+                
                   "escaped"
+                
                   escaped
+                
                   20
+                
                   1
               )
             ;
@@ -5526,9 +6123,13 @@
               (
                 test
                 (
+                  
                     "escaped"
+                  
                     escaped
+                  
                     00
+                  
                     1
                 )
               ;
@@ -5536,9 +6137,13 @@
                 (
                   test
                   (
+                    
                       "escaped"
+                    
                       escaped
+                    
                       5b
+                    
                       1
                   )
                 ;
@@ -5546,9 +6151,13 @@
                   (
                     test
                     (
+                      
                         "escaped"
+                      
                         escaped
+                      
                         5d
+                      
                         1
                     )
                   ;
@@ -5556,9 +6165,13 @@
                     (
                       test
                       (
+                        
                           "escaped"
+                        
                           escaped
+                        
                           21
+                        
                           1
                       )
                     ;
@@ -5566,9 +6179,13 @@
                       (
                         test
                         (
+                          
                             "escaped"
+                          
                             escaped
+                          
                             23
+                          
                             1
                         )
                       ;
@@ -6427,6 +7044,7 @@
               _
               raise
               (
+                
                   Unknown_Reply
                     n
               )
@@ -6514,7 +7132,9 @@
           when
             =
             (
+              
                 i
+              
                 0
             )
             1
@@ -6571,10 +7191,14 @@
     (
       test
       (
+        
           "habert"
+        
           habert
+        
           A
             ex0
+        
           1
       )
     ;
@@ -6582,10 +7206,14 @@
       (
         test
         (
+          
             "habert"
+          
             habert
+          
             B
               ex0
+          
             1
         )
       ;
@@ -6593,19 +7221,27 @@
         (
           test
           (
+            
               "habert"
+            
               habert
+            
               A
                 ex1
+            
               2
           )
         ;
           test
           (
+            
               "habert"
+            
               habert
+            
               B
                 ex1
+            
               3
           )
         )
@@ -6624,9 +7260,8 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "TTuple" false
+                TTuple
                   (
                        list
                       (
@@ -6635,7 +7270,7 @@
                           )
                       )
                   )
-                Rtag "TConstr" false
+                TConstr
                   (
                        list
                       (
@@ -6644,13 +7279,13 @@
                           )
                       )
                   )
-                Rtag "TVar" false
+                TVar
                   (
                        string
                       (
                       )
                   )
-                Rtag "TVariant" false
+                TVariant
                   (
                        list
                       (
@@ -6659,13 +7294,13 @@
                           )
                       )
                   )
-                Rtag "TBlock" false
+                TBlock
                   (
                        int
                       (
                       )
                   )
-                Rtag "TCopy" false
+                TCopy
                   (
                        type_expr
                       (
@@ -6682,9 +7317,8 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "TTuple" false
+                TTuple
                   (
                        list
                       (
@@ -6693,7 +7327,7 @@
                           )
                       )
                   )
-                Rtag "TConstr" false
+                TConstr
                   (
                        list
                       (
@@ -6702,7 +7336,7 @@
                           )
                       )
                   )
-                Rtag "TVariant" false
+                TVariant
                   (
                        list
                       (
@@ -6745,7 +7379,7 @@
             (
               alias desc
               (
-                pat_type                recurs_type_expr
+                recurs_type_expr
               )
               let
               (
@@ -6792,10 +7426,14 @@
   (
     test
     (
+      
         "maf"
+      
         maf
+      
         TCopy
           base
+      
         1
     )
   ;
@@ -6803,10 +7441,14 @@
     (
       test
       (
+        
           "maf"
+        
           maf
+        
           TVar
             "test"
+        
           2
       )
     ;
@@ -6814,10 +7456,14 @@
       (
         test
         (
+          
             "maf"
+          
             maf
+          
             TBlock
               0
+          
             2
         )
       ;
@@ -6825,31 +7471,43 @@
         (
           test
           (
+            
               "maf"
+            
               maf
+            
               TTuple
                 []
-                              4
+                            
+              4
           )
         ;
           sequence
           (
             test
             (
+              
                 "maf"
+              
                 maf
+              
                 TConstr
                   []
-                                  5
+                                
+                5
             )
           ;
             test
             (
+              
                 "maf"
+              
                 maf
+              
                 TVariant
                   []
-                                  6
+                                
+                6
             )
           )
         )
@@ -6922,8 +7580,11 @@
   (
     test
     (
+      
         "seb"
+      
         seb
+      
         (
           (
             0
@@ -6931,6 +7592,7 @@
                       )
           Uout
                   )
+      
         1
     )
   ;
@@ -6938,8 +7600,11 @@
     (
       test
       (
+        
           "seb"
+        
           seb
+        
           (
             (
               0
@@ -6947,6 +7612,7 @@
                           )
             Uin
                       )
+        
           2
       )
     ;
@@ -7021,6 +7687,7 @@
           try
           f
           (
+            
               x
           )
           (
@@ -7038,35 +7705,47 @@
   (
     test
     (
+      
         "jacques"
+      
         g
+      
         A
           A
-                  0
+                
+        0
     )
   ;
     sequence
     (
       test
       (
+        
           "jacques"
+        
           g
+        
           A
             C
-                      0
+                    
+          0
       )
     ;
       sequence
       (
         test
         (
+          
             "jacques"
+          
             g
+          
             B
               (
                 B
                                 D
                               )
+          
             1
         )
       ;
@@ -7074,10 +7753,14 @@
         (
           test
           (
+            
               "jacaues"
+            
               g
+            
               C
-                            2
+                          
+              2
           )
         ;
           ()
@@ -7423,8 +8106,11 @@
   (
     test
     (
+      
         "luc"
+      
         f
+      
         (
           B
                     A
@@ -7443,6 +8129,7 @@
                     A
                     A
                   )
+      
         "10"
     )
   ;
@@ -7450,8 +8137,11 @@
     (
       test
       (
+        
           "luc"
+        
           f
+        
           (
             B
                         A
@@ -7470,6 +8160,7 @@
                         A
                         A
                       )
+        
           "12"
       )
     ;
@@ -7488,12 +8179,11 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "False" true
+                False
                   (
                   )
-                Rtag "True" true
+                True
                   (
                   )
               )
@@ -7510,21 +8200,20 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "A" true
+                A
                   (
                   )
-                Rtag "B" true
+                B
                   (
                   )
-                Rtag "U" false
+                U
                   (
                        int
                       (
                       )
                   )
-                Rtag "V" false
+                V
                   (
                        int
                       (
@@ -7597,6 +8286,7 @@
               when
                 predg
                 (
+                  
                     o
                 )
                 1
@@ -7672,6 +8362,7 @@
           try
           raise
           (
+            
               e
           )
           (
@@ -7692,9 +8383,12 @@
                 )
               ^
               (
+                
                   s
+                
                   string_of_int
                   (
+                    
                       r
                   )
               )
@@ -7710,10 +8404,14 @@
       (
         test
         (
+          
             "lucexn1"
+          
             lucexn
+          
             Error
               "coucou"
+          
             "coucou"
         )
       ;
@@ -7721,13 +8419,17 @@
         (
           test
           (
+            
               "lucexn2"
+            
               lucexn
+            
               Found
                 (
                   "int: "
                   0
                 )
+            
               "int: 0"
           )
         ;
@@ -7808,12 +8510,17 @@
     ()
           test
       (
+        
           "pr5758"
+        
           pr5758
           (
+            
               1.
           )
+        
           "A"
+        
           "Matched A"
       )
   )

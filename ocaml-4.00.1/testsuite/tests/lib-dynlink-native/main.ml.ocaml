@@ -4,12 +4,14 @@
     ()
           Api.add_cb
       (
+        
           (
             case
             (
               ()
                             print_endline
               (
+                
                   "Callback from main"
               )
             )
@@ -23,6 +25,7 @@
       (
         Dynlink.init
         (
+          
             ()
                     )
       ;
@@ -30,6 +33,7 @@
         (
           Dynlink.allow_unsafe_modules
           (
+            
               true
                         )
         ;
@@ -39,10 +43,13 @@
             1
             -
             (
+              
                 Array.length
                 (
+                  
                     Sys.argv
                 )
+              
                 1
             )
             let
@@ -51,7 +58,9 @@
                 name
                   Array.get
                   (
+                    
                       Sys.argv
+                    
                       i
                   )
               )
@@ -60,7 +69,9 @@
               (
                 Printf.printf
                 (
+                  
                     "Loading %s\n"
+                  
                     name
                 )
               ;
@@ -68,6 +79,7 @@
                 (
                   flush
                   (
+                    
                       stdout
                   )
                 ;
@@ -78,11 +90,15 @@
                     (
                       =
                       (
+                        
                           String.get
                           (
+                            
                               name
+                            
                               0
                           )
+                        
                           2d
                       )
                     )
@@ -90,16 +106,23 @@
                     (
                       Dynlink.loadfile_private
                       (
+                        
                           String.sub
                           (
+                            
                               name
+                            
                               1
+                            
                               -
                               (
+                                
                                   String.length
                                   (
+                                    
                                       name
                                   )
+                                
                                   1
                               )
                           )
@@ -109,6 +132,7 @@
                     (
                         Dynlink.loadfile
                         (
+                          
                             name
                         )
                     )
@@ -120,9 +144,12 @@
                         err
                       Printf.printf
                       (
+                        
                           "Dynlink error: %s\n"
+                        
                           Dynlink.error_message
                           (
+                            
                               err
                           )
                       )
@@ -132,9 +159,12 @@
                       exn
                       Printf.printf
                       (
+                        
                           "Error: %s\n"
+                        
                           Printexc.to_string
                           (
+                            
                               exn
                           )
                       )
@@ -148,6 +178,7 @@
             (
               flush
               (
+                
                   stdout
               )
             ;
@@ -158,6 +189,7 @@
                   oc
                     open_out_bin
                     (
+                      
                         "marshal.data"
                     )
                 )
@@ -166,11 +198,15 @@
                 (
                   Marshal.to_channel
                   (
+                    
                       oc
+                    
                       !
                       (
+                        
                           Api.cbs
                       )
+                    
                       ::
                         (
                           Marshal.Closures
@@ -182,6 +218,7 @@
                   (
                     close_out
                     (
+                      
                         oc
                     )
                   ;
@@ -191,6 +228,7 @@
                         ic
                           open_in_bin
                           (
+                            
                               "marshal.data"
                           )
                       )
@@ -202,6 +240,7 @@
                             (
                             Marshal.from_channel
                             (
+                              
                                 ic
                             )
                             :
@@ -223,21 +262,25 @@
                         (
                           close_in
                           (
+                            
                               ic
                           )
                         ;
                           List.iter
                           (
+                            
                               (
                                 case
                                 (
                                   f
                                   f
                                   (
+                                    
                                       ()
                                                                         )
                                 )
                               )
+                            
                               l
                           )
                         )
@@ -253,7 +296,9 @@
                     s
                   Printf.printf
                   (
+                    
                       "Failure: %s\n"
+                    
                       s
                   )
                 )

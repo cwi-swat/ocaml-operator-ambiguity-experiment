@@ -10,6 +10,7 @@
           (
             print_string
             (
+              
                 "This is Main.f\n"
             )
           ;
@@ -23,6 +24,7 @@
     ()
           Registry.register
       (
+        
           f
       )
   )
@@ -30,6 +32,7 @@
   (
     Dynlink.init
     (
+      
         ()
             )
   ;
@@ -37,6 +40,7 @@
     (
       Dynlink.allow_unsafe_modules
       (
+        
           true
                 )
     ;
@@ -46,10 +50,13 @@
         1
         -
         (
+          
             Array.length
             (
+              
                 Sys.argv
             )
+          
             1
         )
         let
@@ -58,7 +65,9 @@
             name
               Array.get
               (
+                
                   Sys.argv
+                
                   i
               )
           )
@@ -67,7 +76,9 @@
           (
             Printf.printf
             (
+              
                 "Loading %s\n"
+              
                 name
             )
           ;
@@ -75,6 +86,7 @@
             (
               flush
               (
+                
                   stdout
               )
             ;
@@ -85,11 +97,15 @@
                 (
                   =
                   (
+                    
                       String.get
                       (
+                        
                           name
+                        
                           0
                       )
+                    
                       2d
                   )
                 )
@@ -97,16 +113,23 @@
                 (
                   Dynlink.loadfile_private
                   (
+                    
                       String.sub
                       (
+                        
                           name
+                        
                           1
+                        
                           -
                           (
+                            
                               String.length
                               (
+                                
                                   name
                               )
+                            
                               1
                           )
                       )
@@ -116,6 +139,7 @@
                 (
                     Dynlink.loadfile
                     (
+                      
                         name
                     )
                 )
@@ -127,9 +151,12 @@
                     err
                   Printf.printf
                   (
+                    
                       "Dynlink error: %s\n"
+                    
                       Dynlink.error_message
                       (
+                        
                           err
                       )
                   )
@@ -139,9 +166,12 @@
                   exn
                   Printf.printf
                   (
+                    
                       "Error: %s\n"
+                    
                       Printexc.to_string
                       (
+                        
                           exn
                       )
                   )
@@ -155,6 +185,7 @@
         (
           flush
           (
+            
               stdout
           )
         ;
@@ -165,6 +196,7 @@
               oc
                 open_out_bin
                 (
+                  
                     "marshal.data"
                 )
             )
@@ -173,11 +205,15 @@
             (
               Marshal.to_channel
               (
+                
                   oc
+                
                   Registry.get_functions
                   (
+                    
                       ()
                                         )
+                
                   ::
                     (
                       Marshal.Closures
@@ -189,6 +225,7 @@
               (
                 close_out
                 (
+                  
                     oc
                 )
               ;
@@ -198,6 +235,7 @@
                     ic
                       open_in_bin
                       (
+                        
                           "marshal.data"
                       )
                   )
@@ -209,6 +247,7 @@
                         (
                         Marshal.from_channel
                         (
+                          
                             ic
                         )
                         :
@@ -230,11 +269,13 @@
                     (
                       close_in
                       (
+                        
                           ic
                       )
                     ;
                       List.iter
                       (
+                        
                           (
                             case
                             (
@@ -245,18 +286,22 @@
                                   res
                                     f
                                     (
+                                      
                                         0
                                     )
                                 )
                               in
                                 Printf.printf
                                 (
+                                  
                                     "Result is: %d\n"
+                                  
                                     res
                                 )
                               )
                             )
                           )
+                        
                           l
                       )
                     )
@@ -272,7 +317,9 @@
                 s
               Printf.printf
               (
+                
                   "Failure: %s\n"
+                
                   s
               )
             )

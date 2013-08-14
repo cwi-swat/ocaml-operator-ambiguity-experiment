@@ -4,6 +4,7 @@
     x
       ref
       (
+        
           0
       )
   )
@@ -14,11 +15,13 @@
       (
         Api.reg_mod
         (
+          
             "Plugin_ref"
         )
       ;
         Api.add_cb
         (
+          
             (
               case
               (
@@ -27,15 +30,19 @@
                 (
                   Printf.printf
                   (
+                    
                       "current value for ref = %i\n"
+                    
                       !
                       (
+                        
                           x
                       )
                   )
                 ;
                   incr
                   (
+                    
                       x
                   )
                 )

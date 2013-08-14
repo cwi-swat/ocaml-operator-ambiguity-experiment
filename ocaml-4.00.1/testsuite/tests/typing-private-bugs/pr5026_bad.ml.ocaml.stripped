@@ -77,18 +77,16 @@
   )
   class_type
   (
-    class_type_declaration ([6,153+11]..[8,205+3])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
             "a"
           )
-      pci_name = "s3"
-      pci_expr =
-        class_type ([6,153+21]..[8,205+3])
-          Pcty_signature
+      name = s3
+      expr =
+        class_type
+          signature
           class_signature
-              Ptyp_any
             (
               Pctf_val "underlying" Immutable Concrete ([7,181+2]..[7,181+23])
                    t
@@ -105,17 +103,15 @@
           )
       class name = s3object
       class expr =
-          fun
-          label=""
                     r
             constraint
               class_structure
                 (
-                  Pcf_val "underlying" Immutable Fresh ([10,252+2]..[10,252+20])
+                  underlying
                     r
                 )
-            class_type ([9,211+24]..[9,211+31])
-              Pcty_constr s3
+            class_type
+              constr s3
               (
                   a
               )

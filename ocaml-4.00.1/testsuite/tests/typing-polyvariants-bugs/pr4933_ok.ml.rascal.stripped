@@ -5,17 +5,17 @@
     type
     (  						
        t
-       type
-       params=
-       (
-       )
-       cstrs =
-       (
-       )
-       kind =
-      (
-       int
-      )
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+          int
+          (
+          )
     )
    )    								
   module  Make
@@ -24,24 +24,25 @@
    signature
    (
    )
-   struct
-   (
-   type
-   (  						
-      t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-     (
-      int
-     )
-   )
-   )
+   	struct
+   	(
+   	type
+   	(  						
+   	   t
+   	     type
+   	     params=
+   	     (
+   	     )
+   	     cstrs =
+   	     (
+   	     )
+   	     kind =
+   	      int
+   	      (
+   	      )
+   	)
+   	)
+   	Priv
   )
   module  A
    Make
@@ -56,17 +57,15 @@
     type
     (  						
        t
-       type
-       params=
-       (
-       )
-       cstrs =
-       (
-       )
-       kind =
-      (
-       <"A",[]>
-      )
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+          <"A",[]>
     )
    )    								
   module  Make'
@@ -75,24 +74,23 @@
    signature
    (
    )
-   struct
-   (
-   type
-   (  						
-      t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-     (
-      <[],[<"A",[]>]>
-     )
-   )
-   )
+   	struct
+   	(
+   	type
+   	(  						
+   	   t
+   	     type
+   	     params=
+   	     (
+   	     )
+   	     cstrs =
+   	     (
+   	     )
+   	     kind =
+   	      <[],[<"A",[]>]>
+   	)
+   	)
+   	Priv'
   )
   module  A'
    Make'

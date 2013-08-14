@@ -15,6 +15,7 @@
               )
                 Unix.pipe
                 (
+                  
                     ()
                                     )
             )
@@ -25,6 +26,7 @@
                 _
                   Thread.create
                   (
+                    
                       (
                         case
                         (
@@ -33,11 +35,16 @@
                           (
                             ignore
                             (
+                              
                                 Unix.write
                                 (
+                                  
                                     wr
+                                  
                                     "0123456789"
+                                  
                                     0
+                                  
                                     10
                                 )
                             )
@@ -46,6 +53,7 @@
                             (
                               Thread.delay
                               (
+                                
                                   3.0
                               )
                             ;
@@ -53,11 +61,13 @@
                               (
                                 print_endline
                                 (
+                                  
                                     "closing fd..."
                                 )
                               ;
                                 Unix.close
                                 (
+                                  
                                     rd
                                 )
                               )
@@ -65,6 +75,7 @@
                           )
                         )
                       )
+                    
                       ()
                                         )
               )
@@ -75,6 +86,7 @@
                   buf
                     String.create
                     (
+                      
                         10
                     )
                 )
@@ -83,6 +95,7 @@
                 (
                   print_endline
                   (
+                    
                       "reading..."
                   )
                 ;
@@ -90,17 +103,23 @@
                   (
                     ignore
                     (
+                      
                         Unix.read
                         (
+                          
                             rd
+                          
                             buf
+                          
                             0
+                          
                             10
                         )
                     )
                   ;
                     print_endline
                     (
+                      
                         "read returned"
                     )
                   )
@@ -113,7 +132,9 @@
   )
   Unix.handle_unix_error
   (
+    
       main
+    
       ()
         )
 )

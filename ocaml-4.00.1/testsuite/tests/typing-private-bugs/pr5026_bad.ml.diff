@@ -1,76 +1,19 @@
-13,14d12
-<     (
-<     )
-22d19
-<       <>
-29d25
-<     (
-30a27
->               (
-39d35
-<       <>
-46d41
-<     (
-47a43
->               (
-53d48
-<       <>
-60d54
-<     (
-68d61
-<     )
-78d70
-<     (
-81a74
->                   (
-85c78
-<   classTypeDef 
----
->   class_type
-87c80,91
-<       classTypeDefinition 
----
->     class_type_declaration ([6,153+11]..[8,205+3])
->       pci_virt = Concrete
->       pci_params =
->           (
->             "a"
->           )
->       pci_name = "s3"
->       pci_expr =
->         class_type ([6,153+21]..[8,205+3])
->           Pcty_signature
->           class_signature
->               Ptyp_any
-89c93,94
-<           classTypeDef 
+20d19
+<         <>
+37d35
+<         <>
+51d48
+<         <>
+94,95c91
+<       underlying
+<       poly
 ---
 >               Pctf_val "underlying" Immutable Concrete ([7,181+2]..[7,181+23])
->                    t
-91,93c96
-<               <"a",[]>
-<               s3
-<               <[],[<[],[],"underlying","polytype1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
----
->                       a
-101c104
-<     r
----
->             "a"
-104a108,111
->           fun
->           label=""
->                     r
+110a107
 >             constraint
-107,110c114
-<                    classValue 
-<                    (
-<                        <>
-<                        underlying
----
->                   Pcf_val "underlying" Immutable Fresh ([10,252+2]..[10,252+20])
-112a117,120
->             class_type ([9,211+24]..[9,211+31])
->               Pcty_constr s3
+115a113,117
+>             class_type
+>               constr s3
 >               (
 >                   a
+>               )

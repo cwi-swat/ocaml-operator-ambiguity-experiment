@@ -68,6 +68,7 @@
                       event
                     List.iter
                     (
+                      
                         (
                           case
                           (
@@ -77,11 +78,14 @@
                               x
                             )
                             (
+                              
                                 self
+                              
                                 e
                             )
                           )
                         )
+                      
                         observers
                     )
                   )
@@ -165,6 +169,7 @@
                       )
                     )
                     (
+                      
                         self
                     )
                   )

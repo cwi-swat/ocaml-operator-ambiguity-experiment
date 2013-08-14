@@ -25,12 +25,15 @@
           (
             print_string
             (
+              
                 "This is Plug1.f\n"
             )
           ;
             +
             (
+              
                 x
+              
                 1
             )
           )
@@ -42,6 +45,7 @@
     ()
           Registry.register
       (
+        
           f
       )
   )
@@ -50,8 +54,10 @@
     ()
           print_endline
       (
+        
           stub1
           (
+            
               ()
                         )
       )

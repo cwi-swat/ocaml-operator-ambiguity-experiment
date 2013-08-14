@@ -5,6 +5,7 @@
     all_tests_ok
       ref
       (
+        
           true
                 )
   )
@@ -18,6 +19,7 @@
                     match
           !
           (
+            
               all_tests_ok
           )
           (
@@ -26,6 +28,7 @@
               true
                             print_endline
               (
+                
                   "\nAll tests succeeded."
               )
             )
@@ -34,6 +37,7 @@
               _
               print_endline
               (
+                
                   "\n\n********* Test suite failed. ***********\n"
               )
             )
@@ -43,6 +47,7 @@
   )
   at_exit
   (
+    
       finish
   )
   let
@@ -50,6 +55,7 @@
     test_num
       ref
       (
+        
           -1
       )
   )
@@ -64,6 +70,7 @@
           (
             print_string
             (
+              
                 " "
             )
           ;
@@ -71,14 +78,17 @@
             (
               print_int
               (
+                
                   !
                   (
+                    
                       test_num
                   )
               )
             ;
               flush
               (
+                
                   stdout
               )
             )
@@ -97,11 +107,13 @@
           (
             incr
             (
+              
                 test_num
             )
           ;
             print_test_number
             (
+              
                 ()
                             )
           )
@@ -119,17 +131,23 @@
           (
             :=
             (
+              
                 all_tests_ok
+              
                 false
                             )
           ;
             print_string
             (
+              
                 Printf.sprintf
                 (
+                  
                     "\n********* Test number %i failed ***********\n"
+                  
                     !
                     (
+                      
                         test_num
                     )
                 )
@@ -149,17 +167,23 @@
           (
             :=
             (
+              
                 all_tests_ok
+              
                 false
                             )
           ;
             print_string
             (
+              
                 Printf.sprintf
                 (
+                  
                     "\n********* Failure Test number %i incorrectly failed ***********\n"
+                  
                     !
                     (
+                      
                         test_num
                     )
                 )
@@ -179,17 +203,23 @@
           (
             :=
             (
+              
                 all_tests_ok
+              
                 false
                             )
           ;
             print_string
             (
+              
                 Printf.sprintf
                 (
+                  
                     "\n********* Failure Test number %i failed to fail ***********\n"
+                  
                     !
                     (
+                      
                         test_num
                     )
                 )
@@ -209,6 +239,7 @@
           (
             next_test
             (
+              
                 ()
                             )
           ;
@@ -218,6 +249,7 @@
               (
                 not
                 (
+                  
                     b
                 )
               )
@@ -225,6 +257,7 @@
               (
                 print_test_fail
                 (
+                  
                     ()
                                     )
               )
@@ -255,6 +288,7 @@
                   (
                     next_test
                     (
+                      
                         ()
                                             )
                   ;
@@ -263,8 +297,10 @@
                     (
                       ignore
                       (
+                        
                           f
                           (
+                            
                               x
                           )
                       )
@@ -273,6 +309,7 @@
                       (
                         print_failure_test_succeed
                         (
+                          
                             ()
                                                     )
                       ;
@@ -285,14 +322,18 @@
                         x
                         ||
                         (
+                          
                             pred
                             (
+                              
                                 x
                             )
+                          
                             sequence
                             (
                               print_failure_test_fail
                               (
+                                
                                   ()
                                                                 )
                             ;
@@ -318,6 +359,7 @@
           f
           test_raises_exc_p
           (
+            
               (
                 case
                 (
@@ -325,6 +367,7 @@
                   true
                                   )
               )
+            
               f
           )
         )
@@ -339,13 +382,16 @@
           exc
           test_raises_exc_p
           (
+            
               (
                 case
                 (
                   x
                   =
                   (
+                    
                       x
+                    
                       exc
                   )
                 )
@@ -371,19 +417,24 @@
                   x
                   test_raises_exc_p
                   (
+                    
                       (
                         case
                         (
                           x
                           =
                           (
+                            
                               x
+                            
                               Failure
                                 s
                           )
                         )
                       )
+                    
                       f
+                    
                       x
                   )
                 )
@@ -406,6 +457,7 @@
               x
               test_raises_exc_p
               (
+                
                   (
                     case
                     (
@@ -419,7 +471,9 @@
                       false
                                           )
                   )
+                
                   f
+                
                   x
               )
             )
@@ -444,8 +498,11 @@
                   s
                   test_raises_this_failure
                   (
+                    
                       s
+                    
                       f
+                    
                       x
                   )
                 )
@@ -473,6 +530,7 @@
               x
               test_raises_exc_p
               (
+                
                   (
                     case
                     (
@@ -486,7 +544,9 @@
                       false
                                           )
                   )
+                
                   f
+                
                   x
               )
             )

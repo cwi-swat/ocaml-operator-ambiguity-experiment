@@ -5,7 +5,9 @@
     slave
       Array.get
       (
+        
           Sys.argv
+        
           1
       )
   )
@@ -17,6 +19,7 @@
     )
       Unix.open_process
       (
+        
           slave
       )
   )
@@ -25,6 +28,7 @@
     ib
       Scanf.Scanning.from_channel
       (
+        
           ic
       )
   )
@@ -33,6 +37,7 @@
     ob
       Buffer.create
       (
+        
           1024
       )
   )
@@ -45,8 +50,11 @@
           ob
           send_string
           (
+            
               ob
+            
               oc
+            
               " Ping"
           )
         )
@@ -61,8 +69,11 @@
           ob
           send_string
           (
+            
               ob
+            
               oc
+            
               "stop"
           )
         )
@@ -79,6 +90,7 @@
           (
             Printf.eprintf
             (
+              
                 " Ping"
             )
           ;
@@ -86,6 +98,7 @@
             (
               flush
               (
+                
                   stderr
               )
             ;
@@ -93,6 +106,7 @@
               (
                 send_string_ping
                 (
+                  
                     ob
                 )
               ;
@@ -102,6 +116,7 @@
                     s
                       receive_string
                       (
+                        
                           ib
                       )
                   )
@@ -112,7 +127,9 @@
                     (
                       <>
                       (
+                        
                           s
+                        
                           "-pong"
                       )
                     )
@@ -120,9 +137,12 @@
                     (
                       failwith
                       (
+                        
                           ^
                           (
+                            
                               "Master: unbound string "
+                            
                               s
                           )
                       )
@@ -159,7 +179,9 @@
                 (
                   >
                   (
+                    
                       i
+                    
                       0
                   )
                 )
@@ -169,14 +191,18 @@
                   (
                     interact
                     (
+                      
                         i
                     )
                   ;
                     loop
                     (
+                      
                         -
                         (
+                          
                             i
+                          
                             1
                         )
                     )
@@ -192,6 +218,7 @@
     in
       loop
       (
+        
           n
       )
     )
@@ -200,6 +227,7 @@
   (
     send_string_stop
     (
+      
         ob
     )
   ;
@@ -209,6 +237,7 @@
         ack
           receive_string
           (
+            
               ib
           )
       )
@@ -219,7 +248,9 @@
         (
           =
           (
+            
               ack
+            
               "OK, bye!"
           )
         )
@@ -229,11 +260,13 @@
           (
             print_endline
             (
+              
                 "Test OK."
             )
           ;
             exit
             (
+              
                 0
             )
           )
@@ -244,11 +277,13 @@
             (
               print_endline
               (
+                
                   "Test Failed!"
               )
             ;
               exit
               (
+                
                   2
               )
             )

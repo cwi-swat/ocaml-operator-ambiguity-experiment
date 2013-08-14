@@ -74,10 +74,12 @@
                     ()
                                         make
                     (
+                      
                         (
                         lazy
                         obj
                         (
+                          
                             ()
                                                     )
                         :
@@ -93,6 +95,7 @@
           in
             obj
             (
+              
                 ()
                             )
           )
@@ -159,9 +162,8 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "Var" false
+                Var
                   (
                        string
                       (
@@ -190,7 +192,9 @@
                     try
                     Subst.find
                     (
+                      
                         s
+                      
                         sub
                     )
                     (
@@ -212,6 +216,7 @@
                   s
                 Names.singleton
                 (
+                  
                     s
                 )
               )
@@ -222,7 +227,7 @@
               (
                 alias v
                 (
-                  pat_type                  var
+                  var
                 )
                 v
               )
@@ -242,15 +247,14 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "Var" false
+                Var
                   (
                        string
                       (
                       )
                   )
-                Rtag "Abs" false
+                Abs
                   (
                       tuple
                       (
@@ -260,7 +264,7 @@
                           a
                       )
                   )
-                Rtag "App" false
+                App
                   (
                       tuple
                       (
@@ -279,6 +283,7 @@
           current
             ref
             (
+              
                 3
             )
         )
@@ -291,11 +296,13 @@
             (
               incr
               (
+                
                   current
               )
             ;
               !
               (
+                
                   current
               )
             )
@@ -327,6 +334,7 @@
                 (
                   !!
                   (
+                    
                       ops
                   )
                 )
@@ -336,6 +344,7 @@
                 (
                   !!
                   (
+                    
                       ops
                   )
                 )
@@ -345,6 +354,7 @@
                 (
                   !!
                   (
+                    
                       ops
                   )
                 )
@@ -358,13 +368,14 @@
                     (
                       alias x
                       (
-                        pat_type                        var
+                        var
                       )
                       send free
                       (
                         var
                       )
                       (
+                        
                           x
                       )
                     )
@@ -377,12 +388,16 @@
                         )
                       Names.remove
                       (
+                        
                           s
+                        
                           !!
                           (
+                            
                               free
                           )
                           (
+                            
                               t
                           )
                       )
@@ -396,18 +411,24 @@
                         )
                       Names.union
                       (
+                        
                           !!
                           (
+                            
                               free
                           )
                           (
+                            
                               t1
                           )
+                        
                           !!
                           (
+                            
                               free
                           )
                           (
+                            
                               t2
                           )
                       )
@@ -423,7 +444,7 @@
                         (
                           alias x
                           (
-                            pat_type                            var
+                            var
                           )
                           x
                         )
@@ -443,6 +464,7 @@
                               t'
                                 f
                                 (
+                                  
                                     t
                                 )
                             )
@@ -453,7 +475,9 @@
                               (
                                 ==
                                 (
+                                  
                                     t
+                                  
                                     t'
                                 )
                               )
@@ -488,11 +512,13 @@
                               t'1
                                 f
                                 (
+                                  
                                     t1
                                 )
                               t'2
                                 f
                                 (
+                                  
                                     t2
                                 )
                             )
@@ -503,14 +529,20 @@
                               (
                                 &&
                                 (
+                                  
                                     ==
                                     (
+                                      
                                         t'1
+                                      
                                         t1
                                     )
+                                  
                                     ==
                                     (
+                                      
                                         t'2
+                                      
                                         t2
                                     )
                                 )
@@ -543,14 +575,16 @@
                         (
                           alias x
                           (
-                            pat_type                            var
+                            var
                           )
                           send subst
                           (
                             var
                           )
                           (
+                            sub
                               sub
+                            
                               x
                           )
                         )
@@ -570,9 +604,11 @@
                               used
                                 !!
                                 (
+                                  
                                     free
                                 )
                                 (
+                                  
                                     t
                                 )
                             )
@@ -583,9 +619,12 @@
                                 used_expr
                                   Subst.fold
                                   (
+                                    
                                       sub
+                                    init
                                       []
-                                                                            (
+                                                                          f
+                                      (
                                         case
                                         (
                                           key
@@ -603,7 +642,9 @@
                                                     (
                                                       Names.mem
                                                       (
+                                                        
                                                           s
+                                                        
                                                           used
                                                       )
                                                     )
@@ -635,19 +676,25 @@
                                 (
                                   List.exists
                                   (
+                                    
                                       used_expr
+                                    f
                                       (
                                         case
                                         (
                                           t
                                           Names.mem
                                           (
+                                            
                                               s
+                                            
                                               !!
                                               (
+                                                
                                                   free
                                               )
                                               (
+                                                
                                                   t
                                               )
                                           )
@@ -663,11 +710,15 @@
                                       name
                                         ^
                                         (
+                                          
                                             s
+                                          
                                             string_of_int
                                             (
+                                              
                                                 next_id
                                                 (
+                                                  
                                                     ()
                                                                                                     )
                                             )
@@ -679,16 +730,22 @@
                                         name
                                         !!
                                         (
+                                          
                                             subst
                                         )
                                         (
+                                          sub
                                             Subst.add
                                             (
+                                              key
                                                 s
+                                              data
                                                 Var
                                                   name
+                                              
                                                 sub
                                             )
+                                          
                                             t
                                         )
                                       )
@@ -701,17 +758,23 @@
                                       self
                                     )
                                     (
+                                      f
                                         !!
                                         (
+                                          
                                             subst
                                         )
                                         (
+                                          sub
                                             Subst.remove
                                             (
+                                              
                                                 s
+                                              
                                                 sub
                                             )
                                         )
+                                      
                                         l
                                     )
                                 )
@@ -731,13 +794,17 @@
                             self
                           )
                           (
+                            f
                               !!
                               (
+                                
                                   subst
                               )
                               (
+                                sub
                                   sub
                               )
+                            
                               l
                           )
                         )
@@ -755,10 +822,13 @@
                         self
                       )
                       (
+                        f
                           !!
                           (
+                            
                               eval
                           )
+                        
                           l
                       )
                       (
@@ -775,20 +845,28 @@
                             )
                           !!
                           (
+                            
                               eval
                           )
                           (
+                            
                               !!
                               (
+                                
                                   subst
                               )
                               (
+                                sub
                                   Subst.add
                                   (
+                                    key
                                       s
+                                    data
                                       t2
+                                    
                                       Subst.empty
                                   )
+                                
                                   t1
                               )
                           )
@@ -811,6 +889,7 @@
     lambda
       lazy_fix
       (
+        
           lambda_ops
       )
   )
@@ -827,21 +906,20 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "Var" false
+                Var
                   (
                        string
                       (
                       )
                   )
-                Rtag "Num" false
+                Num
                   (
                        int
                       (
                       )
                   )
-                Rtag "Add" false
+                Add
                   (
                       tuple
                       (
@@ -849,11 +927,11 @@
                           a
                       )
                   )
-                Rtag "Neg" false
+                Neg
                   (
                       a
                   )
-                Rtag "Mult" false
+                Mult
                   (
                       tuple
                       (
@@ -887,6 +965,7 @@
                 (
                   !!
                   (
+                    
                       ops
                   )
                 )
@@ -896,6 +975,7 @@
                 (
                   !!
                   (
+                    
                       ops
                   )
                 )
@@ -905,6 +985,7 @@
                 (
                   !!
                   (
+                    
                       ops
                   )
                 )
@@ -918,13 +999,14 @@
                     (
                       alias x
                       (
-                        pat_type                        var
+                        var
                       )
                       send free
                       (
                         var
                       )
                       (
+                        
                           x
                       )
                     )
@@ -943,18 +1025,24 @@
                         )
                       Names.union
                       (
+                        
                           !!
                           (
+                            
                               free
                           )
                           (
+                            
                               x
                           )
+                        
                           !!
                           (
+                            
                               free
                           )
                           (
+                            
                               y
                           )
                       )
@@ -965,9 +1053,11 @@
                         x
                       !!
                       (
+                        
                           free
                       )
                       (
+                        
                           x
                       )
                     )
@@ -980,18 +1070,24 @@
                         )
                       Names.union
                       (
+                        
                           !!
                           (
+                            
                               free
                           )
                           (
+                            
                               x
                           )
+                        
                           !!
                           (
+                            
                               free
                           )
                           (
+                            
                               y
                           )
                       )
@@ -1007,7 +1103,7 @@
                         (
                           alias x
                           (
-                            pat_type                            var
+                            var
                           )
                           x
                         )
@@ -1036,11 +1132,13 @@
                               x'
                                 f
                                 (
+                                  
                                     x
                                 )
                               y'
                                 f
                                 (
+                                  
                                     y
                                 )
                             )
@@ -1051,14 +1149,20 @@
                               (
                                 &&
                                 (
+                                  
                                     ==
                                     (
+                                      
                                         x
+                                      
                                         x'
                                     )
+                                  
                                     ==
                                     (
+                                      
                                         y
+                                      
                                         y'
                                     )
                                 )
@@ -1091,6 +1195,7 @@
                               x'
                                 f
                                 (
+                                  
                                     x
                                 )
                             )
@@ -1101,7 +1206,9 @@
                               (
                                 ==
                                 (
+                                  
                                     x
+                                  
                                     x'
                                 )
                               )
@@ -1133,11 +1240,13 @@
                               x'
                                 f
                                 (
+                                  
                                     x
                                 )
                               y'
                                 f
                                 (
+                                  
                                     y
                                 )
                             )
@@ -1148,14 +1257,20 @@
                               (
                                 &&
                                 (
+                                  
                                     ==
                                     (
+                                      
                                         x
+                                      
                                         x'
                                     )
+                                  
                                     ==
                                     (
+                                      
                                         y
+                                      
                                         y'
                                     )
                                 )
@@ -1188,14 +1303,16 @@
                         (
                           alias x
                           (
-                            pat_type                            var
+                            var
                           )
                           send subst
                           (
                             var
                           )
                           (
+                            sub
                               sub
+                            
                               x
                           )
                         )
@@ -1203,20 +1320,24 @@
                         (
                           alias e
                           (
-                            pat_type                            expr
+                            expr
                           )
                           send map
                           (
                             self
                           )
                           (
+                            f
                               !!
                               (
+                                
                                   subst
                               )
                               (
+                                sub
                                   sub
                               )
+                            
                               e
                           )
                         )
@@ -1229,7 +1350,7 @@
                     (
                       alias e
                       (
-                        pat_type                        expr
+                        expr
                       )
                       match
                       send map
@@ -1237,10 +1358,13 @@
                         self
                       )
                       (
+                        f
                           !!
                           (
+                            
                               eval
                           )
+                        
                           e
                       )
                       (
@@ -1256,7 +1380,9 @@
                           Num
                             +
                             (
+                              
                                 m
+                              
                                 n
                             )
                         )
@@ -1268,6 +1394,7 @@
                           Num
                             ~-
                             (
+                              
                                 n
                             )
                         )
@@ -1283,7 +1410,9 @@
                           Num
                             *
                             (
+                              
                                 m
+                              
                                 n
                             )
                         )
@@ -1305,6 +1434,7 @@
     expr
       lazy_fix
       (
+        
           expr_ops
       )
   )
@@ -1321,7 +1451,6 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
                 Rinherit
                      lambda
@@ -1356,6 +1485,7 @@
               lambda
                 lambda_ops
                 (
+                  
                     ops
                 )
             )
@@ -1366,6 +1496,7 @@
                 expr
                   expr_ops
                   (
+                    
                       ops
                   )
               )
@@ -1378,13 +1509,14 @@
                       (
                         alias x
                         (
-                          pat_type                          lambda
+                          lambda
                         )
                         send free
                         (
                           lambda
                         )
                         (
+                          
                             x
                         )
                       )
@@ -1392,13 +1524,14 @@
                       (
                         alias x
                         (
-                          pat_type                          expr
+                          expr
                         )
                         send free
                         (
                           expr
                         )
                         (
+                          
                             x
                         )
                       )
@@ -1413,14 +1546,16 @@
                           (
                             alias x
                             (
-                              pat_type                              lambda
+                              lambda
                             )
                             send subst
                             (
                               lambda
                             )
                             (
+                              sub
                                 sub
+                              
                                 x
                             )
                           )
@@ -1428,14 +1563,16 @@
                           (
                             alias x
                             (
-                              pat_type                              expr
+                              expr
                             )
                             send subst
                             (
                               expr
                             )
                             (
+                              sub
                                 sub
+                              
                                 x
                             )
                           )
@@ -1448,13 +1585,14 @@
                       (
                         alias x
                         (
-                          pat_type                          lambda
+                          lambda
                         )
                         send eval
                         (
                           lambda
                         )
                         (
+                          
                             x
                         )
                       )
@@ -1462,13 +1600,14 @@
                       (
                         alias x
                         (
-                          pat_type                          expr
+                          expr
                         )
                         send eval
                         (
                           expr
                         )
                         (
+                          
                             x
                         )
                       )
@@ -1484,6 +1623,7 @@
     lexpr
       lazy_fix
       (
+        
           lexpr_ops
       )
   )
@@ -1497,6 +1637,7 @@
             id
           print_string
           (
+            
               id
           )
         )
@@ -1511,12 +1652,17 @@
           (
             print_string
             (
+              
                 ^
                 (
+                  
                     " "
+                  
                     ^
                     (
+                      
                         id
+                      
                         " . "
                     )
                 )
@@ -1524,6 +1670,7 @@
           ;
             print
             (
+              
                 l
             )
           )
@@ -1539,6 +1686,7 @@
           (
             print
             (
+              
                 l1
             )
           ;
@@ -1546,11 +1694,13 @@
             (
               print_string
               (
+                
                   " "
               )
             ;
               print
               (
+                
                   l2
               )
             )
@@ -1562,6 +1712,7 @@
             x
           print_int
           (
+            
               x
           )
         )
@@ -1576,6 +1727,7 @@
           (
             print
             (
+              
                 e1
             )
           ;
@@ -1583,11 +1735,13 @@
             (
               print_string
               (
+                
                   " + "
               )
             ;
               print
               (
+                
                   e2
               )
             )
@@ -1601,11 +1755,13 @@
           (
             print_string
             (
+              
                 "-"
             )
           ;
             print
             (
+              
                 e
             )
           )
@@ -1621,6 +1777,7 @@
           (
             print
             (
+              
                 e1
             )
           ;
@@ -1628,11 +1785,13 @@
             (
               print_string
               (
+                
                   " * "
               )
             ;
               print
               (
+                
                   e2
               )
             )
@@ -1652,6 +1811,7 @@
               lambda
             )
             (
+              
                 App
                   (
                     Abs
@@ -1675,6 +1835,7 @@
                 expr
               )
               (
+                
                   Add
                     (
                       Mult
@@ -1700,6 +1861,7 @@
                   lexpr
                 )
                 (
+                  
                     Add
                       (
                         App
@@ -1728,6 +1890,7 @@
             (
               print
               (
+                
                   e1
               )
             ;
@@ -1735,6 +1898,7 @@
               (
                 print_newline
                 (
+                  
                     ()
                                     )
               ;
@@ -1742,6 +1906,7 @@
                 (
                   print
                   (
+                    
                       e2
                   )
                 ;
@@ -1749,6 +1914,7 @@
                   (
                     print_newline
                     (
+                      
                         ()
                                             )
                   ;
@@ -1756,11 +1922,13 @@
                     (
                       print
                       (
+                        
                           e3
                       )
                     ;
                       print_newline
                       (
+                        
                           ()
                                                 )
                     )

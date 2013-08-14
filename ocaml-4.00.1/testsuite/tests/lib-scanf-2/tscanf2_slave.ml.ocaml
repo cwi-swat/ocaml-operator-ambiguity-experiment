@@ -5,6 +5,7 @@
     ib
       Scanf.Scanning.from_channel
       (
+        
           stdin
       )
   )
@@ -13,6 +14,7 @@
     ob
       Buffer.create
       (
+        
           1024
       )
     oc
@@ -27,8 +29,11 @@
           ob
           send_string
           (
+            
               ob
+            
               oc
+            
               "-pong"
           )
         )
@@ -43,8 +48,11 @@
           ob
           send_string
           (
+            
               ob
+            
               oc
+            
               "OK, bye!"
           )
         )
@@ -58,6 +66,7 @@
       s
         receive_string
         (
+          
             ib
         )
     )
@@ -72,6 +81,7 @@
         (
           Printf.eprintf
           (
+            
               "-pong"
           )
         ;
@@ -79,11 +89,13 @@
           (
             flush
             (
+              
                 stderr
             )
           ;
             send_string_pong
             (
+              
                 ob
             )
           )
@@ -96,6 +108,7 @@
         (
           Printf.eprintf
           (
+            
               "!\n"
           )
         ;
@@ -103,6 +116,7 @@
           (
             flush
             (
+              
                 stderr
             )
           ;
@@ -110,11 +124,13 @@
             (
               send_string_okbye
               (
+                
                   ob
               )
             ;
               exit
               (
+                
                   0
               )
             )
@@ -126,9 +142,12 @@
         s
         failwith
         (
+          
             ^
             (
+              
                 "Slave: unbound string "
+              
                 s
             )
         )

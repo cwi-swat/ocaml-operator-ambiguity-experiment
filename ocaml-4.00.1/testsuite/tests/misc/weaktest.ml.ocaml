@@ -42,20 +42,27 @@
                   (
                     eprintf
                     (
+                      
                         "equal: %s / %s\n"
+                      
                         List.hd
                         (
+                          
                             x
                         )
+                      
                         List.hd
                         (
+                          
                             y
                         )
                     )
                   ;
                     =
                     (
+                      
                         x
+                      
                         y
                     )
                   )
@@ -73,8 +80,10 @@
               x
               Hashtbl.hash
               (
+                
                   List.hd
                   (
+                    
                       x
                   )
               )
@@ -92,6 +101,7 @@
     tbl
       HT.create
       (
+        
           7
       )
   )
@@ -100,6 +110,7 @@
     r
       ref
       (
+        
           []
                 )
   )
@@ -112,10 +123,13 @@
         (
           <
           (
+            
               Array.length
               (
+                
                   Sys.argv
               )
+            
               2
           )
         )
@@ -127,9 +141,12 @@
         (
             int_of_string
             (
+              
                 Array.get
                 (
+                  
                     Sys.argv
+                  
                     1
                 )
             )
@@ -138,6 +155,7 @@
   )
   Random.init
   (
+    
       314
   )
   let
@@ -153,6 +171,7 @@
               result
                 String.create
                 (
+                  
                     n
                 )
             )
@@ -163,20 +182,29 @@
               0
               -
               (
+                
                   n
+                
                   1
               )
               String.set
               (
+                
                   result
+                
                   i
+                
                   Char.chr
                   (
+                    
                       +
                       (
+                        
                           32
+                        
                           Random.int
                           (
+                            
                               95
                           )
                       )
@@ -194,6 +222,7 @@
     added
       ref
       (
+        
           0
       )
   )
@@ -202,6 +231,7 @@
     mistakes
       ref
       (
+        
           0
       )
   )
@@ -225,6 +255,7 @@
               )
                 HT.stats
                 (
+                  
                     tbl
                 )
             )
@@ -237,16 +268,23 @@
                 (
                   >
                   (
+                    
                       entries
+                    
                       *
                       (
+                        
                           bunch
+                        
                           +
                           (
+                            
                               !
                               (
+                                
                                   added
                               )
+                            
                               1
                           )
                       )
@@ -268,6 +306,7 @@
                         (
                           printf
                           (
+                            
                               "\n===================\n"
                           )
                         ;
@@ -275,7 +314,9 @@
                           (
                             printf
                             (
+                              
                                 "len = %d\n"
+                              
                                 len
                             )
                           ;
@@ -283,7 +324,9 @@
                             (
                               printf
                               (
+                                
                                   "entries = %d\n"
+                                
                                   entries
                               )
                             ;
@@ -291,7 +334,9 @@
                               (
                                 printf
                                 (
+                                  
                                     "sum of bucket sizes = %d\n"
+                                  
                                     sumbuck
                                 )
                               ;
@@ -299,7 +344,9 @@
                                 (
                                   printf
                                   (
+                                    
                                       "min bucket = %d\n"
+                                    
                                       buckmin
                                   )
                                 ;
@@ -307,7 +354,9 @@
                                   (
                                     printf
                                     (
+                                      
                                         "med bucket = %d\n"
+                                      
                                         buckmed
                                     )
                                   ;
@@ -315,7 +364,9 @@
                                     (
                                       printf
                                       (
+                                        
                                           "max bucket = %d\n"
+                                        
                                           buckmax
                                       )
                                     ;
@@ -323,11 +374,14 @@
                                       (
                                         printf
                                         (
+                                          
                                             "GC count = %d\n"
+                                          
                                             field
                                             (
                                             Gc.quick_stat
                                             (
+                                              
                                                 ()
                                                                                             )
                                             Gc.major_collections
@@ -336,6 +390,7 @@
                                       ;
                                         flush
                                         (
+                                          
                                             stdout
                                         )
                                       )
@@ -354,6 +409,7 @@
                   ;
                     incr
                     (
+                      
                         mistakes
                     )
                   )
@@ -365,7 +421,9 @@
             ;
               :=
               (
+                
                   added
+                
                   0
               )
             )
@@ -375,6 +433,7 @@
   )
   Gc.create_alarm
   (
+    
       print_status
   )
   for j
@@ -384,7 +443,9 @@
   (
     :=
     (
+      
         r
+      
         []
             )
   ;
@@ -392,6 +453,7 @@
     (
       incr
       (
+        
           added
       )
     ;
@@ -404,6 +466,7 @@
           c
             random_string
             (
+              
                 7
             )
         )
@@ -412,12 +475,15 @@
         (
           :=
           (
+            
               r
+            
               ::
                 (
                   c
                   !
                   (
+                    
                       r
                   )
                 )
@@ -425,9 +491,12 @@
         ;
           HT.add
           (
+            
               tbl
+            
               !
               (
+                
                   r
               )
           )
@@ -441,10 +510,13 @@
     (
       <
       (
+        
           !
           (
+            
               mistakes
           )
+        
           5
       )
     )
@@ -452,6 +524,7 @@
     (
       printf
       (
+        
           "pass\n"
       )
     )
@@ -459,6 +532,7 @@
     (
         printf
         (
+          
             "fail\n"
         )
     )

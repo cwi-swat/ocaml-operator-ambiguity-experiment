@@ -161,10 +161,13 @@
                   VList
                     List.map
                     (
+                      
                         variantize
                         (
+                          
                             ty1
                         )
+                      
                         x
                     )
                 )
@@ -179,17 +182,23 @@
                     (
                       variantize
                       (
+                        
                           ty1
+                        
                           fst
                           (
+                            
                               x
                           )
                       )
                       variantize
                       (
+                        
                           ty2
+                        
                           snd
                           (
+                            
                               x
                           )
                       )
@@ -283,10 +292,13 @@
                   )
                   List.map
                   (
+                    
                       devariantize
                       (
+                        
                           ty1
                       )
+                    
                       vl
                   )
                 )
@@ -307,12 +319,16 @@
                   (
                     devariantize
                     (
+                      
                         ty1
+                      
                         x1
                     )
                     devariantize
                     (
+                      
                         ty2
+                      
                         x2
                     )
                   )
@@ -322,6 +338,7 @@
                   _
                   raise
                   (
+                    
                       VariantMismatch
                                         )
                 )
@@ -622,10 +639,13 @@
                   VList
                     List.map
                     (
+                      
                         variantize
                         (
+                          
                             ty1
                         )
+                      
                         x
                     )
                 )
@@ -640,17 +660,23 @@
                     (
                       variantize
                       (
+                        
                           ty1
+                        
                           fst
                           (
+                            
                               x
                           )
                       )
                       variantize
                       (
+                        
                           ty2
+                        
                           snd
                           (
+                            
                               x
                           )
                       )
@@ -667,6 +693,7 @@
                   VRecord
                     List.map
                     (
+                      
                         (
                           case
                           (
@@ -684,15 +711,19 @@
                               label
                               variantize
                               (
+                                
                                   field_type
+                                
                                   get
                                   (
+                                    
                                       x
                                   )
                               )
                             )
                           )
                         )
+                      
                         fields
                     )
                 )
@@ -981,10 +1012,13 @@
                   )
                   List.map
                   (
+                    
                       devariantize
                       (
+                        
                           ty1
                       )
+                    
                       vl
                   )
                 )
@@ -1005,12 +1039,16 @@
                   (
                     devariantize
                     (
+                      
                         ty1
+                      
                         x1
                     )
                     devariantize
                     (
+                      
                         ty2
+                      
                         x2
                     )
                   )
@@ -1039,12 +1077,16 @@
                       (
                         <>
                         (
+                          
                             List.length
                             (
+                              
                                 fields
                             )
+                          
                             List.length
                             (
+                              
                                 fl
                             )
                         )
@@ -1053,6 +1095,7 @@
                       (
                         raise
                         (
+                          
                             VariantMismatch
                                                     )
                       )
@@ -1067,6 +1110,7 @@
                         builder
                           create_builder
                           (
+                            
                               ()
                                                         )
                       )
@@ -1075,6 +1119,7 @@
                       (
                         List.iter2
                         (
+                          
                             (
                               case
                               (
@@ -1103,7 +1148,9 @@
                                         (
                                           <>
                                           (
+                                            
                                               label
+                                            
                                               lab
                                           )
                                         )
@@ -1111,6 +1158,7 @@
                                         (
                                           raise
                                           (
+                                            
                                               VariantMismatch
                                                                                         )
                                         )
@@ -1121,10 +1169,14 @@
                                     ;
                                       set
                                       (
+                                        
                                           builder
+                                        
                                           devariantize
                                           (
+                                            
                                               field_type
+                                            
                                               v
                                           )
                                       )
@@ -1133,12 +1185,15 @@
                                 )
                               )
                             )
+                          
                             fields
+                          
                             fl
                         )
                       ;
                         of_builder
                         (
+                          
                             builder
                         )
                       )
@@ -1150,6 +1205,7 @@
                   _
                   raise
                   (
+                    
                       VariantMismatch
                                         )
                 )
@@ -1248,7 +1304,9 @@
                               x
                               :=
                               (
+                                
                                   r
+                                
                                   Some
                                     x
                               )
@@ -1293,7 +1351,9 @@
                                   x
                                   :=
                                   (
+                                    
                                       r
+                                    
                                       Some
                                         x
                                   )
@@ -1318,10 +1378,12 @@
                                     (
                     ref
                     (
+                      
                         None
                                             )
                     ref
                     (
+                      
                         None
                                             )
                   )
@@ -1344,10 +1406,12 @@
                     (
                       !
                       (
+                        
                           a
                       )
                       !
                       (
+                        
                           b
                       )
                     )
@@ -1373,6 +1437,7 @@
                         _
                         failwith
                         (
+                          
                             "Some fields are missing in record of type my_record"
                         )
                       )
@@ -1902,7 +1967,9 @@
                   match
                   eq_sel
                   (
+                    
                       s1
+                    
                       s2
                   )
                   (
@@ -2038,7 +2105,9 @@
                   match
                   eq_sel
                   (
+                    
                       sel
+                    
                       sel'
                   )
                   (
@@ -2047,7 +2116,9 @@
                       None
                                             get_case
                       (
+                        
                           sel
+                        
                           rem
                       )
                     )
@@ -2079,7 +2150,9 @@
                   match
                   eq_sel
                   (
+                    
                       sel
+                    
                       sel'
                   )
                   (
@@ -2088,7 +2161,9 @@
                       None
                                             get_case
                       (
+                        
                           sel
+                        
                           rem
                       )
                     )
@@ -2109,6 +2184,7 @@
                   []
                                     raise
                   (
+                    
                       Not_found
                                         )
                 )
@@ -2258,6 +2334,7 @@
               Some
                 f
                 (
+                  
                     x
                 )
             )
@@ -2331,11 +2408,15 @@
                       VList
                         List.map
                         (
+                          
                             variantize
                             (
+                              
                                 e
+                              
                                 t
                             )
+                          
                             v
                         )
                     )
@@ -2346,11 +2427,15 @@
                       VOption
                         may_map
                         (
+                          
                             variantize
                             (
+                              
                                 e
+                              
                                 t
                             )
+                          
                             v
                         )
                     )
@@ -2365,19 +2450,27 @@
                         (
                           variantize
                           (
+                            
                               e
+                            
                               t1
+                            
                               fst
                               (
+                                
                                   v
                               )
                           )
                           variantize
                           (
+                            
                               e
+                            
                               t2
+                            
                               snd
                               (
+                                
                                   v
                               )
                           )
@@ -2389,12 +2482,15 @@
                         t
                       variantize
                       (
+                        
                           Econs
                             (
                               ty
                               e
                             )
+                        
                           t
+                        
                           v
                       )
                     )
@@ -2414,8 +2510,11 @@
                             )
                           variantize
                           (
+                            
                               e'
+                            
                               t
+                            
                               v
                           )
                         )
@@ -2436,8 +2535,11 @@
                             )
                           variantize
                           (
+                            
                               e'
+                            
                               t
+                            
                               v
                           )
                         )
@@ -2457,10 +2559,14 @@
                           s
                           variantize
                           (
+                            
                               e
+                            
                               t
+                            
                               proj
                               (
+                                
                                   v
                               )
                           )
@@ -2483,6 +2589,7 @@
                             sum_proj
                             )
                             (
+                              
                                 v
                             )
                         )
@@ -2492,6 +2599,7 @@
                             tag
                             may_map
                             (
+                              
                                 (
                                   case
                                   (
@@ -2502,12 +2610,16 @@
                                       )
                                     variantize
                                     (
+                                      
                                         e
+                                      
                                         ty
+                                      
                                         arg
                                     )
                                   )
                                 )
+                              
                                 arg
                             )
                           )
@@ -2623,11 +2735,15 @@
                       )
                       List.map
                       (
+                        
                           devariantize
                           (
+                            
                               e
+                            
                               ty1
                           )
+                        
                           vl
                       )
                     )
@@ -2648,14 +2764,20 @@
                       (
                         devariantize
                         (
+                          
                             e
+                          
                             ty1
+                          
                             x1
                         )
                         devariantize
                         (
+                          
                             e
+                          
                             ty2
+                          
                             x2
                         )
                       )
@@ -2669,12 +2791,15 @@
                       )
                       devariantize
                       (
+                        
                           Econs
                             (
                               ty
                               e
                             )
+                        
                           t
+                        
                           v
                       )
                     )
@@ -2697,8 +2822,11 @@
                             )
                           devariantize
                           (
+                            
                               e'
+                            
                               t
+                            
                               v
                           )
                         )
@@ -2722,8 +2850,11 @@
                             )
                           devariantize
                           (
+                            
                               e'
+                            
                               t
+                            
                               v
                           )
                         )
@@ -2748,15 +2879,21 @@
                       when
                         =
                         (
+                          
                             s
+                          
                             s'
                         )
                         inj
                         (
+                          
                             devariantize
                             (
+                              
                                 e
+                              
                                 t
+                              
                                 v
                             )
                         )
@@ -2777,7 +2914,9 @@
                       (
                         List.assoc
                         (
+                          
                             tag
+                          
                             field
                             (
                             ops
@@ -2804,12 +2943,16 @@
                           sum_inj
                           )
                           (
+                            
                               (
                                 sel
                                 devariantize
                                 (
+                                  
                                     e
+                                  
                                     t
+                                  
                                     a
                                 )
                               )
@@ -2828,6 +2971,7 @@
                           sum_inj
                           )
                           (
+                            
                               (
                                 sel
                                 Noarg
@@ -2839,6 +2983,7 @@
                           _
                           raise
                           (
+                            
                               VariantMismatch
                                                         )
                         )
@@ -2849,6 +2994,7 @@
                           Not_found
                                                     raise
                           (
+                            
                               VariantMismatch
                                                         )
                         )
@@ -2859,6 +3005,7 @@
                       _
                       raise
                       (
+                        
                           VariantMismatch
                                                 )
                     )
@@ -2940,6 +3087,7 @@
           Rec
             wrap_A
             (
+              
                 Option
                   Pair
                     (
@@ -2955,9 +3103,12 @@
     v
       variantize
       (
+        
           Enil
-                    ty
+                  
+          ty
           (
+            
               Int
                         )
       )
@@ -2967,6 +3118,7 @@
     x
       v
       (
+        
           A
             Some
               (
@@ -3055,13 +3207,19 @@
     v
       variantize
       (
+        
           Enil
-                    triple
+                  
+          triple
           (
+            
               String
-                            Int
-                            Int
+                          
+              Int
+                          
+              Int
                         )
+        
           (
             "A"
             2
@@ -3145,21 +3303,20 @@
                     )
                     c
                 )
-                Ptyp_variant closed=true
                 (
-                  Rtag "A" false
+                  A
                     (
                          int
                         (
                         )
                     )
-                  Rtag "B" false
+                  B
                     (
                          string
                         (
                         )
                     )
-                  Rtag "C" true
+                  C
                     (
                     )
                 )
@@ -3229,21 +3386,20 @@
                       (
                       )
                   )
-                  Ptyp_variant closed=true
                   (
-                    Rtag "A" false
+                    A
                       (
                            int
                           (
                           )
                       )
-                    Rtag "B" false
+                    B
                       (
                            string
                           (
                           )
                       )
-                    Rtag "C" true
+                    C
                       (
                       )
                   )
@@ -3300,8 +3456,11 @@
     v
       variantize
       (
+        
           Enil
-                    ty_abc
+                  
+          ty_abc
+        
           A
             3
       )
@@ -3311,8 +3470,11 @@
     a
       devariantize
       (
+        
           Enil
-                    ty_abc
+                  
+          ty_abc
+        
           v
       )
   )
@@ -3329,12 +3491,11 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "Nil" true
+                Nil
                   (
                   )
-                Rtag "Cons" false
+                Cons
                   (
                       tuple
                       (
@@ -3539,11 +3700,15 @@
     v
       variantize
       (
+        
           Enil
-                    ty_list
+                  
+          ty_list
           (
+            
               Int
                         )
+        
           Cons
             (
               1
@@ -3866,6 +4031,7 @@
               _
               invalid_arg
               (
+                
                   "ty_abc"
               )
             )
@@ -3874,21 +4040,20 @@
       :
            ty
           (
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        int
                       (
                       )
                   )
-                Rtag "B" false
+                B
                   (
                        string
                       (
                       )
                   )
-                Rtag "C" true
+                C
                   (
                   )
               )
@@ -4523,21 +4688,20 @@
                         (
                         )
                     )
-                    Ptyp_variant closed=true
                     (
-                      Rtag "A" false
+                      A
                         (
                              int
                             (
                             )
                         )
-                      Rtag "B" false
+                      B
                         (
                              string
                             (
                             )
                         )
-                      Rtag "C" true
+                      C
                         (
                         )
                     )
@@ -4572,21 +4736,20 @@
                           )
                           c
                       )
-                      Ptyp_variant closed=true
                       (
-                        Rtag "A" false
+                        A
                           (
                                int
                               (
                               )
                           )
-                        Rtag "B" false
+                        B
                           (
                                string
                               (
                               )
                           )
-                        Rtag "C" true
+                        C
                           (
                           )
                       )
@@ -4595,21 +4758,20 @@
            ty
           (
               Ptyp_alias "a"
-                Ptyp_variant closed=true
                 (
-                  Rtag "A" false
+                  A
                     (
                          int
                         (
                         )
                     )
-                  Rtag "B" false
+                  B
                     (
                          string
                         (
                         )
                     )
-                  Rtag "C" true
+                  C
                     (
                     )
                 )
@@ -4630,12 +4792,11 @@
           )
         kind =
           
-              Ptyp_variant closed=true
               (
-                Rtag "Nil" true
+                Nil
                   (
                   )
-                Rtag "Cons" false
+                Cons
                   (
                       tuple
                       (

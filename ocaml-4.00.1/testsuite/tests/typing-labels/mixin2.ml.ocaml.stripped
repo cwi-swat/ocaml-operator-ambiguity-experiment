@@ -73,14 +73,14 @@
                                         make
                     (
                         (
-                        Pexp_lazy                        obj
+                        lazy
+                        obj
                         (
                             ()
                                                     )
                         :
                              Lazy.t
                             (
-                                Ptyp_any
                             )
                                                 )
                     )
@@ -103,28 +103,24 @@
   )
   class_type
   (
-    class_type_declaration ([23,531+11]..[28,671+5])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
             "a"
             "b"
           )
-      pci_name = "ops"
-      pci_expr =
-        class_type ([24,557+2]..[28,671+5])
-          Pcty_signature
+      name = ops
+      expr =
+        class_type
+          signature
           class_signature
-              Ptyp_any
             (
-              Pctf_meth "free" Public ([25,566+4]..[25,566+31])
                   poly
                     arrow
                       b
                        Names.t
                       (
                       )
-              Pctf_meth "subst" Public ([26,598+4]..[26,598+45])
                   poly
                     arrow
                     sub
@@ -135,7 +131,6 @@
                       arrow
                         b
                         a
-              Pctf_meth "eval" Public ([27,644+4]..[27,644+26])
                   poly
                     arrow
                       b
@@ -190,9 +185,11 @@
                     (
                       case
                       (
-                        Ppat_alias "x"
-                        Ppat_variant "Var"
-                          s
+                        alias x
+                        (
+                          Var
+                            s
+                        )
                         try
                         Subst.find
                         (
@@ -214,7 +211,7 @@
                 (
                   case
                   (
-                    Ppat_variant "Var"
+                    Var
                       s
                     Names.singleton
                     (
@@ -226,8 +223,10 @@
                 (
                   case
                   (
-                    Ppat_alias "v"
-                    pat_type                    var
+                    alias v
+                    (
+                      pat_type                      var
+                    )
                     v
                   )
                 )
@@ -314,20 +313,16 @@
           )
       class name = lambda_ops
       class expr =
-          fun
-          label=""
                     ops
              Lazy.t
             (
-                Ptyp_class ops
+                ops
                 (
                     a
                     a
-                )
-                (
                 )
             )
-            let Nonrec
+            let
             (
               var
                 (
@@ -339,7 +334,8 @@
                     )
                                 )
               free
-                Pexp_lazy                send free
+                lazy
+                send free
                 (
                   !!
                   (
@@ -347,7 +343,8 @@
                   )
                 )
               subst
-                Pexp_lazy                send subst
+                lazy
+                send subst
                 (
                   !!
                   (
@@ -355,7 +352,8 @@
                   )
                 )
               eval
-                Pexp_lazy                send eval
+                lazy
+                send eval
                 (
                   !!
                   (
@@ -379,8 +377,10 @@
                     (
                       case
                       (
-                        Ppat_alias "x"
-                        pat_type                        var
+                        alias x
+                        (
+                          pat_type                          var
+                        )
                         send free
                         (
                           var
@@ -391,7 +391,7 @@
                       )
                       case
                       (
-                        Ppat_variant "Abs"
+                        Abs
                           (
                             s
                             t
@@ -410,7 +410,7 @@
                       )
                       case
                       (
-                        Ppat_variant "App"
+                        App
                           (
                             t1
                             t2
@@ -442,18 +442,22 @@
                         (
                           case
                           (
-                            Ppat_alias "x"
-                            pat_type                            var
+                            alias x
+                            (
+                              pat_type                              var
+                            )
                             x
                           )
                           case
                           (
-                            Ppat_alias "l"
-                            Ppat_variant "Abs"
-                              (
-                                s
-                                t
-                              )
+                            alias l
+                            (
+                              Abs
+                                (
+                                  s
+                                  t
+                                )
+                            )
                             let
                             (
                               (
@@ -480,7 +484,7 @@
                                 )
                                 else
                                 (
-                                    Pexp_variant "Abs"
+                                    Abs
                                       (
                                         s
                                         t'
@@ -491,12 +495,14 @@
                           )
                           case
                           (
-                            Ppat_alias "l"
-                            Ppat_variant "App"
-                              (
-                                t1
-                                t2
-                              )
+                            alias l
+                            (
+                              App
+                                (
+                                  t1
+                                  t2
+                                )
+                            )
                             let
                             (
                               (
@@ -536,7 +542,7 @@
                                 )
                                 else
                                 (
-                                    Pexp_variant "App"
+                                    App
                                       (
                                         t'1
                                         t'2
@@ -556,8 +562,10 @@
                         (
                           case
                           (
-                            Ppat_alias "x"
-                            pat_type                            var
+                            alias x
+                            (
+                              pat_type                              var
+                            )
                             send subst
                             (
                               var
@@ -569,12 +577,14 @@
                           )
                           case
                           (
-                            Ppat_alias "l"
-                            Ppat_variant "Abs"
-                              (
-                                s
-                                t
-                              )
+                            alias l
+                            (
+                              Abs
+                                (
+                                  s
+                                  t
+                                )
+                            )
                             let
                             (
                               (
@@ -685,7 +695,7 @@
                                           )
                                       )
                                     in
-                                      Pexp_variant "Abs"
+                                      Abs
                                         (
                                           name
                                           !!
@@ -696,7 +706,7 @@
                                               Subst.add
                                               (
                                                   s
-                                                  Pexp_variant "Var"
+                                                  Var
                                                     name
                                                   sub
                                               )
@@ -732,9 +742,11 @@
                           )
                           case
                           (
-                            Ppat_alias "l"
-                            Ppat_variant "App"
-                              _
+                            alias l
+                            (
+                              App
+                                _
+                            )
                             send map
                             (
                               self
@@ -773,9 +785,9 @@
                         (
                           case
                           (
-                            Ppat_variant "App"
+                            App
                               (
-                                Ppat_variant "Abs"
+                                Abs
                                   (
                                     s
                                     t1
@@ -876,20 +888,16 @@
           )
       class name = expr_ops
       class expr =
-          fun
-          label=""
                     ops
              Lazy.t
             (
-                Ptyp_class ops
+                ops
                 (
                     a
                     a
-                )
-                (
                 )
             )
-            let Nonrec
+            let
             (
               var
                 (
@@ -901,7 +909,8 @@
                     )
                                 )
               free
-                Pexp_lazy                send free
+                lazy
+                send free
                 (
                   !!
                   (
@@ -909,7 +918,8 @@
                   )
                 )
               subst
-                Pexp_lazy                send subst
+                lazy
+                send subst
                 (
                   !!
                   (
@@ -917,7 +927,8 @@
                   )
                 )
               eval
-                Pexp_lazy                send eval
+                lazy
+                send eval
                 (
                   !!
                   (
@@ -941,8 +952,10 @@
                     (
                       case
                       (
-                        Ppat_alias "x"
-                        pat_type                        var
+                        alias x
+                        (
+                          pat_type                          var
+                        )
                         send free
                         (
                           var
@@ -953,13 +966,13 @@
                       )
                       case
                       (
-                        Ppat_variant "Num"
+                        Num
                           _
                         Names.empty
                       )
                       case
                       (
-                        Ppat_variant "Add"
+                        Add
                           (
                             x
                             y
@@ -984,7 +997,7 @@
                       )
                       case
                       (
-                        Ppat_variant "Neg"
+                        Neg
                           x
                         !!
                         (
@@ -996,7 +1009,7 @@
                       )
                       case
                       (
-                        Ppat_variant "Mult"
+                        Mult
                           (
                             x
                             y
@@ -1028,25 +1041,31 @@
                         (
                           case
                           (
-                            Ppat_alias "x"
-                            pat_type                            var
+                            alias x
+                            (
+                              pat_type                              var
+                            )
                             x
                           )
                           case
                           (
-                            Ppat_alias "x"
-                            Ppat_variant "Num"
-                              _
+                            alias x
+                            (
+                              Num
+                                _
+                            )
                             x
                           )
                           case
                           (
-                            Ppat_alias "e"
-                            Ppat_variant "Add"
-                              (
-                                x
-                                y
-                              )
+                            alias e
+                            (
+                              Add
+                                (
+                                  x
+                                  y
+                                )
+                            )
                             let
                             (
                               (
@@ -1086,7 +1105,7 @@
                                 )
                                 else
                                 (
-                                    Pexp_variant "Add"
+                                    Add
                                       (
                                         x'
                                         y'
@@ -1097,9 +1116,11 @@
                           )
                           case
                           (
-                            Ppat_alias "e"
-                            Ppat_variant "Neg"
-                              x
+                            alias e
+                            (
+                              Neg
+                                x
+                            )
                             let
                             (
                               (
@@ -1126,7 +1147,7 @@
                                 )
                                 else
                                 (
-                                    Pexp_variant "Neg"
+                                    Neg
                                       x'
                                 )
                               )
@@ -1134,12 +1155,14 @@
                           )
                           case
                           (
-                            Ppat_alias "e"
-                            Ppat_variant "Mult"
-                              (
-                                x
-                                y
-                              )
+                            alias e
+                            (
+                              Mult
+                                (
+                                  x
+                                  y
+                                )
+                            )
                             let
                             (
                               (
@@ -1179,7 +1202,7 @@
                                 )
                                 else
                                 (
-                                    Pexp_variant "Mult"
+                                    Mult
                                       (
                                         x'
                                         y'
@@ -1199,8 +1222,10 @@
                         (
                           case
                           (
-                            Ppat_alias "x"
-                            pat_type                            var
+                            alias x
+                            (
+                              pat_type                              var
+                            )
                             send subst
                             (
                               var
@@ -1212,8 +1237,10 @@
                           )
                           case
                           (
-                            Ppat_alias "e"
-                            pat_type                            expr
+                            alias e
+                            (
+                              pat_type                              expr
+                            )
                             send map
                             (
                               self
@@ -1236,8 +1263,10 @@
                     (
                       case
                       (
-                        Ppat_alias "e"
-                        pat_type                        expr
+                        alias e
+                        (
+                          pat_type                          expr
+                        )
                         match
                         send map
                         (
@@ -1253,14 +1282,14 @@
                         (
                           case
                           (
-                            Ppat_variant "Add"
+                            Add
                               (
-                                Ppat_variant "Num"
+                                Num
                                   m
-                                Ppat_variant "Num"
+                                Num
                                   n
                               )
-                            Pexp_variant "Num"
+                            Num
                               +
                               (
                                   m
@@ -1269,10 +1298,10 @@
                           )
                           case
                           (
-                            Ppat_variant "Neg"
-                              Ppat_variant "Num"
+                            Neg
+                              Num
                                 n
-                            Pexp_variant "Num"
+                            Num
                               ~-
                               (
                                   n
@@ -1280,14 +1309,14 @@
                           )
                           case
                           (
-                            Ppat_variant "Mult"
+                            Mult
                               (
-                                Ppat_variant "Num"
+                                Num
                                   m
-                                Ppat_variant "Num"
+                                Num
                                   n
                               )
-                            Pexp_variant "Num"
+                            Num
                               *
                               (
                                   m
@@ -1346,20 +1375,16 @@
           )
       class name = lexpr_ops
       class expr =
-          fun
-          label=""
                     ops
              Lazy.t
             (
-                Ptyp_class ops
+                ops
                 (
                     a
                     a
-                )
-                (
                 )
             )
-            let Nonrec
+            let
             (
               lambda
                 new lambda_ops
@@ -1367,7 +1392,7 @@
                     ops
                 )
             )
-              let Nonrec
+              let
               (
                 expr
                   new expr_ops
@@ -1391,8 +1416,10 @@
                       (
                         case
                         (
-                          Ppat_alias "x"
-                          pat_type                          lambda
+                          alias x
+                          (
+                            pat_type                            lambda
+                          )
                           send free
                           (
                             lambda
@@ -1403,8 +1430,10 @@
                         )
                         case
                         (
-                          Ppat_alias "x"
-                          pat_type                          expr
+                          alias x
+                          (
+                            pat_type                            expr
+                          )
                           send free
                           (
                             expr
@@ -1422,8 +1451,10 @@
                           (
                             case
                             (
-                              Ppat_alias "x"
-                              pat_type                              lambda
+                              alias x
+                              (
+                                pat_type                                lambda
+                              )
                               send subst
                               (
                                 lambda
@@ -1435,8 +1466,10 @@
                             )
                             case
                             (
-                              Ppat_alias "x"
-                              pat_type                              expr
+                              alias x
+                              (
+                                pat_type                                expr
+                              )
                               send subst
                               (
                                 expr
@@ -1453,8 +1486,10 @@
                       (
                         case
                         (
-                          Ppat_alias "x"
-                          pat_type                          lambda
+                          alias x
+                          (
+                            pat_type                            lambda
+                          )
                           send eval
                           (
                             lambda
@@ -1465,8 +1500,10 @@
                         )
                         case
                         (
-                          Ppat_alias "x"
-                          pat_type                          expr
+                          alias x
+                          (
+                            pat_type                            expr
+                          )
                           send eval
                           (
                             expr
@@ -1492,7 +1529,7 @@
       (
         case
         (
-          Ppat_variant "Var"
+          Var
             id
           print_string
           (
@@ -1501,7 +1538,7 @@
         )
         case
         (
-          Ppat_variant "Abs"
+          Abs
             (
               id
               l
@@ -1529,7 +1566,7 @@
         )
         case
         (
-          Ppat_variant "App"
+          App
             (
               l1
               l2
@@ -1557,7 +1594,7 @@
         )
         case
         (
-          Ppat_variant "Num"
+          Num
             x
           print_int
           (
@@ -1566,7 +1603,7 @@
         )
         case
         (
-          Ppat_variant "Add"
+          Add
             (
               e1
               e2
@@ -1594,7 +1631,7 @@
         )
         case
         (
-          Ppat_variant "Neg"
+          Neg
             e
           sequence
           (
@@ -1611,7 +1648,7 @@
         )
         case
         (
-          Ppat_variant "Mult"
+          Mult
             (
               e1
               e2
@@ -1651,15 +1688,15 @@
               lambda
             )
             (
-                Pexp_variant "App"
+                App
                   (
-                    Pexp_variant "Abs"
+                    Abs
                       (
                         "x"
-                        Pexp_variant "Var"
+                        Var
                           "x"
                       )
-                    Pexp_variant "Var"
+                    Var
                       "y"
                   )
             )
@@ -1674,17 +1711,17 @@
                 expr
               )
               (
-                  Pexp_variant "Add"
+                  Add
                     (
-                      Pexp_variant "Mult"
+                      Mult
                         (
-                          Pexp_variant "Num"
+                          Num
                             3
-                          Pexp_variant "Neg"
-                            Pexp_variant "Num"
+                          Neg
+                            Num
                               2
                         )
-                      Pexp_variant "Var"
+                      Var
                         "x"
                     )
               )
@@ -1699,25 +1736,25 @@
                   lexpr
                 )
                 (
-                    Pexp_variant "Add"
+                    Add
                       (
-                        Pexp_variant "App"
+                        App
                           (
-                            Pexp_variant "Abs"
+                            Abs
                               (
                                 "x"
-                                Pexp_variant "Mult"
+                                Mult
                                   (
-                                    Pexp_variant "Var"
+                                    Var
                                       "x"
-                                    Pexp_variant "Var"
+                                    Var
                                       "x"
                                   )
                               )
-                            Pexp_variant "Num"
+                            Num
                               2
                           )
-                        Pexp_variant "Num"
+                        Num
                           5
                       )
                 )

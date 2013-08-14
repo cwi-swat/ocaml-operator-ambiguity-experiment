@@ -5,22 +5,20 @@
     type
     (  						
        t
-       type
-       params=
-       (
-        a
-       )
-       cstrs =
-       (
-       )
-       kind =
-      (
-       a
-        typeConstraint 
-        (
-            a
-        )
-      )
+         type
+         params=
+         (
+          a
+         )
+         cstrs =
+         (
+         )
+         kind =
+          a
+          typeConstraint 
+          (
+              a
+          )
     )
    )    								
   module  Combine
@@ -35,30 +33,28 @@
      type
      (  						
         t
-        type
-        params=
-        (
-          a
-          b
-        )
-        cstrs =
-        (
-        )
-        kind =
-       (
-         "extendedModulePath1"([],"A")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-         (
-           a
-         )
-         typeConstraint 
-         (
-             a
-              "extendedModulePath1"([],"B")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-              (
-                b
-              )
-         )
-       )
+          type
+          params=
+          (
+            a
+            b
+          )
+          cstrs =
+          (
+          )
+          kind =
+            A.t
+            (
+              a
+            )
+           typeConstraint 
+           (
+               a
+                B.t
+                (
+                  b
+                )
+           )
      )
      )
    )
@@ -71,22 +67,20 @@
    type
    (  						
       t
-      type
-      params=
-      (
-       a
-      )
-      cstrs =
-      (
-      )
-      kind =
-     (
-      a
-       typeConstraint 
-       (
-           a
-       )
-     )
+        type
+        params=
+        (
+         a
+        )
+        cstrs =
+        (
+        )
+        kind =
+         a
+         typeConstraint 
+         (
+             a
+         )
    )
    )
    )
@@ -96,22 +90,20 @@
    type
    (  						
       t
-      type
-      params=
-      (
-       a
-      )
-      cstrs =
-      (
-      )
-      kind =
-     (
-      a
-       typeConstraint 
-       (
-           a
-       )
-     )
+        type
+        params=
+        (
+         a
+        )
+        cstrs =
+        (
+        )
+        kind =
+         a
+         typeConstraint 
+         (
+             a
+         )
    )
    )
    )
