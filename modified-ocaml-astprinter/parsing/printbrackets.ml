@@ -147,9 +147,10 @@ let rec core_type i ppf x =
       (* line i ppf "Ptyp_object\n"; *)
       list i core_field_type ppf l;
   | Ptyp_class (li, l, low) ->
-      line i ppf "Ptyp_class %a\n" fmt_longident li;
+      (* line i ppf "Ptyp_class %a\n" fmt_longident li; *)
+      line i ppf "%a\n" fmt_longident li;
       list i core_type ppf l;
-      list i string ppf low
+      (* list i string ppf low *)
   | Ptyp_alias (ct, s) ->
       line i ppf "Ptyp_alias \"%s\"\n" s;
       core_type i ppf ct;
@@ -476,7 +477,7 @@ and class_type_field i ppf x =
         "Pctf_meth \"%s\" %a %a\n" s fmt_private_flag pf fmt_location loc;*)
       core_type (i+1) ppf ct;
   | Pctf_cstr (ct1, ct2) ->
-      line i ppf "Pctf_cstr %a\n" fmt_location loc;
+      (* line i ppf "Pctf_cstr %a\n" fmt_location loc; *)
       core_type i ppf ct1;
       core_type i ppf ct2;
 

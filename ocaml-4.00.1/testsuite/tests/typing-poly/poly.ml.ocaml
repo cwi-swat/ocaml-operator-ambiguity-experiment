@@ -699,11 +699,9 @@
                         )
                                         )
                     :
-                        Ptyp_class olist
+                        olist
                         (
                             
-                        )
-                        (
                         )
                                         )
                   method fold
@@ -1176,9 +1174,7 @@
       class name = circle
       class expr =
                     p
-            Ptyp_class point
-            (
-            )
+            point
             (
             )
                         r
@@ -1200,9 +1196,7 @@
                         arrow
                         
                           Ptyp_alias "a"
-                            Ptyp_class point
-                            (
-                            )
+                            point
                             (
                             )
                            float
@@ -1838,9 +1832,7 @@
                     arrow
                     
                       Ptyp_alias "a"
-                        Ptyp_class id
-                        (
-                        )
+                        id
                         (
                         )
                       tuple
@@ -1857,9 +1849,7 @@
                   case
                   (
                     f
-                      Ptyp_class id
-                      (
-                      )
+                      id
                       (
                       )
                     (
@@ -2535,11 +2525,9 @@
         case
         (
           l
-            Ptyp_class olist
+            olist
             (
                 a
-            )
-            (
             )
           send fold
           (
@@ -2575,11 +2563,9 @@
         case
         (
           l
-            Ptyp_class olist
+            olist
             (
                 a
-            )
-            (
             )
           send fold
           (
@@ -2615,21 +2601,17 @@
         case
         (
           l
-            Ptyp_class olist
+            olist
             (
                 a
-            )
-            (
             )
           (
             case
             (
               l'
-                Ptyp_class olist
+                olist
                 (
                     b
-                )
-                (
                 )
               send fold
               (
@@ -2829,9 +2811,7 @@
       class name = next
       class expr =
                     n
-            Ptyp_class numeral
-            (
-            )
+            numeral
             (
             )
             class_structure
@@ -3434,9 +3414,7 @@
                         arrow
                         
                           Ptyp_alias "a"
-                            Ptyp_class ct
-                            (
-                            )
+                            ct
                             (
                             )
                           b
@@ -4269,12 +4247,10 @@
                   poly
                   
                     Ptyp_alias "b"
-                      Ptyp_class b
+                      b
                       (
                           a
                           b
-                      )
-                      (
                       )
                   poly
                   
@@ -4300,12 +4276,10 @@
                   poly
                   
                     Ptyp_alias "a"
-                      Ptyp_class a
+                      a
                       (
                           a
                           b
-                      )
-                      (
                       )
                   poly
                   

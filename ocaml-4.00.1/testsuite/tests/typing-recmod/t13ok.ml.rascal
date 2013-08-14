@@ -6,10 +6,7 @@
     class_type_declaration
     params = 
     (
-     
-      "node"
-     										
-     										
+     "node"
     ) 
     name = extension
     expr =
@@ -18,15 +15,9 @@
      class_signature
      (
      										 
-      fieldSpec3 
-      (
-          
-          
-          node
-          poly
-          node
-                                                 
-      )
+      poly
+      node
+                                             
      										 
      )
      										 
@@ -40,10 +31,7 @@
     class_type_declaration
     params = 
     (
-     
-      "ext"
-     										
-     										
+     "ext"
     ) 
     name = node
     expr =
@@ -52,10 +40,15 @@
      class_signature
      (
      										 
-      fieldSpec4 
+      ext
+      extension
       (
-          ext
-          <"typexprConstr1"("tagg"("ext")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"node")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"extension")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+        
+         node
+         (
+           ext
+         )
+            									
       )
      										 
      )
@@ -70,20 +63,32 @@
       								   
     params = 
     (
-        	
     )
     class name = x
     class expr = 
-                class_structure
-                (
-                    								
-                   method node
-                     assert false
-                       												 
-                    								
-                )
-                    								
-        	
+    									    	
+      class_structure
+      (
+          								
+         method node
+         	assert false
+         	poly
+         	
+         	 node
+         	 (
+         	   
+         	   x
+         	   (
+         	   )
+         	   								  
+         	 )
+         	    									
+         	                                       
+             												 
+          								
+      )
+          								
+    									    	
       								   
   )
       								   
@@ -110,7 +115,6 @@
           )
           								  
         )
-        
            									
        
        														  

@@ -18,8 +18,8 @@ syntax Typexpr
   	 | PolymorphicVariantType
   	 | "\<" ".."? "\>"
   	 | typexprAngleBrackets: "\<" {MethodType ";"}+ (";" "..")? "\>"
-  	 | "#" ClassPath
-  	 | Typexpr "#" ClassPath
+  	 | typexprHash1: "#" ClassPath
+  	 | typexprHash2: Typexpr "#" ClassPath
   	 | "(" {Typexpr ","}+ ")" "#" ClassPath
   	 | "(" "module" PackageType ")"  
      ;

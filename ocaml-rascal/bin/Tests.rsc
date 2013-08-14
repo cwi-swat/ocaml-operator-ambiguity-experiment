@@ -99,7 +99,7 @@ public void do(type[&T <: Tree] nont, str input) {
 	  }	  
 	  
 	  if({x:method1(_,_,_,_,_,_), y:method2(_,_,_,_)} := alts) {
-	  	insert amb({x});
+	  	insert amb({y});
 	  }
 	  
 	  if({x:letBinding(_, _, _, _), polyLetBiding(_, _, _)} := alts) {
@@ -915,13 +915,7 @@ str printAST(value v) {
 									<}>
 									')
    								    ";
-   								    
-   	case "polytype2"(l, t) : return "poly
-   									'<for (ident <- l) {>\' <ident>
-   									<}>
-   									'<printAST(t)>
-   									";							    
-   								    
+   								       								    
    	case "arrow1"(t1, t2) : return "arrow
    								   '<printAST(t1)>
    								   '<printAST(t2)>
@@ -964,8 +958,13 @@ str printAST(value v) {
     									' (
     									'   <printAST(e)>
     									' )
-    									' 
     									";
+    						
+	// Typexpr "#" ClassPath    									
+	case "typexprHash2"(t, c): return "<printAST(c)>
+									  '(
+									  '  <printAST(t)>
+									  ')";    									
     
     // MethodName ":" PolyTypExpr							
 	case "methodType"(n, e): return "
@@ -1290,10 +1289,20 @@ str printAST(value v) {
 	
 	case "classPath"(cp) : return printAST(cp);
 	
+	
+	// "inherit" ClassType
+	case "fieldSpec1"(t): return printAST(t);
+	
+	// fieldSpec2: "val" "mutable"? "virtual"? InstVarName ":" PolyTypExpr
+	case "fieldSpec2"(_, _, n, e): return "<printAST(n)>
+								   		  '<printAST(e)>";
+	
 	// "method" "private"? "virtual"? MethodName ":" PolyTypExpr
-	case "fieldSpec3"(_, _, n, e): return "
-										  '  <printAST(e)>	
-										  ";
+	case "fieldSpec3"(_, _, n, e): return printAST(e);
+									
+	// "constraint" Typexpr "=" Typexpr										  
+	case "fieldSpec4"(t1, t2): return "<printAST(t1)>
+									  '<printAST(t2)>";										  
 	
 	
 	// (("?"? LabelName ":")? Typexpr "-\>")* ClassBodyType;
@@ -1365,7 +1374,6 @@ str printAST(value v) {
 	case "classTypeDef"(_, [], cn, cbt): return "class_type_declaration
 													  'params = 
 													  '(
-													  ' 
 													  ') 
 													  'name = <printAST(cn)>
 													  'expr =
@@ -1375,7 +1383,7 @@ str printAST(value v) {
 	case "classTypeDef"(_, [params], cn, cbt): return "class_type_declaration
 													  'params = 
 													  '(
-													  ' <printAST(params)>
+													  ' \"<printAST(params)>\"
 													  ') 
 													  'name = <printAST(cn)>
 													  'expr =
@@ -1405,16 +1413,29 @@ str printAST(value v) {
 										    "; 
     								   
     case "object"(s) : return printAST(s);
-    					      
-    case "classBody"(_, l) : return "class_structure
+    					    
+	// ("(" Pattern (":" Typexpr)? ")")? ClassField*;    					      
+    case "classBody"(x, l) : return "class_structure
     								'(
     								<for (field <- l) {>
     								'   <printAST(field)>
     								<}>
     								')
-    								";					      								   							
-    					
-    // "virtual"? ("[" TypeParameters "]")? ClassName Parameter* (":" ClassType)? "=" ClassExpr								   
+    								";
+    								
+    // "virtual"? ("[" TypeParameters "]")? ClassName Parameter* (":" ClassType)? "=" ClassExpr
+    case "classBinding"(_, [], className, params, t, classExpr) : return
+									    	"params = 
+									    	'(
+									    	')
+									    	'class name = <className>
+									    	'class expr = 
+									    	<for (p <- params) {>
+									    	'  <printAST(p)>
+									    	<}>
+									    	'  <printAST(classExpr)>
+									    	"; 								   
+    								   
     case "classBinding"(_, [x], className, params, t, classExpr) : return
 										    	"params = 
 										    	'(
@@ -1426,11 +1447,12 @@ str printAST(value v) {
 										    	'  <printAST(p)>
 										    	<}>
 										    	'  <printAST(classExpr)>
-										    	"; 								   
+										    	";
     
     // ("method" | "method!") "private"? MethodName Parameter* (":" Typexpr)? "=" Expr
-    case "method1"(_, _, name, [], _, e) : return "method <name>
-    											  '  	<printAST(e)>
+    case "method1"(_, _, name, [], t, e) : return "method <name>
+    											  '	  <printAST(e)>
+    											  '   <printAST(t)>	
     											  ";
     
     case "method1"(_, _, name, params, _, e) : return "method <name>
@@ -1454,8 +1476,7 @@ str printAST(value v) {
     case "method3"(_, name, e) : return "method <name>
     									'   <printAST(e)>
     									";
-    						
-    						
+
     						
     // Names
     case "valuePath"("valuePath"([], list[value] l)) : return "<for (x <- l) {><printAST(x)><}>";
@@ -1549,8 +1570,6 @@ str printAST(value v) {
              '    <printAST(c)><}>
              ')";
     }
-    
-    case <x>: return printAST(x);
     
     case list[value] l : return "<printAST(head(l))><for (e <- tail(l)) {>
                                 '<printAST(e)><}>";
