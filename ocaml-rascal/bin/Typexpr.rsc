@@ -17,7 +17,7 @@ syntax Typexpr
   	 | typeExprBrackets2: "(" Typexpr ("," Typexpr)+ ")" TypeConstr
   	 | PolymorphicVariantType
   	 | "\<" ".."? "\>"
-  	 | "\<" {MethodType ";"}+ (";" "..")? "\>"
+  	 | typexprAngleBrackets: "\<" {MethodType ";"}+ (";" "..")? "\>"
   	 | "#" ClassPath
   	 | Typexpr "#" ClassPath
   	 | "(" {Typexpr ","}+ ")" "#" ClassPath
@@ -36,7 +36,8 @@ syntax PolyTypExpr
      | polytype2: ("\'" Ident)+ "." Typexpr
      ;
        
-syntax MethodType = MethodName ":" PolyTypExpr;
+syntax MethodType 
+	= methodType: MethodName ":" PolyTypExpr;
        
        
 syntax TagSpec

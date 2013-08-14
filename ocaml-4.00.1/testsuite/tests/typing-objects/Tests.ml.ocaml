@@ -3,10 +3,8 @@
     case
     (
       x
-        Ptyp_object
         (
-          core_field_type ([2,38+11]..[2,38+18])
-            Pfield "x"
+            x
               poly
               
                  int
@@ -52,8 +50,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -78,8 +74,6 @@
           )
       class name = d
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -102,8 +96,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -122,8 +114,6 @@
           )
       class name = d
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -145,8 +135,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -157,8 +145,6 @@
           )
       class name = d
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -201,8 +187,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -218,8 +202,6 @@
           )
       class name = d
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -241,8 +223,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     x
             a
             class_structure
@@ -262,8 +242,6 @@
           )
       class name = x
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -282,14 +260,10 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     x
             a
-            Ptyp_object
             (
-              core_field_type ([55,1474+29]..[55,1474+36])
-                Pfield "f"
+                f
                   poly
                   
                      int
@@ -304,8 +278,6 @@
           )
       class name = d
       class expr =
-          fun
-          label=""
                     x
             class_structure
               (
@@ -329,8 +301,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -367,8 +337,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -385,10 +353,8 @@
                     tuple
                     (
                         a
-                        Ptyp_object
                         (
-                          core_field_type ([70,1809+24]..[70,1809+30])
-                            Pfield "x"
+                            x
                               poly
                               
                                 b
@@ -423,8 +389,6 @@
           )
       class name = d
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -456,8 +420,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -482,18 +444,15 @@
           )
         kind =
           
-              Ptyp_object
               (
-                core_field_type ([84,2072+13]..[84,2072+21])
-                  Pfield "f"
+                  f
                     poly
                     
                        c
                       (
                           a
                       )
-                core_field_type ([84,2072+23]..[84,2072+31])
-                  Pfield "g"
+                  g
                     poly
                     
                        d
@@ -512,10 +471,8 @@
           )
         kind =
           
-              Ptyp_object
               (
-                core_field_type ([85,2105+12]..[85,2105+21])
-                  Pfield "f"
+                  f
                     poly
                     
                        c
@@ -539,18 +496,15 @@
           )
         kind =
           
-              Ptyp_object
               (
-                core_field_type ([86,2130+13]..[86,2130+21])
-                  Pfield "f"
+                  f
                     poly
                     
                        c
                       (
                           a
                       )
-                core_field_type ([86,2130+23]..[86,2130+31])
-                  Pfield "g"
+                  g
                     poly
                     
                        d
@@ -569,10 +523,8 @@
           )
         kind =
           
-              Ptyp_object
               (
-                core_field_type ([87,2163+12]..[87,2163+20])
-                  Pfield "f"
+                  f
                     poly
                     
                        c
@@ -594,10 +546,8 @@
           )
         kind =
           
-              Ptyp_object
               (
-                core_field_type ([88,2187+13]..[88,2187+21])
-                  Pfield "f"
+                  f
                     poly
                     
                        c
@@ -616,10 +566,8 @@
           )
         kind =
           
-              Ptyp_object
               (
-                core_field_type ([89,2210+12]..[89,2210+21])
-                  Pfield "f"
+                  f
                     poly
                     
                        c
@@ -643,10 +591,8 @@
           )
         kind =
           
-              Ptyp_object
               (
-                core_field_type ([90,2235+14]..[90,2235+20])
-                  Pfield "x"
+                  x
                     poly
                     
                       a
@@ -759,10 +705,8 @@
         kind =
           
               Ptyp_alias "a"
-                Ptyp_object
                 (
-                  core_field_type ([97,2351+10]..[97,2351+16])
-                    Pfield "x"
+                    x
                       poly
                       
                         a
@@ -843,14 +787,10 @@
               )
           class name = c
           class expr =
-              fun
-              label=""
                             x
                  int
                 (
                 )
-                fun
-                label=""
                                 y
                   b
                   class_structure
@@ -961,12 +901,8 @@
           )
       class name = d
       class expr =
-          fun
-          label=""
                     ()
-                      fun
-            label=""
-                        y
+                                  y
               class_structure
                 (
                   inherit
@@ -991,12 +927,8 @@
           )
       class name = e
       class expr =
-          fun
-          label=""
                     ()
-                      fun
-            label=""
-                        y
+                                  y
               class_structure
                 (
                   inherit
@@ -1056,8 +988,6 @@
               )
           class name = c
           class expr =
-              fun
-              label=""
                             ()
                               class_structure
                   (
@@ -1147,8 +1077,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     x
             Ptyp_class c
             (
@@ -1168,8 +1096,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     x
             Ptyp_class c
             (
@@ -1188,8 +1114,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1201,8 +1125,6 @@
           )
       class name = d
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1217,8 +1139,6 @@
           )
       class name = e
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1254,8 +1174,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1278,8 +1196,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1298,8 +1214,6 @@
           )
       class name = d
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1318,8 +1232,6 @@
           )
       class name = e
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1386,8 +1298,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     a
             class_structure
               (
@@ -1408,8 +1318,6 @@
           )
       class name = d
       class expr =
-          fun
-          label=""
                     b
             class_structure
               (
@@ -1430,8 +1338,6 @@
           )
       class name = e
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1520,14 +1426,10 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     x
              int
             (
             )
-            fun
-            label=""
                         y
                int
               (
@@ -1551,11 +1453,7 @@
           )
       class name = d
       class expr =
-          fun
-          label=""
                     x
-            fun
-            label=""
                         y
               class_structure
                 (
@@ -1622,8 +1520,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     x
             a
             class_structure
@@ -1641,8 +1537,6 @@
                 )
             class name = c
             class expr =
-                fun
-                label=""
                                 ()
                                   class_structure
                     (
@@ -1688,8 +1582,6 @@
           )
       class name = d
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1736,8 +1628,6 @@
           )
       class name = matrix
       class expr =
-          fun
-          label=""
                     (
             sz
             init
@@ -1794,8 +1684,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1823,8 +1711,6 @@
               )
           class name = c
           class expr =
-              fun
-              label=""
                             ()
                               class_structure
                   (
@@ -1864,10 +1750,8 @@
                               B
                 (
                     Ptyp_alias "a"
-                      Ptyp_object
                       (
-                        core_field_type ([248,5864+28]..[248,5864+35])
-                          Pfield "leq"
+                          leq
                             poly
                             
                               a
@@ -1882,8 +1766,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1994,8 +1876,6 @@
               )
           class name = t
           class expr =
-              fun
-              label=""
                             ()
                               class_structure
                   (
@@ -2010,10 +1890,8 @@
       x
       :
                 Ptyp_alias "a"
-            Ptyp_object
             (
-              core_field_type ([264,6199+17]..[264,6199+29])
-                Pfield "m"
+                m
                   poly
                   
                     arrow
@@ -2079,13 +1957,10 @@
       (
       x
       :
-          Ptyp_object
           (
           )
-          Ptyp_object
           (
-            core_field_type ([268,6325+23]..[268,6325+25])
-              Pfield_var
+              
           )
       )
     )
@@ -2097,12 +1972,9 @@
       (
       x
       :
-          Ptyp_object
           (
-            core_field_type ([269,6356+16]..[269,6356+18])
-              Pfield_var
+              
           )
-          Ptyp_object
           (
           )
       )
@@ -2147,10 +2019,8 @@
             (
                  list
                 (
-                    Ptyp_object
                     (
-                      core_field_type ([273,6429+37]..[273,6429+42])
-                        Pfield "m"
+                        m
                           poly
                           
                              t
@@ -2222,10 +2092,8 @@
           )
         kind =
           
-              Ptyp_object
               (
-                core_field_type ([279,6568+14]..[279,6568+20])
-                  Pfield "x"
+                  x
                     poly
                     
                       a
@@ -2271,8 +2139,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -2280,10 +2146,8 @@
                     a
                     arrow
                     
-                      Ptyp_object
                       (
-                        core_field_type ([284,6681+20]..[284,6681+22])
-                          Pfield_var
+                          
                       )
                        unit
                       (
@@ -2310,8 +2174,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -2322,10 +2184,8 @@
                        unit
                       (
                       )
-                      Ptyp_object
                       (
-                        core_field_type ([288,6777+28]..[288,6777+30])
-                          Pfield_var
+                          
                       )
                 method m
                   (
@@ -2348,8 +2208,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -2369,8 +2227,6 @@
           )
       class name = d
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -2417,8 +2273,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -2481,7 +2335,6 @@
                 0
             )
             :
-                Ptyp_object
                 (
                 )
                         )
@@ -2498,7 +2351,6 @@
                   0
               )
               :
-                  Ptyp_object
                   (
                   )
                             )
@@ -2561,10 +2413,8 @@
                 0
             )
             :
-                Ptyp_object
                 (
-                  core_field_type ([319,7469+12]..[319,7469+17])
-                    Pfield "m"
+                    m
                       poly
                       
                          int
@@ -2585,10 +2435,8 @@
                   0
               )
               :
-                  Ptyp_object
                   (
-                    core_field_type ([320,7517+13]..[320,7517+18])
-                      Pfield "m"
+                      m
                         poly
                         
                            int
@@ -2665,10 +2513,8 @@
                 0
             )
             :
-                Ptyp_object
                 (
-                  core_field_type ([325,7722+12]..[325,7722+17])
-                    Pfield "m"
+                    m
                       poly
                       
                          int
@@ -2689,10 +2535,8 @@
                   0
               )
               :
-                  Ptyp_object
                   (
-                    core_field_type ([326,7770+13]..[326,7770+18])
-                      Pfield "m"
+                      m
                         poly
                         
                            int

@@ -934,6 +934,14 @@ str printAST(value v) {
     case "typeExprBrackets"(t) : return printAST(t);
     
     
+    // "\<" {MethodType ";"}+ (";" "..")? "\>"
+    case "typexprAngleBrackets"(l, _): return "
+    										  <for (x <- l) {>
+    										  ' <printAST(x)>
+    										  <}>
+    										  ";
+    
+    
     // "(" Typexpr (";" Typexpr)+ ")" TypeConstr
     case "typeExprBrackets2"(t, l, c): return "
     									   ' <printAST(c)>
@@ -957,7 +965,16 @@ str printAST(value v) {
     									'   <printAST(e)>
     									' )
     									' 
-    									"; 		
+    									";
+    
+    // MethodName ":" PolyTypExpr							
+	case "methodType"(n, e): return "
+									'(
+									'	<printAST(n)>
+									'	<printAST(e)>
+									')
+									";
+										     										
     									
     case "patternTypxprBrackets"(p, t): return "
     										   '<printAST(p)>
@@ -1323,12 +1340,7 @@ str printAST(value v) {
 		    									";
 	
 	// "\'" Ident ("," "\'" Ident)*;
-	case "typeParameters"(x, l): return "
-										' <printAST(x)>
-										<for (i <- l) {>
-										' <printAST(i)>
-										<}>
-										";
+	case "typeParameters"(x, l): return "<printAST(x)><for (i <- l) {><i><}>";
 	
 	// "class" {ClassBinding "and"}+;
 	case "classDefinition"(l): return "class
@@ -1403,17 +1415,18 @@ str printAST(value v) {
     								";					      								   							
     					
     // "virtual"? ("[" TypeParameters "]")? ClassName Parameter* (":" ClassType)? "=" ClassExpr								   
-    case "classBinding"(_, _, className, params, t, classExpr) : return
-    	"params = 
-    	'(
-    	<for (param <- params) {>
-    	   '<printAST(param)>
-    	<}>
-    	')
-    	'class name = <className>
-    	'class expr = 
-    	'            <printAST(classExpr)>
-    	"; 								   
+    case "classBinding"(_, [x], className, params, t, classExpr) : return
+										    	"params = 
+										    	'(
+										    	' \"<printAST(x)>\"
+										    	')
+										    	'class name = <className>
+										    	'class expr = 
+										    	<for (p <- params) {>
+										    	'  <printAST(p)>
+										    	<}>
+										    	'  <printAST(classExpr)>
+										    	"; 								   
     
     // ("method" | "method!") "private"? MethodName Parameter* (":" Typexpr)? "=" Expr
     case "method1"(_, _, name, [], _, e) : return "method <name>

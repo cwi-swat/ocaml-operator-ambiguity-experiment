@@ -1137,8 +1137,6 @@
               )
           class name = text_raw
           class expr =
-              fun
-              label=""
                             buf
                 class_structure
                   (
@@ -1320,11 +1318,7 @@
               )
           class name = cursor
           class expr =
-              fun
-              label=""
                             text
-                fun
-                label=""
                                 i
                   class_structure
                     (
@@ -1375,8 +1369,6 @@
               )
           class name = string_raw
           class expr =
-              fun
-              label=""
                             buf
                 class_structure
                   (
@@ -1420,8 +1412,6 @@
               )
           class name = text
           class expr =
-              fun
-              label=""
                             init
                 Pcl_apply
                   constr text_raw
@@ -1441,8 +1431,6 @@
               )
           class name = string
           class expr =
-              fun
-              label=""
                             init
                 Pcl_apply
                   constr string_raw

@@ -113,11 +113,9 @@
       functor X
       (
         ORD
-        Pmty_with
           SET
         (
           t
-            Pwith_type
               type
                 params =
                   (
@@ -133,7 +131,6 @@
                           )
                       )
           elt
-            Pwith_type
               type
                 params =
                   (
@@ -164,7 +161,7 @@
                       (
                       )
           )
-          Pstr_recmodule
+          rec module
           (
             "Elt"
                 signature
@@ -339,11 +336,9 @@
                   )
                 )
             "Diet"
-                Pmty_with
                   SET
                 (
                   t
-                    Pwith_type
                       type
                         params =
                           (
@@ -359,7 +354,6 @@
                                   )
                               )
                   elt
-                    Pwith_type
                       type
                         params =
                           (
@@ -410,11 +404,9 @@
               )
           )
         )
-        Pmty_with
           SET
         (
           elt
-            Pwith_type
               type
                 params =
                   (

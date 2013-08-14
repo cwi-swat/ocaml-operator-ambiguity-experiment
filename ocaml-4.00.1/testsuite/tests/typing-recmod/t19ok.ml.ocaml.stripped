@@ -12,7 +12,7 @@
             module Other
               S
         )
-      Pstr_recmodule
+      rec module
       (
         "A"
             S
@@ -22,13 +22,13 @@
         "C"
             signature
             (
-                sig_include
-                  Pmty_with
+                include
+                (
                     Mod
                   (
                     Other
-                      Pwith_module A
-                  )
+                                        )
+                )
             )
             struct
             (

@@ -58,7 +58,10 @@
    functor X
    (
     MyT
-    X
+    
+    	X
+    	
+        								 
    )
        										    
    							  
@@ -141,7 +144,31 @@
           (
           )
           kind =
-          <[<"map","polytype2"(["b"],"arrow1"("typeExprBrackets"("arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"wrap")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[<>]>
+          
+              										  
+           
+           (
+           	map
+           	poly
+           	                      				 'b 
+           	 arrow
+           	 arrow
+           	 a
+           	 b
+           	    								   
+           	 
+           	  wrap
+           	  (
+           	    b
+           	  )
+           	  
+           	     									
+           	    								   
+           	                                    
+           )
+           									
+              										  
+              										  
           
           														  
           														 
@@ -178,77 +205,81 @@
    functor X
    (
     MyT
-    struct
-    (
-    							  
-    include
-    (
-      X
-    )
-    							  
-    class
-    (
-        								   
-      params = 
-      (
-          	
-      l
-          	
-      )
-      class name = c
-      class expr = 
-                  class_structure
-                  (
-                      								
-                     method map
-                     	(
-                     	 
-                     	 case
-                     	 (
-                     	 f
-                     	 
-                     	 
-                     	 My
-                     	    create
-                     	    (
-                     	        List.map
-                     	        (
-                     	            f
-                     	            l
-                     	        )
-                     	    )
-                     	     								 
-                     	 )
-                     	 													 
-                     	)
-                     	   						  
-                     	poly
-                     	                      				 'b 
-                     	 arrow
-                     	 arrow
-                     	 a
-                     	 b
-                     	    								   
-                     	 
-                     	  wrap
-                     	  (
-                     	    b
-                     	  )
-                     	  
-                     	     									
-                     	    								   
-                     	                                    
-                         												 
-                      								
-                  )
-                      								
-          	
-        								   
-    )
-        								   
-    							  
-    )
-    							  
+    
+    	struct
+    	(
+    								  
+    	include
+    	(
+    	  X
+    	)
+    								  
+    	class
+    	(
+    	    								   
+    	  params = 
+    	  (
+    	   "a"
+    	  )
+    	  class name = c
+    	  class expr = 
+    	  										    	
+    	    l
+    	  										    	
+    	    class_structure
+    	    (
+    	        								
+    	       method map
+    	       	(
+    	       	 
+    	       	 case
+    	       	 (
+    	       	 f
+    	       	 
+    	       	 
+    	       	 My
+    	       	    create
+    	       	    (
+    	       	        List.map
+    	       	        (
+    	       	            f
+    	       	            l
+    	       	        )
+    	       	    )
+    	       	     								 
+    	       	 )
+    	       	 													 
+    	       	)
+    	       	   						  
+    	       	poly
+    	       	                      				 'b 
+    	       	 arrow
+    	       	 arrow
+    	       	 a
+    	       	 b
+    	       	    								   
+    	       	 
+    	       	  wrap
+    	       	  (
+    	       	    b
+    	       	  )
+    	       	  
+    	       	     									
+    	       	    								   
+    	       	                                    
+    	           												 
+    	        								
+    	    )
+    	        								
+    	  										    	
+    	    								   
+    	)
+    	    								   
+    								  
+    	)
+    								  
+    	
+        								 
    )
        										    
    							  
@@ -311,7 +342,31 @@
            (
            )
            kind =
-           <[<"map","polytype2"(["b"],"arrow1"("typeExprBrackets"("arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"wrap")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+           
+               										  
+            
+            (
+            	map
+            	poly
+            	                      				 'b 
+            	 arrow
+            	 arrow
+            	 a
+            	 b
+            	    								   
+            	 
+            	  wrap
+            	  (
+            	    b
+            	  )
+            	  
+            	     									
+            	    								   
+            	                                    
+            )
+            									
+               										  
+               										  
            
            														  
            														 

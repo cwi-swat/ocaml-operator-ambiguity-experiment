@@ -6,8 +6,6 @@
           )
       class name = point
       class expr =
-          fun
-          label=""
                     x_init
             class_structure
               (
@@ -89,11 +87,7 @@
           )
       class name = color_point
       class expr =
-          fun
-          label=""
                     x
-            fun
-            label=""
                         c
                string
               (
@@ -192,8 +186,6 @@
           )
       class name = ref
       class expr =
-          fun
-          label=""
                     x_init
             class_structure
               (
@@ -219,8 +211,6 @@
           )
       class name = ref
       class expr =
-          fun
-          label=""
                     x_init
              int
             (
@@ -250,8 +240,6 @@
           )
       class name = ref
       class expr =
-          fun
-          label=""
                     x_init
             class_structure
               (
@@ -308,8 +296,6 @@
           )
       class name = circle
       class expr =
-          fun
-          label=""
                     c
             a
             class_structure
@@ -353,8 +339,6 @@
           )
       class name = circle
       class expr =
-          fun
-          label=""
                     c
             a
             class_structure
@@ -411,8 +395,6 @@
           )
       class name = color_circle
       class expr =
-          fun
-          label=""
                     c
             class_structure
               (
@@ -504,8 +486,6 @@
           )
       class name = printable_point
       class expr =
-          fun
-          label=""
                     y
             class_structure
               (
@@ -546,11 +526,7 @@
           )
       class name = printable_color_point
       class expr =
-          fun
-          label=""
                     y
-            fun
-            label=""
                         c
               class_structure
                 (
@@ -633,8 +609,6 @@
           )
       class name = functional_point
       class expr =
-          fun
-          label=""
                     y
             class_structure
               (
@@ -707,8 +681,6 @@
           )
       class name = lst
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -902,8 +874,6 @@
           )
       class name = nil
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -935,11 +905,7 @@
           )
       class name = cons
       class expr =
-          fun
-          label=""
                     h
-            fun
-            label=""
                         t
               class_structure
                 (
@@ -1115,8 +1081,6 @@
           )
       class name = comparable
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1138,8 +1102,6 @@
           )
       class name = int_comparable
       class expr =
-          fun
-          label=""
                     x
              int
             (
@@ -1182,8 +1144,6 @@
           )
       class name = int_comparable2
       class expr =
-          fun
-          label=""
                     xi
             class_structure
               (
@@ -1216,8 +1176,6 @@
           )
       class name = sorted_list
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1378,8 +1336,6 @@
           )
       class name = int_comparable3
       class expr =
-          fun
-          label=""
                     x
              int
             (
@@ -1676,8 +1632,6 @@
           )
       class name = link
       class expr =
-          fun
-          label=""
                     x
             a
             class_structure
@@ -1759,8 +1713,6 @@
           )
       class name = double_link
       class expr =
-          fun
-          label=""
                     x
             class_structure
               (
@@ -1891,8 +1843,6 @@
           )
       class name = calculator
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -2063,8 +2013,6 @@
           )
       class name = calculator
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -2223,11 +2171,7 @@
           )
       class name = calculator
       class expr =
-          fun
-          label=""
                     arg
-            fun
-            label=""
                         acc
               class_structure
                 (
@@ -2273,11 +2217,7 @@
           )
       class name = calculator_add
       class expr =
-          fun
-          label=""
                     arg
-            fun
-            label=""
                         acc
               class_structure
                 (
@@ -2314,11 +2254,7 @@
           )
       class name = calculator_sub
       class expr =
-          fun
-          label=""
                     arg
-            fun
-            label=""
                         acc
               class_structure
                 (

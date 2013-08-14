@@ -201,476 +201,505 @@
      ORD
      
       SET
-       
-       t
-       type
-       params=
        (
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-        
-         tree
-         (
            
-           X.t
-           (
-           )
-           								  
-         )
-         
-            									
-         										 
-         								    
-       
-       elt
-       type
-       params=
-       (
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-        
-        X.t
-        (
-        )
-        								  
-         										 	
-         								    
-         								    
-   )
-   												
-   struct
-   (
-   							  
-   type
-   (  						
-       							    	 
-      elt
-        type
-        params=
-        (
-        
-        )
-        cstrs =
-        (
-        )
-        kind =
-        
-        int
-        (
-        )
-        								  
-        
-        														  
-        														 
-     											   
-   								        
-   )
-   							  
-   rec module
-   (
-     "Elt"
-     signature
-     (
-     		    				
-      type
-      (  						
-          							    	 
-         t
+           t
            type
            params=
            (
-           
            )
            cstrs =
            (
            )
            kind =
            
-           
-           (
-           								  
-           I
-           (
-           									
             
-            int
-            (
-            )
-            								  
-           								     
-            
-            int
-            (
-            )
-            								  
-           								     
-           )
-           								    
-           								  
-           D
-           (
-           									
-            
-            int
-            (
-            )
-            								  
-           								     
-            
-            Diet.t
-            (
-            )
-            								  
-           								     
-            
-            int
-            (
-            )
-            								  
-           								     
-           )
-           								    
-           								  
-           )
-           								  
-           														  
-           														 
-        											   
-      								        
-      )
-     		    				
-      sig_value compare
-      value_description
-      arrow
-      
-      t
-      (
-      )
-      								  
-      arrow
-      
-      t
-      (
-      )
-      								  
-      
-      int
-      (
-      )
-      								  
-         								   
-         								   
-      (
-      )
-          								
-     		    				
-      sig_value iter
-      value_description
-      arrow
-      arrow
-      
-      int
-      (
-      )
-      								  
-      
-      unit
-      (
-      )
-      								  
-         								   
-      arrow
-      
-      t
-      (
-      )
-      								  
-      
-      unit
-      (
-      )
-      								  
-         								   
-         								   
-      (
-      )
-          								
-     		    				
-     )
-     struct
-     (
-     							  
-     type
-     (  						
-         							    	 
-        t
-          type
-          params=
-          (
-          
-          )
-          cstrs =
-          (
-          )
-          kind =
-          
-          
-          (
-          								  
-          I
-          (
-          									
-           
-           int
-           (
-           )
-           								  
-          								     
-           
-           int
-           (
-           )
-           								  
-          								     
-          )
-          								    
-          								  
-          D
-          (
-          									
-           
-           int
-           (
-           )
-           								  
-          								     
-           
-           Diet.t
-           (
-           )
-           								  
-          								     
-           
-           int
-           (
-           )
-           								  
-          								     
-          )
-          								    
-          								  
-          )
-          								  
-          														  
-          														 
-       											   
-     								        
-     )
-     							  
-     let
-     (
-      
-        compare
-                  	   
-      (
-       case
-           (
-        		
-        		 x1
-        		(
-        		 case
-        		     (
-        		 	  x2
-        		      0
-        		     )
-        		)
-        		    		   
-           )
-      )
-                  	    
-     )
-     							  
-     let
-     (
-      
-       iter
-      (
-       case
-           (
-       	  f
-            (
-             
-             case
+             tree
              (
                
-               I
-               
+               X.t
                (
-                l
-                    						 
-               	r
-               
                )
-               									  
-               
-                for i
-                l
-                r
-                f
-                (
-                    i
-                )
-                   														  
-             ) 
-             	        											 
-               
-               case
-               (
-                
-                D
-                
-                (
-                 _
-                     						 
-                	d
-                
-                	_
-                
-                )
-                									  
-                
-                Diet.iter
-                (
-                    iter
-                    (
-                        f
-                    )
-                    d
-                )
-               )
-               													    
-             	        											 
-             	        											 
-            )
-               							   
-           )
-      )
-          		    
-     )
-     							  
-     )
-     							  
-   									   
-     "Diet"
-     
-      SET
-       
-       t
-       type
-       params=
-       (
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-        
-         tree
-         (
+               								  
+             )
+             
+                									
+             										 
+         								    
            
-           Elt.t
+           elt
+           type
+           params=
            (
            )
-           								  
-         )
-         
-            									
-         										 
+           cstrs =
+           (
+           )
+           kind =
+           
+            
+            X.t
+            (
+            )
+            								  
+             										 	
          								    
-       
-       elt
-       type
-       params=
-       (
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-        
-        Elt.t
-        (
         )
-        								  
-         										 	
          								    
-         								    
-     MakeDiet
-     (
-     Elt
-     )
-     								   
-   									   
    )
-   									   
-   							  
-   type
-   (  						
-       							    	 
-      t
-        type
-        params=
-        (
-        
-        )
-        cstrs =
-        (
-        )
-        kind =
-        
-        Diet.t
-        (
-        )
-        								  
-        
-        														  
-        														 
-     											   
-   								        
-   )
-   							  
-   let
-   (
-    
-     iter
-    (
-     case
-         (
-     	  f
-          Diet.iter
-          (
-              Elt.iter
-              (
-                  f
-              )
-          )
-         )
-    )
-        		    
-   )
-   							  
-   )
-   							  
+   												
+   
+   	struct
+   	(
+   								  
+   	type
+   	(  						
+   	    							    	 
+   	   elt
+   	     type
+   	     params=
+   	     (
+   	     
+   	     )
+   	     cstrs =
+   	     (
+   	     )
+   	     kind =
+   	     
+   	     int
+   	     (
+   	     )
+   	     								  
+   	     
+   	     														  
+   	     														 
+   	  											   
+   									        
+   	)
+   								  
+   	rec module
+   	(
+   	  "Elt"
+   	  signature
+   	  (
+   	  		    				
+   	   type
+   	   (  						
+   	       							    	 
+   	      t
+   	        type
+   	        params=
+   	        (
+   	        
+   	        )
+   	        cstrs =
+   	        (
+   	        )
+   	        kind =
+   	        
+   	        
+   	        (
+   	        								  
+   	        I
+   	        (
+   	        									
+   	         
+   	         int
+   	         (
+   	         )
+   	         								  
+   	        								     
+   	         
+   	         int
+   	         (
+   	         )
+   	         								  
+   	        								     
+   	        )
+   	        								    
+   	        								  
+   	        D
+   	        (
+   	        									
+   	         
+   	         int
+   	         (
+   	         )
+   	         								  
+   	        								     
+   	         
+   	         Diet.t
+   	         (
+   	         )
+   	         								  
+   	        								     
+   	         
+   	         int
+   	         (
+   	         )
+   	         								  
+   	        								     
+   	        )
+   	        								    
+   	        								  
+   	        )
+   	        								  
+   	        														  
+   	        														 
+   	     											   
+   	   								        
+   	   )
+   	  		    				
+   	   sig_value compare
+   	   value_description
+   	   arrow
+   	   
+   	   t
+   	   (
+   	   )
+   	   								  
+   	   arrow
+   	   
+   	   t
+   	   (
+   	   )
+   	   								  
+   	   
+   	   int
+   	   (
+   	   )
+   	   								  
+   	      								   
+   	      								   
+   	   (
+   	   )
+   	       								
+   	  		    				
+   	   sig_value iter
+   	   value_description
+   	   arrow
+   	   arrow
+   	   
+   	   int
+   	   (
+   	   )
+   	   								  
+   	   
+   	   unit
+   	   (
+   	   )
+   	   								  
+   	      								   
+   	   arrow
+   	   
+   	   t
+   	   (
+   	   )
+   	   								  
+   	   
+   	   unit
+   	   (
+   	   )
+   	   								  
+   	      								   
+   	      								   
+   	   (
+   	   )
+   	       								
+   	  		    				
+   	  )
+   	  struct
+   	  (
+   	  							  
+   	  type
+   	  (  						
+   	      							    	 
+   	     t
+   	       type
+   	       params=
+   	       (
+   	       
+   	       )
+   	       cstrs =
+   	       (
+   	       )
+   	       kind =
+   	       
+   	       
+   	       (
+   	       								  
+   	       I
+   	       (
+   	       									
+   	        
+   	        int
+   	        (
+   	        )
+   	        								  
+   	       								     
+   	        
+   	        int
+   	        (
+   	        )
+   	        								  
+   	       								     
+   	       )
+   	       								    
+   	       								  
+   	       D
+   	       (
+   	       									
+   	        
+   	        int
+   	        (
+   	        )
+   	        								  
+   	       								     
+   	        
+   	        Diet.t
+   	        (
+   	        )
+   	        								  
+   	       								     
+   	        
+   	        int
+   	        (
+   	        )
+   	        								  
+   	       								     
+   	       )
+   	       								    
+   	       								  
+   	       )
+   	       								  
+   	       														  
+   	       														 
+   	    											   
+   	  								        
+   	  )
+   	  							  
+   	  let
+   	  (
+   	   
+   	     compare
+   	               	   
+   	   (
+   	    case
+   	        (
+   	     		
+   	     		 x1
+   	     		(
+   	     		 case
+   	     		     (
+   	     		 	  x2
+   	     		      0
+   	     		     )
+   	     		)
+   	     		    		   
+   	        )
+   	   )
+   	               	    
+   	  )
+   	  							  
+   	  let
+   	  (
+   	   
+   	    iter
+   	   (
+   	    case
+   	        (
+   	    	  f
+   	         (
+   	          
+   	          case
+   	          (
+   	            
+   	            I
+   	            
+   	            (
+   	             l
+   	                 						 
+   	            	r
+   	            
+   	            )
+   	            									  
+   	            
+   	             for i
+   	             l
+   	             r
+   	             f
+   	             (
+   	                 i
+   	             )
+   	                														  
+   	          ) 
+   	          	        											 
+   	            
+   	            case
+   	            (
+   	             
+   	             D
+   	             
+   	             (
+   	              _
+   	                  						 
+   	             	d
+   	             
+   	             	_
+   	             
+   	             )
+   	             									  
+   	             
+   	             Diet.iter
+   	             (
+   	                 iter
+   	                 (
+   	                     f
+   	                 )
+   	                 d
+   	             )
+   	            )
+   	            													    
+   	          	        											 
+   	          	        											 
+   	         )
+   	            							   
+   	        )
+   	   )
+   	       		    
+   	  )
+   	  							  
+   	  )
+   	  							  
+   										   
+   	  "Diet"
+   	  
+   	   SET
+   	    (
+   	        
+   	        t
+   	        type
+   	        params=
+   	        (
+   	        )
+   	        cstrs =
+   	        (
+   	        )
+   	        kind =
+   	        
+   	         
+   	          tree
+   	          (
+   	            
+   	            Elt.t
+   	            (
+   	            )
+   	            								  
+   	          )
+   	          
+   	             									
+   	          										 
+   	      								    
+   	        
+   	        elt
+   	        type
+   	        params=
+   	        (
+   	        )
+   	        cstrs =
+   	        (
+   	        )
+   	        kind =
+   	        
+   	         
+   	         Elt.t
+   	         (
+   	         )
+   	         								  
+   	          										 	
+   	      								    
+   	     )
+   	      								    
+   	  MakeDiet
+   	  (
+   	  Elt
+   	  )
+   	  								   
+   										   
+   	)
+   										   
+   								  
+   	type
+   	(  						
+   	    							    	 
+   	   t
+   	     type
+   	     params=
+   	     (
+   	     
+   	     )
+   	     cstrs =
+   	     (
+   	     )
+   	     kind =
+   	     
+   	     Diet.t
+   	     (
+   	     )
+   	     								  
+   	     
+   	     														  
+   	     														 
+   	  											   
+   									        
+   	)
+   								  
+   	let
+   	(
+   	 
+   	  iter
+   	 (
+   	  case
+   	      (
+   	  	  f
+   	       Diet.iter
+   	       (
+   	           Elt.iter
+   	           (
+   	               f
+   	           )
+   	       )
+   	      )
+   	 )
+   	     		    
+   	)
+   								  
+   	)
+   								  
+   	
+   	 SET
+   	  (
+   	      
+   	      elt
+   	      type
+   	      params=
+   	      (
+   	      )
+   	      cstrs =
+   	      (
+   	      )
+   	      kind =
+   	      
+   	       
+   	       int
+   	       (
+   	       )
+   	       								  
+   	        										 
+   	    								    
+   	   )
+   	    								    
+       								 
   )
       										    
                                      

@@ -3,200 +3,216 @@
   functor X
   (
    Set.OrderedType
-   functor []
-   (
-     struct
-     (
-     modRec1 
-     (
-         Mod
-         signature
-         (
-          module XSet
-          signature
-          (
-           type
-           (  						
-              elt
-              type
-              params=
-              (
-              )
-              cstrs =
-              (
-              )
-              kind =
-              "extendedModulePath1"([],"X")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-              (
-              )
-           )
-           type
-           (  						
-              t
-              type
-              params=
-              (
-              )
-              cstrs =
-              (
-              )
-              kind =
-              "extendedModulePath2"("extendedModulePath1"(["extendedModulePath1"([],"Set")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"Make")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"extendedModulePath1"([],"X")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-              (
-              )
-           )
-          )	
-          module XMap
-          signature
-          (
-           type
-           (  						
-              key
-              type
-              params=
-              (
-              )
-              cstrs =
-              (
-              )
-              kind =
-              "extendedModulePath1"([],"X")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-              (
-              )
-           )
-           type
-           (  						
-              t
-              type
-              params=
-              (
-               a
-              )
-              cstrs =
-              (
-              )
-              kind =
-               "extendedModulePath2"("extendedModulePath1"(["extendedModulePath1"([],"Map")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"Make")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"extendedModulePath1"([],"X")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-               (
-                 a
-               )
-           )
-          )	
-          type
-          (  						
-             elt
-             type
-             params=
-             (
-             )
-             cstrs =
-             (
-             )
-             kind =
-             "extendedModulePath1"([],"X")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-             (
-             )
-          )
-          type
-          (  						
-             t
-             type
-             params=
-             (
-             )
-             cstrs =
-             (
-             )
-             kind =
-              "extendedModulePath1"([],"XMap")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-              (
-                "extendedModulePath1"([],"XSet")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-                (
-                )
-              )
-          )
-          sig_value compare
-          value_description
-          arrow
-          t
-          (
-          )
-          arrow
-          t
-          (
-          )
-          int
-          (
-          )
-          (
-          )
-         )
-         struct
-         (
-         module  XSet
-           Set.Make
-          (
-          X
-          )
-         module  XMap
-           Map.Make
-          (
-          X
-          )
-         type
-         (  						
-            elt
-            type
-            params=
-            (
-            )
-            cstrs =
-            (
-            )
-            kind =
-            "extendedModulePath1"([],"X")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-            (
-            )
-         )
-         type
-         (  						
-            t
-            type
-            params=
-            (
-            )
-            cstrs =
-            (
-            )
-            kind =
-             "extendedModulePath1"([],"XMap")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)].t
-             (
-               "extendedModulePath1"([],"XSet")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-               (
-               )
-             )
-         )
-         let
-         (
-           compare
-           (
-            case
-            (
-              x
-              (
-              case
-              (
-              y
-              0
-              )
-              )
-            )													
-           )
-         )
-         )
-         <"ModSet","modTypeWith"("modTypePath"("modTypePath"(["extendedModulePath1"([],"Set")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"S")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modConsType1"([],"typeConstr"([],"elt")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"(["extendedModulePath1"([],"Mod")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],"t")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"modApp"("modExpModPath"("modulePath"(["Set"],"Make")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"modExpModPath"("modulePath"([],"Mod")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-     )
-     )
-   )
+   	struct
+   	(
+   	rec module
+   	(
+   	  "Mod"
+   	  signature
+   	  (
+   	   module XSet
+   	   signature
+   	   (
+   	    type
+   	    (  						
+   	       elt
+   	         type
+   	         params=
+   	         (
+   	         )
+   	         cstrs =
+   	         (
+   	         )
+   	         kind =
+   	         X.t
+   	         (
+   	         )
+   	    )
+   	    type
+   	    (  						
+   	       t
+   	         type
+   	         params=
+   	         (
+   	         )
+   	         cstrs =
+   	         (
+   	         )
+   	         kind =
+   	         Set.Make(X).t
+   	         (
+   	         )
+   	    )
+   	   )	
+   	   module XMap
+   	   signature
+   	   (
+   	    type
+   	    (  						
+   	       key
+   	         type
+   	         params=
+   	         (
+   	         )
+   	         cstrs =
+   	         (
+   	         )
+   	         kind =
+   	         X.t
+   	         (
+   	         )
+   	    )
+   	    type
+   	    (  						
+   	       t
+   	         type
+   	         params=
+   	         (
+   	          a
+   	         )
+   	         cstrs =
+   	         (
+   	         )
+   	         kind =
+   	          Map.Make(X).t
+   	          (
+   	            a
+   	          )
+   	    )
+   	   )	
+   	   type
+   	   (  						
+   	      elt
+   	        type
+   	        params=
+   	        (
+   	        )
+   	        cstrs =
+   	        (
+   	        )
+   	        kind =
+   	        X.t
+   	        (
+   	        )
+   	   )
+   	   type
+   	   (  						
+   	      t
+   	        type
+   	        params=
+   	        (
+   	        )
+   	        cstrs =
+   	        (
+   	        )
+   	        kind =
+   	         XMap.t
+   	         (
+   	           XSet.t
+   	           (
+   	           )
+   	         )
+   	   )
+   	   sig_value compare
+   	   value_description
+   	   arrow
+   	   t
+   	   (
+   	   )
+   	   arrow
+   	   t
+   	   (
+   	   )
+   	   int
+   	   (
+   	   )
+   	   (
+   	   )
+   	  )
+   	  struct
+   	  (
+   	  module  XSet
+   	       							      Set.Make
+   	   (
+   	   X
+   	   )
+   	  module  XMap
+   	       							      Map.Make
+   	   (
+   	   X
+   	   )
+   	  type
+   	  (  						
+   	     elt
+   	       type
+   	       params=
+   	       (
+   	       )
+   	       cstrs =
+   	       (
+   	       )
+   	       kind =
+   	       X.t
+   	       (
+   	       )
+   	  )
+   	  type
+   	  (  						
+   	     t
+   	       type
+   	       params=
+   	       (
+   	       )
+   	       cstrs =
+   	       (
+   	       )
+   	       kind =
+   	        XMap.t
+   	        (
+   	          XSet.t
+   	          (
+   	          )
+   	        )
+   	  )
+   	  let
+   	  (
+   	    compare
+   	    (
+   	     case
+   	     (
+   	       x
+   	       (
+   	       case
+   	       (
+   	       y
+   	       0
+   	       )
+   	       )
+   	     )													
+   	    )
+   	  )
+   	  )
+   	  "ModSet"
+   	   Set.S
+   	    (
+   	        elt
+   	        type
+   	        params=
+   	        (
+   	        )
+   	        cstrs =
+   	        (
+   	        )
+   	        kind =
+   	         Mod.t
+   	         (
+   	         )
+   	     )
+   	      							      Set.Make
+   	  (
+   	  Mod
+   	  )
+   	)
+   	)
   )
 )

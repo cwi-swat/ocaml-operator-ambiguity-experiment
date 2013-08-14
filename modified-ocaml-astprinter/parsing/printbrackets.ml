@@ -144,7 +144,7 @@ let rec core_type i ppf x =
       list i label_x_bool_x_core_type_list ppf l;
       option i (fun i -> list i string) ppf low
   | Ptyp_object (l) ->
-      line i ppf "Ptyp_object\n";
+      (* line i ppf "Ptyp_object\n"; *)
       list i core_field_type ppf l;
   | Ptyp_class (li, l, low) ->
       line i ppf "Ptyp_class %a\n" fmt_longident li;
@@ -168,13 +168,14 @@ and package_with i ppf (s, t) =
   core_type i ppf t
 
 and core_field_type i ppf x =
-  line i ppf "core_field_type %a\n" fmt_location x.pfield_loc;
+  (* line i ppf "core_field_type %a\n" fmt_location x.pfield_loc; *)
   let i = i+1 in
   match x.pfield_desc with
   | Pfield (s, ct) ->
-      line i ppf "Pfield \"%s\"\n" s;
+      (* line i ppf "Pfield \"%s\"\n" s; *)
+      line i ppf "%s\n" s;
       core_type i ppf ct;
-  | Pfield_var -> line i ppf "Pfield_var\n";
+  | Pfield_var -> line i ppf "\n"; (* Pfield_var -> line i ppf "Pfield_var\n"; *)
 
 and pattern i ppf x =
   (* line i ppf "pattern %a\n" fmt_location x.ppat_loc; *)
@@ -518,8 +519,8 @@ and class_expr i ppf x =
       (* line i ppf "structure\n"; *)
       class_structure i ppf cs;
   | Pcl_fun (l, eo, p, e) ->
-      line i ppf "fun\n";
-      label i ppf l;
+      (* line i ppf "fun\n"; *)
+      (* label i ppf l; *)
       option i expression ppf eo;
       pattern i ppf p;
       class_expr i ppf e;
