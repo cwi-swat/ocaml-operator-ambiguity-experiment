@@ -1212,6 +1212,8 @@ str printAST(value v) {
 		   										   ' )
 		   										   ";
 		   										   
+	case "bracketModType1"(moduleType): return printAST(moduleType);		   										   
+		   										   
 	// modeConsModule1: "module" ModulePath "=" ExtendedModulePath
  	case "modeConsModule1"(modulePath, extendedModulePath): return "
  																   '<printAST(modulePath)>
@@ -1439,11 +1441,9 @@ str printAST(value v) {
     							     
     case "extendedModulePath1"([], n) : return "<n>";
     							     
-    							     
-    case "extendedModulePath1"(l, n): return "
-		    								  <for (p <- l) {>
-		    							      ' <p>.<}><n>";
-    									 							     
+    case "extendedModulePath1"([ext], n): return "<printAST(ext)>.<n>";
+    
+    case "extendedModulePath2"(e1, e2): return "<printAST(e1)>(<printAST(e2)>)";
     
     case "classPath"([], n): return "<n>";
     
