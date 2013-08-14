@@ -1,0 +1,440 @@
+(
+   module type Printable
+    signature
+    (
+     type
+     (  						
+        t
+          type
+          params=
+          (
+          )
+          cstrs =
+          (
+          )
+          kind =
+     )
+     sig_value print
+     value_description
+     arrow
+     Format.formatter
+     (
+     )
+     arrow
+     t
+     (
+     )
+     unit
+     (
+     )
+     (
+     )
+    )    								
+   module type Comparable
+    signature
+    (
+     type
+     (  						
+        t
+          type
+          params=
+          (
+          )
+          cstrs =
+          (
+          )
+          kind =
+     )
+     sig_value compare
+     value_description
+     arrow
+     t
+     (
+     )
+     arrow
+     t
+     (
+     )
+     int
+     (
+     )
+     (
+     )
+    )    								
+   module type PrintableComparable
+    signature
+    (
+     include
+     (
+       Printable
+     )
+     include
+     (
+        Comparable
+         (
+             t
+             type
+             params=
+             (
+             )
+             cstrs =
+             (
+             )
+             kind =
+              t
+              (
+              )
+          )
+     )
+    )    								
+   module type PrintableComparable
+    signature
+    (
+     type
+     (  						
+        t
+          type
+          params=
+          (
+          )
+          cstrs =
+          (
+          )
+          kind =
+     )
+     include
+     (
+        Printable
+         (
+             t
+             type
+             params=
+             (
+             )
+             cstrs =
+             (
+             )
+             kind =
+              t
+             (
+             )
+          )
+     )
+     include
+     (
+        Comparable
+         (
+             t
+             type
+             params=
+             (
+             )
+             cstrs =
+             (
+             )
+             kind =
+              t
+             (
+             )
+          )
+     )
+    )    								
+   module type PrintableComparable
+    signature
+    (
+     include
+     (
+       Printable
+     )
+     include
+     (
+        Comparable
+         (
+             t
+             type
+             params=
+             (
+             )
+             cstrs =
+             (
+             )
+             kind =
+              t
+             (
+             )
+          )
+     )
+    )    								
+   module type ComparableInt
+     Comparable
+      (
+          t
+          type
+          params=
+          (
+          )
+          cstrs =
+          (
+          )
+          kind =
+           int
+          (
+          )
+       )
+   module type S
+    signature
+    (
+     type
+     (  						
+        t
+          type
+          params=
+          (
+          )
+          cstrs =
+          (
+          )
+          kind =
+     )
+     sig_value f
+     value_description
+     arrow
+     t
+     (
+     )
+     t
+     (
+     )
+     (
+     )
+    )    								
+   module type S'
+     S
+      (
+          t
+          type
+          params=
+          (
+          )
+          cstrs =
+          (
+          )
+          kind =
+           int
+          (
+          )
+       )
+   module type S
+    signature
+    (
+     type
+     (  						
+        t
+          type
+          params=
+          (
+           a
+          )
+          cstrs =
+          (
+          )
+          kind =
+     )
+     sig_value map
+     value_description
+     arrow
+     arrow
+     a
+     b
+     arrow
+      t
+      (
+        a
+      )
+      t
+      (
+        b
+      )
+     (
+     )
+    )    								
+   module type S1
+     S
+      (
+          t
+          type
+          params=
+          (
+             a
+          )
+          cstrs =
+          (
+          )
+          kind =
+           list
+          (
+             a
+          )
+       )
+   module type S2
+    signature
+    (
+     type
+     (  						
+        dict
+          type
+          params=
+          (
+           a
+          )
+          cstrs =
+          (
+          )
+          kind =
+           list
+           (
+             tuple
+             (
+              string
+              (
+              )
+               a
+             )
+           )
+     )
+     include
+     (
+        S
+         (
+             t
+             type
+             params=
+             (
+                a
+             )
+             cstrs =
+             (
+             )
+             kind =
+              dict
+             (
+                a
+             )
+          )
+     )
+    )    								
+   module type S
+    signature
+    (
+     module T
+     signature
+     (
+      type
+      (  						
+         exp
+           type
+           params=
+           (
+           )
+           cstrs =
+           (
+           )
+           kind =
+      )
+      type
+      (  						
+         arg
+           type
+           params=
+           (
+           )
+           cstrs =
+           (
+           )
+           kind =
+      )
+     )	
+     sig_value f
+     value_description
+     arrow
+     T.exp
+     (
+     )
+     T.arg
+     (
+     )
+     (
+     )
+    )    								
+   module  M
+    struct
+    (
+    type
+    (  						
+       exp
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+         string
+         (
+         )
+    )
+    type
+    (  						
+       arg
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+         int
+         (
+         )
+    )
+    )
+   module type S'
+     S
+      (
+         T
+       )
+   module type S
+     signature
+     (
+      type
+      (  						
+         t
+           type
+           params=
+           (
+            a
+           )
+           cstrs =
+           (
+           )
+           kind =
+      )
+     )
+      (
+          t
+          type
+          params=
+          (
+             a
+          )
+          cstrs =
+          (
+          )
+          kind =
+           unit
+          (
+          )
+       )
+)

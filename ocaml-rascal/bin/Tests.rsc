@@ -967,9 +967,6 @@ str printAST(value v) {
 										   
     case [] : return "";
     
-    case list[value] l : return "<printAST(head(l))><for (e <- tail(l)) {>
-                                '<printAST(e)><}>";
-                                
     case "emptyBrackets"() : return "[]";
     
     case "emptyArray"() : return "array
@@ -1155,21 +1152,30 @@ str printAST(value v) {
         
     case "typeDef"(t) : return printAST(t);
     
-    case "include"(me) : return "include
+    case "include"(moduleExpr) : return "include
     							'(
-    							'  <printAST(me)>
+    							'  <printAST(moduleExpr)>
     							')"
     							;
+    							
+    case "includeSpec"(moduleType) : return "include
+    							'(
+    							'  <printAST(moduleType)>
+    							')"
+    							;
+    							
     							
     case "modTypeOf"(x): return printAST(x); 							
     					
     // ModuleType "with" ModConstraint ("and" ModConstraint)*							
     case "modTypeWith"(t, c, l): return "
     								    ' <printAST(t)>
-    								    ' <printAST(c)>
+    								    '  (
+    								    '     <printAST(c)>
     								    <for (x <- l) {>
-    								    ' <printAST(x)>	
+    								    '     <printAST(x)>	
     								    <}>
+    								    '   )
     								    ";
     								    
     								    
@@ -1186,7 +1192,37 @@ str printAST(value v) {
 										 ' kind =
 										 ' 
    										 '  <printAST(e)>
-   										 "; 								    
+   										 ";
+   										 
+	// "type" TypeParameters?  TypeconstrName ":="  TypeParameters?  TypeConstr
+	case "modConsType2"(params1, n, params2, c): return "
+		   										   ' <printAST(n)>
+		   										   ' type
+												   ' params=
+												   ' (
+												   '   <printAST(params1)>
+												   ' )
+											       ' cstrs =
+												   ' (
+												   ' )
+												   ' kind =
+		   										   '  <printAST(c)>
+		   										   ' (
+		   										   '   <printAST(params2)>
+		   										   ' )
+		   										   ";
+		   										   
+	// modeConsModule1: "module" ModulePath "=" ExtendedModulePath
+ 	case "modeConsModule1"(modulePath, extendedModulePath): return "
+ 																   '<printAST(modulePath)>
+ 																   '<printAST(extendedModulePath)>
+ 																   ";
+ 																   
+ 	// modeConsModule2: "module" ModuleName ":="  ExtendedModulePath
+ 	case "modeConsModule2"(moduleName, extendedModulePath): return "
+ 																   '<printAST(moduleName)>
+ 																   '
+ 																   ";														   			 
     							
     // Classes
     case "classDef"(c) : return printAST(c);
@@ -1278,9 +1314,9 @@ str printAST(value v) {
 	
 	// "\'" Ident ("," "\'" Ident)*;
 	case "typeParameters"(x, l): return "
-										' \"<printAST(x)>\"
+										' <printAST(x)>
 										<for (i <- l) {>
-										' \"<printAST(i)>\"
+										' <printAST(i)>
 										<}>
 										";
 	
@@ -1449,12 +1485,6 @@ str printAST(value v) {
     // Lexical 
     case "hexNumber"(first, rest) : return "0x<first><rest>";								
     								
-    
-    // TypeConstr = typeConstr: (ExtendedModulePath ".")? TypeconstrName;
-    case "typeConstr"([], typeConstrName): return "<typeConstrName>";
-    
-    case "typeConstr"([e], typeConstrName): return "<printAST(e)>.<typeConstrName>";
-    
     // Extensions
     case "packageType1"(p): return "package <printAST(p)>
     							   '(
@@ -1488,6 +1518,12 @@ str printAST(value v) {
              '    <printAST(c)><}>
              ')";
     }
+    
+    case <x>: return printAST(x);
+    
+    case list[value] l : return "<printAST(head(l))><for (e <- tail(l)) {>
+                                '<printAST(e)><}>";
+    
     
     case value v : return "<v>";
   } 

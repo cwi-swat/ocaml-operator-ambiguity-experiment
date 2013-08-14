@@ -70,14 +70,15 @@
   module type PrintableComparable
     signature
     (
-        sig_include
+        include
+        (
           Printable
-        sig_include
-          Pmty_with
+        )
+        include
+        (
             Comparable
           (
             t
-              Pwith_type
                 type
                   params =
                     (
@@ -91,6 +92,7 @@
                         (
                         )
           )
+        )
     )
   module type PrintableComparable
     signature
@@ -108,12 +110,11 @@
               kind =
                 
                         )
-        sig_include
-          Pmty_with
+        include
+        (
             Printable
           (
             t
-              Pwith_typesubst
                 type
                   params =
                     (
@@ -127,12 +128,12 @@
                         (
                         )
           )
-        sig_include
-          Pmty_with
+        )
+        include
+        (
             Comparable
           (
             t
-              Pwith_typesubst
                 type
                   params =
                     (
@@ -146,18 +147,20 @@
                         (
                         )
           )
+        )
     )
   module type PrintableComparable
     signature
     (
-        sig_include
+        include
+        (
           Printable
-        sig_include
-          Pmty_with
+        )
+        include
+        (
             Comparable
           (
             t
-              Pwith_typesubst
                 type
                   params =
                     (
@@ -171,13 +174,12 @@
                         (
                         )
           )
+        )
     )
   module type ComparableInt
-    Pmty_with
       Comparable
     (
       t
-        Pwith_typesubst
           type
             params =
               (
@@ -221,11 +223,9 @@
           )
     )
   module type S'
-    Pmty_with
       S
     (
       t
-        Pwith_typesubst
           type
             params =
               (
@@ -278,11 +278,9 @@
           )
     )
   module type S1
-    Pmty_with
       S
     (
       t
-        Pwith_typesubst
           type
             params =
               (
@@ -325,12 +323,11 @@
                         )
                     )
         )
-        sig_include
-          Pmty_with
+        include
+        (
             S
           (
             t
-              Pwith_typesubst
                 type
                   params =
                     (
@@ -346,6 +343,7 @@
                             a
                         )
           )
+        )
     )
   module type S
     signature
@@ -430,14 +428,11 @@
       )
     )
   module type S'
-    Pmty_with
       S
     (
       T
-        Pwith_modsubst M
-    )
+            )
   module type S
-    Pmty_with
       signature
       (
           type
@@ -457,7 +452,6 @@
       )
     (
       t
-        Pwith_typesubst
           type
             params =
               (

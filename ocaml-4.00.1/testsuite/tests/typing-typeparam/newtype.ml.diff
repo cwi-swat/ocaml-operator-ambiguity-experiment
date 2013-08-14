@@ -1,15 +1,7 @@
-5c5
-<      t
----
->       Pexp_newtype "t"
-169c169
-<      s
----
->       Pexp_newtype "s"
 255d254
-<      a
+<       a
 259a259
->           Pexp_newtype "a"
+>           a
 280a281
 >             "a"
 293a295,298
@@ -17,16 +9,13 @@
 >                       arrow
 >                         a
 >                         a
-295,298c300
-<                      (
-<                       case
+295,297d299
 <                       (
-<                         g
----
->                 Pexp_newtype "g"
+<                        case
+<                        (
 315,316c317,320
-<                       )													
-<                      )
+<                        )													
+<                       )
 ---
 >                     poly
 >                       arrow

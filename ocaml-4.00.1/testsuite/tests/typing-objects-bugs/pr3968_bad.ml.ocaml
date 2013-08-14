@@ -1,0 +1,140 @@
+(
+  type
+  (
+    expr
+      type
+        params =
+          (
+          )
+        cstrs =
+          (
+          )
+        kind =
+          
+              Ptyp_variant closed=true
+              (
+                Rtag "Abs" false
+                  (
+                      tuple
+                      (
+                           string
+                          (
+                          )
+                           expr
+                          (
+                          )
+                      )
+                  )
+                Rtag "App" false
+                  (
+                      tuple
+                      (
+                           expr
+                          (
+                          )
+                           expr
+                          (
+                          )
+                      )
+                  )
+              )
+                )
+  class_type
+  (
+    class_type_declaration
+      params =
+          (
+          )
+      name = exp
+      expr =
+        class_type
+          signature
+          class_signature
+              
+            (
+              Pctf_meth "eval" Public ([8,91+2]..[8,91+47])
+                  poly
+                  
+                    arrow
+                    
+                       Hashtbl.t
+                      (
+                           string
+                          (
+                          )
+                           exp
+                          (
+                          )
+                      )
+                       expr
+                      (
+                      )
+            )
+  )
+  class
+  (
+      params =
+          (
+          )
+      class name = app
+      class expr =
+          fun
+          label=""
+                    e1
+            fun
+            label=""
+                        e2
+              constraint
+                class_structure
+                  (
+                    l
+                      e1
+                    r
+                      e2
+                    method eval
+                      (
+                        case
+                        (
+                          env
+                          match
+                          l
+                          (
+                            case
+                            (
+                              Abs
+                                (
+                                  var
+                                  body
+                                )
+                              sequence
+                              (
+                                Hashtbl.add
+                                (
+                                    env
+                                    var
+                                    r
+                                )
+                              ;
+                                body
+                              )
+                            )
+                            case
+                            (
+                              _
+                              App
+                                (
+                                  l
+                                  r
+                                )
+                            )
+                          )
+                        )
+                      )
+                                        )
+              class_type
+                constr exp
+                (
+                )
+  )
+)
+

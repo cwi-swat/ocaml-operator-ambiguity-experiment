@@ -105,7 +105,7 @@
                     l
             class_structure
               (
-                Pcf_val "l" Immutable Fresh ([16,386+2]..[16,386+11])
+                l
                   l
                 method add
                   (
@@ -192,14 +192,14 @@
                     l
             class_structure
               (
-                Pcf_inher Fresh
+                inherit
                     constr vlist
                     (
                          int
                         (
                         )
                     )
-                                  Pcf_val "l" Immutable Fresh ([29,716+2]..[29,716+11])
+                l
                   l
                 method add
                   (
@@ -233,12 +233,12 @@
           l
           Pexp_object          class_structure
             (
-              Pcf_inher Fresh
+              inherit
                   constr vlist
                   (
-                      Ptyp_any
+                      
                   )
-                              Pcf_val "l" Immutable Fresh ([36,844+2]..[36,844+11])
+              l
                 l
               method add
                 (
@@ -278,12 +278,12 @@
                     l
             class_structure
               (
-                Pcf_inher Fresh
+                inherit
                     constr vlist
                     (
                         a
                     )
-                                  Pcf_val "l" Immutable Fresh ([43,980+2]..[43,980+11])
+                l
                   l
                 method add
                   (
@@ -325,12 +325,12 @@
             )
             class_structure
               (
-                Pcf_val "l" Immutable Fresh ([49,1107+2]..[49,1107+11])
+                l
                   l
                 Pcf_virt "add" Public ([50,1119+2]..[50,1119+24])
                     poly
                     
-                      Ptyp_any
+                      
                 method add
                   (
                     case
@@ -387,7 +387,7 @@
             )
             class_structure
               (
-                Pcf_val "l" Immutable Fresh ([57,1330+2]..[57,1330+11])
+                l
                   l
                 method add
                   (
@@ -485,12 +485,12 @@
                     l
             class_structure
               (
-                Pcf_inher Fresh
+                inherit
                     constr vlist
                     (
                         a
                     )
-                                  Pcf_val "l" Immutable Fresh ([67,1668+2]..[67,1668+11])
+                l
                   l
                 method add
                   (
@@ -597,12 +597,12 @@
       class expr =
           class_structure
             (
-              Pcf_inher Fresh
+              inherit
                   constr olist
                   (
                       a
                   )
-                              method fold
+              method fold
                 (
                   case
                   (
@@ -634,18 +634,18 @@
                         tl
               class_structure
                 (
-                  Pcf_inher Fresh
+                  inherit
                       constr olist
                       (
                           a
                       )
-                                      Pcf_val "hd" Immutable Fresh ([85,2137+2]..[85,2137+18])
+                  hd
                     (
                     hd
                     :
                         a
                                         )
-                  Pcf_val "tl" Immutable Fresh ([86,2156+2]..[86,2156+24])
+                  tl
                     (
                     tl
                     :
@@ -697,18 +697,18 @@
                         tl
               class_structure
                 (
-                  Pcf_inher Fresh
+                  inherit
                       constr olist
                       (
                           a
                       )
-                                      Pcf_val "hd" Immutable Fresh ([92,2303+2]..[92,2303+18])
+                  hd
                     (
                     hd
                     :
                         a
                                         )
-                  Pcf_val "tl" Immutable Fresh ([93,2322+2]..[93,2322+39])
+                  tl
                     (
                     (
                     tl
@@ -721,7 +721,7 @@
                     :
                         Ptyp_class olist
                         (
-                            Ptyp_any
+                            
                         )
                         (
                         )
@@ -771,14 +771,14 @@
                         tl
               class_structure
                 (
-                  Pcf_inher Fresh
+                  inherit
                       constr olist
                       (
                           a
                       )
-                                      Pcf_val "hd" Immutable Fresh ([100,2511+2]..[100,2511+13])
+                  hd
                     hd
-                  Pcf_val "tl" Immutable Fresh ([101,2525+2]..[101,2525+18])
+                  tl
                     (
                     tl
                     :
@@ -857,15 +857,15 @@
                 (
                   case
                   (
-                    Ppat_variant "A"
+                    A
                                         1
                   )
                   case
                   (
                     pat_or
                     (
-                    Ppat_variant "B"
-                                        Ppat_variant "C"
+                    B
+                                        C
                                         )
                     0
                   )
@@ -885,15 +885,15 @@
                 (
                   case
                   (
-                    Ppat_variant "A"
+                    A
                                         1
                   )
                   case
                   (
                     pat_or
                     (
-                    Ppat_variant "B"
-                                        Ppat_variant "C"
+                    B
+                                        C
                                         )
                     0
                   )
@@ -957,7 +957,7 @@
           (
             case
             (
-              Ppat_variant "A"
+              A
                             1
             )
             case
@@ -1020,17 +1020,16 @@
     (
         sig_class
         (
-          class_description ([131,3106+8]..[131,3106+72])
-            pci_virt = Concrete
-            pci_params =
+          class_description
+            params =
                 (
                 )
-            pci_name = "vari"
-            pci_expr =
-              class_type ([131,3106+15]..[131,3106+72])
-                Pcty_signature
+            name = vari
+            expr =
+              class_type
+                signature
                 class_signature
-                    Ptyp_any
+                    
                   (
                     Pctf_meth "m" Public ([131,3106+22]..[131,3106+68])
                         poly
@@ -1097,15 +1096,15 @@
                     (
                       case
                       (
-                        Ppat_variant "A"
+                        A
                                                 1
                       )
                       case
                       (
                         pat_or
                         (
-                        Ppat_variant "B"
-                                                Ppat_variant "C"
+                        B
+                                                C
                                                 )
                         0
                       )
@@ -1126,7 +1125,7 @@
     v
   )
   (
-      Pexp_variant "A"
+      A
         )
   class
   (
@@ -1143,7 +1142,7 @@
                         y
               class_structure
                 (
-                  Pcf_val "x" Immutable Fresh ([147,3419+2]..[147,3419+17])
+                  x
                     (
                     x
                     :
@@ -1151,7 +1150,7 @@
                         (
                         )
                                         )
-                  Pcf_val "y" Immutable Fresh ([148,3437+2]..[148,3437+17])
+                  y
                     (
                     y
                     :
@@ -1183,7 +1182,7 @@
                             color
                 class_structure
                   (
-                    Pcf_inher Fresh
+                    inherit
                         Pcl_apply
                           constr point
                           (
@@ -1192,7 +1191,7 @@
                             x
                             y
                         )
-                                          Pcf_val "color" Immutable Fresh ([155,3554+2]..[155,3554+28])
+                    color
                       (
                       color
                       :
@@ -1224,7 +1223,7 @@
                         r
               class_structure
                 (
-                  Pcf_val "p" Immutable Fresh ([160,3651+2]..[160,3651+22])
+                  p
                     (
                     p
                     :
@@ -1232,7 +1231,7 @@
                         (
                         )
                     )
-                  Pcf_val "r" Immutable Fresh ([161,3674+2]..[161,3674+11])
+                  r
                     r
                   Pcf_virt "distance" Public ([162,3686+2]..[162,3686+55])
                       poly
@@ -1490,17 +1489,16 @@
   )
   class_type
   (
-    class_type_declaration ([186,4288+11]..[188,4339+3])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
           )
-      pci_name = "id_spec"
-      pci_expr =
-        class_type ([186,4288+21]..[188,4339+3])
-          Pcty_signature
+      name = id_spec
+      expr =
+        class_type
+          signature
           class_signature
-              Ptyp_any
+              
             (
               Pctf_meth "id" Public ([187,4316+2]..[187,4316+22])
                   poly
@@ -1640,7 +1638,7 @@
                     x
             class_structure
               (
-                Pcf_val "x" Immutable Fresh ([214,4719+2]..[214,4719+11])
+                x
                   x
                 Pcf_virt "id" Public ([215,4731+2]..[215,4731+34])
                     poly
@@ -1671,7 +1669,7 @@
                     ()
                       class_structure
               (
-                Pcf_val "r" Mutable Fresh ([220,4813+2]..[220,4813+22])
+                r
                   None
                                   Pcf_virt "id" Public ([221,4836+2]..[221,4836+34])
                     poly
@@ -2365,7 +2363,7 @@
       class expr =
           class_structure
             (
-              Pcf_val "num" Immutable Fresh ([285,6225+2]..[285,6225+13])
+              num
                 0
               method num
                 num
@@ -2507,11 +2505,11 @@
       class expr =
           class_structure
             (
-              Pcf_inher Fresh
+              inherit
                   constr c
                   (
                   )
-                              method id
+              method id
                 id
                             )
   )
@@ -2524,12 +2522,11 @@
       class expr =
           class_structure
             (
-              Pcf_inher Fresh
+              inherit
                   constr c
                   (
                   )
-                  "c"
-              Pcf_val "count" Mutable Fresh ([309,6700+2]..[309,6700+23])
+              count
                 0
               method id
                 (
@@ -2577,7 +2574,7 @@
                     l
             class_structure
               (
-                Pcf_val "l" Immutable Fresh ([316,6853+2]..[316,6853+11])
+                l
                   l
                 method fold
                   List.fold_right
@@ -2868,17 +2865,16 @@
   )
   class_type
   (
-    class_type_declaration ([338,7468+11]..[338,7468+68])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
           )
-      pci_name = "numeral"
-      pci_expr =
-        class_type ([338,7468+21]..[338,7468+68])
-          Pcty_signature
+      name = numeral
+      expr =
+        class_type
+          signature
           class_signature
-              Ptyp_any
+              
             (
               Pctf_meth "fold" Public ([338,7468+28]..[338,7468+64])
                   poly
@@ -2965,17 +2961,16 @@
   )
   class_type
   (
-    class_type_declaration ([344,7689+11]..[346,7765+3])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
           )
-      pci_name = "node_type"
-      pci_expr =
-        class_type ([344,7689+24]..[346,7765+3])
-          Pcty_signature
+      name = node_type
+      expr =
+        class_type
+          signature
           class_signature
-              Ptyp_any
+              
             (
               Pctf_meth "as_variant" Public ([345,7720+2]..[345,7720+44])
                   poly
@@ -3002,7 +2997,7 @@
             class_structure
               (
                 method as_variant
-                  Pexp_variant "Node"
+                  Node
                     (
                     self
                     :
@@ -3023,8 +3018,8 @@
                               )
                           )
                                         )
-          class_type ([347,7771+13]..[347,7771+22])
-            Pcty_constr node_type
+          class_type
+            constr node_type
             (
             )
   )
@@ -3038,7 +3033,7 @@
           class_structure
             (
               method as_variant
-                Pexp_variant "Node"
+                Node
                   (
                   self
                   :
@@ -3287,7 +3282,7 @@
                 (
                   case
                   (
-                    Ppat_variant "A"
+                    A
                       x'
                     send m
                     (
@@ -3377,7 +3372,7 @@
                   case
                   (
                     x
-                    Pexp_variant "A"
+                    A
                                       )
                 )
                     poly
@@ -3499,15 +3494,14 @@
   )
   class_type
   (
-    class_type_declaration ([395,9132+11]..[397,9205+3])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
           )
-      pci_name = "ct"
-      pci_expr =
-        class_type ([395,9132+16]..[397,9205+3])
-          Pcty_signature
+      name = ct
+      expr =
+        class_type
+          signature
           class_signature
               s
             (
@@ -4067,7 +4061,7 @@
     case
     (
       (
-        Ppat_variant "A"
+        A
                 _
       )
       1
@@ -4093,7 +4087,7 @@
     case
     (
       (
-        Ppat_variant "A"
+        A
                 _
       )
       1
@@ -4116,7 +4110,7 @@
     (
       (
         Some
-          Ppat_variant "A"
+          A
                   _
       )
       1
@@ -4152,7 +4146,7 @@
     (
       (
         Some
-          Ppat_variant "A"
+          A
                   A
               )
       1
@@ -4161,7 +4155,7 @@
     (
       (
         Some
-          Ppat_variant "A"
+          A
                   B
               )
       1
@@ -4197,7 +4191,7 @@
     (
       (
         A
-                Ppat_variant "A"
+                A
               )
       1
     )
@@ -4205,7 +4199,7 @@
     (
       (
         A
-                Ppat_variant "B"
+                B
               )
       2
     )
@@ -4222,7 +4216,7 @@
     case
     (
       (
-        Ppat_variant "A"
+        A
                 A
               )
       1
@@ -4230,7 +4224,7 @@
     case
     (
       (
-        Ppat_variant "B"
+        B
                 A
               )
       2
@@ -4250,8 +4244,8 @@
       (
         pat_or
         (
-        Ppat_variant "A"
-                Ppat_variant "B"
+        A
+                B
                 )
         _
       )
@@ -4263,8 +4257,8 @@
         _
         pat_or
         (
-        Ppat_variant "A"
-                Ppat_variant "B"
+        A
+                B
                 )
       )
       1
@@ -4274,7 +4268,7 @@
     case
     (
       (
-        Ppat_variant "B"
+        B
                 1
       )
       1
@@ -4293,7 +4287,7 @@
     (
       (
         1
-        Ppat_variant "B"
+        B
               )
       1
     )
@@ -4375,19 +4369,18 @@
   )
   class_type
   (
-    class_type_declaration ([457,11037+11]..[460,11124+3])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
             "a"
             "b"
           )
-      pci_name = "a"
-      pci_expr =
-        class_type ([457,11037+24]..[460,11124+3])
-          Pcty_signature
+      name = a
+      expr =
+        class_type
+          signature
           class_signature
-              Ptyp_any
+              
             (
               Pctf_meth "b" Public ([458,11068+2]..[458,11068+29])
                   poly
@@ -4409,19 +4402,18 @@
                         b
                     )
             )
-    class_type_declaration ([460,11124+8]..[463,11208+3])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
             "a"
             "b"
           )
-      pci_name = "b"
-      pci_expr =
-        class_type ([460,11124+21]..[463,11208+3])
-          Pcty_signature
+      name = b
+      expr =
+        class_type
+          signature
           class_signature
-              Ptyp_any
+              
             (
               Pctf_meth "a" Public ([461,11152+2]..[461,11152+29])
                   poly
@@ -4446,22 +4438,21 @@
   )
   class_type
   (
-    class_type_declaration ([465,11213+11]..[465,11213+55])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
             "b"
           )
-      pci_name = "ca"
-      pci_expr =
-        class_type ([465,11213+21]..[465,11213+55])
-          Pcty_signature
+      name = ca
+      expr =
+        class_type
+          signature
           class_signature
               s
             (
               Pctf_inher
-              class_type ([465,11213+41]..[465,11213+51])
-                Pcty_constr a
+              class_type
+                constr a
                 (
                     s
                     b
@@ -4470,22 +4461,21 @@
   )
   class_type
   (
-    class_type_declaration ([466,11269+11]..[466,11269+55])
-      pci_virt = Concrete
-      pci_params =
+    class_type_declaration
+      params =
           (
             "a"
           )
-      pci_name = "cb"
-      pci_expr =
-        class_type ([466,11269+21]..[466,11269+55])
-          Pcty_signature
+      name = cb
+      expr =
+        class_type
+          signature
           class_signature
               s
             (
               Pctf_inher
-              class_type ([466,11269+41]..[466,11269+51])
-                Pcty_constr b
+              class_type
+                constr b
                 (
                     a
                     s
@@ -6738,7 +6728,7 @@
                                                 :
                              u
                             (
-                                Ptyp_any
+                                
                             )
                                                 )
                         []
@@ -6768,7 +6758,7 @@
         arrow
         
           a
-          Ptyp_any
+          
       (
         case
         (
@@ -6829,7 +6819,7 @@
           (
               a
           )
-          Ptyp_any
+          
       (
         case
         (
@@ -6863,7 +6853,7 @@
           (
               a
           )
-          Ptyp_any
+          
       (
         case
         (
@@ -6908,7 +6898,7 @@
           (
               a
           )
-          Ptyp_any
+          
       (
         case
         (
@@ -6942,7 +6932,7 @@
           (
               a
           )
-          Ptyp_any
+          
       (
         case
         (
@@ -7033,8 +7023,8 @@
        'a
         arrow
         
-          Ptyp_any
-          Ptyp_any
+          
+          
       (
         case
         (
@@ -7062,7 +7052,7 @@
                   a
               )
           )
-                Pexp_variant "Int"
+                Int
         0
   )
   let
@@ -7082,7 +7072,7 @@
           )
             (
             )
-      Pexp_variant "Int"
+      Int
         0
   )
   type
@@ -7122,7 +7112,7 @@
       record
       (
         f
-          Pexp_variant "Int"
+          Int
             0
       )
         )
@@ -7161,7 +7151,7 @@
       record
       (
         f
-          Pexp_variant "Int"
+          Int
             0
       )
         )
@@ -7308,7 +7298,7 @@
        'a
         arrow
         
-          Ptyp_any
+          
           arrow
           
              list
@@ -7408,7 +7398,8 @@
       record
       (
         f
-          Pexp_lazy          raise
+          lazy
+          raise
           (
               Not_found
                         )

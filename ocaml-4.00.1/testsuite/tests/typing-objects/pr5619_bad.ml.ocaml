@@ -1,0 +1,169 @@
+(
+  class_type
+  (
+    class_type_declaration
+      params =
+          (
+          )
+      name = foo_t
+      expr =
+        class_type
+          signature
+          class_signature
+              
+            (
+              Pctf_meth "foo" Public ([3,28+4]..[3,28+22])
+                  poly
+                  
+                     string
+                    (
+                    )
+            )
+  )
+  type
+  (
+    name
+      type
+        params =
+          (
+            a
+          )
+        cstrs =
+          (
+          )
+        kind =
+            (
+              Foo
+                (
+                )
+                     name
+                    (
+                         foo_t
+                        (
+                        )
+                    )
+              Int
+                (
+                )
+                     name
+                    (
+                         int
+                        (
+                        )
+                    )
+            )
+            )
+  class
+  (
+      params =
+          (
+          )
+      class name = foo
+      class expr =
+          class_structure
+            (
+              method foo
+                "foo"
+                              method cast
+                (
+                  case
+                  (
+                    Foo
+                                        (
+                    self
+                    :
+                                            Ptyp_object
+                        (
+                          core_field_type ([16,198+27]..[16,198+39])
+                            Pfield "foo"
+                              poly
+                              
+                                 string
+                                (
+                                )
+                        )
+                    )
+                  )
+                  case
+                  (
+                    _
+                    raise
+                    (
+                        Exit
+                                            )
+                  )
+                )
+                            )
+  )
+  class
+  (
+      params =
+          (
+          )
+      class name = foo
+      class expr =
+          constraint
+            class_structure
+              (
+                method foo
+                  "foo"
+                                  method cast
+                  a
+                  (
+                  (
+                    case
+                    (
+                      Foo
+                                            (
+                      self
+                      :
+                                                 foo_t
+                          (
+                          )
+                      )
+                    )
+                    case
+                    (
+                      _
+                      (
+                      raise
+                      (
+                          Exit
+                                                )
+                      :
+                           a
+                          (
+                          )
+                                            )
+                    )
+                  )
+                  :
+                      arrow
+                      
+                         name
+                        (
+                             a
+                            (
+                            )
+                        )
+                         a
+                        (
+                        )
+                                    )
+                      poly
+                       'a
+                        arrow
+                        
+                           name
+                          (
+                              a
+                          )
+                          a
+              )
+          class_type
+            constr foo_t
+            (
+            )
+  )
+)
+

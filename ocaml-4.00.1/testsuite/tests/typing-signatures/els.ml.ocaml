@@ -73,8 +73,10 @@
   module type CORE
     signature
     (
-        sig_include
+        include
+        (
           CORE0
+        )
         sig_value apply
         value_description
             arrow
@@ -151,12 +153,10 @@
         module Value
           VALUE
         module Ast
-          Pmty_with
             AST
           (
             Value
-              Pwith_modsubst Value
-          )
+                        )
         type
         (
           state
@@ -207,13 +207,13 @@
               )
           (
           )
-        sig_include
-          Pmty_with
+        include
+        (
             CORE0
           (
             V
-              Pwith_modsubst Value
-          )
+                        )
+        )
     )
   module type PARSER
     signature
@@ -247,14 +247,14 @@
   module type INTERP
     signature
     (
-        sig_include
+        include
+        (
           EVALUATOR
+        )
         module Parser
-          Pmty_with
             PARSER
           (
             chunk
-              Pwith_type
                 type
                   params =
                     (
@@ -421,11 +421,9 @@
                                     )
           )
         module TV1
-          Pmty_with
             TYPEVIEW
           (
             combined
-              Pwith_typesubst
                 type
                   params =
                     (
@@ -440,11 +438,9 @@
                         )
           )
         module TV2
-          Pmty_with
             TYPEVIEW
           (
             combined
-              Pwith_typesubst
                 type
                   params =
                     (
@@ -464,13 +460,13 @@
     (
         module T
           USERTYPE
-        sig_include
-          Pmty_with
+        include
+        (
             COMBINED_COMMON
           (
             T
-              Pwith_modsubst T
-          )
+                        )
+        )
     )
   module type BARECODE
     signature
@@ -510,11 +506,9 @@
         module type F
           functor C
           (
-            Pmty_with
               CORE
             (
               V.usert
-                Pwith_type
                   type
                     params =
                       (
@@ -528,11 +522,9 @@
                           (
                           )
             )
-            Pmty_with
               BARECODE
             (
               state
-                Pwith_typesubst
                   type
                     params =
                       (
@@ -586,11 +578,9 @@
                     )
         )
         module T
-          Pmty_with
             USERTYPE
           (
             t
-              Pwith_type
                 type
                   params =
                     (
@@ -607,11 +597,9 @@
         module Make
           functor TV
           (
-            Pmty_with
               TYPEVIEW
             (
               t
-                Pwith_type
                   type
                     params =
                       (

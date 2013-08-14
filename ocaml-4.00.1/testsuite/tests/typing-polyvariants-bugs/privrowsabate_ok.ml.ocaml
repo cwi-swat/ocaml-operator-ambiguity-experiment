@@ -138,11 +138,9 @@
   module Fpc
     functor X
     (
-      Pmty_with
         T
       (
         term
-          Pwith_type
             type
               params =
                 (
@@ -189,15 +187,17 @@
             (
               case
               (
-                Ppat_alias "x"
-                Ppat_variant "Not"
-                  Ppat_variant "Atom"
-                    _
+                alias x
+                (
+                  Not
+                    Atom
+                      _
+                )
                 x
               )
               case
               (
-                Ppat_variant "Not"
+                Not
                   x
                 X.nnf_not
                 (
@@ -226,9 +226,9 @@
                 (
                   case
                   (
-                    Ppat_variant "Not"
+                    Not
                       x
-                    Pexp_variant "Not"
+                    Not
                       f
                       (
                           x
@@ -236,12 +236,12 @@
                   )
                   case
                   (
-                    Ppat_variant "And"
+                    And
                       (
                         x
                         y
                       )
-                    Pexp_variant "And"
+                    And
                       (
                         f
                         (
@@ -255,12 +255,12 @@
                   )
                   case
                   (
-                    Ppat_variant "Or"
+                    Or
                       (
                         x
                         y
                       )
-                    Pexp_variant "Or"
+                    Or
                       (
                         f
                         (
@@ -274,9 +274,11 @@
                   )
                   case
                   (
-                    Ppat_alias "x"
-                    Ppat_variant "Atom"
-                      _
+                    alias x
+                    (
+                      Atom
+                        _
+                    )
                     x
                   )
                 )
@@ -300,7 +302,7 @@
             (
               case
               (
-                Ppat_variant "Not"
+                Not
                   x
                 X.nnf
                 (
@@ -309,12 +311,12 @@
               )
               case
               (
-                Ppat_variant "And"
+                And
                   (
                     x
                     y
                   )
-                Pexp_variant "Or"
+                Or
                   (
                     X.nnf_not
                     (
@@ -328,12 +330,12 @@
               )
               case
               (
-                Ppat_variant "Or"
+                Or
                   (
                     x
                     y
                   )
-                Pexp_variant "And"
+                And
                   (
                     X.nnf_not
                     (
@@ -347,10 +349,12 @@
               )
               case
               (
-                Ppat_alias "x"
-                Ppat_variant "Atom"
-                  _
-                Pexp_variant "Not"
+                alias x
+                (
+                  Atom
+                    _
+                )
+                Not
                   x
               )
             )
@@ -360,7 +364,7 @@
                    term
                   (
                   )
-                  Ptyp_any
+                  
                         )
         )
       )
@@ -368,11 +372,9 @@
   module Fk
     functor X
     (
-      Pmty_with
         T
       (
         term
-          Pwith_type
             type
               params =
                 (
@@ -429,9 +431,9 @@
                 (
                   case
                   (
-                    Ppat_variant "Dia"
+                    Dia
                       x
-                    Pexp_variant "Dia"
+                    Dia
                       f
                       (
                           x
@@ -439,9 +441,9 @@
                   )
                   case
                   (
-                    Ppat_variant "Box"
+                    Box
                       x
-                    Pexp_variant "Box"
+                    Box
                       f
                       (
                           x
@@ -449,8 +451,10 @@
                   )
                   case
                   (
-                    Ppat_alias "x"
-                    pat_type                    termpc
+                    alias x
+                    (
+                      pat_type                      termpc
+                    )
                     Pc.map
                     (
                         f
@@ -464,7 +468,7 @@
                        term
                       (
                       )
-                      Ptyp_any
+                      
                                 )
               )
             )
@@ -481,9 +485,9 @@
             (
               case
               (
-                Ppat_variant "Dia"
+                Dia
                   x
-                Pexp_variant "Box"
+                Box
                   X.nnf_not
                   (
                       x
@@ -491,9 +495,9 @@
               )
               case
               (
-                Ppat_variant "Box"
+                Box
                   x
-                Pexp_variant "Dia"
+                Dia
                   X.nnf_not
                   (
                       x
@@ -501,8 +505,10 @@
               )
               case
               (
-                Ppat_alias "x"
-                pat_type                termpc
+                alias x
+                (
+                  pat_type                  termpc
+                )
                 Pc.nnf_not
                 (
                     x
@@ -515,7 +521,7 @@
                    term
                   (
                   )
-                  Ptyp_any
+                  
                         )
         )
       )
