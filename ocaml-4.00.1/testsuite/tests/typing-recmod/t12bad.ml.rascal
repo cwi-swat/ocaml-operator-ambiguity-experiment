@@ -16,8 +16,7 @@
        		)
        	name = c
        	expr =
-       	class_type
-       	 fun
+       	
        										 
        		
        		a
@@ -27,27 +26,20 @@
        		class_signature
        		(
        												 
-       		 fieldSpec3 
-       		 (
-       		     
-       		     
-       		     map
-       		     poly
-       		     arrow
-       		     arrow
-       		     a
-       		     b
-       		        								   
-       		     
-       		      M.c
-       		      (
-       		        b
-       		      )
-       		      
-       		         									
-       		        								   
-       		                                            
-       		 )
+       		 poly
+       		 arrow
+       		 arrow
+       		 a
+       		 b
+       		    								   
+       		 
+       		  M.c
+       		  (
+       		    b
+       		  )
+       		     									
+       		    								   
+       		                                        
        												 
        		)
        												 
@@ -66,57 +58,57 @@
         								   
       params = 
       (
-          	
-      
-      x
-      a
-          										   
-          	
+       "a"
       )
       class name = c
       class expr = 
-                  class_structure
-                  (
-                      								
-                     method map
-                     	(
-                     	 
-                     	 case
-                     	 (
-                     	 f
-                     	 
-                     	 new M.c
-                     	 (
-                     	     f
-                     	     (
-                     	         x
-                     	     )
-                     	 )
-                     	 )
-                     	 													 
-                     	)
-                     	   						  
-                     	poly
-                     	                      				 'b 
-                     	 arrow
-                     	 arrow
-                     	 a
-                     	 b
-                     	    								   
-                     	 
-                     	  M.c
-                     	  (
-                     	    b
-                     	  )
-                     	  
-                     	     									
-                     	    								   
-                     	                                    
-                         												 
-                      								
-                  )
-                      								
-          	
+      										    	
+        
+        x
+        a
+            										   
+      										    	
+        class_structure
+        (
+            								
+           method map
+           	(
+           	 
+           	 case
+           	 (
+           	 f
+           	 
+           	 new M.c
+           	 (
+           	     f
+           	     (
+           	         x
+           	     )
+           	 )
+           	 )
+           	 													 
+           	)
+           	   						  
+           	poly
+           	                      				 'b 
+           	 arrow
+           	 arrow
+           	 a
+           	 b
+           	    								   
+           	 
+           	  M.c
+           	  (
+           	    b
+           	  )
+           	     									
+           	    								   
+           	                                    
+               												 
+            								
+        )
+            								
+      										    	
         								   
     )
         								   

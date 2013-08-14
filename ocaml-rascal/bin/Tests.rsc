@@ -764,6 +764,7 @@ str printAST(value v) {
 								      ')";
 								   
 	
+	// TypeParams? TypeconstrName TypeInformation
 	case "typeDef"(params, constrName, info): return 
 											   " <printAST(constrName)>
 											   '   type
@@ -778,9 +779,11 @@ str printAST(value v) {
 											   '   <printAST(info)>
 											   ";
 											   
-											   
-	case "typeInformation"(typeEquation, rep, constraints): return "<printAST(typeEquation)>
-														 '<printAST(rep)>
+	
+	// TypeEquation? TypeRepresentation? TypeConstraint*   
+	case "typeInformation"(typeEquation, rep, constraints): return "
+														 ' <printAST(typeEquation)>
+														 ' <printAST(rep)>
 														  <for(c <- constraints) {>
 							   							 ' <printAST(c)>
 							     						  <}>
@@ -929,10 +932,11 @@ str printAST(value v) {
     
     
     // "\<" {MethodType ";"}+ (";" "..")? "\>"
-    case "typexprAngleBrackets"(l, _): return "
+    case "typexprAngleBrackets"(l, _): return "(
     										  <for (x <- l) {>
     										  ' <printAST(x)>
     										  <}>
+    										  ')
     										  ";
     
     
@@ -968,10 +972,8 @@ str printAST(value v) {
     
     // MethodName ":" PolyTypExpr							
 	case "methodType"(n, e): return "
-									'(
 									'	<printAST(n)>
 									'	<printAST(e)>
-									')
 									";
 										     										
     									
@@ -1211,7 +1213,6 @@ str printAST(value v) {
 										 ' (
 										 ' )
 										 ' kind =
-										 ' 
    										 '  <printAST(e)>
    										 ";
    										 
