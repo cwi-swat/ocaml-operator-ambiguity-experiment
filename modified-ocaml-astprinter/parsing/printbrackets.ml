@@ -152,7 +152,8 @@ let rec core_type i ppf x =
       list i core_type ppf l;
       (* list i string ppf low *)
   | Ptyp_alias (ct, s) ->
-      line i ppf "Ptyp_alias \"%s\"\n" s;
+      (* line i ppf "Ptyp_alias \"%s\"\n" s; *)
+      line i ppf "%s\n" s;
       core_type i ppf ct;
   | Ptyp_poly (sl, ct) ->
       line i ppf "poly\n";
@@ -205,7 +206,7 @@ and pattern i ppf x =
       line i ppf "%s\n" l;
       option i pattern ppf po;
   | Ppat_record (l, c) ->
-      line i ppf "Ppat_record\n";
+      (* line i ppf "Ppat_record\n"; *)
       list i longident_x_pattern ppf l;
   | Ppat_array (l) ->
       (* line i ppf "Ppat_array\n"; *)
@@ -780,9 +781,12 @@ and longident_x_with_constraint i ppf (li, wc) =
   with_constraint (i+1) ppf wc;
 
 and core_type_x_core_type_x_location i ppf (ct1, ct2, l) =
-  line i ppf "<constraint> %a\n" fmt_location l;
+  (* line i ppf "<constraint> %a\n" fmt_location l; *)
+  line i ppf "type constraint \n";
+  line i ppf "( \n";
   core_type (i+1) ppf ct1;
   core_type (i+1) ppf ct2;
+  line i ppf ") \n";
 
 and string_x_core_type_list_x_location i ppf (s, l, r_opt, loc) =
   (* line i ppf "\"%s\" %a\n" s.txt fmt_location loc; *)

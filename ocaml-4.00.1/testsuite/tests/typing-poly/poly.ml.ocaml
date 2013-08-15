@@ -840,7 +840,7 @@
                    'a
                     arrow
                     
-                      Ptyp_alias "a"
+                      a
                         (
                           A
                             (
@@ -906,7 +906,7 @@
                      'a
                       arrow
                       
-                        Ptyp_alias "a"
+                        a
                           (
                             A
                               (
@@ -998,7 +998,7 @@
                    'a
                     arrow
                     
-                      Ptyp_alias "a"
+                      a
                         (
                                V.v
                               (
@@ -1033,7 +1033,7 @@
                          'a
                           arrow
                           
-                            Ptyp_alias "a"
+                            a
                               (
                                 A
                                   (
@@ -1070,7 +1070,7 @@
                        'a
                         arrow
                         
-                          Ptyp_alias "a"
+                          a
                             (
                               A
                                 (
@@ -1220,7 +1220,7 @@
                        'a
                         arrow
                         
-                          Ptyp_alias "a"
+                          a
                             point
                             (
                             )
@@ -1893,7 +1893,7 @@
                    'a
                     arrow
                     
-                      Ptyp_alias "a"
+                      a
                         id
                         (
                         )
@@ -2050,7 +2050,7 @@
         (
         x
         :
-            Ptyp_alias "b"
+            b
               (
                   m
                     poly
@@ -2074,7 +2074,7 @@
         (
         x
         :
-            Ptyp_alias "b"
+            b
               (
                   m
                     poly
@@ -2104,7 +2104,7 @@
             (
             x
             :
-                Ptyp_alias "b"
+                b
                   (
                       m
                         poly
@@ -2112,7 +2112,7 @@
                           tuple
                           (
                               b
-                              Ptyp_alias "a"
+                              a
                                 (
                                     n
                                       poly
@@ -2131,12 +2131,12 @@
     case
     (
       x
-        Ptyp_alias "b"
+        b
           (
               p
                 poly
                  'a
-                  Ptyp_alias "a"
+                  a
                     (
                         m
                           poly
@@ -2159,12 +2159,12 @@
     case
     (
       x
-        Ptyp_alias "d"
+        d
           (
               m
                 poly
                  'a
-                  Ptyp_alias "c"
+                  c
                     tuple
                     (
                         a
@@ -2289,7 +2289,6 @@
   (
     case
     (
-      Ppat_record
       (
         r
           x
@@ -2774,7 +2773,7 @@
                       
                          t
                         (
-                            Ptyp_alias "a"
+                            a
                               (
                                 A
                                   (
@@ -2982,7 +2981,7 @@
                     )
                       poly
                        'a
-                        Ptyp_alias "a"
+                        a
                           (
                             Node
                               (
@@ -3112,7 +3111,7 @@
                 m
                   poly
                    'a
-                    Ptyp_alias "b"
+                    b
                       (
                           p
                             poly
@@ -3149,7 +3148,7 @@
                     tuple
                     (
                         a
-                        Ptyp_alias "b"
+                        b
                           (
                               p
                                 poly
@@ -3223,7 +3222,7 @@
                      'a
                       arrow
                       
-                        Ptyp_alias "a"
+                        a
                           (
                                  t
                                 (
@@ -3273,7 +3272,7 @@
                      'a
                       arrow
                       
-                        Ptyp_alias "a"
+                        a
                           (
                                  t
                                 (
@@ -3313,7 +3312,7 @@
                      'a
                       arrow
                       
-                        Ptyp_alias "a"
+                        a
                           (
                                  t
                                 (
@@ -3348,7 +3347,7 @@
                         (
                             a
                         )
-                        Ptyp_alias "a"
+                        a
                           (
                             A
                               (
@@ -3503,7 +3502,7 @@
                         b
                         arrow
                         
-                          Ptyp_alias "a"
+                          a
                             ct
                             (
                             )
@@ -3597,9 +3596,11 @@
           )
         cstrs =
           (
-            <constraint> ([408,9421+26]..[408,9421+33])
+            type constraint 
+            ( 
                 a
                 b
+            ) 
           )
         kind =
           
@@ -3662,11 +3663,13 @@
           )
         cstrs =
           (
-            <constraint> ([414,9598+21]..[414,9598+29])
+            type constraint 
+            ( 
                 a
                  int
                 (
                 )
+            ) 
           )
         kind =
           
@@ -3726,11 +3729,13 @@
           )
         cstrs =
           (
-            <constraint> ([416,9665+44]..[416,9665+52])
+            type constraint 
+            ( 
                 a
                  int
                 (
                 )
+            ) 
           )
         kind =
           
@@ -3768,11 +3773,13 @@
           )
         cstrs =
           (
-            <constraint> ([420,9764+28]..[420,9764+34])
+            type constraint 
+            ( 
                 a
                  g
                 (
                 )
+            ) 
           )
         kind =
           
@@ -3835,11 +3842,13 @@
           )
         cstrs =
           (
-            <constraint> ([422,9836+44]..[422,9836+52])
+            type constraint 
+            ( 
                 a
                  int
                 (
                 )
+            ) 
           )
         kind =
           
@@ -3953,7 +3962,7 @@
     case
     (
       x
-        Ptyp_alias "a"
+        a
            t
           (
               a
@@ -3980,7 +3989,7 @@
           )
         kind =
           
-              Ptyp_alias "a"
+              a
                  t
                 (
                     a
@@ -4260,12 +4269,13 @@
           )
         cstrs =
           (
-            <constraint> ([451,10713+40]..[451,10713+71])
+            type constraint 
+            ( 
                 a
                 (
                   B
                     (
-                        Ptyp_alias "b"
+                        b
                            b
                           (
                               a
@@ -4273,7 +4283,8 @@
                           )
                     )
                 )
-                          )
+                            ) 
+          )
         kind =
           
               arrow
@@ -4291,12 +4302,13 @@
           )
         cstrs =
           (
-            <constraint> ([452,10785+40]..[452,10785+71])
+            type constraint 
+            ( 
                 b
                 (
                   A
                     (
-                        Ptyp_alias "a"
+                        a
                            a
                           (
                               a
@@ -4304,7 +4316,8 @@
                           )
                     )
                 )
-                          )
+                            ) 
+          )
         kind =
           
               arrow
@@ -4331,7 +4344,7 @@
             (
                   poly
                   
-                    Ptyp_alias "b"
+                    b
                       b
                       (
                           a
@@ -4360,7 +4373,7 @@
             (
                   poly
                   
-                    Ptyp_alias "a"
+                    a
                       a
                       (
                           a
@@ -4433,7 +4446,7 @@
           )
         kind =
           
-              Ptyp_alias "b"
+              b
                  cb
                 (
                      ca
@@ -4595,7 +4608,7 @@
     case
     (
       x
-        Ptyp_alias "foo"
+        foo
           (
               m
                 poly
@@ -4625,7 +4638,7 @@
                   tuple
                   (
                       a
-                      Ptyp_alias "bar"
+                      bar
                         (
                             m
                               poly
@@ -4796,7 +4809,7 @@
                 tuple
                 (
                     a
-                    Ptyp_alias "foo"
+                    foo
                       tuple
                       (
                           a
@@ -4816,7 +4829,7 @@
       (
       x
       :
-          Ptyp_alias "bar"
+          bar
             (
                 m
                   poly
@@ -4858,7 +4871,7 @@
                 tuple
                 (
                     a
-                    Ptyp_alias "foo"
+                    foo
                       tuple
                       (
                           a
@@ -4878,7 +4891,7 @@
       (
       x
       :
-          Ptyp_alias "bar"
+          bar
             (
                 m
                   poly
@@ -4913,7 +4926,7 @@
     case
     (
       x
-        Ptyp_alias "foo"
+        foo
           (
               m
                 poly
@@ -4938,7 +4951,7 @@
                   tuple
                   (
                       b
-                      Ptyp_alias "bar"
+                      bar
                         tuple
                         (
                             b
@@ -4975,7 +4988,7 @@
                       arrow
                       
                         a
-                        Ptyp_alias "bar"
+                        bar
                           tuple
                           (
                               a
@@ -4990,7 +5003,7 @@
                               )
                           )
               )
-              Ptyp_alias "foo"
+              foo
                 (
                     m
                       poly
@@ -5018,7 +5031,7 @@
               case
               (
                 x
-                  Ptyp_alias "foo"
+                  foo
                     (
                         m
                           poly
@@ -5051,7 +5064,7 @@
                         tuple
                         (
                             b
-                            Ptyp_alias "bar"
+                            bar
                               tuple
                               (
                                   b
@@ -5089,7 +5102,7 @@
                 )
               kind =
                 
-                    Ptyp_alias "foo"
+                    foo
                       (
                           m
                             poly
@@ -5127,7 +5140,7 @@
                               tuple
                               (
                                   b
-                                  Ptyp_alias "bar"
+                                  bar
                                     tuple
                                     (
                                         b
@@ -5394,7 +5407,7 @@
                     (
                     x
                     :
-                                            Ptyp_alias "c"
+                                            c
                           (
                               m
                                 poly
@@ -5420,7 +5433,7 @@
                       (
                       y
                       :
-                                                Ptyp_alias "d"
+                                                d
                             (
                                 m
                                   poly
@@ -5686,7 +5699,7 @@
                      'a
                       arrow
                       
-                        Ptyp_alias "a"
+                        a
                           (
                               p
                                 poly
@@ -5706,7 +5719,7 @@
                      'b
                       arrow
                       
-                        Ptyp_alias "b"
+                        b
                           (
                               p
                                 poly
@@ -5746,7 +5759,7 @@
                      'a
                       arrow
                       
-                        Ptyp_alias "a"
+                        a
                           (
                               p
                                 poly
@@ -5771,7 +5784,7 @@
                      'b
                       arrow
                       
-                        Ptyp_alias "b"
+                        b
                           (
                               p
                                 poly
@@ -5816,7 +5829,7 @@
                      'a
                       arrow
                       
-                        Ptyp_alias "a"
+                        a
                           (
                               p
                                 poly
@@ -5847,7 +5860,7 @@
                      'b
                       arrow
                       
-                        Ptyp_alias "b"
+                        b
                           (
                               p
                                 poly
@@ -5932,7 +5945,7 @@
                   m
                     poly
                      'a
-                      Ptyp_alias "a"
+                      a
                         (
                           A
                             (
@@ -5953,7 +5966,7 @@
                   m
                     poly
                      'a
-                      Ptyp_alias "a"
+                      a
                         (
                           A
                             (
@@ -5982,7 +5995,7 @@
                   m
                     poly
                      'a
-                      Ptyp_alias "a"
+                      a
                         (
                           A
                             (
@@ -5997,7 +6010,7 @@
                   m
                     poly
                      'a
-                      Ptyp_alias "a"
+                      a
                         (
                           A
                             (
@@ -6846,7 +6859,7 @@
     zero
       poly
        'a
-        Ptyp_alias "a"
+        a
           (
             Int
               (
@@ -6867,7 +6880,7 @@
     zero
       poly
        'a
-        Ptyp_alias "a"
+        a
           (
             Int
               (
@@ -6896,7 +6909,7 @@
               f
                   poly
                    'a
-                    Ptyp_alias "a"
+                    a
                       (
                         Int
                           (
@@ -6936,7 +6949,7 @@
               f
                   poly
                    'a
-                    Ptyp_alias "a"
+                    a
                       (
                         Int
                           (
@@ -7428,7 +7441,6 @@
             )
   let
   (
-    Ppat_record
     (
       foo
         foo

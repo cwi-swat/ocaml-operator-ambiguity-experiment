@@ -685,7 +685,6 @@
                 case
                 (
                   Record
-                    Ppat_record
                     (
                       fields
                         fields
@@ -698,7 +697,6 @@
                           case
                           (
                             Field
-                              Ppat_record
                               (
                                 field_type
                                   field_type
@@ -1057,7 +1055,6 @@
                 (
                   (
                     Record
-                      Ppat_record
                       (
                         fields
                           fields
@@ -1124,7 +1121,6 @@
                               case
                               (
                                 Field
-                                  Ppat_record
                                   (
                                     label
                                       label
@@ -1282,7 +1278,6 @@
                       (
                         case
                         (
-                          Ppat_record
                           (
                             a
                               a
@@ -1329,7 +1324,6 @@
                           (
                             case
                             (
-                              Ppat_record
                               (
                                 b
                                   b
@@ -4757,7 +4751,7 @@
       :
            ty
           (
-              Ptyp_alias "a"
+              a
                 (
                   A
                     (

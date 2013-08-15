@@ -988,7 +988,6 @@
       (
         case
         (
-          Ppat_record
           (
             a
               pat_or
@@ -1007,7 +1006,6 @@
         (
           pat_or
           (
-          Ppat_record
           (
             a
               ::
@@ -1016,7 +1014,6 @@
                                     _
                 )
           )
-          Ppat_record
           (
             b
               pat_or
@@ -2805,7 +2802,6 @@
                           ls
                           alias _sw
                           (
-                            Ppat_record
                             (
                               sw_consts
                                 ::
@@ -2842,7 +2838,6 @@
                           ls
                           alias _sw
                           (
-                            Ppat_record
                             (
                               sw_consts
                                 []
@@ -5941,14 +5936,12 @@
         (
           pat_or
           (
-          Ppat_record
           (
             x
               a
             z
               true
                         )
-          Ppat_record
           (
             y
               a
@@ -7117,13 +7110,11 @@
           pat_or
           (
           A
-            Ppat_record
             (
               lnb
                 i
             )
           B
-            Ppat_record
             (
               lnb
                 i
@@ -7142,10 +7133,8 @@
         case
         (
           A
-            Ppat_record
             (
               lassoc
-                Ppat_record
                 (
                   lnb
                     j
@@ -8270,7 +8259,6 @@
           (
             case
             (
-              Ppat_record
               (
                 v
                   pat_or
@@ -8297,7 +8285,6 @@
               (
               pat_or
               (
-              Ppat_record
               (
                 v
                   pat_or
@@ -8308,7 +8295,6 @@
                 x
                   False
                                 )
-              Ppat_record
               (
                 v
                   pat_or
@@ -8322,7 +8308,6 @@
                   False
                                 )
               )
-              Ppat_record
               (
                 v
                   _

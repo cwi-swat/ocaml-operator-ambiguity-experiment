@@ -91,7 +91,7 @@ syntax MultipleMatching
      = multipleMatching: Parameter+ ("when" Expr)? "-\>" Expr;	 
 
 syntax Parameter 
-	 = Pattern
+	 = patternParam: Pattern
      | param1: "~" LabelName !>> ":"
      | param2: "~" "(" LabelName (":" Typexpr)? ")"
      | param3: "~" LabelName ":" Pattern

@@ -12,7 +12,7 @@
           )
         kind =
           
-              Ptyp_alias "a"
+              a
                 (
                   A
                     (
@@ -62,12 +62,14 @@
           )
         cstrs =
           (
-            <constraint> ([5,90+38]..[5,90+47])
+            type constraint 
+            ( 
                 a
                  t
                 (
                     a
                 )
+            ) 
           )
         kind =
           
@@ -94,12 +96,14 @@
           )
         cstrs =
           (
-            <constraint> ([7,141+36]..[7,141+45])
+            type constraint 
+            ( 
                 a
                  t
                 (
                     a
                 )
+            ) 
           )
         kind =
           
@@ -126,7 +130,7 @@
           )
         kind =
           
-              Ptyp_alias "a"
+              a
                 (
                   A
                     (
@@ -144,11 +148,13 @@
           )
         cstrs =
           (
-            <constraint> ([11,222+35]..[11,222+41])
+            type constraint 
+            ( 
                 a
                  t
                 (
                 )
+            ) 
           )
         kind =
           
@@ -212,7 +218,7 @@
         case
         (
           x
-            Ptyp_alias "a"
+            a
                t
               (
                   a

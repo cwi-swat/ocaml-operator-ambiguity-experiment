@@ -11,10 +11,9 @@
           (
           )
         kind =
-              Ptyp_alias "a"
-                Ptyp_variant closed=true
+              a
                 (
-                  Rtag "A" false
+                  A
                     (
                          t
                         (
@@ -38,9 +37,8 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        t
                       (
@@ -62,17 +60,18 @@
           )
         cstrs =
           (
-            <constraint> ([5,90+38]..[5,90+47])
+            type constraint 
+            ( 
                 a
                  t
                 (
                     a
                 )
+            ) 
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        t
                       (
@@ -94,17 +93,18 @@
           )
         cstrs =
           (
-            <constraint> ([7,141+36]..[7,141+45])
+            type constraint 
+            ( 
                 a
                  t
                 (
                     a
                 )
+            ) 
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        t
                       (
@@ -125,10 +125,9 @@
           (
           )
         kind =
-              Ptyp_alias "a"
-                Ptyp_variant closed=true
+              a
                 (
-                  Rtag "A" false
+                  A
                     (
                         a
                     )
@@ -144,16 +143,17 @@
           )
         cstrs =
           (
-            <constraint> ([11,222+35]..[11,222+41])
+            type constraint 
+            ( 
                 a
                  t
                 (
                 )
+            ) 
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        v
                       (
@@ -209,7 +209,7 @@
         case
         (
           x
-            Ptyp_alias "a"
+            a
                t
               (
                   a

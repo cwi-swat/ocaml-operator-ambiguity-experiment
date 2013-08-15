@@ -2,24 +2,26 @@
    type
    (  						
       t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-       x
-       poly
-       int
-       (
-       )
-       y
-       poly
-       int
-       (
-       )
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+         (
+          x
+          poly
+          int
+          (
+          )
+          y
+          poly
+          int
+          (
+          )
+         )
    )
   record
   (
@@ -31,11 +33,11 @@
   (
    case
    (
-   patternRec 
    (
-       x
-       3
-       <"field_name"("z")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"patternConstant"("posInt"("2")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+     x
+   	3
+     z
+   	 2
    )
    ()
    )
@@ -50,19 +52,21 @@
    type
    (  						
       u
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-       u
-       poly
-       int
-       (
-       )
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+         (
+          u
+          poly
+          int
+          (
+          )
+         )
    )
   record
   (

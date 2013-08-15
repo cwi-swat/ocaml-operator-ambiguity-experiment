@@ -24,7 +24,7 @@ public void run() {
 public void runFile(str f) {
 		print(f + "...");
 		try {
-			tree = jparse(#start[Implementation], readFile(|file:///| + filePath + "/" + f));
+			tree = jparse(#start[TopLevel], readFile(|file:///| + filePath + "/" + f));
 			
 			if (/amb(_) := tree) {
 				tree = filterOCaml(tree);
@@ -195,7 +195,7 @@ str printAST(value v) {
     									 
     case "semicolon"(e): return printAST(e);									    
     
-    case "field_name"(n) : return "<n>";             
+    case "field_name"(n) : return "<printAST(n)>";             
         
     case "constrExp" (c, e) : return "
     								 '<printAST(c)>
@@ -373,7 +373,13 @@ str printAST(value v) {
     								
     case "typeParam"(x): return printAST(x);	
     
-    
+    // "constraint" "\'" Ident "=" Typexpr;
+    case "typeConstraint"(i, t): return "type constraint
+    								 '(
+    								 '	<printAST(i)>
+    								 '	<printAST(t)>
+    								 ')
+    								 ";
     								 
     							     
     case "posInt"(i) : return "<convert(i)>";
@@ -421,7 +427,20 @@ str printAST(value v) {
     									   '(
     									   '  <printAST(p)>
     									   ')
-    									   ";					
+    									   ";
+    									   
+	case "patternParam"(p): return printAST(p);    									   	
+    									   
+	// "{" Field ("=" Pattern)? (";" Field "=" Pattern)* ";"? "}"    									   
+	case "patternRec"(f, p, l, _): return "(
+										  '  <printAST(f)>
+										  '	<printAST(p)>
+										  <for (<a,b> <- l) {>
+										  '  <printAST(a)>
+										  '	 <printAST(b)>
+										  <}>
+										  ')
+										  ";			
 
 	case "constrPattern"(constr, p) : return 
 									  "
@@ -800,6 +819,11 @@ str printAST(value v) {
 											   '   )
 											   '   cstrs =
 											   '   (
+											   <if ("typeInformation"(typeEquation, rep, constraints) := info) {>
+											   	  <for(c <- constraints) {>
+							   				   '   <printAST(c)>
+							     				  <}>
+											   <}>
 											   '   )
 											   '   kind =
 											   '   <printAST(info)>
@@ -810,9 +834,6 @@ str printAST(value v) {
 	case "typeInformation"(typeEquation, rep, constraints): return "
 														 ' <printAST(typeEquation)>
 														 ' <printAST(rep)>
-														  <for(c <- constraints) {>
-							   							 ' <printAST(c)>
-							     						  <}>
 														 ";
 
 
@@ -866,7 +887,7 @@ str printAST(value v) {
 	// tagSpec2: Typexr
 	case "tagSpec2"(e): return printAST(e);               
 	
-	case "fieldDecls"(_, l, _) : return "
+	case "fieldDecls"(_, l, p) : return "
 							   '(
 							     <for(fieldDecl <- l) {>
 							   ' <printAST(fieldDecl)>
@@ -895,9 +916,9 @@ str printAST(value v) {
 								    ')
 								    "; 
 								    
-	
+	// "mutable"? FieldName ":" PolyTypExpr
 	case "fieldDecl"(_, name, typexpr): return "
-												'<name>
+												'<printAST(name)>
 												'<printAST(typexpr)>";
 	
 	case "typeConstr"([], typeconstrName) : return "<typeconstrName>";
@@ -907,7 +928,8 @@ str printAST(value v) {
 	case "TypeConstraint"(ident, typexpr): return
 										  " <ident> = <typexpr>
 										  ";
-										  
+					
+	// "{" Field ("=" Expr)? (";" Field ("=" Expr)?)* ";"? "}"										  
 	case "record1"(field, [], l, _) : return "record
 											   '(
 											   ' <printAST(field)>
@@ -1035,6 +1057,10 @@ str printAST(value v) {
     									'   <printAST(e)>
     									' )
     									";
+    									
+	// Typexpr "as" "\'" Ident
+	case "typexprAsId"(t, x): return "<printAST(x)>
+									 '<printAST(t)>";    									
     						
 	// Typexpr "#" ClassPath    									
 	case "typexprHash2"(t, c): return "<printAST(c)>
@@ -1713,7 +1739,7 @@ bool isPattern(value v) {
 
 list[value] getNonPatterns(list[value] l) {
 	if([*a, b, _*] := l && isPattern(b)) {
-		return *a;
+		return [*a];
 	}
 		
 	return l;
