@@ -449,7 +449,7 @@ and class_type i ppf x =
       class_signature i ppf cs;
   | Pcty_fun (l, co, cl) ->
       (* line i ppf "Pcty_fun \"%s\"\n" l; *)
-      line i ppf "fun %s\n" l;
+      (* line i ppf "fun %s\n" l; *)
       core_type i ppf co;
       class_type i ppf cl;
 

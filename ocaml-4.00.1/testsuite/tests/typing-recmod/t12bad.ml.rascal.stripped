@@ -1,74 +1,76 @@
 (
-  rec module
-  (
-    "M"
-    signature
-    (
-       sig_class
-        (
-       	class_description
-       	params = 
-       		(
-       		)
-       	name = c
-       	expr =
-       		a
-       		class_type
-       		signature
-       		class_signature
-       		(
-       		 poly
-       		 arrow
-       		 arrow
-       		 a
-       		 b
-       		  M.c
-       		  (
-       		    b
-       		  )
-       		)
-        )
-    )
-    struct
-    (
-    class
-    (
-      params = 
-      (
-       "a"
-      )
-      class name = c
-      class expr = 
-        x
-        a
-        class_structure
-        (
-           method map
-           	(
-           	 case
-           	 (
-           	 f
-           	 new M.c
-           	 (
-           	     f
-           	     (
-           	         x
-           	     )
-           	 )
-           	 )
-           	)
-           	poly
-           	                      				 'b 
-           	 arrow
-           	 arrow
-           	 a
-           	 b
-           	  M.c
-           	  (
-           	    b
-           	  )
-        )
-    )
-    )
-  )
+   rec module
+   (
+     "M"
+     signature
+     (
+        sig_class
+         (
+        	class_description
+        	params = 
+        		(
+        		   "a"
+        		)
+        	name = c
+        	expr =
+        	class_type
+        		a
+        		class_type
+        		signature
+        		class_signature
+        		(
+        		 poly
+        		 arrow
+        		 arrow
+        		 a
+        		 b
+        		  M.c
+        		  (
+        		    b
+        		  )
+        		)
+         )
+     )
+     struct
+     (
+     class
+     (
+       params = 
+       (
+        "a"
+       )
+       class name = c
+       class expr = 
+         x
+         a
+         class_structure
+         (
+            method map
+            	(
+            	  case
+            	  (
+            	   f
+            	   new M.c
+            	   (
+            	       f
+            	       (
+            	           x
+            	       )
+            	   )
+            	  )
+            	)
+            	poly
+            	                      				 'b 
+            	 arrow
+            	 arrow
+            	 a
+            	 b
+            	  M.c
+            	  (
+            	    b
+            	  )
+         )
+     )
+     )
+   )
 )

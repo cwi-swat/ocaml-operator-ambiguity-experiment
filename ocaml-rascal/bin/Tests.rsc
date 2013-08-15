@@ -1434,7 +1434,7 @@ str printAST(value v) {
 	
 	
 	// (("?"? LabelName ":")? Typexpr "-\>")* ClassBodyType;
-	case "classType"(l, cbt): return "
+	case "classType"(l, cbt): return "class_type
 									 <for (<labelName, typexpr> <- l) {>
 									 '	<printAST(labelName)>
 									 '	<printAST(typexpr)>
@@ -1523,11 +1523,14 @@ str printAST(value v) {
 	case "classSpec"(x) : return printAST(x);					
 													  
 	// "virtual"? ("[" TypeParameters "]")? ClassName ":" ClassType;
-	case "classSpec"(_, _, cn, ct): return "sig_class
+	case "classSpec"(_, l, cn, ct): return "sig_class
 										' (
 										'	class_description
 										'	params = 
 										'		(
+										<for(p <-l) {>
+										'		   <printAST(p)>
+										<}> 
 										'		)
 										'	name = <printAST(cn)>
 										'	expr =
