@@ -854,8 +854,8 @@ str printAST(value v) {
 	
 	// TypeEquation? TypeRepresentation? TypeConstraint*   
 	case "typeInformation"(typeEquation, rep, constraints): return "
-														 ' <printAST(typeEquation)>
-														 ' <printAST(rep)>
+														 '<printAST(rep)> 
+														 '<printAST(typeEquation)>
 														 ";
 
 
@@ -978,19 +978,22 @@ str printAST(value v) {
 	case "singleTypeParam"(param): return printAST(param);
 	
 	
-	case "typeParamList"(l) : return "
+	case "typeParamList"(l): return "
 									 <for (param <- l) {>
 									 ' <printAST(param)>
 									 <}>
 									 ";
 										   
 										   
-	case "typeParam1"(x, ident) : return "
+	case "typeParam1"([x], ident): return "
 										 ' <printAST(x)>
 										 ' <printAST(ident)>
-										 ";					
+										 ";
 										 
-	case "typeParam2"(v) : return "
+	case "typeParam1"([], ident): return return printAST(ident);
+											 					
+										 
+	case "typeParam2"(v): return "
 										 ' <printAST(v)>_
 										 ";				
 										 
@@ -1097,7 +1100,10 @@ str printAST(value v) {
 									  '  <printAST(x)>
 									  <}>
 									  ')
-									  ";									      									
+									  ";
+									  
+	// Typexpr = "private" Typexpr									  
+	case "typexprPrivate"(t): return printAST(t);									  									      									
     
     // MethodName ":" PolyTypExpr							
 	case "methodType"(n, e): return "
@@ -1434,7 +1440,7 @@ str printAST(value v) {
 	
 	
 	// (("?"? LabelName ":")? Typexpr "-\>")* ClassBodyType;
-	case "classType"(l, cbt): return "class_type
+	case "classType"(l, cbt): return "
 									 <for (<labelName, typexpr> <- l) {>
 									 '	<printAST(labelName)>
 									 '	<printAST(typexpr)>
@@ -1554,6 +1560,7 @@ str printAST(value v) {
     								'   <printAST(field)>
     								<}>
     								')
+    								'<printAST(x)>
     								";
     								
     								
@@ -1568,6 +1575,7 @@ str printAST(value v) {
 									    	'  <printAST(p)>
 									    	<}>
 									    	'  <printAST(classExpr)>
+									    	'  <printAST(t)>
 									    	"; 								   
     								   
     case "classBinding"(_, [x], className, params, t, classExpr) : return
@@ -1581,6 +1589,7 @@ str printAST(value v) {
 										    	'  <printAST(p)>
 										    	<}>
 										    	'  <printAST(classExpr)>
+										    	'  <printAST(t)>
 										    	";
     
     // ("method" | "method!") "private"? MethodName Parameter* (":" Typexpr)? "=" Expr

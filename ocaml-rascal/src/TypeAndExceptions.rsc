@@ -38,7 +38,8 @@ syntax TypeParam
      ;     
      
 syntax Variance 
-     = "+" | "-";
+     = posVariance: "+" 
+     | negVariance: "-";
      
 syntax ConstrDecl 
      = constDecl1: ConstrName ("of" { Typexpr !star "*"}+)?

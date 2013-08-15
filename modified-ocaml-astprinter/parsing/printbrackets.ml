@@ -465,9 +465,10 @@ and class_type_field i ppf x =
       line i ppf "Pctf_inher\n";
       class_type i ppf ct;
   | Pctf_val (s, mf, vf, ct) ->
-      line i ppf
+      (*line i ppf
         "Pctf_val \"%s\" %a %a %a\n" s
-        fmt_mutable_flag mf fmt_virtual_flag vf fmt_location loc;
+        fmt_mutable_flag mf fmt_virtual_flag vf fmt_location loc;*)
+      line i ppf "%s\n" s;
       core_type (i+1) ppf ct;
   | Pctf_virt (s, pf, ct) ->
       line i ppf

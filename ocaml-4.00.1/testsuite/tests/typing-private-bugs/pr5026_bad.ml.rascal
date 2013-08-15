@@ -1,197 +1,239 @@
 
 (
-    								 
-  type
-  (  						
-      							    	 
-     untyped
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-        
-        
-       														  
-       														 
-    											   
-  								        
-  )
-                                     
-  type
-  (  						
-      							    	 
-     typed
-       type
-       params=
-       (
-       
-        <>
-        a
-       										 
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-        
-        untyped
+    							  
+  
+      									 
+   type
+   (  						
+       							    	 
+      untyped
+        type
+        params=
         (
+        
         )
-        								  
-        
-       														  
-       														 
-    											   
-  								        
-  )
-                                     
-  type
-  (  						
-      							    	 
-     wrapped
-       type
-       params=
-       (
-       
-        <>
-        typing
-       										 
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-        
-        sexp
+        cstrs =
         (
+     											   
+     											   	  
+     											   
         )
-        								  
+        kind =
         
-       														  
-       														 
-    											   
-  								         
-     t
-       type
-       params=
-       (
-       
-        <>
-        a
-       										 
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
+         
+         
+        														 
+     											   
+   								        
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   type
+   (  						
+       							    	 
+      typed
+        type
+        params=
+        (
         
-         wrapped
-         (
-           
-            typed
-            (
-              a
-            )
-               									
-         )
-            									
-        
-       														  
-       														 
-    											   
-  								         
-     sexp
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-        
-         wrapped
-         (
-           
-           untyped
-           (
-           )
-           								  
-         )
-            									
-        
-       														  
-       														 
-    											   
-  								        
-  )
-                                     
-  class_type
-  (
-    class_type_declaration
-    params = 
-    (
-     "a"
-    ) 
-    name = s3
-    expr =
-     class_type
-     signature
-     class_signature
-     (
-     										 
-      underlying
-      poly
-      
-       t
-       (
+         
          a
-       )
-          									
-                                             
-     										 
-     )
-     										 
-    													  
-  											   
-  )
-  											   
-                                     
-  class
-  (
-      								   
-    params = 
-    (
-     "a"
-    )
-    class name = s3object
-    class expr = 
-    										    	
-      r
-    										    	
-      class_structure
+        										 
+        )
+        cstrs =
+        (
+     											   
+     											   	  
+     											   
+        )
+        kind =
+        
+         
+         untyped
+         (
+         )
+         								  
+         
+        														 
+     											   
+   								        
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   type
+   (  						
+       							    	 
+      wrapped
+        type
+        params=
+        (
+        
+         
+         typing
+        										 
+        )
+        cstrs =
+        (
+     											   
+     											   	  
+     											   
+        )
+        kind =
+        
+         
+         sexp
+         (
+         )
+         								  
+         
+        														 
+     											   
+   								         
+      t
+        type
+        params=
+        (
+        
+         
+         a
+        										 
+        )
+        cstrs =
+        (
+     											   
+     											   	  
+     											   
+        )
+        kind =
+        
+         
+          wrapped
+          (
+            
+             typed
+             (
+               a
+             )
+                									
+          )
+             									
+         
+        														 
+     											   
+   								         
+      sexp
+        type
+        params=
+        (
+        
+        )
+        cstrs =
+        (
+     											   
+     											   	  
+     											   
+        )
+        kind =
+        
+         
+          wrapped
+          (
+            
+            untyped
+            (
+            )
+            								  
+          )
+             									
+         
+        														 
+     											   
+   								        
+   )
+      									 
+      									 
+                                 
+  
+      									 
+   class_type
+   (
+     class_type_declaration
+     params = 
+     (
+       "a"
+     ) 
+     name = s3
+     expr =
+      class_type
+      signature
+      class_signature
       (
-          								
-          underlying
-          r
-            											 
-          								
+      										 
+       underlying
+       poly
+       
+        t
+        (
+          a
+        )
+           									
+                                              
+      										 
       )
-          								
-    										    	
-      								   
-  )
-      								   
-                                     
+      										 
+     													  
+   											   
+   )
+   											   
+      									 
+      									 
+                                 
+  
+      									 
+   class
+   (
+       								   
+     params = 
+     (
+      "a"
+     )
+     class name = s3object
+     class expr = 
+     										    	
+       r
+     										    	
+       class_structure
+       (
+           								
+           underlying
+           r
+             											 
+           								
+       )
+       
+           								
+       
+       									 
+       	
+       	class_type
+       	constr s3
+       	(
+       	 a
+       		  	    									
+       	)
+       			    									
+       									 
+     										    	
+       								   
+   )
+       								   
+      									 
+      									 
+                                 
 )

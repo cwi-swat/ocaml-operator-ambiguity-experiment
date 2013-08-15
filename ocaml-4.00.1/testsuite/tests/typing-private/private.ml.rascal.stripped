@@ -13,9 +13,9 @@
          (
          )
          kind =
-          int
-          (
-          )
+         int
+         (
+         )
     )
     )
     signature
@@ -31,9 +31,9 @@
           (
           )
           kind =
-           int
-           (
-           )
+          int
+          (
+          )
      )
     )
    module  F0
@@ -51,9 +51,9 @@
           (
           )
           kind =
-           int
-           (
-           )
+          int
+          (
+          )
      )
     )
    let
@@ -112,13 +112,13 @@
          (
          )
          kind =
-          (
-           	m
-           	poly
-           	int
-           	(
-           	)
-          )
+         (
+          	m
+          	poly
+          	int
+          	(
+          	)
+         )
     )
     )
    module  M1
@@ -136,13 +136,13 @@
           (
           )
           kind =
-           (
-            	m
-            	poly
-            	int
-            	(
-            	)
-           )
+          (
+           	m
+           	poly
+           	int
+           	(
+           	)
+          )
      )
     )
    module  M2
@@ -160,30 +160,30 @@
           (
           )
           kind =
-           (
-            	m
-            	poly
-            	int
-            	(
-            	)
-           )
+          (
+           	m
+           	poly
+           	int
+           	(
+           	)
+          )
      )
     )
   (
-   case
-   (
-   x
-   M1.t
-   (
-   )
-   (
-   x
-   :
-   M2.t
-   (
-   )
-   )
-   )
+    case
+    (
+     x
+     M1.t
+     (
+     )
+     (
+     x
+     :
+     M2.t
+     (
+     )
+     )
+    )
   )
    module  M3
     M1
@@ -200,42 +200,42 @@
           (
           )
           kind =
-           M1.t
-           (
-           )
+          M1.t
+          (
+          )
      )
     )
   (
-   case
-   (
-   x
-   (
+    case
+    (
      x
-     :
-     M3.t
      (
+       x
+       :
+       M3.t
+       (
+       )
+       M1.t
+       (
+       )
      )
-     M1.t
-     (
-     )
-   )
-   )
+    )
   )
   (
-   case
-   (
-   x
-   (
+    case
+    (
      x
-     :
-     M3.t
      (
+       x
+       :
+       M3.t
+       (
+       )
+       M.t
+       (
+       )
      )
-     M.t
-     (
-     )
-   )
-   )
+    )
   )
    module  M4
     M2
@@ -252,9 +252,9 @@
           (
           )
           kind =
-           M3.t
-           (
-           )
+          M3.t
+          (
+          )
      )
     )
    module  M4
@@ -272,9 +272,9 @@
           (
           )
           kind =
-           M3.t
-           (
-           )
+          M3.t
+          (
+          )
      )
     )
    module  M4
@@ -292,9 +292,9 @@
           (
           )
           kind =
-           M3.t
-           (
-           )
+          M3.t
+          (
+          )
      )
     )
    module  M5
@@ -312,9 +312,9 @@
           (
           )
           kind =
-           M1.t
-           (
-           )
+          M1.t
+          (
+          )
      )
     )
    module  M6
@@ -332,13 +332,13 @@
           (
           )
           kind =
-           (
-            	n
-            	poly
-            	int
-            	(
-            	)
-           )
+          (
+           	n
+           	poly
+           	int
+           	(
+           	)
+          )
      )
     )
    module  Bar
@@ -355,9 +355,9 @@
          (
          )
          kind =
-          int
-          (
-          )
+         int
+         (
+         )
     )
     let
     (
@@ -393,9 +393,9 @@
           (
           )
           kind =
-           Foobar.t
-           (
-           )
+          Foobar.t
+          (
+          )
      )
      sig_value f
      value_description
@@ -423,14 +423,14 @@
          (
          )
          kind =
+         (
+         T
+         (
+          int
           (
-          T
-          (
-           int
-           (
-           )
           )
-          )
+         )
+         )
     )
     let
     (
@@ -458,14 +458,14 @@
           (
           )
           kind =
+          (
+          T
+          (
+           int
            (
-           T
-           (
-            int
-            (
-            )
            )
-           )
+          )
+          )
      )
      sig_value mk
      value_description
@@ -493,9 +493,9 @@
          (
          )
          kind =
-          M.t
-          (
-          )
+         M.t
+         (
+         )
     )
     let
     (
@@ -516,9 +516,9 @@
           (
           )
           kind =
-           M.t
-           (
-           )
+          M.t
+          (
+          )
      )
      sig_value mk
      value_description
@@ -553,9 +553,9 @@
           (
           )
           kind =
-           M.t
-           (
-           )
+          M.t
+          (
+          )
      )
      sig_value mk
      value_description
@@ -584,9 +584,9 @@
           (
           )
           kind =
-           M.t
-           (
-           )
+          M.t
+          (
+          )
      )
      sig_value mk
      value_description
@@ -615,17 +615,17 @@
           (
           )
           kind =
-           M.t
+          (
+          T
+          (
+           int
            (
            )
-           (
-           T
-           (
-            int
-            (
-            )
-           )
-           )
+          )
+          )
+          M.t
+          (
+          )
      )
      sig_value mk
      value_description
@@ -654,17 +654,17 @@
           (
           )
           kind =
-           M.t
+          (
+          T
+          (
+           int
            (
            )
-           (
-           T
-           (
-            int
-            (
-            )
-           )
-           )
+          )
+          )
+          M.t
+          (
+          )
      )
      sig_value mk
      value_description
@@ -693,14 +693,14 @@
           (
           )
           kind =
+          (
+          T
+          (
+           int
            (
-           T
-           (
-            int
-            (
-            )
            )
-           )
+          )
+          )
      )
      sig_value mk
      value_description
@@ -728,14 +728,14 @@
          (
          )
          kind =
+         (
+         T
+         (
+          int
           (
-          T
-          (
-           int
-           (
-           )
           )
-          )
+         )
+         )
     )
     type
     (  						
@@ -748,9 +748,9 @@
          (
          )
          kind =
-          t_priv
-          (
-          )
+         t_priv
+         (
+         )
     )
     let
     (
@@ -778,14 +778,14 @@
           (
           )
           kind =
+          (
+          T
+          (
+           int
            (
-           T
-           (
-            int
-            (
-            )
            )
-           )
+          )
+          )
      )
      type
      (  						
@@ -798,9 +798,9 @@
           (
           )
           kind =
-           t_priv
-           (
-           )
+          t_priv
+          (
+          )
      )
      sig_value mk
      value_description
@@ -829,9 +829,9 @@
           (
           )
           kind =
-           M'.t
-           (
-           )
+          M'.t
+          (
+          )
      )
      sig_value mk
      value_description
