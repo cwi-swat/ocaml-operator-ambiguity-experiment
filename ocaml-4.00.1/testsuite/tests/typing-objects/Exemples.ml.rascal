@@ -8,39 +8,46 @@
        								   
      params = 
      (
-         	
-     x_init
-         	
      )
      class name = point
      class expr = 
-                 class_structure
-                 (
-                     								
-                     x
-                     x_init
-                       											 
-                     								
-                    method get_x
-                      x
-                        												 
-                     								
-                    method move
-                      Array.set
-                      (
-                       x
-                       +
-                       (
-                           x
-                           d
-                       )
-                      )
-                      								   
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       x_init
+     									    	
+       class_structure
+       (
+           								
+           x
+           x_init
+             											 
+           								
+          method get_x
+          	  x
+             	
+              											  
+           								
+          method move
+          (
+            case
+          	(
+          		d
+            	Array.set
+            	(
+            	 x
+            	 +
+            	 (
+            	     x
+            	     d
+            	 )
+            	)
+            									   
+          	)
+          )
+          											 
+           								
+       )
+           								
+     									    	
        								   
    )
        								   
@@ -135,45 +142,46 @@
        								   
      params = 
      (
-         	
-     x
-         	
-     
-     c
-     
-     string
-     (
-     )
-     								  
-         										   
-         	
      )
      class name = color_point
      class expr = 
-                 class_structure
-                 (
-                     								
-                    inherit
-                     constr classArgs 
-                            (
-                                point
-                                x
-                            )
-                     (
-                     )
-                    										    
-                     								
-                     c
-                     c
-                       											 
-                     								
-                    method color
-                      c
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       x
+     									    	
+       
+       c
+       
+       string
+       (
+       )
+       								  
+           										   
+     									    	
+       class_structure
+       (
+           								
+          inherit
+           constr classArgs 
+                  (
+                      point
+                      x
+                  )
+           (
+           )
+          										    
+           								
+           c
+           c
+             											 
+           								
+          method color
+          	  c
+             	
+              											  
+           								
+       )
+           								
+     									    	
        								   
    )
        								   
@@ -299,35 +307,42 @@
        								   
      params = 
      (
-         	
-     x_init
-         	
      )
      class name = ref
      class expr = 
-                 class_structure
-                 (
-                     								
-                     x
-                     x_init
-                       											 
-                     								
-                    method get
-                      x
-                        												 
-                     								
-                    method set
-                      Array.set
-                      (
-                       x
-                       y
-                      )
-                      								   
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       x_init
+     									    	
+       class_structure
+       (
+           								
+           x
+           x_init
+             											 
+           								
+          method get
+          	  x
+             	
+              											  
+           								
+          method set
+          (
+            case
+          	(
+          		y
+            	Array.set
+            	(
+            	 x
+            	 y
+            	)
+            									   
+          	)
+          )
+          											 
+           								
+       )
+           								
+     									    	
        								   
    )
        								   
@@ -341,42 +356,49 @@
        								   
      params = 
      (
-         	
-     
-     x_init
-     
-     int
-     (
-     )
-     								  
-         										   
-         	
      )
      class name = ref
      class expr = 
-                 class_structure
-                 (
-                     								
-                     x
-                     x_init
-                       											 
-                     								
-                    method get
-                      x
-                        												 
-                     								
-                    method set
-                      Array.set
-                      (
-                       x
-                       y
-                      )
-                      								   
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       
+       x_init
+       
+       int
+       (
+       )
+       								  
+           										   
+     									    	
+       class_structure
+       (
+           								
+           x
+           x_init
+             											 
+           								
+          method get
+          	  x
+             	
+              											  
+           								
+          method set
+          (
+            case
+          	(
+          		y
+            	Array.set
+            	(
+            	 x
+            	 y
+            	)
+            									   
+          	)
+          )
+          											 
+           								
+       )
+           								
+     									    	
        								   
    )
        								   
@@ -390,41 +412,49 @@
        								   
      params = 
      (
-         	
-     x_init
-         	
+      "a"
      )
      class name = ref
      class expr = 
-                 class_structure
-                 (
-                     								
-                     x
-                     
-                     (
-                     x_init
-                     :
-                     a
-                     )
-                         								
-                       											 
-                     								
-                    method get
-                      x
-                        												 
-                     								
-                    method set
-                      Array.set
-                      (
-                       x
-                       y
-                      )
-                      								   
-                        												 
-                     								
-                 )
-                     								
-         	
+     										    	
+       x_init
+     										    	
+       class_structure
+       (
+           								
+           x
+           
+           (
+           x_init
+           :
+           a
+           )
+               								
+             											 
+           								
+          method get
+          	  x
+             	
+              											  
+           								
+          method set
+          (
+            case
+          	(
+          		y
+            	Array.set
+            	(
+            	 x
+            	 y
+            	)
+            									   
+          	)
+          )
+          											 
+           								
+       )
+           								
+     										    	
        								   
    )
        								   
@@ -475,63 +505,72 @@
        								   
      params = 
      (
-         	
-     
-     c
-     a
-         										   
-         	
+      "a"
      )
      class name = circle
      class expr = 
-                 class_structure
-                 (
-                     								
-                     center
-                     c
-                       											 
-                     								
-                    method center
-                      center
-                        												 
-                     								
-                    method set_center
-                      Array.set
-                      (
-                       center
-                       c
-                      )
-                      								   
-                        												 
-                     								
-                    method move
-                      
-                      (
-                      send move
-                      (
-                       center
-                      )
-                          						  
-                      :
-                      arrow
-                      
-                      int
-                      (
-                      )
-                      								  
-                      
-                      unit
-                      (
-                      )
-                      								  
-                         								   
-                      )
-                          								
-                        												 
-                     								
-                 )
-                     								
-         	
+     										    	
+       
+       c
+       a
+           										   
+     										    	
+       class_structure
+       (
+           								
+           center
+           c
+             											 
+           								
+          method center
+          	  center
+             	
+              											  
+           								
+          method set_center
+          (
+            case
+          	(
+          		c
+            	Array.set
+            	(
+            	 center
+            	 c
+            	)
+            									   
+          	)
+          )
+          											 
+           								
+          method move
+          	  
+          	  (
+          	  send move
+          	  (
+          	   center
+          	  )
+          	      						  
+          	  :
+          	  arrow
+          	  
+          	  int
+          	  (
+          	  )
+          	  								  
+          	  
+          	  unit
+          	  (
+          	  )
+          	  								  
+          	     								   
+          	  )
+          	      								
+             	
+              											  
+           								
+       )
+           								
+     										    	
        								   
    )
        								   
@@ -545,52 +584,64 @@
        								   
      params = 
      (
-         	
-     
-     c
-     a
-         										   
-         	
+      "a"
      )
      class name = circle
      class expr = 
-                 class_structure
-                 (
-                     								
-                    classConstraint 
-                    (
-                        a
-                        point
-                    )
-                     								
-                     center
-                     c
-                       											 
-                     								
-                    method center
-                      center
-                        												 
-                     								
-                    method set_center
-                      Array.set
-                      (
-                       center
-                       c
-                      )
-                      								   
-                        												 
-                     								
-                    method move
-                      send move
-                      (
-                       center
-                      )
-                          						  
-                        												 
-                     								
-                 )
-                     								
-         	
+     										    	
+       
+       c
+       a
+           										   
+     										    	
+       class_structure
+       (
+           								
+          a
+          (
+          	typexprHash1 
+          	(
+          	    point
+          	)
+          )
+          										   
+           								
+           center
+           c
+             											 
+           								
+          method center
+          	  center
+             	
+              											  
+           								
+          method set_center
+          (
+            case
+          	(
+          		c
+            	Array.set
+            	(
+            	 center
+            	 c
+            	)
+            									   
+          	)
+          )
+          											 
+           								
+          method move
+          	  send move
+          	  (
+          	   center
+          	  )
+          	      						  
+             	
+              											  
+           								
+       )
+           								
+     										    	
        								   
    )
        								   
@@ -634,42 +685,47 @@
        								   
      params = 
      (
-         	
-     c
-         	
+      "a"
      )
      class name = color_circle
      class expr = 
-                 class_structure
-                 (
-                     								
-                    classConstraint 
-                    (
-                        a
-                        color_point
-                    )
-                     								
-                    inherit
-                     constr classArgs 
-                            (
-                                <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"circle")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                                c
-                            )
-                     (
-                     )
-                    										    
-                     								
-                    method color
-                      send color
-                      (
-                       center
-                      )
-                          						  
-                        												 
-                     								
-                 )
-                     								
-         	
+     										    	
+       c
+     										    	
+       class_structure
+       (
+           								
+          a
+          (
+          	typexprHash1 
+          	(
+          	    color_point
+          	)
+          )
+          										   
+           								
+          inherit
+           constr classArgs 
+                  (
+                      <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"circle")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                      c
+                  )
+           (
+           )
+          										    
+           								
+          method color
+          	  send color
+          	  (
+          	   center
+          	  )
+          	      						  
+             	
+              											  
+           								
+       )
+           								
+     										    	
        								   
    )
        								   
@@ -718,7 +774,6 @@
          )
          								  
        )
-       
           									
   )
                                  
@@ -734,7 +789,6 @@
          )
          								  
        )
-       
           									
   )
                                  
@@ -744,32 +798,32 @@
    (
    x
    
-   brackets3 
+   
    (
-       x
-       
-        color_circle
-        (
-          
-          color_point
-          (
-          )
-          								  
-        )
+     x
+     :
+     
+      color_circle
+      (
         
-           									
-       
-        circle
+        color_point
         (
-          
-          point
-          (
-          )
-          								  
         )
+        								  
+      )
+         									
+     
+      circle
+      (
         
-           									
+        point
+        (
+        )
+        								  
+      )
+         									
    )
+       									
    )
    													 
   )
@@ -782,39 +836,40 @@
        								   
      params = 
      (
-         	
-     y
-         	
      )
      class name = printable_point
      class expr = 
-                 class_structure
-                 (
-                     								
-                    inherit
-                     constr classArgs 
-                            (
-                                point
-                                y
-                            )
-                     (
-                     )
-                    										    
-                     								
-                    method print
-                      print_int
-                      (
-                          send get_x
-                          (
-                           s
-                          )
-                              						  
-                      )
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       y
+     									    	
+       class_structure
+       (
+           								
+          inherit
+           constr classArgs 
+                  (
+                      point
+                      y
+                  )
+           (
+           )
+          										    
+           								
+          method print
+          	  print_int
+          	  (
+          	      send get_x
+          	      (
+          	       s
+          	      )
+          	          						  
+          	  )
+             	
+              											  
+           								
+       )
+           								
+     									    	
        								   
    )
        								   
@@ -849,93 +904,94 @@
        								   
      params = 
      (
-         	
-     y
-         	
-     c
-         	
      )
      class name = printable_color_point
      class expr = 
-                 class_structure
-                 (
-                     								
-                    inherit
-                     constr classArgs 
-                            (
-                                color_point
-                                y
-                                c
-                            )
-                     (
-                     )
-                    										    
-                     								
-                    inherit
-                     constr classArgs 
-                            (
-                                printable_point
-                                y
-                            )
-                     (
-                     )
-                    										    
-                     								
-                    method print
-                      
-                      sequence
-                      (
-                        print_string
-                        (
-                            "("
-                        )
-                      ;
-                        
-                        sequence
-                        (
-                          send print
-                          (
-                           super
-                          )
-                              						  
-                        ;
-                          
-                          sequence
-                          (
-                            print_string
-                            (
-                                ", "
-                            )
-                          ;
-                            
-                            sequence
-                            (
-                              print_string
-                              (
-                                  send color
-                                  (
-                                   self
-                                  )
-                                      						  
-                              )
-                            ;
-                              print_string
-                              (
-                                  ")"
-                              )
-                            )
-                                							
-                          )
-                              							
-                        )
-                            							
-                      )
-                          							
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       y
+     									    	
+       c
+     									    	
+       class_structure
+       (
+           								
+          inherit
+           constr classArgs 
+                  (
+                      color_point
+                      y
+                      c
+                  )
+           (
+           )
+          										    
+           								
+          inherit
+           constr classArgs 
+                  (
+                      printable_point
+                      y
+                  )
+           (
+           )
+          										    
+           								
+          method print
+          	  
+          	  sequence
+          	  (
+          	    print_string
+          	    (
+          	        "("
+          	    )
+          	  ;
+          	    
+          	    sequence
+          	    (
+          	      send print
+          	      (
+          	       super
+          	      )
+          	          						  
+          	    ;
+          	      
+          	      sequence
+          	      (
+          	        print_string
+          	        (
+          	            ", "
+          	        )
+          	      ;
+          	        
+          	        sequence
+          	        (
+          	          print_string
+          	          (
+          	              send color
+          	              (
+          	               self
+          	              )
+          	                  						  
+          	          )
+          	        ;
+          	          print_string
+          	          (
+          	              ")"
+          	          )
+          	        )
+          	            							
+          	      )
+          	          							
+          	    )
+          	        							
+          	  )
+          	      							
+             	
+              											  
+           								
+       )
+           								
+     									    	
        								   
    )
        								   
@@ -971,40 +1027,47 @@
        								   
      params = 
      (
-         	
-     y
-         	
      )
      class name = functional_point
      class expr = 
-                 class_structure
-                 (
-                     								
-                     x
-                     y
-                       											 
-                     								
-                    method get_x
-                      x
-                        												 
-                     								
-                    method move
-                      brackets4 
-                      (
-                          x
-                          +
-                          (
-                              x
-                              d
-                          )
-                          
-                          
-                      )
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       y
+     									    	
+       class_structure
+       (
+           								
+           x
+           y
+             											 
+           								
+          method get_x
+          	  x
+             	
+              											  
+           								
+          method move
+          (
+            case
+          	(
+          		d
+            	brackets4 
+            	(
+            	    x
+            	    +
+            	    (
+            	        x
+            	        d
+            	    )
+            	    
+            	    
+            	)
+          	)
+          )
+          											 
+           								
+       )
+           								
+     									    	
        								   
    )
        								   
@@ -1078,308 +1141,353 @@
        								   
      params = 
      (
-         	
-     ()
-         	
+      "a"
      )
      class name = lst
      class expr = 
-                 class_structure
-                 (
-                     								
-                    method null
-                       poly
-                       
-                       bool
-                       (
-                       )
-                       								  
-                                                              
-                        												 
-                     								
-                    method hd
-                       poly
-                       a
-                                                              
-                        												 
-                     								
-                    method tl
-                       poly
-                       
-                        lst
-                        (
-                          a
-                        )
-                        
-                           									
-                                                              
-                        												 
-                     								
-                    method map
-                      
-                      (
-                      ifthenelse
-                      (
-                       if
-                       (
-                        send null
-                        (
-                         self
-                        )
-                            						  
-                       )
-                       then
-                       (
-                        new nil
-                        (
-                            ()
-                        )
-                       )
-                       else
-                       (
-                        new cons
-                        (
-                            f
-                            (
-                                send hd
-                                (
-                                 self
-                                )
-                                    						  
-                            )
-                            send map
-                            (
-                             send tl
-                             (
-                              self
-                             )
-                                 						  
-                            )
-                                						  
-                            (
-                                f
-                            )
-                        )
-                       ) 
-                      )
-                      	    											 
-                      :
-                      
-                       lst
-                       (
-                         a
-                       )
-                       
-                          									
-                      )
-                          								
-                        												 
-                     								
-                    method iter
-                      ifthenelse
-                      (
-                       if
-                       (
-                        send null
-                        (
-                         self
-                        )
-                            						  
-                       )
-                       then
-                       (
-                        ()
-                       )
-                       else
-                       (
-                        
-                        sequence
-                        (
-                          f
-                          (
-                              send hd
-                              (
-                               self
-                              )
-                                  						  
-                          )
-                        ;
-                          send iter
-                          (
-                           send tl
-                           (
-                            self
-                           )
-                               						  
-                          )
-                              						  
-                          (
-                              f
-                          )
-                        )
-                            							
-                       ) 
-                      )
-                      	    											 
-                        												 
-                     								
-                    method print
-                      
-                      sequence
-                      (
-                        print_string
-                        (
-                            "("
-                        )
-                      ;
-                        
-                        sequence
-                        (
-                          send iter
-                          (
-                           self
-                          )
-                              						  
-                          (
-                              (
-                               
-                               case
-                               (
-                               x
-                               
-                               
-                               sequence
-                               (
-                                 f
-                                 (
-                                     x
-                                 )
-                               ;
-                                 print_string
-                                 (
-                                     "::"
-                                 )
-                               )
-                                   							
-                               )
-                               													 
-                              )
-                                 						  
-                          )
-                        ;
-                          
-                          sequence
-                          (
-                            print_string
-                            (
-                                "[]"
-                            )
-                          ;
-                            print_string
-                            (
-                                ")"
-                            )
-                          )
-                              							
-                        )
-                            							
-                      )
-                          							
-                        												 
-                     								
-                 )
-                     								
-         	
+     										    	
+       ()
+     										    	
+       class_structure
+       (
+           								
+          method null
+             poly
+             
+             bool
+             (
+             )
+             								  
+                                                    
+              									
+           								
+          method hd
+             poly
+             a
+                                                    
+              									
+           								
+          method tl
+             poly
+             
+              lst
+              (
+                a
+              )
+                 									
+                                                    
+              									
+           								
+          method map
+          (
+            case
+          	(
+          		f
+            	
+            	(
+            	ifthenelse
+            	(
+            	 if
+            	 (
+            	  send null
+            	  (
+            	   self
+            	  )
+            	      						  
+            	 )
+            	 then
+            	 (
+            	  new nil
+            	  (
+            	      ()
+            	  )
+            	 )
+            	 else
+            	 (
+            	  new cons
+            	  (
+            	      f
+            	      (
+            	          send hd
+            	          (
+            	           self
+            	          )
+            	              						  
+            	      )
+            	      send map
+            	      (
+            	       send tl
+            	       (
+            	        self
+            	       )
+            	           						  
+            	      )
+            	          						  
+            	      (
+            	          f
+            	      )
+            	  )
+            	 ) 
+            	)
+            		    											 
+            	:
+            	
+            	 lst
+            	 (
+            	   a
+            	 )
+            	    									
+            	)
+            	    								
+          	)
+          )
+          											 
+           								
+          method iter
+          (
+            case
+          	(
+          		
+          		f
+          		arrow
+          		a
+          		
+          		unit
+          		(
+          		)
+          										  
+          		   								   
+          		    										   
+            	ifthenelse
+            	(
+            	 if
+            	 (
+            	  send null
+            	  (
+            	   self
+            	  )
+            	      						  
+            	 )
+            	 then
+            	 (
+            	  ()
+            	 )
+            	 else
+            	 (
+            	  
+            	  sequence
+            	  (
+            	    f
+            	    (
+            	        send hd
+            	        (
+            	         self
+            	        )
+            	            						  
+            	    )
+            	  ;
+            	    send iter
+            	    (
+            	     send tl
+            	     (
+            	      self
+            	     )
+            	         						  
+            	    )
+            	        						  
+            	    (
+            	        f
+            	    )
+            	  )
+            	      							
+            	 ) 
+            	)
+            		    											 
+          	)
+          )
+          											 
+           								
+          method print
+          (
+            case
+          	(
+          		
+          		f
+          		arrow
+          		a
+          		
+          		unit
+          		(
+          		)
+          										  
+          		   								   
+          		    										   
+            	
+            	sequence
+            	(
+            	  print_string
+            	  (
+            	      "("
+            	  )
+            	;
+            	  
+            	  sequence
+            	  (
+            	    send iter
+            	    (
+            	     self
+            	    )
+            	        						  
+            	    (
+            	        (
+            	         
+            	         case
+            	         (
+            	         x
+            	         
+            	         
+            	         sequence
+            	         (
+            	           f
+            	           (
+            	               x
+            	           )
+            	         ;
+            	           print_string
+            	           (
+            	               "::"
+            	           )
+            	         )
+            	             							
+            	         )
+            	         													 
+            	        )
+            	           						  
+            	    )
+            	  ;
+            	    
+            	    sequence
+            	    (
+            	      print_string
+            	      (
+            	          "[]"
+            	      )
+            	    ;
+            	      print_string
+            	      (
+            	          ")"
+            	      )
+            	    )
+            	        							
+            	  )
+            	      							
+            	)
+            	    							
+          	)
+          )
+          											 
+           								
+       )
+           								
+     										    	
        								   
      params = 
      (
-         	
-     ()
-         	
+      "a"
      )
      class name = nil
      class expr = 
-                 class_structure
-                 (
-                     								
-                    inherit
-                     constr classArgs 
-                            (
-                                <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                                ()
-                            )
-                     (
-                     )
-                    										    
-                     								
-                    method null
-                      true
-                        												 
-                     								
-                    method hd
-                      failwith
-                      (
-                          "hd"
-                      )
-                        												 
-                     								
-                    method tl
-                      failwith
-                      (
-                          "tl"
-                      )
-                        												 
-                     								
-                 )
-                     								
-         	
+     										    	
+       ()
+     										    	
+       class_structure
+       (
+           								
+          inherit
+           constr classArgs 
+                  (
+                      <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                      ()
+                  )
+           (
+           )
+          										    
+           								
+          method null
+          	  true
+             	
+              											  
+           								
+          method hd
+          	  failwith
+          	  (
+          	      "hd"
+          	  )
+             	
+              											  
+           								
+          method tl
+          	  failwith
+          	  (
+          	      "tl"
+          	  )
+             	
+              											  
+           								
+       )
+           								
+     										    	
        								   
      params = 
      (
-         	
-     h
-         	
-     t
-         	
+      "a"
      )
      class name = cons
      class expr = 
-                 class_structure
-                 (
-                     								
-                    inherit
-                     constr classArgs 
-                            (
-                                <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                                ()
-                            )
-                     (
-                     )
-                    										    
-                     								
-                     h
-                     h
-                       											 
-                     								
-                     t
-                     t
-                       											 
-                     								
-                    method null
-                      false
-                        												 
-                     								
-                    method hd
-                      h
-                        												 
-                     								
-                    method tl
-                      t
-                        												 
-                     								
-                 )
-                     								
-         	
+     										    	
+       h
+     										    	
+       t
+     										    	
+       class_structure
+       (
+           								
+          inherit
+           constr classArgs 
+                  (
+                      <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                      ()
+                  )
+           (
+           )
+          										    
+           								
+           h
+           h
+             											 
+           								
+           t
+           t
+             											 
+           								
+          method null
+          	  false
+             	
+              											  
+           								
+          method hd
+          	  h
+             	
+              											  
+           								
+          method tl
+          	  t
+             	
+              											  
+           								
+       )
+           								
+     										    	
        								   
    )
        								   
@@ -1482,7 +1590,6 @@
       		 	   (
       		 	     a
       		 	   )
-      		 	   
       		 	      									
       		 	      										   
       		      ifthenelse
@@ -1597,31 +1704,31 @@
        								   
      params = 
      (
-         	
-     ()
-         	
      )
      class name = comparable
      class expr = 
-                 class_structure
-                 (
-                     								
-                    method leq
-                       poly
-                       arrow
-                       a
-                       
-                       bool
-                       (
-                       )
-                       								  
-                          								   
-                                                              
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       ()
+     									    	
+       class_structure
+       (
+           								
+          method leq
+             poly
+             arrow
+             a
+             
+             bool
+             (
+             )
+             								  
+                								   
+                                                    
+              									
+           								
+       )
+           								
+     									    	
        								   
    )
        								   
@@ -1635,55 +1742,62 @@
        								   
      params = 
      (
-         	
-     
-     x
-     
-     int
-     (
-     )
-     								  
-         										   
-         	
      )
      class name = int_comparable
      class expr = 
-                 class_structure
-                 (
-                     								
-                    inherit
-                     constr classArgs 
-                            (
-                                comparable
-                                ()
-                            )
-                     (
-                     )
-                    										    
-                     								
-                     x
-                     x
-                       											 
-                     								
-                    method x
-                      x
-                        												 
-                     								
-                    method leq
-                      <=
-                      (
-                          x
-                          send x
-                          (
-                           p
-                          )
-                              						  
-                      )
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       
+       x
+       
+       int
+       (
+       )
+       								  
+           										   
+     									    	
+       class_structure
+       (
+           								
+          inherit
+           constr classArgs 
+                  (
+                      comparable
+                      ()
+                  )
+           (
+           )
+          										    
+           								
+           x
+           x
+             											 
+           								
+          method x
+          	  x
+             	
+              											  
+           								
+          method leq
+          (
+            case
+          	(
+          		p
+            	<=
+            	(
+            	    x
+            	    send x
+            	    (
+            	     p
+            	    )
+            	        						  
+            	)
+          	)
+          )
+          											 
+           								
+       )
+           								
+     									    	
        								   
    )
        								   
@@ -1697,41 +1811,47 @@
        								   
      params = 
      (
-         	
-     xi
-         	
      )
      class name = int_comparable2
      class expr = 
-                 class_structure
-                 (
-                     								
-                    inherit
-                     constr classArgs 
-                            (
-                                int_comparable
-                                xi
-                            )
-                     (
-                     )
-                    										    
-                     								
-                     x'
-                     xi
-                       											 
-                     								
-                    method set_x
-                      Array.set
-                      (
-                       x'
-                       y
-                      )
-                      								   
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       xi
+     									    	
+       class_structure
+       (
+           								
+          inherit
+           constr classArgs 
+                  (
+                      int_comparable
+                      xi
+                  )
+           (
+           )
+          										    
+           								
+           x'
+           xi
+             											 
+           								
+          method set_x
+          (
+            case
+          	(
+          		y
+            	Array.set
+            	(
+            	 x'
+            	 y
+            	)
+            									   
+          	)
+          )
+          											 
+           								
+       )
+           								
+     									    	
        								   
    )
        								   
@@ -1745,140 +1865,150 @@
        								   
      params = 
      (
-         	
-     ()
-         	
+      "a"
      )
      class name = sorted_list
      class expr = 
-                 class_structure
-                 (
-                     								
-                    classConstraint 
-                    (
-                        a
-                        comparable
-                    )
-                     								
-                     l
-                     
-                     (
-                     []
-                     :
-                     
-                      list
-                      (
-                        a
-                      )
-                      
-                         									
-                     )
-                         								
-                       											 
-                     								
-                    method add
-                      
-                      let
-                      (
-                       (
-                          									  
-                        
-                         insert
-                         (
-                          
-                          case
-                          (
-                            []
-                            
-                            ::
-                             (
-                             x
-                             []
-                             ) 
-                                						  
-                          ) 
-                          	        											 
-                            
-                            case
-                            (
-                             alias l'
-                             (
-                               
-                               ::
-                               (
-                                   a
-                                   l
-                               )
-                             )
-                                 									   
-                             
-                             ifthenelse
-                             (
-                              if
-                              (
-                               send leq
-                               (
-                                a
-                               )
-                                   						  
-                               (
-                                   x
-                               )
-                              )
-                              then
-                              (
-                               ::
-                               (
-                                   a
-                                   insert
-                                   (
-                                       l
-                                   )
-                               )
-                              )
-                              else
-                              (
-                               ::
-                               (
-                                   x
-                                   l'
-                               )
-                              ) 
-                             )
-                             	    											 
-                            )
-                            													    
-                          	        											 
-                          	        											 
-                         )
-                            							    
-                        							    		   
-                          									  
-                       )
-                      in
-                        Array.set
-                        (
-                         l
-                         insert
-                         (
-                             l
-                         )
-                        )
-                        								   
-                      )
-                          									
-                        												 
-                     								
-                    method hd
-                      List.hd
-                      (
-                          l
-                      )
-                        												 
-                     								
-                 )
-                     								
-         	
+     										    	
+       ()
+     										    	
+       class_structure
+       (
+           								
+          a
+          (
+          	typexprHash1 
+          	(
+          	    comparable
+          	)
+          )
+          										   
+           								
+           l
+           
+           (
+           []
+           :
+           
+            list
+            (
+              a
+            )
+               									
+           )
+               								
+             											 
+           								
+          method add
+          (
+            case
+          	(
+          		x
+            	
+            	let
+            	(
+            	 (
+            	    									  
+            	  
+            	   insert
+            	   (
+            	    
+            	    case
+            	    (
+            	      []
+            	      
+            	      ::
+            	       (
+            	       x
+            	       []
+            	       ) 
+            	          						  
+            	    ) 
+            	    	        											 
+            	      
+            	      case
+            	      (
+            	       alias l'
+            	       (
+            	         
+            	         ::
+            	         (
+            	             a
+            	             l
+            	         )
+            	       )
+            	           									   
+            	       
+            	       ifthenelse
+            	       (
+            	        if
+            	        (
+            	         send leq
+            	         (
+            	          a
+            	         )
+            	             						  
+            	         (
+            	             x
+            	         )
+            	        )
+            	        then
+            	        (
+            	         ::
+            	         (
+            	             a
+            	             insert
+            	             (
+            	                 l
+            	             )
+            	         )
+            	        )
+            	        else
+            	        (
+            	         ::
+            	         (
+            	             x
+            	             l'
+            	         )
+            	        ) 
+            	       )
+            	       	    											 
+            	      )
+            	      													    
+            	    	        											 
+            	    	        											 
+            	   )
+            	      							    
+            	  							    		   
+            	    									  
+            	 )
+            	in
+            	  Array.set
+            	  (
+            	   l
+            	   insert
+            	   (
+            	       l
+            	   )
+            	  )
+            	  								   
+            	)
+            	    									
+          	)
+          )
+          											 
+           								
+          method hd
+          	  List.hd
+          	  (
+          	      l
+          	  )
+             	
+              											  
+           								
+       )
+           								
+     										    	
        								   
    )
        								   
@@ -1975,54 +2105,74 @@
        								   
      params = 
      (
-         	
-     
-     x
-     
-     int
-     (
-     )
-     								  
-         										   
-         	
      )
      class name = int_comparable3
      class expr = 
-                 class_structure
-                 (
-                     								
-                     x
-                     x
-                       											 
-                     								
-                    method leq
-                      <
-                      (
-                          x
-                          send x
-                          (
-                           y
-                          )
-                              						  
-                      )
-                        												 
-                     								
-                    method x
-                      x
-                        												 
-                     								
-                    method setx
-                      Array.set
-                      (
-                       x
-                       y
-                      )
-                      								   
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       
+       x
+       
+       int
+       (
+       )
+       								  
+           										   
+     									    	
+       class_structure
+       (
+           								
+           x
+           x
+             											 
+           								
+          method leq
+          (
+            case
+          	(
+          		
+          		y
+          		
+          		int_comparable
+          		(
+          		)
+          										  
+          		    										   
+            	<
+            	(
+            	    x
+            	    send x
+            	    (
+            	     y
+            	    )
+            	        						  
+            	)
+          	)
+          )
+          											 
+           								
+          method x
+          	  x
+             	
+              											  
+           								
+          method setx
+          (
+            case
+          	(
+          		y
+            	Array.set
+            	(
+            	 x
+            	 y
+            	)
+            									   
+          	)
+          )
+          											 
+           								
+       )
+           								
+     									    	
        								   
    )
        								   
@@ -2087,9 +2237,11 @@
      	  
      	   list
      	   (
-     	     comparable
+     	     typexprHash1 
+     	     (
+     	         comparable
+     	     )
      	   )
-     	   
      	      									
      	      										   
           Sort.list
@@ -2288,7 +2440,10 @@
       		
       		 
       		 x
-      		 comparable
+      		 typexprHash1 
+      		 (
+      		     comparable
+      		 )
       		     										   
       		(
       		 case
@@ -2366,110 +2521,130 @@
        								   
      params = 
      (
-         	
-     
-     x
-     a
-         										   
-         	
+      "a"
      )
      class name = link
      class expr = 
-                 class_structure
-                 (
-                     								
-                     x
-                     x
-                       											 
-                     								
-                     next
-                     
-                     (
-                     None
-                     :
-                     
-                      option
-                      (
-                        b
-                      )
-                      
-                         									
-                     )
-                         								
-                       											 
-                     								
-                    method x
-                      x
-                        												 
-                     								
-                    method next
-                      next
-                        												 
-                     								
-                    method set_x
-                      Array.set
-                      (
-                       x
-                       y
-                      )
-                      								   
-                        												 
-                     								
-                    method set_next
-                      Array.set
-                      (
-                       next
-                       l
-                      )
-                      								   
-                        												 
-                     								
-                    method append
-                      match
-                      next
-                      (
-                      
-                      case
-                      (
-                        None
-                        
-                        send set_next
-                        (
-                         self
-                        )
-                            						  
-                        (
-                            l
-                        )
-                      ) 
-                      	        											 
-                        
-                        case
-                        (
-                         
-                         Some
-                         l'
-                         									  
-                         
-                         send append
-                         (
-                          l'
-                         )
-                             						  
-                         (
-                             l
-                         )
-                        )
-                        													    
-                      	        											 
-                      	        											 
-                      )
-                      			   
-                        												 
-                     								
-                 )
-                     								
-         	
+     										    	
+       
+       x
+       a
+           										   
+     										    	
+       class_structure
+       (
+           								
+           x
+           x
+             											 
+           								
+           next
+           
+           (
+           None
+           :
+           
+            option
+            (
+              b
+            )
+               									
+           )
+               								
+             											 
+           								
+          method x
+          	  x
+             	
+              											  
+           								
+          method next
+          	  next
+             	
+              											  
+           								
+          method set_x
+          (
+            case
+          	(
+          		y
+            	Array.set
+            	(
+            	 x
+            	 y
+            	)
+            									   
+          	)
+          )
+          											 
+           								
+          method set_next
+          (
+            case
+          	(
+          		l
+            	Array.set
+            	(
+            	 next
+            	 l
+            	)
+            									   
+          	)
+          )
+          											 
+           								
+          method append
+          (
+            case
+          	(
+          		l
+            	match
+            	next
+            	(
+            	
+            	case
+            	(
+            	  None
+            	  
+            	  send set_next
+            	  (
+            	   self
+            	  )
+            	      						  
+            	  (
+            	      l
+            	  )
+            	) 
+            		        											 
+            	  
+            	  case
+            	  (
+            	   
+            	   Some
+            	   l'
+            	   									  
+            	   
+            	   send append
+            	   (
+            	    l'
+            	   )
+            	       						  
+            	   (
+            	       l
+            	   )
+            	  )
+            	  													    
+            		        											 
+            		        											 
+            	)
+            				   
+          	)
+          )
+          											 
+           								
+       )
+           								
+     										    	
        								   
    )
        								   
@@ -2483,96 +2658,110 @@
        								   
      params = 
      (
-         	
-     x
-         	
+      "a"
      )
      class name = double_link
      class expr = 
-                 class_structure
-                 (
-                     								
-                    inherit
-                     constr classArgs 
-                            (
-                                <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"link")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                                x
-                            )
-                     (
-                     )
-                    										    
-                     								
-                     prev
-                     None
-                       											 
-                     								
-                    method prev
-                      prev
-                        												 
-                     								
-                    method set_next
-                      
-                      sequence
-                      (
-                        Array.set
-                        (
-                         next
-                         l
-                        )
-                        								   
-                      ;
-                        match
-                        l
-                        (
-                        
-                        case
-                        (
-                          
-                          Some
-                          l
-                          									  
-                          
-                          send set_prev
-                          (
-                           l
-                          )
-                              						  
-                          (
-                              
-                              Some
-                                 self
-                                  								 
-                          )
-                        ) 
-                        	        											 
-                          
-                          case
-                          (
-                           None
-                           
-                           ()
-                          )
-                          													    
-                        	        											 
-                        	        											 
-                        )
-                        			   
-                      )
-                          							
-                        												 
-                     								
-                    method set_prev
-                      Array.set
-                      (
-                       prev
-                       l
-                      )
-                      								   
-                        												 
-                     								
-                 )
-                     								
-         	
+     										    	
+       x
+     										    	
+       class_structure
+       (
+           								
+          inherit
+           constr classArgs 
+                  (
+                      <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"link")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                      x
+                  )
+           (
+           )
+          										    
+           								
+           prev
+           None
+             											 
+           								
+          method prev
+          	  prev
+             	
+              											  
+           								
+          method set_next
+          (
+            case
+          	(
+          		l
+            	
+            	sequence
+            	(
+            	  Array.set
+            	  (
+            	   next
+            	   l
+            	  )
+            	  								   
+            	;
+            	  match
+            	  l
+            	  (
+            	  
+            	  case
+            	  (
+            	    
+            	    Some
+            	    l
+            	    									  
+            	    
+            	    send set_prev
+            	    (
+            	     l
+            	    )
+            	        						  
+            	    (
+            	        
+            	        Some
+            	           self
+            	            								 
+            	    )
+            	  ) 
+            	  	        											 
+            	    
+            	    case
+            	    (
+            	     None
+            	     
+            	     ()
+            	    )
+            	    													    
+            	  	        											 
+            	  	        											 
+            	  )
+            	  			   
+            	)
+            	    							
+          	)
+          )
+          											 
+           								
+          method set_prev
+          (
+            case
+          	(
+          		l
+            	Array.set
+            	(
+            	 prev
+            	 l
+            	)
+            									   
+          	)
+          )
+          											 
+           								
+       )
+           								
+     										    	
        								   
    )
        								   
@@ -2601,9 +2790,11 @@
       		  		 
       		  		  option
       		  		  (
-      		  		    <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"link")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+      		  		    link
+      		  		    (
+      		  		      a
+      		  		    )
       		  		  )
-      		  		  
       		  		     									
       		  		     										   
       		  		(
@@ -2673,184 +2864,195 @@
        								   
      params = 
      (
-         	
-     ()
-         	
      )
      class name = calculator
      class expr = 
-                 class_structure
-                 (
-                     								
-                     arg
-                     0.
-                       											 
-                     								
-                     acc
-                     0.
-                       											 
-                     								
-                     equals
-                     (
-                      
-                      case
-                      (
-                        s
-                        
-                        send arg
-                        (
-                         s
-                        )
-                            						  
-                      ) 
-                      	        											 
-                      	        											 
-                     )
-                        							   
-                       											 
-                     								
-                    method arg
-                      arg
-                        												 
-                     								
-                    method acc
-                      acc
-                        												 
-                     								
-                    method enter
-                      
-                      sequence
-                      (
-                        Array.set
-                        (
-                         arg
-                         n
-                        )
-                        								   
-                      ;
-                        self
-                      )
-                          							
-                        												 
-                     								
-                    method add
-                      
-                      sequence
-                      (
-                        Array.set
-                        (
-                         acc
-                         equals
-                         (
-                             self
-                         )
-                        )
-                        								   
-                      ;
-                        
-                        sequence
-                        (
-                          Array.set
-                          (
-                           equals
-                           (
-                            
-                            case
-                            (
-                              s
-                              
-                              +.
-                              (
-                                  send acc
-                                  (
-                                   s
-                                  )
-                                      						  
-                                  send arg
-                                  (
-                                   s
-                                  )
-                                      						  
-                              )
-                            ) 
-                            	        											 
-                            	        											 
-                           )
-                              							   
-                          )
-                          								   
-                        ;
-                          self
-                        )
-                            							
-                      )
-                          							
-                        												 
-                     								
-                    method sub
-                      
-                      sequence
-                      (
-                        Array.set
-                        (
-                         acc
-                         equals
-                         (
-                             self
-                         )
-                        )
-                        								   
-                      ;
-                        
-                        sequence
-                        (
-                          Array.set
-                          (
-                           equals
-                           (
-                            
-                            case
-                            (
-                              s
-                              
-                              -.
-                              (
-                                  send acc
-                                  (
-                                   s
-                                  )
-                                      						  
-                                  send arg
-                                  (
-                                   s
-                                  )
-                                      						  
-                              )
-                            ) 
-                            	        											 
-                            	        											 
-                           )
-                              							   
-                          )
-                          								   
-                        ;
-                          self
-                        )
-                            							
-                      )
-                          							
-                        												 
-                     								
-                    method equals
-                      equals
-                      (
-                          self
-                      )
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       ()
+     									    	
+       class_structure
+       (
+           								
+           arg
+           0.
+             											 
+           								
+           acc
+           0.
+             											 
+           								
+           equals
+           (
+            
+            case
+            (
+              s
+              
+              send arg
+              (
+               s
+              )
+                  						  
+            ) 
+            	        											 
+            	        											 
+           )
+              							   
+             											 
+           								
+          method arg
+          	  arg
+             	
+              											  
+           								
+          method acc
+          	  acc
+             	
+              											  
+           								
+          method enter
+          (
+            case
+          	(
+          		n
+            	
+            	sequence
+            	(
+            	  Array.set
+            	  (
+            	   arg
+            	   n
+            	  )
+            	  								   
+            	;
+            	  self
+            	)
+            	    							
+          	)
+          )
+          											 
+           								
+          method add
+          	  
+          	  sequence
+          	  (
+          	    Array.set
+          	    (
+          	     acc
+          	     equals
+          	     (
+          	         self
+          	     )
+          	    )
+          	    								   
+          	  ;
+          	    
+          	    sequence
+          	    (
+          	      Array.set
+          	      (
+          	       equals
+          	       (
+          	        
+          	        case
+          	        (
+          	          s
+          	          
+          	          +.
+          	          (
+          	              send acc
+          	              (
+          	               s
+          	              )
+          	                  						  
+          	              send arg
+          	              (
+          	               s
+          	              )
+          	                  						  
+          	          )
+          	        ) 
+          	        	        											 
+          	        	        											 
+          	       )
+          	          							   
+          	      )
+          	      								   
+          	    ;
+          	      self
+          	    )
+          	        							
+          	  )
+          	      							
+             	
+              											  
+           								
+          method sub
+          	  
+          	  sequence
+          	  (
+          	    Array.set
+          	    (
+          	     acc
+          	     equals
+          	     (
+          	         self
+          	     )
+          	    )
+          	    								   
+          	  ;
+          	    
+          	    sequence
+          	    (
+          	      Array.set
+          	      (
+          	       equals
+          	       (
+          	        
+          	        case
+          	        (
+          	          s
+          	          
+          	          -.
+          	          (
+          	              send acc
+          	              (
+          	               s
+          	              )
+          	                  						  
+          	              send arg
+          	              (
+          	               s
+          	              )
+          	                  						  
+          	          )
+          	        ) 
+          	        	        											 
+          	        	        											 
+          	       )
+          	          							   
+          	      )
+          	      								   
+          	    ;
+          	      self
+          	    )
+          	        							
+          	  )
+          	      							
+             	
+              											  
+           								
+          method equals
+          	  equals
+          	  (
+          	      self
+          	  )
+             	
+              											  
+           								
+       )
+           								
+     									    	
        								   
    )
        								   
@@ -2931,102 +3133,113 @@
        								   
      params = 
      (
-         	
-     ()
-         	
      )
      class name = calculator
      class expr = 
-                 class_structure
-                 (
-                     								
-                     arg
-                     0.
-                       											 
-                     								
-                     acc
-                     0.
-                       											 
-                     								
-                     equals
-                     (
-                      
-                      case
-                      (
-                        s
-                        
-                        send arg
-                        (
-                         s
-                        )
-                            						  
-                      ) 
-                      	        											 
-                      	        											 
-                     )
-                        							   
-                       											 
-                     								
-                    method arg
-                      arg
-                        												 
-                     								
-                    method acc
-                      acc
-                        												 
-                     								
-                    method enter
-                      
-                      sequence
-                      (
-                        Array.set
-                        (
-                         arg
-                         n
-                        )
-                        								   
-                      ;
-                        self
-                      )
-                          							
-                        												 
-                     								
-                    method add
-                      brackets4 
-                      (
-                          acc
-                          equals
-                          (
-                              self
-                          )
-                          <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"+.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                          
-                      )
-                        												 
-                     								
-                    method sub
-                      brackets4 
-                      (
-                          acc
-                          equals
-                          (
-                              self
-                          )
-                          <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"-.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                          
-                      )
-                        												 
-                     								
-                    method equals
-                      equals
-                      (
-                          self
-                      )
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       ()
+     									    	
+       class_structure
+       (
+           								
+           arg
+           0.
+             											 
+           								
+           acc
+           0.
+             											 
+           								
+           equals
+           (
+            
+            case
+            (
+              s
+              
+              send arg
+              (
+               s
+              )
+                  						  
+            ) 
+            	        											 
+            	        											 
+           )
+              							   
+             											 
+           								
+          method arg
+          	  arg
+             	
+              											  
+           								
+          method acc
+          	  acc
+             	
+              											  
+           								
+          method enter
+          (
+            case
+          	(
+          		n
+            	
+            	sequence
+            	(
+            	  Array.set
+            	  (
+            	   arg
+            	   n
+            	  )
+            	  								   
+            	;
+            	  self
+            	)
+            	    							
+          	)
+          )
+          											 
+           								
+          method add
+          	  brackets4 
+          	  (
+          	      acc
+          	      equals
+          	      (
+          	          self
+          	      )
+          	      <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"+.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+          	      
+          	  )
+             	
+              											  
+           								
+          method sub
+          	  brackets4 
+          	  (
+          	      acc
+          	      equals
+          	      (
+          	          self
+          	      )
+          	      <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"-.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+          	      
+          	  )
+             	
+              											  
+           								
+          method equals
+          	  equals
+          	  (
+          	      self
+          	  )
+             	
+              											  
+           								
+       )
+           								
+     									    	
        								   
    )
        								   
@@ -3107,152 +3320,175 @@
        								   
      params = 
      (
-         	
-     arg
-         	
-     acc
-         	
      )
      class name = calculator
      class expr = 
-                 class_structure
-                 (
-                     								
-                     arg
-                     arg
-                       											 
-                     								
-                     acc
-                     acc
-                       											 
-                     								
-                    method enter
-                      new calculator
-                      (
-                          n
-                          acc
-                      )
-                        												 
-                     								
-                    method add
-                      new calculator_add
-                      (
-                          arg
-                          send equals
-                          (
-                           self
-                          )
-                              						  
-                      )
-                        												 
-                     								
-                    method sub
-                      new calculator_sub
-                      (
-                          arg
-                          send equals
-                          (
-                           self
-                          )
-                              						  
-                      )
-                        												 
-                     								
-                    method equals
-                      arg
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       arg
+     									    	
+       acc
+     									    	
+       class_structure
+       (
+           								
+           arg
+           arg
+             											 
+           								
+           acc
+           acc
+             											 
+           								
+          method enter
+          (
+            case
+          	(
+          		n
+            	new calculator
+            	(
+            	    n
+            	    acc
+            	)
+          	)
+          )
+          											 
+           								
+          method add
+          	  new calculator_add
+          	  (
+          	      arg
+          	      send equals
+          	      (
+          	       self
+          	      )
+          	          						  
+          	  )
+             	
+              											  
+           								
+          method sub
+          	  new calculator_sub
+          	  (
+          	      arg
+          	      send equals
+          	      (
+          	       self
+          	      )
+          	          						  
+          	  )
+             	
+              											  
+           								
+          method equals
+          	  arg
+             	
+              											  
+           								
+       )
+           								
+     									    	
        								   
      params = 
      (
-         	
-     arg
-         	
-     acc
-         	
      )
      class name = calculator_add
      class expr = 
-                 class_structure
-                 (
-                     								
-                    inherit
-                     constr classArgs 
-                            (
-                                calculator
-                                arg
-                                acc
-                            )
-                     (
-                     )
-                    										    
-                     								
-                    method enter
-                      new calculator_add
-                      (
-                          n
-                          acc
-                      )
-                        												 
-                     								
-                    method equals
-                      +.
-                      (
-                          acc
-                          arg
-                      )
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       arg
+     									    	
+       acc
+     									    	
+       class_structure
+       (
+           								
+          inherit
+           constr classArgs 
+                  (
+                      calculator
+                      arg
+                      acc
+                  )
+           (
+           )
+          										    
+           								
+          method enter
+          (
+            case
+          	(
+          		n
+            	new calculator_add
+            	(
+            	    n
+            	    acc
+            	)
+          	)
+          )
+          											 
+           								
+          method equals
+          	  +.
+          	  (
+          	      acc
+          	      arg
+          	  )
+             	
+              											  
+           								
+       )
+           								
+     									    	
        								   
      params = 
      (
-         	
-     arg
-         	
-     acc
-         	
      )
      class name = calculator_sub
      class expr = 
-                 class_structure
-                 (
-                     								
-                    inherit
-                     constr classArgs 
-                            (
-                                calculator
-                                arg
-                                acc
-                            )
-                     (
-                     )
-                    										    
-                     								
-                    method enter
-                      new calculator_sub
-                      (
-                          n
-                          acc
-                      )
-                        												 
-                     								
-                    method equals
-                      -.
-                      (
-                          acc
-                          arg
-                      )
-                        												 
-                     								
-                 )
-                     								
-         	
+     									    	
+       arg
+     									    	
+       acc
+     									    	
+       class_structure
+       (
+           								
+          inherit
+           constr classArgs 
+                  (
+                      calculator
+                      arg
+                      acc
+                  )
+           (
+           )
+          										    
+           								
+          method enter
+          (
+            case
+          	(
+          		n
+            	new calculator_sub
+            	(
+            	    n
+            	    acc
+            	)
+          	)
+          )
+          											 
+           								
+          method equals
+          	  -.
+          	  (
+          	      acc
+          	      arg
+          	  )
+             	
+              											  
+           								
+       )
+           								
+     									    	
        								   
    )
        								   

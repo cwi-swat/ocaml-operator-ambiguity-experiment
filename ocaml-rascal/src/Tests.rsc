@@ -138,6 +138,15 @@ str printAST(value v) {
                                  <}>
                                  '  <printAST(exp)>
                                  ')";
+                                 
+   case "toplevels2"(l, def) : return "
+    							 '(
+    							  <for (e <- l) {>
+                                 '  <printAST(e)>
+                                 <}>
+                                 '  <printAST(def)>
+                                 ')";
+	                                 
 
    case "toplevels1"(l, def) : return "
     							 '(
@@ -333,6 +342,7 @@ str printAST(value v) {
     								' <printAST(e)>
     								')";	
     
+    // "let" "module" ModuleName "="  ModuleExpr "in"  Expr 
     case "letModule"(name, moduleExpr, e): return "let module <name>
     											  '  (
     											  '		<printAST(moduleExpr)>
@@ -733,10 +743,7 @@ str printAST(value v) {
    							   ')
    							   ";
    							   
-   case "fun"(x) : return "(
-   						  ' <printAST(x)>
-   						  ')
-   						  ";							   
+   case "fun"(x) : return printAST(x);							   
                          
                          
     case "match"(e, patternMatching) : 
@@ -772,29 +779,44 @@ str printAST(value v) {
 													   ;                   											 
 	        											 	        											 
 	case "multipleMatching"([], whenExpr, e) : return "
-													 '<printAST("when"(whenExpr))>
-													 '<printAST(e)>
-													 ";
-													 
-	case "multipleMatching"([p], whenExpr, e) : return "
-													 'case
 													 '(
-													 '<printAST(p)>
 													 '<printAST("when"(whenExpr))>
 													 '<printAST(e)>
 													 ')
-													 ";        											 
-													         											 
+													 ";
+													 
+	case "multipleMatching"([p], whenExpr, e) : return "
+													 '(
+													 '  case
+													 '  (
+													 '   <printAST(p)>
+													 '   <printAST("when"(whenExpr))>
+													 '   <printAST(e)>
+													 '  )
+													 ')
+													 ";     
+													 
 	        											 
-	case "multipleMatching"([p1, *rest], whenExp, e) : return "
-													'case
-													'(
-													'  <printAST(p1)>
-													'  (
-													'  <printAST("multipleMatching"(rest, whenExp, e))>
-													'  )
-													')													
-													";        											 
+	case "multipleMatching"(l, whenExp, e) : {
+				  	notP = getNonPatterns(l);
+		            rest = l - notP;		
+					return "
+							<for (x <- notP) {>
+		        	   		'  <printAST(x)>
+		        	   		<}>
+							<if(size(rest) > 1) {>
+							'(
+							'case
+							'  (
+							'    <printAST(rest)>
+							'    <printAST("multipleMatching"(rest, whenExp, e))>
+							'  )
+							')													
+							<} else {>
+							'	<printAST("multipleMatching"(rest, whenExp, e))>
+							<}>		        	   		
+							";
+		}								 
 	        											 
 	        											 
     case "constant"(x) : return printAST(x);
@@ -1530,6 +1552,7 @@ str printAST(value v) {
     								<}>
     								')
     								";
+    								
     								
     // "virtual"? ("[" TypeParameters "]")? ClassName Parameter* (":" ClassType)? "=" ClassExpr
     case "classBinding"(_, [], className, params, t, classExpr) : return

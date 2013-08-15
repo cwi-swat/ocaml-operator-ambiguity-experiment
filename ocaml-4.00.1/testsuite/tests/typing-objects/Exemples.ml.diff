@@ -1,833 +1,361 @@
-6d5
-<      x_init
-9a9,11
->           fun
->           label=""
->                     x_init
-12c14
-<                      x
+21,23c21
+<             	Array.set
+<             	(
+<             	 x
 ---
->                 Pcf_val "x" Mutable Fresh ([3,29+2]..[3,29+24])
-17d18
-<                       Array.set
-19c20,23
-<                        x
----
->                     case
->                     (
->                       d
 >                       Pexp_setinstvar "x"
-27a32
->   )
-83a89,93
->           )
->       class name = color_point
->       class expr =
->           fun
->           label=""
-84a95,96
->             fun
->             label=""
-89,91d100
-<      )
-<      class name = color_point
-<      class expr = 
-94,95c103,105
-<                     inherit
-<                      constr classArgs 
+33d30
+<    )
+101c98,99
+<            constr classArgs 
 ---
->                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr point
-97,98d106
-<                                 point
-<                                 x
-100a109
+103,104d100
+<                       point
+<                       x
+106a103
 >                           x
-102c111
-<                      c
----
->                                       Pcf_val "c" Immutable Fresh ([20,275+2]..[20,275+11])
-135d143
+141d137
 <       brackets2 
-137a146
+143a140
 >               :
-183d191
-<      x_init
-186a195,197
->           fun
->           label=""
->                     x_init
-189c200
-<                      x
+204,206c201
+<             	Array.set
+<             	(
+<             	 x
 ---
->                 Pcf_val "x" Mutable Fresh ([35,495+2]..[35,495+24])
-194d204
-<                       Array.set
-196c206,207
-<                        x
----
->                     case
->                     (
-197a209,211
 >                       Pexp_setinstvar "x"
->                       y
->                     )
-204a219,223
->           )
->       class name = ref
->       class expr =
->           fun
->           label=""
-209,211d227
-<      )
-<      class name = ref
-<      class expr = 
-214c230
-<                      x
+212d206
+<    )
+235,237c229
+<             	Array.set
+<             	(
+<             	 x
 ---
->                 Pcf_val "x" Mutable Fresh ([41,600+2]..[41,600+24])
-219d234
-<                       Array.set
-221c236,239
-<                        x
----
->                     case
->                     (
->                       y
 >                       Pexp_setinstvar "x"
-225a244
->   )
-230c249
-<      x_init
+243d234
+<    )
+268,270c259
+<             	Array.set
+<             	(
+<             	 x
 ---
->             "a"
-233a253,255
->           fun
->           label=""
->                     x_init
-236c258
-<                      x
----
->                 Pcf_val "x" Mutable Fresh ([47,704+2]..[47,704+31])
-245d266
-<                       Array.set
-247c268,271
-<                        x
----
->                     case
->                     (
->                       y
 >                       Pexp_setinstvar "x"
-251a276
->   )
-282,283c307
-<      c
-<      a
+276d264
+<    )
+324,326c312
+<             	Array.set
+<             	(
+<             	 center
 ---
->             "a"
-286a311,314
->           fun
->           label=""
->                     c
->             a
-289c317
-<                      center
----
->                 Pcf_val "center" Mutable Fresh ([55,861+2]..[55,861+24])
-294d321
-<                       Array.set
-296c323,326
-<                        center
----
->                     case
->                     (
->                       c
 >                       Pexp_setinstvar "center"
-298a329
->                   )
-320,321c351
-<      c
-<      a
----
->             "a"
-324a355,358
->           fun
->           label=""
->                     c
->             a
-327,328c361
-<                     classConstraint 
-<                     (
----
->                 Pcf_constr ([62,1034+2]..[62,1034+24])
-330c363,364
-<                         point
----
->                     Ptyp_class point
->                     (
-332c366,368
-<                      center
+330d315
+<           )
+361,363d345
+<           (
+<           	typexprHash1 
+<           	(
+365c347
+<           	)
 ---
 >                     (
->                     )
->                 Pcf_val "center" Mutable Fresh ([63,1059+2]..[63,1059+24])
-337d372
-<                       Array.set
-339c374,377
-<                        center
+376,378c358
+<             	Array.set
+<             	(
+<             	 center
 ---
->                     case
->                     (
->                       c
 >                       Pexp_setinstvar "center"
-341a380
->                   )
-370c409
-<      c
+382d361
+<           )
+419,421d397
+<           (
+<           	typexprHash1 
+<           	(
+423c399
+<           	)
 ---
->             "a"
-373a413,415
->           fun
->           label=""
->                     c
-376,377c418
-<                     classConstraint 
-<                     (
----
->                 Pcf_constr ([72,1262+2]..[72,1262+30])
-379c420,421
-<                         color_point
----
->                     Ptyp_class color_point
 >                     (
-381,382d422
-<                     inherit
-<                      constr classArgs 
-384,385d423
-<                                 <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"circle")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-<                                 c
-386a425,427
->                 Pcf_inher Fresh
+426c402,403
+<            constr classArgs 
+---
 >                     Pcl_apply
 >                       constr circle
-387a429,432
->                           a
->                       )
->                     (
->                         c
-412d456
-<   brackets2 
-414a459
->   :
-422d466
-<   brackets2 
-424a469
->   :
-436d480
-<    brackets3 
-438a483
->       :
-458d502
-<      y
-461a506,508
->           fun
->           label=""
->                     y
-464,465c511,513
-<                     inherit
-<                      constr classArgs 
+428,429c405
+<                       <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"circle")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+<                       c
 ---
->                 Pcf_inher Fresh
+>                           a
+431a408
+>                         c
+456d432
+<   brackets2 
+458a435
+>   :
+466d442
+<   brackets2 
+468a445
+>   :
+509c486,487
+<            constr classArgs 
+---
 >                     Pcl_apply
 >                       constr point
-467,468d514
-<                                 point
-<                                 y
-470a517
+511,512d488
+<                       point
+<                       y
+514a491
 >                         y
-498,499d544
-<      y
-<      c
-502a548,553
->           fun
->           label=""
->                     y
->             fun
->             label=""
->                         c
-505,506c556,560
-<                     inherit
-<                      constr classArgs 
+550c527,528
+<            constr classArgs 
 ---
->                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr color_point
->                         (
->                         )
-508d561
-<                                 color_point
-511a565,567
->                                       Pcf_inher Fresh
+552,554d529
+<                       color_point
+<                       y
+<                       c
+556a532,533
+>                           y
+>                           c
+559c536,537
+<            constr classArgs 
+---
 >                       Pcl_apply
 >                         constr printable_point
-514,515d569
-<                     inherit
-<                      constr classArgs 
-517d570
-<                                 printable_point
-520,521c573
-<                      (
-<                      )
+561,562d538
+<                       printable_point
+<                       y
+564a541
+>                           y
+640c617
+<             	brackets4 
 ---
->                       "super"
-581d632
-<      y
-584a636,638
->           fun
->           label=""
->                     y
-587c641
-<                      x
----
->                 Pcf_val "x" Immutable Fresh ([107,2039+2]..[107,2039+11])
-592d645
-<                       brackets4 
-594c647,652
-<                           x
----
->                     case
->                     (
->                       d
 >                       Pexp_override
->                       (
->                         <override> "x"
-602a661,662
->                                 )
->   )
-633d692
-<    brackets2 
-635a695
->       :
-646c706
-<      ()
+642c619
+<             	    x
 ---
->             "a"
-649a710,712
->           fun
->           label=""
->                     ()
-652c715
-<                     method null
+>                         <override> "x"
+683d659
+<    brackets2 
+685a662
+>       :
+703c680
+<           method null
 ---
 >                 Pcf_virt "null" Public ([123,2334+2]..[123,2334+28])
-657c720
-<                     method hd
+708c685
+<           method hd
 ---
 >                 Pcf_virt "hd" Public ([124,2363+2]..[124,2363+24])
-660c723
-<                     method tl
+711c688
+<           method tl
 ---
 >                 Pcf_virt "tl" Public ([125,2388+2]..[125,2388+28])
-667a731,734
->                     case
->                     (
->                       f
->                       (
-713a781,782
->                     )
->                   )
-714a784,792
->                   (
->                     case
->                     (
->                       f
->                         arrow
->                           a
->                            unit
->                           (
->                           )
-752a831,832
->                     )
->                   )
-753a834,842
->                   (
->                     case
->                     (
->                       f
->                         arrow
->                           a
->                            unit
->                           (
->                           )
-802a892,893
->                   )
->                                 )
-805c896
-<      ()
+892c869,870
+<            constr classArgs 
 ---
->             "a"
-808a900,902
->           fun
->           label=""
->                     ()
-811,812c905,907
-<                     inherit
-<                      constr classArgs 
----
->                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr lst
-814,815c909
-<                                 <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-<                                 ()
+894,895c872
+<                       <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+<                       ()
 ---
 >                           a
-817a912
+897a875
 >                         ()
-834,835c929
-<      h
-<      t
+923c901,902
+<            constr classArgs 
 ---
->             "a"
-838a933,938
->           fun
->           label=""
->                     h
->             fun
->             label=""
->                         t
-841,842c941,943
-<                     inherit
-<                      constr classArgs 
----
->                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr lst
-844,845c945
-<                                 <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-<                                 ()
+925,926c904
+<                       <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+<                       ()
 ---
 >                             a
-847a948
+928a907
 >                           ()
-848a950
->                                       Pcf_val "h" Immutable Fresh ([150,2997+2]..[150,2997+11])
-850,851c952
-<                      h
-<                      t
----
->                   Pcf_val "t" Immutable Fresh ([150,2997+12]..[150,2997+21])
-1009d1109
-<      ()
-1012a1113,1115
->           fun
->           label=""
->                     ()
-1015c1118
-<                     method leq
+1096c1075
+<           method leq
 ---
 >                 Pcf_virt "leq" Public ([173,3539+2]..[173,3539+33])
-1027a1131,1135
->           )
->       class name = int_comparable
->       class expr =
->           fun
->           label=""
-1032,1034d1139
-<      )
-<      class name = int_comparable
-<      class expr = 
-1037,1038c1142,1144
-<                     inherit
-<                      constr classArgs 
+1119c1098,1099
+<            constr classArgs 
 ---
->                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr comparable
-1040,1041d1145
-<                                 comparable
-<                                 ()
-1043a1148
+1121,1122d1100
+<                       comparable
+<                       ()
+1124a1103
 >                         ()
-1045c1150
-<                      x
+1158c1137,1138
+<            constr classArgs 
 ---
->                                   Pcf_val "x" Immutable Fresh ([178,3646+2]..[178,3646+11])
-1049a1155,1158
->                   (
->                     case
->                     (
->                       p
-1059a1169,1170
->                                 )
->   )
-1064d1174
-<      xi
-1067a1178,1180
->           fun
->           label=""
->                     xi
-1070,1071c1183,1185
-<                     inherit
-<                      constr classArgs 
----
->                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr int_comparable
-1073,1074d1186
-<                                 int_comparable
-<                                 xi
-1076a1189
+1160,1161d1139
+<                       int_comparable
+<                       xi
+1163a1142
 >                         xi
-1078c1191
-<                      x'
+1172,1174c1151
+<             	Array.set
+<             	(
+<             	 x'
 ---
->                                   Pcf_val "x'" Mutable Fresh ([185,3768+2]..[185,3768+21])
-1081d1193
-<                       Array.set
-1083c1195,1198
-<                        x'
----
->                     case
->                     (
->                       y
 >                       Pexp_setinstvar "x'"
-1087a1203
->   )
-1092c1208
-<      ()
----
->             "a"
-1095a1212,1214
->           fun
->           label=""
->                     ()
-1098,1099c1217
-<                     classConstraint 
-<                     (
----
->                 Pcf_constr ([190,3859+2]..[190,3859+29])
-1101c1219,1220
-<                         comparable
----
->                     Ptyp_class comparable
->                     (
-1103c1222,1224
-<                      l
+1180d1156
+<    )
+1193,1195d1168
+<           (
+<           	typexprHash1 
+<           	(
+1197c1170
+<           	)
 ---
 >                     (
->                     )
->                 Pcf_val "l" Mutable Fresh ([191,3889+2]..[191,3889+32])
-1112a1234,1237
->                   (
->                     case
->                     (
->                       x
-1129,1130c1254
-<                              alias l'
-<                              (
----
->                                 Ppat_alias "l'"
-1136d1259
-<                              )
-1173,1175c1296
-<                         Array.set
-<                         (
-<                          l
+1273,1275c1246
+<             	  Array.set
+<             	  (
+<             	   l
 ---
 >                         Pexp_setinstvar "l"
-1181a1303
->                   )
-1225d1346
+1283d1253
+<           )
+1327d1296
 <       brackets2 
-1227a1349
+1329a1299
 >       :
-1246a1369,1373
->           )
->       class name = int_comparable3
->       class expr =
->           fun
->           label=""
-1251,1253d1377
-<      )
-<      class name = int_comparable3
-<      class expr = 
-1256c1380
-<                      x
+1385,1387c1355
+<             	Array.set
+<             	(
+<             	 x
 ---
->                 Pcf_val "x" Mutable Fresh ([211,4379+2]..[211,4379+19])
-1258a1383,1389
->                   (
->                     case
->                     (
->                       y
->                          int_comparable
->                         (
->                         )
-1266a1398,1399
->                     )
->                   )
-1270d1402
-<                       Array.set
-1272c1404,1407
-<                        x
----
->                     case
->                     (
->                       y
 >                       Pexp_setinstvar "x"
-1276a1412
->   )
-1290d1425
+1393d1360
+<    )
+1407d1373
 <       brackets2 
-1292a1428
+1409a1376
 >       :
-1317c1453,1457
-<      	     comparable
----
->                 Ptyp_class comparable
+1434,1435d1400
+<      	     typexprHash1 
+<      	     (
+1436a1402
 >                 (
->                 )
->                 (
->                 )
-1390d1529
+1510d1475
 <       brackets2 
-1395a1535
+1515a1481
 >               :
-1459c1599,1603
-<       		 comparable
----
->             Ptyp_class comparable
+1579,1580d1544
+<       		 typexprHash1 
+<       		 (
+1581a1546
 >             (
->             )
->             (
->             )
-1522,1523c1666
-<      x
-<      a
+1673,1675c1638
+<             	Array.set
+<             	(
+<             	 x
 ---
->             "a"
-1526a1670,1673
->           fun
->           label=""
->                     x
->             a
-1528a1676
->                 Pcf_val "x" Mutable Fresh ([242,5288+2]..[242,5288+19])
-1530,1531c1678
-<                      x
-<                      next
----
->                 Pcf_val "next" Mutable Fresh ([243,5308+2]..[243,5308+39])
-1545d1691
-<                       Array.set
-1547c1693,1696
-<                        x
----
->                     case
->                     (
->                       y
 >                       Pexp_setinstvar "x"
-1549a1699
->                   )
-1551d1700
-<                       Array.set
-1553c1702,1703
-<                        next
+1679d1641
+<           )
+1685,1687c1647
+<             	Array.set
+<             	(
+<             	 next
 ---
->                     case
->                     (
-1554a1705,1707
 >                       Pexp_setinstvar "next"
->                       l
->                     )
-1556a1710,1713
->                   (
->                     case
->                     (
->                       l
-1585a1743,1744
->                                 )
->   )
-1590c1749
-<      x
+1691d1650
+<           )
+1740c1699,1700
+<            constr classArgs 
 ---
->             "a"
-1593a1753,1755
->           fun
->           label=""
->                     x
-1596,1597c1758,1760
-<                     inherit
-<                      constr classArgs 
----
->                 Pcf_inher Fresh
 >                     Pcl_apply
 >                       constr link
-1599,1600c1762
-<                                 <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"link")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-<                                 x
+1742,1743c1702
+<                       <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"link")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+<                       x
 ---
 >                           a
-1602a1765
+1745a1705
 >                         x
-1604c1767
-<                      prev
+1758,1760c1718
+<             	  Array.set
+<             	  (
+<             	   next
 ---
->                                   Pcf_val "prev" Mutable Fresh ([258,5631+2]..[258,5631+25])
-1609d1771
-<                       sequence
-1611c1773
-<                         Array.set
----
->                     case
-1613d1774
-<                          next
-1615c1776,1779
-<                         )
----
->                       sequence
->                       (
 >                         Pexp_setinstvar "next"
->                         l
-1639a1804,1805
->                     )
->                   )
-1641d1806
-<                       Array.set
-1643c1808,1811
-<                        prev
+1762d1719
+<             	  )
+1794,1796c1751
+<             	Array.set
+<             	(
+<             	 prev
 ---
->                     case
->                     (
->                       l
 >                       Pexp_setinstvar "prev"
-1647a1816
->   )
-1661c1830,1835
-<       		  		    <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"link")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
----
->                     Ptyp_class link
->                     (
->                         a
->                     )
->                     (
->                     )
-1708d1881
-<      ()
-1711a1885,1887
->           fun
->           label=""
->                     ()
-1714c1890
-<                      arg
----
->                 Pcf_val "arg" Mutable Fresh ([275,6074+2]..[275,6074+22])
-1716c1892
-<                      acc
----
->                 Pcf_val "acc" Mutable Fresh ([276,6097+2]..[276,6097+22])
-1718c1894
-<                      equals
----
->                 Pcf_val "equals" Mutable Fresh ([277,6120+2]..[277,6120+42])
-1734d1909
-<                       sequence
-1736c1911,1914
-<                         Array.set
----
->                     case
->                     (
->                       n
->                       sequence
-1738c1916
-<                          arg
+1802d1756
+<    )
+1898,1900c1852
+<             	  Array.set
+<             	  (
+<             	   arg
 ---
 >                         Pexp_setinstvar "arg"
-1740d1917
-<                         )
-1743a1921,1922
->                     )
->                   )
-1747,1749c1926
-<                         Array.set
-<                         (
-<                          acc
+1902d1853
+<             	  )
+1911,1913c1862
+<           	    Array.set
+<           	    (
+<           	     acc
 ---
 >                     Pexp_setinstvar "acc"
-1754d1930
-<                         )
-1758,1760c1934
-<                           Array.set
-<                           (
-<                            equals
+1918d1866
+<           	    )
+1922,1924c1870
+<           	      Array.set
+<           	      (
+<           	       equals
 ---
 >                       Pexp_setinstvar "equals"
-1778d1951
-<                           )
-1786,1788c1959
-<                         Array.set
-<                         (
-<                          acc
+1942d1887
+<           	      )
+1950,1952c1895
+<           	    Array.set
+<           	    (
+<           	     acc
 ---
 >                     Pexp_setinstvar "acc"
-1793d1963
-<                         )
-1797,1799c1967
-<                           Array.set
-<                           (
-<                            equals
+1957d1899
+<           	    )
+1961,1963c1903
+<           	      Array.set
+<           	      (
+<           	       equals
 ---
 >                       Pexp_setinstvar "equals"
-1817d1984
-<                           )
-1887d2053
-<      ()
-1890a2057,2059
->           fun
->           label=""
->                     ()
-1893c2062
-<                      arg
+1981d1920
+<           	      )
+2083,2085c2022
+<             	  Array.set
+<             	  (
+<             	   arg
 ---
->                 Pcf_val "arg" Mutable Fresh ([297,6641+2]..[297,6641+22])
-1895c2064
-<                      acc
----
->                 Pcf_val "acc" Mutable Fresh ([298,6664+2]..[298,6664+22])
-1897c2066
-<                      equals
----
->                 Pcf_val "equals" Mutable Fresh ([299,6687+2]..[299,6687+42])
-1913d2081
-<                       sequence
-1915c2083
-<                         Array.set
----
->                     case
-1917d2084
-<                          arg
-1919c2086,2089
-<                         )
----
->                       sequence
->                       (
 >                         Pexp_setinstvar "arg"
->                         n
-1922a2093,2094
->                     )
->                   )
-1924c2096
-<                       brackets4 
+2087d2023
+<             	  )
+2094c2030
+<           	  brackets4 
 ---
 >                   Pexp_override
-1926c2098
-<                           acc
+2096c2032
+<           	      acc
 ---
 >                     <override> "acc"
-1931c2103,2120
-<                           <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"+.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+2101c2037,2054
+<           	      <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"+.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
 ---
 >                     <override> "equals"
 >                       (
@@ -847,16 +375,16 @@
 >                           )
 >                         )
 >                       )
-1934c2123
-<                       brackets4 
+2104c2057
+<           	  brackets4 
 ---
 >                   Pexp_override
-1936c2125
-<                           acc
+2106c2059
+<           	      acc
 ---
 >                     <override> "acc"
-1941c2130,2147
-<                           <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"-.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+2111c2064,2081
+<           	      <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"-.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
 ---
 >                     <override> "equals"
 >                       (
@@ -876,92 +404,27 @@
 >                           )
 >                         )
 >                       )
-2008,2009d2213
-<      arg
-<      acc
-2012a2217,2222
->           fun
->           label=""
->                     arg
->             fun
->             label=""
->                         acc
-2014a2225
->                   Pcf_val "arg" Immutable Fresh ([313,7181+2]..[313,7181+15])
-2016,2017c2227
-<                      arg
-<                      acc
+2232c2202,2203
+<            constr classArgs 
 ---
->                   Pcf_val "acc" Immutable Fresh ([314,7197+2]..[314,7197+15])
-2019a2230,2233
->                     (
->                       case
->                       (
->                         n
-2024a2239,2240
->                       )
->                     )
-2048,2049d2263
-<      arg
-<      acc
-2052a2267,2272
->           fun
->           label=""
->                     arg
->             fun
->             label=""
->                         acc
-2055,2056c2275,2277
-<                     inherit
-<                      constr classArgs 
----
->                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr calculator
-2058,2060d2278
-<                                 calculator
-<                                 arg
-<                                 acc
-2062a2281,2282
+2234,2236d2204
+<                       calculator
+<                       arg
+<                       acc
+2238a2207,2208
 >                           arg
 >                           acc
-2064a2285,2288
->                     (
->                       case
->                       (
->                         n
-2069a2294,2295
->                       )
->                     )
-2079,2080d2304
-<      arg
-<      acc
-2083a2308,2313
->           fun
->           label=""
->                     arg
->             fun
->             label=""
->                         acc
-2086,2087c2316,2318
-<                     inherit
-<                      constr classArgs 
+2269c2239,2240
+<            constr classArgs 
 ---
->                   Pcf_inher Fresh
 >                       Pcl_apply
 >                         constr calculator
-2089,2091d2319
-<                                 calculator
-<                                 arg
-<                                 acc
-2093a2322,2323
+2271,2273d2241
+<                       calculator
+<                       arg
+<                       acc
+2275a2244,2245
 >                           arg
 >                           acc
-2095a2326,2329
->                     (
->                       case
->                       (
->                         n
-2100a2335,2336
->                       )
->                     )

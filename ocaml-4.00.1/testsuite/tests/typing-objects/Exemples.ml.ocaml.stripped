@@ -6,12 +6,10 @@
           )
       class name = point
       class expr =
-          fun
-          label=""
                     x_init
             class_structure
               (
-                Pcf_val "x" Mutable Fresh ([3,29+2]..[3,29+24])
+                x
                   x_init
                 method get_x
                   x
@@ -89,18 +87,14 @@
           )
       class name = color_point
       class expr =
-          fun
-          label=""
                     x
-            fun
-            label=""
                         c
                string
               (
               )
               class_structure
                 (
-                  Pcf_inher Fresh
+                  inherit
                       Pcl_apply
                         constr point
                         (
@@ -108,7 +102,7 @@
                       (
                           x
                       )
-                                      Pcf_val "c" Immutable Fresh ([20,275+2]..[20,275+11])
+                  c
                     c
                   method color
                     c
@@ -192,12 +186,10 @@
           )
       class name = ref
       class expr =
-          fun
-          label=""
                     x_init
             class_structure
               (
-                Pcf_val "x" Mutable Fresh ([35,495+2]..[35,495+24])
+                x
                   x_init
                 method get
                   x
@@ -219,15 +211,13 @@
           )
       class name = ref
       class expr =
-          fun
-          label=""
                     x_init
              int
             (
             )
             class_structure
               (
-                Pcf_val "x" Mutable Fresh ([41,600+2]..[41,600+24])
+                x
                   x_init
                 method get
                   x
@@ -250,12 +240,10 @@
           )
       class name = ref
       class expr =
-          fun
-          label=""
                     x_init
             class_structure
               (
-                Pcf_val "x" Mutable Fresh ([47,704+2]..[47,704+31])
+                x
                   (
                   x_init
                   :
@@ -308,13 +296,11 @@
           )
       class name = circle
       class expr =
-          fun
-          label=""
                     c
             a
             class_structure
               (
-                Pcf_val "center" Mutable Fresh ([55,861+2]..[55,861+24])
+                center
                   c
                 method center
                   center
@@ -352,20 +338,15 @@
           )
       class name = circle
       class expr =
-          fun
-          label=""
                     c
             a
             class_structure
               (
-                Pcf_constr ([62,1034+2]..[62,1034+24])
                     a
-                    Ptyp_class point
+                    point
                     (
                     )
-                    (
-                    )
-                Pcf_val "center" Mutable Fresh ([63,1059+2]..[63,1059+24])
+                center
                   c
                 method center
                   center
@@ -410,19 +391,14 @@
           )
       class name = color_circle
       class expr =
-          fun
-          label=""
                     c
             class_structure
               (
-                Pcf_constr ([72,1262+2]..[72,1262+30])
                     a
-                    Ptyp_class color_point
+                    color_point
                     (
                     )
-                    (
-                    )
-                Pcf_inher Fresh
+                inherit
                     Pcl_apply
                       constr circle
                       (
@@ -431,7 +407,7 @@
                     (
                         c
                     )
-                                  method color
+                method color
                   send color
                   (
                     center
@@ -503,12 +479,10 @@
           )
       class name = printable_point
       class expr =
-          fun
-          label=""
                     y
             class_structure
               (
-                Pcf_inher Fresh
+                inherit
                     Pcl_apply
                       constr point
                       (
@@ -516,7 +490,7 @@
                     (
                         y
                     )
-                                  method print
+                method print
                   print_int
                   (
                       send get_x
@@ -545,15 +519,11 @@
           )
       class name = printable_color_point
       class expr =
-          fun
-          label=""
                     y
-            fun
-            label=""
                         c
               class_structure
                 (
-                  Pcf_inher Fresh
+                  inherit
                       Pcl_apply
                         constr color_point
                         (
@@ -562,7 +532,7 @@
                           y
                           c
                       )
-                                      Pcf_inher Fresh
+                  inherit
                       Pcl_apply
                         constr printable_point
                         (
@@ -570,7 +540,6 @@
                       (
                           y
                       )
-                      "super"
                   method print
                     sequence
                     (
@@ -633,12 +602,10 @@
           )
       class name = functional_point
       class expr =
-          fun
-          label=""
                     y
             class_structure
               (
-                Pcf_val "x" Immutable Fresh ([107,2039+2]..[107,2039+11])
+                x
                   y
                 method get_x
                   x
@@ -707,8 +674,6 @@
           )
       class name = lst
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -897,12 +862,10 @@
           )
       class name = nil
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
-                Pcf_inher Fresh
+                inherit
                     Pcl_apply
                       constr lst
                       (
@@ -911,7 +874,7 @@
                     (
                         ()
                                             )
-                                  method null
+                method null
                   true
                                                     method hd
                   failwith
@@ -930,15 +893,11 @@
           )
       class name = cons
       class expr =
-          fun
-          label=""
                     h
-            fun
-            label=""
                         t
               class_structure
                 (
-                  Pcf_inher Fresh
+                  inherit
                       Pcl_apply
                         constr lst
                         (
@@ -947,9 +906,9 @@
                       (
                           ()
                                                 )
-                                      Pcf_val "h" Immutable Fresh ([150,2997+2]..[150,2997+11])
+                  h
                     h
-                  Pcf_val "t" Immutable Fresh ([150,2997+12]..[150,2997+21])
+                  t
                     t
                   method null
                     false
@@ -1110,8 +1069,6 @@
           )
       class name = comparable
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
@@ -1131,15 +1088,13 @@
           )
       class name = int_comparable
       class expr =
-          fun
-          label=""
                     x
              int
             (
             )
             class_structure
               (
-                Pcf_inher Fresh
+                inherit
                     Pcl_apply
                       constr comparable
                       (
@@ -1147,7 +1102,7 @@
                     (
                         ()
                                             )
-                                  Pcf_val "x" Immutable Fresh ([178,3646+2]..[178,3646+11])
+                x
                   x
                 method x
                   x
@@ -1175,12 +1130,10 @@
           )
       class name = int_comparable2
       class expr =
-          fun
-          label=""
                     xi
             class_structure
               (
-                Pcf_inher Fresh
+                inherit
                     Pcl_apply
                       constr int_comparable
                       (
@@ -1188,7 +1141,7 @@
                     (
                         xi
                     )
-                                  Pcf_val "x'" Mutable Fresh ([185,3768+2]..[185,3768+21])
+                x'
                   xi
                 method set_x
                   (
@@ -1209,19 +1162,14 @@
           )
       class name = sorted_list
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
-                Pcf_constr ([190,3859+2]..[190,3859+29])
                     a
-                    Ptyp_class comparable
+                    comparable
                     (
                     )
-                    (
-                    )
-                Pcf_val "l" Mutable Fresh ([191,3889+2]..[191,3889+32])
+                l
                   (
                   []
                                     :
@@ -1251,12 +1199,14 @@
                               )
                               case
                               (
-                                Ppat_alias "l'"
-                                ::
-                                  (
-                                    a
-                                    l
-                                  )
+                                alias l'
+                                (
+                                  ::
+                                    (
+                                      a
+                                      l
+                                    )
+                                )
                                 ifthenelse
                                 (
                                   if
@@ -1369,15 +1319,13 @@
           )
       class name = int_comparable3
       class expr =
-          fun
-          label=""
                     x
              int
             (
             )
             class_structure
               (
-                Pcf_val "x" Mutable Fresh ([211,4379+2]..[211,4379+19])
+                x
                   x
                 method leq
                   (
@@ -1450,9 +1398,7 @@
           l
              list
             (
-                Ptyp_class comparable
-                (
-                )
+                comparable
                 (
                 )
             )
@@ -1596,9 +1542,7 @@
         case
         (
           x
-            Ptyp_class comparable
-            (
-            )
+            comparable
             (
             )
           (
@@ -1667,15 +1611,13 @@
           )
       class name = link
       class expr =
-          fun
-          label=""
                     x
             a
             class_structure
               (
-                Pcf_val "x" Mutable Fresh ([242,5288+2]..[242,5288+19])
+                x
                   x
-                Pcf_val "next" Mutable Fresh ([243,5308+2]..[243,5308+39])
+                next
                   (
                   None
                                     :
@@ -1750,12 +1692,10 @@
           )
       class name = double_link
       class expr =
-          fun
-          label=""
                     x
             class_structure
               (
-                Pcf_inher Fresh
+                inherit
                     Pcl_apply
                       constr link
                       (
@@ -1764,7 +1704,7 @@
                     (
                         x
                     )
-                                  Pcf_val "prev" Mutable Fresh ([258,5631+2]..[258,5631+25])
+                prev
                   None
                                   method prev
                   prev
@@ -1827,11 +1767,9 @@
               l
                  option
                 (
-                    Ptyp_class link
+                    link
                     (
                         a
-                    )
-                    (
                     )
                 )
               (
@@ -1882,16 +1820,14 @@
           )
       class name = calculator
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
-                Pcf_val "arg" Mutable Fresh ([275,6074+2]..[275,6074+22])
+                arg
                   0.
-                Pcf_val "acc" Mutable Fresh ([276,6097+2]..[276,6097+22])
+                acc
                   0.
-                Pcf_val "equals" Mutable Fresh ([277,6120+2]..[277,6120+42])
+                equals
                   (
                     case
                     (
@@ -2054,16 +1990,14 @@
           )
       class name = calculator
       class expr =
-          fun
-          label=""
                     ()
                       class_structure
               (
-                Pcf_val "arg" Mutable Fresh ([297,6641+2]..[297,6641+22])
+                arg
                   0.
-                Pcf_val "acc" Mutable Fresh ([298,6664+2]..[298,6664+22])
+                acc
                   0.
-                Pcf_val "equals" Mutable Fresh ([299,6687+2]..[299,6687+42])
+                equals
                   (
                     case
                     (
@@ -2214,17 +2148,13 @@
           )
       class name = calculator
       class expr =
-          fun
-          label=""
                     arg
-            fun
-            label=""
                         acc
               class_structure
                 (
-                  Pcf_val "arg" Immutable Fresh ([313,7181+2]..[313,7181+15])
+                  arg
                     arg
-                  Pcf_val "acc" Immutable Fresh ([314,7197+2]..[314,7197+15])
+                  acc
                     acc
                   method enter
                     (
@@ -2264,15 +2194,11 @@
           )
       class name = calculator_add
       class expr =
-          fun
-          label=""
                     arg
-            fun
-            label=""
                         acc
               class_structure
                 (
-                  Pcf_inher Fresh
+                  inherit
                       Pcl_apply
                         constr calculator
                         (
@@ -2281,7 +2207,7 @@
                           arg
                           acc
                       )
-                                      method enter
+                  method enter
                     (
                       case
                       (
@@ -2305,15 +2231,11 @@
           )
       class name = calculator_sub
       class expr =
-          fun
-          label=""
                     arg
-            fun
-            label=""
                         acc
               class_structure
                 (
-                  Pcf_inher Fresh
+                  inherit
                       Pcl_apply
                         constr calculator
                         (
@@ -2322,7 +2244,7 @@
                           arg
                           acc
                       )
-                                      method enter
+                  method enter
                     (
                       case
                       (

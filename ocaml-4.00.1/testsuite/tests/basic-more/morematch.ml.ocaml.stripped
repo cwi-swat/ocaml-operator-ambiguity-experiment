@@ -139,7 +139,7 @@
         "un"
         f
         C
-                1
+        1
     )
   ;
     sequence
@@ -149,7 +149,7 @@
           "un"
           f
           D
-                    2
+          2
       )
     ;
       sequence
@@ -159,7 +159,7 @@
             "un"
             f
             F
-                        3
+            3
         )
       ;
         ()
@@ -917,7 +917,6 @@
       (
         case
         (
-          Ppat_record
           (
             a
               pat_or
@@ -936,7 +935,6 @@
         (
           pat_or
           (
-          Ppat_record
           (
             a
               ::
@@ -945,7 +943,6 @@
                                     _
                 )
           )
-          Ppat_record
           (
             b
               pat_or
@@ -972,7 +969,7 @@
                       b
             true
                     )
-                1
+        1
     )
   ;
     sequence
@@ -992,7 +989,7 @@
             b
               false
                         )
-                    1
+          1
       )
     ;
       sequence
@@ -1016,7 +1013,7 @@
               b
                 true
                             )
-                        2
+            2
         )
       ;
         sequence
@@ -1036,7 +1033,7 @@
                 b
                   false
                                 )
-                            2
+              2
           )
         ;
           ()
@@ -1199,7 +1196,7 @@
         "oubli"
         split_cases
         Nil
-                A
+        A
           Nil
               )
   ;
@@ -1605,7 +1602,7 @@
         "zob"
         f
         []
-                []
+        []
             )
   ;
     sequence
@@ -1750,7 +1747,7 @@
         "fin"
         f
         B
-                A
+        A
             )
   ;
     sequence
@@ -1886,7 +1883,7 @@
             "length"
             length
             Default
-                        0
+            0
         )
       ;
         sequence
@@ -1957,7 +1954,7 @@
             "length2"
             length2
             Default
-                        0
+            0
         )
       ;
         sequence
@@ -2038,7 +2035,7 @@
               "length3"
               length3
               Default
-                            false
+              false
                         )
         ;
           sequence
@@ -2116,7 +2113,7 @@
         "hevea"
         h
         A
-                1
+        1
     )
   ;
     sequence
@@ -2126,7 +2123,7 @@
           "hevea"
           h
           B
-                    2
+          2
       )
     ;
       sequence
@@ -2136,7 +2133,7 @@
             "hevea"
             h
             B
-                        2
+            2
         )
       ;
         ()
@@ -2548,7 +2545,6 @@
                           ls
                           alias _sw
                           (
-                            Ppat_record
                             (
                               sw_consts
                                 ::
@@ -2582,7 +2578,6 @@
                           ls
                           alias _sw
                           (
-                            Ppat_record
                             (
                               sw_consts
                                 []
@@ -3911,22 +3906,20 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "Variant" false
+                Variant
                   (
-                      Ptyp_variant closed=true
                       (
-                        Rtag "Some" false
+                        Some
                           (
                                string
                               (
                               )
                           )
-                        Rtag "None" true
+                        None
                           (
                           )
-                        Rtag "Foo" true
+                        Foo
                           (
                           )
                       )
@@ -3976,7 +3969,7 @@
         crash
         Variant
           None
-                  "none"
+        "none"
     )
   ;
     sequence
@@ -3999,7 +3992,7 @@
             crash
             Variant
               Foo
-                          "foo"
+            "foo"
         )
       ;
         ()
@@ -5360,14 +5353,12 @@
         (
           pat_or
           (
-          Ppat_record
           (
             x
               a
             z
               true
                         )
-          Ppat_record
           (
             y
               a
@@ -5394,7 +5385,7 @@
           z
             true
                     )
-                0
+        0
     )
   ;
     sequence
@@ -5412,7 +5403,7 @@
             z
               false
                         )
-                    0
+          0
       )
     ;
       ()
@@ -6480,13 +6471,11 @@
           pat_or
           (
           A
-            Ppat_record
             (
               lnb
                 i
             )
           B
-            Ppat_record
             (
               lnb
                 i
@@ -6503,10 +6492,8 @@
         case
         (
           A
-            Ppat_record
             (
               lassoc
-                Ppat_record
                 (
                   lnb
                     j
@@ -6604,9 +6591,8 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "TTuple" false
+                TTuple
                   (
                        list
                       (
@@ -6615,7 +6601,7 @@
                           )
                       )
                   )
-                Rtag "TConstr" false
+                TConstr
                   (
                        list
                       (
@@ -6624,13 +6610,13 @@
                           )
                       )
                   )
-                Rtag "TVar" false
+                TVar
                   (
                        string
                       (
                       )
                   )
-                Rtag "TVariant" false
+                TVariant
                   (
                        list
                       (
@@ -6639,13 +6625,13 @@
                           )
                       )
                   )
-                Rtag "TBlock" false
+                TBlock
                   (
                        int
                       (
                       )
                   )
-                Rtag "TCopy" false
+                TCopy
                   (
                        type_expr
                       (
@@ -6661,9 +6647,8 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "TTuple" false
+                TTuple
                   (
                        list
                       (
@@ -6672,7 +6657,7 @@
                           )
                       )
                   )
-                Rtag "TConstr" false
+                TConstr
                   (
                        list
                       (
@@ -6681,7 +6666,7 @@
                           )
                       )
                   )
-                Rtag "TVariant" false
+                TVariant
                   (
                        list
                       (
@@ -6724,7 +6709,7 @@
             (
               alias desc
               (
-                pat_type                recurs_type_expr
+                recurs_type_expr
               )
               let
               (
@@ -6808,7 +6793,7 @@
               maf
               TTuple
                 []
-                              4
+              4
           )
         ;
           sequence
@@ -6819,7 +6804,7 @@
                 maf
                 TConstr
                   []
-                                  5
+                5
             )
           ;
             test
@@ -6828,7 +6813,7 @@
                 maf
                 TVariant
                   []
-                                  6
+                6
             )
           )
         )
@@ -7021,7 +7006,7 @@
         g
         A
           A
-                  0
+        0
     )
   ;
     sequence
@@ -7032,7 +7017,7 @@
           g
           A
             C
-                      0
+          0
       )
     ;
       sequence
@@ -7056,7 +7041,7 @@
               "jacaues"
               g
               C
-                            2
+              2
           )
         ;
           ()
@@ -7466,12 +7451,11 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "False" true
+                False
                   (
                   )
-                Rtag "True" true
+                True
                   (
                   )
               )
@@ -7487,21 +7471,20 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "A" true
+                A
                   (
                   )
-                Rtag "B" true
+                B
                   (
                   )
-                Rtag "U" false
+                U
                   (
                        int
                       (
                       )
                   )
-                Rtag "V" false
+                V
                   (
                        int
                       (
@@ -7556,7 +7539,6 @@
           (
             case
             (
-              Ppat_record
               (
                 v
                   pat_or
@@ -7582,7 +7564,6 @@
               (
               pat_or
               (
-              Ppat_record
               (
                 v
                   pat_or
@@ -7593,7 +7574,6 @@
                 x
                   False
                                 )
-              Ppat_record
               (
                 v
                   pat_or
@@ -7607,7 +7587,6 @@
                   False
                                 )
               )
-              Ppat_record
               (
                 v
                   _
