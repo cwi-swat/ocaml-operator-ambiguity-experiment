@@ -1,36 +1,44 @@
 
 (
     								 
-  classTypeDef 
+  class_type
   (
-      classTypeDefinition 
-      (
-          classTypeDef 
-          (
-              
-              
-              t
-              <[],[]>
-          )
-          
-      )
+    class_type_declaration
+    params = 
+    (
+    ) 
+    name = t
+    expr =
+     class_type
+     signature
+     class_signature
+     (
+     										 
+     )
+     										 
+    													  
+  											   
   )
+  											   
                                      
   class
   (
       								   
     params = 
     (
-        	
+     "a"
     )
     class name = o1
     class expr = 
-                class_structure
-                (
-                    								
-                )
-                    								
-        	
+    										    	
+      class_structure
+      (
+          								
+      )
+      <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAsId"("typexprHash1"("classPath"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+          								
+      
+    										    	
       								   
   )
       								   
@@ -39,58 +47,71 @@
   (  						
       							    	 
      obj
-     type
-     params=
-     (
-     
-      
-      a
-     										 
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-     <[],"a">
-     
-     														  
-     														 
-    )
+       type
+       params=
+       (
+       a
+       )
+       cstrs =
+       (
+    											   
+    											   	  
+    											   
+       )
+       kind =
+       
+        
+       a
+       typexprEmptyAngleBrackets 
+       (
+           
+       )
+       														 
     											   
   								        
   )
                                      
-  classTypeDef 
+  class_type
   (
-      classTypeDefinition 
-      (
-          classTypeDef 
-          (
-              
-              <"a",[]>
-              o2
-              <["typexprConstr1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"obj")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[]>
-          )
-          
-      )
+    class_type_declaration
+    params = 
+    (
+      "a"
+    ) 
+    name = o2
+    expr =
+     class_type
+      
+       obj
+       (
+         a
+       )
+          									
+     										  
+     										  
+    													  
+  											   
   )
+  											   
                                      
   class
   (
       								   
     params = 
     (
-        	
+     "a"
     )
     class name = o3
     class expr = 
-                class_structure
-                (
-                    								
-                )
-                    								
-        	
+    										    	
+      class_structure
+      (
+          								
+      )
+      <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"obj")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+          								
+      
+    										    	
       								   
   )
       								   
@@ -100,32 +121,35 @@
       								   
     params = 
     (
-        	
+     "a"
     )
     class name = o4
     class expr = 
-                class_structure
-                (
-                    								
-                   method m
-                         
-                         (
-                         self
-                         :
-                         
-                          obj
-                          (
-                            a
-                          )
-                          
-                             									
-                         )
-                             								
-                       												 
-                    								
-                )
-                    								
-        	
+    										    	
+      class_structure
+      (
+          								
+         method m
+         	  
+         	  (
+         	  self
+         	  :
+         	  
+         	   obj
+         	   (
+         	     a
+         	   )
+         	      									
+         	  )
+         	      								
+            	
+             											  
+          								
+      )
+      <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
+          								
+      
+    										    	
       								   
   )
       								   

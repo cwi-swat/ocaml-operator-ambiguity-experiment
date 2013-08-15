@@ -3,74 +3,91 @@
   (
     params = 
     (
+     "subject"
+     "event"
     )
     class name = observer
     class expr = 
-                class_structure
-                (
-                   method notify
-                      poly
-                      arrow
-                      subject
-                      arrow
-                      event
-                      unit
-                      (
-                      )
-                )
+      class_structure
+      (
+         method notify
+            poly
+            arrow
+            subject
+            arrow
+            event
+            unit
+            (
+            )
+      )
   )
   class
   (
     params = 
     (
+     "event"
     )
     class name = subject
     class expr = 
-                class_structure
-                (
-                    observers
-                    (
-                    []
-                    :
-                     list
-                     (
-                        observer
-                           (
-                            subject
-                       	 event				
-                           ) 
-                     )
-                    )
-                   method add_observer
-                     Array.set
-                     (
-                      observers
-                      ::
-                      (
-                          obs
-                          observers
-                      )
-                     )
-                   method notify_observers
-                     List.iter
-                     (
-                         (
-                          case
-                          (
-                          x
-                          send notify
-                          (
-                           x
-                          )
-                          (
-                              self
-                              e
-                          )
-                          )
-                         )
-                         observers
-                     )
-                )
+      class_structure
+      (
+          observers
+          (
+          []
+          :
+           list
+           (
+              observer
+                 (
+                  subject
+             	 event				
+                 ) 
+           )
+          )
+         method add_observer
+         (
+           case
+         	(
+         		obs
+           	Array.set
+           	(
+           	 observers
+           	 ::
+           	 (
+           	     obs
+           	     observers
+           	 )
+           	)
+         	)
+         )
+         method notify_observers
+         (
+           case
+         	(
+         		e
+         		event
+           	List.iter
+           	(
+           	    (
+           	      case
+           	      (
+           	       x
+           	       send notify
+           	       (
+           	        x
+           	       )
+           	       (
+           	           self
+           	           e
+           	       )
+           	      )
+           	    )
+           	    observers
+           	)
+         	)
+         )
+      )
+      <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("subject")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
   )
   type
   (  						
@@ -91,50 +108,83 @@
   (
     params = 
     (
-    id
-    id
-    (
-    )
     )
     class name = entity
     class expr = 
-                class_structure
-                (
-                    ent_destroy_subject
-                    new subject
-                   method destroy_subject
-                     ent_destroy_subject
-                   method entity_id
-                     id
-                )
+      id
+      id
+      (
+      )
+      class_structure
+      (
+          ent_destroy_subject
+          new subject
+         method destroy_subject
+         	ent_destroy_subject
+         	poly
+         	 subject
+         	 (
+         	   id
+         	   (
+         	   )
+         	 )
+         method entity_id
+         	  id
+      )
   )
   class
   (
     params = 
     (
+     "entity"
     )
     class name = entity_container
     class expr = 
-                class_structure
-                (
-                   inherit
-                    constr <"tagg"("entity")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr2"("typeConstr"([],"id")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"observer")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                    (
-                    )
-                   method add_entity
-                     send add_observer
-                     (
-                      send destroy_subject
-                      (
-                       e
-                      )
-                     )
-                     (
-                         self
-                     )
-                   method notify
-                     ()
-                )
+      class_structure
+      (
+         inherit
+          constr 
+                 entity
+                 id
+                 (
+                 )
+                 observer
+          (
+          )
+         method add_entity
+         (
+           case
+         	(
+         		e
+         		entity
+           	send add_observer
+           	(
+           	 send destroy_subject
+           	 (
+           	  e
+           	 )
+           	)
+           	(
+           	    self
+           	)
+         	)
+         )
+         method notify
+         (
+           case
+         	(
+         		_
+         		(
+         			case
+         			(		
+           		   id
+           		   ()
+         			)
+         		)
+         	)
+         )
+      )
+      <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
   )
   let
   (

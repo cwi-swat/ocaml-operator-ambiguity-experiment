@@ -6,15 +6,15 @@
    (
      params = 
      (
-     x
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                     x
-                     x
-                 )
+       x
+       class_structure
+       (
+           x
+           x
+       )
    )
    )
    signature
@@ -27,19 +27,14 @@
       		)
       	name = c
       	expr =
-      	class_type
-      	 fun
       		a
       		class_type
       		signature
       		class_signature
       		(
-      		 fieldSpec2 
-      		 (
-      		     x
-      		     poly
-      		     b
-      		 )
+      		 x
+      		 poly
+      		 b
       		)
        )
    )
@@ -47,26 +42,30 @@
   (
     params = 
     (
-    x
-    int
-    (
-    )
     )
     class name = c
     class expr = 
-                class_structure
-                (
-                   inherit
-                    constr classArgs 
-                           (
-                               M.c
-                               x
-                           )
-                    (
-                    )
-                   method x
+      x
+      int
+      (
+      )
+      class_structure
+      (
+         inherit
+          constr classArgs 
+                 (
+                     M.c
                      x
-                )
+                 )
+          (
+          )
+         method x
+         	x
+         	poly
+         	bool
+         	(
+         	)
+      )
   )
   let
   (

@@ -9,8 +9,6 @@
                 )
             class name = c
             class expr =
-                fun
-                label=""
                                 x
                   class_structure
                     (
@@ -30,13 +28,12 @@
               name = c
               expr =
                 class_type
-                  fun 
                     a
                   class_type
                     signature
                     class_signature
                       (
-                        Pctf_val "x" Immutable Concrete ([1,0+38]..[1,0+48])
+                        x
                             b
                       )
           )
@@ -48,8 +45,6 @@
           )
       class name = c
       class expr =
-          fun
-          label=""
                     x
              int
             (

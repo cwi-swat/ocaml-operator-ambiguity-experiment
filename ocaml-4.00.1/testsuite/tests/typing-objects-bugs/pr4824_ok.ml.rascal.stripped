@@ -6,15 +6,39 @@
    (
      params = 
      (
-     _
      )
      class name = x
      class expr = 
-                 class_structure
-                 (
-                    method m
-                          42
-                 )
+       _
+       class_structure
+       (
+          method m
+          	  42
+       )
    )
+   )
+   signature
+   (
+      sig_class
+       (
+      	class_description
+      	params = 
+      		(
+      		)
+      	name = x
+      	expr =
+      		int
+      		(
+      		)
+      		class_type
+      		signature
+      		class_signature
+      		(
+      		 poly
+      		 int
+      		 (
+      		 )
+      		)
+       )
    )
 )

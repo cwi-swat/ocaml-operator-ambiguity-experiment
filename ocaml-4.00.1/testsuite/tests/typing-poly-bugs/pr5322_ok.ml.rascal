@@ -8,18 +8,18 @@
        type
        params=
        (
-       
-        
-        par
-       										 
+       par
        )
        cstrs =
        (
+    											   
+    											   	  
+    											   
        )
        kind =
-       par
        
-       														  
+        
+       par
        														 
     											   
   								        
@@ -39,7 +39,23 @@
           ()
       ) 
       :
-      <[<"m","polytype2"(["a"],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+      (
+          										  
+       
+       	m
+       	poly
+       	                      				 'a 
+       	 
+       	  t
+       	  (
+       	    a
+       	  )
+       	     									
+       	                                    
+       									
+          										  
+      )
+          										  
      )
     							    		    
    )
@@ -51,7 +67,18 @@
    		    				
     sig_value x
     value_description
-    <[<"m","polytype2"(["a"],"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>],[]>
+    (
+        										  
+     
+     	m
+     	poly
+     	                      				 'a 
+     	 a
+     	                                    
+     									
+        										  
+    )
+        										  
     (
     )
         								
@@ -78,33 +105,34 @@
       								   
     params = 
     (
-        	
     )
     class name = alias
     class expr = 
-                class_structure
-                (
-                    								
-                   method alias
-                   	ident
-                   	poly
-                   	                      				 'a 
-                   	 arrow
-                   	 
-                   	  t
-                   	  (
-                   	    a
-                   	  )
-                   	  
-                   	     									
-                   	 a
-                   	    								   
-                   	                                    
-                       												 
-                    								
-                )
-                    								
-        	
+    									    	
+      class_structure
+      (
+          								
+         method alias
+         	ident
+         	poly
+         	                      				 'a 
+         	 arrow
+         	 
+         	  t
+         	  (
+         	    a
+         	  )
+         	     									
+         	 a
+         	    								   
+         	                                    
+             												 
+          								
+      )
+      
+          								
+      
+    									    	
       								   
   )
       								   

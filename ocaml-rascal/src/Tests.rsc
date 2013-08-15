@@ -24,7 +24,7 @@ public void run() {
 public void runFile(str f) {
 		print(f + "...");
 		try {
-			tree = jparse(#start[TopLevel], readFile(|file:///| + filePath + "/" + f));
+			tree = jparse(#start[Implementation], readFile(|file:///| + filePath + "/" + f));
 			
 			if (/amb(_) := tree) {
 				tree = filterOCaml(tree);
@@ -311,7 +311,17 @@ str printAST(value v) {
     									'  <printAST(t1)>
     									'  <printAST(t2)>
     									')
-    									";								
+    									";	
+    									
+	// Expr = "{\<" InstVarName "=" Expr !semicolon !sep  (";" InstVarName "="  Expr)*  ";"? "\>}"
+	case "brackets4"(n, e, l, _): return "
+										 '<printAST(n)>
+										 '<printAST(e)>
+										 <for (<a, b> <- l) {>
+										 '	<printAST(a)>
+										 '	<printAST(b)>
+										 <}>
+										 ";    																
     
     case "beginEnd"(e) : return printAST(e);			
     
@@ -808,8 +818,8 @@ str printAST(value v) {
 							'(
 							'case
 							'  (
-							'    <printAST(rest)>
-							'    <printAST("multipleMatching"(rest, whenExp, e))>
+							'    <printAST(head(rest))>
+							'    <printAST("multipleMatching"(tail(rest), whenExp, e))>
 							'  )
 							')													
 							<} else {>
@@ -872,16 +882,17 @@ str printAST(value v) {
                                     ";
                                     
                                     
-	case "polymorphicVariantType"(x): return printAST(x);
+	case "polymorphicVariantType"(x): return "(
+											 '	<printAST(x)>
+											 ')
+											 ";
 	
 	
     // polymorphicVariantType1: "[" "|"? {TagSpec "|"}* "]"
    	case polymorphicVariantType1(_, l): return "
-   											   '(
    											   <for (x <- l) {>
    											   '  <printAST(x)>
    										       '<}>
-   										       ')
    											   "; 
       
     // polymorphicVariantType2: "[\>" {TagSpec "|"}* "]"
@@ -898,7 +909,10 @@ str printAST(value v) {
 	                                 
 	                                 
 	// "`" TagName ("of" Typexpr)?
-	case "tagSpec1"(n, []): return printAST(n);
+	case "tagSpec1"(n, []): return "<printAST(n)>
+								   '(
+								   ')
+								   ";
 	
 	case "tagSpec1"(n, [e]): return "
 									'<printAST(n)>
@@ -1422,6 +1436,15 @@ str printAST(value v) {
 										    ";
 	
 	case "classPath"(cp) : return printAST(cp);
+	
+	// "[" Typexpr ("," Typexpr)* "]" ClassPath
+	case "classExprBrackets1"(t, l, c): return "
+											   '<printAST(t)>
+											   <for(x <- l) {>
+											   '<printAST(x)>
+											   <}>
+											   '<printAST(c)>
+											   ";
 	
 	
 	// "inherit" ClassType

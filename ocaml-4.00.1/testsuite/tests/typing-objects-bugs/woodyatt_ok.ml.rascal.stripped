@@ -6,76 +6,85 @@
     )
     class name = alfa
     class expr = 
-                class_structure
-                (
-                   method x
-                         Printf.printf
-                )
+      class_structure
+      (
+         method x
+         	Printf.printf
+         	poly
+         	                      				 'a 
+         	 arrow
+         	  format
+         	     (
+         	      a
+         	 	 out_channel
+         	 	 (
+         	 	 )
+         	 	 unit
+         	 	 (
+         	 	 )
+         	     ) 
+         	 a
+      )
+      <"anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
   )
   class
   (
     params = 
     (
-    a
     )
     class name = bravo
     class expr = 
-                class_structure
-                (
-                   classValue 
-                   (
-                       <>
-                       y
-                       brackets2 
-                       (
-                           a
-                           alfa
-                       )
-                   )
-                   classInitializer 
-                   (
-                       send x
-                       (
-                        y
-                       )
-                       (
-                           "bravo initialized"
-                       )
-                   )
-                )
+      a
+      class_structure
+      (
+          y
+          brackets2 
+          (
+              a
+              alfa
+              (
+              )
+          )
+         classInitializer 
+         (
+             send x
+             (
+              y
+             )
+             (
+                 "bravo initialized"
+             )
+         )
+      )
   )
   class
   (
     params = 
     (
-    a
     )
     class name = charlie
     class expr = 
-                class_structure
-                (
-                   inheritance 
-                   (
-                       <>
-                       classArgs 
-                       (
-                           classPath 
-                           (
-                               bravo
-                           )
-                           a
-                       )
-                   )
-                   classInitializer 
-                   (
-                       send x
-                       (
-                        y
-                       )
-                       (
-                           "charlie initialized"
-                       )
-                   )
-                )
+      a
+      class_structure
+      (
+         inherit
+          constr classArgs 
+                 (
+                     bravo
+                     a
+                 )
+          (
+          )
+         classInitializer 
+         (
+             send x
+             (
+              y
+             )
+             (
+                 "charlie initialized"
+             )
+         )
+      )
   )
 )

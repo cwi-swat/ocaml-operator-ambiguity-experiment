@@ -1,82 +1,30 @@
-1,81d0
-< (
-<   class
-<   (
-<     params = 
-<     (
-<     )
-<     class name = alfa
-<     class expr = 
-<                 class_structure
-<                 (
-<                    method x
-<                          Printf.printf
-<                 )
+28d27
+<       <"anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+41d39
+<           brackets2 
+43a42
+>                   :
+48,49c47
+<          classInitializer 
+<          (
+---
+>                 Pcf_init
+59d56
 <   )
-<   class
-<   (
-<     params = 
-<     (
-<     a
-<     )
-<     class name = bravo
-<     class expr = 
-<                 class_structure
-<                 (
-<                    classValue 
-<                    (
-<                        <>
-<                        y
-<                        brackets2 
-<                        (
-<                            a
-<                            alfa
-<                        )
-<                    )
-<                    classInitializer 
-<                    (
-<                        send x
-<                        (
-<                         y
-<                        )
-<                        (
-<                            "bravo initialized"
-<                        )
-<                    )
-<                 )
-<   )
-<   class
-<   (
-<     params = 
-<     (
-<     a
-<     )
-<     class name = charlie
-<     class expr = 
-<                 class_structure
-<                 (
-<                    inheritance 
-<                    (
-<                        <>
-<                        classArgs 
-<                        (
-<                            classPath 
-<                            (
-<                                bravo
-<                            )
-<                            a
-<                        )
-<                    )
-<                    classInitializer 
-<                    (
-<                        send x
-<                        (
-<                         y
-<                        )
-<                        (
-<                            "charlie initialized"
-<                        )
-<                    )
-<                 )
-<   )
+71c68,69
+<           constr classArgs 
+---
+>                     Pcl_apply
+>                       constr bravo
+73,74d70
+<                      bravo
+<                      a
+76a73
+>                         a
+78,79c75
+<          classInitializer 
+<          (
+---
+>                 Pcf_init
+90d85
 < )

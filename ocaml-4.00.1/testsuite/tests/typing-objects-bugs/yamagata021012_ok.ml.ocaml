@@ -148,21 +148,21 @@
                   (
                       a
                   )
-              Pcf_virt "first" Public ([26,601+4]..[26,601+34])
+              first 
                   poly
                   
                     cursor
-              Pcf_virt "len" Public ([27,636+4]..[27,636+28])
+              len 
                   poly
                   
                      int
                     (
                     )
-              Pcf_virt "copy" Public ([28,665+4]..[28,665+31])
+              copy 
                   poly
                   
                     self
-              Pcf_virt "sub" Public ([29,697+4]..[29,697+44])
+              sub 
                   poly
                   
                     arrow
@@ -176,7 +176,7 @@
                         (
                         )
                         self
-              Pcf_virt "concat" Public ([30,742+4]..[30,742+47])
+              concat 
                   poly
                   
                     arrow
@@ -1347,9 +1347,8 @@
                         )
                       )
                                           method copy
-                      Pexp_override
                       (
-                        <override> "contents"
+                        contents
                           String.copy
                           (
                             
@@ -1365,9 +1364,8 @@
                             case
                             (
                               len
-                              Pexp_override
                               (
-                                <override> "contents"
+                                contents
                                   String.sub
                                   (
                                     
@@ -1468,9 +1466,8 @@
                                     text
                                 )
                               ;
-                                Pexp_override
                                 (
-                                  <override> "contents"
+                                  contents
                                     buf
                                 )
                               )

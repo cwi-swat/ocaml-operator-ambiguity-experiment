@@ -1,0 +1,200 @@
+(
+  class
+  (
+      params =
+          (
+            "subject"
+            "event"
+          )
+      class name = observer
+      class expr =
+          class_structure
+            (
+              notify 
+                  poly
+                    arrow
+                      subject
+                      arrow
+                        event
+                         unit
+                        (
+                        )
+            )
+  )
+  class
+  (
+      params =
+          (
+            "event"
+          )
+      class name = subject
+      class expr =
+          class_structure
+            (
+              observers
+                (
+                []
+                                :
+                     list
+                    (
+                         observer
+                        (
+                            subject
+                            event
+                        )
+                    )
+                                )
+              method add_observer
+                (
+                  case
+                  (
+                    obs
+                    Pexp_setinstvar "observers"
+                    ::
+                      (
+                        obs
+                        observers
+                      )
+                  )
+                )
+                              method notify_observers
+                (
+                  case
+                  (
+                    e
+                      event
+                    List.iter
+                    (
+                        (
+                          case
+                          (
+                            x
+                            send notify
+                            (
+                              x
+                            )
+                            (
+                                self
+                                e
+                            )
+                          )
+                        )
+                        observers
+                    )
+                  )
+                )
+                            )
+  )
+  type
+  (
+    id
+      type
+        params =
+          (
+          )
+        cstrs =
+          (
+          )
+        kind =
+               int
+              (
+              )
+  )
+  class
+  (
+      params =
+          (
+          )
+      class name = entity
+      class expr =
+                    id
+             id
+            (
+            )
+            class_structure
+              (
+                ent_destroy_subject
+                  new subject
+                method destroy_subject
+                  ent_destroy_subject
+                      poly
+                         subject
+                        (
+                             id
+                            (
+                            )
+                        )
+                method entity_id
+                  id
+                                )
+  )
+  class
+  (
+      params =
+          (
+            "entity"
+          )
+      class name = entity_container
+      class expr =
+          class_structure
+            (
+              inherit
+                  constr observer
+                  (
+                      entity
+                       id
+                      (
+                      )
+                  )
+              method add_entity
+                (
+                  case
+                  (
+                    e
+                      entity
+                    send add_observer
+                    (
+                      send destroy_subject
+                      (
+                        e
+                      )
+                    )
+                    (
+                        self
+                    )
+                  )
+                )
+                              method notify
+                (
+                  case
+                  (
+                    _
+                    (
+                      case
+                      (
+                        id
+                        ()
+                                              )
+                    )
+                  )
+                )
+                            )
+  )
+  let
+  (
+    f
+      (
+        case
+        (
+          x
+             entity_container
+            (
+                 entity
+                (
+                )
+            )
+          ()
+                  )
+      )
+  )
+)

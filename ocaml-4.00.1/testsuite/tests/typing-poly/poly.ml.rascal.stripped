@@ -6,17 +6,17 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-         (
-          t
-          poly
-          a
-         )
+        (
+         t
+         poly
+         a
+        )
    )
    type
    (  						
@@ -24,32 +24,28 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-         (
-          fold
-          poly
-                                				 'b 
-           arrow2 
-           (
-               f
-               arrow
-               b
-               arrow
-               a
-               b
-               arrow2 
-               (
-                   init
-                   b
-                   b
-               )
-           )
-         )
+        (
+         fold
+         poly
+                               				 'b 
+          arrow
+          f
+          arrow
+          b
+          arrow
+          a
+          b
+          arrow
+          init
+          b
+          b
+        )
    )
    let
    (
@@ -90,8 +86,10 @@
   fold
   )
   (
-      <"~f:","valuePath"("valuePath"([],["+"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-      <"~init:","constant"("posInt"("0")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+      f
+      +
+      init
+      0
   )
    class
    (
@@ -111,14 +109,11 @@
             case
           	(
           		x
-            	brackets4 
+            	l
+            	::
             	(
+            	    x
             	    l
-            	    ::
-            	    (
-            	        x
-            	        l
-            	    )
             	)
           	)
           )
@@ -129,21 +124,17 @@
           	)
           	poly
           	                      				 'a 
-          	 arrow2 
-          	 (
-          	     f
-          	     arrow
-          	     a
-          	     arrow
-          	     b
-          	     a
-          	     arrow2 
-          	     (
-          	         init
-          	         a
-          	         a
-          	     )
-          	 )
+          	 arrow
+          	 f
+          	 arrow
+          	 a
+          	 arrow
+          	 b
+          	 a
+          	 arrow
+          	 init
+          	 a
+          	 a
        )
    )
    class
@@ -164,22 +155,19 @@
           method fold
              poly
                                    				 'b 
-              arrow2 
-              (
-                  f
-                  arrow
-                  b
-                  arrow
-                  a
-                  b
-                  arrow2 
-                  (
-                      init
-                      b
-                      b
-                  )
-              )
+              arrow
+              f
+              arrow
+              b
+              arrow
+              a
+              b
+              arrow
+              init
+              b
+              b
        )
+       <"anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    class
    (
@@ -192,7 +180,11 @@
        class_structure
        (
           inherit
-           constr <"typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"vlist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           constr 
+                  int
+                  (
+                  )
+                  vlist
            (
            )
            l
@@ -202,14 +194,11 @@
             case
           	(
           		x
-            	brackets4 
+            	l
+            	::
             	(
+            	    x
             	    l
-            	    ::
-            	    (
-            	        x
-            	        l
-            	    )
             	)
           	)
           )
@@ -230,7 +219,8 @@
           class_structure
           (
              inherit
-              constr <<>,[],"classPath"([],"vlist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+              constr 
+                     vlist
               (
               )
               l
@@ -240,14 +230,11 @@
                case
              	(
              		x
-               	brackets4 
+               	l
+               	::
                	(
+               	    x
                	    l
-               	    ::
-               	    (
-               	        x
-               	        l
-               	    )
                	)
              	)
              )
@@ -272,7 +259,9 @@
        class_structure
        (
           inherit
-           constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"vlist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           constr 
+                  a
+                  vlist
            (
            )
            l
@@ -282,14 +271,11 @@
             case
           	(
           		x
-            	brackets4 
+            	l
+            	::
             	(
+            	    x
             	    l
-            	    ::
-            	    (
-            	        x
-            	        l
-            	    )
             	)
           	)
           )
@@ -319,41 +305,33 @@
            l
           method add
              poly
-             <>
           method add
           (
             case
           	(
           		x
-            	brackets4 
+            	l
+            	::
             	(
+            	    x
             	    l
-            	    ::
-            	    (
-            	        x
-            	        l
-            	    )
             	)
           	)
           )
           method fold
              poly
                                    				 'b 
-              arrow2 
-              (
-                  f
-                  arrow
-                  b
-                  arrow
-                  a
-                  b
-                  arrow2 
-                  (
-                      init
-                      b
-                      b
-                  )
-              )
+              arrow
+              f
+              arrow
+              b
+              arrow
+              a
+              b
+              arrow
+              init
+              b
+              b
           method fold
           	  List.fold_left
           	  (
@@ -383,67 +361,72 @@
             case
           	(
           		x
-            	brackets4 
+            	l
+            	::
             	(
+            	    x
             	    l
-            	    ::
-            	    (
-            	        x
-            	        l
-            	    )
             	)
           	)
           )
           method fold
              poly
                                    				 'b 
-              arrow2 
-              (
-                  f
-                  arrow
-                  b
-                  arrow
-                  a
-                  b
-                  arrow2 
-                  (
-                      init
-                      b
-                      b
-                  )
-              )
+              arrow
+              f
+              arrow
+              b
+              arrow
+              a
+              b
+              arrow
+              init
+              b
+              b
           method fold2
              poly
                                    				 'b 
-              arrow2 
-              (
-                  f
-                  arrow
-                  b
-                  arrow
-                  a
-                  b
-                  arrow2 
-                  (
-                      init
-                      b
-                      b
-                  )
-              )
+              arrow
+              f
+              arrow
+              b
+              arrow
+              a
+              b
+              arrow
+              init
+              b
+              b
           method fold2
           (
             case
           	(
           		f
-          		init
-            	send fold
-            	(
-            	 self
-            	)
-            	(
-            	    f
-            	    <"~init:","brackets"("functionApplication"("hash"("valuePath"("valuePath"([],"self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"fold")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["f","init"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-            	)
+          		(
+          			case
+          			(		
+            		   init
+            		   send fold
+            		   (
+            		    self
+            		   )
+            		   (
+            		       f
+            		       	f
+            		       init
+            		       send fold
+            		       (
+            		        self
+            		       )
+            		       (
+            		           f
+            		           	f
+            		           init
+            		           	init
+            		       )
+            		   )
+          			)
+          		)
           	)
           )
           method fold
@@ -452,6 +435,7 @@
           	      l
           	  )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
    )
    class
    (
@@ -465,7 +449,9 @@
        class_structure
        (
           inherit
-           constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"vlist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           constr 
+                  a
+                  vlist
            (
            )
            l
@@ -475,49 +461,58 @@
             case
           	(
           		x
-            	brackets4 
+            	l
+            	::
             	(
+            	    x
             	    l
-            	    ::
-            	    (
-            	        x
-            	        l
-            	    )
             	)
           	)
           )
           method fold2
              poly
                                    				 'b 
-              arrow2 
-              (
-                  f
-                  arrow
-                  b
-                  arrow
-                  a
-                  b
-                  arrow2 
-                  (
-                      init
-                      b
-                      b
-                  )
-              )
+              arrow
+              f
+              arrow
+              b
+              arrow
+              a
+              b
+              arrow
+              init
+              b
+              b
           method fold2
           (
             case
           	(
           		f
-          		init
-            	send fold
-            	(
-            	 self
-            	)
-            	(
-            	    f
-            	    <"~init:","brackets"("functionApplication"("hash"("valuePath"("valuePath"([],"self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"fold")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["f","init"])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-            	)
+          		(
+          			case
+          			(		
+            		   init
+            		   send fold
+            		   (
+            		    self
+            		   )
+            		   (
+            		       f
+            		       	f
+            		       init
+            		       send fold
+            		       (
+            		        self
+            		       )
+            		       (
+            		           f
+            		           	f
+            		           init
+            		           	init
+            		       )
+            		   )
+          			)
+          		)
           	)
           )
           method fold
@@ -526,6 +521,7 @@
           	      l
           	  )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
    )
    class
    (
@@ -540,21 +536,17 @@
           method fold
              poly
                                    				 'c 
-              arrow2 
-              (
-                  f
-                  arrow
-                  a
-                  arrow
-                  c
-                  c
-                  arrow2 
-                  (
-                      init
-                      c
-                      c
-                  )
-              )
+              arrow
+              f
+              arrow
+              a
+              arrow
+              c
+              c
+              arrow
+              init
+              c
+              c
        )
    )
    class
@@ -568,7 +560,9 @@
        class_structure
        (
           inherit
-           constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           constr 
+                  a
+                  olist
            (
            )
           method fold
@@ -576,8 +570,13 @@
             case
           	(
           		f
-          		init
-            	init
+          		(
+          			case
+          			(		
+            		   init
+            		   init
+          			)
+          		)
           	)
           )
        )
@@ -595,7 +594,9 @@
        class_structure
        (
           inherit
-           constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           constr 
+                  a
+                  olist
            (
            )
            hd
@@ -607,22 +608,30 @@
             case
           	(
           		f
-          		init
-            	f
-            	(
-            	    hd
-            	    send fold
-            	    (
-            	     tl
-            	    )
-            	    (
-            	        f
-            	        init
-            	    )
-            	)
+          		(
+          			case
+          			(		
+            		   init
+            		   f
+            		   (
+            		       hd
+            		       send fold
+            		       (
+            		        tl
+            		       )
+            		       (
+            		           f
+            		           	f
+            		           init
+            		           	init
+            		       )
+            		   )
+          			)
+          		)
           	)
           )
        )
+       <"anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    class
    (
@@ -637,7 +646,9 @@
        class_structure
        (
           inherit
-           constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           constr 
+                  a
+                  olist
            (
            )
            hd
@@ -656,24 +667,32 @@
             case
           	(
           		f
-          		init
-            	f
-            	(
-            	    hd
-            	    send fold
-            	    (
-            	     tl
-            	    )
-            	    (
-            	        f
-            	        init
-            	    )
-            	)
+          		(
+          			case
+          			(		
+            		   init
+            		   f
+            		   (
+            		       hd
+            		       send fold
+            		       (
+            		        tl
+            		       )
+            		       (
+            		           f
+            		           	f
+            		           init
+            		           	init
+            		       )
+            		   )
+          			)
+          		)
           	)
           )
           method empty
           	  false
        )
+       <"anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    class
    (
@@ -688,7 +707,9 @@
        class_structure
        (
           inherit
-           constr <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"olist")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+           constr 
+                  a
+                  olist
            (
            )
            hd
@@ -704,21 +725,36 @@
             case
           	(
           		f
-          		init
-            	send fold
-            	(
-            	 send tl
-            	 (
-            	  self
-            	 )
-            	)
-            	(
-            	    f
-            	    <"~init:","brackets"("functionApplication"("valuePath"("valuePath"([],"f")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["hash"("valuePath"("valuePath"([],"self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"hd")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"valuePath"("valuePath"([],"init")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-            	)
+          		(
+          			case
+          			(		
+            		   init
+            		   send fold
+            		   (
+            		    send tl
+            		    (
+            		     self
+            		    )
+            		   )
+            		   (
+            		       f
+            		       	f
+            		       init
+            		       f
+            		       (
+            		           send hd
+            		           (
+            		            self
+            		           )
+            		           init
+            		       )
+            		   )
+          			)
+          		)
           	)
           )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    class
    (
@@ -733,7 +769,24 @@
              poly
                                    				 'a 
               arrow
-              <<[],[<"A",[],[]>,<"B",[],[]>,<"C",[],[]>],[]>,"a">
+              a
+              (
+              	polymorphicVariantType3 
+              	(
+              	    tagSpecFull1 
+              	    (
+              	        A
+              	    )
+              	    tagSpecFull1 
+              	    (
+              	        B
+              	    )
+              	    tagSpecFull1 
+              	    (
+              	        C
+              	    )
+              	)
+              )
               int
               (
               )
@@ -785,7 +838,24 @@
           	poly
           	                      				 'a 
           	 arrow
-          	 <<[],[<"A",[],[]>,<"B",[],[]>,<"C",[],[]>],[]>,"a">
+          	 a
+          	 (
+          	 	polymorphicVariantType3 
+          	 	(
+          	 	    tagSpecFull1 
+          	 	    (
+          	 	        A
+          	 	    )
+          	 	    tagSpecFull1 
+          	 	    (
+          	 	        B
+          	 	    )
+          	 	    tagSpecFull1 
+          	 	    (
+          	 	        C
+          	 	    )
+          	 	)
+          	 )
           	 int
           	 (
           	 )
@@ -805,7 +875,17 @@
          (
          )
          kind =
-          <[],[<"A",[]>,<"B",[]>,<"C",[]>]>
+         (
+         	  A
+         	  (
+         	  )
+         	  B
+         	  (
+         	  )
+         	  C
+         	  (
+         	  )
+         )
     )
     let
     (
@@ -825,7 +905,17 @@
        )
        :
        arrow
-       <[],["typexprConstr2"("typeConstr"([],"v")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>
+       (
+       	polymorphicVariantType3 
+       	(
+       	    tagSpecFull2 
+       	    (
+       	        v
+       	        (
+       	        )
+       	    )
+       	)
+       )
        int
        (
        )
@@ -845,7 +935,18 @@
              poly
                                    				 'a 
               arrow
-              <<[],["typexprConstr2"("typeConstr"(["extendedModulePath1"([],"V")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"v")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>,"a">
+              a
+              (
+              	polymorphicVariantType3 
+              	(
+              	    tagSpecFull2 
+              	    (
+              	        V.v
+              	        (
+              	        )
+              	    )
+              	)
+              )
               int
               (
               )
@@ -871,7 +972,24 @@
        		 poly
        		                       				 'a 
        		  arrow
-       		  <<[],[<"A",[],[]>,<"B",[],[]>,<"C",[],[]>],[]>,"a">
+       		  a
+       		  (
+       		  	polymorphicVariantType3 
+       		  	(
+       		  	    tagSpecFull1 
+       		  	    (
+       		  	        A
+       		  	    )
+       		  	    tagSpecFull1 
+       		  	    (
+       		  	        B
+       		  	    )
+       		  	    tagSpecFull1 
+       		  	    (
+       		  	        C
+       		  	    )
+       		  	)
+       		  )
        		  int
        		  (
        		  )
@@ -894,7 +1012,24 @@
               poly
                                     				 'a 
                arrow
-               <<[],[<"A",[],[]>,<"B",[],[]>,<"C",[],[]>],[]>,"a">
+               a
+               (
+               	polymorphicVariantType3 
+               	(
+               	    tagSpecFull1 
+               	    (
+               	        A
+               	    )
+               	    tagSpecFull1 
+               	    (
+               	        B
+               	    )
+               	    tagSpecFull1 
+               	    (
+               	        C
+               	    )
+               	)
+               )
                int
                (
                )
@@ -971,7 +1106,9 @@
                   (
                       point
                       x
+                      	x
                       y
+                      	y
                   )
            (
            )
@@ -1010,7 +1147,11 @@
              poly
                                    				 'a 
               arrow
-              <"typexprHash1"("classPath"([],"point")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+              a
+              typexprHash1 
+              (
+                  point
+              )
               float
               (
               )
@@ -1110,8 +1251,10 @@
      p0
      new point
      (
-         <"~x:","constant"("posInt"("3")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-         <"~y:","constant"("posInt"("5")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+         x
+         3
+         y
+         5
      ) 
    )
    let
@@ -1119,8 +1262,10 @@
      p1
      new point
      (
-         <"~x:","constant"("posInt"("10")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-         <"~y:","constant"("posInt"("13")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+         x
+         10
+         y
+         13
      ) 
    )
    let
@@ -1128,9 +1273,12 @@
      cp
      new color_point
      (
-         <"~x:","constant"("posInt"("12")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-         <"~y:","brackets"("constant"("negInt"("-5")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-         <"~color:","constant"("stringLiteral"("\"green\"")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+         x
+         12
+         y
+         -5
+         color
+         "green"
      ) 
    )
    let
@@ -1139,7 +1287,8 @@
      new circle
      (
          p0
-         <"~r:","constant"("posInt"("2")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+         r
+         2
      ) 
    )
    let
@@ -1277,6 +1426,7 @@
           	)
           )
        )
+       <"anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprHash1"("classPath"([],"id_spec")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    class
    (
@@ -1318,6 +1468,7 @@
           	)
           )
        )
+       <"anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprHash1"("classPath"([],"id_spec")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    class
    (
@@ -1474,8 +1625,13 @@
             case
           	(
           		x
-          		y
-            	x
+          		(
+          			case
+          			(		
+            		   y
+            		   x
+          			)
+          		)
           	)
           )
        )
@@ -1626,7 +1782,11 @@
              poly
                                    				 'a 
               arrow
-              <"typexprHash1"("classPath"([],"id")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+              a
+              typexprHash1 
+              (
+                  id
+              )
               tuple
               (
                int
@@ -1700,6 +1860,7 @@
           	)
           )
        )
+       <"anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    let
    (
@@ -1718,19 +1879,19 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-          list
-          (
-             foo
-             (
-               a
-             )
-          )
+         list
+         (
+            foo
+            (
+              a
+            )
+         )
    )
    class
    (
@@ -1752,47 +1913,70 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-          bar
-          (
-             foo
-             (
-               a
-             )
-          )
+         bar
+         (
+            foo
+            (
+              a
+            )
+         )
    )
   (
-   case
-   (
-   x
-   send m
-   (
+    case
     (
-    x
-    :
-    <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+     x
+     send m
+     (
+      (
+      x
+      :
+      b
+      (
+       	m
+       	poly
+       	                      				 'a 
+       	 tuple
+       	 (
+       	  a
+       	   b
+       	 )
+      )
+      )
+     )
     )
-   )
-   )
   )
   (
-   case
-   (
-   x
-   send m
-   (
+    case
     (
-    x
-    :
-    <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"list")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+     x
+     send m
+     (
+      (
+      x
+      :
+      b
+      (
+       	m
+       	poly
+       	                      				 'a 
+       	 tuple
+       	 (
+       	  b
+       	    list
+       	    (
+       	      a
+       	    )
+       	 )
+      )
+      )
+     )
     )
-   )
-   )
   )
    let
    (
@@ -1806,53 +1990,103 @@
            (
            x
            :
-           <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"(<"typexprAngleBrackets"(["methodType"("n","polytype1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+           b
+           (
+            	m
+            	poly
+            	                      				 'a 
+            	 tuple
+            	 (
+            	  b
+            	   a
+            	   (
+            	    	n
+            	    	poly
+            	    	a
+            	   )
+            	 )
+           )
            )
           )
          )
     )
    )
   (
-   case
-   (
-   x
-   <"typexprAngleBrackets"(["methodType"("p","polytype2"(["a"],<"typexprAngleBrackets"(["methodType"("m","polytype1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"methodType"("n","polytype1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
-   send p
-   (
-    x
-   )
-   )
+    case
+    (
+     x
+     b
+     (
+      	p
+      	poly
+      	                      				 'a 
+      	 a
+      	 (
+      	  	m
+      	  	poly
+      	  	a
+      	  	n
+      	  	poly
+      	  	b
+      	 )
+     )
+     send p
+     (
+      x
+     )
+    )
   )
   (
-   case
-   (
-   x
-   <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],<"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("p","polytype2"(["b"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("d")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"c">)[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"d">
-   send m
-   (
-    x
-   )
-   )
+    case
+    (
+     x
+     d
+     (
+      	m
+      	poly
+      	                      				 'a 
+      	 c
+      	 tuple
+      	 (
+      	  a
+      	   (
+      	    	p
+      	    	poly
+      	    	                      				 'b 
+      	    	 tuple
+      	    	 (
+      	    	  b
+      	    	   c
+      	    	   d
+      	    	 )
+      	   )
+      	 )
+     )
+     send m
+     (
+      x
+     )
+    )
   )
   (
-   case
-   (
-   x
-   (
-    	m
-    	poly
-    	                      				 'a 
-    	 (
-    	  	p
-    	  	poly
-    	  	a
-    	 )
-   )
-   send m
-   (
-    x
-   )
-   )
+    case
+    (
+     x
+     (
+      	m
+      	poly
+      	                      				 'a 
+      	 (
+      	  	p
+      	  	poly
+      	  	a
+      	 )
+     )
+     send m
+     (
+      x
+     )
+    )
   )
    type
    (  						
@@ -1865,30 +2099,30 @@
         (
         )
         kind =
+        (
+        T
+        (
          (
-         T
-         (
-          (
-           	id
-           	poly
-           	                      				 'a 
-           	 arrow
-           	 a
-           	 a
-          )
+          	id
+          	poly
+          	                      				 'a 
+          	 arrow
+          	 a
+          	 a
          )
-         )
+        )
+        )
    )
   (
-   case
-   (
-   T
-   x
-   send id
-   (
-    x
-   )
-   )
+    case
+    (
+     T
+     x
+     send id
+     (
+      x
+     )
+    )
   )
    type
    (  						
@@ -1901,46 +2135,45 @@
         (
         )
         kind =
+        (
+         r
+         poly
          (
-          r
-          poly
-          (
-           	id
-           	poly
-           	                      				 'a 
-           	 arrow
-           	 a
-           	 a
-          )
+          	id
+          	poly
+          	                      				 'a 
+          	 arrow
+          	 a
+          	 a
          )
+        )
    )
   (
-   case
-   (
-   x
-   send id
-   (
-    field
+    case
     (
-    x
-    r
+     x
+     send id
+     (
+      field
+      (
+      x
+      r
+      )
+     )
     )
-   )
-   )
   )
   (
-   case
-   (
-   patternRec 
-   (
+    case
+    (
+     (
        r
-       x
-   )
-   send id
-   (
-    x
-   )
-   )
+     	x
+     )
+     send id
+     (
+      x
+     )
+    )
   )
    class
    (
@@ -1953,11 +2186,11 @@
        (
           method self
           	(
-          	 case
-          	 (
-          	 _
-          	 self
-          	 )
+          	  case
+          	  (
+          	   _
+          	   self
+          	  )
           	)
           	poly
           	                      				 'a 
@@ -1965,6 +2198,7 @@
           	 a
           	 b
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
    )
    class
    (
@@ -1980,14 +2214,11 @@
           method num
           	  num
           method succ
-          	  brackets4 
+          	  num
+          	  +
           	  (
           	      num
-          	      +
-          	      (
-          	          num
-          	          1
-          	      )
+          	      1
           	  )
           method prev
           	  send switch
@@ -1995,40 +2226,55 @@
           	   self
           	  )
           	  (
-          	      <"~zero:","brackets"("fun"("multipleMatching"(["patternConstant"("emptyParenthesis"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"functionApplication"("valuePath"("valuePath"([],"failwith")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["constant"("stringLiteral"("\"zero\"")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-          	      <"~prev:","brackets"("fun"("multipleMatching"(["patternValueName"("x")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"valuePath"("valuePath"([],"x")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+          	      zero
+          	      (
+          	        case
+          	        (
+          	         ()
+          	         failwith
+          	         (
+          	             "zero"
+          	         )
+          	        )
+          	      )
+          	      prev
+          	      (
+          	        case
+          	        (
+          	         x
+          	         x
+          	        )
+          	      )
           	  )
           method switch
           	(
-          	 case
-          	 (
-          	   zero
-          	   (
-          	   case
-          	   (
-          	   prev
-          	   ifthenelse
-          	   (
-          	    if
+          	case
+          	  (
+          	    zero
           	    (
-          	     =
-          	     (
-          	         num
-          	         0
-          	     )
-          	    )
-          	    then
-          	    (
-          	     zero
-          	     (
-          	         ()
-          	     )
-          	    )
-          	    else
-          	    (
-          	     prev
-          	     (
-          	         brackets4 
+          	      case
+          	      (
+          	       prev
+          	       ifthenelse
+          	       (
+          	        if
+          	        (
+          	         =
+          	         (
+          	             num
+          	             0
+          	         )
+          	        )
+          	        then
+          	        (
+          	         zero
+          	         (
+          	             ()
+          	         )
+          	        )
+          	        else
+          	        (
+          	         prev
           	         (
           	             num
           	             -
@@ -2037,33 +2283,29 @@
           	                 1
           	             )
           	         )
-          	     )
-          	    ) 
-          	   )
-          	   )
-          	   )
-          	 )													
-          	)
+          	        ) 
+          	       )
+          	      )
+          	    )
+          	  )
+          	)													
           	poly
           	                      				 'a 
-          	 arrow2 
+          	 arrow
+          	 zero
+          	 arrow
+          	 unit
           	 (
-          	     zero
-          	     arrow
-          	     unit
-          	     (
-          	     )
-          	     a
-          	     arrow2 
-          	     (
-          	         prev
-          	         arrow
-          	         self
-          	         a
-          	         a
-          	     )
           	 )
+          	 a
+          	 arrow
+          	 prev
+          	 arrow
+          	 self
+          	 a
+          	 a
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    let
    (
@@ -2181,34 +2423,27 @@
           	)
           	poly
           	                      				 'b 
-          	 arrow2 
-          	 (
-          	     f
-          	     arrow
-          	     a
-          	     arrow
-          	     b
-          	     b
-          	     arrow2 
-          	     (
-          	         init
-          	         b
-          	         b
-          	     )
-          	 )
+          	 arrow
+          	 f
+          	 arrow
+          	 a
+          	 arrow
+          	 b
+          	 b
+          	 arrow
+          	 init
+          	 b
+          	 b
           method cons
           (
             case
           	(
           		a
-            	brackets4 
+            	l
+            	::
             	(
+            	    a
             	    l
-            	    ::
-            	    (
-            	        a
-            	        l
-            	    )
             	)
           	)
           )
@@ -2230,8 +2465,26 @@
            l
           )
           (
-              <"~f:","brackets"("fun"("multipleMatching"(["patternValueName"("x")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"patternValueName"("acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"infix3"("valuePath"("valuePath"([],"x")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"+","valuePath"("valuePath"([],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-              <"~init:","constant"("posInt"("0")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+              f
+              (
+              case
+                (
+                  x
+                  (
+                    case
+                    (
+                     acc
+                     +
+                     (
+                         x
+                         acc
+                     )
+                    )
+                  )
+                )
+              )													
+              init
+              0
           )
          )
     )
@@ -2252,8 +2505,26 @@
            l
           )
           (
-              <"~f:","brackets"("fun"("multipleMatching"(["anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"patternValueName"("acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"infix3"("valuePath"("valuePath"([],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"+","constant"("posInt"("1")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-              <"~init:","constant"("posInt"("0")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+              f
+              (
+              case
+                (
+                  _
+                  (
+                    case
+                    (
+                     acc
+                     +
+                     (
+                         acc
+                         1
+                     )
+                    )
+                  )
+                )
+              )													
+              init
+              0
           )
          )
     )
@@ -2282,8 +2553,28 @@
       		       l
       		      )
       		      (
-      		          <"~init:","valuePath"("valuePath"([],"l\'")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-      		          <"~f:","brackets"("fun"("multipleMatching"(["patternValueName"("x")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"patternValueName"("acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[],"functionApplication"("hash"("valuePath"("valuePath"([],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"cons")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["valuePath"("valuePath"([],"x")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+      		          init
+      		          l'
+      		          f
+      		          (
+      		          case
+      		            (
+      		              x
+      		              (
+      		                case
+      		                (
+      		                 acc
+      		                 send cons
+      		                 (
+      		                  acc
+      		                 )
+      		                 (
+      		                     x
+      		                 )
+      		                )
+      		              )
+      		            )
+      		          )													
       		      )
       		     )
       		)
@@ -2296,15 +2587,15 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-         unit
-         (
-         )
+        unit
+        (
+        )
    )
    class
    (
@@ -2317,18 +2608,23 @@
        (
           method x
           	(
-          	 case
-          	 (
-          	 _
-          	 ()
-          	 )
+          	  case
+          	  (
+          	   _
+          	   ()
+          	  )
           	)
           	poly
           	                      				 'a 
           	 arrow
           	  t
           	  (
-          	    <[<"A",[]>],"a">
+          	    a
+          	    (
+          	    	  A
+          	    	  (
+          	    	  )
+          	    )
           	  )
           	 unit
           	 (
@@ -2355,7 +2651,11 @@
      )
      class name = d
      class expr = 
-       <"x",[],["constant"("posInt"("0")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+       param5 
+       (
+           x
+           0
+       )
        ()
        class_structure
        (
@@ -2368,7 +2668,11 @@
      )
      class name = d
      class expr = 
-       <"x",[],["constant"("posInt"("0")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+       param5 
+       (
+           x
+           0
+       )
        ()
        class_structure
        (
@@ -2423,11 +2727,17 @@
             case
           	(
           		f
-          		x
-            	x
+          		(
+          			case
+          			(		
+            		   x
+            		   x
+          			)
+          		)
           	)
           )
        )
+       <"anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprHash1"("classPath"([],"numeral")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    class
    (
@@ -2448,21 +2758,27 @@
             case
           	(
           		f
-          		x
-            	send fold
-            	(
-            	 n
-            	)
-            	(
-            	    f
-            	    f
-            	    (
-            	        x
-            	    )
-            	)
+          		(
+          			case
+          			(		
+            		   x
+            		   send fold
+            		   (
+            		    n
+            		   )
+            		   (
+            		       f
+            		       f
+            		       (
+            		           x
+            		       )
+            		   )
+          			)
+          		)
           	)
           )
        )
+       <"anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprHash1"("classPath"([],"numeral")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    class_type
    (
@@ -2477,7 +2793,14 @@
       class_signature
       (
        poly
-       <"Node",["typexprConstr2"("typeConstr"([],"node_type")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+       (
+       	  Node
+       	  (
+       	  	node_type
+       	  	(
+       	  	)
+       	  )
+       )
       )
    )
    class
@@ -2500,8 +2823,19 @@
           	   )
           	poly
           	                      				 'a 
-          	 <[<"Node",["typexprConstr2"("typeConstr"([],"node_type")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>],"a">
+          	 a
+          	 (
+          	 	  Node
+          	 	  (
+          	 	  	node_type
+          	 	  	(
+          	 	  	)
+          	 	  )
+          	 )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
+       	class_type
+       	   node_type
    )
    class
    (
@@ -2522,6 +2856,7 @@
           	         )
           	     )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprHash1"("classPath"([],"node_type")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    type
    (  						
@@ -2534,18 +2869,18 @@
         (
         )
         kind =
-         (
-          bad
-          poly
-                                				 'a 
-            ref
-            (
-               option
-               (
-                 a
-               )
-            )
-         )
+        (
+         bad
+         poly
+                               				 'a 
+           ref
+           (
+              option
+              (
+                a
+              )
+           )
+        )
    )
    let
    (
@@ -2570,21 +2905,21 @@
         (
         )
         kind =
-         (
-          bad2
-          poly
-                                				 'a 
-            option
-            (
-               ref
-               (
-                  option
-                  (
-                    a
-                  )
-               )
-            )
-         )
+        (
+         bad2
+         poly
+                               				 'a 
+           option
+           (
+              ref
+              (
+                 option
+                 (
+                   a
+                 )
+              )
+           )
+        )
    )
    let
    (
@@ -2616,7 +2951,16 @@
       		  	m
       		  	poly
       		  	                      				 'a 
-      		  	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+      		  	 b
+      		  	 (
+      		  	  	p
+      		  	  	poly
+      		  	  	tuple
+      		  	  	(
+      		  	  	 a
+      		  	  	  b
+      		  	  	)
+      		  	 )
       		 )
       		(
       		 case
@@ -2643,7 +2987,18 @@
       		  	 tuple
       		  	 (
       		  	  a
-      		  	   <"typexprAngleBrackets"(["methodType"("p","polytype1"("star"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+      		  	   b
+      		  	   (
+      		  	    	p
+      		  	    	poly
+      		  	    	tuple
+      		  	    	(
+      		  	    	 int
+      		  	    	 (
+      		  	    	 )
+      		  	    	  b
+      		  	    	)
+      		  	   )
       		  	 )
       		 )
       		(
@@ -2663,13 +3018,18 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-         <[],[<"A",["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
+        (
+        	  A
+        	  (
+        	  	a
+        	  )
+        )
    )
    class
    (
@@ -2682,26 +3042,33 @@
        (
           method m
           	(
-          	 case
-          	 (
-          	 x
-          	 send m
-          	 (
-          	  self
-          	 )
-          	 (
-          	     x
-          	 )
-          	 )
+          	  case
+          	  (
+          	   x
+          	   send m
+          	   (
+          	    self
+          	   )
+          	   (
+          	       x
+          	   )
+          	  )
           	)
           	poly
           	                      				 'a 
           	 arrow
-          	 <["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"a">
+          	 a
+          	 (
+          	 	   t
+          	 	   (
+          	 	     a
+          	 	   )
+          	 )
           	 unit
           	 (
           	 )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
    )
    class
    (
@@ -2738,11 +3105,18 @@
           	poly
           	                      				 'a 
           	 arrow
-          	 <["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"a">
+          	 a
+          	 (
+          	 	   t
+          	 	   (
+          	 	     a
+          	 	   )
+          	 )
           	 unit
           	 (
           	 )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
    )
    class
    (
@@ -2755,24 +3129,31 @@
        (
           method m
           	(
-          	 case
-          	 (
-          	 x
-          	 send m
-          	 (
-          	  self
-          	 )
-          	 (
-          	     x
-          	 )
-          	 )
+          	  case
+          	  (
+          	   x
+          	   send m
+          	   (
+          	    self
+          	   )
+          	   (
+          	       x
+          	   )
+          	  )
           	)
           	poly
           	                      				 'a 
           	 arrow
-          	 <["typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"a">
+          	 a
+          	 (
+          	 	   t
+          	 	   (
+          	 	     a
+          	 	   )
+          	 )
           	 a
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
    )
    class
    (
@@ -2785,11 +3166,11 @@
        (
           method m
           	(
-          	 case
-          	 (
-          	 x
-          	 A
-          	 )
+          	  case
+          	  (
+          	   x
+          	   A
+          	  )
           	)
           	poly
           	                      				 'a 
@@ -2798,7 +3179,12 @@
           	  (
           	    a
           	  )
-          	 <[<"A",[]>],"a">
+          	 a
+          	 (
+          	 	  A
+          	 	  (
+          	 	  )
+          	 )
        )
    )
    class
@@ -2839,28 +3225,28 @@
         type
         params=
         (
-          a
-          b
+         a
+         b
         )
         cstrs =
         (
         )
         kind =
-         (
-          	caseNil
-          	poly
-          	a
-          	caseCons
-          	poly
-          	arrow
-          	b
-          	arrow
-          	 list
-          	 (
-          	   b
-          	 )
-          	a
-         )
+        (
+         	caseNil
+         	poly
+         	a
+         	caseCons
+         	poly
+         	arrow
+         	b
+         	arrow
+         	 list
+         	 (
+         	   b
+         	 )
+         	a
+        )
    )
    type
    (  						
@@ -2868,24 +3254,24 @@
         type
         params=
         (
-         b
+        b
         )
         cstrs =
         (
         )
         kind =
-         (
-          	visit
-          	poly
-          	                      				 'a 
-          	 arrow
-          	  list_visitor
-          	     (
-          	      a
-          	 	 b				
-          	     ) 
-          	 a
-         )
+        (
+         	visit
+         	poly
+         	                      				 'a 
+         	 arrow
+         	  list_visitor
+         	     (
+         	      a
+         	 	 b				
+         	     ) 
+         	 a
+        )
    )
    class_type
    (
@@ -2919,18 +3305,22 @@
         (
         )
         kind =
-         (
-          f
-          poly
-                                				 'a  'b 
-           arrow
-           arrow
-           b
-           arrow
-           <"typexprHash1"("classPath"([],"ct")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
-           b
-           b
-         )
+        (
+         f
+         poly
+                               				 'a  'b 
+          arrow
+          arrow
+          b
+          arrow
+          a
+          typexprHash1 
+          (
+              ct
+          )
+          b
+          b
+        )
    )
    type
    (  						
@@ -2943,9 +3333,9 @@
         (
         )
         kind =
-         u
-         (
-         )
+        u
+        (
+        )
       u
         type
         params=
@@ -2955,9 +3345,9 @@
         (
         )
         kind =
-         t
-         (
-         )
+        t
+        (
+        )
    )
    class
    (
@@ -2969,10 +3359,17 @@
      class expr = 
        class_structure
        (
-          classConstraint 
+          t
           (
-              t
-              <"A",["typexprConstr1"("tagg"("t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+          	(
+          		  A
+          		  (
+          		  	 a
+          		  	 (
+          		  	   t
+          		  	 )
+          		  )
+          	)
           )
        )
    )
@@ -2987,42 +3384,17 @@
         (
         )
         kind =
-         <[],[<"A",["typexprConstr1"("typexprConstr2"("typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>]>
-   )
-   type
-   (  						
-      t
-        type
-        params=
         (
-          a
-          b
+        	  A
+        	  (
+        	  	 a
+        	  	 (
+        	  	   t
+        	  	   (
+        	  	   )
+        	  	 )
+        	  )
         )
-        cstrs =
-        (
-        )
-        kind =
-         typeConstraint 
-         (
-             a
-             b
-         )
-      u
-        type
-        params=
-        (
-          a
-          b
-        )
-        cstrs =
-        (
-        )
-        kind =
-          t
-             (
-              a
-         	 b				
-             ) 
    )
    type
    (  						
@@ -3031,27 +3403,33 @@
         params=
         (
          a
+         b
         )
         cstrs =
         (
+        type constraint
+        (
+        	a
+        	b
+        )
         )
         kind =
-         a
       u
         type
         params=
         (
+         a
+         b
         )
         cstrs =
         (
         )
         kind =
-          t
-          (
-            int
+         t
             (
-            )
-          )
+             a
+        	 b				
+            ) 
    )
    type
    (  						
@@ -3059,18 +3437,78 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-         typeConstraint 
+        a
+      u
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+         t
          (
-             a
-             int
-             (
-             )
+           int
+           (
+           )
+         )
+   )
+   type
+   (  						
+      t
+        type
+        params=
+        (
+        a
+        )
+        cstrs =
+        (
+        type constraint
+        (
+        	a
+        	int
+        	(
+        	)
+        )
+        )
+        kind =
+   )
+   type
+   (  						
+      u
+        type
+        params=
+        (
+        a
+        )
+        cstrs =
+        (
+        )
+        kind =
+        a
+      v
+        type
+        params=
+        (
+        a
+        )
+        cstrs =
+        (
+        )
+        kind =
+         t
+         (
+            u
+            (
+              a
+            )
          )
    )
    type
@@ -3079,67 +3517,36 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-         a
+        a
       v
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
+        type constraint
+        (
+        	a
+        	int
+        	(
+        	)
+        )
         )
         kind =
-          t
-          (
-             u
-             (
-               a
-             )
-          )
-   )
-   type
-   (  						
-      u
-        type
-        params=
-        (
-         a
-        )
-        cstrs =
-        (
-        )
-        kind =
-         a
-      v
-        type
-        params=
-        (
-         a
-        )
-        cstrs =
-        (
-        )
-        kind =
-          t
-          (
-             u
-             (
-               a
-             )
-          )
-         typeConstraint 
+         t
          (
-             a
-             int
-             (
-             )
+            u
+            (
+              a
+            )
          )
    )
    type
@@ -3153,9 +3560,9 @@
         (
         )
         kind =
-         int
-         (
-         )
+        int
+        (
+        )
    )
    type
    (  						
@@ -3163,21 +3570,52 @@
         type
         params=
         (
-         a
+        a
+        )
+        cstrs =
+        (
+        type constraint
+        (
+        	a
+        	g
+        	(
+        	)
+        )
+        )
+        kind =
+        unit
+        (
+        )
+   )
+   type
+   (  						
+      u
+        type
+        params=
+        (
+        a
         )
         cstrs =
         (
         )
         kind =
-         unit
+        a
+      v
+        type
+        params=
+        (
+        a
+        )
+        cstrs =
+        (
+        )
+        kind =
+         t
          (
-         )
-         typeConstraint 
-         (
-             a
-             g
-             (
-             )
+            u
+            (
+              a
+            )
          )
    )
    type
@@ -3186,106 +3624,111 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-         a
+        a
       v
         type
         params=
         (
-         a
+        a
+        )
+        cstrs =
+        (
+        type constraint
+        (
+        	a
+        	int
+        	(
+        	)
+        )
+        )
+        kind =
+         t
+         (
+            u
+            (
+              a
+            )
+         )
+   )
+   type
+   (  						
+      u
+        type
+        params=
+        (
+        a
         )
         cstrs =
         (
         )
         kind =
+        (
+         	m
+         	poly
+         	 v
+         	 (
+         	   a
+         	 )
+        )
+      v
+        type
+        params=
+        (
+        a
+        )
+        cstrs =
+        (
+        )
+        kind =
+         u
+         (
+            list
+            (
+              a
+            )
+         )
+   )
+   type
+   (  						
+      t
+        type
+        params=
+        (
+        a
+        )
+        cstrs =
+        (
+        )
+        kind =
+        a
+   )
+   type
+   (  						
+      u
+        type
+        params=
+        (
+        a
+        )
+        cstrs =
+        (
+        )
+        kind =
+        (
+        A
+        (
           t
           (
-             u
-             (
-               a
-             )
+            a
           )
-   )
-   type
-   (  						
-      u
-        type
-        params=
-        (
-         a
         )
-        cstrs =
-        (
         )
-        kind =
-         a
-      v
-        type
-        params=
-        (
-         a
-        )
-        cstrs =
-        (
-        )
-        kind =
-          t
-          (
-             u
-             (
-               a
-             )
-          )
-         typeConstraint 
-         (
-             a
-             int
-             (
-             )
-         )
-   )
-   type
-   (  						
-      u
-        type
-        params=
-        (
-         a
-        )
-        cstrs =
-        (
-        )
-        kind =
-         (
-          	m
-          	poly
-          	 v
-          	 (
-          	   a
-          	 )
-         )
-      v
-        type
-        params=
-        (
-         a
-        )
-        cstrs =
-        (
-        )
-        kind =
-          u
-          (
-             list
-             (
-               a
-             )
-          )
    )
    type
    (  						
@@ -3293,68 +3736,36 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-         a
-   )
-   type
-   (  						
-      u
-        type
-        params=
         (
-         a
+         	a
+         	poly
+         	a
         )
-        cstrs =
-        (
-        )
-        kind =
-         (
-         A
-         (
-           t
-           (
-             a
-           )
-         )
-         )
-   )
-   type
-   (  						
-      t
-        type
-        params=
-        (
-         a
-        )
-        cstrs =
-        (
-        )
-        kind =
-         (
-          	a
-          	poly
-          	a
-         )
    )
   (
-   case
-   (
-   x
-   <"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
-   (
-   x
-   :
-    t
+    case
     (
-      b
+     x
+     a
+      t
+      (
+        a
+      )
+     (
+     x
+     :
+      t
+      (
+        b
+      )
+     )
     )
-   )
-   )
   )
    type
    (  						
@@ -3367,7 +3778,11 @@
         (
         )
         kind =
-         <"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+        a
+         t
+         (
+           a
+         )
    )
    type
    (  						
@@ -3380,14 +3795,14 @@
         (
         )
         kind =
-         (
-         A
-         (
-         )
-         B
-         (
-         )
-         )
+        (
+        A
+        (
+        )
+        B
+        (
+        )
+        )
    )
   (
    case
@@ -3638,51 +4053,72 @@
         type
         params=
         (
-          a
-          b
+         a
+         b
         )
         cstrs =
         (
+        type constraint
+        (
+        	a
+        	(
+        		  B
+        		  (
+        		  	b
+        		  	 b
+        		  	    (
+        		  	     a
+        		  		 b				
+        		  	    ) 
+        		  )
+        	)
+        )
         )
         kind =
-         arrow
-         a
-         unit
-         (
-         )
-         typeConstraint 
-         (
-             a
-             <"B",[<"typeExprBrackets2"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"([],"b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">]>
-         )
+        arrow
+        a
+        unit
+        (
+        )
       b
         type
         params=
         (
-          a
-          b
+         a
+         b
         )
         cstrs =
         (
+        type constraint
+        (
+        	b
+        	(
+        		  A
+        		  (
+        		  	a
+        		  	 a
+        		  	    (
+        		  	     a
+        		  		 b				
+        		  	    ) 
+        		  )
+        	)
+        )
         )
         kind =
-         arrow
-         b
-         unit
-         (
-         )
-         typeConstraint 
-         (
-             b
-             <"A",[<"typeExprBrackets2"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"typeConstr"([],"a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">]>
-         )
+        arrow
+        b
+        unit
+        (
+        )
    )
    class_type
    (
      class_type_declaration
      params = 
      (
-      "ab"
+       "a"
+       "b"
      ) 
      name = a
      expr =
@@ -3691,7 +4127,12 @@
       class_signature
       (
        poly
-       <<["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"b">
+       b
+       b
+       (
+         a
+         b
+       )
        poly
         a
            (
@@ -3702,7 +4143,8 @@
      class_type_declaration
      params = 
      (
-      "ab"
+       "a"
+       "b"
      ) 
      name = b
      expr =
@@ -3711,7 +4153,12 @@
       class_signature
       (
        poly
-       <<["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,"a">
+       a
+       a
+       (
+         a
+         b
+       )
        poly
         b
            (
@@ -3725,7 +4172,7 @@
      class_type_declaration
      params = 
      (
-      "b"
+       "b"
      ) 
      name = ca
      expr =
@@ -3743,7 +4190,7 @@
      class_type_declaration
      params = 
      (
-      "a"
+       "a"
      ) 
      name = cb
      expr =
@@ -3767,7 +4214,14 @@
         (
         )
         kind =
-         <"typexprConstr1"("typexprConstr1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"ca")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"cb")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+        b
+         cb
+         (
+            ca
+            (
+              b
+            )
+         )
    )
    class
    (
@@ -3794,6 +4248,7 @@
              method m
              	  1
           )
+          <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr2"("typeConstr"([],"c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
          )
     )
    )
@@ -3814,6 +4269,7 @@
              	   self
              	  )
           )
+          <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr2"("typeConstr"([],"c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
          )
     )
    )
@@ -3850,6 +4306,7 @@
              method m
              	  2
           )
+          <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprConstr2"("typeConstr"([],"c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
          )
     )
    )
@@ -3862,20 +4319,20 @@
      	  ()
           class_structure
           (
-             classConstraint 
+             s
              (
-                 s
-                 (
-                  	n
-                  	poly
-                  	int
-                  	(
-                  	)
-                 )
+             	(
+             	 	n
+             	 	poly
+             	 	int
+             	 	(
+             	 	)
+             	)
              )
              method m
              	  1
           )
+          <"anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
          )
     )
    )
@@ -3898,7 +4355,9 @@
           	     method m
           	     	  self
           	  )
+          	  <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
        )
+       <"anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    let
    (
@@ -3915,28 +4374,68 @@
         	     method m
         	     	  self
         	  )
+        	  <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
      )
+     <"anyPattern"()[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
   (
-   case
-   (
-   x
-   <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["b"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
-   (
-   x
-   :
-   (
-    	m
-    	poly
-    	                      				 'a 
-    	 tuple
-    	 (
-    	  a
-    	   <"typexprAngleBrackets"(["methodType"("m","polytype2"(["b"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
-    	 )
-   )
-   )
-   )
+    case
+    (
+     x
+     foo
+     (
+      	m
+      	poly
+      	                      				 'a 
+      	 tuple
+      	 (
+      	  a
+      	   (
+      	    	m
+      	    	poly
+      	    	                      				 'b 
+      	    	 tuple
+      	    	 (
+      	    	  a
+      	    	   foo
+      	    	 )
+      	   )
+      	 )
+     )
+     (
+     x
+     :
+     (
+      	m
+      	poly
+      	                      				 'a 
+      	 tuple
+      	 (
+      	  a
+      	   bar
+      	   (
+      	    	m
+      	    	poly
+      	    	                      				 'b 
+      	    	 tuple
+      	    	 (
+      	    	  a
+      	    	   (
+      	    	    	m
+      	    	    	poly
+      	    	    	                      				 'c 
+      	    	    	 tuple
+      	    	    	 (
+      	    	    	  c
+      	    	    	   bar
+      	    	    	 )
+      	    	   )
+      	    	 )
+      	   )
+      	 )
+     )
+     )
+    )
   )
    type
    (  						
@@ -3944,25 +4443,25 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-         (
-          	m
-          	poly
-          	                      				 'b 
-          	 tuple
-          	 (
-          	  a
-          	    foo
-          	    (
-          	      a
-          	    )
-          	 )
-         )
+        (
+         	m
+         	poly
+         	                      				 'b 
+         	 tuple
+         	 (
+         	  a
+         	    foo
+         	    (
+         	      a
+         	    )
+         	 )
+        )
    )
    type
    (  						
@@ -3975,19 +4474,19 @@
         (
         )
         kind =
-         (
-          	m
-          	poly
-          	                      				 'a 
-          	 tuple
-          	 (
-          	  a
-          	    foo
-          	    (
-          	      a
-          	    )
-          	 )
-         )
+        (
+         	m
+         	poly
+         	                      				 'a 
+         	 tuple
+         	 (
+         	  a
+         	    foo
+         	    (
+         	      a
+         	    )
+         	 )
+        )
    )
    type
    (  						
@@ -3995,34 +4494,34 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-         (
-          	m
-          	poly
-          	                      				 'b 
-          	 tuple
-          	 (
-          	  a
-          	   (
-          	    	m
-          	    	poly
-          	    	                      				 'c 
-          	    	 tuple
-          	    	 (
-          	    	  c
-          	    	    bar
-          	    	    (
-          	    	      a
-          	    	    )
-          	    	 )
-          	   )
-          	 )
-         )
+        (
+         	m
+         	poly
+         	                      				 'b 
+         	 tuple
+         	 (
+         	  a
+         	   (
+         	    	m
+         	    	poly
+         	    	                      				 'c 
+         	    	 tuple
+         	    	 (
+         	    	  c
+         	    	    bar
+         	    	    (
+         	    	      a
+         	    	    )
+         	    	 )
+         	   )
+         	 )
+        )
    )
    type
    (  						
@@ -4035,19 +4534,19 @@
         (
         )
         kind =
-         (
-          	m
-          	poly
-          	                      				 'a 
-          	 tuple
-          	 (
-          	  a
-          	    bar
-          	    (
-          	      a
-          	    )
-          	 )
-         )
+        (
+         	m
+         	poly
+         	                      				 'a 
+         	 tuple
+         	 (
+         	  a
+         	    bar
+         	    (
+         	      a
+         	    )
+         	 )
+        )
    )
    let
    (
@@ -4070,67 +4569,177 @@
     )
    )
   (
-   case
-   (
-   x
-   (
-    	m
-    	poly
-    	                      				 'a 
-    	 tuple
-    	 (
-    	  a
-    	   <"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
-    	 )
-   )
-   (
-   x
-   :
-   <"typexprAngleBrackets"(["methodType"("m","polytype2"(["b"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
-   )
-   )
+    case
+    (
+     x
+     (
+      	m
+      	poly
+      	                      				 'a 
+      	 tuple
+      	 (
+      	  a
+      	   foo
+      	   tuple
+      	   (
+      	    a
+      	     (
+      	      	m
+      	      	poly
+      	      	                      				 'a 
+      	      	 tuple
+      	      	 (
+      	      	  a
+      	      	   foo
+      	      	 )
+      	     )
+      	   )
+      	 )
+     )
+     (
+     x
+     :
+     bar
+     (
+      	m
+      	poly
+      	                      				 'b 
+      	 tuple
+      	 (
+      	  b
+      	   tuple
+      	   (
+      	    b
+      	     (
+      	      	m
+      	      	poly
+      	      	                      				 'c 
+      	      	 tuple
+      	      	 (
+      	      	  c
+      	      	   tuple
+      	      	   (
+      	      	    c
+      	      	     bar
+      	      	   )
+      	      	 )
+      	     )
+      	   )
+      	 )
+     )
+     )
+    )
   )
   (
-   case
-   (
-   x
-   (
-    	m
-    	poly
-    	                      				 'a 
-    	 tuple
-    	 (
-    	  a
-    	   <"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
-    	 )
-   )
-   (
-   x
-   :
-   <"typexprAngleBrackets"(["methodType"("m","polytype2"(["b"],"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
-   )
-   )
+    case
+    (
+     x
+     (
+      	m
+      	poly
+      	                      				 'a 
+      	 tuple
+      	 (
+      	  a
+      	   foo
+      	   tuple
+      	   (
+      	    a
+      	     (
+      	      	m
+      	      	poly
+      	      	                      				 'a 
+      	      	 tuple
+      	      	 (
+      	      	  a
+      	      	   foo
+      	      	 )
+      	     )
+      	   )
+      	 )
+     )
+     (
+     x
+     :
+     bar
+     (
+      	m
+      	poly
+      	                      				 'b 
+      	 tuple
+      	 (
+      	  b
+      	   tuple
+      	   (
+      	    b
+      	     (
+      	      	m
+      	      	poly
+      	      	                      				 'c 
+      	      	 tuple
+      	      	 (
+      	      	  c
+      	      	   tuple
+      	      	   (
+      	      	    b
+      	      	     bar
+      	      	   )
+      	      	 )
+      	     )
+      	   )
+      	 )
+     )
+     )
+    )
   )
   (
-   case
-   (
-   x
-   <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
-   (
-   x
-   :
-   (
-    	m
-    	poly
-    	                      				 'b 
-    	 tuple
-    	 (
-    	  b
-    	   <"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
-    	 )
-   )
-   )
-   )
+    case
+    (
+     x
+     foo
+     (
+      	m
+      	poly
+      	                      				 'a 
+      	 tuple
+      	 (
+      	  a
+      	   tuple
+      	   (
+      	    a
+      	     foo
+      	   )
+      	 )
+     )
+     (
+     x
+     :
+     (
+      	m
+      	poly
+      	                      				 'b 
+      	 tuple
+      	 (
+      	  b
+      	   bar
+      	   tuple
+      	   (
+      	    b
+      	     (
+      	      	m
+      	      	poly
+      	      	                      				 'c 
+      	      	 tuple
+      	      	 (
+      	      	  c
+      	      	   bar
+      	      	 )
+      	     )
+      	   )
+      	 )
+     )
+     )
+    )
   )
    let
    (
@@ -4148,9 +4757,33 @@
              	                      				 'a 
              	 arrow
              	 a
-             	 <"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"arrow1"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
+             	 bar
+             	 tuple
+             	 (
+             	  a
+             	   (
+             	    	m
+             	    	poly
+             	    	                      				 'c 
+             	    	 arrow
+             	    	 c
+             	    	 bar
+             	   )
+             	 )
             )
-            <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeExprBrackets"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
+            foo
+            (
+             	m
+             	poly
+             	                      				 'a 
+             	 arrow
+             	 a
+             	 tuple
+             	 (
+             	  a
+             	   foo
+             	 )
+            )
           )
          )
     )
@@ -4165,7 +4798,21 @@
       case
           (
       	  x
-      	  <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
+      	  foo
+      	  (
+      	   	m
+      	   	poly
+      	   	                      				 'a 
+      	   	 tuple
+      	   	 (
+      	   	  a
+      	   	   tuple
+      	   	   (
+      	   	    a
+      	   	     foo
+      	   	   )
+      	   	 )
+      	  )
            ()
           )
      )
@@ -4183,7 +4830,21 @@
       	 tuple
       	 (
       	  b
-      	   <"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
+      	   bar
+      	   tuple
+      	   (
+      	    b
+      	     (
+      	      	m
+      	      	poly
+      	      	                      				 'c 
+      	      	 tuple
+      	      	 (
+      	      	  c
+      	      	   bar
+      	      	 )
+      	     )
+      	   )
       	 )
      )
      unit
@@ -4206,7 +4867,21 @@
          (
          )
          kind =
-          <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typeExprBrackets"("star"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("foo")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"foo">
+         foo
+         (
+          	m
+          	poly
+          	                      				 'a 
+          	 tuple
+          	 (
+          	  a
+          	   tuple
+          	   (
+          	    a
+          	     foo
+          	   )
+          	 )
+         )
     )
     )
     signature
@@ -4222,16 +4897,30 @@
           (
           )
           kind =
-           (
-            	m
-            	poly
-            	                      				 'b 
-            	 tuple
-            	 (
-            	  b
-            	   <"star"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprAngleBrackets"(["methodType"("m","polytype2"(["c"],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("bar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"bar">
-            	 )
-           )
+          (
+           	m
+           	poly
+           	                      				 'b 
+           	 tuple
+           	 (
+           	  b
+           	   bar
+           	   tuple
+           	   (
+           	    b
+           	     (
+           	      	m
+           	      	poly
+           	      	                      				 'c 
+           	      	 tuple
+           	      	 (
+           	      	  c
+           	      	   bar
+           	      	 )
+           	     )
+           	   )
+           	 )
+          )
      )
     )
    module  M
@@ -4243,15 +4932,15 @@
          type
          params=
          (
-          a
+         a
          )
          cstrs =
          (
          )
          kind =
-          int
-          (
-          )
+         int
+         (
+         )
     )
     type
     (  						
@@ -4264,13 +4953,13 @@
          (
          )
          kind =
-          (
-           	m
-           	poly
-           	int
-           	(
-           	)
-          )
+         (
+          	m
+          	poly
+          	int
+          	(
+          	)
+         )
     )
     )
     signature
@@ -4281,7 +4970,7 @@
           type
           params=
           (
-           a
+          a
           )
           cstrs =
           (
@@ -4299,15 +4988,15 @@
           (
           )
           kind =
-           (
-            	m
-            	poly
-            	                      				 'a 
-            	  t
-            	  (
-            	    a
-            	  )
-           )
+          (
+           	m
+           	poly
+           	                      				 'a 
+           	  t
+           	  (
+           	    a
+           	  )
+          )
      )
     )
    module  M
@@ -4319,15 +5008,15 @@
          type
          params=
          (
-          a
+         a
          )
          cstrs =
          (
          )
          kind =
-          int
-          (
-          )
+         int
+         (
+         )
     )
     let
     (
@@ -4359,7 +5048,7 @@
           type
           params=
           (
-           a
+          a
           )
           cstrs =
           (
@@ -4393,15 +5082,15 @@
          type
          params=
          (
-          a
+         a
          )
          cstrs =
          (
          )
          kind =
-          int
-          (
-          )
+         int
+         (
+         )
     )
     let
     (
@@ -4426,7 +5115,7 @@
           type
           params=
           (
-           a
+          a
           )
           cstrs =
           (
@@ -4469,7 +5158,21 @@
       		            brackets2 
       		            (
       		                x
-      		                <"typexprAngleBrackets"(["methodType"("m","polytype2"(["a"],"arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"star"("tagg"("c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[[]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"c">
+      		                c
+      		                (
+      		                 	m
+      		                 	poly
+      		                 	                      				 'a 
+      		                 	 arrow
+      		                 	 a
+      		                 	 tuple
+      		                 	 (
+      		                 	  c
+      		                 	   typexprEmptyAngleBrackets 
+      		                 	   (
+      		                 	   )
+      		                 	 )
+      		                )
       		            )
       		        )
       		      ;
@@ -4480,7 +5183,21 @@
       		              brackets2 
       		              (
       		                  y
-      		                  <"typexprAngleBrackets"(["methodType"("m","polytype2"(["b"],"arrow1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"star"("tagg"("d")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[[]])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"d">
+      		                  d
+      		                  (
+      		                   	m
+      		                   	poly
+      		                   	                      				 'b 
+      		                   	 arrow
+      		                   	 b
+      		                   	 tuple
+      		                   	 (
+      		                   	  d
+      		                   	   typexprEmptyAngleBrackets 
+      		                   	   (
+      		                   	   )
+      		                   	 )
+      		                  )
       		              )
       		          )
       		        ;
@@ -4507,7 +5224,14 @@
         (
         )
         kind =
-         <[],[<"A",[]>,<"B",[]>]>
+        (
+        	  A
+        	  (
+        	  )
+        	  B
+        	  (
+        	  )
+        )
    )
    type
    (  						
@@ -4520,25 +5244,27 @@
         (
         )
         kind =
-         t
-         (
-         )
+        (
+        	  t
+        	  (
+        	  )
+        )
    )
   (
-   case
-   (
-   x
-   (
+    case
+    (
      x
-     :
-     t
      (
+       x
+       :
+       t
+       (
+       )
+       v
+       (
+       )
      )
-     v
-     (
-     )
-   )
-   )
+    )
   )
    type
    (  						
@@ -4551,39 +5277,49 @@
         (
         )
         kind =
-         <[],["typexprConstr2"("typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>
+        (
+        	polymorphicVariantType3 
+        	(
+        	    tagSpecFull2 
+        	    (
+        	        t
+        	        (
+        	        )
+        	    )
+        	)
+        )
    )
   (
-   case
-   (
-   x
-   (
+    case
+    (
      x
-     :
-     u
      (
+       x
+       :
+       u
+       (
+       )
+       v
+       (
+       )
      )
-     v
-     (
-     )
-   )
-   )
+    )
   )
   (
-   case
-   (
-   x
-   (
+    case
+    (
      x
-     :
-     v
      (
+       x
+       :
+       v
+       (
+       )
+       u
+       (
+       )
      )
-     u
-     (
-     )
-   )
-   )
+    )
   )
    type
    (  						
@@ -4596,23 +5332,33 @@
         (
         )
         kind =
-         <[],["typexprConstr2"("typeConstr"([],"t")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>
+        (
+        	polymorphicVariantType3 
+        	(
+        	    tagSpecFull2 
+        	    (
+        	        t
+        	        (
+        	        )
+        	    )
+        	)
+        )
    )
   (
-   case
-   (
-   x
-   (
+    case
+    (
      x
-     :
-     u
      (
+       x
+       :
+       u
+       (
+       )
+       v
+       (
+       )
      )
-     v
-     (
-     )
-   )
-   )
+    )
   )
    type
    (  						
@@ -4625,13 +5371,13 @@
         (
         )
         kind =
-         (
-          	x
-          	poly
-          	p
-          	(
-          	)
-         )
+        (
+         	x
+         	poly
+         	p
+         	(
+         	)
+        )
    )
    type
    (  						
@@ -4644,45 +5390,45 @@
         (
         )
         kind =
-         (
-          	x
-          	poly
-          	p
-          	(
-          	)
-         )
+        (
+         	x
+         	poly
+         	p
+         	(
+         	)
+        )
    )
   (
-   case
-   (
-   x
-   (
+    case
+    (
      x
-     :
-     q
      (
+       x
+       :
+       q
+       (
+       )
+       p
+       (
+       )
      )
-     p
-     (
-     )
-   )
-   )
+    )
   )
   (
-   case
-   (
-   x
-   (
+    case
+    (
      x
-     :
-     p
      (
+       x
+       :
+       p
+       (
+       )
+       q
+       (
+       )
      )
-     q
-     (
-     )
-   )
-   )
+    )
   )
    let
    (
@@ -4699,7 +5445,14 @@
              	poly
              	                      				 'a 
              	 arrow
-             	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+             	 a
+             	 (
+             	  	p
+             	  	poly
+             	  	int
+             	  	(
+             	  	)
+             	 )
              	 int
              	 (
              	 )
@@ -4709,7 +5462,19 @@
              	poly
              	                      				 'b 
              	 arrow
-             	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"methodType"("q","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+             	 b
+             	 (
+             	  	p
+             	  	poly
+             	  	int
+             	  	(
+             	  	)
+             	  	q
+             	  	poly
+             	  	int
+             	  	(
+             	  	)
+             	 )
              	 int
              	 (
              	 )
@@ -4733,7 +5498,18 @@
              	poly
              	                      				 'a 
              	 arrow
-             	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("typexprAngleBrackets"(["methodType"("a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+             	 a
+             	 (
+             	  	p
+             	  	poly
+             	  	(
+             	  	 	a
+             	  	 	poly
+             	  	 	int
+             	  	 	(
+             	  	 	)
+             	  	)
+             	 )
              	 int
              	 (
              	 )
@@ -4743,7 +5519,23 @@
              	poly
              	                      				 'b 
              	 arrow
-             	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("typexprAngleBrackets"(["methodType"("a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"methodType"("b","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+             	 b
+             	 (
+             	  	p
+             	  	poly
+             	  	(
+             	  	 	a
+             	  	 	poly
+             	  	 	int
+             	  	 	(
+             	  	 	)
+             	  	 	b
+             	  	 	poly
+             	  	 	int
+             	  	 	(
+             	  	 	)
+             	  	)
+             	 )
              	 int
              	 (
              	 )
@@ -4767,7 +5559,23 @@
              	poly
              	                      				 'a 
              	 arrow
-             	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("typexprAngleBrackets"(["methodType"("a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"methodType"("b","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"a">
+             	 a
+             	 (
+             	  	p
+             	  	poly
+             	  	(
+             	  	 	a
+             	  	 	poly
+             	  	 	int
+             	  	 	(
+             	  	 	)
+             	  	 	b
+             	  	 	poly
+             	  	 	int
+             	  	 	(
+             	  	 	)
+             	  	)
+             	 )
              	 int
              	 (
              	 )
@@ -4777,7 +5585,18 @@
              	poly
              	                      				 'b 
              	 arrow
-             	 <"typexprAngleBrackets"(["methodType"("p","polytype1"("typexprAngleBrackets"(["methodType"("a","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[<>])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"b">
+             	 b
+             	 (
+             	  	p
+             	  	poly
+             	  	(
+             	  	 	a
+             	  	 	poly
+             	  	 	int
+             	  	 	(
+             	  	 	)
+             	  	)
+             	 )
              	 int
              	 (
              	 )
@@ -4841,13 +5660,41 @@
              	m
              	poly
              	                      				 'a 
-             	 <<[],[<"A",["typexprAngleBrackets"(["methodType"("p","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>],[]>,"a">
+             	 a
+             	 (
+             	 	polymorphicVariantType3 
+             	 	(
+             	 	    tagSpecFull1 
+             	 	    (
+             	 	        A
+             	 	        (
+             	 	         	p
+             	 	         	poly
+             	 	         	int
+             	 	         	(
+             	 	         	)
+             	 	        )
+             	 	    )
+             	 	)
+             	 )
             )
             (
              	m
              	poly
              	                      				 'a 
-             	 <<[],[<"A",[],[]>],[]>,"a">
+             	 a
+             	 (
+             	 	polymorphicVariantType3 
+             	 	(
+             	 	    tagSpecFull1 
+             	 	    (
+             	 	        A
+             	 	        typexprEmptyAngleBrackets 
+             	 	        (
+             	 	        )
+             	 	    )
+             	 	)
+             	 )
             )
           )
          )
@@ -4867,13 +5714,41 @@
              	m
              	poly
              	                      				 'a 
-             	 <<[],[<"A",[],[]>],[]>,"a">
+             	 a
+             	 (
+             	 	polymorphicVariantType3 
+             	 	(
+             	 	    tagSpecFull1 
+             	 	    (
+             	 	        A
+             	 	        typexprEmptyAngleBrackets 
+             	 	        (
+             	 	        )
+             	 	    )
+             	 	)
+             	 )
             )
             (
              	m
              	poly
              	                      				 'a 
-             	 <<[],[<"A",["typexprAngleBrackets"(["methodType"("p","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>],[]>,"a">
+             	 a
+             	 (
+             	 	polymorphicVariantType3 
+             	 	(
+             	 	    tagSpecFull1 
+             	 	    (
+             	 	        A
+             	 	        (
+             	 	         	p
+             	 	         	poly
+             	 	         	int
+             	 	         	(
+             	 	         	)
+             	 	        )
+             	 	    )
+             	 	)
+             	 )
             )
           )
          )
@@ -4916,17 +5791,17 @@
     )
    )
   (
-   case
-   (
-   x
-   send m
-   (
-    f
+    case
     (
-        x
+     x
+     send m
+     (
+      f
+      (
+          x
+      )
+     )
     )
-   )
-   )
   )
    let
    (
@@ -4968,20 +5843,20 @@
     )
    )
   (
-   case
-   (
-   x
-   send m
-   (
-    f
+    case
     (
-        (
-         x
-        	x
-        )
+     x
+     send m
+     (
+      f
+      (
+          (
+           x
+          	x
+          )
+      )
+     )
     )
-   )
-   )
   )
    let
    (
@@ -5026,21 +5901,21 @@
     )
    )
   (
-   case
-   (
-   x
-   send m
-   (
-    Array.get
+    case
     (
-     f
+     x
+     send m
      (
-         x
+      Array.get
+      (
+       f
+       (
+           x
+       )
+       0
+      )
      )
-     0
     )
-   )
-   )
   )
    class
    (
@@ -5053,11 +5928,11 @@
        (
           method id
           	(
-          	 case
-          	 (
-          	 x
-          	 x
-          	 )
+          	  case
+          	  (
+          	   x
+          	   x
+          	  )
           	)
           	poly
           	                      				 'a 
@@ -5077,12 +5952,12 @@
         (
         )
         kind =
-          option
-          (
-            c
-            (
-            )
-          )
+         option
+         (
+           c
+           (
+           )
+         )
    )
    let
    (
@@ -5159,33 +6034,33 @@
            (
              none
              (
-              case
-              (
-              y
-              sequence
-              (
-                ignore
-                (
-                    ::
-                     (
-                     y
-                     ::
-                     (
-                     (
-                     None
-                     :
-                     u
-                     (
-                     )
-                     )
-                     []
-                     ) 
-                     ) 
-                )
-              ;
+               case
+               (
                 y
-              )
-              )
+                sequence
+                (
+                  ignore
+                  (
+                      ::
+                       (
+                       y
+                       ::
+                       (
+                       (
+                       None
+                       :
+                       u
+                       (
+                       )
+                       )
+                       []
+                       ) 
+                       ) 
+                  )
+                ;
+                  y
+                )
+               )
              )
              (
                  None
@@ -5304,18 +6179,18 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-          option
-          (
-            c
-            (
-            )
-          )
+         option
+         (
+           c
+           (
+           )
+         )
    )
    let
    (
@@ -5359,7 +6234,6 @@
               :
                u
                (
-                 <>
                )
               )
               []
@@ -5390,13 +6264,12 @@
                               				 'a 
          arrow
          a
-         <>
         (
-         case
-         (
-         x
-         1
-         )
+          case
+          (
+           x
+           1
+          )
         )
     )  
     g
@@ -5417,29 +6290,29 @@
         type
         params=
         (
-         a
+        a
         )
         cstrs =
         (
         )
         kind =
-         (
-         Leaf
-         (
-          a
-         )
-         Node
-         (
-           t
-           (
-             tuple
-             (
+        (
+        Leaf
+        (
+         a
+        )
+        Node
+        (
+          t
+          (
+            tuple
+            (
+             a
               a
-               a
-             )
-           )
-         )
-         )
+            )
+          )
+        )
+        )
    )
    let
    (
@@ -5453,7 +6326,6 @@
           (
             a
           )
-         <>
         (
          case
          (
@@ -5489,7 +6361,6 @@
           (
             a
           )
-         <>
         (
          case
          (
@@ -5536,7 +6407,6 @@
           (
             a
           )
-         <>
         (
          case
          (
@@ -5572,7 +6442,6 @@
           (
             a
           )
-         <>
         (
          case
          (
@@ -5670,14 +6539,12 @@
         poly
                               				 'a 
          arrow
-         <>
-         <>
         (
-         case
-         (
-         x
-         x
-         )
+          case
+          (
+           x
+           x
+          )
         )
     ) 
    )
@@ -5688,7 +6555,19 @@
         zero
         poly
                               				 'a 
-         <[<"Int",["typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"B",["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>],"a">
+         a
+         (
+         	  Int
+         	  (
+         	  	int
+         	  	(
+         	  	)
+         	  )
+         	  B
+         	  (
+         	  	a
+         	  )
+         )
         Int
            0
     ) 
@@ -5700,7 +6579,19 @@
         zero
         poly
                               				 'a 
-         <<[],[<"Int",["typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>],[]>,"a">
+         a
+         (
+         	polymorphicVariantType3 
+         	(
+         	    tagSpecFull1 
+         	    (
+         	        Int
+         	        int
+         	        (
+         	        )
+         	    )
+         	)
+         )
         Int
            0
     ) 
@@ -5716,12 +6607,24 @@
         (
         )
         kind =
-         (
-          f
-          poly
-                                				 'a 
-           <[<"Int",["typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>,<"B",["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>],"a">
-         )
+        (
+         f
+         poly
+                               				 'a 
+          a
+          (
+          	  Int
+          	  (
+          	  	int
+          	  	(
+          	  	)
+          	  )
+          	  B
+          	  (
+          	  	a
+          	  )
+          )
+        )
    )
    let
    (
@@ -5744,12 +6647,24 @@
         (
         )
         kind =
-         (
-          f
-          poly
-                                				 'a 
-           <<[],[<"Int",["typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],[]>],[]>,"a">
-         )
+        (
+         f
+         poly
+                               				 'a 
+          a
+          (
+          	polymorphicVariantType3 
+          	(
+          	    tagSpecFull1 
+          	    (
+          	        Int
+          	        int
+          	        (
+          	        )
+          	    )
+          	)
+          )
+        )
    )
    let
    (
@@ -5772,11 +6687,11 @@
          a
          a
         (
-         case
-         (
-         x
-         x
-         )
+          case
+          (
+           x
+           x
+          )
         )
     )  
      neg
@@ -5820,44 +6735,44 @@
         (
         )
         kind =
+        (
+        A
+        (
+         int
          (
-         A
-         (
-          int
+         )
+        )
+        B
+        (
+          list
           (
+            tuple
+            (
+             int
+             (
+             )
+              t
+              (
+              )
+            )
           )
-         )
-         B
-         (
-           list
-           (
-             tuple
+        )
+        C
+        (
+          list
+          (
+            tuple
+            (
+             string
              (
-              int
+             )
+              t
               (
               )
-               t
-               (
-               )
-             )
-           )
-         )
-         C
-         (
-           list
-           (
-             tuple
-             (
-              string
-              (
-              )
-               t
-               (
-               )
-             )
-           )
-         )
-         )
+            )
+          )
+        )
+        )
    )
    let
    (
@@ -5907,7 +6822,6 @@
        poly
                              				 'a 
         arrow
-        <>
         arrow
          list
          (
@@ -5930,44 +6844,44 @@
            )
          )
        (
-        case
-        (
-        f
-        (
          case
          (
-           []
-           []
-         ) 
+          f
+          (
            case
            (
-            ::
-            (
-                (
-                 k
-                	v
-                )
-                tl
-            )
-            ::
-            (
-                (
-                 k
-                	transf
-                	(
-                	    f
-                	    v
-                	)
-                )
-                transf_alist
-                (
-                    f
-                    tl
-                )
-            )
-           )
-        )
-        )
+             []
+             []
+           ) 
+             case
+             (
+              ::
+              (
+                  (
+                   k
+                  	v
+                  )
+                  tl
+              )
+              ::
+              (
+                  (
+                   k
+                  	transf
+                  	(
+                  	    f
+                  	    v
+                  	)
+                  )
+                  transf_alist
+                  (
+                      f
+                      tl
+                  )
+              )
+             )
+          )
+         )
        )
    ) 
    )
@@ -5982,22 +6896,22 @@
         (
         )
         kind =
-         (
-          f
-          poly
-                                				 'a 
-            Lazy.t
-            (
-              arrow
-               list
-               (
-                 a
-               )
-              int
+        (
+         f
+         poly
+                               				 'a 
+           Lazy.t
+           (
+             arrow
+              list
               (
+                a
               )
-            )
-         )
+             int
+             (
+             )
+           )
+        )
    )
    let
    (
@@ -6029,16 +6943,16 @@
         (
         )
         kind =
-         (
-          f
-          poly
-                                				 'a 
-           arrow
-           a
-           unit
-           (
-           )
-         )
+        (
+         f
+         poly
+                               				 'a 
+          arrow
+          a
+          unit
+          (
+          )
+        )
    )
   let
   (
@@ -6047,7 +6961,10 @@
     (
      case
          (
-      		 x
+      		 param4 
+      		 (
+      		     x
+      		 )
       		(
       		 case
       		     (
@@ -6072,7 +6989,10 @@
     (
      case
          (
-      		 x
+      		 param4 
+      		 (
+      		     x
+      		 )
       		(
       		 case
       		     (
@@ -6099,13 +7019,13 @@
          type
          params=
          (
-          par
+         par
          )
          cstrs =
          (
          )
          kind =
-          par
+         par
     )
     let
     (
@@ -6203,19 +7123,18 @@
         (
         )
         kind =
+        (
+         foo
+         poly
+         int
          (
-          foo
-          poly
-          int
-          (
-          )
          )
+        )
    )
    let
    (
-     patternRec 
      (
-         foo
+       foo
      )
      (
      raise
@@ -6239,14 +7158,14 @@
         (
         )
         kind =
+        (
+        A
+        (
+         int
          (
-         A
-         (
-          int
-          (
-          )
          )
-         )
+        )
+        )
    )
    let
    (
@@ -6269,20 +7188,20 @@
         type
         params=
         (
-         x
+        x
         )
         cstrs =
         (
         )
         kind =
-         (
-          	f
-          	poly
-          	                      				 'y 
-          	  t
-          	  (
-          	    y
-          	  )
-         )
+        (
+         	f
+         	poly
+         	                      				 'y 
+         	  t
+         	  (
+         	    y
+         	  )
+        )
    )
 )

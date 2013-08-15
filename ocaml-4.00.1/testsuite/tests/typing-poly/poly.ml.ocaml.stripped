@@ -86,7 +86,9 @@
   fold
   )
   (
+    f
       +
+    init
       0
   )
   class
@@ -107,9 +109,8 @@
                     case
                     (
                       x
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               x
@@ -148,12 +149,12 @@
       class expr =
           class_structure
             (
-              Pcf_virt "add" Public ([23,564+2]..[23,564+34])
+              add 
                   poly
                     arrow
                       a
                       self
-              Pcf_virt "fold" Public ([24,599+2]..[24,599+63])
+              fold 
                   poly
                    'b
                     arrow
@@ -193,9 +194,8 @@
                     case
                     (
                       x
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               x
@@ -218,7 +218,7 @@
         case
         (
           l
-          Pexp_object          class_structure
+          class_structure
             (
               inherit
                   constr vlist
@@ -231,9 +231,8 @@
                   case
                   (
                     x
-                    Pexp_override
                     (
-                      <override> "l"
+                      l
                         ::
                           (
                             x
@@ -274,9 +273,8 @@
                     case
                     (
                       x
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               x
@@ -309,16 +307,15 @@
               (
                 l
                   l
-                Pcf_virt "add" Public ([50,1119+2]..[50,1119+24])
+                add 
                     poly
                 method add
                   (
                     case
                     (
                       x
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               x
@@ -327,7 +324,7 @@
                       )
                     )
                   )
-                                  Pcf_virt "fold" Public ([52,1178+2]..[52,1178+63])
+                                  fold 
                     poly
                      'b
                       arrow
@@ -370,9 +367,8 @@
                     case
                     (
                       x
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               x
@@ -381,7 +377,7 @@
                       )
                     )
                   )
-                                  Pcf_virt "fold" Public ([59,1376+2]..[59,1376+63])
+                                  fold 
                     poly
                      'b
                       arrow
@@ -395,7 +391,7 @@
                         init
                           b
                           b
-                Pcf_virt "fold2" Public ([60,1440+2]..[60,1440+64])
+                fold2 
                     poly
                      'b
                       arrow
@@ -423,13 +419,17 @@
                             self
                           )
                           (
+                            f
                               f
+                            init
                               send fold
                               (
                                 self
                               )
                               (
+                                f
                                   f
+                                init
                                   init
                               )
                           )
@@ -467,9 +467,8 @@
                     case
                     (
                       x
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               x
@@ -478,7 +477,7 @@
                       )
                     )
                   )
-                                  Pcf_virt "fold2" Public ([69,1714+2]..[69,1714+64])
+                                  fold2 
                     poly
                      'b
                       arrow
@@ -506,13 +505,17 @@
                             self
                           )
                           (
+                            f
                               f
+                            init
                               send fold
                               (
                                 self
                               )
                               (
+                                f
                                   f
+                                init
                                   init
                               )
                           )
@@ -537,7 +540,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "fold" Public ([75,1919+2]..[75,1919+63])
+              fold 
                   poly
                    'c
                     arrow
@@ -633,7 +636,9 @@
                                   tl
                                 )
                                 (
+                                  f
                                     f
+                                  init
                                     init
                                 )
                             )
@@ -698,7 +703,9 @@
                                   tl
                                 )
                                 (
+                                  f
                                     f
+                                  init
                                     init
                                 )
                             )
@@ -756,7 +763,9 @@
                               )
                             )
                             (
+                              f
                                 f
+                              init
                                 f
                                 (
                                     send hd
@@ -781,20 +790,19 @@
       class expr =
           class_structure
             (
-              Pcf_virt "m" Public ([110,2674+2]..[110,2674+52])
+              m 
                   poly
                    'a
                     arrow
-                      Ptyp_alias "a"
-                        Ptyp_variant closed=true
+                      a
                         (
-                          Rtag "A" true
+                          A
                             (
                             )
-                          Rtag "B" true
+                          B
                             (
                             )
-                          Rtag "C" true
+                          C
                             (
                             )
                         )
@@ -851,16 +859,15 @@
                     poly
                      'a
                       arrow
-                        Ptyp_alias "a"
-                          Ptyp_variant closed=true
+                        a
                           (
-                            Rtag "A" true
+                            A
                               (
                               )
-                            Rtag "B" true
+                            B
                               (
                               )
-                            Rtag "C" true
+                            C
                               (
                               )
                           )
@@ -885,15 +892,14 @@
               (
               )
             kind =
-                  Ptyp_variant closed=true
                   (
-                    Rtag "A" true
+                    A
                       (
                       )
-                    Rtag "B" true
+                    B
                       (
                       )
-                    Rtag "C" true
+                    C
                       (
                       )
                   )
@@ -910,15 +916,13 @@
             )
             case
             (
-              pat_type              v
+              v
               0
             )
           )
           :
               arrow
-                Ptyp_variant closed=true
                 (
-                  Rinherit
                        v
                       (
                       )
@@ -940,14 +944,12 @@
       class expr =
           class_structure
             (
-              Pcf_virt "m" Public ([125,3013+2]..[125,3013+47])
+              m 
                   poly
                    'a
                     arrow
-                      Ptyp_alias "a"
-                        Ptyp_variant closed=true
+                      a
                         (
-                          Rinherit
                                V.v
                               (
                               )
@@ -979,16 +981,15 @@
                         poly
                          'a
                           arrow
-                            Ptyp_alias "a"
-                              Ptyp_variant closed=true
+                            a
                               (
-                                Rtag "A" true
+                                A
                                   (
                                   )
-                                Rtag "B" true
+                                B
                                   (
                                   )
-                                Rtag "C" true
+                                C
                                   (
                                   )
                               )
@@ -1012,20 +1013,19 @@
           class expr =
               class_structure
                 (
-                  Pcf_virt "m" Public ([136,3227+4]..[136,3227+54])
+                  m 
                       poly
                        'a
                         arrow
-                          Ptyp_alias "a"
-                            Ptyp_variant closed=true
+                          a
                             (
-                              Rtag "A" true
+                              A
                                 (
                                 )
-                              Rtag "B" true
+                              B
                                 (
                                 )
-                              Rtag "C" true
+                              C
                                 (
                                 )
                             )
@@ -1120,7 +1120,9 @@
                           (
                           )
                         (
+                          x
                             x
+                          y
                             y
                         )
                     color
@@ -1159,11 +1161,11 @@
                     )
                   r
                     r
-                  Pcf_virt "distance" Public ([162,3686+2]..[162,3686+55])
+                  distance 
                       poly
                        'a
                         arrow
-                          Ptyp_alias "a"
+                          a
                             point
                             (
                             )
@@ -1266,7 +1268,9 @@
     p0
       new point
       (
+        x
           3
+        y
           5
       )
   )
@@ -1275,7 +1279,9 @@
     p1
       new point
       (
+        x
           10
+        y
           13
       )
   )
@@ -1284,8 +1290,11 @@
     cp
       new color_point
       (
+        x
           12
+        y
           -5
+        color
           "green"
       )
   )
@@ -1295,6 +1304,7 @@
       new circle
       (
           p0
+        r
           2
       )
   )
@@ -1381,7 +1391,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "id" Public ([181,4227+2]..[181,4227+34])
+              id 
                   poly
                    'a
                     arrow
@@ -1485,7 +1495,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "id" Public ([204,4550+2]..[204,4550+34])
+              id 
                   poly
                    'b
                     arrow
@@ -1512,7 +1522,7 @@
             a
             class_structure
               (
-                Pcf_virt "id" Public ([209,4638+2]..[209,4638+34])
+                id 
                     poly
                      'b
                       arrow
@@ -1540,7 +1550,7 @@
               (
                 x
                   x
-                Pcf_virt "id" Public ([215,4731+2]..[215,4731+34])
+                id 
                     poly
                      'a
                       arrow
@@ -1568,7 +1578,7 @@
               (
                 r
                   None
-                                  Pcf_virt "id" Public ([221,4836+2]..[221,4836+34])
+                                  id 
                     poly
                      'a
                       arrow
@@ -1614,7 +1624,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "m" Public ([229,4975+2]..[229,4975+42])
+              m 
                   poly
                    'a 'b
                     arrow
@@ -1780,11 +1790,11 @@
       class expr =
           class_structure
             (
-              Pcf_virt "m" Public ([244,5228+2]..[244,5228+50])
+              m 
                   poly
                    'a
                     arrow
-                      Ptyp_alias "a"
+                      a
                         id
                         (
                         )
@@ -1834,7 +1844,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "id" Public ([250,5356+2]..[250,5356+34])
+              id 
                   poly
                    'a
                     arrow
@@ -1935,7 +1945,7 @@
         (
         x
         :
-            Ptyp_alias "b"
+            b
               (
                   m
                     poly
@@ -1959,7 +1969,7 @@
         (
         x
         :
-            Ptyp_alias "b"
+            b
               (
                   m
                     poly
@@ -1989,7 +1999,7 @@
             (
             x
             :
-                Ptyp_alias "b"
+                b
                   (
                       m
                         poly
@@ -1997,7 +2007,7 @@
                           tuple
                           (
                               b
-                              Ptyp_alias "a"
+                              a
                                 (
                                     n
                                       poly
@@ -2014,12 +2024,12 @@
     case
     (
       x
-        Ptyp_alias "b"
+        b
           (
               p
                 poly
                  'a
-                  Ptyp_alias "a"
+                  a
                     (
                         m
                           poly
@@ -2039,12 +2049,12 @@
     case
     (
       x
-        Ptyp_alias "d"
+        d
           (
               m
                 poly
                  'a
-                  Ptyp_alias "c"
+                  c
                     tuple
                     (
                         a
@@ -2164,7 +2174,6 @@
   (
     case
     (
-      Ppat_record
       (
         r
           x
@@ -2213,9 +2222,8 @@
               method num
                 num
                               method succ
-                Pexp_override
                 (
-                  <override> "num"
+                  num
                     +
                     (
                         num
@@ -2228,6 +2236,7 @@
                   self
                 )
                 (
+                  zero
                     (
                       case
                       (
@@ -2238,6 +2247,7 @@
                         )
                       )
                     )
+                  prev
                     (
                       case
                       (
@@ -2276,9 +2286,8 @@
                           (
                               prev
                               (
-                                  Pexp_override
                                   (
-                                    <override> "num"
+                                    num
                                       -
                                       (
                                           num
@@ -2438,9 +2447,8 @@
                     case
                     (
                       a
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               a
@@ -2467,6 +2475,7 @@
             l
           )
           (
+            f
               (
                 case
                 (
@@ -2484,6 +2493,7 @@
                   )
                 )
               )
+            init
               0
           )
         )
@@ -2505,6 +2515,7 @@
             l
           )
           (
+            f
               (
                 case
                 (
@@ -2522,6 +2533,7 @@
                   )
                 )
               )
+            init
               0
           )
         )
@@ -2551,7 +2563,9 @@
                 l
               )
               (
+                init
                   l'
+                f
                   (
                     case
                     (
@@ -2615,10 +2629,9 @@
                       arrow
                          t
                         (
-                            Ptyp_alias "a"
-                              Ptyp_variant closed=false
+                            a
                               (
-                                Rtag "A" true
+                                A
                                   (
                                   )
                               )
@@ -2781,9 +2794,8 @@
           class_signature
             (
                   poly
-                    Ptyp_variant closed=false
                     (
-                      Rtag "Node" false
+                      Node
                         (
                              node_type
                             (
@@ -2813,10 +2825,9 @@
                     )
                       poly
                        'a
-                        Ptyp_alias "a"
-                          Ptyp_variant closed=false
+                        a
                           (
-                            Rtag "Node" false
+                            Node
                               (
                                    node_type
                                   (
@@ -2942,7 +2953,7 @@
                 m
                   poly
                    'a
-                    Ptyp_alias "b"
+                    b
                       (
                           p
                             poly
@@ -2978,7 +2989,7 @@
                     tuple
                     (
                         a
-                        Ptyp_alias "b"
+                        b
                           (
                               p
                                 poly
@@ -3015,9 +3026,8 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                       a
                   )
@@ -3049,10 +3059,8 @@
                     poly
                      'a
                       arrow
-                        Ptyp_alias "a"
-                          Ptyp_variant closed=false
+                        a
                           (
-                            Rinherit
                                  t
                                 (
                                     a
@@ -3098,10 +3106,8 @@
                     poly
                      'a
                       arrow
-                        Ptyp_alias "a"
-                          Ptyp_variant closed=false
+                        a
                           (
-                            Rinherit
                                  t
                                 (
                                     a
@@ -3138,10 +3144,8 @@
                     poly
                      'a
                       arrow
-                        Ptyp_alias "a"
-                          Ptyp_variant closed=false
+                        a
                           (
-                            Rinherit
                                  t
                                 (
                                     a
@@ -3174,10 +3178,9 @@
                         (
                             a
                         )
-                        Ptyp_alias "a"
-                          Ptyp_variant closed=false
+                        a
                           (
-                            Rtag "A" true
+                            A
                               (
                               )
                           )
@@ -3193,7 +3196,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "caseNil" Public ([387,8860+7]..[387,8860+34])
+              caseNil 
                   poly
                     a
             )
@@ -3204,7 +3207,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "visit" Public ([389,8922+7]..[389,8922+51])
+              visit 
                   poly
                    'a
                     arrow
@@ -3313,7 +3316,7 @@
                       arrow
                         b
                         arrow
-                          Ptyp_alias "a"
+                          a
                             ct
                             (
                             )
@@ -3358,11 +3361,9 @@
       class expr =
           class_structure
             (
-              Pcf_constr ([404,9318+22]..[404,9318+52])
                   t
-                  Ptyp_variant closed=false
                   (
-                    Rtag "A" false
+                    A
                       (
                            a
                           (
@@ -3383,9 +3384,8 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "A" false
+                A
                   (
                        a
                       (
@@ -3407,9 +3407,11 @@
           )
         cstrs =
           (
-            <constraint> ([408,9421+26]..[408,9421+33])
+            type constraint 
+            ( 
                 a
                 b
+            ) 
           )
         kind =
               u
@@ -3468,11 +3470,13 @@
           )
         cstrs =
           (
-            <constraint> ([414,9598+21]..[414,9598+29])
+            type constraint 
+            ( 
                 a
                  int
                 (
                 )
+            ) 
           )
         kind =
             )
@@ -3528,11 +3532,13 @@
           )
         cstrs =
           (
-            <constraint> ([416,9665+44]..[416,9665+52])
+            type constraint 
+            ( 
                 a
                  int
                 (
                 )
+            ) 
           )
         kind =
                t
@@ -3568,11 +3574,13 @@
           )
         cstrs =
           (
-            <constraint> ([420,9764+28]..[420,9764+34])
+            type constraint 
+            ( 
                 a
                  g
                 (
                 )
+            ) 
           )
         kind =
                unit
@@ -3631,11 +3639,13 @@
           )
         cstrs =
           (
-            <constraint> ([422,9836+44]..[422,9836+52])
+            type constraint 
+            ( 
                 a
                  int
                 (
                 )
+            ) 
           )
         kind =
                t
@@ -3742,7 +3752,7 @@
     case
     (
       x
-        Ptyp_alias "a"
+        a
            t
           (
               a
@@ -3768,7 +3778,7 @@
           (
           )
         kind =
-              Ptyp_alias "a"
+              a
                  t
                 (
                     a
@@ -4048,13 +4058,13 @@
           )
         cstrs =
           (
-            <constraint> ([451,10713+40]..[451,10713+71])
+            type constraint 
+            ( 
                 a
-                Ptyp_variant closed=false
                 (
-                  Rtag "B" false
+                  B
                     (
-                        Ptyp_alias "b"
+                        b
                            b
                           (
                               a
@@ -4062,7 +4072,8 @@
                           )
                     )
                 )
-                          )
+                            ) 
+          )
         kind =
               arrow
                 a
@@ -4078,13 +4089,13 @@
           )
         cstrs =
           (
-            <constraint> ([452,10785+40]..[452,10785+71])
+            type constraint 
+            ( 
                 b
-                Ptyp_variant closed=false
                 (
-                  Rtag "A" false
+                  A
                     (
-                        Ptyp_alias "a"
+                        a
                            a
                           (
                               a
@@ -4092,7 +4103,8 @@
                           )
                     )
                 )
-                          )
+                            ) 
+          )
         kind =
               arrow
                 b
@@ -4115,7 +4127,7 @@
           class_signature
             (
                   poly
-                    Ptyp_alias "b"
+                    b
                       b
                       (
                           a
@@ -4141,7 +4153,7 @@
           class_signature
             (
                   poly
-                    Ptyp_alias "a"
+                    a
                       a
                       (
                           a
@@ -4212,7 +4224,7 @@
           (
           )
         kind =
-              Ptyp_alias "b"
+              b
                  cb
                 (
                      ca
@@ -4241,7 +4253,7 @@
         case
         (
           ()
-                    Pexp_object          class_structure
+                    class_structure
             (
               method m
                 1
@@ -4256,7 +4268,7 @@
         case
         (
           ()
-                    Pexp_object          class_structure
+                    class_structure
             (
               method n
                 1
@@ -4276,14 +4288,13 @@
         case
         (
           ()
-                    Pexp_object          class_structure
+                    class_structure
             (
               method n
                 1
                               method m
                 send n
                 (
-                  Pexp_override
                   (
                   )
                 )
@@ -4298,7 +4309,7 @@
         case
         (
           ()
-                    Pexp_object          class_structure
+                    class_structure
             (
               method n
                 1
@@ -4315,9 +4326,8 @@
         case
         (
           ()
-                    Pexp_object          class_structure
+                    class_structure
             (
-              Pcf_constr ([477,11659+25]..[477,11659+52])
                   s
                   (
                       n
@@ -4344,7 +4354,7 @@
               method x
                 1
                               method m
-                Pexp_object                class_structure
+                class_structure
                   (
                     method x
                       3
@@ -4356,12 +4366,12 @@
   let
   (
     o
-      Pexp_object      class_structure
+      class_structure
         (
           method x
             1
                       method m
-            Pexp_object            class_structure
+            class_structure
               (
                 method x
                   3
@@ -4374,7 +4384,7 @@
     case
     (
       x
-        Ptyp_alias "foo"
+        foo
           (
               m
                 poly
@@ -4404,7 +4414,7 @@
                   tuple
                   (
                       a
-                      Ptyp_alias "bar"
+                      bar
                         (
                             m
                               poly
@@ -4571,7 +4581,7 @@
                 tuple
                 (
                     a
-                    Ptyp_alias "foo"
+                    foo
                       tuple
                       (
                           a
@@ -4591,7 +4601,7 @@
       (
       x
       :
-          Ptyp_alias "bar"
+          bar
             (
                 m
                   poly
@@ -4633,7 +4643,7 @@
                 tuple
                 (
                     a
-                    Ptyp_alias "foo"
+                    foo
                       tuple
                       (
                           a
@@ -4653,7 +4663,7 @@
       (
       x
       :
-          Ptyp_alias "bar"
+          bar
             (
                 m
                   poly
@@ -4688,7 +4698,7 @@
     case
     (
       x
-        Ptyp_alias "foo"
+        foo
           (
               m
                 poly
@@ -4713,7 +4723,7 @@
                   tuple
                   (
                       b
-                      Ptyp_alias "bar"
+                      bar
                         tuple
                         (
                             b
@@ -4749,7 +4759,7 @@
                      'a
                       arrow
                         a
-                        Ptyp_alias "bar"
+                        bar
                           tuple
                           (
                               a
@@ -4763,7 +4773,7 @@
                               )
                           )
               )
-              Ptyp_alias "foo"
+              foo
                 (
                     m
                       poly
@@ -4790,7 +4800,7 @@
               case
               (
                 x
-                  Ptyp_alias "foo"
+                  foo
                     (
                         m
                           poly
@@ -4822,7 +4832,7 @@
                         tuple
                         (
                             b
-                            Ptyp_alias "bar"
+                            bar
                               tuple
                               (
                                   b
@@ -4859,7 +4869,7 @@
                 (
                 )
               kind =
-                    Ptyp_alias "foo"
+                    foo
                       (
                           m
                             poly
@@ -4896,7 +4906,7 @@
                               tuple
                               (
                                   b
-                                  Ptyp_alias "bar"
+                                  bar
                                     tuple
                                     (
                                         b
@@ -5150,7 +5160,7 @@
                     (
                     x
                     :
-                                            Ptyp_alias "c"
+                                            c
                           (
                               m
                                 poly
@@ -5174,7 +5184,7 @@
                       (
                       y
                       :
-                                                Ptyp_alias "d"
+                                                d
                             (
                                 m
                                   poly
@@ -5214,12 +5224,11 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rtag "A" true
+                A
                   (
                   )
-                Rtag "B" true
+                B
                   (
                   )
               )
@@ -5235,9 +5244,7 @@
           (
           )
         kind =
-              Ptyp_variant closed=false
               (
-                Rinherit
                      t
                     (
                     )
@@ -5270,9 +5277,7 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rinherit
                      t
                     (
                     )
@@ -5323,9 +5328,7 @@
           (
           )
         kind =
-              Ptyp_variant closed=true
               (
-                Rinherit
                      t
                     (
                     )
@@ -5434,7 +5437,7 @@
                     poly
                      'a
                       arrow
-                        Ptyp_alias "a"
+                        a
                           (
                               p
                                 poly
@@ -5451,7 +5454,7 @@
                     poly
                      'b
                       arrow
-                        Ptyp_alias "b"
+                        b
                           (
                               p
                                 poly
@@ -5487,7 +5490,7 @@
                     poly
                      'a
                       arrow
-                        Ptyp_alias "a"
+                        a
                           (
                               p
                                 poly
@@ -5508,7 +5511,7 @@
                     poly
                      'b
                       arrow
-                        Ptyp_alias "b"
+                        b
                           (
                               p
                                 poly
@@ -5548,7 +5551,7 @@
                     poly
                      'a
                       arrow
-                        Ptyp_alias "a"
+                        a
                           (
                               p
                                 poly
@@ -5574,7 +5577,7 @@
                     poly
                      'b
                       arrow
-                        Ptyp_alias "b"
+                        b
                           (
                               p
                                 poly
@@ -5649,10 +5652,9 @@
                   m
                     poly
                      'a
-                      Ptyp_alias "a"
-                        Ptyp_variant closed=true
+                      a
                         (
-                          Rtag "A" false
+                          A
                             (
                                 (
                                     p
@@ -5670,10 +5672,9 @@
                   m
                     poly
                      'a
-                      Ptyp_alias "a"
-                        Ptyp_variant closed=true
+                      a
                         (
-                          Rtag "A" false
+                          A
                             (
                                 (
                                 )
@@ -5700,10 +5701,9 @@
                   m
                     poly
                      'a
-                      Ptyp_alias "a"
-                        Ptyp_variant closed=true
+                      a
                         (
-                          Rtag "A" false
+                          A
                             (
                                 (
                                 )
@@ -5716,10 +5716,9 @@
                   m
                     poly
                      'a
-                      Ptyp_alias "a"
-                        Ptyp_variant closed=true
+                      a
                         (
-                          Rtag "A" false
+                          A
                             (
                                 (
                                     p
@@ -6512,16 +6511,15 @@
     zero
       poly
        'a
-        Ptyp_alias "a"
-          Ptyp_variant closed=false
+        a
           (
-            Rtag "Int" false
+            Int
               (
                    int
                   (
                   )
               )
-            Rtag "B" false
+            B
               (
                   a
               )
@@ -6534,10 +6532,9 @@
     zero
       poly
        'a
-        Ptyp_alias "a"
-          Ptyp_variant closed=true
+        a
           (
-            Rtag "Int" false
+            Int
               (
                    int
                   (
@@ -6564,16 +6561,15 @@
               f
                   poly
                    'a
-                    Ptyp_alias "a"
-                      Ptyp_variant closed=false
+                    a
                       (
-                        Rtag "Int" false
+                        Int
                           (
                                int
                               (
                               )
                           )
-                        Rtag "B" false
+                        B
                           (
                               a
                           )
@@ -6605,10 +6601,9 @@
               f
                   poly
                    'a
-                    Ptyp_alias "a"
-                      Ptyp_variant closed=true
+                    a
                       (
-                        Rtag "Int" false
+                        Int
                           (
                                int
                               (
@@ -7074,7 +7069,6 @@
             )
   let
   (
-    Ppat_record
     (
       foo
         foo

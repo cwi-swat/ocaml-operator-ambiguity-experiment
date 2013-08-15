@@ -114,9 +114,8 @@
                     case
                     (
                       x
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               x
@@ -158,14 +157,14 @@
       class expr =
           class_structure
             (
-              Pcf_virt "add" Public ([23,564+2]..[23,564+34])
+              add 
                   poly
                   
                     arrow
                     
                       a
                       self
-              Pcf_virt "fold" Public ([24,599+2]..[24,599+63])
+              fold 
                   poly
                    'b
                     arrow
@@ -207,9 +206,8 @@
                     case
                     (
                       x
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               x
@@ -247,9 +245,8 @@
                   case
                   (
                     x
-                    Pexp_override
                     (
-                      <override> "l"
+                      l
                         ::
                           (
                             x
@@ -291,9 +288,8 @@
                     case
                     (
                       x
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               x
@@ -327,7 +323,7 @@
               (
                 l
                   l
-                Pcf_virt "add" Public ([50,1119+2]..[50,1119+24])
+                add 
                     poly
                     
                       
@@ -336,9 +332,8 @@
                     case
                     (
                       x
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               x
@@ -347,7 +342,7 @@
                       )
                     )
                   )
-                                  Pcf_virt "fold" Public ([52,1178+2]..[52,1178+63])
+                                  fold 
                     poly
                      'b
                       arrow
@@ -393,9 +388,8 @@
                     case
                     (
                       x
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               x
@@ -404,7 +398,7 @@
                       )
                     )
                   )
-                                  Pcf_virt "fold" Public ([59,1376+2]..[59,1376+63])
+                                  fold 
                     poly
                      'b
                       arrow
@@ -420,7 +414,7 @@
                         init
                           b
                           b
-                Pcf_virt "fold2" Public ([60,1440+2]..[60,1440+64])
+                fold2 
                     poly
                      'b
                       arrow
@@ -499,9 +493,8 @@
                     case
                     (
                       x
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               x
@@ -510,7 +503,7 @@
                       )
                     )
                   )
-                                  Pcf_virt "fold2" Public ([69,1714+2]..[69,1714+64])
+                                  fold2 
                     poly
                      'b
                       arrow
@@ -576,7 +569,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "fold" Public ([75,1919+2]..[75,1919+63])
+              fold 
                   poly
                    'c
                     arrow
@@ -835,7 +828,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "m" Public ([110,2674+2]..[110,2674+52])
+              m 
                   poly
                    'a
                     arrow
@@ -993,7 +986,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "m" Public ([125,3013+2]..[125,3013+47])
+              m 
                   poly
                    'a
                     arrow
@@ -1065,7 +1058,7 @@
           class expr =
               class_structure
                 (
-                  Pcf_virt "m" Public ([136,3227+4]..[136,3227+54])
+                  m 
                       poly
                        'a
                         arrow
@@ -1215,7 +1208,7 @@
                     )
                   r
                     r
-                  Pcf_virt "distance" Public ([162,3686+2]..[162,3686+55])
+                  distance 
                       poly
                        'a
                         arrow
@@ -1469,7 +1462,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "id" Public ([181,4227+2]..[181,4227+34])
+              id 
                   poly
                    'a
                     arrow
@@ -1578,7 +1571,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "id" Public ([204,4550+2]..[204,4550+34])
+              id 
                   poly
                    'b
                     arrow
@@ -1606,7 +1599,7 @@
             a
             class_structure
               (
-                Pcf_virt "id" Public ([209,4638+2]..[209,4638+34])
+                id 
                     poly
                      'b
                       arrow
@@ -1635,7 +1628,7 @@
               (
                 x
                   x
-                Pcf_virt "id" Public ([215,4731+2]..[215,4731+34])
+                id 
                     poly
                      'a
                       arrow
@@ -1664,7 +1657,7 @@
               (
                 r
                   None
-                                  Pcf_virt "id" Public ([221,4836+2]..[221,4836+34])
+                                  id 
                     poly
                      'a
                       arrow
@@ -1711,7 +1704,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "m" Public ([229,4975+2]..[229,4975+42])
+              m 
                   poly
                    'a 'b
                     arrow
@@ -1888,7 +1881,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "m" Public ([244,5228+2]..[244,5228+50])
+              m 
                   poly
                    'a
                     arrow
@@ -1945,7 +1938,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "id" Public ([250,5356+2]..[250,5356+34])
+              id 
                   poly
                    'a
                     arrow
@@ -2338,9 +2331,8 @@
               method num
                 num
                               method succ
-                Pexp_override
                 (
-                  <override> "num"
+                  num
                     +
                     (
                       
@@ -2410,9 +2402,8 @@
                               prev
                               (
                                 
-                                  Pexp_override
                                   (
-                                    <override> "num"
+                                    num
                                       -
                                       (
                                         
@@ -2583,9 +2574,8 @@
                     case
                     (
                       a
-                      Pexp_override
                       (
-                        <override> "l"
+                        l
                           ::
                             (
                               a
@@ -3365,7 +3355,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "caseNil" Public ([387,8860+7]..[387,8860+34])
+              caseNil 
                   poly
                   
                     a
@@ -3377,7 +3367,7 @@
       class expr =
           class_structure
             (
-              Pcf_virt "visit" Public ([389,8922+7]..[389,8922+51])
+              visit 
                   poly
                    'a
                     arrow
@@ -4517,7 +4507,6 @@
                               method m
                 send n
                 (
-                  Pexp_override
                   (
                   )
                 )

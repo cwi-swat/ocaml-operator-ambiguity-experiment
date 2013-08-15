@@ -3,24 +3,24 @@
    struct
    (
    module  IntSet
-     Set.Make
+        							      Set.Make
     (
     struct
     (
     type
     (  						
        t
-       type
-       params=
-       (
-       )
-       cstrs =
-       (
-       )
-       kind =
-      (
-       int
-      )
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+         int
+         (
+         )
     )
     let
     (
@@ -78,8 +78,7 @@
                       case
                       (
                         A
-                         T.IntSet
-                            							     .mem
+                            							      T.IntSet.mem
                       ) 
                         case
                         (

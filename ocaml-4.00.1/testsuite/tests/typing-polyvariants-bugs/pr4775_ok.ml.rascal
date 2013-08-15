@@ -12,25 +12,29 @@
          type
          params=
          (
-         
-          
-          a
-         										 
+         a
          )
          cstrs =
          (
+      											   
+      											   	  
+         type constraint
+         (
+         	a
+         	(
+         		
+         												   
+         	)
+         												 
+         )
+             								 
+      							     				  
+      											   
          )
          kind =
          
-          a
           
-         														  
-          typeConstraint 
-          (
-              a
-              
-          )
-         							     						  
+         a
          														 
       											   
     								        
@@ -58,42 +62,39 @@
           (
           
           									 
-           
-            
-            a
-           										 
+           a
           									 
-           
-            
-            b
-           										 
+           b
           									 
           									 
           )
           cstrs =
           (
+       											   
+       											   	  
+          type constraint
+          (
+          	a
+          	
+          	 B.t
+          	 (
+          	   b
+          	 )
+          	    									
+          )
+              								 
+       							     				  
+       											   
           )
           kind =
           
            
-            A.t
-            (
-              a
-            )
-               									
-           
-          														  
-           typeConstraint 
+          
+           A.t
            (
-               a
-               
-                B.t
-                (
-                  b
-                )
-                   									
+             a
            )
-          							     						  
+              									
           														 
        											   
      								        
@@ -120,25 +121,29 @@
         type
         params=
         (
-        
-         
-         a
-        										 
+        a
         )
         cstrs =
         (
+     											   
+     											   	  
+        type constraint
+        (
+        	a
+        	(
+        		
+        												   
+        	)
+        												 
+        )
+            								 
+     							     				  
+     											   
         )
         kind =
         
-         a
          
-        														  
-         typeConstraint 
-         (
-             a
-             
-         )
-        							     						  
+        a
         														 
      											   
    								        
@@ -159,25 +164,29 @@
         type
         params=
         (
-        
-         
-         a
-        										 
+        a
         )
         cstrs =
         (
+     											   
+     											   	  
+        type constraint
+        (
+        	a
+        	(
+        		
+        												   
+        	)
+        												 
+        )
+            								 
+     							     				  
+     											   
         )
         kind =
         
-         a
          
-        														  
-         typeConstraint 
-         (
-             a
-             
-         )
-        							     						  
+        a
         														 
      											   
    								        

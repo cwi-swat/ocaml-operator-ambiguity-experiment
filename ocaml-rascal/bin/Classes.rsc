@@ -21,10 +21,10 @@ syntax ClassFieldSpec
      ;
      
 syntax ClassExpr 
-     =  classPath: ClassPath
-	 | "[" Typexpr ("," Typexpr)* "]" ClassPath
-	 | "(" ClassExpr ")"
-	 | "(" ClassExpr ":" ClassType ")"
+     = classPath: ClassPath
+	 | classExprBrackets1: "[" Typexpr ("," Typexpr)* "]" ClassPath
+	 | classExprBrackets2: "(" ClassExpr ")"
+	 | classExprBrackets3: "(" ClassExpr ":" ClassType ")"
 	 | classArgs: ClassExpr ! classArgs Arg+
 	 | classFun: "fun" Parameter+ "-\>" ClassExpr
 	 | letClass: "let" "rec"? LetBinding ("and" LetBinding)* "in" ClassExpr

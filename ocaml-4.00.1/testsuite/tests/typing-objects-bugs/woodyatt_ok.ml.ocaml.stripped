@@ -1,0 +1,85 @@
+(
+  class
+  (
+      params =
+          (
+          )
+      class name = alfa
+      class expr =
+          class_structure
+            (
+              method x
+                Printf.printf
+                    poly
+                     'a
+                      arrow
+                         format
+                        (
+                            a
+                             out_channel
+                            (
+                            )
+                             unit
+                            (
+                            )
+                        )
+                        a
+            )
+  )
+  class
+  (
+      params =
+          (
+          )
+      class name = bravo
+      class expr =
+                    a
+            class_structure
+              (
+                y
+                  (
+                  a
+                  :
+                                         alfa
+                      (
+                      )
+                  )
+                Pcf_init
+                  send x
+                  (
+                    y
+                  )
+                  (
+                      "bravo initialized"
+                  )
+              )
+  )
+  class
+  (
+      params =
+          (
+          )
+      class name = charlie
+      class expr =
+                    a
+            class_structure
+              (
+                inherit
+                    Pcl_apply
+                      constr bravo
+                      (
+                      )
+                    (
+                        a
+                    )
+                Pcf_init
+                  send x
+                  (
+                    y
+                  )
+                  (
+                      "charlie initialized"
+                  )
+              )
+  )
+)

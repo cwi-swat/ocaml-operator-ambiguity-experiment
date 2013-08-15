@@ -353,7 +353,7 @@ and expression i ppf x =
       line i ppf "Pexp_setinstvar \"%s\"\n" s.txt;
       expression i ppf e;
   | Pexp_override (l) ->
-      line i ppf "Pexp_override\n";
+      (* line i ppf "Pexp_override\n"; *)
       list i string_x_expression ppf l;
   | Pexp_letmodule (s, me, e) ->
       line i ppf "let module %s\n" s.txt;
@@ -563,8 +563,9 @@ and class_field i ppf x =
       line i ppf "%s\n" s.txt;
       expression (i+1) ppf e;
   | Pcf_virt (s, pf, ct) ->
-      line i ppf "Pcf_virt \"%s\" %a %a\n"
-        s.txt fmt_private_flag pf fmt_location loc;
+      (* line i ppf "Pcf_virt \"%s\" %a %a\n"
+        s.txt fmt_private_flag pf fmt_location loc;*)
+        line i ppf "%s \n" s.txt;
       core_type (i+1) ppf ct;
   | Pcf_meth (s, pf, ovf, e) ->
       (* line i ppf "Pcf_meth \"%s\" %a %a %a\n" *)
@@ -821,7 +822,8 @@ and pattern_x_expression_def i ppf (p, e) =
   expression (i+1) ppf e;
 
 and string_x_expression i ppf (s, e) =
-  line i ppf "<override> \"%s\"\n" s.txt;
+  (* line i ppf "<override> \"%s\"\n" s.txt; *)
+  line i ppf "%s\n" s.txt;
   expression (i+1) ppf e;
 
 and longident_x_expression i ppf (li, e) =

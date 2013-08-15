@@ -2,436 +2,645 @@
 (
     								 
   exception Out_of_range
-                                     
-  classTypeDef 
   (
-      classTypeDefinition 
-      (
-          classTypeDef 
-          (
-              
-              <"a",[]>
-              cursor
-              <[],[<[],[],"get","polytype1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"incr","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"unit")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"unit")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<[],[],"is_last","polytype1"("typexprConstr2"("typeConstr"([],"bool")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
-          )
-          
-      )
   )
                                      
-  classTypeDef 
+  class_type
   (
-      classTypeDefinition 
+    class_type_declaration
+    params = 
+    (
+      "a"
+    ) 
+    name = cursor
+    expr =
+     class_type
+     signature
+     class_signature
+     (
+     										 
+      poly
+      a
+                                             
+     										 
+      poly
+      arrow
+      
+      unit
       (
-          classTypeDef 
-          (
-              
-              <"a",[]>
-              storage
-              <["tagg"("self")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]],[<[],[],"first","polytype1"("typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"cursor")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"len","polytype1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"nth","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"cursor")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<[],[],"copy","polytype1"("tagg"("self")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<[],[],"sub","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"int")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"arrow1"("typexprConstr2"("typeConstr"([],"int")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"concat","polytype1"("arrow1"("typexprConstr1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typeConstr"([],"storage")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"fold","polytype2"(["b"],"arrow1"("arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arrow1"("typexprConstr2"("typeConstr"([],"int")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"arrow1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"arrow1"("tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"tagg"("b")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"iter","polytype1"("arrow1"("arrow1"("tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"unit")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"unit")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
-          )
-          
       )
+      								  
+      
+      unit
+      (
+      )
+      								  
+         								   
+                                             
+     										 
+      poly
+      
+      bool
+      (
+      )
+      								  
+                                             
+     										 
+     )
+     										 
+    													  
+  											   
   )
+  											   
+                                     
+  class_type
+  (
+    class_type_declaration
+    params = 
+    (
+      "a"
+    ) 
+    name = storage
+    expr =
+     class_type
+      self
+     										  
+      poly
+      
+       cursor
+       (
+         a
+       )
+          									
+                                             
+     										  
+      poly
+      
+      int
+      (
+      )
+      								  
+                                             
+     										  
+      poly
+      arrow
+      
+      int
+      (
+      )
+      								  
+      
+       cursor
+       (
+         a
+       )
+          									
+         								   
+                                             
+     										  
+      poly
+      self
+                                             
+     										  
+      poly
+      arrow
+      
+      int
+      (
+      )
+      								  
+      arrow
+      
+      int
+      (
+      )
+      								  
+      self
+         								   
+         								   
+                                             
+     										  
+      poly
+      arrow
+      
+       storage
+       (
+         a
+       )
+          									
+      self
+         								   
+                                             
+     										  
+      poly
+                            				 'b 
+       arrow
+       arrow
+       a
+       arrow
+       
+       int
+       (
+       )
+       								  
+       arrow
+       b
+       b
+          								   
+          								   
+          								   
+       arrow
+       b
+       b
+          								   
+          								   
+                                          
+     										  
+      poly
+      arrow
+      arrow
+      a
+      
+      unit
+      (
+      )
+      								  
+         								   
+      
+      unit
+      (
+      )
+      								  
+         								   
+                                             
+     										  
+     										  
+    													  
+  											   
+  )
+  											   
                                      
   class
   (
       								   
     params = 
     (
-        	
+     "a"
+     "cursor"
+     										
     )
     class name = storage_base
     class expr = 
-                class_structure
-                (
-                    								
-                   classConstraint 
-                   (
-                       cursor
-                       <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"classPath"([],"cursor")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-                   )
-                    								
-                   method3 
-                   (
-                       
-                       first
-                       polytype1 
-                       (
-                           cursor
-                       )
-                   )
-                    								
-                   method3 
-                   (
-                       
-                       len
-                       polytype1 
-                       (
-                           
-                           int
-                           (
-                           )
-                           								  
-                       )
-                   )
-                    								
-                   method3 
-                   (
-                       
-                       copy
-                       polytype1 
-                       (
-                           self
-                       )
-                   )
-                    								
-                   method3 
-                   (
-                       
-                       sub
-                       polytype1 
-                       (
-                           arrow
-                           
-                           int
-                           (
-                           )
-                           								  
-                           arrow
-                           
-                           int
-                           (
-                           )
-                           								  
-                           self
-                              								   
-                              								   
-                       )
-                   )
-                    								
-                   method3 
-                   (
-                       
-                       concat
-                       polytype1 
-                       (
-                           arrow
-                           
-                            storage
-                            (
-                              a
-                            )
-                            
-                               									
-                           self
-                              								   
-                       )
-                   )
-                    								
-                   method2 
-                   (
-                       
-                       fold
-                       poly
-                       ' b
-                          									
-                       arrow
-                       arrow
-                       a
-                       arrow
-                       
-                       int
-                       (
-                       )
-                       								  
-                       arrow
-                       b
-                       b
-                          								   
-                          								   
-                          								   
-                       arrow
-                       b
-                       b
-                          								   
-                          								   
-                          									
-                       (
-                        
-                        case
-                        (
-                          f
-                          (
-                          
-                          case
-                          (
-                          a0
-                          
-                          
-                          let
-                          (
-                           (
-                              									  
-                            
-                             cur
-                             send first
-                             (
-                              self
-                             )
-                                 						   
-                            							    		   
-                              									  
-                           )
-                          in
-                            
-                            let
-                            (
-                             (
-                                									  
-                              
-                               loop
-                              (
-                               case
-                                   (
-                                		
-                                		 count
-                                		(
-                                		 case
-                                		     (
-                                		 	  a
-                                		      ifthenelse
-                                		      (
-                                		       if
-                                		       (
-                                		        >=
-                                		        (
-                                		            count
-                                		            send len
-                                		            (
-                                		             self
-                                		            )
-                                		                						  
-                                		        )
-                                		       )
-                                		       then
-                                		       (
-                                		        a
-                                		       )
-                                		       else
-                                		       (
-                                		        
-                                		        let
-                                		        (
-                                		         (
-                                		            									  
-                                		          
-                                		           a'
-                                		           f
-                                		           (
-                                		               send get
-                                		               (
-                                		                cur
-                                		               )
-                                		                   						  
-                                		               count
-                                		               a
-                                		           ) 
-                                		          							    		   
-                                		            									  
-                                		         )
-                                		        in
-                                		          
-                                		          sequence
-                                		          (
-                                		            send incr
-                                		            (
-                                		             cur
-                                		            )
-                                		                						  
-                                		            (
-                                		                ()
-                                		            )
-                                		          ;
-                                		            loop
-                                		            (
-                                		                +
-                                		                (
-                                		                    count
-                                		                    1
-                                		                )
-                                		                a'
-                                		            )
-                                		          )
-                                		              							
-                                		        )
-                                		            									
-                                		       ) 
-                                		      )
-                                		      	    											 
-                                		     )
-                                		)
-                                		    		   
-                                   )
-                              )
-                                  		   
-                                									  
-                             )
-                            in
-                              loop
-                              (
-                                  0
-                                  a0
-                              )
-                            )
-                                									
-                          )
-                              									
-                          )
-                          													 
-                          )
-                        )													
-                        													
-                       )
-                          						  
-                   )
-                    								
-                   method1 
-                   (
-                       <>
-                       
-                       iter
-                       proc
-                       
-                       
-                       let
-                       (
-                        (
-                           									  
-                         
-                          p
-                          send first
-                          (
-                           self
-                          )
-                              						   
-                         							    		   
-                           									  
-                        )
-                       in
-                         
-                         sequence
-                         (
-                           forloop 
-                           (
-                               i
-                               0
-                               <>
-                               -
-                               (
-                                   send len
-                                   (
-                                    self
-                                   )
-                                       						  
-                                   2
-                               )
-                               
-                               sequence
-                               (
-                                 proc
-                                 (
-                                     send get
-                                     (
-                                      p
-                                     )
-                                         						  
-                                 )
-                               ;
-                                 send incr
-                                 (
-                                  p
-                                 )
-                                     						  
-                                 (
-                                     ()
-                                 )
-                               )
-                                   							
-                           )
-                         ;
-                           ifthenelse
-                           (
-                            if
-                            (
-                             >
-                             (
-                                 send len
-                                 (
-                                  self
-                                 )
-                                     						  
-                                 0
-                             )
-                            )
-                            then
-                            (
-                             proc
-                             (
-                                 send get
-                                 (
-                                  p
-                                 )
-                                     						  
-                             )
-                            )
-                            else
-                            (
-                             ()
-                            ) 
-                           )
-                           	    											 
-                         )
-                             							
-                       )
-                           									
-                   )
-                    								
-                )
-                    								
-        	
+    										    	
+      class_structure
+      (
+          								
+         cursor
+         (
+         	cursor
+         	(
+         	  a
+         	)
+         )
+         										   
+          								
+         method first
+            poly
+            cursor
+                                                   
+             									
+          								
+         method len
+            poly
+            
+            int
+            (
+            )
+            								  
+                                                   
+             									
+          								
+         method copy
+            poly
+            self
+                                                   
+             									
+          								
+         method sub
+            poly
+            arrow
+            
+            int
+            (
+            )
+            								  
+            arrow
+            
+            int
+            (
+            )
+            								  
+            self
+               								   
+               								   
+                                                   
+             									
+          								
+         method concat
+            poly
+            arrow
+            
+             storage
+             (
+               a
+             )
+                									
+            self
+               								   
+                                                   
+             									
+          								
+         method fold
+         	
+         								
+         								
+         	(
+         	case
+         	  (
+         	    f
+         	    
+         	    (
+         	      case
+         	      (
+         	       a0
+         	       
+         	       
+         	       let
+         	       (
+         	        (
+         	           									  
+         	         
+         	          cur
+         	          send first
+         	          (
+         	           self
+         	          )
+         	              						   
+         	         							    		   
+         	           									  
+         	        )
+         	       in
+         	         
+         	         let
+         	         (
+         	          (
+         	             									  
+         	           
+         	             loop
+         	                       	   
+         	           (
+         	            case
+         	                (
+         	             		
+         	             		 count
+         	             		(
+         	             		 case
+         	             		     (
+         	             		 	  a
+         	             		      ifthenelse
+         	             		      (
+         	             		       if
+         	             		       (
+         	             		        >=
+         	             		        (
+         	             		            count
+         	             		            send len
+         	             		            (
+         	             		             self
+         	             		            )
+         	             		                						  
+         	             		        )
+         	             		       )
+         	             		       then
+         	             		       (
+         	             		        a
+         	             		       )
+         	             		       else
+         	             		       (
+         	             		        
+         	             		        let
+         	             		        (
+         	             		         (
+         	             		            									  
+         	             		          
+         	             		           a'
+         	             		           f
+         	             		           (
+         	             		               send get
+         	             		               (
+         	             		                cur
+         	             		               )
+         	             		                   						  
+         	             		               count
+         	             		               a
+         	             		           ) 
+         	             		          							    		   
+         	             		            									  
+         	             		         )
+         	             		        in
+         	             		          
+         	             		          sequence
+         	             		          (
+         	             		            send incr
+         	             		            (
+         	             		             cur
+         	             		            )
+         	             		                						  
+         	             		            (
+         	             		                ()
+         	             		            )
+         	             		          ;
+         	             		            loop
+         	             		            (
+         	             		                +
+         	             		                (
+         	             		                    count
+         	             		                    1
+         	             		                )
+         	             		                a'
+         	             		            )
+         	             		          )
+         	             		              							
+         	             		        )
+         	             		            									
+         	             		       ) 
+         	             		      )
+         	             		      	    											 
+         	             		     )
+         	             		)
+         	             		    		   
+         	                )
+         	           )
+         	                       	   
+         	             									  
+         	          )
+         	         in
+         	           loop
+         	           (
+         	               0
+         	               a0
+         	           )
+         	         )
+         	             									
+         	       )
+         	           									
+         	      )
+         	    )
+         	    													 
+         	  )
+         	)													
+         										        	   		
+         								
+         	poly
+         	                      				 'b 
+         	 arrow
+         	 arrow
+         	 a
+         	 arrow
+         	 
+         	 int
+         	 (
+         	 )
+         	 								  
+         	 arrow
+         	 b
+         	 b
+         	    								   
+         	    								   
+         	    								   
+         	 arrow
+         	 b
+         	 b
+         	    								   
+         	    								   
+         	                                    
+             												 
+          								
+         method iter
+         (
+           case
+         	(
+         		proc
+           	
+           	let
+           	(
+           	 (
+           	    									  
+           	  
+           	   p
+           	   send first
+           	   (
+           	    self
+           	   )
+           	       						   
+           	  							    		   
+           	    									  
+           	 )
+           	in
+           	  
+           	  sequence
+           	  (
+           	     for i
+           	     0
+           	     -
+           	     (
+           	         send len
+           	         (
+           	          self
+           	         )
+           	             						  
+           	         2
+           	     )
+           	     
+           	     sequence
+           	     (
+           	       proc
+           	       (
+           	           send get
+           	           (
+           	            p
+           	           )
+           	               						  
+           	       )
+           	     ;
+           	       send incr
+           	       (
+           	        p
+           	       )
+           	           						  
+           	       (
+           	           ()
+           	       )
+           	     )
+           	         							
+           	        														  
+           	  ;
+           	    ifthenelse
+           	    (
+           	     if
+           	     (
+           	      >
+           	      (
+           	          send len
+           	          (
+           	           self
+           	          )
+           	              						  
+           	          0
+           	      )
+           	     )
+           	     then
+           	     (
+           	      proc
+           	      (
+           	          send get
+           	          (
+           	           p
+           	          )
+           	              						  
+           	      )
+           	     )
+           	     else
+           	     (
+           	      ()
+           	     ) 
+           	    )
+           	    	    											 
+           	  )
+           	      							
+           	)
+           	    									
+         	)
+         )
+         											 
+          								
+      )
+      <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+          								
+      
+    										    	
       								   
   )
       								   
                                      
-  classTypeDef 
+  class_type
   (
-      classTypeDefinition 
+    class_type_declaration
+    params = 
+    (
+      "a"
+    ) 
+    name = obj_input_channel
+    expr =
+     class_type
+     signature
+     class_signature
+     (
+     										 
+      poly
+      arrow
+      
+      unit
       (
-          classTypeDef 
-          (
-              
-              <"a",[]>
-              obj_input_channel
-              <[],[<[],[],"get","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"unit")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"tagg"("a")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"close","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"unit")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"unit")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>]>
-          )
-          
       )
+      								  
+      a
+         								   
+                                             
+     										 
+      poly
+      arrow
+      
+      unit
+      (
+      )
+      								  
+      
+      unit
+      (
+      )
+      								  
+         								   
+                                             
+     										 
+     )
+     										 
+    													  
+  											   
   )
+  											   
                                      
-  classTypeDef 
+  class_type
   (
-      classTypeDefinition 
+    class_type_declaration
+    params = 
+    (
+      "a"
+    ) 
+    name = obj_output_channel
+    expr =
+     class_type
+     signature
+     class_signature
+     (
+     										 
+      poly
+      arrow
+      a
+      
+      unit
       (
-          classTypeDef 
-          (
-              
-              <"a",[]>
-              obj_output_channel
-              <[],[<[],[],"put","polytype1"("arrow1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"unit")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>,<[],[],"flush","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"unit")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"unit")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>,<[],[],"close","polytype1"("arrow1"("typexprConstr2"("typeConstr"([],"unit")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],"typexprConstr2"("typeConstr"([],"unit")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>]>
-          )
-          
       )
+      								  
+         								   
+                                             
+     										 
+      poly
+      arrow
+      
+      unit
+      (
+      )
+      								  
+      
+      unit
+      (
+      )
+      								  
+         								   
+                                             
+     										 
+      poly
+      arrow
+      
+      unit
+      (
+      )
+      								  
+      
+      unit
+      (
+      )
+      								  
+         								   
+                                             
+     										 
+     )
+     										 
+    													  
+  											   
   )
+  											   
                                      
   module  UChar
    struct
@@ -441,23 +650,26 @@
    (  						
        							    	 
       t
-      type
-      params=
-      (
-      
-      )
-      cstrs =
-      (
-      )
-      kind =
-      
-      int
-      (
-      )
-      								  
-      
-      														  
-      														 
+        type
+        params=
+        (
+        
+        )
+        cstrs =
+        (
+     											   
+     											   	  
+     											   
+        )
+        kind =
+        
+         
+        
+        int
+        (
+        )
+        								  
+        														 
      											   
    								        
    )
@@ -649,29 +861,33 @@
    							  
    )
    							  
+   
   										    
                                      
   type
   (  						
       							    	 
      uchar
-     type
-     params=
-     (
-     
-     )
-     cstrs =
-     (
-     )
-     kind =
-     
-     "extendedModulePath1"([],"UChar")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()].t
-     (
-     )
-     								  
-     
-     														  
-     														 
+       type
+       params=
+       (
+       
+       )
+       cstrs =
+       (
+    											   
+    											   	  
+    											   
+       )
+       kind =
+       
+        
+       
+       UChar.t
+       (
+       )
+       								  
+       														 
     											   
   								        
   )
@@ -710,47 +926,79 @@
        		    
   )
                                      
-  classTypeDef 
+  class_type
   (
-      classTypeDefinition 
+    class_type_declaration
+    params = 
+    (
+    ) 
+    name = ucursor
+    expr =
+     
+     class_type
+     constr cursor
+     (
+      
+      uchar
       (
-          classTypeDef 
-          (
-              
-              
-              ucursor
-              <[<"typexprConstr2"("typeConstr"([],"uchar")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>],"classPath"([],"cursor")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-          )
-          
       )
+      								  
+     	  	    									
+     )
+     		    									
+    													  
+  											   
   )
+  											   
                                      
-  classTypeDef 
+  class_type
   (
-      classTypeDefinition 
+    class_type_declaration
+    params = 
+    (
+    ) 
+    name = ustorage
+    expr =
+     
+     class_type
+     constr storage
+     (
+      
+      uchar
       (
-          classTypeDef 
-          (
-              
-              
-              ustorage
-              <[<"typexprConstr2"("typeConstr"([],"uchar")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>],"classPath"([],"storage")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-          )
-          
       )
+      								  
+     	  	    									
+     )
+     		    									
+    													  
+  											   
   )
+  											   
                                      
   class
   (
       								   
     params = 
     (
-        	
+     "ucursor"
     )
     class name = ustorage_base
     class expr = 
-                <"typexprConstr2"("typeConstr"([],"uchar")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],["tagg"("ucursor")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"storage_base")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()]>
-        	
+    										    	
+      
+      
+      uchar
+      (
+      )
+      								  
+      											   
+      ucursor
+      											   
+      storage_base
+      											   
+      
+    										    	
       								   
   )
       								   
@@ -762,7 +1010,8 @@
    let
    (
     
-     get_buf
+      get_buf
+                	   
     (
      case
          (
@@ -781,12 +1030,12 @@
       		         n
       		         Char.code
       		         (
-      		             Array.get
+      		             String.get
       		             (
       		              s
       		              i
       		             )
-      		                 													
+      		             												
       		         ) 
       		        							    		   
       		          									  
@@ -808,7 +1057,7 @@
       		               )
       		               Char.code
       		               (
-      		                   Array.get
+      		                   String.get
       		                   (
       		                    s
       		                    +
@@ -817,7 +1066,7 @@
       		                        1
       		                    )
       		                   )
-      		                       													
+      		                   												
       		               )
       		           ) 
       		          							    		   
@@ -840,7 +1089,7 @@
       		                 )
       		                 Char.code
       		                 (
-      		                     Array.get
+      		                     String.get
       		                     (
       		                      s
       		                      +
@@ -849,7 +1098,7 @@
       		                          2
       		                      )
       		                     )
-      		                         													
+      		                     												
       		                 )
       		             ) 
       		            							    		   
@@ -872,7 +1121,7 @@
       		                   )
       		                   Char.code
       		                   (
-      		                       Array.get
+      		                       String.get
       		                       (
       		                        s
       		                        +
@@ -881,7 +1130,7 @@
       		                            3
       		                        )
       		                       )
-      		                           													
+      		                       												
       		                   )
       		               ) 
       		              							    		   
@@ -905,18 +1154,20 @@
       		    		   
          )
     )
-        		    
+                	    
    )
    							  
    let
    (
     
-     set_buf
+      set_buf
+                	   
     (
      case
          (
       		
-      		 s
+      		  s
+      		            	   
       		(
       		 case
       		     (
@@ -941,106 +1192,100 @@
       		  		          									  
       		  		       )
       		  		      in
-      		  		        beginEnd 
+      		  		        
+      		  		        sequence
       		  		        (
+      		  		          String.set
+      		  		          (
+      		  		           s
+      		  		           i
+      		  		           Char.chr
+      		  		           (
+      		  		               lsr
+      		  		               (
+      		  		                   n
+      		  		                   24
+      		  		               )
+      		  		           )
+      		  		          )
+      		  		              									
+      		  		        ;
+      		  		          
+      		  		          sequence
+      		  		          (
+      		  		            String.set
+      		  		            (
+      		  		             s
+      		  		             +
+      		  		             (
+      		  		                 i
+      		  		                 1
+      		  		             )
+      		  		             Char.chr
+      		  		             (
+      		  		                 lor
+      		  		                 (
+      		  		                     lsr
+      		  		                     (
+      		  		                         n
+      		  		                         16
+      		  		                     )
+      		  		                     255
+      		  		                 )
+      		  		             )
+      		  		            )
+      		  		                									
+      		  		          ;
       		  		            
       		  		            sequence
       		  		            (
-      		  		              Array.set
+      		  		              String.set
       		  		              (
       		  		               s
-      		  		               i
+      		  		               +
+      		  		               (
+      		  		                   i
+      		  		                   2
+      		  		               )
       		  		               Char.chr
       		  		               (
-      		  		                   lsr
+      		  		                   lor
       		  		                   (
-      		  		                       n
-      		  		                       24
+      		  		                       lsr
+      		  		                       (
+      		  		                           n
+      		  		                           8
+      		  		                       )
+      		  		                       255
       		  		                   )
       		  		               )
       		  		              )
       		  		                  									
       		  		            ;
-      		  		              
-      		  		              sequence
+      		  		              String.set
       		  		              (
-      		  		                Array.set
-      		  		                (
-      		  		                 s
-      		  		                 +
-      		  		                 (
-      		  		                     i
-      		  		                     1
-      		  		                 )
-      		  		                 Char.chr
-      		  		                 (
-      		  		                     lor
-      		  		                     (
-      		  		                         lsr
-      		  		                         (
-      		  		                             n
-      		  		                             16
-      		  		                         )
-      		  		                         255
-      		  		                     )
-      		  		                 )
-      		  		                )
-      		  		                    									
-      		  		              ;
-      		  		                
-      		  		                sequence
-      		  		                (
-      		  		                  Array.set
-      		  		                  (
-      		  		                   s
-      		  		                   +
+      		  		               s
+      		  		               +
+      		  		               (
+      		  		                   i
+      		  		                   3
+      		  		               )
+      		  		               Char.chr
+      		  		               (
+      		  		                   lor
       		  		                   (
-      		  		                       i
-      		  		                       2
+      		  		                       n
+      		  		                       255
       		  		                   )
-      		  		                   Char.chr
-      		  		                   (
-      		  		                       lor
-      		  		                       (
-      		  		                           lsr
-      		  		                           (
-      		  		                               n
-      		  		                               8
-      		  		                           )
-      		  		                           255
-      		  		                       )
-      		  		                   )
-      		  		                  )
-      		  		                      									
-      		  		                ;
-      		  		                  semicolon 
-      		  		                  (
-      		  		                      Array.set
-      		  		                      (
-      		  		                       s
-      		  		                       +
-      		  		                       (
-      		  		                           i
-      		  		                           3
-      		  		                       )
-      		  		                       Char.chr
-      		  		                       (
-      		  		                           lor
-      		  		                           (
-      		  		                               n
-      		  		                               255
-      		  		                           )
-      		  		                       )
-      		  		                      )
-      		  		                          									
-      		  		                  )
-      		  		                )
-      		  		                    							
+      		  		               )
       		  		              )
-      		  		                  							
+      		  		                  									
       		  		            )
       		  		                							
+      		  		          )
+      		  		              							
       		  		        )
+      		  		            							
       		  		      )
       		  		          									
       		  		     )
@@ -1048,21 +1293,23 @@
       		  		    		   
       		     )
       		)
-      		    		   
+      		            	   
          )
     )
-        		    
+                	    
    )
    							  
    let
    (
     
-     init_buf
+      init_buf
+                	   
     (
      case
          (
       		
-      		 buf
+      		  buf
+      		            	   
       		(
       		 case
       		     (
@@ -1111,53 +1358,50 @@
       		  		          
       		  		          sequence
       		  		          (
-      		  		            forloop 
-      		  		            (
-      		  		                i
-      		  		                0
-      		  		                <>
-      		  		                -
-      		  		                (
-      		  		                    send len
-      		  		                    (
-      		  		                     init
-      		  		                    )
-      		  		                        						  
-      		  		                    2
-      		  		                )
-      		  		                
-      		  		                sequence
-      		  		                (
-      		  		                  set_buf
-      		  		                  (
-      		  		                      buf
-      		  		                      +
-      		  		                      (
-      		  		                          pos
-      		  		                          lsl
-      		  		                          (
-      		  		                              i
-      		  		                              2
-      		  		                          )
-      		  		                      )
-      		  		                      send get
-      		  		                      (
-      		  		                       cur
-      		  		                      )
-      		  		                          						  
-      		  		                  )
-      		  		                ;
-      		  		                  send incr
-      		  		                  (
-      		  		                   cur
-      		  		                  )
-      		  		                      						  
-      		  		                  (
-      		  		                      ()
-      		  		                  )
-      		  		                )
-      		  		                    							
-      		  		            )
+      		  		             for i
+      		  		             0
+      		  		             -
+      		  		             (
+      		  		                 send len
+      		  		                 (
+      		  		                  init
+      		  		                 )
+      		  		                     						  
+      		  		                 2
+      		  		             )
+      		  		             
+      		  		             sequence
+      		  		             (
+      		  		               set_buf
+      		  		               (
+      		  		                   buf
+      		  		                   +
+      		  		                   (
+      		  		                       pos
+      		  		                       lsl
+      		  		                       (
+      		  		                           i
+      		  		                           2
+      		  		                       )
+      		  		                   )
+      		  		                   send get
+      		  		                   (
+      		  		                    cur
+      		  		                   )
+      		  		                       						  
+      		  		               )
+      		  		             ;
+      		  		               send incr
+      		  		               (
+      		  		                cur
+      		  		               )
+      		  		                   						  
+      		  		               (
+      		  		                   ()
+      		  		               )
+      		  		             )
+      		  		                 							
+      		  		                														  
       		  		          ;
       		  		            set_buf
       		  		            (
@@ -1197,10 +1441,10 @@
       		  		    		   
       		     )
       		)
-      		    		   
+      		            	   
          )
     )
-        		    
+                	    
    )
    							  
    let
@@ -1259,342 +1503,314 @@
        								   
      params = 
      (
-         	
-     buf
-         	
      )
      class name = text_raw
      class expr = 
-                 class_structure
-                 (
-                     								
-                    inheritance 
-                    (
-                        <>
-                        <"typexprConstr2"("typeConstr"([],"cursor")[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()])[@location=|dunno:///|(0,1,<1,1>,<1,1>),@comments=()],[],"classPath"([],"ustorage_base")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-                        
-                    )
-                     								
-                    classValue 
-                    (
-                        <>
-                        
-                        contents
-                        
-                        buf
-                    )
-                     								
-                    method1 
-                    (
-                        <>
-                        
-                        first
-                        
-                        
-                        new cursor
-                        (
-                            brackets2 
-                            (
-                                self
-                                
-                                text_raw
-                                (
-                                )
-                                								  
-                            )
-                            0
-                        )
-                    )
-                     								
-                    method1 
-                    (
-                        <>
-                        
-                        len
-                        
-                        
-                        /
-                        (
-                            String.length
-                            (
-                                contents
-                            )
-                            4
-                        )
-                    )
-                     								
-                    method1 
-                    (
-                        <>
-                        
-                        get
-                        i
-                        
-                        get_buf
-                        (
-                            contents
-                            *
-                            (
-                                4
-                                i
-                            )
-                        )
-                    )
-                     								
-                    method1 
-                    (
-                        <>
-                        
-                        nth
-                        i
-                        
-                        new cursor
-                        (
-                            brackets2 
-                            (
-                                self
-                                
-                                text_raw
-                                (
-                                )
-                                								  
-                            )
-                            i
-                        )
-                    )
-                     								
-                    method1 
-                    (
-                        <>
-                        
-                        copy
-                        
-                        
-                        brackets4 
-                        (
-                            contents
-                            String.copy
-                            (
-                                contents
-                            )
-                            
-                            
-                        )
-                    )
-                     								
-                    method1 
-                    (
-                        <>
-                        
-                        sub
-                        pos
-                        len
-                        
-                        brackets4 
-                        (
-                            contents
-                            String.sub
-                            (
-                                contents
-                                *
-                                (
-                                    pos
-                                    4
-                                )
-                                *
-                                (
-                                    len
-                                    4
-                                )
-                            )
-                            
-                            
-                        )
-                    )
-                     								
-                    method1 
-                    (
-                        <>
-                        
-                        concat
-                        
-                        text
-                        
-                        ustorage
-                        (
-                        )
-                        								  
-                            										   
-                        
-                        
-                        let
-                        (
-                         (
-                            									  
-                          
-                           buf
-                           String.create
-                           (
-                               +
-                               (
-                                   String.length
-                                   (
-                                       contents
-                                   )
-                                   *
-                                   (
-                                       4
-                                       send len
-                                       (
-                                        text
-                                       )
-                                           						  
-                                   )
-                               )
-                           ) 
-                          							    		   
-                            									  
-                         )
-                        in
-                          
-                          sequence
-                          (
-                            String.blit
-                            (
-                                contents
-                                0
-                                buf
-                                0
-                                String.length
-                                (
-                                    contents
-                                )
-                            )
-                          ;
-                            
-                            sequence
-                            (
-                              init_buf
-                              (
-                                  buf
-                                  String.length
-                                  (
-                                      contents
-                                  )
-                                  text
-                              )
-                            ;
-                              brackets4 
-                              (
-                                  contents
-                                  buf
-                                  
-                                  
-                              )
-                            )
-                                							
-                          )
-                              							
-                        )
-                            									
-                    )
-                     								
-                 )
-                     								
-         	
+     									    	
+       buf
+     									    	
+       class_structure
+       (
+           								
+          inherit
+           constr 
+                  
+                  cursor
+                  (
+                  )
+                  								  
+                  											   
+                  ustorage_base
+                  											   
+           (
+           )
+          										    
+           								
+           contents
+           buf
+             											 
+           								
+          method first
+          	  new cursor
+          	  (
+          	      brackets2 
+          	      (
+          	          self
+          	          
+          	          text_raw
+          	          (
+          	          )
+          	          								  
+          	      )
+          	      0
+          	  )
+             	
+              											  
+           								
+          method len
+          	  /
+          	  (
+          	      String.length
+          	      (
+          	          contents
+          	      )
+          	      4
+          	  )
+             	
+              											  
+           								
+          method get
+          (
+            case
+          	(
+          		i
+            	get_buf
+            	(
+            	    contents
+            	    *
+            	    (
+            	        4
+            	        i
+            	    )
+            	)
+          	)
+          )
+          											 
+           								
+          method nth
+          (
+            case
+          	(
+          		i
+            	new cursor
+            	(
+            	    brackets2 
+            	    (
+            	        self
+            	        
+            	        text_raw
+            	        (
+            	        )
+            	        								  
+            	    )
+            	    i
+            	)
+          	)
+          )
+          											 
+           								
+          method copy
+          	  
+          	  contents
+          	  String.copy
+          	  (
+          	      contents
+          	  )
+          	  										 
+          	  										 
+             	
+              											  
+           								
+          method sub
+          (
+            case
+          	(
+          		pos
+          		(
+          			case
+          			(		
+            		
+            		   len
+            		   
+            		   contents
+            		   String.sub
+            		   (
+            		       contents
+            		       *
+            		       (
+            		           pos
+            		           4
+            		       )
+            		       *
+            		       (
+            		           len
+            		           4
+            		       )
+            		   )
+            		   										 
+            		   										 
+            													 
+          			)
+          		)
+          	)
+          )
+              												 
+           								
+          method concat
+          (
+            case
+          	(
+          		
+          		text
+          		
+          		ustorage
+          		(
+          		)
+          										  
+          		    										   
+            	
+            	let
+            	(
+            	 (
+            	    									  
+            	  
+            	   buf
+            	   String.create
+            	   (
+            	       +
+            	       (
+            	           String.length
+            	           (
+            	               contents
+            	           )
+            	           *
+            	           (
+            	               4
+            	               send len
+            	               (
+            	                text
+            	               )
+            	                   						  
+            	           )
+            	       )
+            	   ) 
+            	  							    		   
+            	    									  
+            	 )
+            	in
+            	  
+            	  sequence
+            	  (
+            	    String.blit
+            	    (
+            	        contents
+            	        0
+            	        buf
+            	        0
+            	        String.length
+            	        (
+            	            contents
+            	        )
+            	    )
+            	  ;
+            	    
+            	    sequence
+            	    (
+            	      init_buf
+            	      (
+            	          buf
+            	          String.length
+            	          (
+            	              contents
+            	          )
+            	          text
+            	      )
+            	    ;
+            	      
+            	      contents
+            	      buf
+            	      										 
+            	      										 
+            	    )
+            	        							
+            	  )
+            	      							
+            	)
+            	    									
+          	)
+          )
+          											 
+           								
+       )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+           								
+       
+     									    	
        								   
      params = 
      (
-         	
-     text
-         	
-     i
-         	
      )
      class name = cursor
      class expr = 
-                 class_structure
-                 (
-                     								
-                    classValue 
-                    (
-                        <>
-                        
-                        contents
-                        
-                        text
-                    )
-                     								
-                    classValue 
-                    (
-                        <>
-                        
-                        pos
-                        
-                        i
-                    )
-                     								
-                    method1 
-                    (
-                        <>
-                        
-                        get
-                        
-                        
-                        send get
-                        (
-                         contents
-                        )
-                            						  
-                        (
-                            pos
-                        )
-                    )
-                     								
-                    method1 
-                    (
-                        <>
-                        
-                        incr
-                        ()
-                        
-                        Array.set
-                        (
-                         pos
-                         +
-                         (
-                             pos
-                             1
-                         )
-                        )
-                        								   
-                    )
-                     								
-                    method1 
-                    (
-                        <>
-                        
-                        is_last
-                        
-                        
-                        >=
-                        (
-                            +
-                            (
-                                pos
-                                1
-                            )
-                            send len
-                            (
-                             contents
-                            )
-                                						  
-                        )
-                    )
-                     								
-                 )
-                     								
-         	
+     									    	
+       text
+     									    	
+       i
+     									    	
+       class_structure
+       (
+           								
+           contents
+           text
+             											 
+           								
+           pos
+           i
+             											 
+           								
+          method get
+          	  send get
+          	  (
+          	   contents
+          	  )
+          	      						  
+          	  (
+          	      pos
+          	  )
+             	
+              											  
+           								
+          method incr
+          (
+            case
+          	(
+          		()
+            	Array.set
+            	(
+            	 pos
+            	 +
+            	 (
+            	     pos
+            	     1
+            	 )
+            	)
+            									   
+          	)
+          )
+          											 
+           								
+          method is_last
+          	  >=
+          	  (
+          	      +
+          	      (
+          	          pos
+          	          1
+          	      )
+          	      send len
+          	      (
+          	       contents
+          	      )
+          	          						  
+          	  )
+             	
+              											  
+           								
+       )
+       
+           								
+       
+     									    	
        								   
    )
        								   
@@ -1604,52 +1820,57 @@
        								   
      params = 
      (
-         	
-     buf
-         	
      )
      class name = string_raw
      class expr = 
-                 class_structure
-                 (
-                     								
-                    inheritance 
-                    (
-                        <>
-                        classArgs 
-                        (
-                            classPath 
-                            (
-                                text_raw
-                            )
-                            buf
-                        )
-                        
-                    )
-                     								
-                    method1 
-                    (
-                        <>
-                        
-                        set
-                        i
-                        u
-                        
-                        set_buf
-                        (
-                            contents
-                            *
-                            (
-                                4
-                                i
-                            )
-                            u
-                        )
-                    )
-                     								
-                 )
-                     								
-         	
+     									    	
+       buf
+     									    	
+       class_structure
+       (
+           								
+          inherit
+           constr classArgs 
+                  (
+                      text_raw
+                      buf
+                  )
+           (
+           )
+          										    
+           								
+          method set
+          (
+            case
+          	(
+          		i
+          		(
+          			case
+          			(		
+            		
+            		   u
+            		   set_buf
+            		   (
+            		       contents
+            		       *
+            		       (
+            		           4
+            		           i
+            		       )
+            		       u
+            		   )
+            													 
+          			)
+          		)
+          	)
+          )
+              												 
+           								
+       )
+       
+           								
+       
+     									    	
        								   
    )
        								   
@@ -1659,24 +1880,22 @@
        								   
      params = 
      (
-         	
-     init
-         	
      )
      class name = text
      class expr = 
-                 classArgs 
-                 (
-                     classPath 
-                     (
-                         text_raw
-                     )
-                     make_buf
-                     (
-                         init
-                     )
-                 )
-         	
+     									    	
+       init
+     									    	
+       classArgs 
+       (
+           text_raw
+           make_buf
+           (
+               init
+           )
+       )
+       
+     									    	
        								   
    )
        								   
@@ -1686,24 +1905,22 @@
        								   
      params = 
      (
-         	
-     init
-         	
      )
      class name = string
      class expr = 
-                 classArgs 
-                 (
-                     classPath 
-                     (
-                         string_raw
-                     )
-                     make_buf
-                     (
-                         init
-                     )
-                 )
-         	
+     									    	
+       init
+     									    	
+       classArgs 
+       (
+           string_raw
+           make_buf
+           (
+               init
+           )
+       )
+       
+     									    	
        								   
    )
        								   
@@ -1742,36 +1959,33 @@
             
             sequence
             (
-              forloop 
-              (
-                  i
-                  0
-                  <>
-                  -
-                  (
-                      String.length
-                      (
-                          s
-                      )
-                      1
-                  )
-                  Array.set
-                  (
-                   buf
-                   *
+               for i
+               0
+               -
+               (
+                   String.length
                    (
-                       4
-                       i
+                       s
                    )
-                   Array.get
-                   (
-                    s
+                   1
+               )
+               String.set
+               (
+                buf
+                *
+                (
+                    4
                     i
-                   )
-                       													
-                  )
-                      									
-              )
+                )
+                String.get
+                (
+                 s
+                 i
+                )
+                												
+               )
+                   									
+                  														  
             ;
               new text_raw
               (
@@ -1789,7 +2003,8 @@
    let
    (
     
-     make
+      make
+                	   
     (
      case
          (
@@ -1821,27 +2036,24 @@
       		        
       		        sequence
       		        (
-      		          forloop 
-      		          (
-      		              i
-      		              0
-      		              <>
-      		              -
-      		              (
-      		                  len
-      		                  1
-      		              )
-      		              set_buf
-      		              (
-      		                  s
-      		                  *
-      		                  (
-      		                      4
-      		                      i
-      		                  )
-      		                  u
-      		              )
-      		          )
+      		           for i
+      		           0
+      		           -
+      		           (
+      		               len
+      		               1
+      		           )
+      		           set_buf
+      		           (
+      		               s
+      		               *
+      		               (
+      		                   4
+      		                   i
+      		               )
+      		               u
+      		           )
+      		              														  
       		        ;
       		          new string_raw
       		          (
@@ -1856,7 +2068,7 @@
       		    		   
          )
     )
-        		    
+                	    
    )
    							  
    let
@@ -1901,12 +2113,14 @@
    let
    (
     
-     sub
+      sub
+                	   
     (
      case
          (
       		
-      		 s
+      		  s
+      		            	   
       		(
       		 case
       		     (
@@ -1930,26 +2144,29 @@
       		  		    		   
       		     )
       		)
-      		    		   
+      		            	   
          )
     )
-        		    
+                	    
    )
    							  
    let
    (
     
-     fill
+      fill
+                	   
     (
      case
          (
       		
-      		 s
+      		  s
+      		            	   
       		(
       		 case
       		     (
       		  		
-      		  		 start
+      		  		  start
+      		  		            	   
       		  		(
       		  		 case
       		  		     (
@@ -1959,63 +2176,64 @@
       		  		  		 case
       		  		  		     (
       		  		  		 	  u
-      		  		  		      forloop 
-      		  		  		      (
-      		  		  		          i
-      		  		  		          start
-      		  		  		          <>
-      		  		  		          -
-      		  		  		          (
-      		  		  		              +
-      		  		  		              (
-      		  		  		                  start
-      		  		  		                  len
-      		  		  		              )
-      		  		  		              1
-      		  		  		          )
-      		  		  		          send set
-      		  		  		          (
-      		  		  		           s
-      		  		  		          )
-      		  		  		              						  
-      		  		  		          (
-      		  		  		              i
-      		  		  		              u
-      		  		  		          )
-      		  		  		      )
+      		  		  		       for i
+      		  		  		       start
+      		  		  		       -
+      		  		  		       (
+      		  		  		           +
+      		  		  		           (
+      		  		  		               start
+      		  		  		               len
+      		  		  		           )
+      		  		  		           1
+      		  		  		       )
+      		  		  		       send set
+      		  		  		       (
+      		  		  		        s
+      		  		  		       )
+      		  		  		           						  
+      		  		  		       (
+      		  		  		           i
+      		  		  		           u
+      		  		  		       )
+      		  		  		          														  
       		  		  		     )
       		  		  		)
       		  		  		    		   
       		  		     )
       		  		)
-      		  		    		   
+      		  		            	   
       		     )
       		)
-      		    		   
+      		            	   
          )
     )
-        		    
+                	    
    )
    							  
    let
    (
     
-     blit
+      blit
+                	   
     (
      case
          (
       		
-      		 src
+      		  src
+      		            	   
       		(
       		 case
       		     (
       		  		
-      		  		 srcoff
+      		  		  srcoff
+      		  		            	   
       		  		(
       		  		 case
       		  		     (
       		  		  		
-      		  		  		 dst
+      		  		  		  dst
+      		  		  		            	   
       		  		  		(
       		  		  		 case
       		  		  		     (
@@ -2025,76 +2243,74 @@
       		  		  		  		 case
       		  		  		  		     (
       		  		  		  		 	  len
-      		  		  		  		      forloop 
-      		  		  		  		      (
-      		  		  		  		          i
-      		  		  		  		          0
-      		  		  		  		          <>
-      		  		  		  		          -
+      		  		  		  		       for i
+      		  		  		  		       0
+      		  		  		  		       -
+      		  		  		  		       (
+      		  		  		  		           len
+      		  		  		  		           1
+      		  		  		  		       )
+      		  		  		  		       
+      		  		  		  		       let
+      		  		  		  		       (
+      		  		  		  		        (
+      		  		  		  		           									  
+      		  		  		  		         
+      		  		  		  		          u
+      		  		  		  		          send get
       		  		  		  		          (
-      		  		  		  		              len
-      		  		  		  		              1
+      		  		  		  		           src
       		  		  		  		          )
-      		  		  		  		          
-      		  		  		  		          let
+      		  		  		  		              						  
       		  		  		  		          (
-      		  		  		  		           (
-      		  		  		  		              									  
-      		  		  		  		            
-      		  		  		  		             u
-      		  		  		  		             send get
+      		  		  		  		              +
+      		  		  		  		              (
+      		  		  		  		                  srcoff
+      		  		  		  		                  i
+      		  		  		  		              )
+      		  		  		  		          ) 
+      		  		  		  		         							    		   
+      		  		  		  		           									  
+      		  		  		  		        )
+      		  		  		  		       in
+      		  		  		  		         send set
+      		  		  		  		         (
+      		  		  		  		          dst
+      		  		  		  		         )
+      		  		  		  		             						  
+      		  		  		  		         (
+      		  		  		  		             +
       		  		  		  		             (
-      		  		  		  		              src
+      		  		  		  		                 dstoff
+      		  		  		  		                 i
       		  		  		  		             )
-      		  		  		  		                 						  
-      		  		  		  		             (
-      		  		  		  		                 +
-      		  		  		  		                 (
-      		  		  		  		                     srcoff
-      		  		  		  		                     i
-      		  		  		  		                 )
-      		  		  		  		             ) 
-      		  		  		  		            							    		   
-      		  		  		  		              									  
-      		  		  		  		           )
-      		  		  		  		          in
-      		  		  		  		            send set
-      		  		  		  		            (
-      		  		  		  		             dst
-      		  		  		  		            )
-      		  		  		  		                						  
-      		  		  		  		            (
-      		  		  		  		                +
-      		  		  		  		                (
-      		  		  		  		                    dstoff
-      		  		  		  		                    i
-      		  		  		  		                )
-      		  		  		  		                u
-      		  		  		  		            )
-      		  		  		  		          )
-      		  		  		  		              									
-      		  		  		  		      )
+      		  		  		  		             u
+      		  		  		  		         )
+      		  		  		  		       )
+      		  		  		  		           									
+      		  		  		  		          														  
       		  		  		  		     )
       		  		  		  		)
       		  		  		  		    		   
       		  		  		     )
       		  		  		)
-      		  		  		    		   
+      		  		  		            	   
       		  		     )
       		  		)
-      		  		    		   
+      		  		            	   
       		     )
       		)
-      		    		   
+      		            	   
          )
     )
-        		    
+                	    
    )
    							  
    let
    (
     
-     concat
+      concat
+                	   
     (
      case
          (
@@ -2122,7 +2338,6 @@
       		                 )
       		                 								  
       		               )
-      		               
       		                  									
       		          )
       		      )
@@ -2131,13 +2346,14 @@
       		    		   
          )
     )
-        		    
+                	    
    )
    							  
    let
    (
     
-     iter
+      iter
+                	   
     (
      case
          (
@@ -2160,11 +2376,12 @@
       		    		   
          )
     )
-        		    
+                	    
    )
    							  
    )
    							  
+   
   										    
                                      
 )

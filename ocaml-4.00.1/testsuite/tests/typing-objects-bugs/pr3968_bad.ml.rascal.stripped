@@ -10,32 +10,32 @@
         (
         )
         kind =
-         (
-           Abs
-           (
-           	tuple
-           	(
-           	 string
-           	 (
-           	 )
-           	  expr
-           	  (
-           	  )
-           	)
-           )
-           App
-           (
-           	tuple
-           	(
-           	 expr
-           	 (
-           	 )
-           	  expr
-           	  (
-           	  )
-           	)
-           )
-         )
+        (
+        	  Abs
+        	  (
+        	  	tuple
+        	  	(
+        	  	 string
+        	  	 (
+        	  	 )
+        	  	  expr
+        	  	  (
+        	  	  )
+        	  	)
+        	  )
+        	  App
+        	  (
+        	  	tuple
+        	  	(
+        	  	 expr
+        	  	 (
+        	  	 )
+        	  	  expr
+        	  	  (
+        	  	  )
+        	  	)
+        	  )
+        )
    )
    class_type
    (
@@ -119,6 +119,8 @@
            	)
          	)
          )
-      ) []
+      )
+      	class_type
+      	   exp
   )
 )

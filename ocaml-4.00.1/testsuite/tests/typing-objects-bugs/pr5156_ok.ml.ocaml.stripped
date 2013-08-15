@@ -1,0 +1,96 @@
+(
+  class_type
+  (
+    class_type_declaration
+      params =
+          (
+          )
+      name = t
+      expr =
+        class_type
+          signature
+          class_signature
+            (
+            )
+  )
+  class
+  (
+      params =
+          (
+            "a"
+          )
+      class name = o1
+      class expr =
+          class_structure
+            (
+            )
+  )
+  type
+  (
+    obj
+      type
+        params =
+          (
+            a
+          )
+        cstrs =
+          (
+          )
+        kind =
+              a
+                (
+                )
+  )
+  class_type
+  (
+    class_type_declaration
+      params =
+          (
+            "a"
+          )
+      name = o2
+      expr =
+        class_type
+          signature
+          class_signature
+               obj
+              (
+                  a
+              )
+            (
+            )
+  )
+  class
+  (
+      params =
+          (
+            "a"
+          )
+      class name = o3
+      class expr =
+          class_structure
+            (
+            )
+  )
+  class
+  (
+      params =
+          (
+            "a"
+          )
+      class name = o4
+      class expr =
+          class_structure
+            (
+              method m
+                (
+                self
+                :
+                     obj
+                    (
+                        a
+                    )
+                                )
+                            )
+  )
+)
