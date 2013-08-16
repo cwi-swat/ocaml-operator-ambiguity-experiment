@@ -1,0 +1,101 @@
+(
+  let
+  (
+    x
+      1
+  )
+  module M
+    struct
+    (
+      let
+      (
+        y
+          2
+      )
+    )
+  module type MT
+    signature
+    (
+        type
+        (
+          t
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                
+                    arrow
+                    
+                       string
+                      (
+                      )
+                      arrow
+                      
+                         int
+                        (
+                        )
+                        arrow
+                        
+                           string
+                          (
+                          )
+                          arrow
+                          
+                            tuple
+                            (
+                                 string
+                                (
+                                )
+                                 string
+                                (
+                                )
+                                 string
+                                (
+                                )
+                            )
+                            arrow
+                            
+                              tuple
+                              (
+                                   string
+                                  (
+                                  )
+                                   string
+                                  (
+                                  )
+                                   string
+                                  (
+                                  )
+                              )
+                              arrow
+                              
+                                tuple
+                                (
+                                     string
+                                    (
+                                    )
+                                     string
+                                    (
+                                    )
+                                     string
+                                    (
+                                    )
+                                )
+                                 unit
+                                (
+                                )
+        )
+        sig_value y
+        value_description
+             int
+            (
+            )
+          (
+          )
+    )
+)
+

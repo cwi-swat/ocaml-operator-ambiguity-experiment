@@ -1,0 +1,138 @@
+(
+  module Foo
+    struct
+    (
+      type
+      (
+        t
+          type
+            params =
+              (
+              )
+            cstrs =
+              (
+              )
+            kind =
+                   int
+                  (
+                  )
+      )
+      let
+      (
+        x
+          1
+      )
+    )
+  module type MT
+      Foo
+  module Bar
+    struct
+    (
+      type
+      (
+        t
+          type
+            params =
+              (
+              )
+            cstrs =
+              (
+              )
+            kind =
+                   int
+                  (
+                  )
+      )
+      let
+      (
+        x
+          2
+      )
+    )
+  module type MT2
+    signature
+    (
+        type
+        (
+          t
+            type
+              params =
+                (
+                )
+              cstrs =
+                (
+                )
+              kind =
+                        )
+        sig_value x
+        value_description
+             t
+            (
+            )
+          (
+          )
+    )
+  module type Gee
+      MT2
+    (
+      t
+          type
+            params =
+              (
+              )
+            cstrs =
+              (
+              )
+            kind =
+                   float
+                  (
+                  )
+    )
+  module T
+    module unpack
+    (
+    ifthenelse
+    (
+      if
+      (
+        true
+              )
+      then
+      (
+        (
+          Foo
+        :
+            package MT2
+            (
+              with type t
+                 int
+                (
+                )
+            )
+                )
+      )
+      else
+      (
+          (
+            Bar
+          :
+              package MT2
+              (
+                with type t
+                   int
+                  (
+                  )
+              )
+                    )
+      )
+    )
+    :
+        package MT2
+        (
+          with type t
+             int
+            (
+            )
+        )
+        )
+)

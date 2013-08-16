@@ -1,0 +1,31 @@
+3,6c3,4
+<   open 
+<       							      Odoc_info.Module
+<   open 
+<       							      Odoc_info.Type
+---
+>   open Odoc_info.Module
+>   open Odoc_info.Type
+39,40c37
+<           constr 
+<                      							      Odoc_info.Scan.scanner
+---
+>                   constr Odoc_info.Scan.scanner
+58,60c55
+<            	Array.set
+<            	(
+<            	 test_kinds
+---
+>                     Pexp_setinstvar "test_kinds"
+123d117
+<          )
+403,405c397
+<            	    Array.set
+<            	    (
+<            	     fmt
+---
+>                         Pexp_setinstvar "fmt"
+410d401
+<            	    )
+480d470
+<       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>

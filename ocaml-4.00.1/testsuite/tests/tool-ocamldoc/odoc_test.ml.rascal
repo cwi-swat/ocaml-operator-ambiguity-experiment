@@ -1,0 +1,751 @@
+
+(
+    								 
+  open Odoc_info
+                                     
+  open 
+      								  
+      							      Odoc_info.Module
+                                     
+  open 
+      								  
+      							      Odoc_info.Type
+                                     
+  type
+  (  						
+      							    	 
+     test_kind
+       type
+       params=
+       (
+       
+       )
+       cstrs =
+       (
+    											   
+    											   	  
+    											   
+       )
+       kind =
+       
+       
+       (
+       								  
+       Types_display
+       (
+       									
+       )
+       								    
+       								  
+       )
+       								   
+       
+       														 
+    											   
+  								        
+  )
+                                     
+  let
+  (
+   
+    p
+    Format.fprintf 
+   							    		    
+  )
+                                     
+  class
+  (
+      								   
+    params = 
+    (
+    )
+    class name = string_gen
+    class expr = 
+    									    	
+      class_structure
+      (
+          								
+         inherit
+          constr 
+                     								  
+                     							      Odoc_info.Scan.scanner
+          (
+          )
+         										    
+          								
+          test_kinds
+          []
+            											 
+          								
+          fmt
+          Format.str_formatter
+            											 
+          								
+         method must_display_types
+         	  List.mem
+         	  (
+         	      Types_display
+         	      test_kinds
+         	  )
+            	
+             											  
+          								
+         method set_test_kinds_from_module
+         (
+           case
+         	(
+         		m
+           	Array.set
+           	(
+           	 test_kinds
+           	 List.fold_left
+           	 (
+           	     
+           	     							
+           	     							
+           	     (
+           	     case
+           	       (
+           	         acc
+           	         
+           	         (
+           	           case
+           	           (
+           	            
+           	            (
+           	             s
+           	                 						 
+           	            	_
+           	            
+           	            )
+           	            
+           	            match
+           	            s
+           	            (
+           	            
+           	            case
+           	            (
+           	              "test_types_display"
+           	              
+           	              ::
+           	              (
+           	                  Types_display
+           	                  acc
+           	              )
+           	            ) 
+           	            	        											 
+           	              
+           	              case
+           	              (
+           	               _
+           	               
+           	               acc
+           	              )
+           	              													    
+           	            	        											 
+           	            	        											 
+           	            )
+           	            			   
+           	           )
+           	         )
+           	         													 
+           	       )
+           	     )													
+           	     									        	   		
+           	     							
+           	     []
+           	     match
+           	     field
+           	     (
+           	     m
+           	     m_info
+           	     )
+           	         									 
+           	     (
+           	     
+           	     case
+           	     (
+           	       None
+           	       
+           	       []
+           	     ) 
+           	     	        											 
+           	       
+           	       case
+           	       (
+           	        
+           	        Some
+           	        i
+           	        									  
+           	        
+           	        field
+           	        (
+           	        i
+           	        i_custom
+           	        )
+           	            									 
+           	       )
+           	       													    
+           	     	        											 
+           	     	        											 
+           	     )
+           	     			   
+           	 )
+           	)
+           									   
+         	)
+         )
+         											 
+          								
+         method scan_type
+         (
+           case
+         	(
+         		t
+           	match
+           	test_kinds
+           	(
+           	
+           	case
+           	(
+           	  []
+           	  
+           	  ()
+           	) 
+           		        											 
+           	  
+           	  case
+           	  (
+           	   _
+           	   
+           	   
+           	   sequence
+           	   (
+           	     p
+           	     (
+           	         fmt
+           	         "# type %s:\n"
+           	         field
+           	         (
+           	         t
+           	         ty_name
+           	         )
+           	             									 
+           	     )
+           	   ;
+           	     ifthenelse
+           	     (
+           	      if
+           	      (
+           	       send must_display_types
+           	       (
+           	        self
+           	       )
+           	           						  
+           	      )
+           	      then
+           	      (
+           	       p
+           	       (
+           	           fmt
+           	           "# manifest (Odoc_info.string_of_type_expr):\n<[%s]>\n"
+           	           match
+           	           field
+           	           (
+           	           t
+           	           ty_manifest
+           	           )
+           	               									 
+           	           (
+           	           
+           	           case
+           	           (
+           	             None
+           	             
+           	             "None"
+           	           ) 
+           	           	        											 
+           	             
+           	             case
+           	             (
+           	              
+           	              Some
+           	              e
+           	              									  
+           	              
+           	              Odoc_info.string_of_type_expr
+           	              (
+           	                  e
+           	              )
+           	             )
+           	             													    
+           	           	        											 
+           	           	        											 
+           	           )
+           	           			   
+           	       )
+           	      )
+           	      else
+           	      (
+           	      )
+           	     )
+           	         									   
+           	   )
+           	       							
+           	  )
+           	  													    
+           		        											 
+           		        											 
+           	)
+           				   
+         	)
+         )
+         											 
+          								
+         method scan_module_pre
+         (
+           case
+         	(
+         		m
+           	
+           	sequence
+           	(
+           	  p
+           	  (
+           	      fmt
+           	      "#\n# module %s:\n"
+           	      field
+           	      (
+           	      m
+           	      m_name
+           	      )
+           	          									 
+           	  )
+           	;
+           	  
+           	  sequence
+           	  (
+           	    ifthenelse
+           	    (
+           	     if
+           	     (
+           	      send must_display_types
+           	      (
+           	       self
+           	      )
+           	          						  
+           	     )
+           	     then
+           	     (
+           	      
+           	      sequence
+           	      (
+           	        p
+           	        (
+           	            fmt
+           	            "# Odoc_info.string_of_module_type:\n<[%s]>\n"
+           	            Odoc_info.string_of_module_type
+           	            (
+           	                field
+           	                (
+           	                m
+           	                m_type
+           	                )
+           	                    									 
+           	            )
+           	        )
+           	      ;
+           	        p
+           	        (
+           	            fmt
+           	            "# Odoc_info.string_of_module_type ~complete: true :\n<[%s]>\n"
+           	            Odoc_info.string_of_module_type
+           	            (
+           	                complete
+           	                true
+           	                    							    
+           	                field
+           	                (
+           	                m
+           	                m_type
+           	                )
+           	                    									 
+           	            )
+           	        )
+           	      )
+           	          							
+           	     )
+           	     else
+           	     (
+           	     )
+           	    )
+           	        									   
+           	  ;
+           	    true
+           	  )
+           	      							
+           	)
+           	    							
+         	)
+         )
+         											 
+          								
+         method scan_module_type_pre
+         (
+           case
+         	(
+         		m
+           	
+           	sequence
+           	(
+           	  p
+           	  (
+           	      fmt
+           	      "#\n# module type %s:\n"
+           	      field
+           	      (
+           	      m
+           	      mt_name
+           	      )
+           	          									 
+           	  )
+           	;
+           	  
+           	  sequence
+           	  (
+           	    ifthenelse
+           	    (
+           	     if
+           	     (
+           	      send must_display_types
+           	      (
+           	       self
+           	      )
+           	          						  
+           	     )
+           	     then
+           	     (
+           	      
+           	      sequence
+           	      (
+           	        p
+           	        (
+           	            fmt
+           	            "# Odoc_info.string_of_module_type:\n<[%s]>\n"
+           	            match
+           	            field
+           	            (
+           	            m
+           	            mt_type
+           	            )
+           	                									 
+           	            (
+           	            
+           	            case
+           	            (
+           	              None
+           	              
+           	              "None"
+           	            ) 
+           	            	        											 
+           	              
+           	              case
+           	              (
+           	               
+           	               Some
+           	               t
+           	               									  
+           	               
+           	               Odoc_info.string_of_module_type
+           	               (
+           	                   t
+           	               )
+           	              )
+           	              													    
+           	            	        											 
+           	            	        											 
+           	            )
+           	            			   
+           	        )
+           	      ;
+           	        p
+           	        (
+           	            fmt
+           	            "# Odoc_info.string_of_module_type ~complete: true :\n<[%s]>\n"
+           	            match
+           	            field
+           	            (
+           	            m
+           	            mt_type
+           	            )
+           	                									 
+           	            (
+           	            
+           	            case
+           	            (
+           	              None
+           	              
+           	              "None"
+           	            ) 
+           	            	        											 
+           	              
+           	              case
+           	              (
+           	               
+           	               Some
+           	               t
+           	               									  
+           	               
+           	               Odoc_info.string_of_module_type
+           	               (
+           	                   complete
+           	                   true
+           	                       							    
+           	                   t
+           	               )
+           	              )
+           	              													    
+           	            	        											 
+           	            	        											 
+           	            )
+           	            			   
+           	        )
+           	      )
+           	          							
+           	     )
+           	     else
+           	     (
+           	     )
+           	    )
+           	        									   
+           	  ;
+           	    true
+           	  )
+           	      							
+           	)
+           	    							
+         	)
+         )
+         											 
+          								
+         method generate
+         (
+           case
+         	(
+         		
+         		module_list
+         		
+         		 list
+         		 (
+         		   
+         		   Odoc_info.Module.t_module
+         		   (
+         		   )
+         		   								  
+         		 )
+         		    									
+         		    										   
+           	
+           	let
+           	(
+           	 (
+           	    									  
+           	  
+           	   oc
+           	   open_out
+           	   (
+           	       
+           	        !
+           	        (
+           	        
+           	            								  
+           	            							      Odoc_info.Global.out_file
+           	        )
+           	           							 
+           	   ) 
+           	  							    		   
+           	    									  
+           	 )
+           	in
+           	  
+           	  sequence
+           	  (
+           	    Array.set
+           	    (
+           	     fmt
+           	     Format.formatter_of_out_channel
+           	     (
+           	         oc
+           	     )
+           	    )
+           	    								   
+           	  ;
+           	    
+           	    sequence
+           	    (
+           	      
+           	      try
+           	      List.iter
+           	      (
+           	          
+           	          (
+           	            case
+           	            (
+           	             m
+           	             
+           	             
+           	             sequence
+           	             (
+           	               send set_test_kinds_from_module
+           	               (
+           	                self
+           	               )
+           	                   						  
+           	               (
+           	                   m
+           	               )
+           	             ;
+           	               send scan_module_list
+           	               (
+           	                self
+           	               )
+           	                   						  
+           	               (
+           	                   ::
+           	                    (
+           	                    m
+           	                    []
+           	                    ) 
+           	                       						  
+           	               )
+           	             )
+           	                 							
+           	            )
+           	          )
+           	          													 
+           	          module_list
+           	      )
+           	      (
+           	      
+           	      case
+           	      (
+           	        e
+           	        
+           	        prerr_endline
+           	        (
+           	            Printexc.to_string
+           	            (
+           	                e
+           	            )
+           	        )
+           	      ) 
+           	      	        											 
+           	      	        											 
+           	      )
+           	          							   
+           	    ;
+           	      
+           	      sequence
+           	      (
+           	        Format.pp_print_flush
+           	        (
+           	            fmt
+           	            ()
+           	        )
+           	      ;
+           	        close_out
+           	        (
+           	            oc
+           	        )
+           	      )
+           	          							
+           	    )
+           	        							
+           	  )
+           	      							
+           	)
+           	    									
+         	)
+         )
+         											 
+          								
+      )
+      <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
+          								
+      
+    									    	
+      								   
+  )
+      								   
+                                     
+  
+   
+   let module My_generator
+     (
+   		struct
+   		(
+   									  
+   		class
+   		(
+   		    								   
+   		  params = 
+   		  (
+   		  )
+   		  class name = generator
+   		  class expr = 
+   		  									    	
+   		    let
+   		    (
+   		     
+   		      inst
+   		      new string_gen 
+   		     							    		   
+   		       										   
+   		    )
+   		     class_structure
+   		     (
+   		         								
+   		        method generate
+   		        	  send generate
+   		        	  (
+   		        	   inst
+   		        	  )
+   		        	      						  
+   		           	
+   		            											  
+   		         								
+   		     )
+   		     
+   		         								
+   		       										   
+   		    
+   		  									    	
+   		    								   
+   		)
+   		    								   
+   									  
+   		)
+   									  
+     )
+     in
+     (
+        Odoc_args.set_generator
+        (
+            
+            Odoc_gen.Base
+               (
+                My_generator
+               :
+                package Odoc_gen.Base
+                (
+                )
+                    							   
+               )
+                   								  
+                								 
+        )
+     )
+       											   
+  							    		    
+                                     
+)
