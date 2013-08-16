@@ -288,7 +288,6 @@
                          								  
                             								   
                        )
-                       
                           									
                       )
                           								 
@@ -306,38 +305,37 @@
                      ;
                        List.iter
                        (
+                           
                            (
-                            
-                            case
-                            (
-                            f
-                            
-                            
-                            let
-                            (
+                             case
                              (
-                                									  
+                              f
                               
-                               res
-                               f
-                               (
-                                   0
-                               ) 
-                              							    		   
-                                									  
-                             )
-                            in
-                              Printf.printf
+                              
+                              let
                               (
-                                  "Result is: %d\n"
-                                  res
+                               (
+                                  									  
+                                
+                                 res
+                                 f
+                                 (
+                                     0
+                                 ) 
+                                							    		   
+                                  									  
+                               )
+                              in
+                                Printf.printf
+                                (
+                                    "Result is: %d\n"
+                                    res
+                                )
                               )
-                            )
-                                									
-                            )
-                            													 
+                                  									
+                             )
                            )
-                              						  
+                           													 
                            l
                        )
                      )

@@ -5,41 +5,43 @@
   (  						
       							    	 
      tree
-     type
-     params=
-     (
-     
-     )
-     cstrs =
-     (
-     )
-     kind =
-     
-     
-     (
-     								  
-     Tree
-     (
-     									
-      
-       list
+       type
+       params=
        (
-         
-         tree
-         (
-         )
-         								  
-       )
        
-          									
-     								     
-     )
-     								    
-     								  
-     )
-     								  
-     														  
-     														 
+       )
+       cstrs =
+       (
+    											   
+    											   	  
+    											   
+       )
+       kind =
+       
+       
+       (
+       								  
+       Tree
+       (
+       									
+        
+         list
+         (
+           
+           tree
+           (
+           )
+           								  
+         )
+            									
+       								     
+       )
+       								    
+       								  
+       )
+       								   
+       
+       														 
     											   
   								        
   )
@@ -56,69 +58,69 @@
       
        x
        
-        Tree
-        ::
-         (
-         
-         sequence
-         (
-           print_endline
+       Tree
+          ::
            (
-               "x"
+           
+           sequence
+           (
+             print_endline
+             (
+                 "x"
+             )
+           ;
+             y
            )
-         ;
-           y
-         )
-             							
-         ::
-         (
-         z
-         []
-         ) 
-            						  
-         ) 
-            						  
+               							
+           ::
+           (
+           z
+           []
+           ) 
+              						  
+           ) 
+              						  
            								  
       							    		   
         									  
       
        y
        
-        Tree
-        
-        sequence
-        (
-          print_endline
+       Tree
+          
+          sequence
           (
-              "y"
+            print_endline
+            (
+                "y"
+            )
+          ;
+            []
           )
-        ;
-          []
-        )
-            							
+              							
            								  
       							    		   
         									  
       
        z
        
-        Tree
-        
-        sequence
-        (
-          print_endline
+       Tree
+          
+          sequence
           (
-              "z"
+            print_endline
+            (
+                "z"
+            )
+          ;
+            ::
+             (
+             x
+             []
+             ) 
+                						  
           )
-        ;
-          ::
-           (
-           x
-           []
-           ) 
-              						  
-        )
-            							
+              							
            								  
       							    		   
         									  
@@ -127,14 +129,13 @@
       match
       
       (
-          					 x
-          					 
+       x
+          					   
       	y
-          					 
+          					   
       	z
-          					 
+          					   
       )
-          					 
       (
       
       case

@@ -988,7 +988,7 @@ and ex1 = {lvar=1 ; lnb=1 ; lassoc=ex0} in
 test "habert" habert (A ex0) 1 ;
 test "habert" habert (B ex0) 1 ;
 test "habert" habert (A ex1) 2 ;
-test "habert" habert (B ex1) 3 ;;
+test "habert" habert (B ex1) 3 ;
 
 (* Problems with interval test in arithmetic mod 2^31, bug #359 *)
 (* From manuel Fahndrich *)

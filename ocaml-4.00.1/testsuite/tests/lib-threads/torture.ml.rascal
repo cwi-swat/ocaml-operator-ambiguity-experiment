@@ -299,12 +299,11 @@
                    writer_thread
                    
                    (
-                       					 in1
-                       					 
+                    in1
+                       					   
                    	4096
-                       					 
+                       					   
                    )
-                       					 
                )
              ;
                
@@ -315,12 +314,11 @@
                      reader_thread
                      
                      (
-                         					 out1
-                         					 
+                      out1
+                         					   
                      	4096
-                         					 
+                         					   
                      )
-                         					 
                  )
                ;
                  
@@ -352,12 +350,11 @@
                          writer_thread
                          
                          (
-                             					 in2
-                             					 
+                          in2
+                             					   
                          	16
-                             					 
+                             					   
                          )
-                             					 
                      )
                    ;
                      
@@ -368,12 +365,11 @@
                            reader_thread
                            
                            (
-                               					 out2
-                               					 
+                            out2
+                               					   
                            	16
-                               					 
+                               					   
                            )
-                               					 
                        )
                      ;
                        stdin_thread

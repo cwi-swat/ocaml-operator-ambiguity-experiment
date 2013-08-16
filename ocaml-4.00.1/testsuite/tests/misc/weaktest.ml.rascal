@@ -29,29 +29,31 @@
     (  						
         							    	 
        t
-       type
-       params=
-       (
-       
-       )
-       cstrs =
-       (
-       )
-       kind =
-       
-        list
-        (
+         type
+         params=
+         (
+         
+         )
+         cstrs =
+         (
+      											   
+      											   	  
+      											   
+         )
+         kind =
+         
           
-          string
+         
+          list
           (
+            
+            string
+            (
+            )
+            								  
           )
-          								  
-        )
-        
-           									
-       
-       														  
-       														 
+             									
+         														 
       											   
     								        
     )
@@ -59,7 +61,8 @@
     let
     (
      
-      equal
+       equal
+                 	   
      (
       case
           (
@@ -97,7 +100,7 @@
        		    		   
           )
      )
-         		    
+                 	    
     )
     							  
     let
@@ -122,6 +125,7 @@
     							  
     )
     							  
+    
    										    
       									 
       									 
@@ -131,12 +135,12 @@
    module  HT
     
         								  
-     Weak.Make
-        							     
+        							      Weak.Make
     (
     Hashed
     )
     								   
+    
    										    
       									 
       									 

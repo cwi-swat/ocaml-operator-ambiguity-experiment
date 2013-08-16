@@ -44,7 +44,7 @@
     (
     let
     (
-      floor_ev
+       floor_ev
      (
       case
           (
@@ -87,16 +87,16 @@
     let
     (
       unit
-          					 (
-            					   one
+      (
+       one
       	zero
       	zero
       	one
-          					 ) 
+      ) 
     )
     let
     (
-      comp
+       comp
      (
       case
           (
@@ -115,20 +115,20 @@
        		 	  	s'
        		 	  	t'
        		 	  )
-       		          					 (
-       		            					   +$
        		      (
-       		          *$
-       		          (
-       		              q
-       		              q'
-       		          )
-       		          *$
-       		          (
-       		              r
-       		              s'
-       		          )
-       		      )
+       		       +$
+       		       (
+       		           *$
+       		           (
+       		               q
+       		               q'
+       		           )
+       		           *$
+       		           (
+       		               r
+       		               s'
+       		           )
+       		       )
        		      	+$
        		      	(
        		      	    *$
@@ -168,7 +168,7 @@
        		      	        t'
        		      	    )
        		      	)
-       		          					 )
+       		      )
        		     )
        		)
           )
@@ -189,7 +189,7 @@
           )
          )
     )
-    safe
+     safe
    (
     case
         (
@@ -211,7 +211,7 @@
      		)
         )
    )
-    prod
+     prod
    (
     case
         (
@@ -222,8 +222,8 @@
      		 	  n
      		      LFT.comp
      		      (
-     		              					 (
-     		                					   ten
+     		          (
+     		           ten
      		          	*$
      		          	(
      		          	    neg_ten
@@ -231,14 +231,14 @@
      		          	)
      		          	zero
      		          	one
-     		              					 )
+     		          )
      		          z
      		      )
      		     )
      		)
         )
    )
-    cons
+     cons
    (
     case
         (
@@ -265,11 +265,11 @@
      		        LFT.comp
      		        (
      		            z
-     		                					 (
-     		             !$
-     		             (
-     		             k
-     		             )
+     		            (
+     		              !$
+     		              (
+     		              k
+     		              )
      		            	 !$
      		            	 (
      		            	 *
@@ -283,7 +283,7 @@
      		            	 (
      		            	 den
      		            	 )
-     		                					 )
+     		            )
      		        )
      		      )
      		     )
@@ -293,19 +293,19 @@
    )
    let
    (
-     digit
+      digit
     (
      case
          (
-      		 k
+      		  k
       		(
       		 case
       		     (
-      		  		 z
+      		  		  z
       		  		(
       		  		 case
       		  		     (
-      		  		  		 n
+      		  		  		  n
       		  		  		(
       		  		  		 case
       		  		  		     (

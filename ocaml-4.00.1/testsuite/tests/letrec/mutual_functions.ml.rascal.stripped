@@ -50,40 +50,40 @@
       List.iter
       (
           (
-           case
-           (
-           i
-           assert &&
-           (
-               <>
-               (
-                   even
-                   (
-                       i
-                   )
-                   odd
-                   (
-                       i
-                   )
-               )
-               =
-               (
-                   even
-                   (
-                       i
-                   )
-                   =
-                   (
-                       mod
-                       (
-                           i
-                           2
-                       )
-                       0
-                   )
-               )
-           )
-           )
+            case
+            (
+             i
+             assert &&
+             (
+                 <>
+                 (
+                     even
+                     (
+                         i
+                     )
+                     odd
+                     (
+                         i
+                     )
+                 )
+                 =
+                 (
+                     even
+                     (
+                         i
+                     )
+                     =
+                     (
+                         mod
+                         (
+                             i
+                             2
+                         )
+                         0
+                     )
+                 )
+             )
+            )
           )
           ::
            (

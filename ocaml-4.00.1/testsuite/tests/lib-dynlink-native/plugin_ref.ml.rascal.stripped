@@ -20,26 +20,26 @@
       Api.add_cb
       (
           (
-           case
-           (
-           ()
-           sequence
-           (
-             Printf.printf
+            case
+            (
+             ()
+             sequence
              (
-                 "current value for ref = %i\n"
-                  !
-                  (
-                  x
-                  )
+               Printf.printf
+               (
+                   "current value for ref = %i\n"
+                    !
+                    (
+                    x
+                    )
+               )
+             ;
+               incr
+               (
+                   x
+               )
              )
-           ;
-             incr
-             (
-                 x
-             )
-           )
-           )
+            )
           )
       )
     )

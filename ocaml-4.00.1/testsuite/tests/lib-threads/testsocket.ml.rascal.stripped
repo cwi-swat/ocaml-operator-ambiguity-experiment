@@ -2,11 +2,11 @@
   open Unix
   let
   (
-    engine
+     engine
    (
     case
         (
-     		 verbose
+     		  verbose
      		(
      		 case
      		     (
@@ -46,10 +46,10 @@
      		  		               open_connection
      		  		               (
      		  		                   ADDR_INET
-     		  		                          					 (
-     		  		                            					   address
+     		  		                      (
+     		  		                       address
      		  		                      	80
-     		  		                          					 )
+     		  		                      )
      		  		               ) 
      		  		             )
      		  		            in
@@ -217,8 +217,8 @@
               (
                 _
               )
-                  					 (
-                    					   false
+              (
+               false
               	array
               	(
               	 Array.get
@@ -228,15 +228,15 @@
               	 )
               	 "caml.inria.fr"
               	)
-                  					 )
+              )
             ) 
               case
               (
                _
-                   					 (
-                     					   true
+               (
+                true
                	Sys.argv
-                   					 )
+               )
               )
             )
           )

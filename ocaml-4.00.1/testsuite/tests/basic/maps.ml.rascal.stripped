@@ -1,27 +1,27 @@
 (
   module  IntMap
-    Map.Make
+       							      Map.Make
    (
    struct
    (
    type
    (  						
       t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-      int
-      (
-      )
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        int
+        (
+        )
    )
    let
    (
-     compare
+      compare
     (
      case
          (
@@ -80,23 +80,23 @@
          IntMap.iter
          (
              (
-              case
-              (
-                k
-                (
-                case
-                (
-                v
-                Printf.printf
-                (
-                    "%d %s\n"
-                    k
+             case
+               (
+                 k
+                 (
+                   case
+                   (
                     v
-                )
-                )
-                )
-              )													
-             )
+                    Printf.printf
+                    (
+                        "%d %s\n"
+                        k
+                        v
+                    )
+                   )
+                 )
+               )
+             )													
              m
          )
         )
@@ -119,68 +119,68 @@
             IntMap.merge
             (
                 (
-                 case
-                 (
-                   _
-                   (
-                   case
-                   (
-                     l
-                     (
-                     case
-                     (
-                     r
-                     match
-                     (
-                         					 l
-                     	r
-                     )
-                     (
-                     case
-                     (
-                       pat_or
-                       (
+                case
+                  (
+                    _
+                    (
+                    case
+                      (
+                        l
                         (
-                         Some
-                         x
-                        	None
+                          case
+                          (
+                           r
+                           match
+                           (
+                            l
+                           	r
+                           )
+                           (
+                           case
+                           (
+                             pat_or
+                             (
+                              (
+                               Some
+                               x
+                              	None
+                              )
+                              (
+                               None
+                              	Some
+                              	x
+                              )
+                             )
+                             Some
+                                x
+                           ) 
+                             case
+                             (
+                              (
+                               Some
+                               x
+                              	Some
+                              	y
+                              )
+                              Some
+                                 ^
+                                 (
+                                     x
+                                     x
+                                 )
+                             )
+                             case
+                             (
+                              _
+                              assert false
+                             )
+                           )
+                          )
                         )
-                        (
-                         None
-                        	Some
-                        	x
-                        )
-                       )
-                        Some
-                        x
-                     ) 
-                       case
-                       (
-                        (
-                         Some
-                         x
-                        	Some
-                        	y
-                        )
-                         Some
-                         ^
-                         (
-                             x
-                             x
-                         )
-                       )
-                       case
-                       (
-                        _
-                        assert false
-                       )
-                     )
-                     )
-                     )
-                   )													
-                   )
-                 )													
-                )
+                      )
+                    )													
+                  )
+                )													
                 m1
                 m2
             )
@@ -200,52 +200,52 @@
                 IntMap.merge
                 (
                     (
-                     case
-                     (
-                       _
-                       (
-                       case
-                       (
-                         l
-                         (
-                         case
-                         (
-                         r
-                         match
-                         (
-                             					 l
-                         	r
-                         )
-                         (
-                         case
-                         (
-                           (
-                            Some
-                            x
-                           	Some
-                           	y
-                           )
-                           when
-                           =
-                           (
-                               x
-                               y
-                           )
-                            Some
-                            x
-                         ) 
-                           case
-                           (
-                            _
-                            None
-                           )
-                         )
-                         )
-                         )
-                       )													
-                       )
-                     )													
-                    )
+                    case
+                      (
+                        _
+                        (
+                        case
+                          (
+                            l
+                            (
+                              case
+                              (
+                               r
+                               match
+                               (
+                                l
+                               	r
+                               )
+                               (
+                               case
+                               (
+                                 (
+                                  Some
+                                  x
+                                 	Some
+                                 	y
+                                 )
+                                 when
+                                 =
+                                 (
+                                     x
+                                     y
+                                 )
+                                 Some
+                                    x
+                               ) 
+                                 case
+                                 (
+                                  _
+                                  None
+                                 )
+                               )
+                              )
+                            )
+                          )
+                        )													
+                      )
+                    )													
                     m1
                     m2
                 )

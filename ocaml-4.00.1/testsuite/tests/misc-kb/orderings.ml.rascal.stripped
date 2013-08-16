@@ -25,7 +25,7 @@
   )
   let
   (
-    ge_ord
+     ge_ord
    (
     case
         (
@@ -55,7 +55,7 @@
      		)
         )
    )
-   gt_ord
+    gt_ord
   (
    case
        (
@@ -85,7 +85,7 @@
     		)
        )
   )
-   eq_ord
+    eq_ord
   (
    case
        (
@@ -118,7 +118,7 @@
   )
   let
   (
-    rem_eq
+     rem_eq
    (
     case
         (
@@ -149,10 +149,10 @@
      		           (
      		            equiv
      		            (
-     		                    					 (
-     		                      					   x
+     		                (
+     		                 x
      		                	y
-     		                    					 )
+     		                )
      		            )
      		           )
      		           then
@@ -182,7 +182,7 @@
   )
   let
   (
-    diff_eq
+     diff_eq
    (
     case
         (
@@ -223,15 +223,15 @@
      		             try
      		             diffrec
      		             (
-     		                     					 (
-     		                       					   t
+     		                 (
+     		                  t
      		                 	rem_eq
      		                 	(
      		                 	    equiv
      		                 	    h
      		                 	    y
      		                 	)
-     		                     					 )
+     		                 )
      		             )
      		             (
      		             case
@@ -247,21 +247,21 @@
      		                  )
      		                  diffrec
      		                  (
-     		                          					 (
-     		                            					   t
+     		                      (
+     		                       t
      		                      	y
-     		                          					 )
+     		                      )
      		                  ) 
      		                )
      		               in
-     		                     					 (
-     		                       					   ::
      		                 (
-     		                     h
-     		                     x'
-     		                 )
+     		                  ::
+     		                  (
+     		                      h
+     		                      x'
+     		                  )
      		                 	y'
-     		                     					 )
+     		                 )
      		               )
      		             ) 
      		             )
@@ -289,20 +289,20 @@
      		         (
      		          diffrec
      		          (
-     		                  					 (
-     		                    					   y
+     		              (
+     		               y
      		              	x
-     		                  					 )
+     		              )
      		          )
      		         )
      		         else
      		         (
      		          diffrec
      		          (
-     		                  					 (
-     		                    					   x
+     		              (
+     		               x
      		              	y
-     		                  					 )
+     		              )
      		          )
      		         ) 
      		        )
@@ -341,10 +341,10 @@
                 (
                     order
                 )
-                    					 (
-                      					   sons1
+                (
+                 sons1
                 	sons2
-                    					 )
+                )
             )
             (
             case
@@ -368,28 +368,28 @@
                  List.for_all
                  (
                      (
-                      case
-                      (
-                      n
-                      List.exists
-                      (
-                          (
-                           case
-                           (
-                           m
-                           gt_ord
-                           (
-                               order
-                                   					 (
-                                     					   m
-                               	n
-                                   					 )
-                           )
-                           )
-                          )
-                          l1
-                      )
-                      )
+                       case
+                       (
+                        n
+                        List.exists
+                        (
+                            (
+                              case
+                              (
+                               m
+                               gt_ord
+                               (
+                                   order
+                                   (
+                                    m
+                                   	n
+                                   )
+                               )
+                              )
+                            )
+                            l1
+                        )
+                       )
                      )
                      l2
                  )
@@ -492,10 +492,10 @@
                    match
                    order
                    (
-                           					 (
-                             					   x1
+                       (
+                        x1
                        	x2
-                           					 )
+                       )
                    )
                    (
                    case
@@ -508,18 +508,18 @@
                        List.for_all
                        (
                            (
-                            case
-                            (
-                            n'
-                            gt_ord
-                            (
-                                order
-                                    					 (
-                                      					   m
-                                	n'
-                                    					 )
-                            )
-                            )
+                             case
+                             (
+                              n'
+                              gt_ord
+                              (
+                                  order
+                                  (
+                                   m
+                                  	n'
+                                  )
+                              )
+                             )
                            )
                            l2
                        )
@@ -539,10 +539,10 @@
                       Equal
                       lexrec
                       (
-                              					 (
-                                					   l1
+                          (
+                           l1
                           	l2
-                              					 )
+                          )
                       )
                      )
                      case
@@ -555,18 +555,18 @@
                         List.exists
                         (
                             (
-                             case
-                             (
-                             m'
-                             ge_ord
-                             (
-                                 order
-                                     					 (
-                                       					   m'
-                                 	n
-                                     					 )
-                             )
-                             )
+                              case
+                              (
+                               m'
+                               ge_ord
+                               (
+                                   order
+                                   (
+                                    m'
+                                   	n
+                                   )
+                               )
+                              )
                             )
                             l1
                         )
@@ -588,10 +588,10 @@
             in
               lexrec
               (
-                      					 (
-                        					   sons1
+                  (
+                   sons1
                   	sons2
-                      					 )
+                  )
               )
             )
           ) 
@@ -609,7 +609,7 @@
   )
   let
   (
-    rpo
+     rpo
    (
     case
         (
@@ -712,18 +712,18 @@
      		                          List.for_all
      		                          (
      		                              (
-     		                               case
-     		                               (
-     		                               n'
-     		                               gt_ord
-     		                               (
-     		                                   rporec
-     		                                       					 (
-     		                                         					   m
-     		                                   	n'
-     		                                       					 )
-     		                               )
-     		                               )
+     		                                case
+     		                                (
+     		                                 n'
+     		                                 gt_ord
+     		                                 (
+     		                                     rporec
+     		                                     (
+     		                                      m
+     		                                     	n'
+     		                                     )
+     		                                 )
+     		                                )
      		                              )
      		                              sons2
      		                          )
@@ -744,10 +744,10 @@
      		                         ext
      		                         (
      		                             rporec
-     		                                 					 (
-     		                                   					   m
+     		                             (
+     		                              m
      		                             	n
-     		                                 					 )
+     		                             )
      		                         )
      		                        )
      		                        case
@@ -760,18 +760,18 @@
      		                           List.exists
      		                           (
      		                               (
-     		                                case
-     		                                (
-     		                                m'
-     		                                ge_ord
-     		                                (
-     		                                    rporec
-     		                                        					 (
-     		                                          					   m'
-     		                                    	n
-     		                                        					 )
-     		                                )
-     		                                )
+     		                                 case
+     		                                 (
+     		                                  m'
+     		                                  ge_ord
+     		                                  (
+     		                                      rporec
+     		                                      (
+     		                                       m'
+     		                                      	n
+     		                                      )
+     		                                  )
+     		                                 )
      		                               )
      		                               sons1
      		                           )

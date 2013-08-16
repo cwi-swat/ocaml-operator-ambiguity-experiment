@@ -1,15 +1,15 @@
 (
   let
   (
-    send_flush
+     send_flush
    (
     case
         (
-     		 send
+     		  send
      		(
      		 case
      		     (
-     		  		 ob
+     		  		  ob
      		  		(
      		  		 case
      		  		     (
@@ -63,15 +63,15 @@
     send_flush
     (
         (
-         case
-         (
-         ob
-         Printf.bprintf
-         (
-             ob
-             "%S\n"
-         )
-         )
+          case
+          (
+           ob
+           Printf.bprintf
+           (
+               ob
+               "%S\n"
+           )
+          )
         )
     ) 
   )
@@ -87,11 +87,11 @@
              ib
              "%S\n"
              (
-              case
-              (
-              s
-              s
-              )
+               case
+               (
+                s
+                s
+               )
              )
          )
         )

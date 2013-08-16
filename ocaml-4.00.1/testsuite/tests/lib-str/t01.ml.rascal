@@ -6,7 +6,8 @@
   let
   (
    
-    build_result
+     build_result
+               	   
    (
     case
         (
@@ -79,23 +80,26 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   let
   (
    
-    search_forward
+     search_forward
+               	   
    (
     case
         (
      		
-     		 re
+     		  re
+     		            	   
      		(
      		 case
      		     (
      		  		
-     		  		 ng
+     		  		  ng
+     		  		            	   
      		  		(
      		  		 case
      		  		     (
@@ -146,29 +150,32 @@
      		  		  		    		   
      		  		     )
      		  		)
-     		  		    		   
+     		  		            	   
      		     )
      		)
-     		    		   
+     		            	   
         )
    )
-       		    
+               	    
   )
                                      
   let
   (
    
-    search_backward
+     search_backward
+               	   
    (
     case
         (
      		
-     		 re
+     		  re
+     		            	   
      		(
      		 case
      		     (
      		  		
-     		  		 ng
+     		  		  ng
+     		  		            	   
      		  		(
      		  		 case
      		  		     (
@@ -219,29 +226,32 @@
      		  		  		    		   
      		  		     )
      		  		)
-     		  		    		   
+     		  		            	   
      		     )
      		)
-     		    		   
+     		            	   
         )
    )
-       		    
+               	    
   )
                                      
   let
   (
    
-    partial_match
+     partial_match
+               	   
    (
     case
         (
      		
-     		 re
+     		  re
+     		            	   
      		(
      		 case
      		     (
      		  		
-     		  		 ng
+     		  		  ng
+     		  		            	   
      		  		(
      		  		 case
      		  		     (
@@ -283,13 +293,13 @@
      		  		  		    		   
      		  		     )
      		  		)
-     		  		    		   
+     		  		            	   
      		     )
      		)
-     		    		   
+     		            	   
         )
    )
-       		    
+               	    
   )
                                      
   let
@@ -334,7 +344,8 @@
   let
   (
    
-    test
+     test
+               	   
    (
     case
         (
@@ -385,23 +396,26 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   let
   (
    
-    test_search_forward
+     test_search_forward
+               	   
    (
     case
         (
      		
-     		 r
+     		  r
+     		            	   
      		(
      		 case
      		     (
      		  		
-     		  		 ng
+     		  		  ng
+     		  		            	   
      		  		(
      		  		 case
      		  		     (
@@ -427,29 +441,32 @@
      		  		  		    		   
      		  		     )
      		  		)
-     		  		    		   
+     		  		            	   
      		     )
      		)
-     		    		   
+     		            	   
         )
    )
-       		    
+               	    
   )
                                      
   let
   (
    
-    test_search_backward
+     test_search_backward
+               	   
    (
     case
         (
      		
-     		 r
+     		  r
+     		            	   
      		(
      		 case
      		     (
      		  		
-     		  		 ng
+     		  		  ng
+     		  		            	   
      		  		(
      		  		 case
      		  		     (
@@ -478,29 +495,32 @@
      		  		  		    		   
      		  		     )
      		  		)
-     		  		    		   
+     		  		            	   
      		     )
      		)
-     		    		   
+     		            	   
         )
    )
-       		    
+               	    
   )
                                      
   let
   (
    
-    test_partial_match
+     test_partial_match
+               	   
    (
     case
         (
      		
-     		 r
+     		  r
+     		            	   
      		(
      		 case
      		     (
      		  		
-     		  		 ng
+     		  		  ng
+     		  		            	   
      		  		(
      		  		 case
      		  		     (
@@ -526,13 +546,13 @@
      		  		  		    		   
      		  		     )
      		  		)
-     		  		    		   
+     		  		            	   
      		     )
      		)
-     		    		   
+     		            	   
         )
    )
-       		    
+               	    
   )
                                      
   let
@@ -8059,7 +8079,8 @@
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               (
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  									  
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                process
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 process
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           	   
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                (
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 case
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     (
@@ -8183,7 +8204,7 @@
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  		    		   
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                )
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   		   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           	   
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  									  
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              in
@@ -9043,7 +9064,8 @@
   let
   (
    
-    manual_test
+     manual_test
+               	   
    (
     case
         (
@@ -9172,7 +9194,7 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   

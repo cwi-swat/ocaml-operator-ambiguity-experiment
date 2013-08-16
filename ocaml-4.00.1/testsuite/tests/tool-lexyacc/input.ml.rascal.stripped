@@ -22,8 +22,8 @@
    	  lexbuf
         raise
         (
-             Lexical_error
-             "unterminated comment"
+            Lexical_error
+               "unterminated comment"
         )
        )
   )
@@ -128,8 +128,8 @@
    	  lexbuf
         raise
         (
-             Lexical_error
-             "bad character constant"
+            Lexical_error
+               "bad character constant"
         )
        )
   )
@@ -202,8 +202,8 @@
    	  lexbuf
         raise
         (
-             Lexical_error
-             "unterminated string"
+            Lexical_error
+               "unterminated string"
         )
        )
   )
@@ -293,8 +293,8 @@
    	  lexbuf
         raise
         (
-             Lexical_error
-             "unterminated action"
+            Lexical_error
+               "unterminated action"
         )
        )
   )
@@ -452,15 +452,15 @@
    	  lexbuf
         raise
         (
-             Lexical_error
-             ^
-             (
-                 "illegal character "
-                 Lexing.lexeme
-                 (
-                     lexbuf
-                 )
-             )
+            Lexical_error
+               ^
+               (
+                   "illegal character "
+                   Lexing.lexeme
+                   (
+                       lexbuf
+                   )
+               )
         )
        )
   )
@@ -471,8 +471,8 @@
    	  lexbuf
         raise
         (
-             Lexical_error
-             "unterminated lexer definition"
+            Lexical_error
+               "unterminated lexer definition"
         )
        )
   )
@@ -621,12 +621,12 @@
                ) 
              )
             in
-               Taction
-                Location
-                (
-                    					 n1
-                	n2
-                )
+              Taction
+                 Location
+                    (
+                     n1
+                    	n2
+                    )
             )
           )
         )
@@ -637,11 +637,11 @@
    case
        (
    	  lexbuf
-         Tchar
-         char
-         (
-             lexbuf
-         )
+        Tchar
+           char
+           (
+               lexbuf
+           )
        )
   )
    action_3
@@ -663,11 +663,11 @@
                 lexbuf
             )
           ;
-             Tstring
-             get_stored_string
-             (
-                 ()
-             )
+            Tstring
+               get_stored_string
+               (
+                   ()
+               )
           )
         )
        )
@@ -706,8 +706,8 @@
           case
           (
            s
-            Tident
-            s
+           Tident
+              s
           )
         )
        )

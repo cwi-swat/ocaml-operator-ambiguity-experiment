@@ -5,35 +5,38 @@
   (  						
       							    	 
      error
-     type
-     params=
-     (
-     
-     )
-     cstrs =
-     (
-     )
-     kind =
-     
-     
-     (
-     								  
-     Unbound
-     (
-     									
-      
-      string
-      (
-      )
-      								  
-     								     
-     )
-     								    
-     								  
-     )
-     								  
-     														  
-     														 
+       type
+       params=
+       (
+       
+       )
+       cstrs =
+       (
+    											   
+    											   	  
+    											   
+       )
+       kind =
+       
+       
+       (
+       								  
+       Unbound
+       (
+       									
+        
+        string
+        (
+        )
+        								  
+       								     
+       )
+       								    
+       								  
+       )
+       								   
+       
+       														 
     											   
   								        
   )
@@ -63,12 +66,11 @@
     
      Hashtbl.t
         (
-        									   	
-    	 
-    	 string
-    	 (
-    	 )
-    	 								  				
+         
+         string
+         (
+         )
+         								  
         									   	
     	 
     	 Ident.t
@@ -150,11 +152,11 @@
            raise
            (
                
-                Error
-                
-                 Unbound
-                 s
-                    								 
+               Error
+                  
+                  Unbound
+                     s
+                      								 
                    								 
            )
          ) 

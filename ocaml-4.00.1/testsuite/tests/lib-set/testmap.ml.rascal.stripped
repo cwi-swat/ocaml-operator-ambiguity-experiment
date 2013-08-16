@@ -28,7 +28,7 @@
    )
   let
   (
-    img
+     img
    (
     case
         (
@@ -103,7 +103,7 @@
   )
   let
   (
-    check
+     check
    (
     case
         (
@@ -144,7 +144,7 @@
   )
   let
   (
-    checkbool
+     checkbool
    (
     case
         (
@@ -181,7 +181,7 @@
   )
   let
   (
-    uncurry
+     uncurry
    (
     case
         (
@@ -219,15 +219,15 @@
   )
   let
   (
-    test
+     test
    (
     case
         (
-     		 x
+     		  x
      		(
      		 case
      		     (
-     		  		 v
+     		  		  v
      		  		(
      		  		 case
      		  		     (
@@ -250,19 +250,19 @@
      		  		  		                List.for_all
      		  		  		                (
      		  		  		                    (
-     		  		  		                     case
-     		  		  		                     (
-     		  		  		                     i
-     		  		  		                     =
-     		  		  		                     (
-     		  		  		                         img
-     		  		  		                         (
-     		  		  		                             i
-     		  		  		                             s1
-     		  		  		                         )
-     		  		  		                         None
-     		  		  		                     )
-     		  		  		                     )
+     		  		  		                      case
+     		  		  		                      (
+     		  		  		                       i
+     		  		  		                       =
+     		  		  		                       (
+     		  		  		                           img
+     		  		  		                           (
+     		  		  		                               i
+     		  		  		                               s1
+     		  		  		                           )
+     		  		  		                           None
+     		  		  		                       )
+     		  		  		                      )
      		  		  		                    )
      		  		  		                    testvals
      		  		  		                )
@@ -275,27 +275,27 @@
      		  		  		          (
      		  		  		              "mem"
      		  		  		              (
-     		  		  		               case
-     		  		  		               (
-     		  		  		               i
-     		  		  		               =
-     		  		  		               (
-     		  		  		                   M.mem
-     		  		  		                   (
-     		  		  		                       i
-     		  		  		                       s1
-     		  		  		                   )
-     		  		  		                   <>
-     		  		  		                   (
-     		  		  		                       img
-     		  		  		                       (
-     		  		  		                           i
-     		  		  		                           s1
-     		  		  		                       )
-     		  		  		                       None
-     		  		  		                   )
-     		  		  		               )
-     		  		  		               )
+     		  		  		                case
+     		  		  		                (
+     		  		  		                 i
+     		  		  		                 =
+     		  		  		                 (
+     		  		  		                     M.mem
+     		  		  		                     (
+     		  		  		                         i
+     		  		  		                         s1
+     		  		  		                     )
+     		  		  		                     <>
+     		  		  		                     (
+     		  		  		                         img
+     		  		  		                         (
+     		  		  		                             i
+     		  		  		                             s1
+     		  		  		                         )
+     		  		  		                         None
+     		  		  		                     )
+     		  		  		                 )
+     		  		  		                )
      		  		  		              )
      		  		  		          )
      		  		  		        ;
@@ -317,65 +317,8 @@
      		  		  		                 )
      		  		  		                in
      		  		  		                  (
-     		  		  		                   case
-     		  		  		                   (
-     		  		  		                   i
-     		  		  		                   =
-     		  		  		                   (
-     		  		  		                       img
-     		  		  		                       (
-     		  		  		                           i
-     		  		  		                           s
-     		  		  		                       )
-     		  		  		                       ifthenelse
-     		  		  		                       (
-     		  		  		                        if
-     		  		  		                        (
-     		  		  		                         =
-     		  		  		                         (
-     		  		  		                             i
-     		  		  		                             x
-     		  		  		                         )
-     		  		  		                        )
-     		  		  		                        then
-     		  		  		                        (
-     		  		  		                         Some
-     		  		  		                            v
-     		  		  		                        )
-     		  		  		                        else
-     		  		  		                        (
-     		  		  		                         img
-     		  		  		                         (
-     		  		  		                             i
-     		  		  		                             s1
-     		  		  		                         )
-     		  		  		                        ) 
-     		  		  		                       )
-     		  		  		                   )
-     		  		  		                   )
-     		  		  		                  )
-     		  		  		                )
-     		  		  		            )
-     		  		  		          ;
-     		  		  		            sequence
-     		  		  		            (
-     		  		  		              check
-     		  		  		              (
-     		  		  		                  "singleton"
-     		  		  		                  let
-     		  		  		                  (
-     		  		  		                   (
-     		  		  		                     s
-     		  		  		                     M.singleton
-     		  		  		                     (
-     		  		  		                         x
-     		  		  		                         v
-     		  		  		                     ) 
-     		  		  		                   )
-     		  		  		                  in
+     		  		  		                    case
      		  		  		                    (
-     		  		  		                     case
-     		  		  		                     (
      		  		  		                     i
      		  		  		                     =
      		  		  		                     (
@@ -401,11 +344,68 @@
      		  		  		                          )
      		  		  		                          else
      		  		  		                          (
-     		  		  		                           None
+     		  		  		                           img
+     		  		  		                           (
+     		  		  		                               i
+     		  		  		                               s1
+     		  		  		                           )
      		  		  		                          ) 
      		  		  		                         )
      		  		  		                     )
-     		  		  		                     )
+     		  		  		                    )
+     		  		  		                  )
+     		  		  		                )
+     		  		  		            )
+     		  		  		          ;
+     		  		  		            sequence
+     		  		  		            (
+     		  		  		              check
+     		  		  		              (
+     		  		  		                  "singleton"
+     		  		  		                  let
+     		  		  		                  (
+     		  		  		                   (
+     		  		  		                     s
+     		  		  		                     M.singleton
+     		  		  		                     (
+     		  		  		                         x
+     		  		  		                         v
+     		  		  		                     ) 
+     		  		  		                   )
+     		  		  		                  in
+     		  		  		                    (
+     		  		  		                      case
+     		  		  		                      (
+     		  		  		                       i
+     		  		  		                       =
+     		  		  		                       (
+     		  		  		                           img
+     		  		  		                           (
+     		  		  		                               i
+     		  		  		                               s
+     		  		  		                           )
+     		  		  		                           ifthenelse
+     		  		  		                           (
+     		  		  		                            if
+     		  		  		                            (
+     		  		  		                             =
+     		  		  		                             (
+     		  		  		                                 i
+     		  		  		                                 x
+     		  		  		                             )
+     		  		  		                            )
+     		  		  		                            then
+     		  		  		                            (
+     		  		  		                             Some
+     		  		  		                                v
+     		  		  		                            )
+     		  		  		                            else
+     		  		  		                            (
+     		  		  		                             None
+     		  		  		                            ) 
+     		  		  		                           )
+     		  		  		                       )
+     		  		  		                      )
      		  		  		                    )
      		  		  		                  )
      		  		  		              )
@@ -427,41 +427,41 @@
      		  		  		                     )
      		  		  		                    in
      		  		  		                      (
-     		  		  		                       case
-     		  		  		                       (
-     		  		  		                       i
-     		  		  		                       =
-     		  		  		                       (
-     		  		  		                           img
-     		  		  		                           (
-     		  		  		                               i
-     		  		  		                               s
-     		  		  		                           )
-     		  		  		                           ifthenelse
-     		  		  		                           (
-     		  		  		                            if
-     		  		  		                            (
-     		  		  		                             =
-     		  		  		                             (
-     		  		  		                                 i
-     		  		  		                                 x
-     		  		  		                             )
-     		  		  		                            )
-     		  		  		                            then
-     		  		  		                            (
-     		  		  		                             None
-     		  		  		                            )
-     		  		  		                            else
-     		  		  		                            (
+     		  		  		                        case
+     		  		  		                        (
+     		  		  		                         i
+     		  		  		                         =
+     		  		  		                         (
      		  		  		                             img
      		  		  		                             (
      		  		  		                                 i
-     		  		  		                                 s1
+     		  		  		                                 s
      		  		  		                             )
-     		  		  		                            ) 
-     		  		  		                           )
-     		  		  		                       )
-     		  		  		                       )
+     		  		  		                             ifthenelse
+     		  		  		                             (
+     		  		  		                              if
+     		  		  		                              (
+     		  		  		                               =
+     		  		  		                               (
+     		  		  		                                   i
+     		  		  		                                   x
+     		  		  		                               )
+     		  		  		                              )
+     		  		  		                              then
+     		  		  		                              (
+     		  		  		                               None
+     		  		  		                              )
+     		  		  		                              else
+     		  		  		                              (
+     		  		  		                               img
+     		  		  		                               (
+     		  		  		                                   i
+     		  		  		                                   s1
+     		  		  		                               )
+     		  		  		                              ) 
+     		  		  		                             )
+     		  		  		                         )
+     		  		  		                        )
      		  		  		                      )
      		  		  		                    )
      		  		  		                )
@@ -474,11 +474,11 @@
      		  		  		                      let
      		  		  		                      (
      		  		  		                       (
-     		  		  		                         f
+     		  		  		                          f
      		  		  		                        (
      		  		  		                         case
      		  		  		                             (
-     		  		  		                          		 _
+     		  		  		                          		  _
      		  		  		                          		(
      		  		  		                          		 case
      		  		  		                          		     (
@@ -488,10 +488,10 @@
      		  		  		                          		  		     (
      		  		  		                          		  		 	  o2
      		  		  		                          		  		      match
-     		  		  		                          		  		          					 (
-     		  		  		                          		  		            					   o1
+     		  		  		                          		  		      (
+     		  		  		                          		  		       o1
      		  		  		                          		  		      	o2
-     		  		  		                          		  		          					 )
+     		  		  		                          		  		      )
      		  		  		                          		  		      (
      		  		  		                          		  		      case
      		  		  		                          		  		      (
@@ -546,32 +546,32 @@
      		  		  		                         )
      		  		  		                        in
      		  		  		                          (
-     		  		  		                           case
-     		  		  		                           (
-     		  		  		                           i
-     		  		  		                           =
-     		  		  		                           (
-     		  		  		                               img
-     		  		  		                               (
-     		  		  		                                   i
-     		  		  		                                   s
-     		  		  		                               )
-     		  		  		                               f
-     		  		  		                               (
-     		  		  		                                   i
-     		  		  		                                   img
-     		  		  		                                   (
-     		  		  		                                       i
-     		  		  		                                       s1
-     		  		  		                                   )
-     		  		  		                                   img
-     		  		  		                                   (
-     		  		  		                                       i
-     		  		  		                                       s2
-     		  		  		                                   )
-     		  		  		                               )
-     		  		  		                           )
-     		  		  		                           )
+     		  		  		                            case
+     		  		  		                            (
+     		  		  		                             i
+     		  		  		                             =
+     		  		  		                             (
+     		  		  		                                 img
+     		  		  		                                 (
+     		  		  		                                     i
+     		  		  		                                     s
+     		  		  		                                 )
+     		  		  		                                 f
+     		  		  		                                 (
+     		  		  		                                     i
+     		  		  		                                     img
+     		  		  		                                     (
+     		  		  		                                         i
+     		  		  		                                         s1
+     		  		  		                                     )
+     		  		  		                                     img
+     		  		  		                                     (
+     		  		  		                                         i
+     		  		  		                                         s2
+     		  		  		                                     )
+     		  		  		                                 )
+     		  		  		                             )
+     		  		  		                            )
      		  		  		                          )
      		  		  		                        )
      		  		  		                      )
@@ -585,11 +585,11 @@
      		  		  		                        let
      		  		  		                        (
      		  		  		                         (
-     		  		  		                           f
+     		  		  		                            f
      		  		  		                          (
      		  		  		                           case
      		  		  		                               (
-     		  		  		                            		 _
+     		  		  		                            		  _
      		  		  		                            		(
      		  		  		                            		 case
      		  		  		                            		     (
@@ -599,10 +599,10 @@
      		  		  		                            		  		     (
      		  		  		                            		  		 	  o2
      		  		  		                            		  		      match
-     		  		  		                            		  		          					 (
-     		  		  		                            		  		            					   o1
+     		  		  		                            		  		      (
+     		  		  		                            		  		       o1
      		  		  		                            		  		      	o2
-     		  		  		                            		  		          					 )
+     		  		  		                            		  		      )
      		  		  		                            		  		      (
      		  		  		                            		  		      case
      		  		  		                            		  		      (
@@ -649,32 +649,32 @@
      		  		  		                           )
      		  		  		                          in
      		  		  		                            (
-     		  		  		                             case
-     		  		  		                             (
-     		  		  		                             i
-     		  		  		                             =
-     		  		  		                             (
-     		  		  		                                 img
-     		  		  		                                 (
-     		  		  		                                     i
-     		  		  		                                     s
-     		  		  		                                 )
-     		  		  		                                 f
-     		  		  		                                 (
-     		  		  		                                     i
-     		  		  		                                     img
-     		  		  		                                     (
-     		  		  		                                         i
-     		  		  		                                         s1
-     		  		  		                                     )
-     		  		  		                                     img
-     		  		  		                                     (
-     		  		  		                                         i
-     		  		  		                                         s2
-     		  		  		                                     )
-     		  		  		                                 )
-     		  		  		                             )
-     		  		  		                             )
+     		  		  		                              case
+     		  		  		                              (
+     		  		  		                               i
+     		  		  		                               =
+     		  		  		                               (
+     		  		  		                                   img
+     		  		  		                                   (
+     		  		  		                                       i
+     		  		  		                                       s
+     		  		  		                                   )
+     		  		  		                                   f
+     		  		  		                                   (
+     		  		  		                                       i
+     		  		  		                                       img
+     		  		  		                                       (
+     		  		  		                                           i
+     		  		  		                                           s1
+     		  		  		                                       )
+     		  		  		                                       img
+     		  		  		                                       (
+     		  		  		                                           i
+     		  		  		                                           s2
+     		  		  		                                       )
+     		  		  		                                   )
+     		  		  		                               )
+     		  		  		                              )
      		  		  		                            )
      		  		  		                          )
      		  		  		                        )
@@ -723,10 +723,10 @@
      		  		  		                                    v
      		  		  		                                    ::
      		  		  		                                    (
-     		  		  		                                            					 (
-     		  		  		                                              					   hd
+     		  		  		                                        (
+     		  		  		                                         hd
      		  		  		                                        	v
-     		  		  		                                            					 )
+     		  		  		                                        )
      		  		  		                                        extract
      		  		  		                                        (
      		  		  		                                            tl
@@ -760,7 +760,7 @@
      		  		  		                            let
      		  		  		                            (
      		  		  		                             (
-     		  		  		                               p
+     		  		  		                                p
      		  		  		                              (
      		  		  		                               case
      		  		  		                                   (
@@ -814,7 +814,7 @@
      		  		  		                              let
      		  		  		                              (
      		  		  		                               (
-     		  		  		                                 p
+     		  		  		                                  p
      		  		  		                                (
      		  		  		                                 case
      		  		  		                                     (
@@ -868,7 +868,7 @@
      		  		  		                                let
      		  		  		                                (
      		  		  		                                 (
-     		  		  		                                   p
+     		  		  		                                    p
      		  		  		                                  (
      		  		  		                                   case
      		  		  		                                       (
@@ -929,7 +929,7 @@
      		  		  		                                  let
      		  		  		                                  (
      		  		  		                                   (
-     		  		  		                                     p
+     		  		  		                                      p
      		  		  		                                    (
      		  		  		                                     case
      		  		  		                                         (
@@ -1064,22 +1064,22 @@
      		  		  		                                            M.for_all
      		  		  		                                            (
      		  		  		                                                (
-     		  		  		                                                 case
-     		  		  		                                                 (
-     		  		  		                                                   i
-     		  		  		                                                   (
-     		  		  		                                                   case
-     		  		  		                                                   (
-     		  		  		                                                   _
-     		  		  		                                                   <=
-     		  		  		                                                   (
-     		  		  		                                                       k
-     		  		  		                                                       i
-     		  		  		                                                   )
-     		  		  		                                                   )
-     		  		  		                                                   )
-     		  		  		                                                 )													
-     		  		  		                                                )
+     		  		  		                                                case
+     		  		  		                                                  (
+     		  		  		                                                    i
+     		  		  		                                                    (
+     		  		  		                                                      case
+     		  		  		                                                      (
+     		  		  		                                                       _
+     		  		  		                                                       <=
+     		  		  		                                                       (
+     		  		  		                                                           k
+     		  		  		                                                           i
+     		  		  		                                                       )
+     		  		  		                                                      )
+     		  		  		                                                    )
+     		  		  		                                                  )
+     		  		  		                                                )													
      		  		  		                                                s1
      		  		  		                                            )
      		  		  		                                        )
@@ -1130,22 +1130,22 @@
      		  		  		                                              M.for_all
      		  		  		                                              (
      		  		  		                                                  (
-     		  		  		                                                   case
-     		  		  		                                                   (
-     		  		  		                                                     i
-     		  		  		                                                     (
-     		  		  		                                                     case
-     		  		  		                                                     (
-     		  		  		                                                     _
-     		  		  		                                                     >=
-     		  		  		                                                     (
-     		  		  		                                                         k
-     		  		  		                                                         i
-     		  		  		                                                     )
-     		  		  		                                                     )
-     		  		  		                                                     )
-     		  		  		                                                   )													
-     		  		  		                                                  )
+     		  		  		                                                  case
+     		  		  		                                                    (
+     		  		  		                                                      i
+     		  		  		                                                      (
+     		  		  		                                                        case
+     		  		  		                                                        (
+     		  		  		                                                         _
+     		  		  		                                                         >=
+     		  		  		                                                         (
+     		  		  		                                                             k
+     		  		  		                                                             i
+     		  		  		                                                         )
+     		  		  		                                                        )
+     		  		  		                                                      )
+     		  		  		                                                    )
+     		  		  		                                                  )													
      		  		  		                                                  s1
      		  		  		                                              )
      		  		  		                                          )
@@ -1223,42 +1223,14 @@
      		  		  		                                           )
      		  		  		                                          in
      		  		  		                                            (
-     		  		  		                                             case
-     		  		  		                                             (
-     		  		  		                                             i
-     		  		  		                                             ifthenelse
-     		  		  		                                             (
-     		  		  		                                              if
+     		  		  		                                              case
      		  		  		                                              (
-     		  		  		                                               <
-     		  		  		                                               (
-     		  		  		                                                   i
-     		  		  		                                                   x
-     		  		  		                                               )
-     		  		  		                                              )
-     		  		  		                                              then
-     		  		  		                                              (
-     		  		  		                                               =
-     		  		  		                                               (
-     		  		  		                                                   img
-     		  		  		                                                   (
-     		  		  		                                                       i
-     		  		  		                                                       l
-     		  		  		                                                   )
-     		  		  		                                                   img
-     		  		  		                                                   (
-     		  		  		                                                       i
-     		  		  		                                                       s1
-     		  		  		                                                   )
-     		  		  		                                               )
-     		  		  		                                              )
-     		  		  		                                              else
-     		  		  		                                              (
+     		  		  		                                               i
      		  		  		                                               ifthenelse
      		  		  		                                               (
      		  		  		                                                if
      		  		  		                                                (
-     		  		  		                                                 >
+     		  		  		                                                 <
      		  		  		                                                 (
      		  		  		                                                     i
      		  		  		                                                     x
@@ -1271,7 +1243,7 @@
      		  		  		                                                     img
      		  		  		                                                     (
      		  		  		                                                         i
-     		  		  		                                                         r
+     		  		  		                                                         l
      		  		  		                                                     )
      		  		  		                                                     img
      		  		  		                                                     (
@@ -1282,20 +1254,48 @@
      		  		  		                                                )
      		  		  		                                                else
      		  		  		                                                (
-     		  		  		                                                 =
+     		  		  		                                                 ifthenelse
      		  		  		                                                 (
-     		  		  		                                                     p
-     		  		  		                                                     img
-     		  		  		                                                     (
-     		  		  		                                                         i
-     		  		  		                                                         s1
-     		  		  		                                                     )
+     		  		  		                                                  if
+     		  		  		                                                  (
+     		  		  		                                                   >
+     		  		  		                                                   (
+     		  		  		                                                       i
+     		  		  		                                                       x
+     		  		  		                                                   )
+     		  		  		                                                  )
+     		  		  		                                                  then
+     		  		  		                                                  (
+     		  		  		                                                   =
+     		  		  		                                                   (
+     		  		  		                                                       img
+     		  		  		                                                       (
+     		  		  		                                                           i
+     		  		  		                                                           r
+     		  		  		                                                       )
+     		  		  		                                                       img
+     		  		  		                                                       (
+     		  		  		                                                           i
+     		  		  		                                                           s1
+     		  		  		                                                       )
+     		  		  		                                                   )
+     		  		  		                                                  )
+     		  		  		                                                  else
+     		  		  		                                                  (
+     		  		  		                                                   =
+     		  		  		                                                   (
+     		  		  		                                                       p
+     		  		  		                                                       img
+     		  		  		                                                       (
+     		  		  		                                                           i
+     		  		  		                                                           s1
+     		  		  		                                                       )
+     		  		  		                                                   )
+     		  		  		                                                  ) 
      		  		  		                                                 )
      		  		  		                                                ) 
      		  		  		                                               )
-     		  		  		                                              ) 
-     		  		  		                                             )
-     		  		  		                                             )
+     		  		  		                                              )
      		  		  		                                            )
      		  		  		                                          )
      		  		  		                                      )

@@ -11,7 +11,7 @@
           type
           params=
           (
-           a
+          a
           )
           cstrs =
           (
@@ -56,7 +56,7 @@
           type
           params=
           (
-           a
+          a
           )
           cstrs =
           (
@@ -75,13 +75,13 @@
           type
           params=
           (
-           a
+          a
           )
           cstrs =
           (
           )
           kind =
-           (
+          (
            	map
            	poly
            	                      				 'b 
@@ -93,7 +93,7 @@
            	  (
            	    b
            	  )
-           )
+          )
      )
      sig_value create
      value_description
@@ -132,19 +132,19 @@
     	    (
     	       method map
     	       	(
-    	       	 case
-    	       	 (
-    	       	 f
-    	       	 My
-    	       	    create
-    	       	    (
-    	       	        List.map
-    	       	        (
-    	       	            f
-    	       	            l
-    	       	        )
-    	       	    )
-    	       	 )
+    	       	  case
+    	       	  (
+    	       	   f
+    	       	   My
+    	       	      create
+    	       	      (
+    	       	          List.map
+    	       	          (
+    	       	              f
+    	       	              l
+    	       	          )
+    	       	      )
+    	       	  )
     	       	)
     	       	poly
     	       	                      				 'b 
@@ -157,6 +157,7 @@
     	       	    b
     	       	  )
     	    )
+    	    <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
     	)
     	)
    )
@@ -171,7 +172,7 @@
            type
            params=
            (
-            a
+           a
            )
            cstrs =
            (
@@ -190,13 +191,13 @@
            type
            params=
            (
-            a
+           a
            )
            cstrs =
            (
            )
            kind =
-            (
+           (
             	map
             	poly
             	                      				 'b 
@@ -208,7 +209,7 @@
             	  (
             	    b
             	  )
-            )
+           )
       )
       sig_value create
       value_description

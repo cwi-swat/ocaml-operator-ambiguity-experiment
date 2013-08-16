@@ -2,22 +2,22 @@
   type
   (  						
      error
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-     (
-     Unbound
-     (
-      string
-      (
-      )
-     )
-     )
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       (
+       Unbound
+       (
+        string
+        (
+        )
+       )
+       )
   )
   exception Error
   (
@@ -36,9 +36,9 @@
     :
      Hashtbl.t
         (
-    	 string
-    	 (
-    	 )
+         string
+         (
+         )
     	 Ident.t
     	 (
     	 )
@@ -96,9 +96,9 @@
            Not_found
            raise
            (
-                Error
-                 Unbound
-                 s
+               Error
+                  Unbound
+                     s
            )
          ) 
          )

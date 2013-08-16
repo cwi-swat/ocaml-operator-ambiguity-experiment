@@ -3,28 +3,32 @@
   (
     params = 
     (
+     "a"
     )
     class name = c
     class expr = 
-                class_structure
-                (
-                   method m
-                      poly
-                      b
-                )
+      class_structure
+      (
+         method m
+            poly
+            b
+      )
+      <"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
   )
   let
   (
     o
     class_structure
     (
-       inheritance 
-       (
-           <>
-           <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-       )
+       inherit
+        constr 
+               a
+               c
+        (
+        )
        method m
-             42
+       	  42
     )
+    <"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
   )
 )

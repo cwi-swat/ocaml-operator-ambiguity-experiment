@@ -235,26 +235,26 @@
                        List.iter
                        (
                            (
-                            case
-                            (
-                            f
-                            let
-                            (
+                             case
                              (
-                               res
-                               f
-                               (
-                                   0
-                               ) 
-                             )
-                            in
-                              Printf.printf
+                              f
+                              let
                               (
-                                  "Result is: %d\n"
-                                  res
+                               (
+                                 res
+                                 f
+                                 (
+                                     0
+                                 ) 
+                               )
+                              in
+                                Printf.printf
+                                (
+                                    "Result is: %d\n"
+                                    res
+                                )
                               )
-                            )
-                            )
+                             )
                            )
                            l
                        )

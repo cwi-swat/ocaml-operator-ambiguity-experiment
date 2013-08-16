@@ -250,192 +250,180 @@
               (
               
               (
-                  					 "-dcmm"
-                  					 
+               "-dcmm"
+                  					   
               	
-              	 Arg.Set
-              	 dump_cmm
+              	Arg.Set
+              	   dump_cmm
               	    								 
-                  					 
+                  					   
               	""
-                  					 
+                  					   
               )
-                  					 
               ::
               (
               
               (
-                  					 "-dsel"
-                  					 
+               "-dsel"
+                  					   
               	
-              	 Arg.Set
-              	 dump_selection
+              	Arg.Set
+              	   dump_selection
               	    								 
-                  					 
+                  					   
               	""
-                  					 
+                  					   
               )
-                  					 
               ::
               (
               
               (
-                  					 "-dlive"
-                  					 
+               "-dlive"
+                  					   
               	
-              	 Arg.Unit
-              	 (
-              	  
-              	  case
-              	  (
-              	  ()
-              	  
-              	  
-              	  sequence
-              	  (
-              	    :=
-              	    (
-              	        dump_live
-              	        true
-              	    )
-              	  ;
-              	    :=
-              	    (
-              	        Printmach.print_live
-              	        true
-              	    )
-              	  )
-              	      							
-              	  )
-              	  													 
-              	 )
-              	    						  
+              	Arg.Unit
+              	   
+              	   (
+              	     case
+              	     (
+              	      ()
+              	      
+              	      
+              	      sequence
+              	      (
+              	        :=
+              	        (
+              	            dump_live
+              	            true
+              	        )
+              	      ;
+              	        :=
+              	        (
+              	            Printmach.print_live
+              	            true
+              	        )
+              	      )
+              	          							
+              	     )
+              	   )
+              	   													 
               	    								 
-                  					 
+                  					   
               	""
-                  					 
+                  					   
               )
-                  					 
               ::
               (
               
               (
-                  					 "-dspill"
-                  					 
+               "-dspill"
+                  					   
               	
-              	 Arg.Set
-              	 dump_spill
+              	Arg.Set
+              	   dump_spill
               	    								 
-                  					 
+                  					   
               	""
-                  					 
+                  					   
               )
-                  					 
               ::
               (
               
               (
-                  					 "-dsplit"
-                  					 
+               "-dsplit"
+                  					   
               	
-              	 Arg.Set
-              	 dump_split
+              	Arg.Set
+              	   dump_split
               	    								 
-                  					 
+                  					   
               	""
-                  					 
+                  					   
               )
-                  					 
               ::
               (
               
               (
-                  					 "-dinterf"
-                  					 
+               "-dinterf"
+                  					   
               	
-              	 Arg.Set
-              	 dump_interf
+              	Arg.Set
+              	   dump_interf
               	    								 
-                  					 
+                  					   
               	""
-                  					 
+                  					   
               )
-                  					 
               ::
               (
               
               (
-                  					 "-dprefer"
-                  					 
+               "-dprefer"
+                  					   
               	
-              	 Arg.Set
-              	 dump_prefer
+              	Arg.Set
+              	   dump_prefer
               	    								 
-                  					 
+                  					   
               	""
-                  					 
+                  					   
               )
-                  					 
               ::
               (
               
               (
-                  					 "-dalloc"
-                  					 
+               "-dalloc"
+                  					   
               	
-              	 Arg.Set
-              	 dump_regalloc
+              	Arg.Set
+              	   dump_regalloc
               	    								 
-                  					 
+                  					   
               	""
-                  					 
+                  					   
               )
-                  					 
               ::
               (
               
               (
-                  					 "-dreload"
-                  					 
+               "-dreload"
+                  					   
               	
-              	 Arg.Set
-              	 dump_reload
+              	Arg.Set
+              	   dump_reload
               	    								 
-                  					 
+                  					   
               	""
-                  					 
+                  					   
               )
-                  					 
               ::
               (
               
               (
-                  					 "-dscheduling"
-                  					 
+               "-dscheduling"
+                  					   
               	
-              	 Arg.Set
-              	 dump_scheduling
+              	Arg.Set
+              	   dump_scheduling
               	    								 
-                  					 
+                  					   
               	""
-                  					 
+                  					   
               )
-                  					 
               ::
               (
               
               (
-                  					 "-dlinear"
-                  					 
+               "-dlinear"
+                  					   
               	
-              	 Arg.Set
-              	 dump_linear
+              	Arg.Set
+              	   dump_linear
               	    								 
-                  					 
+                  					   
               	""
-                  					 
+                  					   
               )
-                  					 
               []
               ) 
                  						  

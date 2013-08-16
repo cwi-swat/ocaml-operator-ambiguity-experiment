@@ -187,7 +187,7 @@
                                        (
                                            Int64.float_of_bits
                                            (
-                                               0xFF_F0_00_12_34_56_78_9AL
+                                               0xFF_F0_00_12_34_56_78_9A
                                            )
                                        )
                                    )
@@ -224,7 +224,7 @@
                                              "0\t\t%08x\n"
                                              Hashtbl.hash
                                              (
-                                                 0n
+                                                 0
                                              )
                                          )
                                        ;
@@ -236,7 +236,7 @@
                                                "-1\t\t%08x\n"
                                                Hashtbl.hash
                                                (
-                                                   -1n
+                                                   -1
                                                )
                                            )
                                          ;
@@ -248,7 +248,7 @@
                                                  "42\t\t%08x\n"
                                                  Hashtbl.hash
                                                  (
-                                                     42n
+                                                     42
                                                  )
                                              )
                                            ;
@@ -260,7 +260,7 @@
                                                    "2^30-1\t\t%08x\n"
                                                    Hashtbl.hash
                                                    (
-                                                       0x3FFF_FFFFn
+                                                       0x3FFF_FFFF
                                                    )
                                                )
                                              ;
@@ -272,7 +272,7 @@
                                                      "-2^30\t\t%08x\n"
                                                      Hashtbl.hash
                                                      (
-                                                         -0x4000_0000n
+                                                         -0x4000_0000
                                                      )
                                                  )
                                                ;

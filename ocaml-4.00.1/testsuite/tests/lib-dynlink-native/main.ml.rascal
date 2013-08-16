@@ -7,20 +7,19 @@
     ()
     Api.add_cb
     (
+        
         (
-         
-         case
-         (
-         ()
-         
-         print_endline
-         (
-             "Callback from main"
-         )
-         )
-         													 
+          case
+          (
+           ()
+           
+           print_endline
+           (
+               "Callback from main"
+           )
+          )
         )
-           						  
+        													 
     ) 
    							    		    
   )
@@ -281,7 +280,6 @@
                           								  
                              								   
                         )
-                        
                            									
                        )
                            								 
@@ -299,20 +297,19 @@
                       ;
                         List.iter
                         (
+                            
                             (
-                             
-                             case
-                             (
-                             f
-                             
-                             f
-                             (
-                                 ()
-                             )
-                             )
-                             													 
+                              case
+                              (
+                               f
+                               
+                               f
+                               (
+                                   ()
+                               )
+                              )
                             )
-                               						  
+                            													 
                             l
                         )
                       )

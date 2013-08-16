@@ -5,17 +5,17 @@
    type
    (  						
       t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-      int
-      (
-      )
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        int
+        (
+        )
    )
    let
    (
@@ -74,32 +74,32 @@
    type
    (  						
       u
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-      tuple
-      (
-       t
-       (
-       )
-        t
+        type
+        params=
         (
         )
-      )
+        cstrs =
+        (
+        )
+        kind =
+        tuple
+        (
+         t
+         (
+         )
+          t
+          (
+          )
+        )
    )
    let
    (
      p
      (
-         					 (
-           					   x
+     (
+      x
      	y
-         					 )
+     )
      :
      u
      (
@@ -120,16 +120,16 @@
      	  (
      	  )
           (
-              					 (
-                					   f
           (
-              x
-          )
+           f
+           (
+               x
+           )
           	f
           	(
           	    y
           	)
-              					 )
+          )
           :
           u
           (
@@ -203,10 +203,10 @@
          (
              B.g
              (
-                     					 (
-                       					   123
+                 (
+                  123
                  	456
-                     					 )
+                 )
              )
          )
        )
@@ -270,14 +270,14 @@
       type
       (  						
          t
-         type
-         params=
-         (
-         )
-         cstrs =
-         (
-         )
-         kind =
+           type
+           params=
+           (
+           )
+           cstrs =
+           (
+           )
+           kind =
       )
       sig_value f
       value_description
@@ -380,67 +380,67 @@
    signature
    (
    )
-   struct
-   (
-    sequence
-    (
-      print_string
-      (
-          "F is called"
-      )
-    ;
-      print_newline
-      (
-          ()
-      )
-    )
-   type
-   (  						
-      t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-      (
-      A
-      (
-      )
-      B
-      (
-       int
-       (
-       )
-      )
-      )
-   )
-   let
-   (
-     print_t
-     (
-      case
-      (
-        A
-        print_string
-        (
-            "A"
-        )
-      ) 
-        case
-        (
-         B
-         x
-         print_int
-         (
-             x
-         )
-        )
-     )
-   )
-   )
+   	struct
+   	(
+   	 sequence
+   	 (
+   	   print_string
+   	   (
+   	       "F is called"
+   	   )
+   	 ;
+   	   print_newline
+   	   (
+   	       ()
+   	   )
+   	 )
+   	type
+   	(  						
+   	   t
+   	     type
+   	     params=
+   	     (
+   	     )
+   	     cstrs =
+   	     (
+   	     )
+   	     kind =
+   	     (
+   	     A
+   	     (
+   	     )
+   	     B
+   	     (
+   	      int
+   	      (
+   	      )
+   	     )
+   	     )
+   	)
+   	let
+   	(
+   	  print_t
+   	  (
+   	   case
+   	   (
+   	     A
+   	     print_string
+   	     (
+   	         "A"
+   	     )
+   	   ) 
+   	     case
+   	     (
+   	      B
+   	      x
+   	      print_int
+   	      (
+   	          x
+   	      )
+   	     )
+   	  )
+   	)
+   	)
   )
   module  D
    struct
@@ -547,11 +547,11 @@
      )
      class name = c
      class expr = 
-                 class_structure
-                 (
-                    method m
-                      1
-                 )
+       class_structure
+       (
+          method m
+          	  1
+       )
    )
    )
   module  G

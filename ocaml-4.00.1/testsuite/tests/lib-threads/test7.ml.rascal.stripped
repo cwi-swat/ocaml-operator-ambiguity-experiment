@@ -42,18 +42,18 @@
                       add_ch
                   )
                   (
-                   case
-                   (
-                   x
-                   accu
-                   (
-                       +
-                       (
-                           n
-                           x
-                       )
-                   )
-                   )
+                    case
+                    (
+                     x
+                     accu
+                     (
+                         +
+                         (
+                             n
+                             x
+                         )
+                     )
+                    )
                   )
               )
               ::
@@ -65,18 +65,18 @@
                       sub_ch
                   )
                   (
-                   case
-                   (
-                   x
-                   accu
-                   (
-                       -
-                       (
-                           n
-                           x
-                       )
-                   )
-                   )
+                    case
+                    (
+                     x
+                     accu
+                     (
+                         -
+                         (
+                             n
+                             x
+                         )
+                     )
+                    )
                   )
               )
               ::
@@ -89,14 +89,14 @@
                       n
                   )
                   (
-                   case
-                   (
-                   ()
-                   accu
-                   (
-                       n
-                   )
-                   )
+                    case
+                    (
+                     ()
+                     accu
+                     (
+                         n
+                     )
+                    )
                   )
               )
               []
@@ -109,7 +109,7 @@
   )
   let
   (
-    sender
+     sender
    (
     case
         (

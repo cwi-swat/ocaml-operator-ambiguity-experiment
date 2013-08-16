@@ -3,29 +3,29 @@
   type
   (  						
      buffer_channel
-     type
-     params=
-     (
-      a
-     )
-     cstrs =
-     (
-     )
-     kind =
-    (
-      input
-      poly
-       channel
+       type
+       params=
        (
-         a
+       a
        )
-      output
-      poly
-       channel
+       cstrs =
        (
-         a
        )
-    )
+       kind =
+       (
+        input
+        poly
+         channel
+         (
+           a
+         )
+        output
+        poly
+         channel
+         (
+           a
+         )
+       )
   )
   let
   (
@@ -67,7 +67,7 @@
                let
                (
                 (
-                  buffer_process
+                   buffer_process
                  (
                   case
                       (
@@ -78,7 +78,7 @@
                    		 	  rear
                    		      match
                    		      (
-                   		          					 front
+                   		       front
                    		      	rear
                    		      )
                    		      (
@@ -125,19 +125,19 @@
                    		                      ic
                    		                  )
                    		                  (
-                   		                   case
-                   		                   (
-                   		                   x
-                   		                   buffer_process
-                   		                   (
-                   		                       front
-                   		                       ::
-                   		                       (
-                   		                           x
-                   		                           rear
-                   		                       )
-                   		                   )
-                   		                   )
+                   		                    case
+                   		                    (
+                   		                     x
+                   		                     buffer_process
+                   		                     (
+                   		                         front
+                   		                         ::
+                   		                         (
+                   		                             x
+                   		                             rear
+                   		                         )
+                   		                     )
+                   		                    )
                    		                  )
                    		              )
                    		              ::
@@ -150,15 +150,15 @@
                    		                      hd
                    		                  )
                    		                  (
-                   		                   case
-                   		                   (
-                   		                   ()
-                   		                   buffer_process
-                   		                   (
-                   		                       tl
-                   		                       rear
-                   		                   )
-                   		                   )
+                   		                    case
+                   		                    (
+                   		                     ()
+                   		                     buffer_process
+                   		                     (
+                   		                         tl
+                   		                         rear
+                   		                     )
+                   		                    )
                    		                  )
                    		              )
                    		              []
@@ -216,7 +216,7 @@
   )
   let
   (
-    buffer_send
+     buffer_send
    (
     case
         (

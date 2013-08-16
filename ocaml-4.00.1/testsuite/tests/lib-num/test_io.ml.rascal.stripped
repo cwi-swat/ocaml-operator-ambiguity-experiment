@@ -98,7 +98,7 @@
   )
    let
    (
-     equal_nat
+      equal_nat
     (
      case
          (
@@ -130,68 +130,68 @@
   List.iter
   (
       (
-       case
-       (
-       (
-        i
-       	s
-       )
-       let
-       (
+        case
         (
-          n
-          nat_of_string
-          (
-              s
-          ) 
-        )
-       in
-         ignore
          (
-             test
-             (
-                 i
-                 equal_nat
-                 (
-                     					 n
-                 	intern_extern
-                 	(
-                 	    n
-                 	)
-                 )
-             )
+          i
+         	s
          )
-       )
-       )
+         let
+         (
+          (
+            n
+            nat_of_string
+            (
+                s
+            ) 
+          )
+         in
+           ignore
+           (
+               test
+               (
+                   i
+                   equal_nat
+                   (
+                    n
+                   	intern_extern
+                   	(
+                   	    n
+                   	)
+                   )
+               )
+           )
+         )
+        )
       )
       ::
        (
        (
-           					 1
+        1
        	"0"
        )
        ::
        (
        (
-           					 2
+        2
        	"1234"
        )
        ::
        (
        (
-           					 3
+        3
        	"8589934592"
        )
        ::
        (
        (
-           					 4
+        4
        	"340282366920938463463374607431768211455"
        )
        ::
        (
        (
-           					 5
+        5
        	String.make
        	(
        	    100
@@ -201,7 +201,7 @@
        ::
        (
        (
-           					 6
+        6
        	String.make
        	(
        	    1000
@@ -211,7 +211,7 @@
        ::
        (
        (
-           					 7
+        7
        	String.make
        	(
        	    20000
@@ -234,68 +234,68 @@
   List.iter
   (
       (
-       case
-       (
-       (
-        i
-       	s
-       )
-       let
-       (
+        case
         (
-          b
-          big_int_of_string
-          (
-              s
-          ) 
-        )
-       in
-         ignore
          (
-             test
-             (
-                 i
-                 eq_big_int
-                 (
-                     					 b
-                 	intern_extern
-                 	(
-                 	    b
-                 	)
-                 )
-             )
+          i
+         	s
          )
-       )
-       )
+         let
+         (
+          (
+            b
+            big_int_of_string
+            (
+                s
+            ) 
+          )
+         in
+           ignore
+           (
+               test
+               (
+                   i
+                   eq_big_int
+                   (
+                    b
+                   	intern_extern
+                   	(
+                   	    b
+                   	)
+                   )
+               )
+           )
+         )
+        )
       )
       ::
        (
        (
-           					 1
+        1
        	"0"
        )
        ::
        (
        (
-           					 2
+        2
        	"1234"
        )
        ::
        (
        (
-           					 3
+        3
        	"-1234"
        )
        ::
        (
        (
-           					 4
+        4
        	"1040259735709286400"
        )
        ::
        (
        (
-           					 5
+        5
        	^
        	(
        	    "-"
@@ -320,86 +320,86 @@
   List.iter
   (
       (
-       case
-       (
-       (
-        i
-       	s
-       )
-       let
-       (
+        case
         (
-          n
-          num_of_string
-          (
-              s
-          ) 
-        )
-       in
-         ignore
          (
-             test
-             (
-                 i
-                 eq_num
-                 (
-                     					 n
-                 	intern_extern
-                 	(
-                 	    n
-                 	)
-                 )
-             )
+          i
+         	s
          )
-       )
-       )
+         let
+         (
+          (
+            n
+            num_of_string
+            (
+                s
+            ) 
+          )
+         in
+           ignore
+           (
+               test
+               (
+                   i
+                   eq_num
+                   (
+                    n
+                   	intern_extern
+                   	(
+                   	    n
+                   	)
+                   )
+               )
+           )
+         )
+        )
       )
       ::
        (
        (
-           					 1
+        1
        	"0"
        )
        ::
        (
        (
-           					 2
+        2
        	"1234"
        )
        ::
        (
        (
-           					 3
+        3
        	"-1234"
        )
        ::
        (
        (
-           					 4
+        4
        	"159873568791325097646845892426782"
        )
        ::
        (
        (
-           					 5
+        5
        	"1/4"
        )
        ::
        (
        (
-           					 6
+        6
        	"-15/2"
        )
        ::
        (
        (
-           					 7
+        7
        	"159873568791325097646845892426782/24098772507410987265987"
        )
        ::
        (
        (
-           					 8
+        8
        	^
        	(
        	    String.make

@@ -7,23 +7,25 @@
    functor M
    (
       Map.S
-       key
-       type
-       params=
        (
-       )
-       cstrs =
-       (
-       )
-       kind =
-        H.key
-        (
+           key
+           type
+           params=
+           (
+           )
+           cstrs =
+           (
+           )
+           kind =
+            H.key
+            (
+            )
         )
      struct
      (
      let
      (
-       incl_mh
+        incl_mh
       (
        case
            (
@@ -38,50 +40,50 @@
         		        M.iter
         		        (
         		            (
-        		             case
-        		             (
-        		               k
-        		               (
-        		               case
-        		               (
-        		               d
-        		               let
-        		               (
+        		            case
+        		              (
+        		                k
         		                (
-        		                  d'
-        		                  H.find
+        		                  case
         		                  (
-        		                      h
-        		                      k
-        		                  ) 
+        		                   d
+        		                   let
+        		                   (
+        		                    (
+        		                      d'
+        		                      H.find
+        		                      (
+        		                          h
+        		                          k
+        		                      ) 
+        		                    )
+        		                   in
+        		                     ifthenelse
+        		                     (
+        		                      if
+        		                      (
+        		                       <>
+        		                       (
+        		                           d
+        		                           d'
+        		                       )
+        		                      )
+        		                      then
+        		                      (
+        		                       raise
+        		                       (
+        		                           Exit
+        		                       )
+        		                      )
+        		                      else
+        		                      (
+        		                      )
+        		                     )
+        		                   )
+        		                  )
         		                )
-        		               in
-        		                 ifthenelse
-        		                 (
-        		                  if
-        		                  (
-        		                   <>
-        		                   (
-        		                       d
-        		                       d'
-        		                   )
-        		                  )
-        		                  then
-        		                  (
-        		                   raise
-        		                   (
-        		                       Exit
-        		                   )
-        		                  )
-        		                  else
-        		                  (
-        		                  )
-        		                 )
-        		               )
-        		               )
-        		               )
-        		             )													
-        		            )
+        		              )
+        		            )													
         		            m
         		        )
         		      ;
@@ -105,7 +107,7 @@
      )
      let
      (
-       domain_hm
+        domain_hm
       (
        case
            (
@@ -120,41 +122,41 @@
         		        H.iter
         		        (
         		            (
-        		             case
-        		             (
-        		               k
-        		               (
-        		               case
-        		               (
-        		               d
-        		               ifthenelse
-        		               (
-        		                if
+        		            case
+        		              (
+        		                k
         		                (
-        		                 not
-        		                 (
-        		                     M.mem
+        		                  case
+        		                  (
+        		                   d
+        		                   ifthenelse
+        		                   (
+        		                    if
+        		                    (
+        		                     not
         		                     (
-        		                         k
-        		                         m
+        		                         M.mem
+        		                         (
+        		                             k
+        		                             m
+        		                         )
         		                     )
-        		                 )
+        		                    )
+        		                    then
+        		                    (
+        		                     raise
+        		                     (
+        		                         Exit
+        		                     )
+        		                    )
+        		                    else
+        		                    (
+        		                    )
+        		                   )
+        		                  )
         		                )
-        		                then
-        		                (
-        		                 raise
-        		                 (
-        		                     Exit
-        		                 )
-        		                )
-        		                else
-        		                (
-        		                )
-        		               )
-        		               )
-        		               )
-        		             )													
-        		            )
+        		              )
+        		            )													
         		            h
         		        )
         		      ;
@@ -174,7 +176,7 @@
      )
      let
      (
-       incl_hm
+        incl_hm
       (
        case
            (
@@ -189,50 +191,50 @@
         		        H.iter
         		        (
         		            (
-        		             case
-        		             (
-        		               k
-        		               (
-        		               case
-        		               (
-        		               d
-        		               let
-        		               (
+        		            case
+        		              (
+        		                k
         		                (
-        		                  d'
-        		                  M.find
+        		                  case
         		                  (
-        		                      k
-        		                      m
-        		                  ) 
+        		                   d
+        		                   let
+        		                   (
+        		                    (
+        		                      d'
+        		                      M.find
+        		                      (
+        		                          k
+        		                          m
+        		                      ) 
+        		                    )
+        		                   in
+        		                     ifthenelse
+        		                     (
+        		                      if
+        		                      (
+        		                       <>
+        		                       (
+        		                           d
+        		                           d'
+        		                       )
+        		                      )
+        		                      then
+        		                      (
+        		                       raise
+        		                       (
+        		                           Exit
+        		                       )
+        		                      )
+        		                      else
+        		                      (
+        		                      )
+        		                     )
+        		                   )
+        		                  )
         		                )
-        		               in
-        		                 ifthenelse
-        		                 (
-        		                  if
-        		                  (
-        		                   <>
-        		                   (
-        		                       d
-        		                       d'
-        		                   )
-        		                  )
-        		                  then
-        		                  (
-        		                   raise
-        		                   (
-        		                       Exit
-        		                   )
-        		                  )
-        		                  else
-        		                  (
-        		                  )
-        		                 )
-        		               )
-        		               )
-        		               )
-        		             )													
-        		            )
+        		              )
+        		            )													
         		            h
         		        )
         		      ;
@@ -291,36 +293,36 @@
                   Array.iter
                   (
                       (
-                       case
-                       (
-                       (
-                        k
-                       	d
-                       )
-                       sequence
-                       (
-                         H.add
+                        case
+                        (
                          (
-                             h
-                             k
-                             d
+                          k
+                         	d
                          )
-                       ;
-                         :=
+                         sequence
                          (
-                             m
-                             M.add
-                             (
-                                 k
-                                 d
-                                  !
-                                  (
-                                  m
-                                  )
-                             )
+                           H.add
+                           (
+                               h
+                               k
+                               d
+                           )
+                         ;
+                           :=
+                           (
+                               m
+                               M.add
+                               (
+                                   k
+                                   d
+                                    !
+                                    (
+                                    m
+                                    )
+                               )
+                           )
                          )
-                       )
-                       )
+                        )
                       )
                       data
                   )
@@ -385,36 +387,36 @@
                           Array.iter
                           (
                               (
-                               case
-                               (
-                               (
-                                k
-                               	d
-                               )
-                               sequence
-                               (
-                                 H.replace
+                                case
+                                (
                                  (
-                                     h
-                                     k
-                                     d
+                                  k
+                                 	d
                                  )
-                               ;
-                                 :=
+                                 sequence
                                  (
-                                     m
-                                     M.add
-                                     (
-                                         k
-                                         d
-                                          !
-                                          (
-                                          m
-                                          )
-                                     )
+                                   H.replace
+                                   (
+                                       h
+                                       k
+                                       d
+                                   )
+                                 ;
+                                   :=
+                                   (
+                                       m
+                                       M.add
+                                       (
+                                           k
+                                           d
+                                            !
+                                            (
+                                            m
+                                            )
+                                       )
+                                   )
                                  )
-                               )
-                               )
+                                )
                               )
                               data
                           )
@@ -569,7 +571,6 @@
    type
    (  						
       t
-        (
         type
         params=
         (
@@ -581,11 +582,10 @@
         string
         (
         )
-      )
    )
    let
    (
-     compare
+      compare
     (
      case
          (
@@ -620,7 +620,6 @@
    type
    (  						
       t
-        (
         type
         params=
         (
@@ -632,11 +631,10 @@
         int
         (
         )
-      )
    )
    let
    (
-     compare
+      compare
     (
      case
          (
@@ -671,7 +669,6 @@
    type
    (  						
       t
-        (
         type
         params=
         (
@@ -689,11 +686,10 @@
           (
           )
         )
-      )
    )
    let
    (
-     compare
+      compare
     (
      case
          (
@@ -728,7 +724,6 @@
    type
    (  						
       t
-        (
         type
         params=
         (
@@ -743,11 +738,10 @@
            (
            )
          )
-      )
    )
    let
    (
-     compare
+      compare
     (
      case
          (
@@ -778,127 +772,138 @@
   functor M
   (
    Map.S
-   struct
-   (
-   type
-   (  						
-      key
-        (
-        type
-        params=
-        (
-        )
-        cstrs =
-        (
-        )
-        kind =
-        M.key
-        (
-        )
-      )
-   )
-   type
-   (  						
-      t
-        (
-        type
-        params=
-        (
-         a
-        )
-        cstrs =
-        (
-        )
-        kind =
-         Hashtbl.t
-            (
-             key
-             (
-             )
-        	 a				
-            ) 
-      )
-   )
-   let
-   (
-     create
-    (
-     case
-         (
-     	  s
-          Hashtbl.create
-          (
-              s
-          )
-         )
-    )
-   )
-   let
-   (
-     clear
-     Hashtbl.clear 
-   )
-   let
-   (
-     reset
-     Hashtbl.reset 
-   )
-   let
-   (
-     copy
-     Hashtbl.copy 
-   )
-   let
-   (
-     add
-     Hashtbl.add 
-   )
-   let
-   (
-     remove
-     Hashtbl.remove 
-   )
-   let
-   (
-     find
-     Hashtbl.find 
-   )
-   let
-   (
-     find_all
-     Hashtbl.find_all 
-   )
-   let
-   (
-     replace
-     Hashtbl.replace 
-   )
-   let
-   (
-     mem
-     Hashtbl.mem 
-   )
-   let
-   (
-     iter
-     Hashtbl.iter 
-   )
-   let
-   (
-     fold
-     Hashtbl.fold 
-   )
-   let
-   (
-     length
-     Hashtbl.length 
-   )
-   let
-   (
-     stats
-     Hashtbl.stats 
-   )
-   )
+   	struct
+   	(
+   	type
+   	(  						
+   	   key
+   	     type
+   	     params=
+   	     (
+   	     )
+   	     cstrs =
+   	     (
+   	     )
+   	     kind =
+   	     M.key
+   	     (
+   	     )
+   	)
+   	type
+   	(  						
+   	   t
+   	     type
+   	     params=
+   	     (
+   	     a
+   	     )
+   	     cstrs =
+   	     (
+   	     )
+   	     kind =
+   	      Hashtbl.t
+   	         (
+   	          key
+   	          (
+   	          )
+   	     	 a				
+   	         ) 
+   	)
+   	let
+   	(
+   	  create
+   	 (
+   	  case
+   	      (
+   	  	  s
+   	       Hashtbl.create
+   	       (
+   	           s
+   	       )
+   	      )
+   	 )
+   	)
+   	let
+   	(
+   	  clear
+   	  Hashtbl.clear 
+   	)
+   	let
+   	(
+   	  reset
+   	  Hashtbl.reset 
+   	)
+   	let
+   	(
+   	  copy
+   	  Hashtbl.copy 
+   	)
+   	let
+   	(
+   	  add
+   	  Hashtbl.add 
+   	)
+   	let
+   	(
+   	  remove
+   	  Hashtbl.remove 
+   	)
+   	let
+   	(
+   	  find
+   	  Hashtbl.find 
+   	)
+   	let
+   	(
+   	  find_all
+   	  Hashtbl.find_all 
+   	)
+   	let
+   	(
+   	  replace
+   	  Hashtbl.replace 
+   	)
+   	let
+   	(
+   	  mem
+   	  Hashtbl.mem 
+   	)
+   	let
+   	(
+   	  iter
+   	  Hashtbl.iter 
+   	)
+   	let
+   	(
+   	  fold
+   	  Hashtbl.fold 
+   	)
+   	let
+   	(
+   	  length
+   	  Hashtbl.length 
+   	)
+   	let
+   	(
+   	  stats
+   	  Hashtbl.stats 
+   	)
+   	)
+   	 Hashtbl.S
+   	  (
+   	      key
+   	      type
+   	      params=
+   	      (
+   	      )
+   	      cstrs =
+   	      (
+   	      )
+   	      kind =
+   	       M.key
+   	       (
+   	       )
+   	   )
   )
   module  HS1
    HofM
@@ -928,7 +933,6 @@
    type
    (  						
       t
-        (
         type
         params=
         (
@@ -940,11 +944,10 @@
         string
         (
         )
-      )
    )
    let
    (
-     equal
+      equal
     (
      case
          (
@@ -984,7 +987,6 @@
    type
    (  						
       t
-        (
         type
         params=
         (
@@ -996,11 +998,10 @@
         int
         (
         )
-      )
    )
    let
    (
-     equal
+      equal
     (
      case
          (
@@ -1144,13 +1145,13 @@
                           data
                           ::
                           (
-                                  					 (
-                                    					   l
+                              (
+                               l
                               	 !
                               	 (
                               	 lineno
                               	 )
-                                  					 )
+                              )
                                !
                                (
                                data
@@ -1194,107 +1195,107 @@
     string_data
     array
     (
-         					 (
-           					   "Si"
+     (
+      "Si"
      	0
-         					 )
-         					 (
-           					   "non"
+     )
+     (
+      "non"
      	1
-         					 )
-         					 (
-           					   "e"
+     )
+     (
+      "e"
      	2
-         					 )
-         					 (
-           					   "vero"
+     )
+     (
+      "vero"
      	3
-         					 )
-         					 (
-           					   "e"
+     )
+     (
+      "e"
      	4
-         					 )
-         					 (
-           					   "ben"
+     )
+     (
+      "ben"
      	5
-         					 )
-         					 (
-           					   "trovato"
+     )
+     (
+      "trovato"
      	6
-         					 )
-         					 (
-           					   "An"
+     )
+     (
+      "An"
      	10
-         					 )
-         					 (
-           					   "apple"
+     )
+     (
+      "apple"
      	11
-         					 )
-         					 (
-           					   "a"
+     )
+     (
+      "a"
      	12
-         					 )
-         					 (
-           					   "day"
+     )
+     (
+      "day"
      	13
-         					 )
-         					 (
-           					   "keeps"
+     )
+     (
+      "keeps"
      	14
-         					 )
-         					 (
-           					   "the"
+     )
+     (
+      "the"
      	15
-         					 )
-         					 (
-           					   "doctor"
+     )
+     (
+      "doctor"
      	16
-         					 )
-         					 (
-           					   "away"
+     )
+     (
+      "away"
      	17
-         					 )
-         					 (
-           					   "Pierre"
+     )
+     (
+      "Pierre"
      	20
-         					 )
-         					 (
-           					   "qui"
+     )
+     (
+      "qui"
      	21
-         					 )
-         					 (
-           					   "roule"
+     )
+     (
+      "roule"
      	22
-         					 )
-         					 (
-           					   "n'amasse"
+     )
+     (
+      "n'amasse"
      	23
-         					 )
-         					 (
-           					   "pas"
+     )
+     (
+      "pas"
      	24
-         					 )
-         					 (
-           					   "mousse"
+     )
+     (
+      "mousse"
      	25
-         					 )
-         					 (
-           					   "Asinus"
+     )
+     (
+      "Asinus"
      	30
-         					 )
-         					 (
-           					   "asinum"
+     )
+     (
+      "asinum"
      	31
-         					 )
-         					 (
-           					   "fricat"
+     )
+     (
+      "fricat"
      	32
-         					 )
+     )
     )
   )
   let
   (
-    random_integers
+     random_integers
    (
     case
         (
@@ -1310,10 +1311,10 @@
      		         Array.make
      		         (
      		             num
-     		                 					 (
-     		                   					   0
+     		             (
+     		              0
      		             	0
-     		                 					 )
+     		             )
      		         ) 
      		       )
      		      in
@@ -1330,13 +1331,13 @@
      		           (
      		            data
      		            i
-     		                					 (
-     		                  					   Random.int
      		            (
-     		                range
-     		            )
+     		             Random.int
+     		             (
+     		                 range
+     		             )
      		            	i
-     		                					 )
+     		            )
      		           )
      		        ;
      		          data
@@ -1357,20 +1358,20 @@
          Array.map
          (
              (
-              case
-              (
-              (
-               k
-              	d
-              )
-                  					 (
-                  					 (
-                    					   k
-              	k
-                  					 )
-              	d
-                  					 )
-              )
+               case
+               (
+                (
+                 k
+                	d
+                )
+                (
+                 (
+                  k
+                 	k
+                 )
+                	d
+                )
+               )
              )
              data
          )
@@ -1398,10 +1399,10 @@
                     )
                     10
                 )
-                    					 (
-                      					   []
+                (
+                 []
                 	0
-                    					 )
+                )
             ) 
           )
          in
@@ -1521,16 +1522,16 @@
                   (
                    d
                    i
-                       					 (
-                         					   mklist
                    (
-                       Random.int
-                       (
-                           16
-                       )
-                   )
+                    mklist
+                    (
+                        Random.int
+                        (
+                            16
+                        )
+                    )
                    	i
-                       					 )
+                   )
                   )
                ;
                  d

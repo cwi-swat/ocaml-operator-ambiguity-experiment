@@ -58,11 +58,11 @@
   )
   let
   (
-    test
+     test
    (
     case
         (
-     		 test_number
+     		  test_number
      		(
      		 case
      		     (
@@ -151,9 +151,9 @@
    )
     Array2.t
        (
-   	 float
-   	 (
-   	 )
+        float
+        (
+        )
    	 float64_elt
    	 (
    	 )
@@ -171,9 +171,9 @@
    arrow
     Array2.t
        (
-   	 float
-   	 (
-   	 )
+        float
+        (
+        )
    	 float64_elt
    	 (
    	 )
@@ -197,9 +197,9 @@
    )
     Array2.t
        (
-   	 float
-   	 (
-   	 )
+        float
+        (
+        )
    	 float32_elt
    	 (
    	 )
@@ -217,9 +217,9 @@
    arrow
     Array2.t
        (
-   	 float
-   	 (
-   	 )
+        float
+        (
+        )
    	 float32_elt
    	 (
    	 )
@@ -237,23 +237,23 @@
    let
    (
     (
-      make_array2
+       make_array2
      (
       case
           (
-       		 kind
+       		  kind
        		(
        		 case
        		     (
-       		  		 layout
+       		  		  layout
        		  		(
        		  		 case
        		  		     (
-       		  		  		 ind0
+       		  		  		  ind0
        		  		  		(
        		  		  		 case
        		  		  		     (
-       		  		  		  		 dim1
+       		  		  		  		  dim1
        		  		  		  		(
        		  		  		  		 case
        		  		  		  		     (
@@ -299,11 +299,13 @@
        		  		  		  		  		                )
        		  		  		  		  		                ind0
        		  		  		  		  		            )
-       		  		  		  		  		            Bigarray.Array2.set
+       		  		  		  		  		            Bigarray.Array1.set
        		  		  		  		  		            (
        		  		  		  		  		             a
-       		  		  		  		  		                 					 i
+       		  		  		  		  		             (
+       		  		  		  		  		              i
        		  		  		  		  		             	j
+       		  		  		  		  		             )
        		  		  		  		  		             fromint
        		  		  		  		  		             (
        		  		  		  		  		                 +
@@ -393,11 +395,13 @@
                    test
                    (
                        1
-                       Bigarray.Array2.get
+                       Bigarray.Array1.get
                        (
                         a
-                            					 0
+                        (
+                         0
                         	0
+                        )
                        )
                        0.0
                    )
@@ -407,11 +411,13 @@
                      test
                      (
                          2
-                         Bigarray.Array2.get
+                         Bigarray.Array1.get
                          (
                           a
-                              					 1
+                          (
+                           1
                           	0
+                          )
                          )
                          100.0
                      )
@@ -421,11 +427,13 @@
                        test
                        (
                            3
-                           Bigarray.Array2.get
+                           Bigarray.Array1.get
                            (
                             a
-                                					 0
+                            (
+                             0
                             	1
+                            )
                            )
                            1.0
                        )
@@ -435,11 +443,13 @@
                          test
                          (
                              4
-                             Bigarray.Array2.get
+                             Bigarray.Array1.get
                              (
                               a
-                                  					 5
+                              (
+                               5
                               	4
+                              )
                              )
                              504.0
                          )
@@ -488,11 +498,13 @@
                                    test
                                    (
                                        1
-                                       Bigarray.Array2.get
+                                       Bigarray.Array1.get
                                        (
                                         a
-                                            					 1
+                                        (
+                                         1
                                         	1
+                                        )
                                        )
                                        101.0
                                    )
@@ -502,11 +514,13 @@
                                      test
                                      (
                                          2
-                                         Bigarray.Array2.get
+                                         Bigarray.Array1.get
                                          (
                                           a
-                                              					 2
+                                          (
+                                           2
                                           	1
+                                          )
                                          )
                                          201.0
                                      )
@@ -516,11 +530,13 @@
                                        test
                                        (
                                            3
-                                           Bigarray.Array2.get
+                                           Bigarray.Array1.get
                                            (
                                             a
-                                                					 1
+                                            (
+                                             1
                                             	2
+                                            )
                                            )
                                            102.0
                                        )
@@ -528,11 +544,13 @@
                                        test
                                        (
                                            4
-                                           Bigarray.Array2.get
+                                           Bigarray.Array1.get
                                            (
                                             a
-                                                					 5
+                                            (
+                                             5
                                             	4
+                                            )
                                            )
                                            504.0
                                        )

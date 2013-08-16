@@ -42,7 +42,7 @@
     Thread.sigmask
     (
         Unix.SIG_BLOCK
-                ::
+        ::
           (
             Sys.sigint
             ::

@@ -2,31 +2,31 @@
   type
   (  						
      t
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-     (
-      x
-      poly
-      t
-      (
-      )
-      y
-      poly
-      t
-      (
-      )
-      z
-      poly
-      t
-      (
-      )
-     )
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       (
+        x
+        poly
+        t
+        (
+        )
+        y
+        poly
+        t
+        (
+        )
+        z
+        poly
+        t
+        (
+        )
+       )
   )
   let
   (
@@ -69,90 +69,90 @@
       List.iter
       (
           (
-           case
-           (
-           (
-            f
-           	t_ref
-           )
-           List.iter
-           (
-               (
-                case
-                (
-                t
-                assert ==
-                (
-                    f
+            case
+            (
+             (
+              f
+             	t_ref
+             )
+             List.iter
+             (
+                 (
+                   case
+                   (
+                    t
+                    assert ==
                     (
-                        t
+                        f
+                        (
+                            t
+                        )
+                        t_ref
                     )
-                    t_ref
-                )
-                )
-               )
-               ::
-                (
-                x
-                ::
-                (
-                y
-                ::
-                (
-                z
-                []
-                ) 
-                ) 
-                ) 
-           )
-           )
+                   )
+                 )
+                 ::
+                  (
+                  x
+                  ::
+                  (
+                  y
+                  ::
+                  (
+                  z
+                  []
+                  ) 
+                  ) 
+                  ) 
+             )
+            )
           )
           ::
            (
            (
-               					 (
-                 					  case
-                 					  (
-                 					  t
-                 					  field
-                 					  (
-                 					  t
-                 					  x
-                 					  )
-                 					  )
-                 					 )
+            (
+              case
+              (
+               t
+               field
+               (
+               t
+               x
+               )
+              )
+            )
            	x
            )
            ::
            (
            (
-               					 (
-                 					  case
-                 					  (
-                 					  t
-                 					  field
-                 					  (
-                 					  t
-                 					  y
-                 					  )
-                 					  )
-                 					 )
+            (
+              case
+              (
+               t
+               field
+               (
+               t
+               y
+               )
+              )
+            )
            	y
            )
            ::
            (
            (
-               					 (
-                 					  case
-                 					  (
-                 					  t
-                 					  field
-                 					  (
-                 					  t
-                 					  z
-                 					  )
-                 					  )
-                 					 )
+            (
+              case
+              (
+               t
+               field
+               (
+               t
+               z
+               )
+              )
+            )
            	z
            )
            []

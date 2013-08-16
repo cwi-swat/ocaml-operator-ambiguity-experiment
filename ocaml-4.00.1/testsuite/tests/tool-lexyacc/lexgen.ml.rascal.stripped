@@ -179,16 +179,16 @@
         	r2
         )
         Seq
-               					 (
-                 					   encode_regexp
            (
-               r1
-           )
+            encode_regexp
+            (
+                r1
+            )
            	encode_regexp
            	(
            	    r2
            	)
-               					 )
+           )
        )
        case
        (
@@ -198,16 +198,16 @@
         	r2
         )
         Alt
-               					 (
-                 					   encode_regexp
            (
-               r1
-           )
+            encode_regexp
+            (
+                r1
+            )
            	encode_regexp
            	(
            	    r2
            	)
-               					 )
+           )
        )
        case
        (
@@ -227,79 +227,79 @@
     List.fold_left
     (
         (
-         case
-         (
-           reg
-           (
-           case
-           (
-           (
-            expr
-           	act
-           )
-           let
-           (
+        case
+          (
+            reg
             (
-              act_num
-               !
+              case
+              (
                (
-               actions_count
+                expr
+               	act
                )
-            )
-           in
-             sequence
-             (
-               :=
+               let
                (
-                   actions_count
-                   +
+                (
+                  act_num
+                   !
                    (
-                        !
-                        (
-                        actions_count
-                        )
-                       1
+                   actions_count
                    )
-               )
-             ;
-               sequence
-               (
-                 :=
+                )
+               in
+                 sequence
                  (
-                     actions
-                     ::
+                   :=
+                   (
+                       actions_count
+                       +
+                       (
+                            !
+                            (
+                            actions_count
+                            )
+                           1
+                       )
+                   )
+                 ;
+                   sequence
+                   (
+                     :=
                      (
-                             					 (
-                               					   act_num
-                         	act
-                             					 )
-                          !
-                          (
-                          actions
-                          )
+                         actions
+                         ::
+                         (
+                             (
+                              act_num
+                             	act
+                             )
+                              !
+                              (
+                              actions
+                              )
+                         )
                      )
+                   ;
+                     Alt
+                        (
+                         reg
+                        	Seq
+                        	   (
+                        	    encode_regexp
+                        	    (
+                        	        expr
+                        	    )
+                        	   	Action
+                        	   	   act_num
+                        	   )
+                        )
+                   )
                  )
-               ;
-                 Alt
-                        					 (
-                          					   reg
-                    	Seq
-                    	       					 (
-                    	         					   encode_regexp
-                    	   (
-                    	       expr
-                    	   )
-                    	   	Action
-                    	   	   act_num
-                    	       					 )
-                        					 )
                )
-             )
-           )
-           )
-           )
-         )													
-        )
+              )
+            )
+          )
+        )													
         Empty
     ) 
   )
@@ -353,20 +353,20 @@
                     List.map
                     (
                         (
-                         case
-                         (
-                         (
-                          name
-                         	casedef
-                         )
-                             					 (
-                               					   name
-                         	encode_casedef
-                         	(
-                         	    casedef
-                         	)
-                             					 )
-                         )
+                          case
+                          (
+                           (
+                            name
+                           	casedef
+                           )
+                           (
+                            name
+                           	encode_casedef
+                           	(
+                           	    casedef
+                           	)
+                           )
+                          )
                         )
                         ld
                     ) 
@@ -409,11 +409,11 @@
                              []
                          )
                        ;
-                             					 (
-                               					   chr
+                         (
+                          chr
                          	name_regexp_list
                          	act
-                             					 )
+                         )
                        )
                      )
                    )
@@ -453,7 +453,7 @@
   )
   let
   (
-    merge_trans
+     merge_trans
    (
     case
         (
@@ -463,10 +463,10 @@
      		     (
      		 	  l2
      		      match
-     		          					 (
-     		            					   l1
+     		      (
+     		       l1
      		      	l2
-     		          					 )
+     		      )
      		      (
      		      case
      		      (
@@ -1003,7 +1003,7 @@
   )
   let
   (
-    followpos
+     followpos
    (
     case
         (
@@ -1170,17 +1170,17 @@
      		              List.iter
      		              (
      		                  (
-     		                   case
-     		                   (
-     		                   (
-     		                    name
-     		                   	regexp
-     		                   )
-     		                   fill
-     		                   (
-     		                       regexp
-     		                   )
-     		                   )
+     		                    case
+     		                    (
+     		                     (
+     		                      name
+     		                     	regexp
+     		                     )
+     		                     fill
+     		                     (
+     		                         regexp
+     		                     )
+     		                    )
      		                  )
      		                  name_regexp_list
      		              )
@@ -1206,71 +1206,71 @@
     List.fold_left
     (
         (
-         case
-         (
-           alias act_pos_set
-           (
-             (
-              act
-             	pos_set
-             )
-           )
-           (
-           case
-           (
-           trans
-           match
-           trans
-           (
-           case
-           (
-             OnChars
-             pos
-                 					 (
-                   					   act
-             	::
-             	(
-             	    pos
-             	    pos_set
-             	)
-                 					 )
-           ) 
-             case
-             (
-              ToAction
-              act1
-              ifthenelse
+        case
+          (
+            alias act_pos_set
+            (
               (
-               if
-               (
-                <
-                (
-                    act1
-                    act
-                )
-               )
-               then
-               (
-                    					 (
-                      					   act1
-                	pos_set
-                    					 )
-               )
-               else
-               (
-                act_pos_set
-               ) 
+               act
+              	pos_set
               )
-             )
-           )
-           )
-           )
-         )													
-        )
-            					 (
-              					   no_action
+            )
+            (
+              case
+              (
+               trans
+               match
+               trans
+               (
+               case
+               (
+                 OnChars
+                 pos
+                 (
+                  act
+                 	::
+                 	(
+                 	    pos
+                 	    pos_set
+                 	)
+                 )
+               ) 
+                 case
+                 (
+                  ToAction
+                  act1
+                  ifthenelse
+                  (
+                   if
+                   (
+                    <
+                    (
+                        act1
+                        act
+                    )
+                   )
+                   then
+                   (
+                    (
+                     act1
+                    	pos_set
+                    )
+                   )
+                   else
+                   (
+                    act_pos_set
+                   ) 
+                  )
+                 )
+               )
+              )
+            )
+          )
+        )													
+        (
+         no_action
         	[]
-            					 )
+        )
     ) 
   )
   let
@@ -1388,10 +1388,10 @@
                        todo
                        ::
                        (
-                               					 (
-                                 					   st
+                           (
+                            st
                            	nbr
-                               					 )
+                           )
                             !
                             (
                             todo
@@ -1457,10 +1457,10 @@
               in
                 ::
                 (
-                        					 (
-                          					   res
+                    (
+                     res
                     	i
-                        					 )
+                    )
                     map_on_states
                     (
                         f
@@ -1509,11 +1509,11 @@
   )
   let
   (
-    transition_from
+     transition_from
    (
     case
         (
-     		 chars
+     		  chars
      		(
      		 case
      		     (
@@ -1544,48 +1544,48 @@
      		  		          List.iter
      		  		          (
      		  		              (
-     		  		               case
-     		  		               (
-     		  		               pos
-     		  		               List.iter
-     		  		               (
-     		  		                   (
-     		  		                    case
-     		  		                    (
-     		  		                    c
-     		  		                    Array.set
-     		  		                    (
-     		  		                     tr
-     		  		                     Char.code
+     		  		                case
+     		  		                (
+     		  		                 pos
+     		  		                 List.iter
+     		  		                 (
      		  		                     (
-     		  		                         c
+     		  		                       case
+     		  		                       (
+     		  		                        c
+     		  		                        Array.set
+     		  		                        (
+     		  		                         tr
+     		  		                         Char.code
+     		  		                         (
+     		  		                             c
+     		  		                         )
+     		  		                         merge_trans
+     		  		                         (
+     		  		                             Array.get
+     		  		                             (
+     		  		                              tr
+     		  		                              Char.code
+     		  		                              (
+     		  		                                  c
+     		  		                              )
+     		  		                             )
+     		  		                             Array.get
+     		  		                             (
+     		  		                              follow
+     		  		                              pos
+     		  		                             )
+     		  		                         )
+     		  		                        )
+     		  		                       )
      		  		                     )
-     		  		                     merge_trans
+     		  		                     Array.get
      		  		                     (
-     		  		                         Array.get
-     		  		                         (
-     		  		                          tr
-     		  		                          Char.code
-     		  		                          (
-     		  		                              c
-     		  		                          )
-     		  		                         )
-     		  		                         Array.get
-     		  		                         (
-     		  		                          follow
-     		  		                          pos
-     		  		                         )
+     		  		                      chars
+     		  		                      pos
      		  		                     )
-     		  		                    )
-     		  		                    )
-     		  		                   )
-     		  		                   Array.get
-     		  		                   (
-     		  		                    chars
-     		  		                    pos
-     		  		                   )
-     		  		               )
-     		  		               )
+     		  		                 )
+     		  		                )
      		  		              )
      		  		              pos_set
      		  		          )
@@ -1622,11 +1622,11 @@
   )
   let
   (
-    translate_state
+     translate_state
    (
     case
         (
-     		 chars
+     		  chars
      		(
      		 case
      		     (
@@ -1657,34 +1657,34 @@
      		  		         	ps
      		  		         )
      		  		         Shift
-     		  		                					 (
-     		  		                  					   ifthenelse
      		  		            (
-     		  		             if
+     		  		             ifthenelse
      		  		             (
-     		  		              =
+     		  		              if
      		  		              (
-     		  		                  n
-     		  		                  no_action
+     		  		               =
+     		  		               (
+     		  		                   n
+     		  		                   no_action
+     		  		               )
      		  		              )
+     		  		              then
+     		  		              (
+     		  		               No_remember
+     		  		              )
+     		  		              else
+     		  		              (
+     		  		               Remember
+     		  		                  n
+     		  		              ) 
      		  		             )
-     		  		             then
-     		  		             (
-     		  		              No_remember
-     		  		             )
-     		  		             else
-     		  		             (
-     		  		              Remember
-     		  		                 n
-     		  		             ) 
-     		  		            )
      		  		            	transition_from
      		  		            	(
      		  		            	    chars
      		  		            	    follow
      		  		            	    ps
      		  		            	)
-     		  		                					 )
+     		  		            )
      		  		        )
      		  		      )
      		  		     )
@@ -1736,23 +1736,23 @@
                 List.map
                 (
                     (
-                     case
-                     (
-                     (
-                      name
-                     	regexp
-                     )
-                         					 (
-                           					   name
-                     	get_state
-                     	(
-                     	    firstpos
-                     	    (
-                     	        regexp
-                     	    )
-                     	)
-                         					 )
-                     )
+                      case
+                      (
+                       (
+                        name
+                       	regexp
+                       )
+                       (
+                        name
+                       	get_state
+                       	(
+                       	    firstpos
+                       	    (
+                       	        regexp
+                       	    )
+                       	)
+                       )
+                      )
                     )
                     name_regexp_list
                 ) 
@@ -1792,28 +1792,28 @@
                      List.iter
                      (
                          (
-                          case
-                          (
-                          (
-                           auto
-                          	i
-                          )
-                          Array.set
-                          (
-                           v
-                           i
-                           auto
-                          )
-                          )
+                           case
+                           (
+                            (
+                             auto
+                            	i
+                            )
+                            Array.set
+                            (
+                             v
+                             i
+                             auto
+                            )
+                           )
                          )
                          states
                      )
                    ;
-                         					 (
-                           					   initial_states
+                     (
+                      initial_states
                      	v
                      	actions
-                         					 )
+                     )
                    )
                  )
                )

@@ -181,108 +181,108 @@
              ::
               (
               (
-                  					 "-dcmm"
-              	 Arg.Set
-              	 dump_cmm
+               "-dcmm"
+              	Arg.Set
+              	   dump_cmm
               	""
               )
               ::
               (
               (
-                  					 "-dsel"
-              	 Arg.Set
-              	 dump_selection
+               "-dsel"
+              	Arg.Set
+              	   dump_selection
               	""
               )
               ::
               (
               (
-                  					 "-dlive"
-              	 Arg.Unit
-              	 (
-              	  case
-              	  (
-              	  ()
-              	  sequence
-              	  (
-              	    :=
-              	    (
-              	        dump_live
-              	        true
-              	    )
-              	  ;
-              	    :=
-              	    (
-              	        Printmach.print_live
-              	        true
-              	    )
-              	  )
-              	  )
-              	 )
+               "-dlive"
+              	Arg.Unit
+              	   (
+              	     case
+              	     (
+              	      ()
+              	      sequence
+              	      (
+              	        :=
+              	        (
+              	            dump_live
+              	            true
+              	        )
+              	      ;
+              	        :=
+              	        (
+              	            Printmach.print_live
+              	            true
+              	        )
+              	      )
+              	     )
+              	   )
               	""
               )
               ::
               (
               (
-                  					 "-dspill"
-              	 Arg.Set
-              	 dump_spill
+               "-dspill"
+              	Arg.Set
+              	   dump_spill
               	""
               )
               ::
               (
               (
-                  					 "-dsplit"
-              	 Arg.Set
-              	 dump_split
+               "-dsplit"
+              	Arg.Set
+              	   dump_split
               	""
               )
               ::
               (
               (
-                  					 "-dinterf"
-              	 Arg.Set
-              	 dump_interf
+               "-dinterf"
+              	Arg.Set
+              	   dump_interf
               	""
               )
               ::
               (
               (
-                  					 "-dprefer"
-              	 Arg.Set
-              	 dump_prefer
+               "-dprefer"
+              	Arg.Set
+              	   dump_prefer
               	""
               )
               ::
               (
               (
-                  					 "-dalloc"
-              	 Arg.Set
-              	 dump_regalloc
+               "-dalloc"
+              	Arg.Set
+              	   dump_regalloc
               	""
               )
               ::
               (
               (
-                  					 "-dreload"
-              	 Arg.Set
-              	 dump_reload
+               "-dreload"
+              	Arg.Set
+              	   dump_reload
               	""
               )
               ::
               (
               (
-                  					 "-dscheduling"
-              	 Arg.Set
-              	 dump_scheduling
+               "-dscheduling"
+              	Arg.Set
+              	   dump_scheduling
               	""
               )
               ::
               (
               (
-                  					 "-dlinear"
-              	 Arg.Set
-              	 dump_linear
+               "-dlinear"
+              	Arg.Set
+              	   dump_linear
               	""
               )
               []

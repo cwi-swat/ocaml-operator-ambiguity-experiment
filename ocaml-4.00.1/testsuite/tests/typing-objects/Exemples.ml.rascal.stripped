@@ -425,7 +425,8 @@
           inherit
            constr classArgs 
                   (
-                      <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"circle")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                      a
+                      circle
                       c
                   )
            (
@@ -474,26 +475,26 @@
        )
   )
   (
-   case
-   (
-   x
-   (
+    case
+    (
      x
-     :
-      color_circle
-      (
-        color_point
+     (
+       x
+       :
+        color_circle
         (
+          color_point
+          (
+          )
         )
-      )
-      circle
-      (
-        point
+        circle
         (
+          point
+          (
+          )
         )
-      )
-   )
-   )
+     )
+    )
   )
    class
    (
@@ -522,6 +523,7 @@
           	      )
           	  )
        )
+       <"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
    )
    let
    (
@@ -604,6 +606,7 @@
           	    )
           	  )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
    )
    let
    (
@@ -637,14 +640,11 @@
             case
           	(
           		d
-            	brackets4 
+            	x
+            	+
             	(
             	    x
-            	    +
-            	    (
-            	        x
-            	        d
-            	    )
+            	    d
             	)
           	)
           )
@@ -677,17 +677,17 @@
    p
   )
   (
-   case
-   (
-   x
-   brackets2 
-   (
-       x
-       functional_point
-       (
-       )
-   )
-   )
+    case
+    (
+     x
+     brackets2 
+     (
+         x
+         functional_point
+         (
+         )
+     )
+    )
   )
    class
    (
@@ -843,22 +843,22 @@
             	    )
             	    (
             	        (
-            	         case
-            	         (
-            	         x
-            	         sequence
-            	         (
-            	           f
+            	          case
+            	          (
+            	           x
+            	           sequence
             	           (
-            	               x
+            	             f
+            	             (
+            	                 x
+            	             )
+            	           ;
+            	             print_string
+            	             (
+            	                 "::"
+            	             )
             	           )
-            	         ;
-            	           print_string
-            	           (
-            	               "::"
-            	           )
-            	         )
-            	         )
+            	          )
             	        )
             	    )
             	  ;
@@ -879,6 +879,7 @@
           	)
           )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
      params = 
      (
       "a"
@@ -891,7 +892,8 @@
           inherit
            constr classArgs 
                   (
-                      <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                      a
+                      lst
                       ()
                   )
            (
@@ -922,7 +924,8 @@
           inherit
            constr classArgs 
                   (
-                      <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                      a
+                      lst
                       ()
                   )
            (
@@ -971,15 +974,15 @@
      )
      (
          (
-          case
-          (
-          x
-          +
-          (
-              x
-              1
-          )
-          )
+           case
+           (
+            x
+            +
+            (
+                x
+                1
+            )
+           )
          )
      ) 
    )
@@ -1054,15 +1057,15 @@
      map_list
      (
          (
-          case
-          (
-          x
-          new printable_color_point
-          (
-              x
-              "red"
-          )
-          )
+           case
+           (
+            x
+            new printable_color_point
+            (
+                x
+                "red"
+            )
+           )
          )
          l1
      ) 
@@ -1073,14 +1076,14 @@
   )
   (
       (
-       case
-       (
-       x
-       send print
-       (
-        x
-       )
-       )
+        case
+        (
+         x
+         send print
+         (
+          x
+         )
+        )
       )
   )
    class
@@ -1101,6 +1104,7 @@
              (
              )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    class
    (
@@ -1439,14 +1443,14 @@
           Sort.list
           (
               (
-               case
-               (
-               x
-               send leq
-               (
-                x
-               )
-               )
+                case
+                (
+                 x
+                 send leq
+                 (
+                  x
+                 )
+                )
               )
               l
           )
@@ -1465,25 +1469,25 @@
             List.map
             (
                 (
-                 case
-                 (
-                 c
-                 sequence
-                 (
-                   print_int
+                  case
+                  (
+                   c
+                   sequence
                    (
-                       send x
-                       (
-                        c
-                       )
+                     print_int
+                     (
+                         send x
+                         (
+                          c
+                         )
+                     )
+                   ;
+                     print_string
+                     (
+                         " "
+                     )
                    )
-                 ;
-                   print_string
-                   (
-                       " "
-                   )
-                 )
-                 )
+                  )
                 )
                 l
             )
@@ -1724,6 +1728,7 @@
           	)
           )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
    )
    class
    (
@@ -1739,7 +1744,8 @@
           inherit
            constr classArgs 
                   (
-                      <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"link")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+                      a
+                      link
                       x
                   )
            (
@@ -1799,6 +1805,7 @@
           	)
           )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
    )
    let
    (
@@ -1989,6 +1996,7 @@
           	      self
           	  )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
    )
   send equals
   (
@@ -2091,31 +2099,60 @@
           	)
           )
           method add
-          	  brackets4 
+          	  acc
+          	  equals
           	  (
-          	      acc
-          	      equals
-          	      (
-          	          self
-          	      )
-          	      <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"+.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+          	      self
           	  )
+          	  	equals
+          	  	(
+          	  	 case
+          	  	 (
+          	  	   s
+          	  	   +.
+          	  	   (
+          	  	       send acc
+          	  	       (
+          	  	        s
+          	  	       )
+          	  	       send arg
+          	  	       (
+          	  	        s
+          	  	       )
+          	  	   )
+          	  	 ) 
+          	  	)
           method sub
-          	  brackets4 
+          	  acc
+          	  equals
           	  (
-          	      acc
-          	      equals
-          	      (
-          	          self
-          	      )
-          	      <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"-.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+          	      self
           	  )
+          	  	equals
+          	  	(
+          	  	 case
+          	  	 (
+          	  	   s
+          	  	   -.
+          	  	   (
+          	  	       send acc
+          	  	       (
+          	  	        s
+          	  	       )
+          	  	       send arg
+          	  	       (
+          	  	        s
+          	  	       )
+          	  	   )
+          	  	 ) 
+          	  	)
           method equals
           	  equals
           	  (
           	      self
           	  )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
    )
   send equals
   (
@@ -2219,6 +2256,7 @@
           method equals
           	  arg
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
      params = 
      (
      )

@@ -118,9 +118,9 @@
      ::
       (
       (
-          					 "-c"
-      	 Arg.Set
-      	 compact_flag
+       "-c"
+      	Arg.Set
+      	   compact_flag
       	"do heap compactions"
       )
       []
@@ -130,11 +130,11 @@
   (
       argspecs
       (
-       case
-       (
-       _
-       ()
-       )
+        case
+        (
+         _
+         ()
+        )
       )
       "Usage: alloc [-c]"
   )

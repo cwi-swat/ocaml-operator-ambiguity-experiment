@@ -5,8 +5,8 @@
     try
     raise
     (
-         Invalid_argument
-         "X"
+        Invalid_argument
+           "X"
     )
     (
     case
@@ -15,12 +15,12 @@
       s
       raise
       (
-           Invalid_argument
-           ^
-           (
-               s
-               s
-           )
+          Invalid_argument
+             ^
+             (
+                 s
+                 s
+             )
       )
     ) 
     )

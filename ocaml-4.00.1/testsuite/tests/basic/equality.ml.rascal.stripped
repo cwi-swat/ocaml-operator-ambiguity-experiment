@@ -1,11 +1,11 @@
 (
   let
   (
-    test
+     test
    (
     case
         (
-     		 n
+     		  n
      		(
      		 case
      		     (
@@ -241,31 +241,31 @@
   type
   (  						
      tree
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-     (
-     Dummy
-     (
-     )
-     Leaf
-     (
-     )
-     Node
-     (
-      tree
-      (
-      )
-      tree
-      (
-      )
-     )
-     )
+       type
+       params=
+       (
+       )
+       cstrs =
+       (
+       )
+       kind =
+       (
+       Dummy
+       (
+       )
+       Leaf
+       (
+       )
+       Node
+       (
+        tree
+        (
+        )
+        tree
+        (
+        )
+       )
+       )
   )
   let
   (
@@ -290,25 +290,25 @@
           )
           else
           (
-            Node
-            (
-                					 mktree
-                  					 (
-                  					     -
-                  					     (
-                  					         depth
-                  					         1
-                  					     )
-                  					 )
-            	mktree
-            	(
-            	    -
-            	    (
-            	        depth
-            	        1
-            	    )
-            	)
-            )
+           Node
+              (
+               mktree
+               (
+                   -
+                   (
+                       depth
+                       1
+                   )
+               )
+              	mktree
+              	(
+              	    -
+              	    (
+              	        depth
+              	        1
+              	    )
+              	)
+              )
           ) 
          )
         )
@@ -317,28 +317,28 @@
   type
   (  						
      leftlist
-     type
-     params=
-     (
-      a
-     )
-     cstrs =
-     (
-     )
-     kind =
-     (
-     Nil
-     (
-     )
-     Cons
-     (
-       leftlist
+       type
+       params=
        (
-         a
+       a
        )
-      a
-     )
-     )
+       cstrs =
+       (
+       )
+       kind =
+       (
+       Nil
+       (
+       )
+       Cons
+       (
+         leftlist
+         (
+           a
+         )
+        a
+       )
+       )
   )
   let
   (
@@ -365,14 +365,14 @@
               :=
               (
                   l
-                   Cons
-                   (
-                         					  !
-                         					  (
-                         					  l
-                         					  )
-                   	i
-                   )
+                  Cons
+                     (
+                       !
+                       (
+                       l
+                       )
+                     	i
+                     )
               )
            ;
               !
@@ -536,11 +536,11 @@
                                compare
                                (
                                    (
-                                       					 0
+                                    0
                                    	1
                                    )
                                    (
-                                       					 0
+                                    0
                                    	1
                                    )
                                )
@@ -555,11 +555,11 @@
                                  compare
                                  (
                                      (
-                                         					 0
+                                      0
                                      	1
                                      )
                                      (
-                                         					 0
+                                      0
                                      	2
                                      )
                                  )
@@ -574,11 +574,11 @@
                                    compare
                                    (
                                        (
-                                           					 0
+                                        0
                                        	1
                                        )
                                        (
-                                           					 1
+                                        1
                                        	0
                                        )
                                    )
@@ -593,11 +593,11 @@
                                      compare
                                      (
                                          (
-                                             					 0
+                                          0
                                          	1
                                          )
                                          (
-                                             					 0
+                                          0
                                          	0
                                          )
                                      )
@@ -612,11 +612,11 @@
                                        compare
                                        (
                                            (
-                                               					 1
+                                            1
                                            	0
                                            )
                                            (
-                                               					 0
+                                            0
                                            	1
                                            )
                                        )
@@ -1089,11 +1089,11 @@
                                                                                compare
                                                                                (
                                                                                    (
-                                                                                       					 0.0
+                                                                                    0.0
                                                                                    	nan
                                                                                    )
                                                                                    (
-                                                                                       					 0.0
+                                                                                    0.0
                                                                                    	0.0
                                                                                    )
                                                                                )
@@ -1108,11 +1108,11 @@
                                                                                  compare
                                                                                  (
                                                                                      (
-                                                                                         					 0.0
+                                                                                      0.0
                                                                                      	nan
                                                                                      )
                                                                                      (
-                                                                                         					 0.0
+                                                                                      0.0
                                                                                      	neg_infinity
                                                                                      )
                                                                                  )
@@ -1127,11 +1127,11 @@
                                                                                    compare
                                                                                    (
                                                                                        (
-                                                                                           					 nan
+                                                                                        nan
                                                                                        	0.0
                                                                                        )
                                                                                        (
-                                                                                           					 nan
+                                                                                        nan
                                                                                        	0.0
                                                                                        )
                                                                                    )
@@ -1140,7 +1140,7 @@
                                                                                let
                                                                                (
                                                                                 (
-                                                                                  cmpgen
+                                                                                   cmpgen
                                                                                  (
                                                                                   case
                                                                                       (
@@ -1150,11 +1150,11 @@
                                                                                    		     (
                                                                                    		 	  y
                                                                                    		      (
-                                                                                   		          					 =
-                                                                                   		            					 (
-                                                                                   		            					     x
-                                                                                   		            					     y
-                                                                                   		            					 )
+                                                                                   		       =
+                                                                                   		       (
+                                                                                   		           x
+                                                                                   		           y
+                                                                                   		       )
                                                                                    		      	<>
                                                                                    		      	(
                                                                                    		      	    x
@@ -1190,7 +1190,7 @@
                                                                                  let
                                                                                  (
                                                                                   (
-                                                                                    cmpfloat
+                                                                                     cmpfloat
                                                                                    (
                                                                                     case
                                                                                         (
@@ -1206,11 +1206,11 @@
                                                                                      		 	  (
                                                                                      		 	  )
                                                                                      		      (
-                                                                                     		          					 =
-                                                                                     		            					 (
-                                                                                     		            					     x
-                                                                                     		            					     y
-                                                                                     		            					 )
+                                                                                     		       =
+                                                                                     		       (
+                                                                                     		           x
+                                                                                     		           y
+                                                                                     		       )
                                                                                      		      	<>
                                                                                      		      	(
                                                                                      		      	    x
@@ -1315,7 +1315,7 @@
                                                                                              let
                                                                                              (
                                                                                               (
-                                                                                                cmpfloatpos
+                                                                                                 cmpfloatpos
                                                                                                (
                                                                                                 case
                                                                                                     (
@@ -1331,47 +1331,47 @@
                                                                                                  		 	  (
                                                                                                  		 	  )
                                                                                                  		      (
-                                                                                                 		            					 let
-                                                                                                 		            					 (
-                                                                                                 		            					  (
-                                                                                                 		            					    r
-                                                                                                 		            					    ref
-                                                                                                 		            					    (
-                                                                                                 		            					        false
-                                                                                                 		            					    ) 
-                                                                                                 		            					  )
-                                                                                                 		            					 in
-                                                                                                 		            					   sequence
-                                                                                                 		            					   (
-                                                                                                 		            					     ifthenelse
-                                                                                                 		            					     (
-                                                                                                 		            					      if
-                                                                                                 		            					      (
-                                                                                                 		            					       =
-                                                                                                 		            					       (
-                                                                                                 		            					           x
-                                                                                                 		            					           y
-                                                                                                 		            					       )
-                                                                                                 		            					      )
-                                                                                                 		            					      then
-                                                                                                 		            					      (
-                                                                                                 		            					       :=
-                                                                                                 		            					       (
-                                                                                                 		            					           r
-                                                                                                 		            					           true
-                                                                                                 		            					       )
-                                                                                                 		            					      )
-                                                                                                 		            					      else
-                                                                                                 		            					      (
-                                                                                                 		            					      )
-                                                                                                 		            					     )
-                                                                                                 		            					   ;
-                                                                                                 		            					      !
-                                                                                                 		            					      (
-                                                                                                 		            					      r
-                                                                                                 		            					      )
-                                                                                                 		            					   )
-                                                                                                 		            					 )
+                                                                                                 		       let
+                                                                                                 		       (
+                                                                                                 		        (
+                                                                                                 		          r
+                                                                                                 		          ref
+                                                                                                 		          (
+                                                                                                 		              false
+                                                                                                 		          ) 
+                                                                                                 		        )
+                                                                                                 		       in
+                                                                                                 		         sequence
+                                                                                                 		         (
+                                                                                                 		           ifthenelse
+                                                                                                 		           (
+                                                                                                 		            if
+                                                                                                 		            (
+                                                                                                 		             =
+                                                                                                 		             (
+                                                                                                 		                 x
+                                                                                                 		                 y
+                                                                                                 		             )
+                                                                                                 		            )
+                                                                                                 		            then
+                                                                                                 		            (
+                                                                                                 		             :=
+                                                                                                 		             (
+                                                                                                 		                 r
+                                                                                                 		                 true
+                                                                                                 		             )
+                                                                                                 		            )
+                                                                                                 		            else
+                                                                                                 		            (
+                                                                                                 		            )
+                                                                                                 		           )
+                                                                                                 		         ;
+                                                                                                 		            !
+                                                                                                 		            (
+                                                                                                 		            r
+                                                                                                 		            )
+                                                                                                 		         )
+                                                                                                 		       )
                                                                                                  		      	let
                                                                                                  		      	(
                                                                                                  		      	 (
@@ -1582,7 +1582,7 @@
                                                                                                  		)
                                                                                                     )
                                                                                                )
-                                                                                                cmpfloatneg
+                                                                                                 cmpfloatneg
                                                                                                (
                                                                                                 case
                                                                                                     (
@@ -1598,50 +1598,50 @@
                                                                                                  		 	  (
                                                                                                  		 	  )
                                                                                                  		      (
-                                                                                                 		            					 let
-                                                                                                 		            					 (
-                                                                                                 		            					  (
-                                                                                                 		            					    r
-                                                                                                 		            					    ref
-                                                                                                 		            					    (
-                                                                                                 		            					        true
-                                                                                                 		            					    ) 
-                                                                                                 		            					  )
-                                                                                                 		            					 in
-                                                                                                 		            					   sequence
-                                                                                                 		            					   (
-                                                                                                 		            					     ifthenelse
-                                                                                                 		            					     (
-                                                                                                 		            					      if
-                                                                                                 		            					      (
-                                                                                                 		            					       not
-                                                                                                 		            					       (
-                                                                                                 		            					           =
-                                                                                                 		            					           (
-                                                                                                 		            					               x
-                                                                                                 		            					               y
-                                                                                                 		            					           )
-                                                                                                 		            					       )
-                                                                                                 		            					      )
-                                                                                                 		            					      then
-                                                                                                 		            					      (
-                                                                                                 		            					       :=
-                                                                                                 		            					       (
-                                                                                                 		            					           r
-                                                                                                 		            					           false
-                                                                                                 		            					       )
-                                                                                                 		            					      )
-                                                                                                 		            					      else
-                                                                                                 		            					      (
-                                                                                                 		            					      )
-                                                                                                 		            					     )
-                                                                                                 		            					   ;
-                                                                                                 		            					      !
-                                                                                                 		            					      (
-                                                                                                 		            					      r
-                                                                                                 		            					      )
-                                                                                                 		            					   )
-                                                                                                 		            					 )
+                                                                                                 		       let
+                                                                                                 		       (
+                                                                                                 		        (
+                                                                                                 		          r
+                                                                                                 		          ref
+                                                                                                 		          (
+                                                                                                 		              true
+                                                                                                 		          ) 
+                                                                                                 		        )
+                                                                                                 		       in
+                                                                                                 		         sequence
+                                                                                                 		         (
+                                                                                                 		           ifthenelse
+                                                                                                 		           (
+                                                                                                 		            if
+                                                                                                 		            (
+                                                                                                 		             not
+                                                                                                 		             (
+                                                                                                 		                 =
+                                                                                                 		                 (
+                                                                                                 		                     x
+                                                                                                 		                     y
+                                                                                                 		                 )
+                                                                                                 		             )
+                                                                                                 		            )
+                                                                                                 		            then
+                                                                                                 		            (
+                                                                                                 		             :=
+                                                                                                 		             (
+                                                                                                 		                 r
+                                                                                                 		                 false
+                                                                                                 		             )
+                                                                                                 		            )
+                                                                                                 		            else
+                                                                                                 		            (
+                                                                                                 		            )
+                                                                                                 		           )
+                                                                                                 		         ;
+                                                                                                 		            !
+                                                                                                 		            (
+                                                                                                 		            r
+                                                                                                 		            )
+                                                                                                 		         )
+                                                                                                 		       )
                                                                                                  		      	let
                                                                                                  		      	(
                                                                                                  		      	 (
@@ -1872,7 +1872,7 @@
                                                                                                let
                                                                                                (
                                                                                                 (
-                                                                                                  testcmpfloat
+                                                                                                   testcmpfloat
                                                                                                  (
                                                                                                   case
                                                                                                       (

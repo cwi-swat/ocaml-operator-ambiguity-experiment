@@ -1,0 +1,185 @@
+0a1,184
+> (
+>   module type S
+>     signature
+>     (
+>         type
+>         (
+>           t
+>             type
+>               params =
+>                 (
+>                 )
+>               cstrs =
+>                 (
+>                 )
+>               kind =
+>                           s
+>             type
+>               params =
+>                 (
+>                 )
+>               cstrs =
+>                 (
+>                 )
+>               kind =
+>                      t
+>                     (
+>                     )
+>         )
+>     )
+>   module type S'
+>       S
+>     (
+>       t
+>           type
+>             params =
+>               (
+>               )
+>             cstrs =
+>               (
+>               )
+>             kind =
+>                    int
+>                   (
+>                   )
+>     )
+>   module type S
+>     signature
+>     (
+>         sig_recmodule
+>         (
+>           "M"
+>               signature
+>               (
+>               )
+>           "N"
+>               signature
+>               (
+>               )
+>         )
+>     )
+>   module type S'
+>       S
+>     (
+>       M
+>             )
+>   type
+>   (
+>     t
+>       type
+>         params =
+>           (
+>             a
+>           )
+>         cstrs =
+>           (
+>           )
+>         kind =
+>             )
+>   class_type
+>   (
+>     class_type_declaration
+>       params =
+>           (
+>           )
+>       name = c
+>       expr =
+>         class_type
+>           signature
+>           class_signature
+>             (
+>                   poly
+>                      t
+>                     (
+>                         (
+>                           A
+>                             (
+>                             )
+>                         )
+>                                             )
+>             )
+>   )
+>   module M
+>       struct
+>       (
+>         let
+>         (
+>           v
+>             (
+>               case
+>               (
+>                 x
+>                 sequence
+>                 (
+>                   ignore
+>                   (
+>                       (
+>                       x
+>                       :
+>                                                  c
+>                           (
+>                           )
+>                       )
+>                   )
+>                 ;
+>                   x
+>                 )
+>               )
+>             )
+>         )
+>       )
+>       signature
+>       (
+>           sig_value v
+>           value_description
+>               arrow
+>                 a
+>                   c
+>                   (
+>                   )
+>                 a
+>             (
+>             )
+>       )
+>   let
+>   (
+>     id
+>       let module M
+>       (
+>         struct
+>         (
+>         )
+>       )
+>       in
+>       (
+>       (
+>         case
+>         (
+>           x
+>           x
+>         )
+>       )
+>       )
+>   )
+>   let
+>   (
+>     ko
+>       let module M
+>       (
+>         struct
+>         (
+>         )
+>       )
+>       in
+>       (
+>       (
+>         case
+>         (
+>           _
+>           ()
+>                   )
+>       )
+>       )
+>   )
+> )

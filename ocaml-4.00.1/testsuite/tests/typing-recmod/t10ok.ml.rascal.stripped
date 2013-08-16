@@ -10,45 +10,12 @@
           type
           params=
           (
-           a
+          a
           )
           cstrs =
           (
           )
           kind =
-           tuple
-           (
-             B.t
-             (
-                array
-                (
-                  a
-                )
-             )
-              B.t
-              (
-                 list
-                 (
-                   a
-                 )
-              )
-           )
-     )
-    )
-    struct
-    (
-    type
-    (  						
-       t
-         type
-         params=
-         (
-          a
-         )
-         cstrs =
-         (
-         )
-         kind =
           tuple
           (
             B.t
@@ -66,6 +33,39 @@
                 )
              )
           )
+     )
+    )
+    struct
+    (
+    type
+    (  						
+       t
+         type
+         params=
+         (
+         a
+         )
+         cstrs =
+         (
+         )
+         kind =
+         tuple
+         (
+           B.t
+           (
+              array
+              (
+                a
+              )
+           )
+            B.t
+            (
+               list
+               (
+                 a
+               )
+            )
+         )
     )
     )
     "B"
@@ -77,20 +77,20 @@
           type
           params=
           (
-           a
+          a
           )
           cstrs =
           (
           )
           kind =
-           (
-            	m
-            	poly
-            	 B.t
-            	 (
-            	   a
-            	 )
-           )
+          (
+           	m
+           	poly
+           	 B.t
+           	 (
+           	   a
+           	 )
+          )
      )
     )
     struct
@@ -101,20 +101,20 @@
          type
          params=
          (
-          a
+         a
          )
          cstrs =
          (
          )
          kind =
-          (
-           	m
-           	poly
-           	 B.t
-           	 (
-           	   a
-           	 )
-          )
+         (
+          	m
+          	poly
+          	 B.t
+          	 (
+          	   a
+          	 )
+         )
     )
     )
   )

@@ -10,18 +10,18 @@
         (
         )
         kind =
+        (
+         x
+         poly
+         int
          (
-          x
-          poly
-          int
-          (
-          )
-          y
-          poly
-          int
-          (
-          )
          )
+         y
+         poly
+         int
+         (
+         )
+        )
    )
   record
   (
@@ -31,16 +31,16 @@
      2
   )
   (
-   case
-   (
-   (
-     x
-   	3
-     z
-   	 2
-   )
-   ()
-   )
+    case
+    (
+     (
+       x
+     	3
+       z
+     	 2
+     )
+     ()
+    )
   )
   record
   (
@@ -60,13 +60,13 @@
         (
         )
         kind =
+        (
+         u
+         poly
+         int
          (
-          u
-          poly
-          int
-          (
-          )
          )
+        )
    )
   record
   (
@@ -74,15 +74,15 @@
    3
   )
   (
-   case
-   (
-   x
-   setfield
-   (
-   x
-   u
-   3
-   )
-   )
+    case
+    (
+     x
+     setfield
+     (
+     x
+     u
+     3
+     )
+    )
   )
 )

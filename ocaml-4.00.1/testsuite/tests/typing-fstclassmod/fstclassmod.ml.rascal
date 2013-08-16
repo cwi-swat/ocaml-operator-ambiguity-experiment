@@ -93,15 +93,18 @@
      		 		     )
      		 		     cstrs =
      		 		     (
+     		 		  											   
+     		 		  											   	  
+     		 		  											   
      		 		     )
      		 		     kind =
+     		 		     
+     		 		      
      		 		     
      		 		     s
      		 		     (
      		 		     )
      		 		     								  
-     		 		     
-     		 		     														  
      		 		     														 
      		 		  											   
      		 										        
@@ -158,21 +161,20 @@
     	  l
          List.map
          (
+             
              (
-              
-              case
-              (
-              set
-              
-              sort
-              (
-                  set
-                  l
-              )
-              )
-              													 
+               case
+               (
+                set
+                
+                sort
+                (
+                    set
+                    l
+                )
+               )
              )
-                						  
+             													 
              ::
               (
               make_set
@@ -183,29 +185,31 @@
               (
               make_set
               (
+                  
+                  							
+                  							
                   (
-                   
-                   case
-                   (
-                     x
-                     (
-                     
-                     case
-                     (
-                     y
-                     
-                     compare
-                     (
+                  case
+                    (
+                      x
+                      
+                      (
+                        case
+                        (
                          y
-                         x
-                     )
-                     )
-                     													 
-                     )
-                   )													
-                   													
-                  )
-                     						  
+                         
+                         compare
+                         (
+                             y
+                             x
+                         )
+                        )
+                      )
+                      													 
+                    )
+                  )													
+                  									        	   		
+                  							
               )
               []
               ) 
@@ -273,11 +277,14 @@
          )
          cstrs =
          (
+      											   
+      											   	  
+      											   
          )
          kind =
          
+          
          
-         														  
          														 
       											   
     								        
@@ -371,15 +378,18 @@
      		  		      		     )
      		  		      		     cstrs =
      		  		      		     (
+     		  		      		  											   
+     		  		      		  											   	  
+     		  		      		  											   
      		  		      		     )
      		  		      		     kind =
+     		  		      		     
+     		  		      		      
      		  		      		     
      		  		      		     s
      		  		      		     (
      		  		      		     )
      		  		      		     								  
-     		  		      		     
-     		  		      		     														  
      		  		      		     														 
      		  		      		  											   
      		  		      										        
@@ -640,32 +650,30 @@
          (
              create
              (
+                 
                  (
-                  
-                  case
-                  (
-                  s
-                  
-                  s
-                  )
-                  													 
+                   case
+                   (
+                    s
+                    
+                    s
+                   )
                  )
-                    						  
+                 													 
+                 
                  (
-                  
-                  case
-                  (
-                  s
-                  
-                  ^
-                  (
-                      s
-                      s
-                  )
-                  )
-                  													 
+                   case
+                   (
+                    s
+                    
+                    ^
+                    (
+                        s
+                        s
+                    )
+                   )
                  )
-                    						  
+                 													 
                  "X"
              )
          ) 
@@ -726,29 +734,26 @@
         (
         
         									 
-         
-          
-          a
-         										 
+         a
         									 
-         
-          
-          b
-         										 
+         b
         									 
         									 
         )
         cstrs =
         (
+     											   
+     											   	  
+     											   
         )
         kind =
+        
+         
         
         unit
         (
         )
         								  
-        
-        														  
         														 
      											   
    								        
@@ -804,25 +809,22 @@
          (
          
          									 
-          
-           
-           a
-          										 
+          a
          									 
-          
-           
-           b
-          										 
+          b
          									 
          									 
          )
          cstrs =
          (
+      											   
+      											   	  
+      											   
          )
          kind =
          
+          
          
-         														  
          														 
       											   
     								        
@@ -914,11 +916,14 @@
             )
             cstrs =
             (
+         											   
+         											   	  
+         											   
             )
             kind =
             
+             
             
-            														  
             														 
          											   
        								        
@@ -935,11 +940,14 @@
             )
             cstrs =
             (
+         											   
+         											   	  
+         											   
             )
             kind =
             
+             
             
-            														  
             														 
          											   
        								        
@@ -956,11 +964,14 @@
             )
             cstrs =
             (
+         											   
+         											   	  
+         											   
             )
             kind =
             
+             
             
-            														  
             														 
          											   
        								        
@@ -1011,7 +1022,6 @@
           )
           								  
         )
-        
            									
        (
        )
@@ -1028,7 +1038,6 @@
           )
           								  
         )
-        
            									
        (
        )
@@ -1044,13 +1053,13 @@
           type
           params=
           (
-          
-           
-           a
-          										 
+          a
           )
           cstrs =
           (
+       											   
+       											   	  
+       											   
           )
           kind =
           
@@ -1100,22 +1109,25 @@
           Pair
           (
           									
-           
-           package PAIR 
+           typexprPackage 
            (
-           with type t
-                     a
-                         										 
-               									 
+               
+               package PAIR 
+               (
+               with type t
+                         a
+                             										 
+                   									 
+               )
+                   									 
            )
-               									 
           								     
           )
           								    
           								  
           )
-          								  
-          														  
+          								   
+          
           														 
        											   
      								        
@@ -1140,11 +1152,14 @@
            )
            cstrs =
            (
+        											   
+        											   	  
+        											   
            )
            kind =
            
+            
            
-           														  
            														 
         											   
       								        
@@ -1161,11 +1176,14 @@
            )
            cstrs =
            (
+        											   
+        											   	  
+        											   
            )
            kind =
            
+            
            
-           														  
            														 
         											   
       								        
@@ -1182,11 +1200,14 @@
            )
            cstrs =
            (
+        											   
+        											   	  
+        											   
            )
            kind =
            
+            
            
-           														  
            														 
         											   
       								        
@@ -1237,7 +1258,6 @@
          )
          								  
        )
-       
           									
       (
       )
@@ -1254,7 +1274,6 @@
          )
          								  
        )
-       
           									
       (
       )
@@ -1270,13 +1289,13 @@
          type
          params=
          (
-         
-          
-          a
-         										 
+         a
          )
          cstrs =
          (
+      											   
+      											   	  
+      											   
          )
          kind =
          
@@ -1326,22 +1345,25 @@
          Pair
          (
          									
-          
-          package PAIR 
+          typexprPackage 
           (
-          with type t
-                    a
-                        										 
-              									 
+              
+              package PAIR 
+              (
+              with type t
+                        a
+                            										 
+                  									 
+              )
+                  									 
           )
-              									 
          								     
          )
          								    
          								  
          )
-         								  
-         														  
+         								   
+         
          														 
       											   
     								        
@@ -1411,8 +1433,13 @@
      		      		     )
      		      		     cstrs =
      		      		     (
+     		      		  											   
+     		      		  											   	  
+     		      		  											   
      		      		     )
      		      		     kind =
+     		      		     
+     		      		      
      		      		     tuple
      		      		     (
      		      		      
@@ -1429,8 +1456,6 @@
      		      		     									
      		      		     )
      		      		        								    
-     		      		     
-     		      		     														  
      		      		     														 
      		      		  											   
      		      										        
@@ -1447,15 +1472,18 @@
      		      		     )
      		      		     cstrs =
      		      		     (
+     		      		  											   
+     		      		  											   	  
+     		      		  											   
      		      		     )
      		      		     kind =
+     		      		     
+     		      		      
      		      		     
      		      		     s1
      		      		     (
      		      		     )
      		      		     								  
-     		      		     
-     		      		     														  
      		      		     														 
      		      		  											   
      		      										        
@@ -1472,15 +1500,18 @@
      		      		     )
      		      		     cstrs =
      		      		     (
+     		      		  											   
+     		      		  											   	  
+     		      		  											   
      		      		     )
      		      		     kind =
+     		      		     
+     		      		      
      		      		     
      		      		     s2
      		      		     (
      		      		     )
      		      		     								  
-     		      		     
-     		      		     														  
      		      		     														 
      		      		  											   
      		      										        
@@ -1585,7 +1616,6 @@
       (
         a
       )
-      
          									
      arrow
      a

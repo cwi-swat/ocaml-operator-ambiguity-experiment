@@ -39,7 +39,7 @@
     (
     let
     (
-      floor_ev
+       floor_ev
      (
       case
           (
@@ -83,15 +83,15 @@
     (
       unit
       (
-          					 one
+       one
       	zero
       	zero
       	one
-      )
+      ) 
     )
     let
     (
-      comp
+       comp
      (
       case
           (
@@ -111,19 +111,19 @@
        		 	  	t'
        		 	  )
        		      (
-       		          					 +/
-       		            					 (
-       		            					     */
-       		            					     (
-       		            					         q
-       		            					         q'
-       		            					     )
-       		            					     */
-       		            					     (
-       		            					         r
-       		            					         s'
-       		            					     )
-       		            					 )
+       		       +/
+       		       (
+       		           */
+       		           (
+       		               q
+       		               q'
+       		           )
+       		           */
+       		           (
+       		               r
+       		               s'
+       		           )
+       		       )
        		      	+/
        		      	(
        		      	    */
@@ -184,7 +184,7 @@
           )
          )
     )
-    safe
+     safe
    (
     case
         (
@@ -206,7 +206,7 @@
      		)
         )
    )
-    prod
+     prod
    (
     case
         (
@@ -218,7 +218,7 @@
      		      LFT.comp
      		      (
      		          (
-     		              					 ten
+     		           ten
      		          	*/
      		          	(
      		          	    neg_ten
@@ -233,7 +233,7 @@
      		)
         )
    )
-    cons
+     cons
    (
     case
         (
@@ -261,10 +261,10 @@
      		        (
      		            z
      		            (
-     		                					 num_of_int
-     		                  					 (
-     		                  					     k
-     		                  					 )
+     		             num_of_int
+     		             (
+     		                 k
+     		             )
      		            	num_of_int
      		            	(
      		            	    *
@@ -288,19 +288,19 @@
    )
    let
    (
-     digit
+      digit
     (
      case
          (
-      		 k
+      		  k
       		(
       		 case
       		     (
-      		  		 z
+      		  		  z
       		  		(
       		  		 case
       		  		     (
-      		  		  		 n
+      		  		  		  n
       		  		  		(
       		  		  		 case
       		  		  		     (

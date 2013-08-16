@@ -81,350 +81,305 @@
 ---
 >                     Pcl_apply
 >                       constr circle
-428,429c405
-<                       <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"circle")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+429,430d405
+<                       circle
 <                       c
----
->                           a
-431a408
+432a408
 >                         c
-456d432
+457d432
 <   brackets2 
-458a435
+459a435
 >   :
-466d442
+467d442
 <   brackets2 
-468a445
+469a445
 >   :
-509c486,487
+510c486,487
 <            constr classArgs 
 ---
 >                     Pcl_apply
 >                       constr point
-511,512d488
+512,513d488
 <                       point
 <                       y
-514a491
+515a491
 >                         y
-550c527,528
+526d501
+<        <"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
+552c527,528
 <            constr classArgs 
 ---
 >                       Pcl_apply
 >                         constr color_point
-552,554d529
+554,556d529
 <                       color_point
 <                       y
 <                       c
-556a532,533
+558a532,533
 >                           y
 >                           c
-559c536,537
+561c536,537
 <            constr classArgs 
 ---
 >                       Pcl_apply
 >                         constr printable_point
-561,562d538
+563,564d538
 <                       printable_point
 <                       y
-564a541
+566a541
 >                           y
-640c617
-<             	brackets4 
----
->                       Pexp_override
-642c619
-<             	    x
----
->                         <override> "x"
-683d659
-<    brackets2 
-685a662
+609d583
+<        <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
+642a617
+>                       (
+652a628
+>   )
+683d658
+<      brackets2 
+685a661
 >       :
-703c680
+703c679
 <           method null
 ---
->                 Pcf_virt "null" Public ([123,2334+2]..[123,2334+28])
-708c685
+>                 null 
+708c684
 <           method hd
 ---
->                 Pcf_virt "hd" Public ([124,2363+2]..[124,2363+24])
-711c688
+>                 hd 
+711c687
 <           method tl
 ---
->                 Pcf_virt "tl" Public ([125,2388+2]..[125,2388+28])
-892c869,870
+>                 tl 
+882d857
+<        <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
+893c868,869
 <            constr classArgs 
 ---
 >                     Pcl_apply
 >                       constr lst
-894,895c872
-<                       <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+896,897d871
+<                       lst
 <                       ()
----
->                           a
-897a875
+899a874
 >                         ()
-923c901,902
+925c900,901
 <            constr classArgs 
 ---
 >                       Pcl_apply
 >                         constr lst
-925,926c904
-<                       <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"lst")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+928,929d903
+<                       lst
 <                       ()
----
->                             a
-928a907
+931a906
 >                           ()
-1096c1075
+1099c1074
 <           method leq
 ---
->                 Pcf_virt "leq" Public ([173,3539+2]..[173,3539+33])
-1119c1098,1099
+>                 leq 
+1107d1081
+<        <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+1123c1097,1098
 <            constr classArgs 
 ---
 >                     Pcl_apply
 >                       constr comparable
-1121,1122d1100
+1125,1126d1099
 <                       comparable
 <                       ()
-1124a1103
+1128a1102
 >                         ()
-1158c1137,1138
+1162c1136,1137
 <            constr classArgs 
 ---
 >                     Pcl_apply
 >                       constr int_comparable
-1160,1161d1139
+1164,1165d1138
 <                       int_comparable
 <                       xi
-1163a1142
+1167a1141
 >                         xi
-1172,1174c1151
+1176,1178c1150
 <             	Array.set
 <             	(
 <             	 x'
 ---
 >                       Pexp_setinstvar "x'"
-1180d1156
+1184d1155
 <    )
-1193,1195d1168
+1197,1199d1167
 <           (
 <           	typexprHash1 
 <           	(
-1197c1170
+1201c1169
 <           	)
 ---
 >                     (
-1273,1275c1246
+1277,1279c1245
 <             	  Array.set
 <             	  (
 <             	   l
 ---
 >                         Pexp_setinstvar "l"
-1283d1253
+1287d1252
 <           )
-1327d1296
+1331d1295
 <       brackets2 
-1329a1299
+1333a1298
 >       :
-1385,1387c1355
+1389,1391c1354
 <             	Array.set
 <             	(
 <             	 x
 ---
 >                       Pexp_setinstvar "x"
-1393d1360
+1397d1359
 <    )
-1407d1373
+1411d1372
 <       brackets2 
-1409a1376
+1413a1375
 >       :
-1434,1435d1400
+1438,1439d1399
 <      	     typexprHash1 
 <      	     (
-1436a1402
+1440a1401
 >                 (
-1510d1475
+1514d1474
 <       brackets2 
-1515a1481
+1519a1480
 >               :
-1579,1580d1544
+1583,1584d1543
 <       		 typexprHash1 
 <       		 (
-1581a1546
+1585a1545
 >             (
-1673,1675c1638
+1677,1679c1637
 <             	Array.set
 <             	(
 <             	 x
 ---
 >                       Pexp_setinstvar "x"
-1679d1641
+1683d1640
 <           )
-1685,1687c1647
+1689,1691c1646
 <             	Array.set
 <             	(
 <             	 next
 ---
 >                       Pexp_setinstvar "next"
-1691d1650
+1695d1649
 <           )
-1740c1699,1700
+1731d1684
+<        <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("b")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+1745c1698,1699
 <            constr classArgs 
 ---
 >                     Pcl_apply
 >                       constr link
-1742,1743c1702
-<                       <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"link")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
+1748,1749d1701
+<                       link
 <                       x
----
->                           a
-1745a1705
+1751a1704
 >                         x
-1758,1760c1718
+1764,1766c1717
 <             	  Array.set
 <             	  (
 <             	   next
 ---
 >                         Pexp_setinstvar "next"
-1762d1719
+1768d1718
 <             	  )
-1794,1796c1751
+1800,1802c1750
 <             	Array.set
 <             	(
 <             	 prev
 ---
 >                       Pexp_setinstvar "prev"
-1802d1756
+1808,1809d1755
+<        <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
 <    )
-1898,1900c1852
+1905,1907c1851
 <             	  Array.set
 <             	  (
 <             	   arg
 ---
 >                         Pexp_setinstvar "arg"
-1902d1853
+1909d1852
 <             	  )
-1911,1913c1862
+1918,1920c1861
 <           	    Array.set
 <           	    (
 <           	     acc
 ---
 >                     Pexp_setinstvar "acc"
-1918d1866
+1925d1865
 <           	    )
-1922,1924c1870
+1929,1931c1869
 <           	      Array.set
 <           	      (
 <           	       equals
 ---
 >                       Pexp_setinstvar "equals"
-1942d1887
+1949d1886
 <           	      )
-1950,1952c1895
+1957,1959c1894
 <           	    Array.set
 <           	    (
 <           	     acc
 ---
 >                     Pexp_setinstvar "acc"
-1957d1899
+1964d1898
 <           	    )
-1961,1963c1903
+1968,1970c1902
 <           	      Array.set
 <           	      (
 <           	       equals
 ---
 >                       Pexp_setinstvar "equals"
-1981d1920
+1988d1919
 <           	      )
-2083,2085c2022
+1999d1929
+<        <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
+2091,2093c2021
 <             	  Array.set
 <             	  (
 <             	   arg
 ---
 >                         Pexp_setinstvar "arg"
-2087d2023
+2095d2022
 <             	  )
-2094c2030
-<           	  brackets4 
----
->                   Pexp_override
-2096c2032
-<           	      acc
----
->                     <override> "acc"
-2101c2037,2054
-<           	      <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"+.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
----
->                     <override> "equals"
->                       (
->                         case
->                         (
->                           s
->                           +.
->                           (
->                               send acc
->                               (
->                                 s
->                               )
->                               send arg
->                               (
->                                 s
->                               )
->                           )
->                         )
->                       )
-2104c2057
-<           	  brackets4 
----
->                   Pexp_override
-2106c2059
-<           	      acc
----
->                     <override> "acc"
-2111c2064,2081
-<           	      <"equals","function"("patternMatching"([],"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"infix3"("hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"acc")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"-.","hash"("valuePath"("valuePath"([],"s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"arg")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
----
->                     <override> "equals"
->                       (
->                         case
->                         (
->                           s
->                           -.
->                           (
->                               send acc
->                               (
->                                 s
->                               )
->                               send arg
->                               (
->                                 s
->                               )
->                           )
->                         )
->                       )
-2232c2202,2203
+2101a2029
+>                   (
+2124a2053
+>                   )
+2125a2055
+>                   (
+2148a2079
+>                   )
+2155d2085
+<        <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
+2259d2188
+<        <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
+2270c2199,2200
 <            constr classArgs 
 ---
 >                       Pcl_apply
 >                         constr calculator
-2234,2236d2204
+2272,2274d2201
 <                       calculator
 <                       arg
 <                       acc
-2238a2207,2208
+2276a2204,2205
 >                           arg
 >                           acc
-2269c2239,2240
+2307c2236,2237
 <            constr classArgs 
 ---
 >                       Pcl_apply
 >                         constr calculator
-2271,2273d2241
+2309,2311d2238
 <                       calculator
 <                       arg
 <                       acc
-2275a2244,2245
+2313a2241,2242
 >                           arg
 >                           acc

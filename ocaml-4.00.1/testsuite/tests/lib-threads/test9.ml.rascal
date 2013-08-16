@@ -10,15 +10,17 @@
        type
        params=
        (
-       
-        
-        a
-       										 
+       a
        )
        cstrs =
        (
+    											   
+    											   	  
+    											   
        )
        kind =
+       
+        
        
         channel
         (
@@ -31,16 +33,12 @@
              (
                a
              )
-             
                 									
           									
           )
              								    
         )
-        
            									
-       
-       														  
        														 
     											   
   								        
@@ -49,7 +47,8 @@
   let
   (
    
-    swap
+     swap
+               	   
    (
     case
         (
@@ -61,121 +60,118 @@
      		 	  ch
      		      guard
      		      (
+     		          
      		          (
-     		           
-     		           case
-     		           (
-     		           ()
-     		           
-     		           
-     		           let
-     		           (
+     		            case
      		            (
-     		               									  
+     		             ()
      		             
-     		              ic
-     		              new_channel
-     		              (
-     		                  ()
-     		              ) 
-     		             							    		   
-     		               									  
-     		            )
-     		           in
-     		             choose
+     		             
+     		             let
      		             (
-     		                 ::
-     		                  (
-     		                  wrap
-     		                  (
-     		                      receive
-     		                      (
-     		                          ch
-     		                      )
-     		                      (
-     		                       
-     		                       case
-     		                       (
-     		                       
-     		                       (
-     		                        msg_in
-     		                            						 
-     		                       	oc
-     		                       
-     		                       )
-     		                       
-     		                       
-     		                       sequence
-     		                       (
-     		                         sync
-     		                         (
-     		                             send
-     		                             (
-     		                                 oc
-     		                                 msg_out
-     		                             )
-     		                         )
-     		                       ;
-     		                         msg_in
-     		                       )
-     		                           							
-     		                       )
-     		                       													 
-     		                      )
-     		                         						  
-     		                  )
-     		                  ::
-     		                  (
-     		                  wrap
-     		                  (
-     		                      send
-     		                      (
-     		                          ch
-     		                          
-     		                              					 (
-     		                                					   msg_out
-     		                              					   
-     		                          	ic
-     		                              					   
-     		                              					 )
-     		                      )
-     		                      (
-     		                       
-     		                       case
-     		                       (
-     		                       ()
-     		                       
-     		                       sync
-     		                       (
-     		                           receive
+     		              (
+     		                 									  
+     		               
+     		                ic
+     		                new_channel
+     		                (
+     		                    ()
+     		                ) 
+     		               							    		   
+     		                 									  
+     		              )
+     		             in
+     		               choose
+     		               (
+     		                   ::
+     		                    (
+     		                    wrap
+     		                    (
+     		                        receive
+     		                        (
+     		                            ch
+     		                        )
+     		                        
+     		                        (
+     		                          case
+     		                          (
+     		                           
      		                           (
-     		                               ic
+     		                            msg_in
+     		                                						 
+     		                           	oc
+     		                           
      		                           )
-     		                       )
-     		                       )
-     		                       													 
-     		                      )
-     		                         						  
-     		                  )
-     		                  []
-     		                  ) 
-     		                     						  
-     		                  ) 
-     		                     						  
+     		                           
+     		                           
+     		                           sequence
+     		                           (
+     		                             sync
+     		                             (
+     		                                 send
+     		                                 (
+     		                                     oc
+     		                                     msg_out
+     		                                 )
+     		                             )
+     		                           ;
+     		                             msg_in
+     		                           )
+     		                               							
+     		                          )
+     		                        )
+     		                        													 
+     		                    )
+     		                    ::
+     		                    (
+     		                    wrap
+     		                    (
+     		                        send
+     		                        (
+     		                            ch
+     		                            
+     		                            (
+     		                             msg_out
+     		                                					   
+     		                            	ic
+     		                                					   
+     		                            )
+     		                        )
+     		                        
+     		                        (
+     		                          case
+     		                          (
+     		                           ()
+     		                           
+     		                           sync
+     		                           (
+     		                               receive
+     		                               (
+     		                                   ic
+     		                               )
+     		                           )
+     		                          )
+     		                        )
+     		                        													 
+     		                    )
+     		                    []
+     		                    ) 
+     		                       						  
+     		                    ) 
+     		                       						  
+     		               )
      		             )
-     		           )
-     		               									
-     		           )
-     		           													 
+     		                 									
+     		            )
      		          )
-     		             						  
+     		          													 
      		      )
      		     )
      		)
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   let

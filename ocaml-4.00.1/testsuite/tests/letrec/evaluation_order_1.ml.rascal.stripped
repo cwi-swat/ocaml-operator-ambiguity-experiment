@@ -2,25 +2,25 @@
   type
   (  						
      tree
-     type
-     params=
-     (
-     )
-     cstrs =
-     (
-     )
-     kind =
-     (
-     Tree
-     (
-       list
+       type
+       params=
        (
-         tree
+       )
+       cstrs =
+       (
+       )
+       kind =
+       (
+       Tree
+       (
+         list
          (
+           tree
+           (
+           )
          )
        )
-     )
-     )
+       )
   )
   let
   (
@@ -36,16 +36,16 @@
              "x"
          )
        ;
-          Tree
-          ::
-           (
-           y
-           ::
-           (
-           z
-           []
-           ) 
-           ) 
+         Tree
+            ::
+             (
+             y
+             ::
+             (
+             z
+             []
+             ) 
+             ) 
        )
        y
        sequence
@@ -55,8 +55,8 @@
              "y"
          )
        ;
-          Tree
-          []
+         Tree
+            []
        )
        z
        sequence
@@ -66,18 +66,18 @@
              "z"
          )
        ;
-          Tree
-          ::
-           (
-           x
-           []
-           ) 
+         Tree
+            ::
+             (
+             x
+             []
+             ) 
        )
      )
     in
       match
       (
-          					 x
+       x
       	y
       	z
       )

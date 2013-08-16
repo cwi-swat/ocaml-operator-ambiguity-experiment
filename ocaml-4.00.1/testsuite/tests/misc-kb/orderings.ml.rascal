@@ -14,6 +14,9 @@
        )
        cstrs =
        (
+    											   
+    											   	  
+    											   
        )
        kind =
        
@@ -39,8 +42,8 @@
        								    
        								  
        )
-       								  
-       														  
+       								   
+       
        														 
     											   
   								        
@@ -49,7 +52,8 @@
   let
   (
    
-    ge_ord
+     ge_ord
+               	   
    (
     case
         (
@@ -90,8 +94,9 @@
      		    		   
         )
    )
-       		     
-   gt_ord
+               	     
+    gt_ord
+              	   
   (
    case
        (
@@ -132,8 +137,9 @@
     		    		   
        )
   )
-      		     
-   eq_ord
+              	     
+    eq_ord
+              	   
   (
    case
        (
@@ -174,13 +180,14 @@
     		    		   
        )
   )
-      		    
+              	    
   )
                                      
   let
   (
    
-    rem_eq
+     rem_eq
+               	   
    (
     case
         (
@@ -219,12 +226,12 @@
      		            equiv
      		            (
      		                
-     		                    					 (
-     		                      					   x
+     		                (
+     		                 x
      		                    					   
      		                	y
      		                    					   
-     		                    					 )
+     		                )
      		            )
      		           )
      		           then
@@ -257,13 +264,14 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   let
   (
    
-    diff_eq
+     diff_eq
+               	   
    (
     case
         (
@@ -326,8 +334,8 @@
      		             diffrec
      		             (
      		                 
-     		                     					 (
-     		                       					   t
+     		                 (
+     		                  t
      		                     					   
      		                 	rem_eq
      		                 	(
@@ -336,7 +344,7 @@
      		                 	    y
      		                 	)
      		                     					   
-     		                     					 )
+     		                 )
      		             )
      		             (
      		             
@@ -363,28 +371,28 @@
      		                  diffrec
      		                  (
      		                      
-     		                          					 (
-     		                            					   t
+     		                      (
+     		                       t
      		                          					   
      		                      	y
      		                          					   
-     		                          					 )
+     		                      )
      		                  ) 
      		                 							    		   
      		                   									  
      		                )
      		               in
      		                 
-     		                     					 (
-     		                       					   ::
      		                 (
-     		                     h
-     		                     x'
-     		                 )
+     		                  ::
+     		                  (
+     		                      h
+     		                      x'
+     		                  )
      		                     					   
      		                 	y'
      		                     					   
-     		                     					 )
+     		                 )
      		               )
      		                   									
      		             ) 
@@ -423,12 +431,12 @@
      		          diffrec
      		          (
      		              
-     		                  					 (
-     		                    					   y
+     		              (
+     		               y
      		                  					   
      		              	x
      		                  					   
-     		                  					 )
+     		              )
      		          )
      		         )
      		         else
@@ -436,12 +444,12 @@
      		          diffrec
      		          (
      		              
-     		                  					 (
-     		                    					   x
+     		              (
+     		               x
      		                  					   
      		              	y
      		                  					   
-     		                  					 )
+     		              )
      		          )
      		         ) 
      		        )
@@ -453,7 +461,7 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   let
@@ -502,12 +510,12 @@
                     order
                 )
                 
-                    					 (
-                      					   sons1
+                (
+                 sons1
                     					   
                 	sons2
                     					   
-                    					 )
+                )
             )
             (
             
@@ -541,41 +549,39 @@
                 (
                  List.for_all
                  (
+                     
                      (
-                      
-                      case
-                      (
-                      n
-                      
-                      List.exists
-                      (
-                          (
-                           
-                           case
-                           (
-                           m
-                           
-                           gt_ord
-                           (
-                               order
+                       case
+                       (
+                        n
+                        
+                        List.exists
+                        (
+                            
+                            (
+                              case
+                              (
+                               m
                                
-                                   					 (
-                                     					   m
-                                   					   
-                               	n
-                                   					   
-                                   					 )
-                           )
-                           )
-                           													 
-                          )
-                             						  
-                          l1
-                      )
-                      )
-                      													 
+                               gt_ord
+                               (
+                                   order
+                                   
+                                   (
+                                    m
+                                       					   
+                                   	n
+                                       					   
+                                   )
+                               )
+                              )
+                            )
+                            													 
+                            l1
+                        )
+                       )
                      )
-                        						  
+                     													 
                      l2
                  )
                 )
@@ -740,12 +746,12 @@
                    order
                    (
                        
-                           					 (
-                             					   x1
+                       (
+                        x1
                            					   
                        	x2
                            					   
-                           					 )
+                       )
                    )
                    (
                    
@@ -759,27 +765,26 @@
                       (
                        List.for_all
                        (
+                           
                            (
-                            
-                            case
-                            (
-                            n'
-                            
-                            gt_ord
-                            (
-                                order
-                                
-                                    					 (
-                                      					   m
-                                    					   
-                                	n'
-                                    					   
-                                    					 )
-                            )
-                            )
-                            													 
+                             case
+                             (
+                              n'
+                              
+                              gt_ord
+                              (
+                                  order
+                                  
+                                  (
+                                   m
+                                      					   
+                                  	n'
+                                      					   
+                                  )
+                              )
+                             )
                            )
-                              						  
+                           													 
                            l2
                        )
                       )
@@ -803,12 +808,12 @@
                       lexrec
                       (
                           
-                              					 (
-                                					   l1
+                          (
+                           l1
                               					   
                           	l2
                               					   
-                              					 )
+                          )
                       )
                      )
                      													    
@@ -824,27 +829,26 @@
                        (
                         List.exists
                         (
+                            
                             (
-                             
-                             case
-                             (
-                             m'
-                             
-                             ge_ord
-                             (
-                                 order
-                                 
-                                     					 (
-                                       					   m'
-                                     					   
-                                 	n
-                                     					   
-                                     					 )
-                             )
-                             )
-                             													 
+                              case
+                              (
+                               m'
+                               
+                               ge_ord
+                               (
+                                   order
+                                   
+                                   (
+                                    m'
+                                       					   
+                                   	n
+                                       					   
+                                   )
+                               )
+                              )
                             )
-                               						  
+                            													 
                             l1
                         )
                        )
@@ -877,12 +881,12 @@
               lexrec
               (
                   
-                      					 (
-                        					   sons1
+                  (
+                   sons1
                       					   
                   	sons2
                       					   
-                      					 )
+                  )
               )
             )
                 									
@@ -911,7 +915,8 @@
   let
   (
    
-    rpo
+     rpo
+               	   
    (
     case
         (
@@ -1047,27 +1052,26 @@
      		                         (
      		                          List.for_all
      		                          (
+     		                              
      		                              (
-     		                               
-     		                               case
-     		                               (
-     		                               n'
-     		                               
-     		                               gt_ord
-     		                               (
-     		                                   rporec
-     		                                   
-     		                                       					 (
-     		                                         					   m
-     		                                       					   
-     		                                   	n'
-     		                                       					   
-     		                                       					 )
-     		                               )
-     		                               )
-     		                               													 
+     		                                case
+     		                                (
+     		                                 n'
+     		                                 
+     		                                 gt_ord
+     		                                 (
+     		                                     rporec
+     		                                     
+     		                                     (
+     		                                      m
+     		                                         					   
+     		                                     	n'
+     		                                         					   
+     		                                     )
+     		                                 )
+     		                                )
      		                              )
-     		                                 						  
+     		                              													 
      		                              sons2
      		                          )
      		                         )
@@ -1092,12 +1096,12 @@
      		                         (
      		                             rporec
      		                             
-     		                                 					 (
-     		                                   					   m
+     		                             (
+     		                              m
      		                                 					   
      		                             	n
      		                                 					   
-     		                                 					 )
+     		                             )
      		                         )
      		                        )
      		                        													    
@@ -1113,27 +1117,26 @@
      		                          (
      		                           List.exists
      		                           (
+     		                               
      		                               (
-     		                                
-     		                                case
-     		                                (
-     		                                m'
-     		                                
-     		                                ge_ord
-     		                                (
-     		                                    rporec
-     		                                    
-     		                                        					 (
-     		                                          					   m'
-     		                                        					   
-     		                                    	n
-     		                                        					   
-     		                                        					 )
-     		                                )
-     		                                )
-     		                                													 
+     		                                 case
+     		                                 (
+     		                                  m'
+     		                                  
+     		                                  ge_ord
+     		                                  (
+     		                                      rporec
+     		                                      
+     		                                      (
+     		                                       m'
+     		                                          					   
+     		                                      	n
+     		                                          					   
+     		                                      )
+     		                                  )
+     		                                 )
      		                               )
-     		                                  						  
+     		                               													 
      		                               sons1
      		                           )
      		                          )
@@ -1182,7 +1185,7 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
 )

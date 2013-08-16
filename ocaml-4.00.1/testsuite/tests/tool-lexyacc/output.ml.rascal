@@ -264,7 +264,6 @@
            )
            								  
          )
-         
             									
         )
             								
@@ -283,6 +282,9 @@
        )
        cstrs =
        (
+    											   
+    											   	  
+    											   
        )
        kind =
        
@@ -301,7 +303,6 @@
            )
            								  
          )
-         
             									
                                                
        							     
@@ -316,8 +317,8 @@
                                                
        							     
        )
-       	                           
-       														  
+       	                            
+       
        														 
     											   
   								        
@@ -439,13 +440,13 @@
                     ::
                     (
                         
-                            					 (
-                              					   Array.get
                         (
-                         v
-                         pos
-                        )
-                        												
+                         Array.get
+                         (
+                          v
+                          pos
+                         )
+                         												
                             					   
                         	record
                         	(
@@ -464,7 +465,7 @@
                         												   	 
                         	)
                             					   
-                            					 )
+                        )
                         
                          !
                          (
@@ -482,51 +483,53 @@
            ;
              Sort.list
              (
+                 
+                 							
+                 							
                  (
-                  
-                  case
-                  (
-                    
-                    (
-                     e1
-                         						 
-                    	occ1
-                    
-                    )
-                    (
-                    
-                    case
-                    (
-                    
-                    (
-                     e2
-                         						 
-                    	occ2
-                    
-                    )
-                    
-                    >=
-                    (
-                        field
+                 case
+                   (
+                     
+                     (
+                      e1
+                          						 
+                     	occ1
+                     
+                     )
+                     
+                     (
+                       case
+                       (
+                        
                         (
-                        occ1
-                        freq
+                         e2
+                             						 
+                        	occ2
+                        
                         )
-                            									 
-                        field
+                        
+                        >=
                         (
-                        occ2
-                        freq
+                            field
+                            (
+                            occ1
+                            freq
+                            )
+                                									 
+                            field
+                            (
+                            occ2
+                            freq
+                            )
+                                									 
                         )
-                            									 
-                    )
-                    )
-                    													 
-                    )
-                  )													
-                  													
-                 )
-                    						  
+                       )
+                     )
+                     													 
+                   )
+                 )													
+                 									        	   		
+                 							
                  
                   !
                   (
@@ -1473,7 +1476,8 @@
   let
   (
    
-    output_lexdef
+     output_lexdef
+               	   
    (
     case
         (
@@ -1631,7 +1635,7 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
 )

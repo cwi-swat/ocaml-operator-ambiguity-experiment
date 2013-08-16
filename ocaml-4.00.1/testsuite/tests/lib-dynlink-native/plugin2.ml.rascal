@@ -18,20 +18,19 @@
       (
         Api.add_cb
         (
+            
             (
-             
-             case
-             (
-             ()
-             
-             print_endline
-             (
-                 "Callback from plugin2"
-             )
-             )
-             													 
+              case
+              (
+               ()
+               
+               print_endline
+               (
+                   "Callback from plugin2"
+               )
+              )
             )
-               						  
+            													 
         )
       ;
         
@@ -39,21 +38,20 @@
         (
           List.iter
           (
+              
               (
-               
-               case
-               (
-               i
-               
-               Printf.printf
-               (
-                   "%i\n"
-                   i
-               )
-               )
-               													 
+                case
+                (
+                 i
+                 
+                 Printf.printf
+                 (
+                     "%i\n"
+                     i
+                 )
+                )
               )
-                 						  
+              													 
               Plugin.facts
           )
         ;

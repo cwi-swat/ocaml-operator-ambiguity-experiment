@@ -4,7 +4,8 @@
   let
   (
    
-    interval
+     interval
+               	   
    (
     case
         (
@@ -51,7 +52,7 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   let
@@ -133,25 +134,24 @@
     	  n
          filter
          (
+             
              (
-              
-              case
-              (
-              m
-              
-              <>
-              (
-                  mod
-                  (
-                      m
-                      n
-                  )
-                  0
-              )
-              )
-              													 
+               case
+               (
+                m
+                
+                <>
+                (
+                    mod
+                    (
+                        m
+                        n
+                    )
+                    0
+                )
+               )
              )
-                						  
+             													 
          )
         )
    )
@@ -316,30 +316,29 @@
    (
      do_list
      (
+         
          (
-          
-          case
-          (
-          n
-          
-          
-          sequence
-          (
-            print_string
+           case
+           (
+            n
+            
+            
+            sequence
             (
-                " "
+              print_string
+              (
+                  " "
+              )
+            ;
+              print_int
+              (
+                  n
+              )
             )
-          ;
-            print_int
-            (
-                n
-            )
-          )
-              							
-          )
-          													 
+                							
+           )
          )
-            						  
+         													 
          sieve
          (
              50000

@@ -6,63 +6,63 @@
     )
     class name = test
     class expr = 
-                let
-                (
-                  f
-                  sequence
-                  (
-                    print_endline
-                    (
-                        "f"
-                    )
-                  ;
-                    (
-                     case
-                     (
-                     x
-                     g
-                     (
-                         x
-                     )
-                     )
-                    )
-                  )
-                  g
-                  sequence
-                  (
-                    print_endline
-                    (
-                        "g"
-                    )
-                  ;
-                    (
-                     case
-                     (
-                     x
-                     f
-                     (
-                         x
-                     )
-                     )
-                    )
-                  )
-                )
-                 class_structure
-                 (
-                    method f
-                    	f
-                    	poly
-                    	                      				 'a  'b 
-                    	 arrow
-                    	 a
-                    	 b
-                    method g
-                    	g
-                    	poly
-                    	                      				 'a  'b 
-                    	 arrow
-                    	 a
-                    	 b
-                 )
+      let
+      (
+        f
+        sequence
+        (
+          print_endline
+          (
+              "f"
+          )
+        ;
+          (
+            case
+            (
+             x
+             g
+             (
+                 x
+             )
+            )
+          )
+        )
+        g
+        sequence
+        (
+          print_endline
+          (
+              "g"
+          )
+        ;
+          (
+            case
+            (
+             x
+             f
+             (
+                 x
+             )
+            )
+          )
+        )
+      )
+       class_structure
+       (
+          method f
+          	f
+          	poly
+          	                      				 'a  'b 
+          	 arrow
+          	 a
+          	 b
+          method g
+          	g
+          	poly
+          	                      				 'a  'b 
+          	 arrow
+          	 a
+          	 b
+       )
   )
 )

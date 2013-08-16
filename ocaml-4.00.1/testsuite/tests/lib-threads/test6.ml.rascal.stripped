@@ -19,7 +19,7 @@
   )
   let
   (
-    f
+     f
    (
     case
         (
@@ -48,30 +48,30 @@
      		                     ch
      		                 )
      		                 (
-     		                  case
-     		                  (
-     		                  x
-     		                  sequence
-     		                  (
-     		                    print_string
+     		                   case
+     		                   (
+     		                    x
+     		                    sequence
      		                    (
-     		                        ^
-     		                        (
-     		                            tag
-     		                            ^
-     		                            (
-     		                                ": "
-     		                                x
-     		                            )
-     		                        )
+     		                      print_string
+     		                      (
+     		                          ^
+     		                          (
+     		                              tag
+     		                              ^
+     		                              (
+     		                                  ": "
+     		                                  x
+     		                              )
+     		                          )
+     		                      )
+     		                    ;
+     		                      print_newline
+     		                      (
+     		                          ()
+     		                      )
      		                    )
-     		                  ;
-     		                    print_newline
-     		                    (
-     		                        ()
-     		                    )
-     		                  )
-     		                  )
+     		                   )
      		                 )
      		             )
      		             []

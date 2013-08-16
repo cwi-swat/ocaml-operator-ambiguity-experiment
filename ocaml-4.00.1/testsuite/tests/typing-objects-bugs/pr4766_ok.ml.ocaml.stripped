@@ -1,0 +1,31 @@
+(
+  class
+  (
+      params =
+          (
+            "a"
+          )
+      class name = c
+      class expr =
+          class_structure
+            (
+              m 
+                  poly
+                    b
+            )
+  )
+  let
+  (
+    o
+      class_structure
+        (
+          inherit
+              constr c
+              (
+                  a
+              )
+          method m
+            42
+                    )
+  )
+)

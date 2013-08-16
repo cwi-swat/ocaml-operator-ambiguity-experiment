@@ -35,16 +35,18 @@
     	         )
     	         cstrs =
     	         (
+    	      											   
+    	      											   	  
+    	      											   
     	         )
     	         kind =
     	         
     	          
-    	          X.t
-    	          (
-    	          )
-    	          								  
-    	          
-    	         														  
+    	         
+    	         X.t
+    	         (
+    	         )
+    	         								  
     	         														 
     	      											   
     	    								        
@@ -61,16 +63,18 @@
     	         )
     	         cstrs =
     	         (
+    	      											   
+    	      											   	  
+    	      											   
     	         )
     	         kind =
     	         
     	          
-    	          Set.Make(X).t
-    	          (
-    	          )
-    	          								  
-    	          
-    	         														  
+    	         
+    	         Set.Make(X).t
+    	         (
+    	         )
+    	         								  
     	         														 
     	      											   
     	    								        
@@ -95,16 +99,18 @@
     	         )
     	         cstrs =
     	         (
+    	      											   
+    	      											   	  
+    	      											   
     	         )
     	         kind =
     	         
     	          
-    	          X.t
-    	          (
-    	          )
-    	          								  
-    	          
-    	         														  
+    	         
+    	         X.t
+    	         (
+    	         )
+    	         								  
     	         														 
     	      											   
     	    								        
@@ -117,24 +123,23 @@
     	         type
     	         params=
     	         (
-    	         
-    	          
-    	          a
-    	         										 
+    	         a
     	         )
     	         cstrs =
     	         (
+    	      											   
+    	      											   	  
+    	      											   
     	         )
     	         kind =
     	         
     	          
-    	           Map.Make(X).t
-    	           (
-    	             a
-    	           )
-    	              									
-    	          
-    	         														  
+    	         
+    	          Map.Make(X).t
+    	          (
+    	            a
+    	          )
+    	             									
     	         														 
     	      											   
     	    								        
@@ -154,16 +159,18 @@
     	        )
     	        cstrs =
     	        (
+    	     											   
+    	     											   	  
+    	     											   
     	        )
     	        kind =
     	        
     	         
-    	         X.t
-    	         (
-    	         )
-    	         								  
-    	         
-    	        														  
+    	        
+    	        X.t
+    	        (
+    	        )
+    	        								  
     	        														 
     	     											   
     	   								        
@@ -180,21 +187,23 @@
     	        )
     	        cstrs =
     	        (
+    	     											   
+    	     											   	  
+    	     											   
     	        )
     	        kind =
     	        
     	         
-    	          XMap.t
-    	          (
-    	            
-    	            XSet.t
-    	            (
-    	            )
-    	            								  
-    	          )
-    	             									
-    	         
-    	        														  
+    	        
+    	         XMap.t
+    	         (
+    	           
+    	           XSet.t
+    	           (
+    	           )
+    	           								  
+    	         )
+    	            									
     	        														 
     	     											   
     	   								        
@@ -262,16 +271,18 @@
     	       )
     	       cstrs =
     	       (
+    	    											   
+    	    											   	  
+    	    											   
     	       )
     	       kind =
     	       
     	        
-    	        X.t
-    	        (
-    	        )
-    	        								  
-    	        
-    	       														  
+    	       
+    	       X.t
+    	       (
+    	       )
+    	       								  
     	       														 
     	    											   
     	  								        
@@ -288,21 +299,23 @@
     	       )
     	       cstrs =
     	       (
+    	    											   
+    	    											   	  
+    	    											   
     	       )
     	       kind =
     	       
     	        
-    	         XMap.t
-    	         (
-    	           
-    	           XSet.t
-    	           (
-    	           )
-    	           								  
-    	         )
-    	            									
-    	        
-    	       														  
+    	       
+    	        XMap.t
+    	        (
+    	          
+    	          XSet.t
+    	          (
+    	          )
+    	          								  
+    	        )
+    	           									
     	       														 
     	    											   
     	  								        
@@ -312,25 +325,27 @@
     	  (
     	   
     	    compare
+    	    
+    	    							
+    	    							
     	    (
-    	     
-    	     case
-    	     (
-    	       x
-    	       (
-    	       
-    	       case
-    	       (
-    	       y
-    	       
-    	       0
-    	       )
-    	       													 
-    	       )
-    	     )													
-    	     													
-    	    )
-    	       						   
+    	    case
+    	      (
+    	        x
+    	        
+    	        (
+    	          case
+    	          (
+    	           y
+    	           
+    	           0
+    	          )
+    	        )
+    	        													 
+    	      )
+    	    )													
+    	    									        	   		
+    	    							 
     	   							    		    
     	  )
     	  							  

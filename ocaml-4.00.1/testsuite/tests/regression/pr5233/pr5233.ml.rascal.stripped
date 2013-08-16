@@ -25,15 +25,15 @@
   Gc.finalise
   (
       (
-       case
-       (
-       w
-       :=
-       (
-           smuggle
-           w
-       )
-       )
+        case
+        (
+         w
+         :=
+         (
+             smuggle
+             w
+         )
+        )
       )
        !
        (
@@ -171,7 +171,7 @@
   )
    let
    (
-     fill
+      fill
     (
      case
          (

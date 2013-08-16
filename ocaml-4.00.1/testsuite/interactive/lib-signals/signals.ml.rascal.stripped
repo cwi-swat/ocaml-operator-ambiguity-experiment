@@ -25,26 +25,26 @@
            tak
            (
                (
-                   					 tak
-                     					 (
-                     					     (
-                     					         					 -
-                     					           					 (
-                     					           					     x
-                     					           					     1
-                     					           					 )
-                     					     	y
-                     					     	z
-                     					     )
-                     					 )
+                tak
+                (
+                    (
+                     -
+                     (
+                         x
+                         1
+                     )
+                    	y
+                    	z
+                    )
+                )
                	tak
                	(
                	    (
-               	        					 -
-               	          					 (
-               	          					     y
-               	          					     1
-               	          					 )
+               	     -
+               	     (
+               	         y
+               	         1
+               	     )
                	    	z
                	    	x
                	    )
@@ -52,11 +52,11 @@
                	tak
                	(
                	    (
-               	        					 -
-               	          					 (
-               	          					     z
-               	          					     1
-               	          					 )
+               	     -
+               	     (
+               	         z
+               	         1
+               	     )
                	    	x
                	    	y
                	    )
@@ -114,7 +114,7 @@
                        tak
                        (
                            (
-                               					 18
+                            18
                            	12
                            	6
                            )
@@ -194,8 +194,8 @@
          Sys.signal
          (
              Sys.sigint
-              Sys.Signal_handle
-              break_handler
+             Sys.Signal_handle
+                break_handler
          )
      )
    ;
@@ -206,8 +206,8 @@
            Sys.signal
            (
                Sys.sigtstp
-                Sys.Signal_handle
-                stop_handler
+               Sys.Signal_handle
+                  stop_handler
            )
        )
      ;
@@ -238,7 +238,7 @@
                     tak
                     (
                         (
-                            					 18
+                         18
                         	12
                         	6
                         )

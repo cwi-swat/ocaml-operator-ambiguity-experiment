@@ -1,27 +1,27 @@
 (
   module  IntSet
-    Set.Make
+       							      Set.Make
    (
    struct
    (
    type
    (  						
       t
-      type
-      params=
-      (
-      )
-      cstrs =
-      (
-      )
-      kind =
-      int
-      (
-      )
+        type
+        params=
+        (
+        )
+        cstrs =
+        (
+        )
+        kind =
+        int
+        (
+        )
    )
    let
    (
-     compare
+      compare
     (
      case
          (
@@ -135,7 +135,7 @@
        Set.S
        Set.OrderedType
      )
-      Set.Make
+         							      Set.Make
      (
      SetOrd
      (
@@ -177,19 +177,19 @@
    List.iter
    (
        (
-        case
-        (
-        s
-        Printf.printf
-        (
-            "%B\n"
-            IntSetSet.mem
-            (
-                s
-                setofset
-            )
-        )
-        )
+         case
+         (
+          s
+          Printf.printf
+          (
+              "%B\n"
+              IntSetSet.mem
+              (
+                  s
+                  setofset
+              )
+          )
+         )
        )
        ::
         (

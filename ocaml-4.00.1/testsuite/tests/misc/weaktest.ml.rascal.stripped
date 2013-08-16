@@ -11,24 +11,24 @@
     type
     (  						
        t
-       type
-       params=
-       (
-       )
-       cstrs =
-       (
-       )
-       kind =
-        list
-        (
-          string
+         type
+         params=
+         (
+         )
+         cstrs =
+         (
+         )
+         kind =
+          list
           (
+            string
+            (
+            )
           )
-        )
     )
     let
     (
-      equal
+       equal
      (
       case
           (
@@ -82,7 +82,7 @@
     )
     )
    module  HT
-     Weak.Make
+        							      Weak.Make
     (
     Hashed
     )

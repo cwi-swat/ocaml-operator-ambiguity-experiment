@@ -14,24 +14,23 @@
           type
           params=
           (
-          
-           
-           a
-          										 
+          a
           )
           cstrs =
           (
+       											   
+       											   	  
+       											   
           )
           kind =
           
            
-            B.t
-            (
-              a
-            )
-               									
-           
-          														  
+          
+           B.t
+           (
+             a
+           )
+              									
           														 
        											   
      								        
@@ -48,24 +47,23 @@
          type
          params=
          (
-         
-          
-          a
-         										 
+         a
          )
          cstrs =
          (
+      											   
+      											   	  
+      											   
          )
          kind =
          
           
-           B.t
-           (
-             a
-           )
-              									
-          
-         														  
+         
+          B.t
+          (
+            a
+          )
+             									
          														 
       											   
     								        
@@ -85,82 +83,17 @@
           type
           params=
           (
-          
-           
-           a
-          										 
+          a
           )
           cstrs =
           (
+       											   
+       											   	  
+       											   
           )
           kind =
           
-           (
-               										  
-            
-            	m
-            	poly
-            	
-            	 A.t
-            	 (
-            	   
-            	    list
-            	    (
-            	      a
-            	    )
-            	       									
-            	 )
-            	    									
-            	                                       
-            									
-               										  
-            
-            	n
-            	poly
-            	
-            	 A.t
-            	 (
-            	   
-            	    array
-            	    (
-            	      a
-            	    )
-            	       									
-            	 )
-            	    									
-            	                                       
-            									
-               										  
-           )
-               										  
            
-          														  
-          														 
-       											   
-     								        
-     )
-    		    				
-    )
-    struct
-    (
-    							  
-    type
-    (  						
-        							    	 
-       t
-         type
-         params=
-         (
-         
-          
-          a
-         										 
-         )
-         cstrs =
-         (
-         )
-         kind =
-         
           (
               										  
            
@@ -199,8 +132,71 @@
               										  
           )
               										  
+          														 
+       											   
+     								        
+     )
+    		    				
+    )
+    struct
+    (
+    							  
+    type
+    (  						
+        							    	 
+       t
+         type
+         params=
+         (
+         a
+         )
+         cstrs =
+         (
+      											   
+      											   	  
+      											   
+         )
+         kind =
+         
           
-         														  
+         (
+             										  
+          
+          	m
+          	poly
+          	
+          	 A.t
+          	 (
+          	   
+          	    list
+          	    (
+          	      a
+          	    )
+          	       									
+          	 )
+          	    									
+          	                                       
+          									
+             										  
+          
+          	n
+          	poly
+          	
+          	 A.t
+          	 (
+          	   
+          	    array
+          	    (
+          	      a
+          	    )
+          	       									
+          	 )
+          	    									
+          	                                       
+          									
+             										  
+         )
+             										  
          														 
       											   
     								        

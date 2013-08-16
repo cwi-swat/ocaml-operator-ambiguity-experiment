@@ -10,48 +10,12 @@
           type
           params=
           (
-           a
+          a
           )
           cstrs =
           (
           )
           kind =
-           (
-            	m
-            	poly
-            	 B.t
-            	 (
-            	    list
-            	    (
-            	      a
-            	    )
-            	 )
-            	n
-            	poly
-            	 B.t
-            	 (
-            	    array
-            	    (
-            	      a
-            	    )
-            	 )
-           )
-     )
-    )
-    struct
-    (
-    type
-    (  						
-       t
-         type
-         params=
-         (
-          a
-         )
-         cstrs =
-         (
-         )
-         kind =
           (
            	m
            	poly
@@ -72,6 +36,42 @@
            	    )
            	 )
           )
+     )
+    )
+    struct
+    (
+    type
+    (  						
+       t
+         type
+         params=
+         (
+         a
+         )
+         cstrs =
+         (
+         )
+         kind =
+         (
+          	m
+          	poly
+          	 B.t
+          	 (
+          	    list
+          	    (
+          	      a
+          	    )
+          	 )
+          	n
+          	poly
+          	 B.t
+          	 (
+          	    array
+          	    (
+          	      a
+          	    )
+          	 )
+         )
     )
     )
     "B"
@@ -83,16 +83,16 @@
           type
           params=
           (
-           a
+          a
           )
           cstrs =
           (
           )
           kind =
-            A.t
-            (
-              a
-            )
+           A.t
+           (
+             a
+           )
      )
     )
     struct
@@ -103,16 +103,16 @@
          type
          params=
          (
-          a
+         a
          )
          cstrs =
          (
          )
          kind =
-           A.t
-           (
-             a
-           )
+          A.t
+          (
+            a
+          )
     )
     )
   )

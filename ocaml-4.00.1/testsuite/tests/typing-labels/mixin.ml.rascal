@@ -24,16 +24,18 @@
         )
         cstrs =
         (
+     											   
+     											   	  
+     											   
         )
         kind =
         
          
-         string
-         (
-         )
-         								  
-         
-        														  
+        
+        string
+        (
+        )
+        								  
         														 
      											   
    								        
@@ -73,16 +75,18 @@
         )
         cstrs =
         (
+     											   
+     											   	  
+     											   
         )
         kind =
         
          
-         string
-         (
-         )
-         								  
-         
-        														  
+        
+        string
+        (
+        )
+        								  
         														 
      											   
    								        
@@ -114,26 +118,29 @@
        )
        cstrs =
        (
+    											   
+    											   	  
+    											   
        )
        kind =
        
         
-        (
-           											   
-          
-          Var
-          (
-          	
-          	string
-          	(
-          	)
-          									  
-          )
-        
-        )
-           											   
-        
-       														  
+       (
+       	
+       	   											   
+       	  
+       	  Var
+       	  (
+       	  	
+       	  	string
+       	  	(
+       	  	)
+       	  									  
+       	  )
+       	
+       	   											   
+       )
+       											 
        														 
     											   
   								        
@@ -241,63 +248,63 @@
        type
        params=
        (
-       
-        
-        a
-       										 
+       a
        )
        cstrs =
        (
+    											   
+    											   	  
+    											   
        )
        kind =
        
         
-        (
-           											   
-          
-          Var
-          (
-          	
-          	string
-          	(
-          	)
-          									  
-          )
-        
-          
-          Abs
-          (
-          	tuple
-          	(
-          	 
-          	 string
-          	 (
-          	 )
-          	 								  
-          	   									
-          	  a
-          										
-          	)
-          	   								    
-          )
-        
-          
-          App
-          (
-          	tuple
-          	(
-          	 a
-          	   									
-          	  a
-          										
-          	)
-          	   								    
-          )
-        
-        )
-           											   
-        
-       														  
+       (
+       	
+       	   											   
+       	  
+       	  Var
+       	  (
+       	  	
+       	  	string
+       	  	(
+       	  	)
+       	  									  
+       	  )
+       	
+       	  
+       	  Abs
+       	  (
+       	  	tuple
+       	  	(
+       	  	 
+       	  	 string
+       	  	 (
+       	  	 )
+       	  	 								  
+       	  	   									
+       	  	  a
+       	  										
+       	  	)
+       	  	   								    
+       	  )
+       	
+       	  
+       	  App
+       	  (
+       	  	tuple
+       	  	(
+       	  	 a
+       	  	   									
+       	  	  a
+       	  										
+       	  	)
+       	  	   								    
+       	  )
+       	
+       	   											   
+       )
+       											 
        														 
     											   
   								        
@@ -606,32 +613,31 @@
         									  
      )
     in
+      
       (
-       
-       case
-       (
-       ()
-       
-       
-       sequence
-       (
-         incr
-         (
-             current
-         )
-       ;
+        case
+        (
+         ()
          
-          !
-          (
-          current
-          )
-             							 
-       )
-           							
-       )
-       													 
+         
+         sequence
+         (
+           incr
+           (
+               current
+           )
+         ;
+           
+            !
+            (
+            current
+            )
+               							 
+         )
+             							
+        )
       )
-         						  
+      													 
     )
         									 
    							    		    
@@ -722,56 +728,61 @@
      		  		      	              []
      		  		      	                  							    
      		  		      	              f
+     		  		      	              
+     		  		      	              							
+     		  		      	              							
      		  		      	              (
-     		  		      	               
-     		  		      	               case
-     		  		      	               (
-     		  		      	                 key
-     		  		      	                 (
-     		  		      	                 
-     		  		      	                 case
-     		  		      	                 (
-     		  		      	                   data
-     		  		      	                   (
-     		  		      	                   
-     		  		      	                   case
-     		  		      	                   (
-     		  		      	                   acc
-     		  		      	                   
-     		  		      	                   ifthenelse
-     		  		      	                   (
-     		  		      	                    if
+     		  		      	              case
+     		  		      	                (
+     		  		      	                  key
+     		  		      	                  
+     		  		      	                  							
+     		  		      	                  							
+     		  		      	                  (
+     		  		      	                  case
      		  		      	                    (
-     		  		      	                     Names.mem
-     		  		      	                     (
-     		  		      	                         s
-     		  		      	                         used
-     		  		      	                     )
-     		  		      	                    )
-     		  		      	                    then
-     		  		      	                    (
-     		  		      	                     ::
-     		  		      	                     (
-     		  		      	                         data
+     		  		      	                      data
+     		  		      	                      
+     		  		      	                      (
+     		  		      	                        case
+     		  		      	                        (
      		  		      	                         acc
-     		  		      	                     )
+     		  		      	                         
+     		  		      	                         ifthenelse
+     		  		      	                         (
+     		  		      	                          if
+     		  		      	                          (
+     		  		      	                           Names.mem
+     		  		      	                           (
+     		  		      	                               s
+     		  		      	                               used
+     		  		      	                           )
+     		  		      	                          )
+     		  		      	                          then
+     		  		      	                          (
+     		  		      	                           ::
+     		  		      	                           (
+     		  		      	                               data
+     		  		      	                               acc
+     		  		      	                           )
+     		  		      	                          )
+     		  		      	                          else
+     		  		      	                          (
+     		  		      	                           acc
+     		  		      	                          ) 
+     		  		      	                         )
+     		  		      	                         	    											 
+     		  		      	                        )
+     		  		      	                      )
+     		  		      	                      													 
      		  		      	                    )
-     		  		      	                    else
-     		  		      	                    (
-     		  		      	                     acc
-     		  		      	                    ) 
-     		  		      	                   )
-     		  		      	                   	    											 
-     		  		      	                   )
-     		  		      	                   													 
-     		  		      	                   )
-     		  		      	                 )													
-     		  		      	                 													
-     		  		      	                 )
-     		  		      	               )													
-     		  		      	               													
-     		  		      	              )
-     		  		      	                 						  
+     		  		      	                  )													
+     		  		      	                  									        	   		
+     		  		      	                  							
+     		  		      	                )
+     		  		      	              )													
+     		  		      	              									        	   		
+     		  		      	              							
      		  		      	                  							    
      		  		      	          ) 
      		  		      	         							    		   
@@ -786,24 +797,23 @@
      		  		      	           (
      		  		      	               used_expr
      		  		      	               f
+     		  		      	               
      		  		      	               (
-     		  		      	                
-     		  		      	                case
-     		  		      	                (
-     		  		      	                t
-     		  		      	                
-     		  		      	                Names.mem
-     		  		      	                (
-     		  		      	                    s
-     		  		      	                    free
-     		  		      	                    (
-     		  		      	                        t
-     		  		      	                    )
-     		  		      	                )
-     		  		      	                )
-     		  		      	                													 
+     		  		      	                 case
+     		  		      	                 (
+     		  		      	                  t
+     		  		      	                  
+     		  		      	                  Names.mem
+     		  		      	                  (
+     		  		      	                      s
+     		  		      	                      free
+     		  		      	                      (
+     		  		      	                          t
+     		  		      	                      )
+     		  		      	                  )
+     		  		      	                 )
      		  		      	               )
-     		  		      	                  						  
+     		  		      	               													 
      		  		      	                   							    
      		  		      	           )
      		  		      	          )
@@ -1108,75 +1118,75 @@
        type
        params=
        (
-       
-        
-        a
-       										 
+       a
        )
        cstrs =
        (
+    											   
+    											   	  
+    											   
        )
        kind =
        
         
-        (
-           											   
-          
-          Var
-          (
-          	
-          	string
-          	(
-          	)
-          									  
-          )
-        
-          
-          Num
-          (
-          	
-          	int
-          	(
-          	)
-          									  
-          )
-        
-          
-          Add
-          (
-          	tuple
-          	(
-          	 a
-          	   									
-          	  a
-          										
-          	)
-          	   								    
-          )
-        
-          
-          Neg
-          (
-          	a
-          )
-        
-          
-          Mult
-          (
-          	tuple
-          	(
-          	 a
-          	   									
-          	  a
-          										
-          	)
-          	   								    
-          )
-        
-        )
-           											   
-        
-       														  
+       (
+       	
+       	   											   
+       	  
+       	  Var
+       	  (
+       	  	
+       	  	string
+       	  	(
+       	  	)
+       	  									  
+       	  )
+       	
+       	  
+       	  Num
+       	  (
+       	  	
+       	  	int
+       	  	(
+       	  	)
+       	  									  
+       	  )
+       	
+       	  
+       	  Add
+       	  (
+       	  	tuple
+       	  	(
+       	  	 a
+       	  	   									
+       	  	  a
+       	  										
+       	  	)
+       	  	   								    
+       	  )
+       	
+       	  
+       	  Neg
+       	  (
+       	  	a
+       	  )
+       	
+       	  
+       	  Mult
+       	  (
+       	  	tuple
+       	  	(
+       	  	 a
+       	  	   									
+       	  	  a
+       	  										
+       	  	)
+       	  	   								    
+       	  )
+       	
+       	   											   
+       )
+       											 
        														 
     											   
   								        
@@ -1850,130 +1860,133 @@
        )
        cstrs =
        (
+    											   
+    											   	  
+    											   
        )
        kind =
        
         
-        (
-           											   
-          
-          Var
-          (
-          	
-          	string
-          	(
-          	)
-          									  
-          )
-        
-          
-          Abs
-          (
-          	tuple
-          	(
-          	 
-          	 string
-          	 (
-          	 )
-          	 								  
-          	   									
-          	  
-          	  lexpr
-          	  (
-          	  )
-          	  								  
-          										
-          	)
-          	   								    
-          )
-        
-          
-          App
-          (
-          	tuple
-          	(
-          	 
-          	 lexpr
-          	 (
-          	 )
-          	 								  
-          	   									
-          	  
-          	  lexpr
-          	  (
-          	  )
-          	  								  
-          										
-          	)
-          	   								    
-          )
-        
-          
-          Num
-          (
-          	
-          	int
-          	(
-          	)
-          									  
-          )
-        
-          
-          Add
-          (
-          	tuple
-          	(
-          	 
-          	 lexpr
-          	 (
-          	 )
-          	 								  
-          	   									
-          	  
-          	  lexpr
-          	  (
-          	  )
-          	  								  
-          										
-          	)
-          	   								    
-          )
-        
-          
-          Neg
-          (
-          	
-          	lexpr
-          	(
-          	)
-          									  
-          )
-        
-          
-          Mult
-          (
-          	tuple
-          	(
-          	 
-          	 lexpr
-          	 (
-          	 )
-          	 								  
-          	   									
-          	  
-          	  lexpr
-          	  (
-          	  )
-          	  								  
-          										
-          	)
-          	   								    
-          )
-        
-        )
-           											   
-        
-       														  
+       (
+       	
+       	   											   
+       	  
+       	  Var
+       	  (
+       	  	
+       	  	string
+       	  	(
+       	  	)
+       	  									  
+       	  )
+       	
+       	  
+       	  Abs
+       	  (
+       	  	tuple
+       	  	(
+       	  	 
+       	  	 string
+       	  	 (
+       	  	 )
+       	  	 								  
+       	  	   									
+       	  	  
+       	  	  lexpr
+       	  	  (
+       	  	  )
+       	  	  								  
+       	  										
+       	  	)
+       	  	   								    
+       	  )
+       	
+       	  
+       	  App
+       	  (
+       	  	tuple
+       	  	(
+       	  	 
+       	  	 lexpr
+       	  	 (
+       	  	 )
+       	  	 								  
+       	  	   									
+       	  	  
+       	  	  lexpr
+       	  	  (
+       	  	  )
+       	  	  								  
+       	  										
+       	  	)
+       	  	   								    
+       	  )
+       	
+       	  
+       	  Num
+       	  (
+       	  	
+       	  	int
+       	  	(
+       	  	)
+       	  									  
+       	  )
+       	
+       	  
+       	  Add
+       	  (
+       	  	tuple
+       	  	(
+       	  	 
+       	  	 lexpr
+       	  	 (
+       	  	 )
+       	  	 								  
+       	  	   									
+       	  	  
+       	  	  lexpr
+       	  	  (
+       	  	  )
+       	  	  								  
+       	  										
+       	  	)
+       	  	   								    
+       	  )
+       	
+       	  
+       	  Neg
+       	  (
+       	  	
+       	  	lexpr
+       	  	(
+       	  	)
+       	  									  
+       	  )
+       	
+       	  
+       	  Mult
+       	  (
+       	  	tuple
+       	  	(
+       	  	 
+       	  	 lexpr
+       	  	 (
+       	  	 )
+       	  	 								  
+       	  	   									
+       	  	  
+       	  	  lexpr
+       	  	  (
+       	  	  )
+       	  	  								  
+       	  										
+       	  	)
+       	  	   								    
+       	  )
+       	
+       	   											   
+       )
+       											 
        														 
     											   
   								        

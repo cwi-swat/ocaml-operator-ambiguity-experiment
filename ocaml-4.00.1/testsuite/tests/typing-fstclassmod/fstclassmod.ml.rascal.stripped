@@ -107,15 +107,15 @@
          List.map
          (
              (
-              case
-              (
-              set
-              sort
-              (
-                  set
-                  l
-              )
-              )
+               case
+               (
+                set
+                sort
+                (
+                    set
+                    l
+                )
+               )
              )
              ::
               (
@@ -128,22 +128,22 @@
               make_set
               (
                   (
-                   case
-                   (
-                     x
-                     (
-                     case
-                     (
-                     y
-                     compare
-                     (
+                  case
+                    (
+                      x
+                      (
+                        case
+                        (
                          y
-                         x
-                     )
-                     )
-                     )
-                   )													
-                  )
+                         compare
+                         (
+                             y
+                             x
+                         )
+                        )
+                      )
+                    )
+                  )													
               )
               []
               ) 
@@ -450,22 +450,22 @@
              create
              (
                  (
-                  case
-                  (
-                  s
-                  s
-                  )
+                   case
+                   (
+                    s
+                    s
+                   )
                  )
                  (
-                  case
-                  (
-                  s
-                  ^
-                  (
-                      s
-                      s
-                  )
-                  )
+                   case
+                   (
+                    s
+                    ^
+                    (
+                        s
+                        s
+                    )
+                   )
                  )
                  "X"
              )
@@ -514,8 +514,8 @@
         type
         params=
         (
-          a
-          b
+         a
+         b
         )
         cstrs =
         (
@@ -561,8 +561,8 @@
          type
          params=
          (
-           a
-           b
+          a
+          b
          )
          cstrs =
          (
@@ -697,7 +697,7 @@
           type
           params=
           (
-           a
+          a
           )
           cstrs =
           (
@@ -726,10 +726,13 @@
           )
           Pair
           (
-           package PAIR 
+           typexprPackage 
            (
-           with type t
-                     a
+               package PAIR 
+               (
+               with type t
+                         a
+               )
            )
           )
           )
@@ -822,7 +825,7 @@
          type
          params=
          (
-          a
+         a
          )
          cstrs =
          (
@@ -851,10 +854,13 @@
          )
          Pair
          (
-          package PAIR 
+          typexprPackage 
           (
-          with type t
-                    a
+              package PAIR 
+              (
+              with type t
+                        a
+              )
           )
          )
          )

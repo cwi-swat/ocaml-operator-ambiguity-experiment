@@ -534,15 +534,15 @@
       		     )
       		    in
       		      (
-      		       case
-      		       (
-      		       x
-      		       +
-      		       (
-      		           x
-      		           y
-      		       )
-      		       )
+      		        case
+      		        (
+      		         x
+      		         +
+      		         (
+      		             x
+      		             y
+      		         )
+      		        )
       		      )
       		    )
       		  )
@@ -925,7 +925,7 @@
           type
           params=
           (
-           a
+          a
           )
           cstrs =
           (
@@ -976,7 +976,7 @@
          type
          params=
          (
-          a
+         a
          )
          cstrs =
          (
@@ -1498,28 +1498,28 @@
            List.fold_left
            (
                (
-                case
-                (
-                  v
-                  (
-                  case
-                  (
-                  (
-                   id
-                  	e
-                  )
-                  StringSet.union
-                  (
-                      v
-                      Expr.fv
+               case
+                 (
+                   v
+                   (
+                     case
+                     (
                       (
-                          e
+                       id
+                      	e
                       )
-                  )
-                  )
-                  )
-                )													
-               )
+                      StringSet.union
+                      (
+                          v
+                          Expr.fv
+                          (
+                              e
+                          )
+                      )
+                     )
+                   )
+                 )
+               )													
                StringSet.empty
                b
            )
@@ -1536,25 +1536,25 @@
            List.fold_left
            (
                (
-                case
-                (
-                  v
-                  (
-                  case
-                  (
-                  (
-                   id
-                  	e
-                  )
-                  StringSet.add
-                  (
-                      id
-                      v
-                  )
-                  )
-                  )
-                )													
-               )
+               case
+                 (
+                   v
+                   (
+                     case
+                     (
+                      (
+                       id
+                      	e
+                      )
+                      StringSet.add
+                      (
+                          id
+                          v
+                      )
+                     )
+                   )
+                 )
+               )													
                StringSet.empty
                b
            )
@@ -1571,20 +1571,20 @@
            List.map
            (
                (
-                case
-                (
-                (
-                 id
-                	e
-                )
-                (
-                 id
-                	Expr.simpl
-                	(
-                	    e
-                	)
-                )
-                )
+                 case
+                 (
+                  (
+                   id
+                  	e
+                  )
+                  (
+                   id
+                  	Expr.simpl
+                  	(
+                  	    e
+                  	)
+                  )
+                 )
                )
                b
            )
@@ -2901,14 +2901,14 @@
        		signature
        		class_signature
        		(
-       		   poly
-       		   arrow
-       		   int
-       		   (
-       		   )
-       		   int
-       		   (
-       		   )
+       		 poly
+       		 arrow
+       		 int
+       		 (
+       		 )
+       		 int
+       		 (
+       		 )
        		)
         )
     )
@@ -2921,41 +2921,41 @@
       )
       class name = c
       class expr = 
-                  class_structure
-                  (
-                     method m
-                     (
-                       case
-                     	(
-                     		x
-                       	ifthenelse
-                       	(
-                       	 if
-                       	 (
-                       	  <=
-                       	  (
-                       	      x
-                       	      0
-                       	  )
-                       	 )
-                       	 then
-                       	 (
-                       	  x
-                       	 )
-                       	 else
-                       	 (
-                       	  send m
-                       	  (
-                       	   new Class2.d
-                       	  )
-                       	  (
-                       	      x
-                       	  )
-                       	 ) 
-                       	)
-                     	)
-                     )
-                  )
+        class_structure
+        (
+           method m
+           (
+             case
+           	(
+           		x
+             	ifthenelse
+             	(
+             	 if
+             	 (
+             	  <=
+             	  (
+             	      x
+             	      0
+             	  )
+             	 )
+             	 then
+             	 (
+             	  x
+             	 )
+             	 else
+             	 (
+             	  send m
+             	  (
+             	   new Class2.d
+             	  )
+             	  (
+             	      x
+             	  )
+             	 ) 
+             	)
+           	)
+           )
+        )
     )
     )
     "Class2"
@@ -2973,14 +2973,14 @@
        		signature
        		class_signature
        		(
-       		   poly
-       		   arrow
-       		   int
-       		   (
-       		   )
-       		   int
-       		   (
-       		   )
+       		 poly
+       		 arrow
+       		 int
+       		 (
+       		 )
+       		 int
+       		 (
+       		 )
        		)
         )
     )
@@ -2993,30 +2993,31 @@
       )
       class name = d
       class expr = 
-                  class_structure
-                  (
-                     inherit
-                      constr Class1.c
-                      (
-                      )
-                     method m
-                     (
-                       case
-                     	(
-                     		x
-                     		int
-                     		(
-                     		)
-                       	send m
-                       	(
-                       	 super
-                       	)
-                       	(
-                       	    0
-                       	)
-                     	)
-                     )
-                  )
+        class_structure
+        (
+           inherit
+            constr Class1.c
+            (
+            )
+           method m
+           (
+             case
+           	(
+           		x
+           		int
+           		(
+           		)
+             	send m
+             	(
+             	 super
+             	)
+             	(
+             	    0
+             	)
+           	)
+           )
+        )
+        <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[]>
     )
     )
   )
@@ -3054,10 +3055,10 @@
    		     		signature
    		     		class_signature
    		     		(
-   		     		   poly
-   		     		   int
-   		     		   (
-   		     		   )
+   		     		 poly
+   		     		 int
+   		     		 (
+   		     		 )
    		     		)
    		      )
    		  )
@@ -3070,11 +3071,11 @@
    		    )
    		    class name = c
    		    class expr = 
-   		                class_structure
-   		                (
-   		                   method m
-   		                     	123
-   		                )
+   		      class_structure
+   		      (
+   		         method m
+   		         	  123
+   		      )
    		  )
    		  )
    		  "BadClass2"

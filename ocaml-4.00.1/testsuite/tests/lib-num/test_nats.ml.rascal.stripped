@@ -3,7 +3,7 @@
    open Nat
    let
    (
-     equal_nat
+      equal_nat
     (
      case
          (
@@ -45,7 +45,7 @@
       -1
       eq
       (
-          					 false
+       false
       	not
       	(
       	    true
@@ -57,7 +57,7 @@
       0
       eq
       (
-          					 true
+       true
       	not
       	(
       	    false
@@ -88,12 +88,12 @@
           )
         ;
           (
-              					 num_digits_nat
-                					 (
-                					     r
-                					     0
-                					     1
-                					 )
+           num_digits_nat
+           (
+               r
+               0
+               1
+           )
           	1
           )
         )
@@ -127,10 +127,10 @@
           )
         ;
           (
-              					 length_nat
-                					 (
-                					     r
-                					 )
+           length_nat
+           (
+               r
+           )
           	2
           )
         )
@@ -155,7 +155,7 @@
         1
         equal_nat
         (
-            					 zero_nat
+         zero_nat
         	zero_nat
         )
     )
@@ -165,10 +165,10 @@
       2
       equal_nat
       (
-          					 nat_of_int
-            					 (
-            					     1
-            					 )
+       nat_of_int
+       (
+           1
+       )
       	nat_of_int
       	(
       	    1
@@ -180,10 +180,10 @@
       3
       equal_nat
       (
-          					 nat_of_string
-            					 (
-            					     "2"
-            					 )
+       nat_of_string
+       (
+           "2"
+       )
       	nat_of_string
       	(
       	    "2"
@@ -195,17 +195,17 @@
       4
       eq
       (
-          					 equal_nat
-            					 (
-            					     nat_of_string
-            					     (
-            					         "2"
-            					     )
-            					     nat_of_string
-            					     (
-            					         "3"
-            					     )
-            					 )
+       equal_nat
+       (
+           nat_of_string
+           (
+               "2"
+           )
+           nat_of_string
+           (
+               "3"
+           )
+       )
       	false
       )
   )
@@ -243,7 +243,7 @@
               1
               equal_nat
               (
-                  					 zero
+               zero
               	nat_of_int
               	(
               	    1
@@ -255,7 +255,7 @@
               2
               eq
               (
-                  					 res
+               res
               	0
               )
           )
@@ -292,7 +292,7 @@
               3
               equal_nat
               (
-                  					 n
+               n
               	nat_of_int
               	(
               	    2
@@ -304,7 +304,7 @@
               4
               eq
               (
-                  					 res
+               res
               	0
               )
           )
@@ -345,7 +345,7 @@
               1
               equal_nat
               (
-                  					 n
+               n
               	nat_of_int
               	(
               	    0
@@ -357,7 +357,7 @@
               2
               eq
               (
-                  					 res
+               res
               	1
               )
           )
@@ -394,7 +394,7 @@
               3
               equal_nat
               (
-                  					 n
+               n
               	nat_of_int
               	(
               	    1
@@ -406,7 +406,7 @@
               4
               eq
               (
-                  					 res
+               res
               	1
               )
           )
@@ -434,12 +434,12 @@
             1
             eq
             (
-                					 is_zero_nat
-                  					 (
-                  					     n
-                  					     0
-                  					     1
-                  					 )
+             is_zero_nat
+             (
+                 n
+                 0
+                 1
+             )
             	false
             )
         )
@@ -450,15 +450,15 @@
                 2
                 eq
                 (
-                    					 is_zero_nat
-                      					 (
-                      					     make_nat
-                      					     (
-                      					         1
-                      					     )
-                      					     0
-                      					     1
-                      					 )
+                 is_zero_nat
+                 (
+                     make_nat
+                     (
+                         1
+                     )
+                     0
+                     1
+                 )
                 	true
                 )
             )
@@ -469,15 +469,15 @@
                     3
                     eq
                     (
-                        					 is_zero_nat
-                          					 (
-                          					     make_nat
-                          					     (
-                          					         2
-                          					     )
-                          					     0
-                          					     2
-                          					 )
+                     is_zero_nat
+                     (
+                         make_nat
+                         (
+                             2
+                         )
+                         0
+                         2
+                     )
                     	true
                     )
                 )
@@ -505,12 +505,12 @@
                         4
                         eq
                         (
-                            					 is_zero_nat
-                              					 (
-                              					     r
-                              					     0
-                              					     1
-                              					 )
+                         is_zero_nat
+                         (
+                             r
+                             0
+                             1
+                         )
                         	true
                         )
                     )
@@ -537,10 +537,10 @@
       1
       eq_string
       (
-          					 string_of_nat
-            					 (
-            					     n
-            					 )
+       string_of_nat
+       (
+           n
+       )
       	"0"
       )
   )
@@ -569,10 +569,10 @@
       2
       eq_string
       (
-          					 string_of_nat
-            					 (
-            					     n
-            					 )
+       string_of_nat
+       (
+           n
+       )
       	"340282366920938463463374607431768211455"
       )
   )
@@ -610,13 +610,13 @@
                i
                eq_string
                (
-                   					 string_of_nat
-                     					 (
-                     					     nat_of_string
-                     					     (
-                     					         s
-                     					     )
-                     					 )
+                string_of_nat
+                (
+                    nat_of_string
+                    (
+                        s
+                    )
+                )
                	s
                )
            )
@@ -625,31 +625,31 @@
    )
    let
    (
-     set_mult_digit_nat
+      set_mult_digit_nat
     (
      case
          (
-      		 n1
+      		  n1
       		(
       		 case
       		     (
-      		  		 d1
+      		  		  d1
       		  		(
       		  		 case
       		  		     (
-      		  		  		 l1
+      		  		  		  l1
       		  		  		(
       		  		  		 case
       		  		  		     (
-      		  		  		  		 n2
+      		  		  		  		  n2
       		  		  		  		(
       		  		  		  		 case
       		  		  		  		     (
-      		  		  		  		  		 d2
+      		  		  		  		  		  d2
       		  		  		  		  		(
       		  		  		  		  		 case
       		  		  		  		  		     (
-      		  		  		  		  		  		 l2
+      		  		  		  		  		  		  l2
       		  		  		  		  		  		(
       		  		  		  		  		  		 case
       		  		  		  		  		  		     (
@@ -701,10 +701,10 @@
         21
         equal_nat
         (
-            					 nat_of_string
-              					 (
-              					     s
-              					 )
+         nat_of_string
+         (
+             s
+         )
         	let
         	(
         	 (
@@ -761,13 +761,13 @@
       22
       eq_string
       (
-          					 string_of_nat
-            					 (
-            					     nat_of_string
-            					     (
-            					         "1073741824"
-            					     )
-            					 )
+       string_of_nat
+       (
+           nat_of_string
+           (
+               "1073741824"
+           )
+       )
       	"1073741824"
       )
   )
@@ -830,10 +830,10 @@
                  i
                  eq
                  (
-                     					 int_of_nat
-                       					 (
-                       					     nat1
-                       					 )
+                  int_of_nat
+                  (
+                      nat1
+                  )
                  	gcd_int
                  	(
                  	    n1
@@ -854,15 +854,15 @@
       1
       equal_nat
       (
-          					 sqrt_nat
-            					 (
-            					     nat_of_int
-            					     (
-            					         1
-            					     )
-            					     0
-            					     1
-            					 )
+       sqrt_nat
+       (
+           nat_of_int
+           (
+               1
+           )
+           0
+           1
+       )
       	nat_of_int
       	(
       	    1
@@ -884,15 +884,15 @@
        )
       in
         (
-            					 sqrt_nat
-              					 (
-              					     n
-              					     0
-              					     length_nat
-              					     (
-              					         n
-              					     )
-              					 )
+         sqrt_nat
+         (
+             n
+             0
+             length_nat
+             (
+                 n
+             )
+         )
         	nat_of_string
         	(
         	    "92681"
@@ -915,15 +915,15 @@
        )
       in
         (
-            					 sqrt_nat
-              					 (
-              					     n
-              					     0
-              					     length_nat
-              					     (
-              					         n
-              					     )
-              					 )
+         sqrt_nat
+         (
+             n
+             0
+             length_nat
+             (
+                 n
+             )
+         )
         	nat_of_string
         	(
         	    "65535"
@@ -946,15 +946,15 @@
        )
       in
         (
-            					 sqrt_nat
-              					 (
-              					     n
-              					     0
-              					     length_nat
-              					     (
-              					         n
-              					     )
-              					 )
+         sqrt_nat
+         (
+             n
+             0
+             length_nat
+             (
+                 n
+             )
+         )
         	nat_of_string
         	(
         	    "4294967295"
@@ -967,15 +967,15 @@
       5
       equal_nat
       (
-          					 sqrt_nat
-            					 (
-            					     nat_of_int
-            					     (
-            					         15
-            					     )
-            					     0
-            					     1
-            					 )
+       sqrt_nat
+       (
+           nat_of_int
+           (
+               15
+           )
+           0
+           1
+       )
       	nat_of_int
       	(
       	    3

@@ -33,62 +33,58 @@
            (
                
                (
-                   					 tak
-                     					 (
-                     					     
-                     					     (
-                     					         					 -
-                     					           					 (
-                     					           					     x
-                     					           					     1
-                     					           					 )
-                     					         					 
-                     					     	y
-                     					         					 
-                     					     	z
-                     					         					 
-                     					     )
-                     					         					 
-                     					 )
-                   					 
+                tak
+                (
+                    
+                    (
+                     -
+                     (
+                         x
+                         1
+                     )
+                        					   
+                    	y
+                        					   
+                    	z
+                        					   
+                    )
+                )
+                   					   
                	tak
                	(
                	    
                	    (
-               	        					 -
-               	          					 (
-               	          					     y
-               	          					     1
-               	          					 )
-               	        					 
+               	     -
+               	     (
+               	         y
+               	         1
+               	     )
+               	        					   
                	    	z
-               	        					 
+               	        					   
                	    	x
-               	        					 
+               	        					   
                	    )
-               	        					 
                	)
-                   					 
+                   					   
                	tak
                	(
                	    
                	    (
-               	        					 -
-               	          					 (
-               	          					     z
-               	          					     1
-               	          					 )
-               	        					 
+               	     -
+               	     (
+               	         z
+               	         1
+               	     )
+               	        					   
                	    	x
-               	        					 
+               	        					   
                	    	y
-               	        					 
+               	        					   
                	    )
-               	        					 
                	)
-                   					 
+                   					   
                )
-                   					 
            )
           )
           else
@@ -151,14 +147,13 @@
                        (
                            
                            (
-                               					 18
-                               					 
+                            18
+                               					   
                            	12
-                               					 
+                               					   
                            	6
-                               					 
+                               					   
                            )
-                               					 
                        )
                    )
                  ;
@@ -259,8 +254,8 @@
          (
              Sys.sigint
              
-              Sys.Signal_handle
-              break_handler
+             Sys.Signal_handle
+                break_handler
                  								 
          )
      )
@@ -274,8 +269,8 @@
            (
                Sys.sigtstp
                
-                Sys.Signal_handle
-                stop_handler
+               Sys.Signal_handle
+                  stop_handler
                    								 
            )
        )
@@ -313,14 +308,13 @@
                     (
                         
                         (
-                            					 18
-                            					 
+                         18
+                            					   
                         	12
-                            					 
+                            					   
                         	6
-                            					 
+                            					   
                         )
-                            					 
                     )
                 )
                    														  

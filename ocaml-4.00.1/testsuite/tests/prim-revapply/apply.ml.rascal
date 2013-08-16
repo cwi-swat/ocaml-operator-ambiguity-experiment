@@ -81,7 +81,8 @@
   let
   (
    
-    add
+     add
+               	   
    (
     case
         (
@@ -101,37 +102,36 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   
    
    List.iter
    (
+       
        (
-        
-        case
-        (
-        x
-        
-        
-        sequence
-        (
-          print_int
+         case
+         (
+          x
+          
+          
+          sequence
           (
-              x
+            print_int
+            (
+                x
+            )
+          ;
+            print_newline
+            (
+                ()
+            )
           )
-        ;
-          print_newline
-          (
-              ()
-          )
-        )
-            							
-        )
-        													 
+              							
+         )
        )
-          						  
+       													 
        ::
         (
         @@
@@ -302,7 +302,8 @@
   let
   (
    
-    add
+     add
+               	   
    (
     case
         (
@@ -322,37 +323,36 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   
    
    List.iter
    (
+       
        (
-        
-        case
-        (
-        x
-        
-        
-        sequence
-        (
-          print_int
+         case
+         (
+          x
+          
+          
+          sequence
           (
-              x
+            print_int
+            (
+                x
+            )
+          ;
+            print_newline
+            (
+                ()
+            )
           )
-        ;
-          print_newline
-          (
-              ()
-          )
-        )
-            							
-        )
-        													 
+              							
+         )
        )
-          						  
+       													 
        ::
         (
         @@

@@ -4,7 +4,7 @@ files = Array.new
 file_names = Array.new
 dirs = Array.new
 
-File.foreach('./files.txt') do |line|
+File.foreach('files.txt') do |line|
   f = line.chomp
   files << f
   dirs << f[0..f.rindex('/')]

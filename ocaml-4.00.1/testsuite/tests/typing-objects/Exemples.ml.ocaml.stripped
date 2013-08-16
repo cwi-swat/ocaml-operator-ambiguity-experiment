@@ -614,9 +614,8 @@
                     case
                     (
                       d
-                      Pexp_override
                       (
-                        <override> "x"
+                        x
                           +
                           (
                               x
@@ -677,15 +676,15 @@
                     ()
                       class_structure
               (
-                Pcf_virt "null" Public ([123,2334+2]..[123,2334+28])
+                null 
                     poly
                        bool
                       (
                       )
-                Pcf_virt "hd" Public ([124,2363+2]..[124,2363+24])
+                hd 
                     poly
                       a
-                Pcf_virt "tl" Public ([125,2388+2]..[125,2388+28])
+                tl 
                     poly
                        lst
                       (
@@ -1072,7 +1071,7 @@
                     ()
                       class_structure
               (
-                Pcf_virt "leq" Public ([173,3539+2]..[173,3539+33])
+                leq 
                     poly
                       arrow
                         a
@@ -2027,14 +2026,13 @@
                     )
                   )
                                   method add
-                  Pexp_override
                   (
-                    <override> "acc"
+                    acc
                       equals
                       (
                           self
                       )
-                    <override> "equals"
+                    equals
                       (
                         case
                         (
@@ -2054,14 +2052,13 @@
                       )
                   )
                                   method sub
-                  Pexp_override
                   (
-                    <override> "acc"
+                    acc
                       equals
                       (
                           self
                       )
-                    <override> "equals"
+                    equals
                       (
                         case
                         (

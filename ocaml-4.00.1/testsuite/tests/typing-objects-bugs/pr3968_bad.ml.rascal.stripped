@@ -1,70 +1,70 @@
 (
-   type
-   (  						
-      expr
-        type
-        params=
-        (
-        )
-        cstrs =
-        (
-        )
-        kind =
-        (
-        	  Abs
-        	  (
-        	  	tuple
-        	  	(
-        	  	 string
-        	  	 (
-        	  	 )
-        	  	  expr
-        	  	  (
-        	  	  )
-        	  	)
-        	  )
-        	  App
-        	  (
-        	  	tuple
-        	  	(
-        	  	 expr
-        	  	 (
-        	  	 )
-        	  	  expr
-        	  	  (
-        	  	  )
-        	  	)
-        	  )
-        )
-   )
-   class_type
-   (
-     class_type_declaration
-     params = 
-     (
-     ) 
-     name = exp
-     expr =
-      class_type
-      signature
-      class_signature
-      (
-       poly
-       arrow
-        Hashtbl.t
-           (
-            string
-            (
-            )
-       	 exp
-       	 (
-       	 )
-           ) 
-       expr
+  type
+  (  						
+     expr
+       type
+       params=
        (
        )
+       cstrs =
+       (
+       )
+       kind =
+       (
+       	  Abs
+       	  (
+       	  	tuple
+       	  	(
+       	  	 string
+       	  	 (
+       	  	 )
+       	  	  expr
+       	  	  (
+       	  	  )
+       	  	)
+       	  )
+       	  App
+       	  (
+       	  	tuple
+       	  	(
+       	  	 expr
+       	  	 (
+       	  	 )
+       	  	  expr
+       	  	  (
+       	  	  )
+       	  	)
+       	  )
+       )
+  )
+  class_type
+  (
+    class_type_declaration
+    params = 
+    (
+    ) 
+    name = exp
+    expr =
+     class_type
+     signature
+     class_signature
+     (
+      poly
+      arrow
+       Hashtbl.t
+          (
+           string
+           (
+           )
+      	 exp
+      	 (
+      	 )
+          ) 
+      expr
+      (
       )
-   )
+     )
+  )
   class
   (
     params = 

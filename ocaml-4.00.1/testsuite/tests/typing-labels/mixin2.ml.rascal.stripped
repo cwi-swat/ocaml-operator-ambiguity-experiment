@@ -17,9 +17,9 @@
         (
         )
         kind =
-         string
-         (
-         )
+        string
+        (
+        )
    )
    let
    (
@@ -44,9 +44,9 @@
         (
         )
         kind =
-         string
-         (
-         )
+        string
+        (
+        )
    )
    let
    (
@@ -148,14 +148,14 @@
        (
        )
        kind =
-        (
-          Var
-          (
-          	string
-          	(
-          	)
-          )
-        )
+       (
+       	  Var
+       	  (
+       	  	string
+       	  	(
+       	  	)
+       	  )
+       )
   )
   class
   (
@@ -169,9 +169,11 @@
       (
          a
          (
-         	  var
-         	  (
-         	  )
+         	(
+         		  var
+         		  (
+         		  )
+         	)
          )
          method subst
          (
@@ -227,6 +229,7 @@
          	)
          )
       )
+      <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprHash3"(["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr2"("typeConstr"([],"var")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
   )
   type
   (  						
@@ -234,38 +237,38 @@
        type
        params=
        (
-        a
+       a
        )
        cstrs =
        (
        )
        kind =
-        (
-          Var
-          (
-          	string
-          	(
-          	)
-          )
-          Abs
-          (
-          	tuple
-          	(
-          	 string
-          	 (
-          	 )
-          	  a
-          	)
-          )
-          App
-          (
-          	tuple
-          	(
-          	 a
-          	  a
-          	)
-          )
-        )
+       (
+       	  Var
+       	  (
+       	  	string
+       	  	(
+       	  	)
+       	  )
+       	  Abs
+       	  (
+       	  	tuple
+       	  	(
+       	  	 string
+       	  	 (
+       	  	 )
+       	  	  a
+       	  	)
+       	  )
+       	  App
+       	  (
+       	  	tuple
+       	  	(
+       	  	 a
+       	  	  a
+       	  	)
+       	  )
+       )
   )
   let
   (
@@ -281,22 +284,22 @@
      )
     in
       (
-       case
-       (
-       ()
-       sequence
-       (
-         incr
+        case
+        (
+         ()
+         sequence
          (
-             current
+           incr
+           (
+               current
+           )
+         ;
+            !
+            (
+            current
+            )
          )
-       ;
-          !
-          (
-          current
-          )
-       )
-       )
+        )
       )
     )
   )
@@ -360,10 +363,12 @@
        (
           a
           (
-          	   lambda
-          	   (
-          	     a
-          	   )
+          	(
+          		   lambda
+          		   (
+          		     a
+          		   )
+          	)
           )
           method free
           	  (
@@ -602,46 +607,46 @@
             	             []
             	             f
             	             (
-            	              case
-            	              (
-            	                key
-            	                (
-            	                case
-            	                (
-            	                  data
-            	                  (
-            	                  case
-            	                  (
-            	                  acc
-            	                  ifthenelse
-            	                  (
-            	                   if
+            	             case
+            	               (
+            	                 key
+            	                 (
+            	                 case
             	                   (
-            	                    Names.mem
-            	                    (
-            	                        s
-            	                        used
-            	                    )
-            	                   )
-            	                   then
-            	                   (
-            	                    ::
-            	                    (
-            	                        data
+            	                     data
+            	                     (
+            	                       case
+            	                       (
             	                        acc
-            	                    )
+            	                        ifthenelse
+            	                        (
+            	                         if
+            	                         (
+            	                          Names.mem
+            	                          (
+            	                              s
+            	                              used
+            	                          )
+            	                         )
+            	                         then
+            	                         (
+            	                          ::
+            	                          (
+            	                              data
+            	                              acc
+            	                          )
+            	                         )
+            	                         else
+            	                         (
+            	                          acc
+            	                         ) 
+            	                        )
+            	                       )
+            	                     )
             	                   )
-            	                   else
-            	                   (
-            	                    acc
-            	                   ) 
-            	                  )
-            	                  )
-            	                  )
-            	                )													
-            	                )
-            	              )													
-            	             )
+            	                 )													
+            	               )
+            	             )													
             	         ) 
             	       )
             	      in
@@ -654,21 +659,21 @@
             	              used_expr
             	              f
             	              (
-            	               case
-            	               (
-            	               t
-            	               Names.mem
-            	               (
-            	                   s
-            	                    !!
-            	                    (
-            	                    free
-            	                    )
-            	                   (
-            	                       t
-            	                   )
-            	               )
-            	               )
+            	                case
+            	                (
+            	                 t
+            	                 Names.mem
+            	                 (
+            	                     s
+            	                      !!
+            	                      (
+            	                      free
+            	                      )
+            	                     (
+            	                         t
+            	                     )
+            	                 )
+            	                )
             	              )
             	          )
             	         )
@@ -830,6 +835,7 @@
           	)
           )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprHash3"(["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"lambda")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
   )
   let
   (
@@ -845,46 +851,46 @@
        type
        params=
        (
-        a
+       a
        )
        cstrs =
        (
        )
        kind =
-        (
-          Var
-          (
-          	string
-          	(
-          	)
-          )
-          Num
-          (
-          	int
-          	(
-          	)
-          )
-          Add
-          (
-          	tuple
-          	(
-          	 a
-          	  a
-          	)
-          )
-          Neg
-          (
-          	a
-          )
-          Mult
-          (
-          	tuple
-          	(
-          	 a
-          	  a
-          	)
-          )
-        )
+       (
+       	  Var
+       	  (
+       	  	string
+       	  	(
+       	  	)
+       	  )
+       	  Num
+       	  (
+       	  	int
+       	  	(
+       	  	)
+       	  )
+       	  Add
+       	  (
+       	  	tuple
+       	  	(
+       	  	 a
+       	  	  a
+       	  	)
+       	  )
+       	  Neg
+       	  (
+       	  	a
+       	  )
+       	  Mult
+       	  (
+       	  	tuple
+       	  	(
+       	  	 a
+       	  	  a
+       	  	)
+       	  )
+       )
   )
   class
   (
@@ -946,10 +952,12 @@
        (
           a
           (
-          	   expr
-          	   (
-          	     a
-          	   )
+          	(
+          		   expr
+          		   (
+          		     a
+          		   )
+          	)
           )
           method free
           	  (
@@ -1339,6 +1347,7 @@
           	)
           )
        )
+       <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprHash3"(["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"expr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
   )
   let
   (
@@ -1354,22 +1363,22 @@
        type
        params=
        (
-        a
+       a
        )
        cstrs =
        (
        )
        kind =
-        (
-           lambda
-           (
-             a
-           )
-           expr
-           (
-             a
-           )
-        )
+       (
+       	   lambda
+       	   (
+       	     a
+       	   )
+       	   expr
+       	   (
+       	     a
+       	   )
+       )
   )
   class
   (
@@ -1408,10 +1417,12 @@
         (
            a
            (
-           	   lexpr
-           	   (
-           	     a
-           	   )
+           	(
+           		   lexpr
+           		   (
+           		     a
+           		   )
+           	)
            )
            method free
            	  (
@@ -1517,6 +1528,7 @@
            	     )
            	  )
         )
+        <"patternValueName"("self")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["typexprHash3"(["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typexprConstr1"("tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],"typeConstr"([],"lexpr")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]],"classPath"([],"ops")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)])[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
   )
   let
   (

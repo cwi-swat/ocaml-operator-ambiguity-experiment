@@ -1,8 +1,10 @@
+#! /usr/bin/ruby
+
 files = Array.new
 home = ""
 
 
-File.foreach('successful_parse_disambiguate.txt') do |line|
+File.foreach('files.txt') do |line|
   f = line.chomp
   files << f
 end

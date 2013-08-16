@@ -175,17 +175,16 @@
       (
       
       (
-          					 "-c"
-          					 
+       "-c"
+          					   
       	
-      	 Arg.Set
-      	 compact_flag
+      	Arg.Set
+      	   compact_flag
       	    								 
-          					 
+          					   
       	"do heap compactions"
-          					 
+          					   
       )
-          					 
       []
       ) 
          						   
@@ -197,17 +196,16 @@
   Arg.parse
   (
       argspecs
+      
       (
-       
-       case
-       (
-       _
-       
-       ()
-       )
-       													 
+        case
+        (
+         _
+         
+         ()
+        )
       )
-         						  
+      													 
       "Usage: alloc [-c]"
   )
                                  

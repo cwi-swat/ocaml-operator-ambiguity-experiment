@@ -14,6 +14,9 @@
        )
        cstrs =
        (
+    											   
+    											   	  
+    											   
        )
        kind =
        
@@ -61,8 +64,8 @@
                                                
        							     
        )
-       	                           
-       														  
+       	                            
+       
        														 
     											   
   								        
@@ -71,12 +74,14 @@
   let
   (
    
-    mk_rule
+     mk_rule
+               	   
    (
     case
         (
      		
-     		 num
+     		  num
+     		            	   
      		(
      		 case
      		     (
@@ -132,41 +137,40 @@
      		  		             subst
      		  		             List.map
      		  		             (
+     		  		                 
      		  		                 (
-     		  		                  
-     		  		                  case
-     		  		                  (
-     		  		                  v
-     		  		                  
-     		  		                  
-     		  		                  sequence
-     		  		                  (
-     		  		                    incr
-     		  		                    (
-     		  		                        counter
-     		  		                    )
-     		  		                  ;
+     		  		                   case
+     		  		                   (
+     		  		                    v
      		  		                    
-     		  		                        					 (
-     		  		                          					   v
-     		  		                        					   
-     		  		                    	
-     		  		                    	Var
-     		  		                    	   
-     		  		                    	    !
-     		  		                    	    (
-     		  		                    	    counter
-     		  		                    	    )
-     		  		                    	       							 
-     		  		                    	    								 
-     		  		                        					   
-     		  		                        					 )
-     		  		                  )
-     		  		                      							
-     		  		                  )
-     		  		                  													 
+     		  		                    
+     		  		                    sequence
+     		  		                    (
+     		  		                      incr
+     		  		                      (
+     		  		                          counter
+     		  		                      )
+     		  		                    ;
+     		  		                      
+     		  		                      (
+     		  		                       v
+     		  		                          					   
+     		  		                      	
+     		  		                      	Var
+     		  		                      	   
+     		  		                      	    !
+     		  		                      	    (
+     		  		                      	    counter
+     		  		                      	    )
+     		  		                      	       							 
+     		  		                      	    								 
+     		  		                          					   
+     		  		                      )
+     		  		                    )
+     		  		                        							
+     		  		                   )
      		  		                 )
-     		  		                    						  
+     		  		                 													 
      		  		                 List.rev
      		  		                 (
      		  		                     all_vars
@@ -221,10 +225,10 @@
      		  		    		   
      		     )
      		)
-     		    		   
+     		            	   
         )
    )
-       		    
+               	    
   )
                                      
   let
@@ -255,58 +259,57 @@
            (
              List.iter
              (
+                 
                  (
-                  
-                  case
-                  (
-                  r
-                  
-                  
-                  sequence
-                  (
-                    incr
+                   case
+                   (
+                    r
+                    
+                    
+                    sequence
                     (
-                        counter
-                    )
-                  ;
-                    ifthenelse
-                    (
-                     if
-                     (
-                      <>
+                      incr
                       (
-                          field
-                          (
-                          r
-                          number
-                          )
-                              									 
-                          
-                           !
-                           (
-                           counter
-                           )
-                              							 
+                          counter
                       )
-                     )
-                     then
-                     (
-                      failwith
+                    ;
+                      ifthenelse
                       (
-                          "Rule numbers not in sequence"
+                       if
+                       (
+                        <>
+                        (
+                            field
+                            (
+                            r
+                            number
+                            )
+                                									 
+                            
+                             !
+                             (
+                             counter
+                             )
+                                							 
+                        )
+                       )
+                       then
+                       (
+                        failwith
+                        (
+                            "Rule numbers not in sequence"
+                        )
+                       )
+                       else
+                       (
+                       )
                       )
-                     )
-                     else
-                     (
-                     )
+                          									   
                     )
-                        									   
-                  )
-                      							
-                  )
-                  													 
+                        							
+                   )
                  )
-                    						  
+                 													 
                  rules
              )
            ;
@@ -428,12 +431,14 @@
   let
   (
    
-    reduce
+     reduce
+               	   
    (
     case
         (
      		
-     		 l
+     		  l
+     		            	   
      		(
      		 case
      		     (
@@ -457,16 +462,17 @@
      		  		    		   
      		     )
      		)
-     		    		   
+     		            	   
         )
    )
-       		    
+               	    
   )
                                      
   let
   (
    
-    can_match
+     can_match
+               	   
    (
     case
         (
@@ -517,13 +523,14 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   let
   (
    
-    reducible
+     reducible
+               	   
    (
     case
         (
@@ -585,13 +592,14 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   let
   (
    
-    mreduce
+     mreduce
+               	   
    (
     case
         (
@@ -673,13 +681,14 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   let
   (
    
-    mrewrite1
+     mrewrite1
+               	   
    (
     case
         (
@@ -739,8 +748,8 @@
      		           
      		           Term
      		              
-     		                  					 (
-     		                    					   f
+     		              (
+     		               f
      		                  					   
      		              	mrewrite1_sons
      		              	(
@@ -748,7 +757,7 @@
      		              	    sons
      		              	)
      		                  					   
-     		                  					 )
+     		              )
      		               								 
      		          )
      		          													    
@@ -766,7 +775,7 @@
      		    		   
         )
    )
-       		     
+               	     
    mrewrite1_sons
   (
    case
@@ -842,7 +851,8 @@
   let
   (
    
-    mrewrite_all
+     mrewrite_all
+               	   
    (
     case
         (
@@ -883,7 +893,7 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
 )

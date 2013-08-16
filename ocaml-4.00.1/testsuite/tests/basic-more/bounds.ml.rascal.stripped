@@ -195,22 +195,22 @@
                      List.iter
                      (
                          (
-                          case
-                          (
-                          n
-                          sequence
-                          (
-                            print_string
+                           case
+                           (
+                            n
+                            sequence
                             (
-                                " "
+                              print_string
+                              (
+                                  " "
+                              )
+                            ;
+                              print_int
+                              (
+                                  n
+                              )
                             )
-                          ;
-                            print_int
-                            (
-                                n
-                            )
-                          )
-                          )
+                           )
                          )
                           !
                           (

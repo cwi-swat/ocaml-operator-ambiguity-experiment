@@ -68,7 +68,7 @@
    	         type
    	         params=
    	         (
-   	          a
+   	         a
    	         )
    	         cstrs =
    	         (
@@ -178,18 +178,18 @@
    	  (
    	    compare
    	    (
-   	     case
-   	     (
-   	       x
-   	       (
-   	       case
-   	       (
-   	       y
-   	       0
-   	       )
-   	       )
-   	     )													
-   	    )
+   	    case
+   	      (
+   	        x
+   	        (
+   	          case
+   	          (
+   	           y
+   	           0
+   	          )
+   	        )
+   	      )
+   	    )													
    	  )
    	  )
    	  "ModSet"

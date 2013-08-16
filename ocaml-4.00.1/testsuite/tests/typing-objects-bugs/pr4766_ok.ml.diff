@@ -1,31 +1,16 @@
-1,30d0
-< (
-<   class
-<   (
-<     params = 
-<     (
-<     )
-<     class name = c
-<     class expr = 
-<                 class_structure
-<                 (
-<                    method m
-<                       poly
-<                       b
-<                 )
-<   )
-<   let
-<   (
-<     o
-<     class_structure
-<     (
-<        inheritance 
-<        (
-<            <>
-<            <"tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],[],"classPath"([],"c")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]>
-<        )
-<        method m
-<              42
-<     )
-<   )
-< )
+12c12
+<          method m
+---
+>               m 
+16d15
+<       <"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>
+24,26c23
+<         constr 
+<                a
+<                c
+---
+>               constr c
+27a25
+>                   a
+32d29
+<     <"patternValueName"("s")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)],["tagg"("a")[@comments=(),@location=|dunno:///|(0,1,<1,1>,<1,1>)]]>

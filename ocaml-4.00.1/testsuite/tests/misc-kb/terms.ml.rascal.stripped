@@ -33,7 +33,7 @@
   )
   let
   (
-    union
+     union
    (
     case
         (
@@ -166,8 +166,8 @@
             	sons
             )
             Term
-                   					 (
-                     					   oper
+               (
+                oper
                	List.map
                	(
                	    substitute
@@ -176,7 +176,7 @@
                	    )
                	    sons
                	)
-                   					 )
+               )
           ) 
             case
             (
@@ -205,11 +205,11 @@
   )
   let
   (
-    replace
+     replace
    (
     case
         (
-     		 m
+     		  m
      		(
      		 case
      		     (
@@ -219,10 +219,10 @@
      		  		     (
      		  		 	  n
      		  		      match
-     		  		          					 (
-     		  		            					   u
+     		  		      (
+     		  		       u
      		  		      	m
-     		  		          					 )
+     		  		      )
      		  		      (
      		  		      case
      		  		      (
@@ -247,8 +247,8 @@
      		  		         	)
      		  		         )
      		  		         Term
-     		  		                					 (
-     		  		                  					   oper
+     		  		            (
+     		  		             oper
      		  		            	replace_nth
      		  		            	(
      		  		            	    i
@@ -256,7 +256,7 @@
      		  		            	    u
      		  		            	    n
      		  		            	)
-     		  		                					 )
+     		  		            )
      		  		        )
      		  		        case
      		  		        (
@@ -273,15 +273,15 @@
      		)
         )
    )
-   replace_nth
+    replace_nth
   (
    case
        (
-    		 i
+    		  i
     		(
     		 case
     		     (
-    		  		 sons
+    		  		  sons
     		  		(
     		  		 case
     		  		     (
@@ -363,7 +363,7 @@
   )
   let
   (
-    matching
+     matching
    (
     case
         (
@@ -375,11 +375,11 @@
      		      let
      		      (
      		       (
-     		         match_rec
+     		          match_rec
      		        (
      		         case
      		             (
-     		          		 subst
+     		          		  subst
      		          		(
      		          		 case
      		          		     (
@@ -389,10 +389,10 @@
      		          		  		     (
      		          		  		 	  t2
      		          		  		      match
-     		          		  		          					 (
-     		          		  		            					   t1
+     		          		  		      (
+     		          		  		       t1
      		          		  		      	t2
-     		          		  		          					 )
+     		          		  		      )
      		          		  		      (
      		          		  		      case
      		          		  		      (
@@ -444,10 +444,10 @@
      		          		  		         (
      		          		  		          ::
      		          		  		          (
-     		          		  		                  					 (
-     		          		  		                    					   v
+     		          		  		              (
+     		          		  		               v
      		          		  		              	t2
-     		          		  		                  					 )
+     		          		  		              )
      		          		  		              subst
      		          		  		          )
      		          		  		         ) 
@@ -527,7 +527,7 @@
   )
   let
   (
-    compsubst
+     compsubst
    (
     case
         (
@@ -541,21 +541,21 @@
      		          List.map
      		          (
      		              (
-     		               case
-     		               (
-     		               (
-     		                v
-     		               	t
-     		               )
-     		                   					 (
-     		                     					   v
-     		               	substitute
-     		               	(
-     		               	    subst1
-     		               	    t
-     		               	)
-     		                   					 )
-     		               )
+     		                case
+     		                (
+     		                 (
+     		                  v
+     		                 	t
+     		                 )
+     		                 (
+     		                  v
+     		                 	substitute
+     		                 	(
+     		                 	    subst1
+     		                 	    t
+     		                 	)
+     		                 )
+     		                )
      		              )
      		              subst2
      		          )
@@ -606,7 +606,7 @@
   )
   let
   (
-    unify
+     unify
    (
     case
         (
@@ -616,10 +616,10 @@
      		     (
      		 	  term2
      		      match
-     		          					 (
-     		            					   term1
+     		      (
+     		       term1
      		      	term2
-     		          					 )
+     		      )
      		      (
      		      case
      		      (
@@ -665,10 +665,10 @@
      		           (
      		            ::
      		             (
-     		                 					 (
-     		                   					   n1
+     		             (
+     		              n1
      		             	term2
-     		                 					 )
+     		             )
      		             []
      		             ) 
      		           ) 
@@ -704,10 +704,10 @@
      		          (
      		           ::
      		            (
-     		                					 (
-     		                  					   n2
+     		            (
+     		             n2
      		            	term1
-     		                					 )
+     		            )
      		            []
      		            ) 
      		          ) 
@@ -742,40 +742,40 @@
      		           List.fold_left2
      		           (
      		               (
-     		                case
-     		                (
-     		                  s
-     		                  (
-     		                  case
-     		                  (
-     		                    t1
-     		                    (
-     		                    case
-     		                    (
-     		                    t2
-     		                    compsubst
-     		                    (
-     		                        unify
-     		                        (
-     		                            substitute
-     		                            (
-     		                                s
-     		                                t1
-     		                            )
-     		                            substitute
-     		                            (
-     		                                s
-     		                                t2
-     		                            )
-     		                        )
-     		                        s
-     		                    )
-     		                    )
-     		                    )
-     		                  )													
-     		                  )
-     		                )													
-     		               )
+     		               case
+     		                 (
+     		                   s
+     		                   (
+     		                   case
+     		                     (
+     		                       t1
+     		                       (
+     		                         case
+     		                         (
+     		                          t2
+     		                          compsubst
+     		                          (
+     		                              unify
+     		                              (
+     		                                  substitute
+     		                                  (
+     		                                      s
+     		                                      t1
+     		                                  )
+     		                                  substitute
+     		                                  (
+     		                                      s
+     		                                      t2
+     		                                  )
+     		                              )
+     		                              s
+     		                          )
+     		                         )
+     		                       )
+     		                     )
+     		                   )													
+     		                 )
+     		               )													
      		               []
      		               sons1
      		               sons2
@@ -937,22 +937,22 @@
                      List.iter
                      (
                          (
-                          case
-                          (
-                          t
-                          sequence
-                          (
-                            print_string
+                           case
+                           (
+                            t
+                            sequence
                             (
-                                ","
+                              print_string
+                              (
+                                  ","
+                              )
+                            ;
+                              pretty_term
+                              (
+                                  t
+                              )
                             )
-                          ;
-                            pretty_term
-                            (
-                                t
-                            )
-                          )
-                          )
+                           )
                          )
                          lt
                      )

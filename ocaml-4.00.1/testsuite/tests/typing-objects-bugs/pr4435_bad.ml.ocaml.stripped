@@ -1,0 +1,64 @@
+(
+  class
+  (
+      params =
+          (
+          )
+      class name = c
+      class expr =
+                    v
+            class_structure
+              (
+                Pcf_init
+                  print_endline
+                  (
+                      v
+                  )
+                v
+                  42
+              )
+  )
+  new c
+  (
+      "42"
+  )
+  class
+  (
+      params =
+          (
+          )
+      class name = c
+      class expr =
+                    v
+             int
+            (
+            )
+            class_structure
+              (
+                method v0
+                  v
+                                  inherit
+                    Pcl_apply
+                                            v
+                        class_structure
+                          (
+                            method v
+                              v
+                                  poly
+                                     string
+                                    (
+                                    )
+                          )
+                    (
+                        "42"
+                    )
+              )
+  )
+  send v0
+  (
+    new c
+    (
+        42
+    )
+  )
+)

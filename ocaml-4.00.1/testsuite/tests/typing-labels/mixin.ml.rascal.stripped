@@ -17,9 +17,9 @@
         (
         )
         kind =
-         string
-         (
-         )
+        string
+        (
+        )
    )
    let
    (
@@ -44,9 +44,9 @@
         (
         )
         kind =
-         string
-         (
-         )
+        string
+        (
+        )
    )
    let
    (
@@ -66,14 +66,14 @@
        (
        )
        kind =
-        (
-          Var
-          (
-          	string
-          	(
-          	)
-          )
-        )
+       (
+       	  Var
+       	  (
+       	  	string
+       	  	(
+       	  	)
+       	  )
+       )
   )
   let
   (
@@ -143,38 +143,38 @@
        type
        params=
        (
-        a
+       a
        )
        cstrs =
        (
        )
        kind =
-        (
-          Var
-          (
-          	string
-          	(
-          	)
-          )
-          Abs
-          (
-          	tuple
-          	(
-          	 string
-          	 (
-          	 )
-          	  a
-          	)
-          )
-          App
-          (
-          	tuple
-          	(
-          	 a
-          	  a
-          	)
-          )
-        )
+       (
+       	  Var
+       	  (
+       	  	string
+       	  	(
+       	  	)
+       	  )
+       	  Abs
+       	  (
+       	  	tuple
+       	  	(
+       	  	 string
+       	  	 (
+       	  	 )
+       	  	  a
+       	  	)
+       	  )
+       	  App
+       	  (
+       	  	tuple
+       	  	(
+       	  	 a
+       	  	  a
+       	  	)
+       	  )
+       )
   )
   let
   (
@@ -385,22 +385,22 @@
      )
     in
       (
-       case
-       (
-       ()
-       sequence
-       (
-         incr
+        case
+        (
+         ()
+         sequence
          (
-             current
+           incr
+           (
+               current
+           )
+         ;
+            !
+            (
+            current
+            )
          )
-       ;
-          !
-          (
-          current
-          )
-       )
-       )
+        )
       )
     )
   )
@@ -465,46 +465,46 @@
      		  		      	              []
      		  		      	              f
      		  		      	              (
-     		  		      	               case
-     		  		      	               (
-     		  		      	                 key
-     		  		      	                 (
-     		  		      	                 case
-     		  		      	                 (
-     		  		      	                   data
-     		  		      	                   (
-     		  		      	                   case
-     		  		      	                   (
-     		  		      	                   acc
-     		  		      	                   ifthenelse
-     		  		      	                   (
-     		  		      	                    if
+     		  		      	              case
+     		  		      	                (
+     		  		      	                  key
+     		  		      	                  (
+     		  		      	                  case
      		  		      	                    (
-     		  		      	                     Names.mem
-     		  		      	                     (
-     		  		      	                         s
-     		  		      	                         used
-     		  		      	                     )
-     		  		      	                    )
-     		  		      	                    then
-     		  		      	                    (
-     		  		      	                     ::
-     		  		      	                     (
-     		  		      	                         data
+     		  		      	                      data
+     		  		      	                      (
+     		  		      	                        case
+     		  		      	                        (
      		  		      	                         acc
-     		  		      	                     )
+     		  		      	                         ifthenelse
+     		  		      	                         (
+     		  		      	                          if
+     		  		      	                          (
+     		  		      	                           Names.mem
+     		  		      	                           (
+     		  		      	                               s
+     		  		      	                               used
+     		  		      	                           )
+     		  		      	                          )
+     		  		      	                          then
+     		  		      	                          (
+     		  		      	                           ::
+     		  		      	                           (
+     		  		      	                               data
+     		  		      	                               acc
+     		  		      	                           )
+     		  		      	                          )
+     		  		      	                          else
+     		  		      	                          (
+     		  		      	                           acc
+     		  		      	                          ) 
+     		  		      	                         )
+     		  		      	                        )
+     		  		      	                      )
      		  		      	                    )
-     		  		      	                    else
-     		  		      	                    (
-     		  		      	                     acc
-     		  		      	                    ) 
-     		  		      	                   )
-     		  		      	                   )
-     		  		      	                   )
-     		  		      	                 )													
-     		  		      	                 )
-     		  		      	               )													
-     		  		      	              )
+     		  		      	                  )													
+     		  		      	                )
+     		  		      	              )													
      		  		      	          ) 
      		  		      	        )
      		  		      	       in
@@ -517,18 +517,18 @@
      		  		      	               used_expr
      		  		      	               f
      		  		      	               (
-     		  		      	                case
-     		  		      	                (
-     		  		      	                t
-     		  		      	                Names.mem
-     		  		      	                (
-     		  		      	                    s
-     		  		      	                    free
-     		  		      	                    (
-     		  		      	                        t
-     		  		      	                    )
-     		  		      	                )
-     		  		      	                )
+     		  		      	                 case
+     		  		      	                 (
+     		  		      	                  t
+     		  		      	                  Names.mem
+     		  		      	                  (
+     		  		      	                      s
+     		  		      	                      free
+     		  		      	                      (
+     		  		      	                          t
+     		  		      	                      )
+     		  		      	                  )
+     		  		      	                 )
      		  		      	               )
      		  		      	           )
      		  		      	          )
@@ -747,46 +747,46 @@
        type
        params=
        (
-        a
+       a
        )
        cstrs =
        (
        )
        kind =
-        (
-          Var
-          (
-          	string
-          	(
-          	)
-          )
-          Num
-          (
-          	int
-          	(
-          	)
-          )
-          Add
-          (
-          	tuple
-          	(
-          	 a
-          	  a
-          	)
-          )
-          Neg
-          (
-          	a
-          )
-          Mult
-          (
-          	tuple
-          	(
-          	 a
-          	  a
-          	)
-          )
-        )
+       (
+       	  Var
+       	  (
+       	  	string
+       	  	(
+       	  	)
+       	  )
+       	  Num
+       	  (
+       	  	int
+       	  	(
+       	  	)
+       	  )
+       	  Add
+       	  (
+       	  	tuple
+       	  	(
+       	  	 a
+       	  	  a
+       	  	)
+       	  )
+       	  Neg
+       	  (
+       	  	a
+       	  )
+       	  Mult
+       	  (
+       	  	tuple
+       	  	(
+       	  	 a
+       	  	  a
+       	  	)
+       	  )
+       )
   )
   let
   (
@@ -1253,74 +1253,74 @@
        (
        )
        kind =
-        (
-          Var
-          (
-          	string
-          	(
-          	)
-          )
-          Abs
-          (
-          	tuple
-          	(
-          	 string
-          	 (
-          	 )
-          	  lexpr
-          	  (
-          	  )
-          	)
-          )
-          App
-          (
-          	tuple
-          	(
-          	 lexpr
-          	 (
-          	 )
-          	  lexpr
-          	  (
-          	  )
-          	)
-          )
-          Num
-          (
-          	int
-          	(
-          	)
-          )
-          Add
-          (
-          	tuple
-          	(
-          	 lexpr
-          	 (
-          	 )
-          	  lexpr
-          	  (
-          	  )
-          	)
-          )
-          Neg
-          (
-          	lexpr
-          	(
-          	)
-          )
-          Mult
-          (
-          	tuple
-          	(
-          	 lexpr
-          	 (
-          	 )
-          	  lexpr
-          	  (
-          	  )
-          	)
-          )
-        )
+       (
+       	  Var
+       	  (
+       	  	string
+       	  	(
+       	  	)
+       	  )
+       	  Abs
+       	  (
+       	  	tuple
+       	  	(
+       	  	 string
+       	  	 (
+       	  	 )
+       	  	  lexpr
+       	  	  (
+       	  	  )
+       	  	)
+       	  )
+       	  App
+       	  (
+       	  	tuple
+       	  	(
+       	  	 lexpr
+       	  	 (
+       	  	 )
+       	  	  lexpr
+       	  	  (
+       	  	  )
+       	  	)
+       	  )
+       	  Num
+       	  (
+       	  	int
+       	  	(
+       	  	)
+       	  )
+       	  Add
+       	  (
+       	  	tuple
+       	  	(
+       	  	 lexpr
+       	  	 (
+       	  	 )
+       	  	  lexpr
+       	  	  (
+       	  	  )
+       	  	)
+       	  )
+       	  Neg
+       	  (
+       	  	lexpr
+       	  	(
+       	  	)
+       	  )
+       	  Mult
+       	  (
+       	  	tuple
+       	  	(
+       	  	 lexpr
+       	  	 (
+       	  	 )
+       	  	  lexpr
+       	  	  (
+       	  	  )
+       	  	)
+       	  )
+       )
   )
   let
   (

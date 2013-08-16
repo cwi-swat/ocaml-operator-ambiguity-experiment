@@ -16,33 +16,33 @@
          Thread.create
          (
              (
-              case
-              (
-              ()
-               for i
-               1
-               5
-               sequence
+               case
                (
-                 print_endline
-                 (
-                     "Thread"
-                 )
-               ;
+                ()
+                 for i
+                 1
+                 5
                  sequence
                  (
-                   flush
+                   print_endline
                    (
-                       stdout
+                       "Thread"
                    )
                  ;
-                   Thread.delay
+                   sequence
                    (
-                       1.
+                     flush
+                     (
+                         stdout
+                     )
+                   ;
+                     Thread.delay
+                     (
+                         1.
+                     )
                    )
                  )
                )
-              )
              )
              ()
          ) 

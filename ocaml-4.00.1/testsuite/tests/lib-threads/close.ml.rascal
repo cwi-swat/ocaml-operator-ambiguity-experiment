@@ -39,56 +39,55 @@
               _
               Thread.create
               (
+                  
                   (
-                   
-                   case
-                   (
-                   ()
-                   
-                   
-                   sequence
-                   (
-                     ignore
-                     (
-                         Unix.write
-                         (
-                             wr
-                             "0123456789"
-                             0
-                             10
-                         )
-                     )
-                   ;
+                    case
+                    (
+                     ()
+                     
                      
                      sequence
                      (
-                       Thread.delay
+                       ignore
                        (
-                           3.0
+                           Unix.write
+                           (
+                               wr
+                               "0123456789"
+                               0
+                               10
+                           )
                        )
                      ;
                        
                        sequence
                        (
-                         print_endline
+                         Thread.delay
                          (
-                             "closing fd..."
+                             3.0
                          )
                        ;
-                         Unix.close
+                         
+                         sequence
                          (
-                             rd
+                           print_endline
+                           (
+                               "closing fd..."
+                           )
+                         ;
+                           Unix.close
+                           (
+                               rd
+                           )
                          )
+                             							
                        )
                            							
                      )
                          							
-                   )
-                       							
-                   )
-                   													 
+                    )
                   )
-                     						  
+                  													 
                   ()
               ) 
              							    		   

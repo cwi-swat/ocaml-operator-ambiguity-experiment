@@ -52,21 +52,21 @@
                 ref
                 (
                     
-                     Characters
-                     ::
-                      (
-                      String.get
-                      (
-                          s
-                          -
-                          (
-                              l
-                              1
-                          )
-                      )
-                      []
-                      ) 
-                         						  
+                    Characters
+                       ::
+                        (
+                        String.get
+                        (
+                            s
+                            -
+                            (
+                                l
+                                1
+                            )
+                        )
+                        []
+                        ) 
+                           						  
                         								 
                 ) 
                							    		   
@@ -87,32 +87,31 @@
                   (
                       re
                       
-                       Sequence
-                       
-                       (
-                           					 
-                             					  Characters
-                             					  ::
-                             					   (
-                             					   String.get
-                             					   (
-                             					       s
-                             					       i
-                             					   )
-                             					   []
-                             					   ) 
-                             					      						  
-                             					     								 
-                           					 
-                       	
-                       	 !
-                       	 (
-                       	 re
-                       	 )
-                       	    							 
-                           					 
-                       )
-                           					 
+                      Sequence
+                         
+                         (
+                          
+                          Characters
+                             ::
+                              (
+                              String.get
+                              (
+                                  s
+                                  i
+                              )
+                              []
+                              ) 
+                                 						  
+                              								 
+                             					   
+                         	
+                         	 !
+                         	 (
+                         	 re
+                         	 )
+                         	    							 
+                             					   
+                         )
                           								 
                   )
                      														  
@@ -140,7 +139,8 @@
   let
   (
    
-    char_class
+     char_class
+               	   
    (
     case
         (
@@ -211,7 +211,7 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
   let
@@ -229,7 +229,8 @@
   let
   (
    
-    subtract
+     subtract
+               	   
    (
     case
         (
@@ -303,7 +304,7 @@
      		    		   
         )
    )
-       		    
+               	    
   )
                                      
 )

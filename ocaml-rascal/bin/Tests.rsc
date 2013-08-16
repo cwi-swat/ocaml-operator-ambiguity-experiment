@@ -12,10 +12,10 @@ import ParseTree;
 import Node;
 import Type;
 
-str filePath = "Users/aliafroozeh/workspace/ocaml-operator-ambiguity-experiment/ocaml-4.00.1/testsuite/tests/";
+str filePath = "Users/aliafroozeh/workspace/ocaml-operator-ambiguity-experiment/ocaml-4.00.1/testsuite/";
 
 public void run() {	 
-	files = readFileLines(|file:///| + filePath + "/" + new.txt);
+	files = readFileLines(|file:///Users/aliafroozeh/workspace/ocaml-operator-ambiguity-experiment/toplevel.txt|);
 	for (f <- files) {
 		runFile(f);
 	}
@@ -24,7 +24,7 @@ public void run() {
 public void runFile(str f) {
 		print(f + "...");
 		try {
-			tree = jparse(#start[Implementation], readFile(|file:///| + filePath + "/" + f));
+			tree = jparse(#start[TopLevel], readFile(|file:///| + filePath + "/" + f));
 			
 			if (/amb(_) := tree) {
 				tree = filterOCaml(tree);
@@ -1821,12 +1821,16 @@ int convert(str s) {
 	return toInt(s);
 }
 
+int getSize(node n) {
+	return 1;
+}
+
 int getSize(value n) {
 	switch(n) {
 		case "comma"(e, l): return 1 + size(l);
 	}
 	
-	fail;
+	return 1;
 }
 
 @javaClass{ocaml.Util}		

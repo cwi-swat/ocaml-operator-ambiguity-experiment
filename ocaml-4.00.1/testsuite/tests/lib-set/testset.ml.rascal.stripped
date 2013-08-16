@@ -73,7 +73,7 @@
   )
   let
   (
-    check
+     check
    (
     case
         (
@@ -114,7 +114,7 @@
   )
   let
   (
-    checkbool
+     checkbool
    (
     case
         (
@@ -198,11 +198,11 @@
   )
   let
   (
-    test
+     test
    (
     case
         (
-     		 x
+     		  x
      		(
      		 case
      		     (
@@ -225,18 +225,18 @@
      		  		                List.for_all
      		  		                (
      		  		                    (
-     		  		                     case
-     		  		                     (
-     		  		                     i
-     		  		                     not
-     		  		                     (
-     		  		                         S.mem
-     		  		                         (
-     		  		                             i
-     		  		                             s1
-     		  		                         )
-     		  		                     )
-     		  		                     )
+     		  		                      case
+     		  		                      (
+     		  		                       i
+     		  		                       not
+     		  		                       (
+     		  		                           S.mem
+     		  		                           (
+     		  		                               i
+     		  		                               s1
+     		  		                           )
+     		  		                       )
+     		  		                      )
      		  		                    )
      		  		                    testvals
      		  		                )
@@ -260,31 +260,31 @@
      		  		               )
      		  		              in
      		  		                (
-     		  		                 case
-     		  		                 (
-     		  		                 i
-     		  		                 =
-     		  		                 (
-     		  		                     S.mem
-     		  		                     (
-     		  		                         i
-     		  		                         s
-     		  		                     )
-     		  		                     ||
-     		  		                     (
-     		  		                         S.mem
-     		  		                         (
-     		  		                             i
-     		  		                             s1
-     		  		                         )
-     		  		                         =
-     		  		                         (
-     		  		                             i
-     		  		                             x
-     		  		                         )
-     		  		                     )
-     		  		                 )
-     		  		                 )
+     		  		                  case
+     		  		                  (
+     		  		                   i
+     		  		                   =
+     		  		                   (
+     		  		                       S.mem
+     		  		                       (
+     		  		                           i
+     		  		                           s
+     		  		                       )
+     		  		                       ||
+     		  		                       (
+     		  		                           S.mem
+     		  		                           (
+     		  		                               i
+     		  		                               s1
+     		  		                           )
+     		  		                           =
+     		  		                           (
+     		  		                               i
+     		  		                               x
+     		  		                           )
+     		  		                       )
+     		  		                   )
+     		  		                  )
      		  		                )
      		  		              )
      		  		          )
@@ -305,23 +305,23 @@
      		  		                 )
      		  		                in
      		  		                  (
-     		  		                   case
-     		  		                   (
-     		  		                   i
-     		  		                   =
-     		  		                   (
-     		  		                       S.mem
-     		  		                       (
-     		  		                           i
-     		  		                           s
-     		  		                       )
-     		  		                       =
-     		  		                       (
-     		  		                           i
-     		  		                           x
-     		  		                       )
-     		  		                   )
-     		  		                   )
+     		  		                    case
+     		  		                    (
+     		  		                     i
+     		  		                     =
+     		  		                     (
+     		  		                         S.mem
+     		  		                         (
+     		  		                             i
+     		  		                             s
+     		  		                         )
+     		  		                         =
+     		  		                         (
+     		  		                             i
+     		  		                             x
+     		  		                         )
+     		  		                     )
+     		  		                    )
      		  		                  )
      		  		                )
      		  		            )
@@ -343,31 +343,31 @@
      		  		                   )
      		  		                  in
      		  		                    (
-     		  		                     case
-     		  		                     (
-     		  		                     i
-     		  		                     =
-     		  		                     (
-     		  		                         S.mem
-     		  		                         (
-     		  		                             i
-     		  		                             s
-     		  		                         )
-     		  		                         &&
-     		  		                         (
-     		  		                             S.mem
-     		  		                             (
-     		  		                                 i
-     		  		                                 s1
-     		  		                             )
-     		  		                             <>
-     		  		                             (
-     		  		                                 i
-     		  		                                 x
-     		  		                             )
-     		  		                         )
-     		  		                     )
-     		  		                     )
+     		  		                      case
+     		  		                      (
+     		  		                       i
+     		  		                       =
+     		  		                       (
+     		  		                           S.mem
+     		  		                           (
+     		  		                               i
+     		  		                               s
+     		  		                           )
+     		  		                           &&
+     		  		                           (
+     		  		                               S.mem
+     		  		                               (
+     		  		                                   i
+     		  		                                   s1
+     		  		                               )
+     		  		                               <>
+     		  		                               (
+     		  		                                   i
+     		  		                                   x
+     		  		                               )
+     		  		                           )
+     		  		                       )
+     		  		                      )
      		  		                    )
      		  		                  )
      		  		              )
@@ -389,31 +389,31 @@
      		  		                     )
      		  		                    in
      		  		                      (
-     		  		                       case
-     		  		                       (
-     		  		                       i
-     		  		                       =
-     		  		                       (
-     		  		                           S.mem
-     		  		                           (
-     		  		                               i
-     		  		                               s
-     		  		                           )
-     		  		                           ||
-     		  		                           (
-     		  		                               S.mem
-     		  		                               (
-     		  		                                   i
-     		  		                                   s1
-     		  		                               )
-     		  		                               S.mem
-     		  		                               (
-     		  		                                   i
-     		  		                                   s2
-     		  		                               )
-     		  		                           )
-     		  		                       )
-     		  		                       )
+     		  		                        case
+     		  		                        (
+     		  		                         i
+     		  		                         =
+     		  		                         (
+     		  		                             S.mem
+     		  		                             (
+     		  		                                 i
+     		  		                                 s
+     		  		                             )
+     		  		                             ||
+     		  		                             (
+     		  		                                 S.mem
+     		  		                                 (
+     		  		                                     i
+     		  		                                     s1
+     		  		                                 )
+     		  		                                 S.mem
+     		  		                                 (
+     		  		                                     i
+     		  		                                     s2
+     		  		                                 )
+     		  		                             )
+     		  		                         )
+     		  		                        )
      		  		                      )
      		  		                    )
      		  		                )
@@ -435,31 +435,31 @@
      		  		                       )
      		  		                      in
      		  		                        (
-     		  		                         case
-     		  		                         (
-     		  		                         i
-     		  		                         =
-     		  		                         (
-     		  		                             S.mem
-     		  		                             (
-     		  		                                 i
-     		  		                                 s
-     		  		                             )
-     		  		                             &&
-     		  		                             (
-     		  		                                 S.mem
-     		  		                                 (
-     		  		                                     i
-     		  		                                     s1
-     		  		                                 )
-     		  		                                 S.mem
-     		  		                                 (
-     		  		                                     i
-     		  		                                     s2
-     		  		                                 )
-     		  		                             )
-     		  		                         )
-     		  		                         )
+     		  		                          case
+     		  		                          (
+     		  		                           i
+     		  		                           =
+     		  		                           (
+     		  		                               S.mem
+     		  		                               (
+     		  		                                   i
+     		  		                                   s
+     		  		                               )
+     		  		                               &&
+     		  		                               (
+     		  		                                   S.mem
+     		  		                                   (
+     		  		                                       i
+     		  		                                       s1
+     		  		                                   )
+     		  		                                   S.mem
+     		  		                                   (
+     		  		                                       i
+     		  		                                       s2
+     		  		                                   )
+     		  		                               )
+     		  		                           )
+     		  		                          )
      		  		                        )
      		  		                      )
      		  		                  )
@@ -481,34 +481,34 @@
      		  		                         )
      		  		                        in
      		  		                          (
-     		  		                           case
-     		  		                           (
-     		  		                           i
-     		  		                           =
-     		  		                           (
-     		  		                               S.mem
-     		  		                               (
-     		  		                                   i
-     		  		                                   s
-     		  		                               )
-     		  		                               &&
-     		  		                               (
-     		  		                                   S.mem
-     		  		                                   (
-     		  		                                       i
-     		  		                                       s1
-     		  		                                   )
-     		  		                                   not
-     		  		                                   (
-     		  		                                       S.mem
-     		  		                                       (
-     		  		                                           i
-     		  		                                           s2
-     		  		                                       )
-     		  		                                   )
-     		  		                               )
-     		  		                           )
-     		  		                           )
+     		  		                            case
+     		  		                            (
+     		  		                             i
+     		  		                             =
+     		  		                             (
+     		  		                                 S.mem
+     		  		                                 (
+     		  		                                     i
+     		  		                                     s
+     		  		                                 )
+     		  		                                 &&
+     		  		                                 (
+     		  		                                     S.mem
+     		  		                                     (
+     		  		                                         i
+     		  		                                         s1
+     		  		                                     )
+     		  		                                     not
+     		  		                                     (
+     		  		                                         S.mem
+     		  		                                         (
+     		  		                                             i
+     		  		                                             s2
+     		  		                                         )
+     		  		                                     )
+     		  		                                 )
+     		  		                             )
+     		  		                            )
      		  		                          )
      		  		                        )
      		  		                    )
@@ -527,15 +527,15 @@
      		  		                              List.filter
      		  		                              (
      		  		                                  (
-     		  		                                   case
-     		  		                                   (
-     		  		                                   i
-     		  		                                   S.mem
-     		  		                                   (
-     		  		                                       i
-     		  		                                       s1
-     		  		                                   )
-     		  		                                   )
+     		  		                                    case
+     		  		                                    (
+     		  		                                     i
+     		  		                                     S.mem
+     		  		                                     (
+     		  		                                         i
+     		  		                                         s1
+     		  		                                     )
+     		  		                                    )
      		  		                                  )
      		  		                                  testvals
      		  		                              )
@@ -617,37 +617,37 @@
      		  		                                 )
      		  		                                in
      		  		                                  (
-     		  		                                   case
-     		  		                                   (
-     		  		                                   i
-     		  		                                   ifthenelse
-     		  		                                   (
-     		  		                                    if
+     		  		                                    case
      		  		                                    (
-     		  		                                     &&
+     		  		                                     i
+     		  		                                     ifthenelse
      		  		                                     (
-     		  		                                         b
-     		  		                                         S.mem
-     		  		                                         (
-     		  		                                             i
-     		  		                                             s1
-     		  		                                         )
+     		  		                                      if
+     		  		                                      (
+     		  		                                       &&
+     		  		                                       (
+     		  		                                           b
+     		  		                                           S.mem
+     		  		                                           (
+     		  		                                               i
+     		  		                                               s1
+     		  		                                           )
+     		  		                                       )
+     		  		                                      )
+     		  		                                      then
+     		  		                                      (
+     		  		                                       S.mem
+     		  		                                       (
+     		  		                                           i
+     		  		                                           s2
+     		  		                                       )
+     		  		                                      )
+     		  		                                      else
+     		  		                                      (
+     		  		                                       true
+     		  		                                      ) 
      		  		                                     )
      		  		                                    )
-     		  		                                    then
-     		  		                                    (
-     		  		                                     S.mem
-     		  		                                     (
-     		  		                                         i
-     		  		                                         s2
-     		  		                                     )
-     		  		                                    )
-     		  		                                    else
-     		  		                                    (
-     		  		                                     true
-     		  		                                    ) 
-     		  		                                   )
-     		  		                                   )
      		  		                                  )
      		  		                                )
      		  		                            )
@@ -954,15 +954,15 @@
      		  		                                                    S.for_all
      		  		                                                    (
      		  		                                                        (
-     		  		                                                         case
-     		  		                                                         (
-     		  		                                                         i
-     		  		                                                         <=
-     		  		                                                         (
-     		  		                                                             m
-     		  		                                                             i
-     		  		                                                         )
-     		  		                                                         )
+     		  		                                                          case
+     		  		                                                          (
+     		  		                                                           i
+     		  		                                                           <=
+     		  		                                                           (
+     		  		                                                               m
+     		  		                                                               i
+     		  		                                                           )
+     		  		                                                          )
      		  		                                                        )
      		  		                                                        s1
      		  		                                                    )
@@ -1006,15 +1006,15 @@
      		  		                                                      S.for_all
      		  		                                                      (
      		  		                                                          (
-     		  		                                                           case
-     		  		                                                           (
-     		  		                                                           i
-     		  		                                                           >=
-     		  		                                                           (
-     		  		                                                               m
-     		  		                                                               i
-     		  		                                                           )
-     		  		                                                           )
+     		  		                                                            case
+     		  		                                                            (
+     		  		                                                             i
+     		  		                                                             >=
+     		  		                                                             (
+     		  		                                                                 m
+     		  		                                                                 i
+     		  		                                                             )
+     		  		                                                            )
      		  		                                                          )
      		  		                                                          s1
      		  		                                                      )
@@ -1085,42 +1085,14 @@
      		  		                                                   )
      		  		                                                  in
      		  		                                                    (
-     		  		                                                     case
-     		  		                                                     (
-     		  		                                                     i
-     		  		                                                     ifthenelse
-     		  		                                                     (
-     		  		                                                      if
+     		  		                                                      case
      		  		                                                      (
-     		  		                                                       <
-     		  		                                                       (
-     		  		                                                           i
-     		  		                                                           x
-     		  		                                                       )
-     		  		                                                      )
-     		  		                                                      then
-     		  		                                                      (
-     		  		                                                       =
-     		  		                                                       (
-     		  		                                                           S.mem
-     		  		                                                           (
-     		  		                                                               i
-     		  		                                                               l
-     		  		                                                           )
-     		  		                                                           S.mem
-     		  		                                                           (
-     		  		                                                               i
-     		  		                                                               s1
-     		  		                                                           )
-     		  		                                                       )
-     		  		                                                      )
-     		  		                                                      else
-     		  		                                                      (
+     		  		                                                       i
      		  		                                                       ifthenelse
      		  		                                                       (
      		  		                                                        if
      		  		                                                        (
-     		  		                                                         >
+     		  		                                                         <
      		  		                                                         (
      		  		                                                             i
      		  		                                                             x
@@ -1133,7 +1105,7 @@
      		  		                                                             S.mem
      		  		                                                             (
      		  		                                                                 i
-     		  		                                                                 r
+     		  		                                                                 l
      		  		                                                             )
      		  		                                                             S.mem
      		  		                                                             (
@@ -1144,20 +1116,48 @@
      		  		                                                        )
      		  		                                                        else
      		  		                                                        (
-     		  		                                                         =
+     		  		                                                         ifthenelse
      		  		                                                         (
-     		  		                                                             p
-     		  		                                                             S.mem
-     		  		                                                             (
-     		  		                                                                 i
-     		  		                                                                 s1
-     		  		                                                             )
+     		  		                                                          if
+     		  		                                                          (
+     		  		                                                           >
+     		  		                                                           (
+     		  		                                                               i
+     		  		                                                               x
+     		  		                                                           )
+     		  		                                                          )
+     		  		                                                          then
+     		  		                                                          (
+     		  		                                                           =
+     		  		                                                           (
+     		  		                                                               S.mem
+     		  		                                                               (
+     		  		                                                                   i
+     		  		                                                                   r
+     		  		                                                               )
+     		  		                                                               S.mem
+     		  		                                                               (
+     		  		                                                                   i
+     		  		                                                                   s1
+     		  		                                                               )
+     		  		                                                           )
+     		  		                                                          )
+     		  		                                                          else
+     		  		                                                          (
+     		  		                                                           =
+     		  		                                                           (
+     		  		                                                               p
+     		  		                                                               S.mem
+     		  		                                                               (
+     		  		                                                                   i
+     		  		                                                                   s1
+     		  		                                                               )
+     		  		                                                           )
+     		  		                                                          ) 
      		  		                                                         )
      		  		                                                        ) 
      		  		                                                       )
-     		  		                                                      ) 
-     		  		                                                     )
-     		  		                                                     )
+     		  		                                                      )
      		  		                                                    )
      		  		                                                  )
      		  		                                              )

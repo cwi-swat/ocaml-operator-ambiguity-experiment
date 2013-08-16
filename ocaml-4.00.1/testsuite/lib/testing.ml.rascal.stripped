@@ -238,11 +238,11 @@
    )
    let
    (
-     test_raises_exc_p
+      test_raises_exc_p
     (
      case
          (
-      		 pred
+      		  pred
       		(
       		 case
       		     (
@@ -319,11 +319,11 @@
           test_raises_exc_p
           (
               (
-               case
-               (
-               _
-               true
-               )
+                case
+                (
+                 _
+                 true
+                )
               )
               f
           )
@@ -340,15 +340,15 @@
           test_raises_exc_p
           (
               (
-               case
-               (
-               x
-               =
-               (
-                   x
-                   exc
-               )
-               )
+                case
+                (
+                 x
+                 =
+                 (
+                     x
+                     exc
+                 )
+                )
               )
           )
          )
@@ -356,11 +356,11 @@
    )
    let
    (
-     test_raises_this_failure
+      test_raises_this_failure
     (
      case
          (
-      		 s
+      		  s
       		(
       		 case
       		     (
@@ -372,16 +372,16 @@
       		  		      test_raises_exc_p
       		  		      (
       		  		          (
-      		  		           case
-      		  		           (
-      		  		           x
-      		  		           =
-      		  		           (
-      		  		               x
-      		  		                Failure
-      		  		                s
-      		  		           )
-      		  		           )
+      		  		            case
+      		  		            (
+      		  		             x
+      		  		             =
+      		  		             (
+      		  		                 x
+      		  		                 Failure
+      		  		                    s
+      		  		             )
+      		  		            )
       		  		          )
       		  		          f
       		  		          x
@@ -395,7 +395,7 @@
    )
    let
    (
-     test_raises_some_failure
+      test_raises_some_failure
     (
      case
          (
@@ -429,11 +429,11 @@
    )
    let
    (
-     failure_test
+      failure_test
     (
      case
          (
-      		 f
+      		  f
       		(
       		 case
       		     (
@@ -462,7 +462,7 @@
    )
    let
    (
-     scan_failure_test
+      scan_failure_test
     (
      case
          (

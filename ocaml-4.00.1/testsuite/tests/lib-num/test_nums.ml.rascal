@@ -47,25 +47,25 @@
       1
       eq_num
       
-          					 (
-            					   add_num
       (
-          
-          Int
-             1
-              								 
-          
-          Int
-             3
-              								 
-      )
+       add_num
+       (
+           
+           Int
+              1
+               								 
+           
+           Int
+              3
+               								 
+       )
           					   
       	
       	Int
       	   4
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -73,28 +73,28 @@
       2
       eq_num
       
-          					 (
-            					   add_num
       (
-          
-          Int
-             1
-              								 
-          
-          Big_int
-             big_int_of_int
-             (
-                 3
-             )
-              								 
-      )
+       add_num
+       (
+           
+           Int
+              1
+               								 
+           
+           Big_int
+              big_int_of_int
+              (
+                  3
+              )
+               								 
+       )
           					   
       	
       	Int
       	   4
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -102,21 +102,21 @@
       3
       eq_num
       
-          					 (
-            					   add_num
       (
-          
-          Int
-             1
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       add_num
+       (
+           
+           Int
+              1
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -126,7 +126,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -134,24 +134,24 @@
       4
       eq_num
       
-          					 (
-            					   add_num
       (
-          
-          Big_int
-             big_int_of_int
-             (
-                 1
-             )
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       add_num
+       (
+           
+           Big_int
+              big_int_of_int
+              (
+                  1
+              )
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -161,7 +161,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -169,31 +169,31 @@
       5
       eq_num
       
-          					 (
-            					   add_num
       (
-          
-          Big_int
-             big_int_of_int
-             (
-                 1
-             )
-              								 
-          
-          Big_int
-             big_int_of_int
-             (
-                 3
-             )
-              								 
-      )
+       add_num
+       (
+           
+           Big_int
+              big_int_of_int
+              (
+                  1
+              )
+               								 
+           
+           Big_int
+              big_int_of_int
+              (
+                  3
+              )
+               								 
+       )
           					   
       	
       	Int
       	   4
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -201,24 +201,24 @@
       6
       eq_num
       
-          					 (
-            					   add_num
       (
-          
-          Big_int
-             big_int_of_int
-             (
-                 1
-             )
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       add_num
+       (
+           
+           Big_int
+              big_int_of_int
+              (
+                  1
+              )
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -228,7 +228,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -236,24 +236,24 @@
       7
       eq_num
       
-          					 (
-            					   add_num
       (
-          
-          Ratio
-             ratio_of_string
-             (
-                 "2/3"
-             )
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       add_num
+       (
+           
+           Ratio
+              ratio_of_string
+              (
+                  "2/3"
+              )
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -263,7 +263,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -271,18 +271,18 @@
       8
       eq_num
       
-          					 (
-            					   add_num
       (
-          
-          Int
-             least_int
-              								 
-          
-          Int
-             1
-              								 
-      )
+       add_num
+       (
+           
+           Int
+              least_int
+               								 
+           
+           Int
+              1
+               								 
+       )
           					   
       	
       	Int
@@ -295,7 +295,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -303,18 +303,18 @@
       9
       eq_num
       
-          					 (
-            					   add_num
       (
-          
-          Int
-             biggest_int
-              								 
-          
-          Int
-             1
-              								 
-      )
+       add_num
+       (
+           
+           Int
+              biggest_int
+               								 
+           
+           Int
+              1
+               								 
+       )
           					   
       	
       	Big_int
@@ -330,7 +330,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   testing_function
@@ -343,25 +343,25 @@
       1
       eq_num
       
-          					 (
-            					   sub_num
       (
-          
-          Int
-             1
-              								 
-          
-          Int
-             3
-              								 
-      )
+       sub_num
+       (
+           
+           Int
+              1
+               								 
+           
+           Int
+              3
+               								 
+       )
           					   
       	
       	Int
       	   -2
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -369,28 +369,28 @@
       2
       eq_num
       
-          					 (
-            					   sub_num
       (
-          
-          Int
-             1
-              								 
-          
-          Big_int
-             big_int_of_int
-             (
-                 3
-             )
-              								 
-      )
+       sub_num
+       (
+           
+           Int
+              1
+               								 
+           
+           Big_int
+              big_int_of_int
+              (
+                  3
+              )
+               								 
+       )
           					   
       	
       	Int
       	   -2
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -398,21 +398,21 @@
       3
       eq_num
       
-          					 (
-            					   sub_num
       (
-          
-          Int
-             1
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       sub_num
+       (
+           
+           Int
+              1
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -422,7 +422,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -430,24 +430,24 @@
       4
       eq_num
       
-          					 (
-            					   sub_num
       (
-          
-          Big_int
-             big_int_of_int
-             (
-                 1
-             )
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       sub_num
+       (
+           
+           Big_int
+              big_int_of_int
+              (
+                  1
+              )
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -457,7 +457,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -465,31 +465,31 @@
       5
       eq_num
       
-          					 (
-            					   sub_num
       (
-          
-          Big_int
-             big_int_of_int
-             (
-                 1
-             )
-              								 
-          
-          Big_int
-             big_int_of_int
-             (
-                 3
-             )
-              								 
-      )
+       sub_num
+       (
+           
+           Big_int
+              big_int_of_int
+              (
+                  1
+              )
+               								 
+           
+           Big_int
+              big_int_of_int
+              (
+                  3
+              )
+               								 
+       )
           					   
       	
       	Int
       	   -2
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -497,24 +497,24 @@
       7
       eq_num
       
-          					 (
-            					   sub_num
       (
-          
-          Big_int
-             big_int_of_int
-             (
-                 1
-             )
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       sub_num
+       (
+           
+           Big_int
+              big_int_of_int
+              (
+                  1
+              )
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -524,7 +524,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -532,24 +532,24 @@
       8
       eq_num
       
-          					 (
-            					   sub_num
       (
-          
-          Ratio
-             ratio_of_string
-             (
-                 "2/3"
-             )
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       sub_num
+       (
+           
+           Ratio
+              ratio_of_string
+              (
+                  "2/3"
+              )
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -559,7 +559,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -567,18 +567,18 @@
       9
       eq_num
       
-          					 (
-            					   sub_num
       (
-          
-          Int
-             least_int
-              								 
-          
-          Int
-             -1
-              								 
-      )
+       sub_num
+       (
+           
+           Int
+              least_int
+               								 
+           
+           Int
+              -1
+               								 
+       )
           					   
       	
       	Int
@@ -591,7 +591,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -599,18 +599,18 @@
       10
       eq_num
       
-          					 (
-            					   sub_num
       (
-          
-          Int
-             -1
-              								 
-          
-          Int
-             biggest_int
-              								 
-      )
+       sub_num
+       (
+           
+           Int
+              -1
+               								 
+           
+           Int
+              biggest_int
+               								 
+       )
           					   
       	pred_num
       	(
@@ -620,7 +620,7 @@
       	        								 
       	)
           					   
-          					 )
+      )
   )
                                  
   testing_function
@@ -633,25 +633,25 @@
       1
       eq_num
       
-          					 (
-            					   mult_num
       (
-          
-          Int
-             2
-              								 
-          
-          Int
-             3
-              								 
-      )
+       mult_num
+       (
+           
+           Int
+              2
+               								 
+           
+           Int
+              3
+               								 
+       )
           					   
       	
       	Int
       	   6
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -659,21 +659,21 @@
       2
       eq_num
       
-          					 (
-            					   mult_num
       (
-          
-          Int
-             127
-              								 
-          
-          Int
-             int_of_string
-             (
-                 "257"
-             )
-              								 
-      )
+       mult_num
+       (
+           
+           Int
+              127
+               								 
+           
+           Int
+              int_of_string
+              (
+                  "257"
+              )
+               								 
+       )
           					   
       	
       	Int
@@ -683,7 +683,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -691,21 +691,21 @@
       3
       eq_num
       
-          					 (
-            					   mult_num
       (
-          
-          Int
-             257
-              								 
-          
-          Int
-             int_of_string
-             (
-                 "260"
-             )
-              								 
-      )
+       mult_num
+       (
+           
+           Int
+              257
+               								 
+           
+           Int
+              int_of_string
+              (
+                  "260"
+              )
+               								 
+       )
           					   
       	
       	Big_int
@@ -715,7 +715,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -723,28 +723,28 @@
       4
       eq_num
       
-          					 (
-            					   mult_num
       (
-          
-          Int
-             2
-              								 
-          
-          Big_int
-             big_int_of_int
-             (
-                 3
-             )
-              								 
-      )
+       mult_num
+       (
+           
+           Int
+              2
+               								 
+           
+           Big_int
+              big_int_of_int
+              (
+                  3
+              )
+               								 
+       )
           					   
       	
       	Int
       	   6
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -752,21 +752,21 @@
       5
       eq_num
       
-          					 (
-            					   mult_num
       (
-          
-          Int
-             10
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       mult_num
+       (
+           
+           Int
+              10
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -776,7 +776,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -784,24 +784,24 @@
       6
       eq_num
       
-          					 (
-            					   mult_num
       (
-          
-          Big_int
-             big_int_of_int
-             (
-                 10
-             )
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       mult_num
+       (
+           
+           Big_int
+              big_int_of_int
+              (
+                  10
+              )
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -811,7 +811,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -819,31 +819,31 @@
       7
       eq_num
       
-          					 (
-            					   mult_num
       (
-          
-          Big_int
-             big_int_of_int
-             (
-                 2
-             )
-              								 
-          
-          Big_int
-             big_int_of_int
-             (
-                 3
-             )
-              								 
-      )
+       mult_num
+       (
+           
+           Big_int
+              big_int_of_int
+              (
+                  2
+              )
+               								 
+           
+           Big_int
+              big_int_of_int
+              (
+                  3
+              )
+               								 
+       )
           					   
       	
       	Int
       	   6
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -851,24 +851,24 @@
       8
       eq_num
       
-          					 (
-            					   mult_num
       (
-          
-          Big_int
-             big_int_of_int
-             (
-                 10
-             )
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       mult_num
+       (
+           
+           Big_int
+              big_int_of_int
+              (
+                  10
+              )
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -878,7 +878,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -886,24 +886,24 @@
       9
       eq_num
       
-          					 (
-            					   mult_num
       (
-          
-          Ratio
-             ratio_of_string
-             (
-                 "2/3"
-             )
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       mult_num
+       (
+           
+           Ratio
+              ratio_of_string
+              (
+                  "2/3"
+              )
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -913,7 +913,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   testing_function
@@ -926,25 +926,25 @@
       1
       eq_num
       
-          					 (
-            					   div_num
       (
-          
-          Int
-             6
-              								 
-          
-          Int
-             3
-              								 
-      )
+       div_num
+       (
+           
+           Int
+              6
+               								 
+           
+           Int
+              3
+               								 
+       )
           					   
       	
       	Int
       	   2
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -952,31 +952,31 @@
       2
       eq_num
       
-          					 (
-            					   div_num
       (
-          
-          Int
-             int_of_string
-             (
-                 "32639"
-             )
-              								 
-          
-          Int
-             int_of_string
-             (
-                 "257"
-             )
-              								 
-      )
+       div_num
+       (
+           
+           Int
+              int_of_string
+              (
+                  "32639"
+              )
+               								 
+           
+           Int
+              int_of_string
+              (
+                  "257"
+              )
+               								 
+       )
           					   
       	
       	Int
       	   127
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -984,31 +984,31 @@
       3
       eq_num
       
-          					 (
-            					   div_num
       (
-          
-          Big_int
-             big_int_of_string
-             (
-                 "66820"
-             )
-              								 
-          
-          Int
-             int_of_string
-             (
-                 "257"
-             )
-              								 
-      )
+       div_num
+       (
+           
+           Big_int
+              big_int_of_string
+              (
+                  "66820"
+              )
+               								 
+           
+           Int
+              int_of_string
+              (
+                  "257"
+              )
+               								 
+       )
           					   
       	
       	Int
       	   260
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -1016,28 +1016,28 @@
       4
       eq_num
       
-          					 (
-            					   div_num
       (
-          
-          Int
-             6
-              								 
-          
-          Big_int
-             big_int_of_int
-             (
-                 3
-             )
-              								 
-      )
+       div_num
+       (
+           
+           Int
+              6
+               								 
+           
+           Big_int
+              big_int_of_int
+              (
+                  3
+              )
+               								 
+       )
           					   
       	
       	Int
       	   2
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -1045,21 +1045,21 @@
       5
       eq_num
       
-          					 (
-            					   div_num
       (
-          
-          Ratio
-             ratio_of_string
-             (
-                 "15/2"
-             )
-              								 
-          
-          Int
-             10
-              								 
-      )
+       div_num
+       (
+           
+           Ratio
+              ratio_of_string
+              (
+                  "15/2"
+              )
+               								 
+           
+           Int
+              10
+               								 
+       )
           					   
       	
       	Ratio
@@ -1069,7 +1069,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -1077,31 +1077,31 @@
       6
       eq_num
       
-          					 (
-            					   div_num
       (
-          
-          Big_int
-             big_int_of_int
-             (
-                 6
-             )
-              								 
-          
-          Big_int
-             big_int_of_int
-             (
-                 3
-             )
-              								 
-      )
+       div_num
+       (
+           
+           Big_int
+              big_int_of_int
+              (
+                  6
+              )
+               								 
+           
+           Big_int
+              big_int_of_int
+              (
+                  3
+              )
+               								 
+       )
           					   
       	
       	Int
       	   2
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -1109,24 +1109,24 @@
       7
       eq_num
       
-          					 (
-            					   div_num
       (
-          
-          Ratio
-             ratio_of_string
-             (
-                 "15/2"
-             )
-              								 
-          
-          Big_int
-             big_int_of_int
-             (
-                 10
-             )
-              								 
-      )
+       div_num
+       (
+           
+           Ratio
+              ratio_of_string
+              (
+                  "15/2"
+              )
+               								 
+           
+           Big_int
+              big_int_of_int
+              (
+                  10
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -1136,7 +1136,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -1144,24 +1144,24 @@
       8
       eq_num
       
-          					 (
-            					   div_num
       (
-          
-          Ratio
-             ratio_of_string
-             (
-                 "15/2"
-             )
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       div_num
+       (
+           
+           Ratio
+              ratio_of_string
+              (
+                  "15/2"
+              )
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Big_int
@@ -1171,7 +1171,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -1179,24 +1179,24 @@
       9
       eq_num
       
-          					 (
-            					   div_num
       (
-          
-          Ratio
-             ratio_of_string
-             (
-                 "1/2"
-             )
-              								 
-          
-          Ratio
-             ratio_of_string
-             (
-                 "3/4"
-             )
-              								 
-      )
+       div_num
+       (
+           
+           Ratio
+              ratio_of_string
+              (
+                  "1/2"
+              )
+               								 
+           
+           Ratio
+              ratio_of_string
+              (
+                  "3/4"
+              )
+               								 
+       )
           					   
       	
       	Ratio
@@ -1206,7 +1206,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   testing_function
@@ -1219,18 +1219,18 @@
       1
       eq
       
-          					 (
-            					   is_integer_num
       (
-          
-          Int
-             3
-              								 
-      )
+       is_integer_num
+       (
+           
+           Int
+              3
+               								 
+       )
           					   
       	true
           					   
-          					 )
+      )
   )
                                  
   test
@@ -1238,21 +1238,21 @@
       2
       eq
       
-          					 (
-            					   is_integer_num
       (
-          
-          Big_int
-             big_int_of_string
-             (
-                 "1234567890"
-             )
-              								 
-      )
+       is_integer_num
+       (
+           
+           Big_int
+              big_int_of_string
+              (
+                  "1234567890"
+              )
+               								 
+       )
           					   
       	true
           					   
-          					 )
+      )
   )
                                  
   test
@@ -1260,24 +1260,24 @@
       3
       eq
       
-          					 (
-            					   not
       (
-          is_integer_num
-          (
-              
-              Ratio
-                 ratio_of_string
-                 (
-                     "1/2"
-                 )
-                  								 
-          )
-      )
+       not
+       (
+           is_integer_num
+           (
+               
+               Ratio
+                  ratio_of_string
+                  (
+                      "1/2"
+                  )
+                   								 
+           )
+       )
           					   
       	true
           					   
-          					 )
+      )
   )
                                  
   test
@@ -1285,21 +1285,21 @@
       4
       eq
       
-          					 (
-            					   is_integer_num
       (
-          
-          Ratio
-             ratio_of_string
-             (
-                 "1073774590/32770"
-             )
-              								 
-      )
+       is_integer_num
+       (
+           
+           Ratio
+              ratio_of_string
+              (
+                  "1073774590/32770"
+              )
+               								 
+       )
           					   
       	true
           					   
-          					 )
+      )
   )
                                  
   testing_function
@@ -1312,21 +1312,21 @@
       1
       eq_num
       
-          					 (
-            					   num_of_ratio
       (
-          ratio_of_string
-          (
-              "4/2"
-          )
-      )
+       num_of_ratio
+       (
+           ratio_of_string
+           (
+               "4/2"
+           )
+       )
           					   
       	
       	Int
       	   2
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -1334,14 +1334,14 @@
       2
       eq_num
       
-          					 (
-            					   num_of_ratio
       (
-          ratio_of_string
-          (
-              "11811160075/11"
-          )
-      )
+       num_of_ratio
+       (
+           ratio_of_string
+           (
+               "11811160075/11"
+           )
+       )
           					   
       	
       	Big_int
@@ -1351,7 +1351,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -1359,14 +1359,14 @@
       3
       eq_num
       
-          					 (
-            					   num_of_ratio
       (
-          ratio_of_string
-          (
-              "123456789012/1234"
-          )
-      )
+       num_of_ratio
+       (
+           ratio_of_string
+           (
+               "123456789012/1234"
+           )
+       )
           					   
       	
       	Ratio
@@ -1376,7 +1376,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   testing_function
@@ -1389,11 +1389,11 @@
       1
       eq_num
       
-          					 (
-            					   num_of_string
       (
-          "123/3456"
-      )
+       num_of_string
+       (
+           "123/3456"
+       )
           					   
       	
       	Ratio
@@ -1403,7 +1403,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -1411,11 +1411,11 @@
       7
       eq_num
       
-          					 (
-            					   num_of_string
       (
-          "1234567890"
-      )
+       num_of_string
+       (
+           "1234567890"
+       )
           					   
       	
       	Big_int
@@ -1425,7 +1425,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   test
@@ -1433,11 +1433,11 @@
       8
       eq_num
       
-          					 (
-            					   num_of_string
       (
-          "12345"
-      )
+       num_of_string
+       (
+           "12345"
+       )
           					   
       	
       	Int
@@ -1447,7 +1447,7 @@
       	   )
       	    								 
           					   
-          					 )
+      )
   )
                                  
   failwith_test
