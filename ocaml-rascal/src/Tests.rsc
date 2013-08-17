@@ -12,36 +12,49 @@ import ParseTree;
 import Node;
 import Type;
 
-str filePath = "Users/aliafroozeh/workspace/ocaml-operator-ambiguity-experiment/ocaml-4.00.1/testsuite/";
+str filePath = "Users/aliafroozeh/workspace/ocaml-operator-ambiguity-experiment/";
 
-public void run() {	 
-	files = readFileLines(|file:///Users/aliafroozeh/workspace/ocaml-operator-ambiguity-experiment/toplevel.txt|);
+public void runAll() {	 
+	files = readFileLines(|file:///Users/aliafroozeh/workspace/ocaml-operator-ambiguity-experiment/files.txt|);
 	for (f <- files) {
 		runFile(f);
 	}
 }
 
-public void runFile(str f) {
-		print(f + "...");
-		try {
-			tree = jparse(#start[TopLevel], readFile(|file:///| + filePath + "/" + f));
-			
-			if (/amb(_) := tree) {
-				tree = filterOCaml(tree);
-				if(/amb(_) := tree) {
-					println("Ambiguous!");
-					return;
-				}
-			} 
+public void runImplementions() {	 
+	files = readFileLines(|file:///Users/aliafroozeh/workspace/ocaml-operator-ambiguity-experiment/imp.txt|);
+	for (f <- files) {
+		runFile(f, #start[Implementation]);
+	}
+}
+
+public void runTopLevels() {	 
+	files = readFileLines(|file:///Users/aliafroozeh/workspace/ocaml-operator-ambiguity-experiment/toplevels.txt|);
+	for (f <- files) {
+		runFile(f, #start[TopLevel]);
+	}
+}
+
+public void runFile(str f, type[&T <: Tree] nont) {
+	print(f + "...");
+	try {
+		tree = jparse(nont, readFile(|file:///| + filePath + "/" + f));
 		
-			s = printAST(tree);
-   			writeFile(|file:///| + filePath + "/" + (f + ".rascal"), s);
-			println("OK");
-		}
-		catch ParseError(el) : {
-			println("Parse Error");
-		}	
+		if (/amb(_) := tree) {
+			tree = filterOCaml(tree);
+			if(/amb(_) := tree) {
+				println("Ambiguous!");
+				return;
+			}
+		} 
 	
+		s = printAST(tree);
+		writeFile(|file:///| + filePath + "/" + (f + ".rascal"), s);
+		println("OK");
+	}
+	catch ParseError(el) : {
+		println("Parse Error");
+	}	
 }
 
 
