@@ -19,14 +19,7 @@ For this study, we only considered the .ml files:
 ```
 (The commands should be executed in the ocaml.4.00.1 folder, i.e., . = ocaml.4.00.1)
 
-We have not considered the files in the tool-ocaml folder of the test suite, as they only 
-contain only source code comments that document expected output (assembler code) of the compiler.
-
-```
-> find . -iname "*.ml" | grep "tool-ocaml" | wc -l
-162
-```
-Therefore, for this study we only considered 225 files.
+We have not considered the files in the tool-ocaml folder of the test suite, as they only contain only source code comments that document expected output (assembler code) of the compiler. Therefore, for this study we only considered 229 files.
 
 The generated bracketed AST for each .ml file is placed in the same directory. The generated AST from rascal
 has the .rascal extension whereas the generated AST from the modified OCaml parser has .ml files.
@@ -43,6 +36,18 @@ The resulting stripped files were compared using the diff utility, ignoring the 
 diff -w file.ml.ocaml.stripped file.ml.rascal.stripped > file.ml.diff
 ```
 If the size of the diff output is zero, it means that the ASTs were the same.
+
+#Running the experiment
+The OCaml grammar, as described in the reference manual, appears to support two different kinds of OCaml inputs.
+One supports optional expressions separated by ;; while in the other one, double semicolon is not allowed
+statements. For this study, we could not figure it out how to unify these two modes in an unambiguous grammar. Therefore, we provide two start symbols, TopLevel and Implementation (see OCaml.rsc in the ocaml-rascal/Ocaml.rsc
+directory)
+
+Still, we are not able to parse all the 229 files. The main reason is that some TopLevel files were failing due to a missing ";;" meaning that we could not correctly deduct the rules for semicolon. In the future, we will fix this problem by looking at the original Yacc parser of OCaml. The files.txt file contains all the files we successfully parsed. The successfully parsed Toplevel files are in toplevels.txt and the successfully parsed Implementation files are in imp.txt. 
+
+To run all files, implementations, and toplevels, use the Tests.runAll(), 
+Tests.runImplementions() and Tests.runTopLevels() methods, respectively. 
+
 
 
 
