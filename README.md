@@ -39,14 +39,12 @@ If the size of the diff output is zero, it means that the ASTs were the same.
 
 #Running the experiment
 The OCaml grammar, as described in the reference manual, appears to support two different kinds of OCaml inputs.
-One supports optional expressions separated by ;; while in the other one, double semicolon is not allowed
-statements. For this study, we could not figure it out how to unify these two modes in an unambiguous grammar. Therefore, we provide two start symbols, TopLevel and Implementation (see OCaml.rsc in the ocaml-rascal/Ocaml.rsc
+One supports optional expressions separated by ;; while in the other one, double semicolon is not allowed. For this study, we could not figure it out how to unify these two modes in an unambiguous grammar. Therefore, we provide two start symbols, TopLevel and Implementation (see OCaml.rsc in the ocaml-rascal/Ocaml.rsc
 directory)
 
-Still, we are not able to parse all the 229 files. The main reason is that some TopLevel files were failing due to a missing ";;" meaning that we could not correctly deduct the rules for semicolon. In the future, we will fix this problem by looking at the original Yacc parser of OCaml. The files.txt file contains all the files we successfully parsed. The successfully parsed Toplevel files are in toplevels.txt and the successfully parsed Implementation files are in imp.txt. 
+Still, we are not able to parse all the 229 files. The main reason is that some TopLevel files were failing due to a missing ";;" meaning that we could not correctly deduct the rules for semicolon. In the future, we will fix this problem by looking at the original Yacc parser of OCaml. 
 
-To run all files, implementations, and toplevels, use the Tests.runAll(), 
-Tests.runImplementions() and Tests.runTopLevels() methods, respectively. 
+The files.txt file contains all the files we considered. The successfully parsed Toplevel files are in toplevels.txt and the successfully parsed Implementation files are in imp.txt. To run all files, successful implementations, and successful toplevels, use the runAll(), runImplementions() and runTopLevels() methods, on ocaml-rascal/src/Tests.rsc, respectively. 
 
 
 
