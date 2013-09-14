@@ -2,6 +2,8 @@ module Typexpr
 
 extend Lexical;
 extend Names;
+extend Extensions;
+
 
 syntax Typexpr 
 	 = typexprConstr1: Typexpr TypeConstr

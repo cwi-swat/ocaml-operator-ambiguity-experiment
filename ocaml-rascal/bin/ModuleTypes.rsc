@@ -7,18 +7,18 @@ extend TypeAndExceptions;
  	
 syntax Specification 
 	 = specificationVal: "val" ValueName ":" Typexpr
-     | external: "external" ValueName ":" Typexpr "=" ExternalDeclaration
-     | typeDef: TypeDefinition
-     | exceptionDef: ExceptionDefinition
-     | classSpec: ClassSpecification
-     | classDef: ClassDefinition
-     | classTypeDef: ClassTypeDefinition
-     | moduleDef1: "module" ModuleName ( "(" ModuleName ":" ModuleType ")" )* ( ":" ModuleType )? "=" ModuleExpr
-     | moduleDef2: "module" ModuleName ("(" ModuleName ":" ModuleType ")")* ":" ModuleType
-     | modType1: "module" "type" ModTypeName "=" ModuleType
-     | modType2: "module" "type" ModTypeName
-     | open: "open" ModulePath
-     | includeSpec: "include" ModuleType
+     | external: 		 "external" ValueName ":" Typexpr "=" ExternalDeclaration
+     | typeDef: 		 TypeDefinition
+     | exceptionDef:	 ExceptionDefinition
+     | classSpec: 		 ClassSpecification
+     | classDef: 		 ClassDefinition
+     | classTypeDef: 	 ClassTypeDefinition
+     | moduleDef1: 		 "module" ModuleName ( "(" ModuleName ":" ModuleType ")" )* ( ":" ModuleType )? "=" ModuleExpr
+     | moduleDef2: 		 "module" ModuleName ("(" ModuleName ":" ModuleType ")")* ":" ModuleType
+     | modType1: 		 "module" "type" ModTypeName "=" ModuleType
+     | modType2: 		 "module" "type" ModTypeName
+     | open: 			 "open" ModulePath
+     | includeSpec: 	 "include" ModuleType
      ;
      
      
