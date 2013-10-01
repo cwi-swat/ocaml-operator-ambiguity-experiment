@@ -17,21 +17,21 @@ lexical NativeIntLiteral =	SpecialInt [n];
 
 lexical SpecialInt = [\-]? [0-9] [0-9_]* !>> [0-9_.eE]
 				   | [\-]? ("0x"| "0X") [0-9A-Fa-f][0-9A-Fa-f_]* !>> [0-9_A-Fa-f.eE]  
-				   | [\-]? ("0o"| "0O") [0-7] [0-7_]* !>> [0-7.eE]
-				   | [\-]? ("0b"| "0B") [0-1] [0-1_]* !>> [0-7.eE]
+				   | [\-]? ("0o"| "0O") [0-7] [0-7_]* !>> [0-7_.eE]
+				   | [\-]? ("0b"| "0B") [0-1] [0-1_]* !>> [0-1_.eE]
 				   ;
 
 lexical PositiveIntegerLiteral = [0-9] [0-9_]* !>> [0-9_.eElLn]
 							   | ("0x"| "0X") [0-9A-Fa-f][0-9A-Fa-f_]* !>> [0-9_A-Fa-f.eElLn]  
- 							   | ("0o"| "0O") [0-7] [0-7_]* !>> [0-7.eElLn]
- 							   | ("0b"| "0B") [0-1] [0-1_]* !>> [0-7.eElLn]
+ 							   | ("0o"| "0O") [0-7] [0-7_]* !>> [0-7_.eElLn]
+ 							   | ("0b"| "0B") [0-1] [0-1_]* !>> [0-1_.eElLn]
  							   ;
 
 lexical NegativeIntegerLiteral = [\-] PositiveIntegerLiteral;
 
-lexical FloatLiteral =  [\-]? [0-9] [0-9_]* [eE] [+\-]? [0-9] [0-9_]* !>> [0-9.eE\-]             // only with e
-				     |  [\-]? [0-9] [0-9_]* [.] [0-9_]* !>> [0-9.eE\-]                           // only with .
-                     |  [\-]? [0-9] [0-9_]* [.] [0-9_]* [eE] [+\-]? [0-9] [0-9_]* !>> [0-9.eE\-] // with both . and e
+lexical FloatLiteral =  [\-]? [0-9] [0-9_]* [eE] [+\-]? [0-9] [0-9_]* !>> [0-9_.eE\-]             // only with e
+				     |  [\-]? [0-9] [0-9_]* [.] [0-9_]* !>> [0-9_.eE\-]                           // only with .
+                     |  [\-]? [0-9] [0-9_]* [.] [0-9_]* [eE] [+\-]? [0-9] [0-9_]* !>> [0-9_.eE\-] // with both . and e
 					 ;
 					 
 lexical CharLiteral = [\'] (RegularChar | EscapeSequence) [\'];
@@ -59,13 +59,13 @@ lexical LabelColon =	"~" LowercaseIdentifier ":";
 lexical OptLabel = "?" LowercaseIdentifier !>> ":";
 lexical OptLabelColon = "?" LowercaseIdentifier ":";	                 
 
-lexical InfixSymbol1 = "lsl" !>> [a-z] | "lsr" !>> [a-z] | "asr" !>> [a-z] | ([*][*] OperatorChar* !>> [! $ % & * + \- . / : \< = \> ? @ ^ | ~]) \ InfixSymbol1Exclude;
-lexical InfixSymbol2 = "mod" !>> [a-z] | "land" !>> [a-z]| "lor" !>> [a-z] | "lxor" !>> [a-z] | ([/ % *] OperatorChar* !>> [! $ % & * + \- . / : \< = \> ? @ ^ | ~]) \ InfixSymbol2Exclude; 
+lexical InfixSymbol1 = "lsl" | "lsr" | "asr" | ([*][*] OperatorChar* !>> [! $ % & * + \- . / : \< = \> ? @ ^ | ~]) \ InfixSymbol1Exclude;
+lexical InfixSymbol2 = "mod" | "land"| "lor" | "lxor" | ([/ % *] OperatorChar* !>> [! $ % & * + \- . / : \< = \> ? @ ^ | ~]) \ InfixSymbol2Exclude; 
 lexical InfixSymbol3 = ([+ \-] OperatorChar* !>> [! $ % & * + \- . / : \< = \> ? @ ^ | ~]) \ InfixSymbol3Exclude;
 lexical InfixSymbol4 = [@ ^] OperatorChar* !>> [! $ % & * + \- . / : \< = \> ? @ ^ | ~];
 lexical InfixSymbol5 = ([= \< \> | & $] OperatorChar* !>> [! $ % & * + \- . / : \< = \> ? @ ^ | ~]) \ InfixSymbol5Exclude;
 lexical InfixSymbol6 =  "&" | "&&";                      
-lexical InfixSymbol7 =  "||" | "or" !>> [a-z];
+lexical InfixSymbol7 =  "||" | "or";
 lexical InfixSymbol8 =  ":=";
 
 keyword InfixSymbol1Exclude = ")";
